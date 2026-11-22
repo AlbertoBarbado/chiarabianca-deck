@@ -389,7 +389,8 @@
       "crystal_spider": 0.03,
       "ice_drake": 0.02,
       "woolly_mammoth": 0.02,
-      "crystal_matriarch": 0.03
+      "crystal_matriarch": 0.03,
+      "white_dragon": 0.04
     },
     "_sink_comment": "Share of the sprite height pushed into the floor, by pose set: for art whose lowest pixels are thin claws, legs or a tail tip, so the body does not seem to hover."
   },
@@ -624,7 +625,7 @@
     "woolly_mammoth": "heavy",
     "crystal_matriarch": "beast",
     "ice_giant": "heavy",
-    "white_dragon": "hover"
+    "white_dragon": "heavy"
   },
   "lighting": {
     "_comment": "Per battle backdrop: ambient multiplies every sprite, rim lights the edge that faces the light (rim_from 'centre' = toward the middle of the battlefield, 'left' / 'right' / 'top').",
