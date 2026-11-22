@@ -234,7 +234,7 @@
   "kind": "icon"
  },
  "_note": {
-  "mirrored": "monster_frost_wolf, monster_rime_wraith and monster_ice_giant were mirrored after generation (enemies face right); regenerating them needs the same mirror.",
+  "mirrored": "monster_frost_wolf, monster_rime_wraith, monster_polar_bear and monster_woolly_mammoth were mirrored after generation (enemies face right); regenerating them needs the same mirror.",
   "rerolled": "battle_mountain_glacier (seed 9412: floor started too low) and boss_white_dragon (seed 9441: not menacing enough; 9542: two heads) were rerolled."
  }
 }
