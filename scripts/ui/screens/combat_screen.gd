@@ -810,6 +810,9 @@ func _on_reaction_event(event: Dictionary) -> void:
 	if (kind != "reaction" and kind != "execute") or not is_inside_tree():
 		return
 	var text := str(event.get("reaction_name", "")) + "!" if kind == "reaction" else "Blighted!"
+	# Campaign: a ♥ while twin reactions still strengthen the Sister Bond this expedition (capped).
+	if kind == "reaction" and GameState.expedition != null and int(GameState.expedition.bond_counts.get("twin_reaction", 0)) + combat.reactions_fired <= Bond.cap("twin_reaction"):
+		text += " ♥"
 	var color := Color.from_string(str(event.get("color", "#c89cff")), Color("c89cff")) if kind == "reaction" else Color("c89cff")
 	var ids: Array = event.get("target_ids", [])
 	for i in ids.size():
@@ -946,6 +949,14 @@ func _on_potion(item_id: String) -> void:
 		return
 	_selected_card = null
 	_armed_card = null
+	# Party-wide brews (Block, Energy, draw) need no drinker: they act at once.
+	if CombatManager.POTION_PARTY_EFFECTS.has(str((DataRegistry.get_item(item_id).get("effect", {}) as Dictionary).get("type", ""))):
+		_armed_potion = ""
+		var error := combat.use_potion(item_id)
+		if error != "":
+			_on_message(error)
+		_refresh()
+		return
 	_armed_potion = "" if _armed_potion == item_id else item_id
 	if _armed_potion != "":
 		var item := DataRegistry.get_item(item_id)
@@ -982,7 +993,7 @@ func _on_message(text: String) -> void:
 func _on_ended(result: String) -> void:
 	var won := result == CombatManager.RESULT_VICTORY
 	if won:
-		GameState.record_combat_victory(combat.gold_reward, _encounter)  # Gold, relic healing and reward roll: once, and saved.
+		GameState.record_combat_victory(combat.gold_reward, _encounter, combat.reactions_fired)  # Gold, relic healing and reward roll: once, and saved.
 	_update_phase_label()
 	_overlay = ColorRect.new()
 	(_overlay as ColorRect).color = Color(0, 0, 0, 0.7)
@@ -1027,7 +1038,7 @@ func _on_continue(won: bool) -> void:
 		SceneRouter.go(SceneRouter.Screen.REWARD)
 	else:
 		GameState.finish_run(GameState.RESULT_DEFEATED)
-		SceneRouter.go(SceneRouter.Screen.RUN_END)
+		SceneRouter.go_to_run_end()
 
 
 ## Battle backdrop: the room's terrain picture, else the map's, else the generic castle hall.

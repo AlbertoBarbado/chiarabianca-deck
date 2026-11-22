@@ -1,6 +1,12 @@
 extends Node
 ## Global run state: the party, inventory and map progress of the current adventure.
 ## Gameplay rules live in their own classes; this node only holds and wires them together.
+##
+## Two modes (docs/PERSISTENT_RPG_DESIGN.md):
+##  * Campaign: `campaign` holds everything permanent. At the castle `party` is the campaign roster
+##    and `inventory` its vault (so the equipment screen works there); during an expedition they are
+##    the expedition's copies and `expedition` holds the mission, objective and outcome.
+##  * Quick Play (classic): `campaign` is null and a run behaves exactly as before this milestone.
 
 signal run_started
 signal run_finished(result: String)
@@ -23,21 +29,106 @@ var next_map_id: String = GameConfig.DEFAULT_MAP_ID
 var load_warnings: Array[String] = []
 ## Run-wide facts that are saved with the run: {"seen_events": [ids], "completed_maps": [ids]}.
 var run_flags: Dictionary = {}
-## Location of the save file; tests point this elsewhere to protect real saves.
-var save_path: String = GameConfig.SAVE_PATH
+## Location of the save file; tests point this elsewhere to protect real saves. Reads the path of the
+## active slot: the campaign slot is the path that was set, the Quick Play slot sits beside it
+## ("<name>_quickplay.json"), so a Quick Play run never overwrites the campaign.
+var save_path: String:
+	get:
+		return slot_path(_slot)
+	set(value):
+		_campaign_path = value
+		_slot = SLOT_CAMPAIGN
+const SLOT_CAMPAIGN := "campaign"
+const SLOT_QUICKPLAY := "quickplay"
+var _campaign_path: String = GameConfig.SAVE_PATH
+var _slot: String = SLOT_CAMPAIGN
+## What the next New Game flow builds: "campaign" (castle) or "classic" (Quick Play run). The main menu
+## sets it; "classic" is the default so screens opened directly keep their classic behaviour.
+var new_game_mode: String = "classic"
+
+
+func slot_path(slot: String) -> String:
+	return _campaign_path if slot == SLOT_CAMPAIGN else _campaign_path.get_basename() + "_" + SLOT_QUICKPLAY + ".json"
+
+
+func use_slot(slot: String) -> void:
+	_slot = SLOT_QUICKPLAY if slot == SLOT_QUICKPLAY else SLOT_CAMPAIGN
+
+
+func active_slot() -> String:
+	return _slot
+
+
+func slot_has_save(slot: String) -> bool:
+	return FileAccess.file_exists(slot_path(slot))
 ## character_id -> specialization_id while the player is choosing.
 var selected_specializations: Dictionary = {}
+## The persistent campaign (null in Quick Play).
+var campaign: CampaignState = null
+## The expedition under way (null at the castle and in Quick Play).
+var expedition: ExpeditionState = null
+
+
+func in_campaign() -> bool:
+	return campaign != null
+
+
+func in_castle() -> bool:
+	return campaign != null and expedition == null
+
+
+## A new campaign from the specialization chosen for each sister; the party goes home to the castle.
+func start_campaign() -> bool:
+	if not can_confirm_selection():
+		return false
+	campaign = CampaignState.create(selected_specializations)
+	expedition = null
+	enter_castle()
+	return true
+
+
+## The castle state: roster and vault are the active party and inventory; no map, no room.
+func enter_castle() -> void:
+	if campaign == null:
+		return
+	expedition = null
+	campaign.refresh_roster()
+	Bond.apply_unlocks(campaign)
+	party = campaign.roster
+	inventory = campaign.vault
+	map_progress = null
+	room_state = {}
+	run_flags = {}
+	pending_reward = null
+	run_result = ""
+	save_game()
+
+
+## Ends the expedition with an outcome (ExpeditionState.OUTCOME_*) and applies its rewards once.
+func finish_expedition(outcome: String) -> Dictionary:
+	return ExpeditionService.finish(outcome)
 
 
 func has_save() -> bool:
 	return FileAccess.file_exists(save_path)
 
 
-## Saves the current run. Returns false if there is no run or writing failed.
+## Saves the campaign (with the expedition under way, if any) or the Quick Play run. Returns false if
+## there is nothing to save or writing failed.
 func save_game() -> bool:
+	if campaign != null:
+		var data := {"version": SaveManager.SAVE_VERSION}
+		if expedition != null and party != null and inventory != null and map_progress != null:
+			data = SaveManager.serialize(party, inventory, map_progress, room_state, pending_reward, run_flags)
+			data["expedition"] = expedition.to_dict()
+		data["mode"] = "campaign"
+		data["campaign"] = campaign.to_dict()
+		return SaveManager.write_file(save_path, data)
 	if party == null or inventory == null or map_progress == null:
 		return false
-	return SaveManager.write_file(save_path, SaveManager.serialize(party, inventory, map_progress, room_state, pending_reward, run_flags))
+	var run := SaveManager.serialize(party, inventory, map_progress, room_state, pending_reward, run_flags)
+	run["mode"] = "classic"
+	return SaveManager.write_file(save_path, run)
 
 
 ## Loads the saved run into the global state. Returns "" on success or an error message.
@@ -45,15 +136,34 @@ func load_game() -> String:
 	var read := SaveManager.read_file(save_path)
 	if not read["ok"]:
 		return str(read["error"])
-	var restored := SaveManager.restore(read["data"])
+	load_warnings.clear()
+	var data: Variant = read["data"]
+	if data is Dictionary and int((data as Dictionary).get("version", 0)) > SaveManager.SAVE_VERSION:
+		return "Save was made by a newer version of the game."
+	if data is Dictionary and (data as Dictionary).has("campaign"):
+		var error := _load_campaign(data)
+		if error == "" and bool(read.get("from_backup", false)):
+			load_warnings.append("The main save was damaged; the previous backup was loaded.")
+		return error
+	var restored := SaveManager.restore(data)
 	if not restored["ok"]:
 		return str(restored["error"])
-	load_warnings.clear()
 	for warning: String in restored["warnings"]:
 		push_warning("Save: " + warning)
 		load_warnings.append(warning)
 	if bool(read.get("from_backup", false)):
 		load_warnings.append("The main save was damaged; the previous backup was loaded.")
+	campaign = null
+	expedition = null
+	Equipment.refinement = {}
+	Requirements.active_campaign = null
+	# A run saved before the campaign existed (no "mode") becomes a campaign: the run continues as an
+	# expedition and returns to the castle when it ends (CampaignMigration).
+	if data is Dictionary and not (data as Dictionary).has("mode"):
+		var migrated := CampaignMigration.from_legacy_run(restored)
+		campaign = migrated["campaign"]
+		expedition = migrated["expedition"]
+		load_warnings.append("Your adventure was moved into the new campaign: finish it to return to the castle.")
 	party = restored["party"]
 	inventory = restored["inventory"]
 	map_progress = restored["progress"]
@@ -62,6 +172,46 @@ func load_game() -> String:
 	pending_reward = restored["reward"]
 	run_result = ""
 	run_started.emit()
+	if campaign != null:
+		save_game()  # Rewrite a migrated save in the campaign format at once.
+	return ""
+
+
+## Restores a campaign save: the campaign, and the expedition when one is under way.
+func _load_campaign(data: Dictionary) -> String:
+	var warnings: Array[String] = []
+	var result := {"error": ""}
+	var loaded := CampaignState.from_dict(data.get("campaign", {}), warnings, result)
+	if loaded == null:
+		return str(result["error"]) if str(result["error"]) != "" else "The campaign could not be loaded."
+	campaign = loaded
+	expedition = null
+	room_state = {}
+	run_flags = {}
+	pending_reward = null
+	run_result = ""
+	if data.has("party"):
+		var restored := SaveManager.restore(data)
+		if restored["ok"]:
+			warnings.append_array(restored["warnings"])
+			party = restored["party"]
+			inventory = restored["inventory"]
+			map_progress = restored["progress"]
+			room_state = restored["room"]
+			run_flags = restored["flags"]
+			pending_reward = restored["reward"]
+			expedition = ExpeditionState.from_dict(data.get("expedition", {}), warnings)
+		else:
+			# The expedition is beyond repair: the sisters make it home; the campaign is kept.
+			warnings.append("The expedition could not be restored (%s); the sisters returned to the castle." % restored["error"])
+	for warning in warnings:
+		push_warning("Save: " + warning)
+		load_warnings.append(warning)
+	if expedition == null:
+		enter_castle()
+	else:
+		Bond.apply_unlocks(campaign)
+		run_started.emit()
 	return ""
 
 
@@ -140,8 +290,8 @@ func start_card_reward(patch: Dictionary = {}) -> void:
 
 ## Map that follows the current one in the run ("" when this is the last act or a standalone map).
 func next_map_after_current() -> String:
-	if map_progress == null:
-		return ""
+	if map_progress == null or expedition != null:
+		return ""  # An expedition is one mission: its exit leads home, never to another act.
 	var order: Array = RunRules.get_block("acts").get("order", [])
 	var index := order.find(map_progress.graph.id)
 	return str(order[index + 1]) if index >= 0 and index + 1 < order.size() else ""
@@ -197,10 +347,11 @@ func end_room() -> void:
 
 ## Applies the outcome of a won combat exactly once: gold, relic healing and the reward roll are
 ## saved together with the "reward" phase, so reloading shows the SAME reward and grants nothing twice.
-func record_combat_victory(gold: int, encounter: Dictionary) -> void:
+func record_combat_victory(gold: int, encounter: Dictionary, reactions: int = 0) -> void:
 	var node := get_current_node()
 	if node == null or str(room_state.get("phase", "")) == "reward":
 		return  # Already recorded (e.g. after a reload).
+	ExpeditionService.on_combat_won(node, encounter, reactions)
 	inventory.add_gold(gold)
 	var heal := RelicEffects.total(inventory, "heal_after_victory")
 	if heal > 0:
@@ -289,6 +440,10 @@ func begin_adventure(map_id: String = "") -> bool:
 	if party == null or not problems.is_empty():
 		push_error("GameState: cannot begin adventure: %s" % ", ".join(problems))
 		return false
+	campaign = null  # A classic (Quick Play) run.
+	expedition = null
+	Equipment.refinement = {}
+	Requirements.active_campaign = null
 	inventory = Inventory.new()
 	inventory.gold = GameConfig.STARTING_GOLD
 	map_progress = MapProgress.new(graph)
@@ -310,5 +465,10 @@ func finish_run(result: String) -> void:
 	run_result = result
 	pending_reward = null
 	room_state = {}
+	if campaign != null and expedition != null:
+		# Campaign: the expedition ends and the results screen leads home; nothing is deleted.
+		finish_expedition(ExpeditionState.OUTCOME_COMPLETED if result == RESULT_COMPLETED else ExpeditionState.OUTCOME_DEFEATED)
+		run_finished.emit(result)
+		return
 	delete_save()  # A finished run cannot be continued.
 	run_finished.emit(result)

@@ -20,6 +20,12 @@ static var layouts: Dictionary = {}          # map id -> Dictionary (presentatio
 static var statuses: Dictionary = {}         # id -> StatusDef
 static var treasures: Dictionary = {}        # id -> Dictionary (treasure room definitions)
 static var towns: Dictionary = {}            # id -> Dictionary (town definitions: services, shop, rest)
+## Persistent campaign content (docs/PERSISTENT_RPG_DESIGN.md §4).
+static var regions: Dictionary = {}          # id -> Dictionary (world map regions)
+static var missions: Dictionary = {}         # id -> Dictionary (expedition missions)
+static var services: Dictionary = {}         # id -> Dictionary (castle services, data/castle)
+static var fusion_recipes: Dictionary = {}   # id -> Dictionary (data/fusion)
+static var brew_recipes: Dictionary = {}     # id -> Dictionary (data/apothecary)
 
 
 static func ensure_loaded() -> void:
@@ -28,7 +34,8 @@ static func ensure_loaded() -> void:
 
 
 static func reload() -> void:
-	for registry: Dictionary in [characters, specializations, cards, enemies, encounters, items, events, shops, maps, layouts, statuses, treasures, towns]:
+	for registry: Dictionary in [characters, specializations, cards, enemies, encounters, items, events, shops, maps, layouts, statuses, treasures, towns,
+			regions, missions, services, fusion_recipes, brew_recipes]:
 		registry.clear()
 	for entry in _read_entries("characters"):
 		var char_def := CharacterDef.from_dict(entry)
@@ -62,6 +69,9 @@ static func reload() -> void:
 	for entry in _read_entries("statuses"):
 		var status_def := StatusDef.from_dict(entry)
 		statuses[status_def.id] = status_def
+	for pair in [[regions, "regions"], [missions, "missions"], [services, "castle"], [fusion_recipes, "fusion"], [brew_recipes, "apothecary"]]:
+		for entry in _read_entries(pair[1]):
+			(pair[0] as Dictionary)[str(entry["id"])] = entry
 	_loaded = true
 
 
@@ -144,6 +154,31 @@ static func get_map(id: String) -> Dictionary:
 	return maps.get(id, {})
 
 
+static func get_region(id: String) -> Dictionary:
+	ensure_loaded()
+	return regions.get(id, {})
+
+
+static func get_mission(id: String) -> Dictionary:
+	ensure_loaded()
+	return missions.get(id, {})
+
+
+static func get_service(id: String) -> Dictionary:
+	ensure_loaded()
+	return services.get(id, {})
+
+
+static func get_fusion_recipe(id: String) -> Dictionary:
+	ensure_loaded()
+	return fusion_recipes.get(id, {})
+
+
+static func get_brew_recipe(id: String) -> Dictionary:
+	ensure_loaded()
+	return brew_recipes.get(id, {})
+
+
 ## Specializations of a character, in the order listed by the character definition.
 static func get_specializations_for(character_id: String) -> Array[SpecializationDef]:
 	ensure_loaded()
@@ -174,6 +209,8 @@ static func read_json(path: String) -> Variant:
 static func _read_entries(subdir: String) -> Array[Dictionary]:
 	var result: Array[Dictionary] = []
 	var dir_path := "%s/%s" % [DATA_ROOT, subdir]
+	if not DirAccess.dir_exists_absolute(dir_path):
+		return result
 	var files := DirAccess.get_files_at(dir_path)
 	files.sort()
 	for file_name in files:

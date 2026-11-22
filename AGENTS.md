@@ -116,7 +116,8 @@ VoidfarerChronicles/
 │   ├── characters/
 │   ├── events/
 │   ├── shops/
-│   └── exploration/
+│   ├── exploration/
+│   └── castle/          (castle hub, world map, preparation, results, service shell)
 │
 ├── scripts/
 │   ├── autoload/
@@ -128,7 +129,7 @@ VoidfarerChronicles/
 │   ├── progression/
 │   ├── inventory/
 │   ├── events/
-│   └── ui/
+│   └── ui/              (ui/castle: castle screens and service panels)
 │
 ├── data/
 │   ├── characters/
@@ -138,7 +139,13 @@ VoidfarerChronicles/
 │   ├── encounters/
 │   ├── maps/
 │   ├── items/
-│   └── events/
+│   ├── events/
+│   ├── regions/         (world map regions)
+│   ├── missions/        (expedition missions and objectives)
+│   ├── castle/          (castle services)
+│   ├── fusion/          (card fusion recipes)
+│   ├── apothecary/      (potion brew recipes)
+│   └── progression/     (run rules, campaign rules, Sister Bond)
 │
 ├── resources/
 │   ├── themes/
@@ -149,13 +156,15 @@ VoidfarerChronicles/
 │   ├── combat/
 │   ├── cards/
 │   ├── map/
-│   └── progression/
+│   ├── progression/
+│   └── campaign/        (persistent campaign: logic suite and castle walkthrough)
 │
 └── docs/
     ├── GAME_DESIGN.md
     ├── COMBAT_SYSTEM.md
     ├── CHARACTER_SYSTEM.md
     ├── MAP_SYSTEM.md
+    ├── PERSISTENT_RPG_DESIGN.md
     └── TODO.md
 ```
 

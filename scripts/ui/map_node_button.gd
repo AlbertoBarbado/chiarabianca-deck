@@ -68,6 +68,10 @@ func setup(data: MapNodeData, p_state: MapProgress.NodeState, terrain_hint: Stri
 	focus_mode = Control.FOCUS_NONE
 	size = NODE_SIZE  # no custom minimum: a cached minimum would block shrinking to the layout size
 	tooltip_text = "%s (%s)" % [data.display_name, type_label]
+	if bool(data.raw.get("objective", false)):
+		# Mission objective room (generated expeditions): a little larger and marked with a banner.
+		size_factor *= 1.12
+		tooltip_text += "\nMission objective"
 	if terrain_hint != "":
 		tooltip_text += "\n" + terrain_hint
 	for style_name in ["normal", "hover", "pressed", "disabled", "focus"]:
@@ -175,6 +179,23 @@ func _draw() -> void:
 		draw_texture_rect(emblem, Rect2(center - extent / 2.0, extent), false, tint)
 	if visited:
 		_draw_seal(center, radius)
+	if node_data != null and bool(node_data.raw.get("objective", false)):
+		_draw_objective_banner(center, radius, visited)
+
+
+## Mission objective marker: a blue-and-gold diamond with a star at the top-left of the medallion.
+func _draw_objective_banner(center: Vector2, radius: float, done: bool) -> void:
+	var spot := center + Vector2(-radius * 0.66, -radius * 0.66)
+	var r := radius * 0.4
+	var diamond := PackedVector2Array([spot + Vector2(0, -r), spot + Vector2(r, 0), spot + Vector2(0, r), spot + Vector2(-r, 0)])
+	draw_colored_polygon(diamond, Color("2a5bb8") if not done else Color(0.3, 0.32, 0.4))
+	diamond.append(diamond[0])
+	draw_polyline(diamond, UITheme.GOLD, 2.5, true)
+	var star := PackedVector2Array()
+	for i in 10:
+		var a := -PI / 2.0 + i * PI / 5.0
+		star.append(spot + Vector2(cos(a), sin(a)) * (r * (0.55 if i % 2 == 0 else 0.24)))
+	draw_colored_polygon(star, Color("ffe28a"))
 
 
 ## Completion seal on a visited node: a small dark disc with the gold check mark.

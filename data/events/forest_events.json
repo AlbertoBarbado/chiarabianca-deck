@@ -213,6 +213,9 @@
           {
             "type": "gain_gold",
             "value": 30
+          },
+          {
+            "type": "bond"
           }
         ]
       },

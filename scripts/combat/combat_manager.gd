@@ -230,6 +230,31 @@ func end_player_turn() -> void:
 		_begin_player_turn()
 
 
+## Potions that act on the whole party instead of one drinker (apothecary brews):
+##   block N (every living sister gains N Block), energy N (gain N Energy now), draw N (draw N cards).
+const POTION_PARTY_EFFECTS := ["block", "energy", "draw"]
+
+
+func _use_party_potion(item_id: String, item: Dictionary, effect: Dictionary) -> String:
+	var value := int(effect.get("value", 0))
+	var living := get_living_party()
+	if living.is_empty():
+		return "Nobody can drink it."
+	inventory.remove_item(item_id)
+	match str(effect["type"]):
+		"block":
+			for c in living:
+				c.add_block(value)
+			visual_event.emit({"kind": "block", "card_id": "", "specialization_id": "", "source_id": living[0].id, "target_ids": living.map(func(c: Combatant) -> String: return c.id), "target_group": CardDef.TARGET_ALL_ALLIES, "item_id": item_id})
+		"energy":
+			energy += value
+		"draw":
+			deck.draw(value)
+	say("The party uses %s." % str(item.get("name", item_id)))
+	changed.emit()
+	return ""
+
+
 ## Uses a consumable on the most wounded living party member. Returns "" or an error text.
 ## target_id: the ally who drinks it (chosen on screen); "" picks the most wounded living ally.
 func use_potion(item_id: String, target_id: String = "") -> String:
@@ -239,6 +264,8 @@ func use_potion(item_id: String, target_id: String = "") -> String:
 	if item.is_empty() or inventory == null or inventory.count_of(item_id) <= 0:
 		return "You do not have that item."
 	var effect: Dictionary = item.get("effect", {})
+	if POTION_PARTY_EFFECTS.has(str(effect.get("type", ""))):
+		return _use_party_potion(item_id, item, effect)
 	if effect.get("type", "") != "heal":
 		return "That item cannot be used now."
 	var best: Combatant = null

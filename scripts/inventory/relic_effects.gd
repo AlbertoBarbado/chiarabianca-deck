@@ -9,9 +9,10 @@ extends RefCounted
 ##   "effects": [passive]   in-battle effects in the PassiveRunner format (like worn equipment); they
 ##                          belong to the party: the sister who caused the event, else the first living one
 ##   "stats": {"energy": n, "hand_size": n, "max_hp": n, "enemy_damage_pct": n}
-##   "rarity": common | uncommon | rare | boss   (boss relics are offered as a choice of 3 by bosses)
+##   "rarity": common | uncommon | rare | boss | bond   (boss relics are offered as a choice of 3 by bosses;
+##             bond relics are never rolled: the Sister Bond grants them, see Bond.relics)
 
-const RARITIES := ["common", "uncommon", "rare", "boss"]
+const RARITIES := ["common", "uncommon", "rare", "boss", "bond"]
 
 
 ## Sum of one stat over the given relic ids ("energy", "hand_size", "max_hp", "enemy_damage_pct").

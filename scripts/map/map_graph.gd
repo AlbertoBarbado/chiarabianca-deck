@@ -21,6 +21,10 @@ var terrains: Dictionary = {}
 var terrain_backdrops: Dictionary = {}
 ## {title, text, badge} shown when the map is completed.
 var completion: Dictionary = {}
+## Expedition maps (rerolled or generated, see ExpeditionGenerator) keep their whole definition and
+## presentation layout here so saves can rebuild them; {} for maps used exactly as in data/maps.
+var custom_def: Dictionary = {}
+var custom_layout: Dictionary = {}
 
 
 static func from_dict(data: Dictionary) -> MapGraph:

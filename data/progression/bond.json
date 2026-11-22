@@ -1,0 +1,23 @@
+{
+  "id": "bond",
+  "_comment": "Sister Bond (docs/PERSISTENT_RPG_DESIGN.md). XP comes from shared expeditions and twin reactions; reactions are capped per expedition so the bond cannot be farmed. Levels unlock content and duo effects, never plain stats.",
+  "levels": [
+    {"level": 1, "xp": 0, "title": "Sisters", "text": "Two princesses who trust each other with their lives."},
+    {"level": 2, "xp": 5, "title": "In Step", "text": "They start to fight as one.", "unlocks": {"services": ["enchanter"], "fusion": ["purifying_flame", "frozen_bastion"]}},
+    {"level": 3, "xp": 12, "title": "Shared Rhythm", "text": "Each knows the other's next move.", "unlocks": {"relics": ["bond_sisters_rhythm"], "fusion": ["venom_cinder"]}},
+    {"level": 4, "xp": 22, "title": "Heartbound", "text": "A wound to one is felt by both.", "unlocks": {"relics": ["bond_shared_heartbeat"], "fusion": ["aether_aegis"]}},
+    {"level": 5, "xp": 35, "title": "Twin Stars", "text": "Two lights, one sky.", "unlocks": {"relics": ["bond_twin_stars"]}}
+  ],
+  "sources": {
+    "expedition_completed": 4,
+    "expedition_retreated": 1,
+    "expedition_defeated": 1,
+    "boss_defeated": 2,
+    "twin_reaction": 1,
+    "event": 1
+  },
+  "caps_per_expedition": {
+    "twin_reaction": 3,
+    "event": 2
+  }
+}

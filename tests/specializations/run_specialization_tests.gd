@@ -84,7 +84,7 @@ func _test_selection_and_decks() -> void:
 	check(fire.character_id == "chiara" and holy.character_id == "bianca", "owners are Chiara and Bianca")
 	check(fire.display_name == "Fire" and holy.display_name == "Holy" and fire.description != "" and holy.description != "", "names and descriptions defined")
 	check(fire.has_passive() and holy.has_passive(), "both define a passive")
-	check(DataRegistry.counts()["specializations"] == 12 and DataRegistry.counts()["cards"] == 194, "12 specializations and 194 cards loaded (with Wind, Venom, Aether, cross-combo and expansion cards)")
+	check(DataRegistry.counts()["specializations"] == 12 and DataRegistry.counts()["cards"] == 198, "12 specializations and 198 cards loaded (with Wind, Venom, Aether, cross-combo, expansion and 4 fusion cards)")
 	check(DataRegistry.get_specialization("duelist") == null and DataRegistry.get_character("bianca").specialization_ids.has("ashveil"), "Ashveil replaces the Duelist")
 	for other in ["earth", "lightning", "retribution", "commander"]:
 		check(not DataRegistry.get_specialization(other).is_playable(), "%s still not playable" % other)

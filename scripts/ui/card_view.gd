@@ -40,6 +40,7 @@ const RARITY_RIBBON := {
 	"uncommon": Color("23707c"),
 	"rare": Color("a8761f"),
 	"epic": Color("6b34a6"),
+	"fusion": Color("1f7f8f"),
 }
 const TYPE_COLORS := {
 	"attack": Color("e8664f"),
@@ -173,7 +174,7 @@ func _show(def: CardDef, p_owner_id: String, card_name: String, cost: int, descr
 	_frame_mat.set_shader_parameter("rim_color", owner_color)
 	_frame_mat.set_shader_parameter("body_top", owner_color.darkened(0.6).lerp(Color("182238"), 0.35))
 	_frame_mat.set_shader_parameter("body_bottom", owner_color.darkened(0.86).lerp(Color("070a12"), 0.4))
-	_frame_mat.set_shader_parameter("shimmer", 1.0 if def.rarity == "epic" else 0.0)
+	_frame_mat.set_shader_parameter("shimmer", 1.0 if def.rarity == "epic" or def.rarity == "fusion" else 0.0)
 	_frame.material = _frame_mat
 	_face.add_child(_frame)
 

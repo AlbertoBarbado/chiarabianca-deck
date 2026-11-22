@@ -1,0 +1,20 @@
+[
+  {"id": "expeditions", "name": "Expeditions", "order": 1, "icon": "icons/icon_star", "screen": "world_map",
+   "description": "The war table: choose a region and a mission, prepare, and set out."},
+  {"id": "library", "name": "Deck Workshop", "order": 2, "icon": "icons/icon_rune", "panel": "deck_workshop",
+   "description": "Build each sister's prepared deck from her collection and save deck configurations."},
+  {"id": "collection", "name": "Card Collection", "order": 3, "icon": "icons/icon_chest", "panel": "collection",
+   "description": "Every card the sisters own or have yet to find."},
+  {"id": "armory", "name": "Armory", "order": 4, "icon": "icons/icon_shield", "screen": "equipment",
+   "description": "Equip the sisters from the armory."},
+  {"id": "blacksmith", "name": "Upgrade Workshop", "order": 5, "icon": "icons/icon_combat", "panel": "upgrades",
+   "description": "Upgrade cards for good and refine equipment.", "hint": "Complete \"The Royal Castle\"."},
+  {"id": "enchanter", "name": "Enchanter", "order": 6, "icon": "icons/icon_rune", "panel": "fusion",
+   "description": "Fuse one card of each sister into a twin card.", "hint": "Reach Sister Bond level 2."},
+  {"id": "apothecary", "name": "Apothecary", "order": 7, "icon": "icons/icon_flame", "panel": "apothecary",
+   "description": "Buy and brew potions and widen the potion belt."},
+  {"id": "training_hall", "name": "Training Hall", "order": 8, "icon": "icons/icon_shield", "panel": "training",
+   "description": "Learn new specializations and pick a secondary style.", "hint": "Defeat the Forest Serpent."},
+  {"id": "sisters", "name": "The Sisters", "order": 9, "icon": "icons/icon_star", "panel": "bond",
+   "description": "Their bond, what it has unlocked and the heirloom relic they carry."}
+]

@@ -162,6 +162,9 @@
         "effects": [
           {
             "type": "card_reward"
+          },
+          {
+            "type": "bond"
           }
         ]
       },
@@ -375,6 +378,9 @@
           {
             "type": "gain_gold",
             "value": 40
+          },
+          {
+            "type": "bond"
           }
         ]
       },

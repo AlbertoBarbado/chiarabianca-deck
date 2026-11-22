@@ -3,6 +3,7 @@
     "id": "minor_health_potion",
     "name": "Minor Health Potion",
     "category": "potion",
+    "price": 20,
     "description": "Restore 15 HP to the most wounded party member. Usable in combat.",
     "effect": {
       "type": "heal",
@@ -13,10 +14,47 @@
     "id": "health_potion",
     "name": "Health Potion",
     "category": "potion",
+    "price": 45,
     "description": "Restore 35 HP to the most wounded party member. Usable in combat.",
     "effect": {
       "type": "heal",
       "value": 35
+    }
+  },
+  {
+    "id": "guard_draught",
+    "name": "Guard Draught",
+    "category": "potion",
+    "price": 40,
+    "brewed": true,
+    "description": "Both sisters gain 8 Block. Usable in combat.",
+    "effect": {
+      "type": "block",
+      "value": 8
+    }
+  },
+  {
+    "id": "focus_tonic",
+    "name": "Focus Tonic",
+    "category": "potion",
+    "price": 45,
+    "brewed": true,
+    "description": "Gain 1 Energy this turn. Usable in combat.",
+    "effect": {
+      "type": "energy",
+      "value": 1
+    }
+  },
+  {
+    "id": "clarity_elixir",
+    "name": "Clarity Elixir",
+    "category": "potion",
+    "price": 50,
+    "brewed": true,
+    "description": "Draw 2 cards. Usable in combat.",
+    "effect": {
+      "type": "draw",
+      "value": 2
     }
   }
 ]

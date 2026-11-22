@@ -1,8 +1,10 @@
 ﻿extends ScreenBase
 ## Cinematic title screen: castle backdrop, the game logo, Chiara and Bianca on opposite sides
-## and the four menu buttons (New Game, Continue, Settings, Exit) in the centre. All buttons are
-## real controls; Continue is disabled unless a save exists. Positions are computed from the
-## stage size, so any landscape window works.
+## and the menu in the centre: New Campaign, Continue, Settings, the Quick Play grid and Exit. All
+## buttons are real controls; Continue is disabled unless a save exists (the campaign first, else a
+## Quick Play run). Quick Play runs are classic runs without the castle, saved in their own slot so
+## they never touch the campaign. Positions are computed from the stage size, so any landscape
+## window works.
 
 const BUTTON_WIDTH := 300.0
 const BUTTON_HEIGHT := 62.0
@@ -70,15 +72,17 @@ func _build() -> void:
 	_menu = UIFactory.vbox(12)
 	_menu.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_stage.add_child(_menu)
-	var new_game := _menu_button("New Game", true)
+	var new_game := _menu_button("New Campaign", true)
+	new_game.name = "NewCampaignButton"
+	new_game.tooltip_text = "Start a campaign: the castle is your home between expeditions."
 	new_game.pressed.connect(_on_new_game)
 	continue_button = _menu_button("Continue", false)
-	continue_button.disabled = not GameState.has_save()
+	continue_button.disabled = _continue_slot() == ""
 	continue_button.pressed.connect(_on_continue)
 	var settings := _menu_button("Settings", false)
 	settings.name = "SettingsButton"
-	settings.pressed.connect(func() -> void: SceneRouter.go(SceneRouter.Screen.SETTINGS))
-	if GameState.has_save():
+	settings.pressed.connect(func() -> void: SceneRouter.open_settings(SceneRouter.Screen.MAIN_MENU))
+	if _continue_slot() != "":
 		# Settings and Delete Save share a row so the menu still fits a 720p screen.
 		var settings_row := UIFactory.hbox(8)
 		settings_row.name = "SettingsRow"
@@ -99,6 +103,14 @@ func _build() -> void:
 	demo_row.add_theme_constant_override("v_separation", 6)
 	demo_row.name = "DemoRow"
 	_menu.add_child(demo_row)
+	var classic := _small_menu_button("Classic Run", demo_row)
+	classic.name = "ClassicRunButton"
+	classic.tooltip_text = "Quick Play: the classic run from the Royal Castle through the Forest and the Coast, without the castle hub."
+	classic.pressed.connect(_on_classic_run)
+	if GameState.slot_has_save(GameState.SLOT_CAMPAIGN) and GameState.slot_has_save(GameState.SLOT_QUICKPLAY):
+		var resume := _small_menu_button("Resume Quick Play", demo_row)
+		resume.name = "ResumeQuickPlayButton"
+		resume.pressed.connect(_resume_slot.bind(GameState.SLOT_QUICKPLAY))
 	var demo_button := _small_menu_button("Elite Route", demo_row)
 	demo_button.name = "DemoRouteButton"
 	demo_button.tooltip_text = "Demo: a short castle route packed with elite fights."
@@ -211,13 +223,28 @@ func _ask_delete_save() -> void:
 
 
 func _delete_save(dialog: Control) -> void:
+	GameState.use_slot(_continue_slot())
 	GameState.delete_save()
 	dialog.queue_free()
-	continue_button.disabled = true
+	continue_button.disabled = _continue_slot() == ""
 	var delete_button := _menu.find_child("DeleteSaveButton", true, false)
 	if delete_button != null:
 		delete_button.queue_free()
 	notice.text = "Saved run deleted."
+
+
+## The save Continue resumes: the campaign first, else a Quick Play run ("" = none).
+func _continue_slot() -> String:
+	if GameState.slot_has_save(GameState.SLOT_CAMPAIGN):
+		return GameState.SLOT_CAMPAIGN
+	if GameState.slot_has_save(GameState.SLOT_QUICKPLAY):
+		return GameState.SLOT_QUICKPLAY
+	return ""
+
+
+func _on_classic_run() -> void:
+	GameState.next_map_id = GameConfig.DEFAULT_MAP_ID
+	_on_new_game_keep_map()
 
 
 func _on_demo_crystal() -> void:
@@ -235,18 +262,38 @@ func _on_act_start(map_id: String) -> void:
 	_on_new_game_keep_map()
 
 
+## Quick Play: a classic run on the chosen map, in the Quick Play save slot.
 func _on_new_game_keep_map() -> void:
+	GameState.new_game_mode = "classic"
+	GameState.use_slot(GameState.SLOT_QUICKPLAY)
 	GameState.reset_selection()
 	SceneRouter.go(SceneRouter.Screen.CHARACTER_SELECTION)
 
 
+## A new campaign (the selection screens, then the castle). An existing campaign is replaced only
+## after a confirmation.
 func _on_new_game() -> void:
+	if GameState.slot_has_save(GameState.SLOT_CAMPAIGN) and get_node_or_null("ReplaceConfirm") == null:
+		CastleUI.confirm(self, "Start a new campaign?", "Your current campaign (collection, castle, progress) will be replaced when the new one begins.",
+			"Start Anew", _start_new_campaign, "ReplaceConfirm")
+		return
+	_start_new_campaign()
+
+
+func _start_new_campaign() -> void:
 	GameState.next_map_id = GameConfig.DEFAULT_MAP_ID
+	GameState.new_game_mode = "campaign"
+	GameState.use_slot(GameState.SLOT_CAMPAIGN)
 	GameState.reset_selection()
 	SceneRouter.go(SceneRouter.Screen.CHARACTER_SELECTION)
 
 
 func _on_continue() -> void:
+	_resume_slot(_continue_slot())
+
+
+func _resume_slot(slot: String) -> void:
+	GameState.use_slot(slot)
 	var error := GameState.load_game()
 	if error != "":
 		notice.text = "Cannot continue: " + error

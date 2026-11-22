@@ -42,3 +42,22 @@ coast-level ones near the summit.
 - **Frostbitten** (new party debuff): +15% Frost damage taken per stack, max 3, -1 per round. Yetis,
   drakes, wraiths, crystal spiders, the Ice Giant and the dragon inflict it. The Yeti-Fur Mantle
   (hunters' lodge event, Pinefall furrier) makes the wearer immune; Glacier Plate resists frost.
+
+## Persistent campaign: the castle and expeditions (2026-11-22)
+
+The main loop is now **Castle -> War Table -> Region -> Mission -> Preparation -> Expedition -> Results
+-> Castle**. Full design: `docs/PERSISTENT_RPG_DESIGN.md`.
+
+- **The castle** is the sisters' home and never resets: card collection and prepared decks, the armory,
+  the potion stores, learned specializations, the Sister Bond, the world state and the treasury.
+- **Expeditions** are the old runs wrapped in missions. Fixed maps get rerolled contents every time;
+  new missions use generated maps built from a region's content. They end in success, retreat or
+  defeat, and always return to the castle with a results screen.
+- **What persists:** gold by outcome (100 / 50 / 25%), equipment always, relics as heirloom choices,
+  potions unless defeated, and up to 2 (1 on retreat) of the cards drafted on the way.
+- **Signature systems:** hybrid specializations (Training Hall), permanent card upgrades and
+  equipment refinement (Upgrade Workshop), card fusion between the sisters (Enchanter), and the
+  Sister Bond, which grows from shared expeditions and twin reactions and unlocks fusion recipes and
+  bond relics rather than stats.
+- **Quick Play** keeps the classic run (Royal Castle -> Forest -> Coast) and the direct starts
+  (demos, Forest, Coast, Frostpeak) without the castle, in a separate save slot.

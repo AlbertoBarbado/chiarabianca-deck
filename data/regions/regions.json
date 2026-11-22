@@ -1,0 +1,107 @@
+[
+  {
+    "id": "royal_castle",
+    "name": "Royal Castle Grounds",
+    "order": 1,
+    "description": "Home. The castle halls and the training yards, where the sisters learn to fight side by side.",
+    "art": "map_royal_castle",
+    "world_position": [
+      0.5,
+      0.84
+    ],
+    "threat": 1,
+    "mechanics": "Short routes and training fights. The Castle Depths open once the sisters have walked their own halls.",
+    "missions": [
+      "castle_awakening",
+      "castle_gauntlet"
+    ],
+    "unlock": {}
+  },
+  {
+    "id": "crystal_hollow",
+    "name": "Crystal Cave",
+    "order": 2,
+    "description": "Caves beneath the castle cliffs, glittering with living crystal. Crystal beasts gather around the Crystal Wyrm.",
+    "art": "map_crystal_hollow",
+    "world_position": [
+      0.5,
+      0.5
+    ],
+    "threat": 2,
+    "mechanics": "A short cave route through the chasm, the grotto and old ruins, with a merchant camp and the Crystal Wyrm at its end.",
+    "missions": [
+      "crystal_hollow"
+    ],
+    "unlock": {
+      "missions": [
+        "castle_awakening"
+      ]
+    }
+  },
+  {
+    "id": "enchanted_forest",
+    "name": "Enchanted Forest",
+    "order": 3,
+    "description": "An old forest of mossy giants, river falls and mountain trails, poisoned at its heart by the Forest Serpent.",
+    "art": "map_enchanted_forest",
+    "world_position": [
+      0.17,
+      0.47
+    ],
+    "threat": 3,
+    "mechanics": "Three trails: mountain wolves, the deepwood's spiders and beasts, and the river falls. Villages offer rest and trade.",
+    "missions": [
+      "forest_serpent",
+      "forest_rescue"
+    ],
+    "unlock": {
+      "missions": [
+        "castle_awakening"
+      ]
+    }
+  },
+  {
+    "id": "sunlit_coast",
+    "name": "Sunlit Coast",
+    "order": 4,
+    "description": "Golden dunes, sea caves and a storm that never sleeps. Pirates and sea beasts haunt the shore and the open water.",
+    "art": "map_sunlit_coast",
+    "world_position": [
+      0.83,
+      0.47
+    ],
+    "threat": 4,
+    "mechanics": "Fights on the beach and aboard the ship at sea. Sandstorms blind, waves soak.",
+    "missions": [
+      "coast_storm",
+      "coast_reliquary"
+    ],
+    "unlock": {
+      "missions": [
+        "forest_serpent"
+      ]
+    }
+  },
+  {
+    "id": "frostpeak",
+    "name": "Frostpeak",
+    "order": 5,
+    "description": "A mountain climb through pine slopes, glacier caves and the summit above the clouds, where the White Dragon nests.",
+    "art": "map_frostpeak",
+    "world_position": [
+      0.5,
+      0.13
+    ],
+    "threat": 5,
+    "mechanics": "The higher the climb, the colder the foes: Frostbitten makes frost wounds deeper. Only a few foes fear fire.",
+    "missions": [
+      "frostpeak_dragon",
+      "frostpeak_beacons"
+    ],
+    "unlock": {
+      "missions": [
+        "forest_serpent"
+      ]
+    }
+  }
+]

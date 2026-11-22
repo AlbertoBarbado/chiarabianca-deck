@@ -7,8 +7,16 @@ extends RefCounted
 ## balance changes apply to old saves. Restoring validates everything and never trusts the file:
 ## unknown ids are dropped with a warning, numbers are clamped, and unusable saves are rejected
 ## with an error message instead of crashing.
+##
+## Version 3 (persistent campaign, docs/PERSISTENT_RPG_DESIGN.md §7) keeps the run payload below at the
+## top level (it is the expedition, or a Quick Play run) and adds:
+##   "mode": "campaign" | "classic", "campaign": CampaignState.to_dict() (campaign mode only),
+##   "expedition": ExpeditionState.to_dict() (while an expedition is under way).
+## A campaign at the castle has no run payload ("party" is absent). The map block may carry
+## "map_def" / "layout_def" for rerolled or generated expedition maps. GameState decides the mode;
+## restore() below only rebuilds the run payload, exactly as before.
 
-const SAVE_VERSION := 2
+const SAVE_VERSION := 3
 ## Room kinds a save may resume (anything else is dropped and the run resumes on the map).
 const ROOM_KINDS := ["combat", "elite", "rest", "merchant", "event", "treasure", "town", "boss"]
 
@@ -16,30 +24,46 @@ const ROOM_KINDS := ["combat", "elite", "rest", "merchant", "event", "treasure",
 static func serialize(party: Party, inventory: Inventory, progress: MapProgress, room_state: Dictionary = {}, pending_reward: CardReward = null, flags: Dictionary = {}) -> Dictionary:
 	var members: Array = []
 	for member in party.members:
-		var deck: Array = []
-		for owned in member.deck:
-			deck.append({"uid": owned.uid, "card_id": owned.card_id, "upgrade_level": owned.upgrade_level})
-		members.append({
-			"character_id": member.id,
-			"specialization_id": member.specialization.id,
-			"current_hp": member.current_hp,
-			"next_card_serial": member.next_card_serial,
-			"deck": deck,
-			"equipment": member.equipment.duplicate(),
-		})
+		members.append(serialize_member(member))
+	var map_block := {
+		"map_id": progress.graph.id,
+		"current_node_id": progress.current_node_id,
+		"visited": progress.visited_ids.duplicate(),
+	}
+	if not progress.graph.custom_def.is_empty():
+		map_block["map_def"] = progress.graph.custom_def.duplicate(true)
+		map_block["layout_def"] = progress.graph.custom_layout.duplicate(true)
 	return {
 		"version": SAVE_VERSION,
 		"party": members,
-		"inventory": {"gold": inventory.gold, "items": inventory.items.duplicate(), "relics": inventory.relics.duplicate(), "equipment": inventory.equipment.duplicate()},
+		"inventory": serialize_inventory(inventory),
 		"room": room_state.duplicate(true),
 		"flags": flags.duplicate(true),
 		"reward": pending_reward.to_dict() if pending_reward != null else {},
-		"map": {
-			"map_id": progress.graph.id,
-			"current_node_id": progress.current_node_id,
-			"visited": progress.visited_ids.duplicate(),
-		},
+		"map": map_block,
 	}
+
+
+## One party member (also used for the campaign roster, whose deck is the card collection).
+static func serialize_member(member: PartyMember) -> Dictionary:
+	var deck: Array = []
+	for owned in member.deck:
+		deck.append({"uid": owned.uid, "card_id": owned.card_id, "upgrade_level": owned.upgrade_level})
+	var entry := {
+		"character_id": member.id,
+		"specialization_id": member.specialization.id,
+		"current_hp": member.current_hp,
+		"next_card_serial": member.next_card_serial,
+		"deck": deck,
+		"equipment": member.equipment.duplicate(),
+	}
+	if member.secondary_specialization != null:
+		entry["secondary_specialization_id"] = member.secondary_specialization.id
+	return entry
+
+
+static func serialize_inventory(inventory: Inventory) -> Dictionary:
+	return {"gold": inventory.gold, "items": inventory.items.duplicate(), "relics": inventory.relics.duplicate(), "equipment": inventory.equipment.duplicate()}
 
 
 ## Validates and rebuilds runtime objects from save data.
@@ -58,10 +82,10 @@ static func restore(data: Variant) -> Dictionary:
 	# Relic Max HP must be known before HP is restored (a saved 70 / 70 with the Royal Pear is not clamped to 64).
 	var raw_inventory: Variant = save.get("inventory", {})
 	var saved_relics: Array = (raw_inventory as Dictionary).get("relics", []) if raw_inventory is Dictionary and (raw_inventory as Dictionary).get("relics", []) is Array else []
-	var party := _restore_party(save.get("party", []), warnings, result, RelicEffects.stat_for(saved_relics, "max_hp"))
+	var party := restore_party(save.get("party", []), warnings, result, RelicEffects.stat_for(saved_relics, "max_hp"))
 	if party == null:
 		return result
-	var inventory := _restore_inventory(save.get("inventory", {}), warnings)
+	var inventory := restore_inventory(save.get("inventory", {}), warnings)
 	var progress := _restore_map(save.get("map", {}), warnings, result)
 	if progress == null:
 		return result
@@ -87,10 +111,12 @@ static func _migrate(save: Dictionary) -> Dictionary:
 		migrated["version"] = 2
 		migrated["room"] = {}
 		migrated["reward"] = {}
+	if int(migrated["version"]) < 3:
+		migrated["version"] = 3  # v3 only adds optional blocks (campaign, expedition, map_def).
 	return migrated
 
 
-static func _restore_party(raw_members: Variant, warnings: Array[String], result: Dictionary, relic_max_hp: int = 0) -> Party:
+static func restore_party(raw_members: Variant, warnings: Array[String], result: Dictionary, relic_max_hp: int = 0) -> Party:
 	if not raw_members is Array or (raw_members as Array).is_empty():
 		result["error"] = "Save has no party."
 		return null
@@ -112,6 +138,11 @@ static func _restore_party(raw_members: Variant, warnings: Array[String], result
 		member.definition = char_def
 		member.specialization = spec_def
 		member.next_card_serial = maxi(1, int(entry.get("next_card_serial", 1)))
+		var secondary := DataRegistry.get_specialization(str(entry.get("secondary_specialization_id", "")))
+		if secondary != null and secondary.character_id == char_def.id and secondary.id != spec_def.id and secondary.is_playable():
+			member.secondary_specialization = secondary
+		elif str(entry.get("secondary_specialization_id", "")) != "":
+			warnings.append("Dropped an unusable secondary specialization of %s." % char_def.display_name)
 		_restore_equipment(member, entry.get("equipment", {}), warnings)
 		member.extra_max_hp = relic_max_hp
 		member.max_hp = maxi(1, char_def.max_hp + int(Equipment.totals(member)["max_hp"]) + member.extra_max_hp)
@@ -162,7 +193,7 @@ static func _restore_deck(member: PartyMember, raw_deck: Variant, warnings: Arra
 			member.add_card(card_id)
 
 
-static func _restore_inventory(raw: Variant, warnings: Array[String]) -> Inventory:
+static func restore_inventory(raw: Variant, warnings: Array[String]) -> Inventory:
 	var inventory := Inventory.new()
 	var data: Dictionary = raw if raw is Dictionary else {}
 	inventory.gold = maxi(0, int(data.get("gold", 0)))
@@ -234,10 +265,23 @@ static func _restore_map(raw: Variant, warnings: Array[String], result: Dictiona
 	var data: Dictionary = raw if raw is Dictionary else {}
 	var map_id := str(data.get("map_id", GameConfig.DEFAULT_MAP_ID))
 	var map_def := DataRegistry.get_map(map_id)
+	var custom: Dictionary = data.get("map_def", {}) if data.get("map_def", {}) is Dictionary else {}
+	if not custom.is_empty():
+		# An expedition map (rerolled or generated): rebuilt from the saved definition when it is sound.
+		if not MapGraph.from_dict(custom).validate().is_empty() or _unknown_content(custom):
+			result["error"] = "The saved expedition map is damaged."
+			return null
+		map_def = custom
 	if map_def.is_empty():
 		result["error"] = "Save refers to an unknown map '%s'." % map_id
 		return null
-	var progress := MapProgress.new(MapGraph.from_dict(map_def))
+	var graph := MapGraph.from_dict(map_def)
+	if not custom.is_empty():
+		graph.custom_def = custom
+		graph.custom_layout = data.get("layout_def", {}) if data.get("layout_def", {}) is Dictionary else {}
+		if not graph.custom_layout.is_empty():
+			DataRegistry.layouts[graph.id] = graph.custom_layout
+	var progress := MapProgress.new(graph)
 	var visited: Array[String] = []
 	var raw_visited: Variant = data.get("visited", [])
 	if raw_visited is Array:
@@ -247,6 +291,23 @@ static func _restore_map(raw: Variant, warnings: Array[String], result: Dictiona
 		result["error"] = "Save has an invalid map position."
 		return null
 	return progress
+
+
+## A saved custom map naming encounters, towns, shops or chests that no longer exist.
+static func _unknown_content(map_def: Dictionary) -> bool:
+	for node: Variant in map_def.get("nodes", []):
+		if not node is Dictionary:
+			return true
+		var n: Dictionary = node
+		if str(n.get("encounter_id", "")) != "" and DataRegistry.get_encounter(str(n["encounter_id"])).is_empty():
+			return true
+		if str(n.get("town_id", "")) != "" and DataRegistry.get_town(str(n["town_id"])).is_empty():
+			return true
+		if str(n.get("shop_id", "")) != "" and DataRegistry.get_shop(str(n["shop_id"])).is_empty():
+			return true
+		if str(n.get("treasure_id", "")) != "" and DataRegistry.get_treasure(str(n["treasure_id"])).is_empty():
+			return true
+	return false
 
 
 # --- File access -------------------------------------------------------------

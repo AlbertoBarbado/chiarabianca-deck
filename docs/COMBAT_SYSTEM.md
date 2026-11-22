@@ -335,3 +335,14 @@ Added with the card-pool expansion (9 new reward cards per playable specializati
 - Each specialization's pool has at least 2 real Powers, and Retain, X-cost and Exhaust cards
   (checked by `tests/cards/run_card_keyword_tests.gd`). The simulation bot values Powers by the enemy
   HP left in the fight and plays X cards with the Energy it has.
+
+## Campaign additions (2026-11-22)
+
+- **Party potions:** consumables with effect type `block` (both sisters gain N Block), `energy` (+N
+  Energy now) or `draw` (draw N) act at once (`CombatManager.POTION_PARTY_EFFECTS`); `heal` potions still
+  ask who drinks. New brews: Guard Draught, Focus Tonic, Clarity Elixir.
+- **Bond relics** (rarity `bond`) are ordinary relics with PassiveRunner effects; they are never rolled.
+- **Fusion cards** use only existing effect keys (e.g. Purifying Flame: Holy damage with
+  `bonus_if_status` Burn, then Burn, which also sets off the Purifying Flame reaction).
+- **Equipment refinement** adds per-level stats in `Equipment.totals` (`Equipment.refinement`).
+- `CombatManager.reactions_fired` feeds the Sister Bond (`GameState.record_combat_victory`).

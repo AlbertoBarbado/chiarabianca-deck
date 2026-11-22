@@ -80,6 +80,8 @@ func _on_choice(choice: Dictionary, index: int) -> void:
 	if bool(GameState.room_state.get("resolved", false)) or EventResolver.blocked_reason(choice, GameState.inventory) != "":
 		return
 	var result := EventResolver.apply(choice.get("effects", []), GameState.party, GameState.inventory)
+	if bool(result.get("bond", false)):
+		ExpeditionService.on_bond_event()
 	var outcome := "\n".join(result["log"] as Array[String])
 	GameState.mark_event_seen(str(_event.get("id", "")))
 	var patch := {"resolved": true, "choice": index, "outcome": outcome}

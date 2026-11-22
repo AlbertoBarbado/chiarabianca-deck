@@ -4,6 +4,9 @@ extends RefCounted
 
 var definition: CharacterDef
 var specialization: SpecializationDef
+## Optional second specialization (campaign Training Hall): her deck may hold a few of its cards and
+## its rewards appear at reduced weight. Only the primary specialization's passive runs. null = none.
+var secondary_specialization: SpecializationDef = null
 var current_hp: int = 1
 var max_hp: int = 1
 ## Max HP from relics (RelicEffects.apply_stats); derived from the owned relics, never saved.

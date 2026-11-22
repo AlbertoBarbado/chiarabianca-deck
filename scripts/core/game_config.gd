@@ -10,4 +10,6 @@ const DEFAULT_REST_HEAL_FRACTION := 0.3
 ## HP given to fallen party members when a combat is won.
 const FALLEN_REVIVE_HP := 1
 const SAVE_PATH := "user://savegame.json"
+## Quick Play runs (no campaign) are kept apart from the campaign save.
+const QUICKPLAY_SAVE_PATH := "user://quickplay.json"
 const SETTINGS_PATH := "user://settings.cfg"

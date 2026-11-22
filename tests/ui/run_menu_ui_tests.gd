@@ -137,7 +137,7 @@ func _test_main_menu() -> void:
 	for button in buttons:
 		texts.append(button.text)
 	texts.erase("Delete Save")  # only present while a save exists
-	check(texts == ["New Game", "Continue", "Settings", "Elite Route", "Crystal Cave", "Start: Forest", "Start: Coast", "Frostpeak", "Exit"], "the menu buttons are real controls in order (demos, direct act starts and Frostpeak)")
+	check(texts == ["New Campaign", "Continue", "Settings", "Classic Run", "Elite Route", "Crystal Cave", "Start: Forest", "Start: Coast", "Frostpeak", "Exit"], "the menu buttons are real controls in order (campaign, then Quick Play: classic run, demos, direct act starts and Frostpeak)")
 	check(menu.continue_button.disabled, "Continue is disabled when there is no save")
 	_free_host(host)
 	GameState.save_game()
@@ -151,11 +151,11 @@ func _test_main_menu() -> void:
 	GameState.delete_save()
 	check(not GameState.has_save(), "deleting the save disables Continue again")
 	host = await _host(SCREENS["main_menu"], Vector2(1280, 720))
-	var new_game := _find_button(host["screen"], "New Game")
+	var new_game := _find_button(host["screen"], "New Campaign")
 	var went: Array[String] = []
 	new_game.pressed.connect(func() -> void: went.append("new"))
 	new_game.pressed.emit()
-	check(went == ["new"], "New Game is wired to its handler")
+	check(went == ["new"], "New Campaign is wired to its handler")
 	_free_host(host)
 
 
@@ -215,9 +215,16 @@ func _test_selection_screens() -> void:
 	check(GameState.selected_specializations.get("chiara", "") == "earth" and _find_button(screen, "Confirm Party").disabled, "an unplayable specialization still blocks confirmation")
 	_free_host(host)
 	_prepare_game_state()
+	GameState.new_game_mode = "classic"  # this check covers the classic overview (New Campaign was pressed above)
 	host = await _host(SCREENS["party_overview"], Vector2(1280, 720))
 	screen = host["screen"]
 	check(_find_button(screen, "Enter the Royal Castle") != null and _label_texts(screen).any(func(t: String) -> bool: return t.contains("Specialization: Fire")) and _label_texts(screen).any(func(t: String) -> bool: return t.contains("Specialization: Holy")), "party overview shows both specializations and the start action")
+	_free_host(host)
+	GameState.new_game_mode = "campaign"
+	host = await _host(SCREENS["party_overview"], Vector2(1280, 720))
+	check(_find_button(host["screen"], "Begin the Campaign") != null, "in campaign mode the overview begins the campaign instead")
+	GameState.new_game_mode = "classic"
+	screen = host["screen"]
 	_free_host(host)
 
 

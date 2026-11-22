@@ -39,7 +39,7 @@ func _test_data_loading() -> void:
 	print("Data loading")
 	check(DataRegistry.counts()["characters"] == 2, "2 characters loaded")
 	check(DataRegistry.counts()["specializations"] == 12, "12 specializations loaded")
-	check(DataRegistry.counts()["cards"] == 194, "194 cards loaded: 122 + 72 from the card-pool expansion (9 per specialization; template skipped)")
+	check(DataRegistry.counts()["cards"] == 198, "198 cards loaded: 122 + 72 from the card-pool expansion (9 per specialization) + 4 fusion cards (template skipped)")
 	check(DataRegistry.get_specializations_for("chiara").size() == 6, "Chiara has 6 specializations")
 	check(DataRegistry.get_specializations_for("bianca").size() == 6, "Bianca has 6 specializations")
 	check(DataRegistry.get_specialization("arcana").is_playable(), "Arcana playable")

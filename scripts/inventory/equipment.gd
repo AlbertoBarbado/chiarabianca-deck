@@ -23,6 +23,35 @@ const SLOT_NAMES := {
 }
 const RARITY_ORDER: Array[String] = ["common", "uncommon", "rare", "epic"]
 
+## Blacksmith refinement levels (item id -> level) of the loaded campaign, applied to every copy of
+## the item (CampaignState.refresh_roster sets it; {} in Quick Play). See refined_bonus.
+static var refinement: Dictionary = {}
+
+
+## Extra stats of an item at a refinement level: every stat the item already has grows by the
+## campaign rules' per_level amounts ({} when the item has no refinable stats or level is 0).
+static func refined_bonus(item_id: String, level: int) -> Dictionary:
+	var bonus := {}
+	if level <= 0:
+		return bonus
+	var per: Dictionary = CampaignRules.block("refinement").get("per_level", {})
+	var stats: Dictionary = item(item_id).get("stats", {})
+	if int(stats.get("max_hp", 0)) > 0:
+		bonus["max_hp"] = int(per.get("max_hp", 0)) * level
+	for key in ["resist", "damage"]:
+		var bucket: Dictionary = stats.get(key, {})
+		if bucket.is_empty():
+			continue
+		var grown := {}
+		for element: String in bucket:
+			grown[element] = int(per.get(key, 0)) * level
+		bonus[key] = grown
+	return bonus
+
+
+static func refinement_level(item_id: String) -> int:
+	return int(refinement.get(item_id, 0))
+
 
 static func is_equipment(item_id: String) -> bool:
 	return str(DataRegistry.get_item(item_id).get("category", "")) == "equipment"
@@ -224,7 +253,12 @@ static func totals(member: PartyMember) -> Dictionary:
 		return result
 	for slot: String in member.equipment:
 		var stats: Dictionary = item(str(member.equipment[slot])).get("stats", {})
-		result["max_hp"] = int(result["max_hp"]) + int(stats.get("max_hp", 0))
+		var bonus := refined_bonus(str(member.equipment[slot]), refinement_level(str(member.equipment[slot])))
+		result["max_hp"] = int(result["max_hp"]) + int(stats.get("max_hp", 0)) + int(bonus.get("max_hp", 0))
+		for key in ["resist", "damage"]:
+			var extra: Dictionary = bonus.get(key, {})
+			for element: String in extra:
+				(result[key] as Dictionary)[element] = int((result[key] as Dictionary).get(element, 0)) + int(extra[element])
 		for status_id: Variant in stats.get("immune", []):
 			if not (result["immune"] as Array).has(str(status_id)):
 				(result["immune"] as Array).append(str(status_id))

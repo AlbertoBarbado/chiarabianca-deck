@@ -185,3 +185,7 @@ Status: the model licences permit commercial use, but generated images still nee
   - The map art is inspired by ink-wash landscape maps in general. No existing map or artwork was used as
     an input image or reproduced.
   - **Not release-cleared** pending IP review.
+
+- **Persistent campaign (2026-11-22):** no new assets. Fusion cards reuse existing card art
+  (`chiara_fire_ember`, `bianca_tanking_rally`, `chiara_fire_kindle`, `bianca_holy_shield`), bond relics
+  reuse relic icons, castle and world screens reuse the UI kit, map pictures and menu background.

@@ -13,13 +13,15 @@ extends RefCounted
 ##   gain_equipment {item_id}     the item goes into the party stash (see Equipment)
 ##   card_reward {}               the caller opens a card reward (reported in the result)
 ##   start_combat {encounter_id}  the caller starts that fight (reported in the result)
+##   bond {}                      the sisters grow closer: a capped Sister Bond source in a campaign
+##                                (reported in the result; ExpeditionService.on_bond_event)
 ## Choice requirements ("requires"): {"gold": n} and/or {"item": item_id}.
 ## Event pools: an event lists "pools": [...]; rooms with "event_pool" roll one event of that pool.
 
 
 ## Returns {"card_reward": bool, "encounter_id": String, "log": Array[String]}.
 static func apply(effects: Array, party: Party, inventory: Inventory) -> Dictionary:
-	var result := {"card_reward": false, "encounter_id": "", "log": [] as Array[String]}
+	var result := {"card_reward": false, "encounter_id": "", "bond": false, "log": [] as Array[String]}
 	var lines: Array[String] = result["log"]
 	for effect: Dictionary in effects:
 		var value := int(effect.get("value", 0))
@@ -69,6 +71,9 @@ static func apply(effects: Array, party: Party, inventory: Inventory) -> Diction
 				result["card_reward"] = true
 			"start_combat":
 				result["encounter_id"] = str(effect.get("encounter_id", ""))
+			"bond":
+				result["bond"] = true
+				lines.append("Chiara and Bianca grow closer.")
 			_:
 				push_warning("EventResolver: unknown effect type '%s'" % effect.get("type", ""))
 	return result

@@ -29,6 +29,9 @@ static func pick(party: Party, rng: RandomNumberGenerator, rarity_weights: Dicti
 		var weight := float(rarity_weights.get(str(entry.get("rarity", "common")), 0.0))
 		if weight <= 0.0 or exclude.has(str(entry["id"])) or not Equipment.usable_by_party(party, str(entry["id"])):
 			continue
+		# Campaign world state: items with an "unlock" requirement drop only once it is met.
+		if entry.has("unlock") and Requirements.active_campaign != null and not Requirements.met(Requirements.active_campaign, entry["unlock"]):
+			continue
 		candidates.append(str(entry["id"]))
 		weights.append(weight)
 	if candidates.is_empty():

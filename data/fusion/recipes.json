@@ -1,0 +1,62 @@
+[
+  {
+    "id": "purifying_flame",
+    "name": "Purifying Flame",
+    "text": "Bianca's holy light runs through Chiara's fire: a Holy strike that feeds on Burn, then sets the foe alight.",
+    "inputs": [
+      {"owner": "chiara", "card_id": "chiara_fire_ember", "min_upgrade": 1},
+      {"owner": "bianca", "card_id": "bianca_holy_strike", "min_upgrade": 1}
+    ],
+    "specializations": {"chiara": "fire", "bianca": "holy"},
+    "bond_level": 2,
+    "cost": {"gold": 80, "essence": 1},
+    "result": {"owner": "chiara", "card_id": "chiara_fusion_purifying_flame"},
+    "consume_inputs": true,
+    "repeatable": false
+  },
+  {
+    "id": "frozen_bastion",
+    "name": "Frozen Bastion",
+    "text": "Chiara's frost hardens Bianca's guard into a wall of ice that chills every foe who strikes it.",
+    "inputs": [
+      {"owner": "chiara", "card_id": "chiara_frost_touch", "min_upgrade": 1},
+      {"owner": "bianca", "card_id": "bianca_tanking_rally", "min_upgrade": 1}
+    ],
+    "specializations": {"chiara": "frost", "bianca": "tanking"},
+    "bond_level": 2,
+    "cost": {"gold": 80, "essence": 1},
+    "result": {"owner": "bianca", "card_id": "bianca_fusion_frozen_bastion"},
+    "consume_inputs": true,
+    "repeatable": false
+  },
+  {
+    "id": "venom_cinder",
+    "name": "Venom Cinder",
+    "text": "Bianca's venom on Chiara's spark: Poison first, then fire that sets it off.",
+    "inputs": [
+      {"owner": "chiara", "card_id": "chiara_fire_kindle", "min_upgrade": 1},
+      {"owner": "bianca", "card_id": "bianca_venom_envenom", "min_upgrade": 1}
+    ],
+    "specializations": {"chiara": "fire", "bianca": "venom"},
+    "bond_level": 3,
+    "cost": {"gold": 100, "essence": 2},
+    "result": {"owner": "chiara", "card_id": "chiara_fusion_venom_cinder"},
+    "consume_inputs": true,
+    "repeatable": false
+  },
+  {
+    "id": "aether_aegis",
+    "name": "Aether Aegis",
+    "text": "Chiara's gathered Aether woven into Bianca's shield.",
+    "inputs": [
+      {"owner": "chiara", "card_id": "chiara_arcana_ward", "min_upgrade": 1},
+      {"owner": "bianca", "card_id": "bianca_holy_shield", "min_upgrade": 1}
+    ],
+    "specializations": {"chiara": "arcana", "bianca": "holy"},
+    "bond_level": 4,
+    "cost": {"gold": 120, "essence": 2},
+    "result": {"owner": "bianca", "card_id": "bianca_fusion_aether_aegis"},
+    "consume_inputs": true,
+    "repeatable": false
+  }
+]

@@ -178,6 +178,9 @@
           {
             "type": "heal_party_fraction",
             "fraction": 0.3
+          },
+          {
+            "type": "bond"
           }
         ]
       },

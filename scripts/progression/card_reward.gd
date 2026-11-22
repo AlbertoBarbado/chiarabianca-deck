@@ -23,16 +23,23 @@ static func generate(party: Party, rng: RandomNumberGenerator, count: int = OPTI
 	var weights: Dictionary = RARITY_WEIGHTS.duplicate()
 	weights.merge(rules.get("rarity_weights", {}), true)
 	var candidates: Array[Dictionary] = []
+	var epic := str(rules.get("pool", "")) == "epic"
 	for member in party.members:
-		var pool: Array[String] = member.specialization.epic_pool if str(rules.get("pool", "")) == "epic" else member.specialization.card_pool
-		for card_id in pool:
-			var def := DataRegistry.get_card(card_id)
-			if def != null:
-				candidates.append({
-					"card_id": card_id,
-					"owner_character_id": member.id,
-					"weight": float(weights.get(def.rarity, DEFAULT_WEIGHT)),
-				})
+		# The secondary specialization (campaign hybrid builds) offers its pool at reduced weight.
+		var sources: Array = [[member.specialization, 1.0]]
+		if member.secondary_specialization != null:
+			sources.append([member.secondary_specialization, float(CampaignRules.block("deck").get("secondary_reward_weight", 0.5))])
+		for source: Array in sources:
+			var spec: SpecializationDef = source[0]
+			var pool: Array[String] = spec.epic_pool if epic else spec.card_pool
+			for card_id in pool:
+				var def := DataRegistry.get_card(card_id)
+				if def != null and not candidates.any(func(c: Dictionary) -> bool: return c["card_id"] == card_id):
+					candidates.append({
+						"card_id": card_id,
+						"owner_character_id": member.id,
+						"weight": float(weights.get(def.rarity, DEFAULT_WEIGHT)) * float(source[1]),
+					})
 	while reward.options.size() < count and not candidates.is_empty():
 		var index := _pick_weighted(candidates, rng)
 		if reward.options.is_empty() and rules.has("guaranteed_min_rarity"):
@@ -51,11 +58,16 @@ func choose(index: int, party: Party) -> OwnedCard:
 		return null
 	var option := options[index]
 	var member := party.get_member(str(option["owner_character_id"]))
-	if member == null or not (member.specialization.card_pool.has(str(option["card_id"])) or member.specialization.epic_pool.has(str(option["card_id"]))):
+	if member == null or not _offered_by(member.specialization, str(option["card_id"])) \
+			and not (member.secondary_specialization != null and _offered_by(member.secondary_specialization, str(option["card_id"]))):
 		return null
 	chosen_card = member.add_card(str(option["card_id"]))
 	resolved = true
 	return chosen_card
+
+
+static func _offered_by(spec: SpecializationDef, card_id: String) -> bool:
+	return spec.card_pool.has(card_id) or spec.epic_pool.has(card_id)
 
 
 static func _rarity_rank(rarity: String) -> int:

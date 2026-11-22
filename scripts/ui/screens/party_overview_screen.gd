@@ -20,7 +20,9 @@ func _build() -> void:
 		row.add_child(_build_member_column(member))
 
 	var footer := make_footer(SceneRouter.Screen.SPECIALIZATION_SELECTION)
-	var start := UIFactory.button("Enter the Royal Castle", true, Vector2(300, 56))
+	var campaign_mode := GameState.new_game_mode == "campaign"
+	var start := UIFactory.button("Begin the Campaign" if campaign_mode else "Enter the Royal Castle", true, Vector2(300, 56))
+	start.name = "StartButton"
 	start.pressed.connect(_on_start)
 	footer.add_child(start)
 	column.add_child(footer)
@@ -96,6 +98,10 @@ func _inspect(member: PartyMember, owned: OwnedCard, count: int) -> void:
 
 
 func _on_start() -> void:
+	if GameState.new_game_mode == "campaign":
+		if GameState.start_campaign():
+			SceneRouter.go(SceneRouter.Screen.CASTLE_HUB)
+		return
 	if GameState.begin_adventure():
 		SceneRouter.go(SceneRouter.Screen.MAP)
 

@@ -486,5 +486,73 @@
     "stats": {
       "hand_size": 1
     }
+  },
+  {
+    "id": "bond_sisters_rhythm",
+    "name": "Sisters' Rhythm",
+    "category": "relic",
+    "rarity": "bond",
+    "description": "Sister Bond 3. The first time each turn a card follows one of the other sister's, draw 1 card.",
+    "flavor": "One breath, two spells.",
+    "icon": "res://assets/generated/relics/relic_twin_comet.png",
+    "effects": [
+      {
+        "text": "The first time each turn a card follows one of the other sister's, draw 1 card.",
+        "trigger": {
+          "event": "card_played",
+          "after_other_owner": true
+        },
+        "effect": {
+          "effect": "draw_cards",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "bond_shared_heartbeat",
+    "name": "Shared Heartbeat",
+    "category": "relic",
+    "rarity": "bond",
+    "description": "Sister Bond 4. The first time each turn a sister's Block stops a whole attack, both sisters heal 2 HP.",
+    "flavor": "A wound to one is felt by both.",
+    "icon": "res://assets/generated/relics/relic_sisters_locket.png",
+    "effects": [
+      {
+        "text": "The first time each turn a sister's Block stops a whole attack, both sisters heal 2 HP.",
+        "trigger": {
+          "event": "attack_absorbed"
+        },
+        "effect": {
+          "effect": "heal_party",
+          "value": 2
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "bond_twin_stars",
+    "name": "Twin Stars",
+    "category": "relic",
+    "rarity": "bond",
+    "description": "Sister Bond 5. Every third turn, the sisters gain 1 Energy.",
+    "flavor": "Two lights, one sky.",
+    "icon": "res://assets/generated/relics/relic_twin_halo.png",
+    "effects": [
+      {
+        "text": "Every third turn, the sisters gain 1 Energy.",
+        "trigger": {
+          "event": "turn_start",
+          "every": 3
+        },
+        "effect": {
+          "effect": "gain_energy",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      }
+    ]
   }
 ]

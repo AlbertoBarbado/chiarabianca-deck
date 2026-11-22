@@ -101,3 +101,31 @@ A layout may set `canvas_height` (multiples of the picture height). Above 1 the 
     `background_asset` stays as the frame), so the party visibly climbs the mountain.
   - `altitude` {base, summit, unit}: a gauge at the left edge of the chart shows the party's height
     (`MapLayout.altitude_at`: base at the lowest room, summit at the highest).
+
+## Expeditions: regions, missions and map variation (persistent campaign)
+
+Data: `data/regions/regions.json` (world chart position, art, unlock requirement, missions) and
+`data/missions/missions.json` (objective, map rules, rewards, consequences). See
+`docs/PERSISTENT_RPG_DESIGN.md` for the lifecycle.
+
+- **Map rules** (`mission.map`): `{"mode": "fixed", "map_id", "variation": "shuffle" | "none"}` or
+  `{"mode": "generated", "template", "rows", "lanes" | "bands", "start_name", "exit_name"}`.
+- **`ExpeditionGenerator`** (`scripts/map/expedition_generator.gd`) works on map definitions only:
+  - `vary_fixed`: fights trade encounters with fights of the same terrain and depth band (thirds of
+    the map by distance from the start), elites may trade places with such fights, and up to 30% of
+    branching nodes lose one side link when every room stays reachable and the exit stays reachable
+    from every room. The layout and art of the map are unchanged.
+  - `generate`: a layered map (rows x 3 lanes) from the template map's pools (`pools_from`: fights per
+    terrain and band, elites, event pools, chests, towns, shops). Objective rooms (`"objective": true`)
+    sit in different lanes at 30 / 55 / 80% of the climb; one elite in the last third, a rest in the
+    middle and before the exit. A layout on the template's picture is synthesised and registered in
+    `DataRegistry.layouts` under the generated map id.
+  - Every result passes `MapGraph.validate()` and `is_fully_connected` (tested over many seeds).
+- **Saving:** a rerolled or generated graph is kept in `MapGraph.custom_def` / `custom_layout` and
+  saved in the map block (`map_def`, `layout_def`), so a reload shows the same expedition.
+- **Objectives** (`scripts/progression/objectives.gd`): `reach_exit`, `boss_hunt`, `clear_targets`
+  (win the fights in N of M objective rooms; Return Home appears on the map once met; reaching the exit
+  without it is a retreat). The map shows the objective tracker and Retreat / Return Home bottom-left;
+  objective rooms carry a blue diamond with a star.
+- In a campaign an expedition is one map: `GameState.next_map_after_current()` returns "" and the exit
+  leads to the results screen. Classic (Quick Play) runs still chain the acts.

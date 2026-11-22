@@ -239,3 +239,27 @@ Each Chiara and Bianca pair has its own combo. Frost Chill opens enemies to Tank
 | Wind | ★★ Momentum | ★★ Psalm of Wings | ★★ Fanned Oil | ★★★ Miasma |
 
 On the selection screen, each specialization lists its combos with the other princess's specializations. The footer names the combo of the chosen pair.
+
+## Campaign: collection, prepared decks and hybrid specializations
+
+- **Collection:** in a campaign each roster sister's `deck` is her permanent collection (every copy she
+  owns, with its permanent upgrade level). `CampaignState.prepared` lists the uids she takes on the
+  next expedition; presets save whole configurations. Expedition copies share uids and upgrades but
+  never write back (rest-site upgrades and drafted cards are temporary).
+- **Deck rules** (`DeckRules`, `campaign_rules.json` "deck"): 8-15 cards per sister, copies capped by
+  rarity (basic 4, common 3, uncommon / rare 2, epic / fusion 1), cards must be hers and of her primary
+  or secondary specialization, at most 4 secondary cards.
+- **Specializations:** a new campaign knows the two chosen primaries. The Training Hall (opens after
+  the Forest Serpent) teaches other playable specializations for gold (their starting cards join the
+  collection) and sets primary and secondary. Only the primary passive runs; the secondary pool
+  appears in rewards at half weight (`CardReward.generate`). Worn items that require a specialization
+  follow the primary. Twin combos stay keyed by the primaries.
+- **Permanent upgrades** (Upgrade Workshop): one collection copy per purchase, priced by rarity;
+  the card's existing `upgrade` block is used (branching upgrades are not implemented yet).
+- **Fusion** (Enchanter, Sister Bond 2+): `data/fusion/recipes.json`, results in
+  `data/cards/fusion_cards.json` (rarity `fusion`). Four recipes: Purifying Flame (Fire + Holy),
+  Frozen Bastion (Frost + Tanking), Venom Cinder (Fire + Venom), Aether Aegis (Arcana + Holy).
+- **Sister Bond** (`data/progression/bond.json`): 5 levels. XP from completed expeditions (4),
+  other returns (1), bosses (2), twin reactions (1 each, max 3 per expedition) and bond event choices
+  (1, max 2). Unlocks: the Enchanter and recipes, and bond relics carried on every expedition
+  (Sisters' Rhythm, Shared Heartbeat, Twin Stars).

@@ -1,0 +1,10 @@
+[
+  {"id": "brew_minor_health_potion", "name": "Minor Health Potion", "result": "minor_health_potion", "count": 2, "cost": {"gold": 30},
+   "text": "Two small healing draughts, cheaper than buying them."},
+  {"id": "brew_guard_draught", "name": "Guard Draught", "result": "guard_draught", "count": 1, "cost": {"gold": 35},
+   "text": "Forest bark tea that hardens the skin."},
+  {"id": "brew_focus_tonic", "name": "Focus Tonic", "result": "focus_tonic", "count": 1, "cost": {"gold": 40},
+   "text": "Pinewood's bitter herbs: one more spell this turn."},
+  {"id": "brew_clarity_elixir", "name": "Clarity Elixir", "result": "clarity_elixir", "count": 1, "cost": {"gold": 30, "essence": 1},
+   "text": "Coast sea-glass dissolved in starlight: see the next moves at once."}
+]

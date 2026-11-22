@@ -293,3 +293,17 @@ Simulated alone from a fresh party (`run_simulation.tscn -- <runs> "" map:frostp
 - **Result** (40 runs per pairing): average about 72%, 48-85% (Fire + Tanking 85% at 80 runs). Holy
   pairings are the weakest here (Frost + Holy 48%, Wind + Holy 53%): their damage is slow against a
   195 HP dragon. The Icefall (drake + wraith) and the Crystal Matriarch are the hardest fights on the way.
+
+## Persistent campaign (2026-11-22)
+
+Combat numbers are unchanged; the campaign changes what the party brings:
+- The purse still starts at 30 gold, so merchants are balanced as before. Treasury income: a completed
+  mission returns the whole purse plus 30-200 gold of rewards.
+- Power growth is slow by design: a prepared deck is capped at 15 cards per sister, permanent upgrades
+  cost 40-180 gold each, refinement adds +2 HP / +5% per level (max 2), the heirloom slot carries one
+  relic, and the potion belt holds 3 (4 after a 120-gold upgrade).
+- Map rerolls keep fights within their terrain and depth band, so the difficulty curve of each map is
+  kept. Generated missions draw fights from the template's bands by row.
+- **Not yet measured:** the simulation bot plays classic runs only; campaign expeditions with upgraded
+  collections, hybrid decks and fusion cards have not been simulated. Expect expeditions to get easier
+  as the collection grows; difficulty modifiers by region threat are a planned lever.

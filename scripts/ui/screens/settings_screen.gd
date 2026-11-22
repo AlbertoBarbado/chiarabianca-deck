@@ -54,7 +54,7 @@ func _build() -> void:
 	column.add_child(UIFactory.label("Also scales the menu particles and slide-in animations.", &"DimLabel", true))
 
 	var back := UIFactory.button("Back", false, Vector2(0, 56))
-	back.pressed.connect(func() -> void: SceneRouter.go(SceneRouter.Screen.MAIN_MENU))
+	back.pressed.connect(func() -> void: SceneRouter.go(SceneRouter.settings_return))
 	column.add_child(back)
 
 

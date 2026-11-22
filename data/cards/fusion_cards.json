@@ -1,0 +1,104 @@
+[
+  {
+    "id": "chiara_fusion_purifying_flame",
+    "name": "Purifying Flame",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "fusion": true,
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "fusion",
+    "description": "Deal 7 Holy damage (+4 to a Burning foe), then apply 2 Burn.",
+    "effects": [
+      {"effect": "damage", "value": 7, "target": "single_enemy", "element": "holy", "bonus_if_status": {"status_id": "burn", "value": 4}},
+      {"effect": "apply_status", "value": 2, "target": "single_enemy", "status_id": "burn"}
+    ],
+    "upgrade": {
+      "name": "Purifying Flame+",
+      "cost": 1,
+      "description": "Deal 9 Holy damage (+5 to a Burning foe), then apply 3 Burn.",
+      "effects": [
+        {"effect": "damage", "value": 9, "target": "single_enemy", "element": "holy", "bonus_if_status": {"status_id": "burn", "value": 5}},
+        {"effect": "apply_status", "value": 3, "target": "single_enemy", "status_id": "burn"}
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_fire_ember.png"
+  },
+  {
+    "id": "bianca_fusion_frozen_bastion",
+    "name": "Frozen Bastion",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "fusion": true,
+    "cost": 1,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "fusion",
+    "description": "Gain 9 Block. Apply 1 Chill to ALL enemies.",
+    "effects": [
+      {"effect": "block", "value": 9, "target": "self"},
+      {"effect": "apply_status", "value": 1, "target": "all_enemies", "status_id": "chill"}
+    ],
+    "upgrade": {
+      "name": "Frozen Bastion+",
+      "cost": 1,
+      "description": "Gain 12 Block. Apply 2 Chill to ALL enemies.",
+      "effects": [
+        {"effect": "block", "value": 12, "target": "self"},
+        {"effect": "apply_status", "value": 2, "target": "all_enemies", "status_id": "chill"}
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_tanking_rally.png"
+  },
+  {
+    "id": "chiara_fusion_venom_cinder",
+    "name": "Venom Cinder",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "fusion": true,
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "fusion",
+    "description": "Apply 2 Poison, then deal 5 Fire damage.",
+    "effects": [
+      {"effect": "apply_status", "value": 2, "target": "single_enemy", "status_id": "poison"},
+      {"effect": "damage", "value": 5, "target": "single_enemy", "element": "fire"}
+    ],
+    "upgrade": {
+      "name": "Venom Cinder+",
+      "cost": 1,
+      "description": "Apply 3 Poison, then deal 6 Fire damage.",
+      "effects": [
+        {"effect": "apply_status", "value": 3, "target": "single_enemy", "status_id": "poison"},
+        {"effect": "damage", "value": 6, "target": "single_enemy", "element": "fire"}
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_fire_kindle.png"
+  },
+  {
+    "id": "bianca_fusion_aether_aegis",
+    "name": "Aether Aegis",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "fusion": true,
+    "cost": 1,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "fusion",
+    "description": "Gain 4 Block, +2 per Aether.",
+    "effects": [
+      {"effect": "block", "value": 4, "per_aether": 2, "target": "self"}
+    ],
+    "upgrade": {
+      "name": "Aether Aegis+",
+      "cost": 1,
+      "description": "Gain 6 Block, +2 per Aether.",
+      "effects": [
+        {"effect": "block", "value": 6, "per_aether": 2, "target": "self"}
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_holy_shield.png"
+  }
+]

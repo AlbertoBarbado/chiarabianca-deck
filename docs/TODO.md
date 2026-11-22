@@ -257,3 +257,13 @@ The full roadmap to a Slay the Spire 2 quality game is in `TODO_ROADMAP.txt` (pr
 - Card-pool expansion balance (2026-11-22): average 74% over 16 pairings (50-87%); Fire + Holy and Wind + Holy sit on the 85% cap at 150 runs, Arcana + Venom is the low end at 50%. BALANCE.md, "Card-pool expansion".
 
 - Frostpeak (done 2026-11-22): standalone mountain adventure from the main menu. 51-room climbing map with a scrolling mountain picture and an altitude gauge, 11 new monsters, the White Dragon, 4 villages and outposts, Frostbitten, 2 armours and 26 ComfyUI pictures. Tests: `tests/progression/run_mountain_tests.gd`. Open: Holy pairings are the weakest on the climb (48-63%).
+
+- Persistent RPG milestone (2026-11-22): castle hub, world map with 5 regions (Royal Castle, Crystal Cave, Enchanted Forest, Sunlit Coast, Frostpeak) and 9 missions (3 with the
+  new clear-targets objective on generated maps), expedition lifecycle with results and discoveries,
+  card collection and Deck Workshop, permanent upgrades and equipment refinement, Apothecary with brews
+  and potion belt, Training Hall (hybrid specializations), Enchanter (4 fusion recipes), Sister Bond (5
+  levels, 3 bond relics), world flags and region threat, save v3 with migration of old runs, Quick Play
+  slot. Tests: `tests/campaign/campaign_logic_test.tscn` (headless), `tests/campaign/castle_flow_test.tscn`
+  (windowed). Runner: `tests/run_all_tests.sh`. Design: `docs/PERSISTENT_RPG_DESIGN.md`.
+  Open: branching upgrades, region-threat difficulty, campaign balance simulation, equipment
+  sell/dismantle, NPC missions, portrait phones.

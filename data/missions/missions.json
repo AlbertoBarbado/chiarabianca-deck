@@ -1,0 +1,364 @@
+[
+  {
+    "id": "castle_awakening",
+    "name": "The Royal Castle",
+    "region_id": "royal_castle",
+    "description": "Walk the castle from the royal chambers to the gate: training fights, a rest, the castle merchant, and the guards of the throne hall.",
+    "objective": {
+      "type": "reach_exit",
+      "text": "Reach the Castle Gate."
+    },
+    "map": {
+      "mode": "fixed",
+      "map_id": "royal_castle_tutorial",
+      "variation": "none"
+    },
+    "difficulty": 1,
+    "repeatable": true,
+    "unlock": {},
+    "rewards": {
+      "gold": 30,
+      "first_time": {
+        "gold": 30,
+        "essence": 1
+      }
+    },
+    "consequences": {
+      "on_first_complete": {
+        "services": [
+          "blacksmith"
+        ],
+        "messages": [
+          "The castle smiths offer their forge: the Upgrade Workshop is open.",
+          "The road to the Enchanted Forest is open."
+        ]
+      }
+    },
+    "legacy_map": "royal_castle_tutorial"
+  },
+  {
+    "id": "castle_gauntlet",
+    "name": "The Castle Depths",
+    "region_id": "royal_castle",
+    "description": "A short route under the castle packed with elite sparring fights and a chest of old treasures.",
+    "objective": {
+      "type": "reach_exit",
+      "text": "Fight through the depths to the far stair."
+    },
+    "map": {
+      "mode": "fixed",
+      "map_id": "castle_elite_demo",
+      "variation": "shuffle"
+    },
+    "difficulty": 2,
+    "repeatable": true,
+    "unlock": {
+      "missions": [
+        "castle_awakening"
+      ]
+    },
+    "rewards": {
+      "gold": 40,
+      "first_time": {
+        "essence": 1
+      }
+    },
+    "legacy_map": "castle_elite_demo"
+  },
+  {
+    "id": "crystal_hollow",
+    "name": "The Crystal Wyrm",
+    "region_id": "crystal_hollow",
+    "description": "Caves beneath the cliffs where crystal beasts gather around the Crystal Wyrm.",
+    "objective": {
+      "type": "boss_hunt",
+      "text": "Slay the Crystal Wyrm and leave the hollow."
+    },
+    "map": {
+      "mode": "fixed",
+      "map_id": "crystal_hollow_demo",
+      "variation": "shuffle"
+    },
+    "difficulty": 2,
+    "repeatable": true,
+    "unlock": {
+      "missions": [
+        "castle_awakening"
+      ]
+    },
+    "rewards": {
+      "gold": 50,
+      "first_time": {
+        "essence": 1
+      }
+    },
+    "legacy_map": "crystal_hollow_demo"
+  },
+  {
+    "id": "forest_serpent",
+    "name": "Hunt the Forest Serpent",
+    "region_id": "enchanted_forest",
+    "description": "Follow the poisoned streams to the Serpent's Domain and end the corruption at the forest's heart.",
+    "objective": {
+      "type": "boss_hunt",
+      "text": "Defeat the Forest Serpent and leave its domain."
+    },
+    "map": {
+      "mode": "fixed",
+      "map_id": "enchanted_forest",
+      "variation": "shuffle"
+    },
+    "difficulty": 3,
+    "repeatable": true,
+    "unlock": {},
+    "rewards": {
+      "gold": 80,
+      "essence": 1,
+      "first_time": {
+        "gold": 60,
+        "essence": 1
+      }
+    },
+    "consequences": {
+      "on_first_complete": {
+        "set_flags": {
+          "forest_serpent_slain": true
+        },
+        "threat": {
+          "enchanted_forest": -2
+        },
+        "services": [
+          "training_hall"
+        ],
+        "recipes": [
+          "brew_guard_draught"
+        ],
+        "messages": [
+          "The forest breathes again: its corruption fades.",
+          "The Training Hall opens: the sisters can learn new styles and mix them.",
+          "The roads to the Sunlit Coast and to Frostpeak are open."
+        ]
+      }
+    },
+    "legacy_map": "enchanted_forest"
+  },
+  {
+    "id": "forest_rescue",
+    "name": "The Lost Woodcutters",
+    "region_id": "enchanted_forest",
+    "description": "Woodcutters from Pinewood were dragged off by forest beasts. Find them before nightfall: free at least two of the three captive groups, then head home.",
+    "objective": {
+      "type": "clear_targets",
+      "verb": "Rescue",
+      "noun": "woodcutter camps",
+      "target_name": "Captive Woodcutters",
+      "targets": 3,
+      "required": 2,
+      "last_is_elite": true
+    },
+    "map": {
+      "mode": "generated",
+      "template": "enchanted_forest",
+      "rows": 9,
+      "lanes": [
+        "mountain",
+        "deepwood",
+        "falls"
+      ],
+      "start_name": "Pinewood Edge",
+      "exit_name": "Road Home"
+    },
+    "completion": {
+      "title": "Woodcutters Rescued",
+      "text": "The woodcutters walk home between the princesses, singing badly."
+    },
+    "difficulty": 2,
+    "repeatable": true,
+    "unlock": {},
+    "rewards": {
+      "gold": 50,
+      "essence": 1,
+      "first_time": {
+        "gold": 30
+      }
+    },
+    "consequences": {
+      "on_first_complete": {
+        "set_flags": {
+          "woodcutters_saved": true
+        },
+        "recipes": [
+          "brew_focus_tonic"
+        ],
+        "messages": [
+          "Pinewood's herbalist shares her recipe for the Focus Tonic."
+        ]
+      }
+    }
+  },
+  {
+    "id": "coast_storm",
+    "name": "Eye of the Storm",
+    "region_id": "sunlit_coast",
+    "description": "Cross the dunes and sail into the storm to face the Sandstorm Elemental.",
+    "objective": {
+      "type": "boss_hunt",
+      "text": "Calm the Sandstorm Elemental and sail home."
+    },
+    "map": {
+      "mode": "fixed",
+      "map_id": "sunlit_coast",
+      "variation": "shuffle"
+    },
+    "difficulty": 4,
+    "repeatable": true,
+    "unlock": {},
+    "rewards": {
+      "gold": 100,
+      "essence": 1,
+      "first_time": {
+        "gold": 60,
+        "essence": 2
+      }
+    },
+    "consequences": {
+      "on_first_complete": {
+        "set_flags": {
+          "coast_storm_calmed": true
+        },
+        "threat": {
+          "sunlit_coast": -2
+        },
+        "recipes": [
+          "brew_clarity_elixir"
+        ],
+        "messages": [
+          "The storm is gone. Coast traders bring rare herbs: the Clarity Elixir can be brewed."
+        ]
+      }
+    },
+    "legacy_map": "sunlit_coast"
+  },
+  {
+    "id": "coast_reliquary",
+    "name": "The Sunken Reliquary",
+    "region_id": "sunlit_coast",
+    "description": "Shards of a drowned temple's relic lie scattered along the shore and the reefs. Recover two of the three before the tide turns.",
+    "objective": {
+      "type": "clear_targets",
+      "verb": "Recover",
+      "noun": "relic shards",
+      "target_name": "Sunken Shard",
+      "targets": 3,
+      "required": 2,
+      "last_is_elite": true
+    },
+    "map": {
+      "mode": "generated",
+      "template": "sunlit_coast",
+      "rows": 9,
+      "lanes": [
+        "shore",
+        "sea",
+        "shore"
+      ],
+      "start_name": "Fishers' Pier",
+      "exit_name": "Homeward Sail"
+    },
+    "completion": {
+      "title": "Shards Recovered",
+      "text": "The shards hum when they touch: the old temple's blessing is not lost."
+    },
+    "difficulty": 3,
+    "repeatable": true,
+    "unlock": {},
+    "rewards": {
+      "gold": 60,
+      "essence": 1,
+      "first_time": {
+        "essence": 1
+      }
+    }
+  },
+  {
+    "id": "frostpeak_dragon",
+    "name": "The White Dragon",
+    "region_id": "frostpeak",
+    "description": "Climb Frostpeak from its snowy foothills to the aerie of Vaelith, the White Dragon.",
+    "objective": {
+      "type": "boss_hunt",
+      "text": "Face Vaelith in her aerie and reach the summit."
+    },
+    "map": {
+      "mode": "fixed",
+      "map_id": "frostpeak",
+      "variation": "shuffle"
+    },
+    "difficulty": 5,
+    "repeatable": true,
+    "unlock": {},
+    "rewards": {
+      "gold": 120,
+      "essence": 2,
+      "first_time": {
+        "gold": 80,
+        "essence": 2
+      }
+    },
+    "consequences": {
+      "on_first_complete": {
+        "set_flags": {
+          "white_dragon_defeated": true
+        },
+        "threat": {
+          "frostpeak": -2
+        },
+        "messages": [
+          "Vaelith yields. The mountain villages send their thanks, and the passes are safe again."
+        ]
+      }
+    },
+    "legacy_map": "frostpeak"
+  },
+  {
+    "id": "frostpeak_beacons",
+    "name": "Light the Signal Beacons",
+    "region_id": "frostpeak",
+    "description": "The mountain's signal beacons have gone dark and travellers are lost in the snow. Climb and light two of the three beacons.",
+    "objective": {
+      "type": "clear_targets",
+      "verb": "Light",
+      "noun": "beacons",
+      "target_name": "Signal Beacon",
+      "targets": 3,
+      "required": 2,
+      "last_is_elite": true
+    },
+    "map": {
+      "mode": "generated",
+      "template": "frostpeak",
+      "rows": 10,
+      "bands": [
+        "slopes",
+        "glacier",
+        "summit"
+      ],
+      "start_name": "Foothill Lodge",
+      "exit_name": "Descent Path"
+    },
+    "completion": {
+      "title": "Beacons Lit",
+      "text": "Fire burns on the high ridges again; the lost travellers find their way down."
+    },
+    "difficulty": 4,
+    "repeatable": true,
+    "unlock": {},
+    "rewards": {
+      "gold": 70,
+      "essence": 1,
+      "first_time": {
+        "essence": 1
+      }
+    }
+  }
+]

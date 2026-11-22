@@ -1,0 +1,51 @@
+{
+  "id": "campaign_rules",
+  "_comment": "Persistent campaign rules (docs/PERSISTENT_RPG_DESIGN.md). Gold is one currency in two wallets: the castle treasury and the expedition purse. Essence is the one rare material.",
+  "start": {
+    "treasury": 60,
+    "essence": 0,
+    "potions": {"minor_health_potion": 2},
+    "potion_capacity": 3,
+    "services": ["expeditions", "library", "collection", "armory", "apothecary", "sisters"],
+    "recipes": ["brew_minor_health_potion"],
+    "note": "A new campaign: treasury gold, stored potions and the castle services open from the start."
+  },
+  "expedition": {
+    "purse": 30,
+    "note": "Gold the party carries out of the castle (the old run's starting gold, so merchant balance is unchanged)."
+  },
+  "outcomes": {
+    "completed": {"gold_share": 1.0, "mission_rewards": true, "keep_potions": true, "discoveries": 2, "bond": "expedition_completed"},
+    "retreated": {"gold_share": 0.5, "mission_rewards": false, "keep_potions": true, "discoveries": 1, "bond": "expedition_retreated"},
+    "defeated": {"gold_share": 0.25, "mission_rewards": false, "keep_potions": false, "discoveries": 0, "bond": "expedition_defeated"},
+    "note": "What returns to the castle. Equipment found is always kept; relics found always enter the relic collection; HP, rest upgrades and drafted cards reset."
+  },
+  "deck": {
+    "min_per_sister": 8,
+    "max_per_sister": 15,
+    "max_copies": {"basic": 4, "common": 3, "uncommon": 2, "rare": 2, "epic": 1, "fusion": 1},
+    "secondary_card_limit": 4,
+    "secondary_reward_weight": 0.5,
+    "presets_max": 6,
+    "note": "Prepared deck rules per sister. Cards must belong to the sister and to her primary or secondary specialization. Secondary cards are capped and appear in rewards at reduced weight."
+  },
+  "card_upgrade": {
+    "prices": {"basic": 40, "common": 60, "uncommon": 90, "rare": 130, "epic": 180, "fusion": 150},
+    "note": "Upgrade Workshop: permanent upgrade of one collection copy (treasury gold)."
+  },
+  "refinement": {
+    "max_level": 2,
+    "prices": {"common": 50, "uncommon": 90, "rare": 140, "epic": 200},
+    "price_step": 1.5,
+    "per_level": {"max_hp": 2, "resist": 5, "damage": 5},
+    "note": "Blacksmith: refining an item id improves every copy. Each level adds per_level to every stat the item already has (an item without Max HP gains none). Level 2 costs price x price_step."
+  },
+  "specializations": {
+    "unlock_price": 150,
+    "note": "Training Hall: unlocking a playable specialization adds its starting cards to the sister's collection."
+  },
+  "apothecary": {
+    "capacity_upgrades": [{"capacity": 4, "price": 120}],
+    "note": "Potion belt upgrades bought once each, in order."
+  }
+}

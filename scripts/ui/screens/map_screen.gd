@@ -25,6 +25,41 @@ func _build() -> void:
 		_build_art_layout(column, progress)
 	else:
 		_build_plain_layout(column, progress)
+	if GameState.expedition != null:
+		# Bottom-left, just above the hint pill, so it never covers rooms at the top of the chart.
+		var bar := _make_expedition_bar()
+		column.add_child(bar)
+		column.move_child(bar, maxi(0, column.get_child_count() - 2) if has_art else 0)
+
+
+## Campaign expeditions: the mission objective and the way home (retreat, or return in triumph once a
+## clear-targets objective is met). Both ask for confirmation.
+func _make_expedition_bar() -> Control:
+	var expedition := GameState.expedition
+	var pill := UIFactory.panel(UITheme.box(Color(UITheme.NAVY_DEEP, 0.88), UITheme.GOLD_DARK, 12, 2, 8))
+	pill.name = "ExpeditionBar"
+	pill.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
+	var row := UIFactory.hbox(12)
+	pill.add_child(row)
+	var objective := UIFactory.label("◆ " + Objectives.describe(expedition.objective), &"", true)
+	objective.name = "ObjectiveTracker"
+	objective.custom_minimum_size.x = 260
+	objective.add_theme_font_size_override("font_size", UITheme.FONT_SIZE_SMALL)
+	objective.add_theme_color_override("font_color", UITheme.GOLD if Objectives.is_met(expedition.objective) else UITheme.IVORY)
+	row.add_child(objective)
+	var triumph := ExpeditionService.can_return_early()
+	var home := UIFactory.button("Return Home" if triumph else "Retreat", triumph, Vector2(150, 44))
+	home.name = "ReturnHomeButton" if triumph else "RetreatButton"
+	home.add_theme_font_size_override("font_size", UITheme.FONT_SIZE_SMALL)
+	home.pressed.connect(func() -> void:
+		var title := "Return home in triumph?" if triumph else "Retreat to the castle?"
+		var text := "The mission is done: the whole purse and the mission reward come home." if triumph else \
+			"The mission stays unfinished. Half of the purse, everything found and one discovery come home."
+		CastleUI.confirm(self, title, text, "Go Home", func() -> void:
+			GameState.finish_expedition(ExpeditionState.OUTCOME_COMPLETED if triumph else ExpeditionState.OUTCOME_RETREATED)
+			SceneRouter.go(SceneRouter.Screen.EXPEDITION_RESULTS)))
+	row.add_child(home)
+	return pill
 
 
 ## Map with a background (shown whole, never cropped): everything the interface needs sits in two dark pills in the bottom corners (over
