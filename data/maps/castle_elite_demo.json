@@ -1,0 +1,122 @@
+{
+  "id": "castle_elite_demo",
+  "name": "Castle Depths (demo route)",
+  "subtitle": "Elite and treasure rooms",
+  "map_type": "handcrafted_node_graph",
+  "terrains": {
+    "yard": {
+      "name": "Courtyard",
+      "hint": "Courtyard: training automatons and guard recruits.",
+      "backdrop": "battle_castle_yard",
+      "foes": [
+        "practice_automaton",
+        "guard_recruit",
+        "elite_vanguard_knight"
+      ]
+    },
+    "hall": {
+      "name": "Great hall",
+      "hint": "Great hall: the hall guards and their officers.",
+      "backdrop": "battle_castle_generic",
+      "foes": [
+        "hall_guard",
+        "hall_captain",
+        "elite_knight_commander"
+      ]
+    }
+  },
+  "start_node_id": "demo_start",
+  "exit_node_id": "demo_exit",
+  "nodes": [
+    {
+      "id": "demo_start",
+      "type": "start",
+      "name": "Gatehouse",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "demo_fight"
+      ]
+    },
+    {
+      "id": "demo_fight",
+      "type": "combat",
+      "name": "Barracks",
+      "terrain": "yard",
+      "position": [
+        2,
+        0
+      ],
+      "next": [
+        "demo_elite",
+        "demo_rest"
+      ],
+      "encounter_id": "castle_training_02"
+    },
+    {
+      "id": "demo_elite",
+      "type": "elite",
+      "name": "Commander's Hall",
+      "terrain": "hall",
+      "position": [
+        4,
+        -1
+      ],
+      "next": [
+        "demo_treasure"
+      ],
+      "encounter_id": "elite_commander_01"
+    },
+    {
+      "id": "demo_rest",
+      "type": "rest",
+      "name": "Chapel Nook",
+      "position": [
+        4,
+        1
+      ],
+      "next": [
+        "demo_vanguard"
+      ]
+    },
+    {
+      "id": "demo_treasure",
+      "type": "treasure",
+      "name": "Hidden Vault",
+      "position": [
+        6,
+        -1
+      ],
+      "next": [
+        "demo_exit"
+      ],
+      "treasure_id": "castle_treasure_01"
+    },
+    {
+      "id": "demo_vanguard",
+      "type": "elite",
+      "name": "Vanguard Gate",
+      "terrain": "yard",
+      "position": [
+        6,
+        1
+      ],
+      "next": [
+        "demo_exit"
+      ],
+      "encounter_id": "elite_vanguard_01"
+    },
+    {
+      "id": "demo_exit",
+      "type": "exit",
+      "name": "Sally Port",
+      "position": [
+        8,
+        0
+      ],
+      "next": []
+    }
+  ]
+}

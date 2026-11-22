@@ -1,0 +1,294 @@
+{
+ "_comment": "Generated locally with ComfyUI. Model: FLUX.1 [schnell] (Apache 2.0, black-forest-labs) GGUF Q3_K_S by city96; text encoders CLIP-L + T5-XXL GGUF; background removal BiRefNet (MIT). 4 steps, euler/simple, CFG 1.",
+ "assets": {
+  "card_venom_strike": {
+   "file": "res://assets/generated/venom/card_venom_strike.png",
+   "prompt": "a dark iron sword blade dripping glowing green venom mid-swing, toxic green and sickly violet palette, dark fantasy, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6601,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 26.2,
+   "date": "2026-11-19"
+  },
+  "card_venom_guard": {
+   "file": "res://assets/generated/venom/card_venom_guard.png",
+   "prompt": "a black iron shield coated in hissing green toxin, fumes rising, toxic green and sickly violet palette, dark fantasy, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6602,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 58.5,
+   "date": "2026-11-19"
+  },
+  "card_venom_envenom": {
+   "file": "res://assets/generated/venom/card_venom_envenom.png",
+   "prompt": "a gauntleted hand tipping a plain unlabelled round glass vial so glowing green venom drips onto a dark blade, no text, no label, toxic green and sickly violet palette, dark fantasy, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6623,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.1,
+   "date": "2026-11-19"
+  },
+  "card_venom_cut": {
+   "file": "res://assets/generated/venom/card_venom_cut.png",
+   "prompt": "a small curved dagger leaving a glowing green poisoned cut in the air, toxic green and sickly violet palette, dark fantasy, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6604,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.1,
+   "date": "2026-11-19"
+  },
+  "card_venom_cloud": {
+   "file": "res://assets/generated/venom/card_venom_cloud.png",
+   "prompt": "a rolling cloud of thick green poison gas spreading across a battlefield, toxic green and sickly violet palette, dark fantasy, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6605,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.2,
+   "date": "2026-11-19"
+  },
+  "card_venom_corrode": {
+   "file": "res://assets/generated/venom/card_venom_corrode.png",
+   "prompt": "a smooth unadorned steel helmet melting and pitting under dripping glowing green acid, holes eaten through the metal, no symbols, no text, toxic green and sickly violet palette, dark fantasy, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6646,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.1,
+   "date": "2026-11-19"
+  },
+  "card_venom_veil": {
+   "file": "res://assets/generated/venom/card_venom_veil.png",
+   "prompt": "a knight silhouette hidden behind a veil of green miasma fumes, toxic green and sickly violet palette, dark fantasy, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6607,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.2,
+   "date": "2026-11-19"
+  },
+  "card_venom_catalyst": {
+   "file": "res://assets/generated/venom/card_venom_catalyst.png",
+   "prompt": "an alchemical flask with violet and green liquids reacting violently, bubbling over, toxic green and sickly violet palette, dark fantasy, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6608,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.1,
+   "date": "2026-11-19"
+  },
+  "card_venom_mark": {
+   "file": "res://assets/generated/venom/card_venom_mark.png",
+   "prompt": "a glowing violet sigil of decay branded on dark stone, withered roots around it, toxic green and sickly violet palette, dark fantasy, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6609,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.1,
+   "date": "2026-11-19"
+  },
+  "card_venom_distill": {
+   "file": "res://assets/generated/venom/card_venom_distill.png",
+   "prompt": "plain unlabelled glass alembic and coiled tubes dripping glowing green venom, violet arcane sparks, no text, no labels, toxic green and sickly violet palette, dark fantasy, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6630,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.3,
+   "date": "2026-11-19"
+  },
+  "card_venom_reaping": {
+   "file": "res://assets/generated/venom/card_venom_reaping.png",
+   "prompt": "a spectral scythe of green mist reaping withered grass, ominous, toxic green and sickly violet palette, dark fantasy, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6611,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.1,
+   "date": "2026-11-19"
+  },
+  "card_venom_bloom": {
+   "file": "res://assets/generated/venom/card_venom_bloom.png",
+   "prompt": "a giant poisonous flower blooming and releasing glowing green spores, toxic green and sickly violet palette, dark fantasy, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6612,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.1,
+   "date": "2026-11-19"
+  },
+  "card_venom_septic": {
+   "file": "res://assets/generated/venom/card_venom_septic.png",
+   "prompt": "a jagged serrated blade striking, green venom splashing from the wound, toxic green and sickly violet palette, dark fantasy, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6613,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.1,
+   "date": "2026-11-19"
+  },
+  "card_venom_pestilence": {
+   "file": "res://assets/generated/venom/card_venom_pestilence.png",
+   "prompt": "a plague storm of green miasma and swarming dark motes over a ruined field, epic, toxic green and sickly violet palette, dark fantasy, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6614,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.1,
+   "date": "2026-11-19"
+  },
+  "card_venom_ledger": {
+   "file": "res://assets/generated/venom/card_venom_ledger.png",
+   "prompt": "a closed ancient black leather tome bound with iron, a skull clasp glowing green, candles, no text, toxic green and sickly violet palette, dark fantasy, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6635,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.2,
+   "date": "2026-11-19"
+  },
+  "icon_venom": {
+   "file": "res://assets/generated/venom/icon_venom.png",
+   "prompt": "a single game emblem icon of a dark sword dripping green venom over a violet skull motif, ornate black iron rim, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 6802,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.3,
+   "date": "2026-11-19"
+  },
+  "icon_blight": {
+   "file": "res://assets/generated/venom/icon_blight.png",
+   "prompt": "a single game icon of a withered black skull wreathed in sickly violet mist, ornate bronze rim, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 6803,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 68.6,
+   "date": "2026-11-19"
+  }
+ }
+}

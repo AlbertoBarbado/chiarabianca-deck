@@ -1,0 +1,328 @@
+{
+ "_comment": "Generated locally with ComfyUI. Model: FLUX.1 [schnell] (Apache 2.0, black-forest-labs) GGUF Q3_K_S by city96; text encoders CLIP-L + T5-XXL GGUF; background removal BiRefNet (MIT). 4 steps, euler/simple, CFG 1.",
+ "assets": {
+  "card_ash_slash": {
+   "file": "res://assets/generated/ashveil/card_ash_slash.png",
+   "prompt": "a dark steel longsword slashing through a cloud of grey ash and drifting embers, black and ember orange, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 5101,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 71.4,
+   "date": "2026-11-16"
+  },
+  "card_ash_smoke": {
+   "file": "res://assets/generated/ashveil/card_ash_smoke.png",
+   "prompt": "a thick billowing cloud of charcoal grey smoke with a shadowy hooded knight silhouette vanishing inside it, embers, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 5102,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 38.5,
+   "date": "2026-11-16"
+  },
+  "card_ash_flask": {
+   "file": "res://assets/generated/ashveil/card_ash_flask.png",
+   "prompt": "a glass flask of thick black oil shattering in mid-air, glossy dark oil splashing outward, amber highlights, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 5103,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.5,
+   "date": "2026-11-16"
+  },
+  "card_ash_caltrops": {
+   "file": "res://assets/generated/ashveil/card_ash_caltrops.png",
+   "prompt": "dozens of spiky iron caltrops scattered on a stone floor in a slick of black oil, glinting, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 5104,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.4,
+   "date": "2026-11-16"
+  },
+  "card_ash_powder": {
+   "file": "res://assets/generated/ashveil/card_ash_powder.png",
+   "prompt": "a black powder keg exploding in a huge blast of orange fire and black smoke, sparks flying, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 5105,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 90.5,
+   "date": "2026-11-16"
+  },
+  "card_ash_ignite": {
+   "file": "res://assets/generated/ashveil/card_ash_ignite.png",
+   "prompt": "a sword blade striking sparks onto a pool of black oil that bursts into roaring orange flames, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 5106,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 38.3,
+   "date": "2026-11-16"
+  },
+  "card_ash_shadow": {
+   "file": "res://assets/generated/ashveil/card_ash_shadow.png",
+   "prompt": "a dagger thrust out of deep purple-black shadows, the blade trailing dark smoke, glowing ember eyes in the dark, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 5107,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 30.2,
+   "date": "2026-11-16"
+  },
+  "card_ash_inferno": {
+   "file": "res://assets/generated/ashveil/card_ash_inferno.png",
+   "prompt": "a battlefield drowned in black oil erupting into a towering sea of fire and falling ash, epic scale, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 5108,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 30.2,
+   "date": "2026-11-16"
+  },
+  "card_ash_veil": {
+   "file": "res://assets/generated/ashveil/card_ash_veil.png",
+   "prompt": "a swirling dome of grey ash and smoke shielding two figures, embers drifting, mysterious dusk light, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 5109,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 97.7,
+   "date": "2026-11-16"
+  },
+  "cutin_ash_t2": {
+   "file": "res://assets/generated/ashveil/cutin_ash_t2.png",
+   "prompt": "anime knight princess with long black hair and brown eyes, wearing dark charcoal plate armour with ember-orange trim and a hooded smoky grey cloak, belts with oil flasks, throwing a flask of black oil, dynamic pose, smoke and embers, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 576,
+   "seed": 5211,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 70.6,
+   "date": "2026-11-16"
+  },
+  "cutin_ash_t3": {
+   "file": "res://assets/generated/ashveil/cutin_ash_t3.png",
+   "prompt": "anime knight princess with long black hair and brown eyes, wearing dark charcoal plate armour with ember-orange trim and a hooded smoky grey cloak, lunging with a sword out of a cloud of black smoke, embers, dynamic pose, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 576,
+   "seed": 5212,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 100.9,
+   "date": "2026-11-16"
+  },
+  "cutin_ash_t4": {
+   "file": "res://assets/generated/ashveil/cutin_ash_t4.png",
+   "prompt": "anime knight princess with long black hair and brown eyes, wearing dark charcoal plate armour with ember-orange trim and a hooded smoky grey cloak, standing before a towering wall of fire and falling ash, sword raised, epic, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 896,
+   "height": 512,
+   "seed": 5213,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 38.5,
+   "date": "2026-11-16"
+  },
+  "vfx_oil_splash": {
+   "file": "res://assets/generated/ashveil/vfx_oil_splash.png",
+   "prompt": "a big splash of thick glossy black oil with dark droplets and amber highlights, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 5301,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.2,
+   "date": "2026-11-16"
+  },
+  "vfx_smoke_burst": {
+   "file": "res://assets/generated/ashveil/vfx_smoke_burst.png",
+   "prompt": "a billowing burst of thick grey and charcoal smoke with a few orange embers, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 5302,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 26.5,
+   "date": "2026-11-16"
+  },
+  "vfx_powder_blast": {
+   "file": "res://assets/generated/ashveil/vfx_powder_blast.png",
+   "prompt": "a violent black powder explosion, orange fireball core with black smoke and flying sparks, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 5303,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.3,
+   "date": "2026-11-16"
+  },
+  "vfx_oil_ignite": {
+   "file": "res://assets/generated/ashveil/vfx_oil_ignite.png",
+   "prompt": "a pool of oil igniting into a tall roaring column of orange and red flame with black smoke, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 5304,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.1,
+   "date": "2026-11-16"
+  },
+  "vfx_caltrops": {
+   "file": "res://assets/generated/ashveil/vfx_caltrops.png",
+   "prompt": "a scattered spray of small spiky iron caltrops and sparks flying outward, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 5305,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.1,
+   "date": "2026-11-16"
+  },
+  "icon_oiled": {
+   "file": "res://assets/generated/ashveil/icon_oiled.png",
+   "prompt": "a single game icon of a glossy black oil droplet with an amber highlight and a tiny flame reflection, ornate bronze rim, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 5401,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.5,
+   "date": "2026-11-16"
+  },
+  "icon_ashveil": {
+   "file": "res://assets/generated/ashveil/icon_ashveil.png",
+   "prompt": "a single game emblem icon of a dark sword crossed with a smoking flask, wreathed in grey smoke and embers, ornate dark iron rim, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 5402,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 30.3,
+   "date": "2026-11-16"
+  }
+ }
+}

@@ -1,0 +1,605 @@
+{
+  "id": "sunlit_coast",
+  "name": "The Sunlit Coast",
+  "subtitle": "Act III",
+  "map_type": "handcrafted_node_graph",
+  "act": 3,
+  "battle_backdrop": "battle_beach",
+  "terrains": {
+    "sea": {
+      "name": "At sea",
+      "hint": "At sea: aboard the ship, against sea and sky foes.",
+      "backdrop": "battle_ship_deck",
+      "foes": [
+        "beach_triton_soldier",
+        "beach_dire_albatross",
+        "beach_shark_knight",
+        "elite_sea_snake"
+      ]
+    },
+    "shore": {
+      "name": "Shore",
+      "hint": "On the shore: beach and rock foes.",
+      "backdrop": "battle_beach",
+      "foes": [
+        "beach_giant_crab",
+        "beach_rock_spider",
+        "beach_sand_scorpion",
+        "elite_sand_giant",
+        "elite_rock_giant"
+      ]
+    }
+  },
+  "completion": {
+    "title": "Coast Act Complete",
+    "text": "The Sandstorm Elemental scatters into a glittering haze and the sun returns to the Sunlit Coast. The third adventure is complete.",
+    "badge": "Act III complete"
+  },
+  "start_node_id": "shipwreck_landing",
+  "exit_node_id": "coast_exit",
+  "nodes": [
+    {
+      "id": "shipwreck_landing",
+      "type": "start",
+      "name": "Shipwreck Landing",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "crab_shallows",
+        "driftwood_cove",
+        "gull_rocks"
+      ]
+    },
+    {
+      "id": "crab_shallows",
+      "type": "combat",
+      "name": "Crab Shallows",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "tidepool_maze"
+      ],
+      "encounter_id": "beach_crabs"
+    },
+    {
+      "id": "driftwood_cove",
+      "type": "event",
+      "name": "Drifting Wreckage",
+      "terrain": "sea",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "crab_burrows",
+        "sunken_chest"
+      ],
+      "event_pool": "beach_sea"
+    },
+    {
+      "id": "gull_rocks",
+      "type": "combat",
+      "name": "Barnacle Rocks",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "sunken_chest",
+        "crab_burrows"
+      ],
+      "encounter_id": "beach_shore_pair"
+    },
+    {
+      "id": "tidepool_maze",
+      "type": "event",
+      "name": "Tidepool Maze",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "coral_reef",
+        "fishers_hamlet"
+      ],
+      "event_pool": "beach_shore"
+    },
+    {
+      "id": "crab_burrows",
+      "type": "combat",
+      "name": "Open Water",
+      "terrain": "sea",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "fishers_hamlet",
+        "coral_reef"
+      ],
+      "encounter_id": "beach_sea_raiders"
+    },
+    {
+      "id": "sunken_chest",
+      "type": "treasure",
+      "name": "Sunken Chest",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "rocky_path"
+      ],
+      "treasure_id": "beach_sunken_chest"
+    },
+    {
+      "id": "coral_reef",
+      "type": "combat",
+      "name": "Shell Beach",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "wreck_hold"
+      ],
+      "encounter_id": "beach_scorpion_crab"
+    },
+    {
+      "id": "fishers_hamlet",
+      "type": "town",
+      "name": "Fishers' Flotilla",
+      "terrain": "sea",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "lighthouse",
+        "stone_arch"
+      ],
+      "town_id": "fishers_hamlet"
+    },
+    {
+      "id": "rocky_path",
+      "type": "combat",
+      "name": "Rocky Path",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "stone_arch",
+        "lighthouse"
+      ],
+      "encounter_id": "beach_spiders"
+    },
+    {
+      "id": "wreck_hold",
+      "type": "event",
+      "name": "Wreck Hold",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "triton_outpost",
+        "seaside_market"
+      ],
+      "event_pool": "beach_shore"
+    },
+    {
+      "id": "lighthouse",
+      "type": "rest",
+      "name": "Calm Anchorage",
+      "terrain": "sea",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "seaside_market",
+        "triton_outpost"
+      ],
+      "heal_percent": 30
+    },
+    {
+      "id": "stone_arch",
+      "type": "combat",
+      "name": "Stone Arch",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "sea_caves"
+      ],
+      "encounter_id": "beach_crab_spider"
+    },
+    {
+      "id": "triton_outpost",
+      "type": "combat",
+      "name": "Crab Colony",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "pearl_lagoon"
+      ],
+      "encounter_id": "beach_crab_colony"
+    },
+    {
+      "id": "seaside_market",
+      "type": "merchant",
+      "name": "Trader's Cog",
+      "terrain": "sea",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "cliff_nest",
+        "dune_edge"
+      ],
+      "shop_id": "beach_fish_market"
+    },
+    {
+      "id": "sea_caves",
+      "type": "elite",
+      "name": "Sea Caves",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "dune_edge",
+        "cliff_nest"
+      ],
+      "encounter_id": "elite_rock_giant"
+    },
+    {
+      "id": "pearl_lagoon",
+      "type": "event",
+      "name": "Pearl Lagoon",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "kelp_forest",
+        "tide_camp"
+      ],
+      "event_pool": "beach_shore"
+    },
+    {
+      "id": "cliff_nest",
+      "type": "combat",
+      "name": "Gull Squall",
+      "terrain": "sea",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "tide_camp",
+        "kelp_forest"
+      ],
+      "encounter_id": "beach_albatross_flock"
+    },
+    {
+      "id": "dune_edge",
+      "type": "combat",
+      "name": "Dune Edge",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "rockfall"
+      ],
+      "encounter_id": "beach_spiders_2"
+    },
+    {
+      "id": "kelp_forest",
+      "type": "treasure",
+      "name": "Kelp Forest",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "salt_flats"
+      ],
+      "treasure_id": "beach_kelp_cache"
+    },
+    {
+      "id": "tide_camp",
+      "type": "town",
+      "name": "Raft Camp",
+      "terrain": "sea",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "smugglers_cove",
+        "quarry_ruins"
+      ],
+      "town_id": "tide_camp"
+    },
+    {
+      "id": "rockfall",
+      "type": "elite",
+      "name": "Dune Crest",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "quarry_ruins",
+        "smugglers_cove"
+      ],
+      "encounter_id": "elite_sand_giant"
+    },
+    {
+      "id": "salt_flats",
+      "type": "combat",
+      "name": "Salt Flats",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "dune_village",
+        "sandy_ridge"
+      ],
+      "encounter_id": "beach_salt_flats"
+    },
+    {
+      "id": "smugglers_cove",
+      "type": "event",
+      "name": "Foggy Strait",
+      "terrain": "sea",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "sandy_ridge",
+        "dune_village"
+      ],
+      "event_pool": "beach_sea"
+    },
+    {
+      "id": "quarry_ruins",
+      "type": "combat",
+      "name": "Quarry Ruins",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "mirage"
+      ],
+      "encounter_id": "beach_crab_spider"
+    },
+    {
+      "id": "dune_village",
+      "type": "town",
+      "name": "Dune Village",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "tide_shrine"
+      ],
+      "town_id": "dune_village"
+    },
+    {
+      "id": "sandy_ridge",
+      "type": "elite",
+      "name": "Serpent Deep",
+      "terrain": "sea",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "stormwatch",
+        "windswept_dunes"
+      ],
+      "encounter_id": "elite_sea_snake"
+    },
+    {
+      "id": "mirage",
+      "type": "event",
+      "name": "Mirage",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "windswept_dunes",
+        "stormwatch"
+      ],
+      "event_pool": "beach_shore"
+    },
+    {
+      "id": "tide_shrine",
+      "type": "treasure",
+      "name": "Tide Shrine",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "oasis",
+        "sand_sea"
+      ],
+      "treasure_id": "beach_tide_shrine"
+    },
+    {
+      "id": "stormwatch",
+      "type": "combat",
+      "name": "Shark Waters",
+      "terrain": "sea",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "sand_sea",
+        "oasis"
+      ],
+      "encounter_id": "beach_shark_patrol"
+    },
+    {
+      "id": "windswept_dunes",
+      "type": "combat",
+      "name": "Windswept Dunes",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "colossus_steps"
+      ],
+      "encounter_id": "beach_dune_patrol"
+    },
+    {
+      "id": "oasis",
+      "type": "rest",
+      "name": "Oasis",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "last_camp"
+      ],
+      "heal_percent": 30
+    },
+    {
+      "id": "sand_sea",
+      "type": "event",
+      "name": "Whirlpool Reach",
+      "terrain": "sea",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "storm_front",
+        "dune_watch"
+      ],
+      "event_pool": "beach_sea"
+    },
+    {
+      "id": "colossus_steps",
+      "type": "elite",
+      "name": "Colossus Steps",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "dune_watch",
+        "storm_front"
+      ],
+      "encounter_id": "elite_sand_giant"
+    },
+    {
+      "id": "last_camp",
+      "type": "town",
+      "name": "Last Camp",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "eye_of_the_storm"
+      ],
+      "town_id": "last_camp"
+    },
+    {
+      "id": "storm_front",
+      "type": "combat",
+      "name": "Storm Front",
+      "terrain": "sea",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "eye_of_the_storm"
+      ],
+      "encounter_id": "beach_storm_vanguard"
+    },
+    {
+      "id": "dune_watch",
+      "type": "rest",
+      "name": "Dune Watch",
+      "terrain": "shore",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "eye_of_the_storm"
+      ],
+      "heal_percent": 30
+    },
+    {
+      "id": "eye_of_the_storm",
+      "type": "boss",
+      "name": "Eye of the Storm",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "coast_exit"
+      ],
+      "encounter_id": "boss_sandstorm_elemental"
+    },
+    {
+      "id": "coast_exit",
+      "type": "exit",
+      "name": "Beyond the Storm",
+      "position": [
+        0,
+        0
+      ],
+      "next": []
+    }
+  ]
+}

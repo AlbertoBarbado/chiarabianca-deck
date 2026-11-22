@@ -1,0 +1,1457 @@
+[
+  {
+    "id": "padded_gambeson",
+    "name": "Padded Gambeson",
+    "category": "equipment",
+    "slot": "chest",
+    "wielder": "",
+    "rarity": "common",
+    "price": 60,
+    "description": "Layers of quilted cloth that soak up a blow.",
+    "stats": {
+      "max_hp": 4,
+      "resist": {
+        "physical": 10
+      }
+    },
+    "icon": "res://assets/generated/items/item_padded_gambeson.png"
+  },
+  {
+    "id": "venomguard_jerkin",
+    "name": "Venomguard Jerkin",
+    "category": "equipment",
+    "slot": "chest",
+    "wielder": "",
+    "rarity": "common",
+    "price": 60,
+    "description": "Herb-cured leather; the forest's venoms slide off it.",
+    "stats": {
+      "resist": {
+        "poison": 30
+      }
+    },
+    "icon": "res://assets/generated/items/item_venomguard_jerkin.png"
+  },
+  {
+    "id": "chainmail_hauberk",
+    "name": "Chainmail Hauberk",
+    "category": "equipment",
+    "slot": "chest",
+    "wielder": "",
+    "rarity": "uncommon",
+    "price": 60,
+    "description": "Riveted steel rings from the royal armoury.",
+    "stats": {
+      "resist": {
+        "physical": 20
+      }
+    },
+    "icon": "res://assets/generated/items/item_chainmail_hauberk.png"
+  },
+  {
+    "id": "flameward_cuirass",
+    "name": "Flameward Cuirass",
+    "category": "equipment",
+    "slot": "chest",
+    "wielder": "",
+    "rarity": "uncommon",
+    "price": 60,
+    "description": "Ember runes drink the heat of any flame.",
+    "stats": {
+      "max_hp": 2,
+      "resist": {
+        "fire": 30
+      }
+    },
+    "icon": "res://assets/generated/items/item_flameward_cuirass.png"
+  },
+  {
+    "id": "frostbound_mail",
+    "name": "Frostbound Mail",
+    "category": "equipment",
+    "slot": "chest",
+    "wielder": "",
+    "rarity": "uncommon",
+    "price": 60,
+    "description": "Forged in a glacier; cold cannot bite through it.",
+    "stats": {
+      "max_hp": 2,
+      "resist": {
+        "frost": 30
+      }
+    },
+    "icon": "res://assets/generated/items/item_frostbound_mail.png"
+  },
+  {
+    "id": "shadowveil_robe",
+    "name": "Shadowveil Robe",
+    "category": "equipment",
+    "slot": "chest",
+    "wielder": "",
+    "rarity": "uncommon",
+    "price": 60,
+    "description": "Moonthread embroidery wards off the dark.",
+    "stats": {
+      "resist": {
+        "shadow": 30
+      }
+    },
+    "icon": "res://assets/generated/items/item_shadowveil_robe.png"
+  },
+  {
+    "id": "stormweave_coat",
+    "name": "Stormweave Coat",
+    "category": "equipment",
+    "slot": "chest",
+    "wielder": "",
+    "rarity": "rare",
+    "price": 60,
+    "description": "Woven with copper thread that grounds every bolt.",
+    "stats": {
+      "max_hp": 4,
+      "resist": {
+        "lightning": 30
+      }
+    },
+    "icon": "res://assets/generated/items/item_stormweave_coat.png"
+  },
+  {
+    "id": "apprentice_staff",
+    "name": "Apprentice Staff",
+    "category": "equipment",
+    "slot": "weapon",
+    "wielder": "chiara",
+    "rarity": "common",
+    "price": 60,
+    "description": "A student's staff with a humming crystal.",
+    "stats": {
+      "damage": {
+        "arcane": 10
+      }
+    },
+    "icon": "res://assets/generated/items/item_apprentice_staff.png",
+    "specializations": [
+      "arcana"
+    ]
+  },
+  {
+    "id": "ember_staff",
+    "name": "Ember Staff",
+    "category": "equipment",
+    "slot": "weapon",
+    "wielder": "chiara",
+    "rarity": "uncommon",
+    "price": 60,
+    "description": "Its crystal never stops smouldering.",
+    "stats": {
+      "damage": {
+        "fire": 15
+      }
+    },
+    "icon": "res://assets/generated/items/item_ember_staff.png",
+    "specializations": [
+      "fire"
+    ]
+  },
+  {
+    "id": "rimeglass_staff",
+    "name": "Rimeglass Staff",
+    "category": "equipment",
+    "slot": "weapon",
+    "wielder": "chiara",
+    "rarity": "uncommon",
+    "price": 60,
+    "description": "Clear ice that never melts, even in summer.",
+    "stats": {
+      "damage": {
+        "frost": 15
+      }
+    },
+    "icon": "res://assets/generated/items/item_rimeglass_staff.png",
+    "specializations": [
+      "frost"
+    ]
+  },
+  {
+    "id": "starlit_rod",
+    "name": "Starlit Rod",
+    "category": "equipment",
+    "slot": "weapon",
+    "wielder": "chiara",
+    "rarity": "rare",
+    "price": 60,
+    "description": "A fallen star set in silver.",
+    "stats": {
+      "damage": {
+        "arcane": 20
+      }
+    },
+    "icon": "res://assets/generated/items/item_starlit_rod.png",
+    "specializations": [
+      "arcana"
+    ]
+  },
+  {
+    "id": "steel_longsword",
+    "name": "Steel Longsword",
+    "category": "equipment",
+    "slot": "weapon",
+    "wielder": "bianca",
+    "rarity": "common",
+    "price": 60,
+    "description": "Plain, sharp and dependable.",
+    "stats": {
+      "damage": {
+        "physical": 10
+      }
+    },
+    "icon": "res://assets/generated/items/item_steel_longsword.png",
+    "specializations": [
+      "tanking",
+      "ashveil"
+    ]
+  },
+  {
+    "id": "runed_warblade",
+    "name": "Runed Warblade",
+    "category": "equipment",
+    "slot": "weapon",
+    "wielder": "bianca",
+    "rarity": "uncommon",
+    "price": 60,
+    "description": "Runes along the fuller make every swing heavier.",
+    "stats": {
+      "damage": {
+        "physical": 15
+      }
+    },
+    "icon": "res://assets/generated/items/item_runed_warblade.png",
+    "specializations": [
+      "tanking",
+      "ashveil"
+    ]
+  },
+  {
+    "id": "dawnsteel_blade",
+    "name": "Dawnsteel Blade",
+    "category": "equipment",
+    "slot": "weapon",
+    "wielder": "bianca",
+    "rarity": "rare",
+    "price": 60,
+    "description": "It glows brighter the darker the foe.",
+    "stats": {
+      "damage": {
+        "holy": 20
+      }
+    },
+    "icon": "res://assets/generated/items/item_dawnsteel_blade.png",
+    "specializations": [
+      "holy"
+    ]
+  },
+  {
+    "id": "coral_mail",
+    "name": "Coral Mail",
+    "category": "equipment",
+    "slot": "chest",
+    "wielder": "",
+    "rarity": "uncommon",
+    "price": 80,
+    "description": "Plates of living coral, hard as steel and cool as the sea.",
+    "stats": {
+      "max_hp": 2,
+      "resist": {
+        "water": 30
+      }
+    },
+    "icon": "res://assets/generated/items/item_coral_mail.png"
+  },
+  {
+    "id": "sandstone_cuirass",
+    "name": "Sandstone Cuirass",
+    "category": "equipment",
+    "slot": "chest",
+    "wielder": "",
+    "rarity": "uncommon",
+    "price": 80,
+    "description": "Carved from a single desert stone; rockfalls glance off it.",
+    "stats": {
+      "max_hp": 2,
+      "resist": {
+        "earth": 30
+      }
+    },
+    "icon": "res://assets/generated/items/item_sandstone_cuirass.png"
+  },
+  {
+    "id": "kelpwoven_coat",
+    "name": "Kelpwoven Coat",
+    "category": "equipment",
+    "slot": "chest",
+    "wielder": "",
+    "rarity": "rare",
+    "price": 80,
+    "description": "Sea water runs off it like rain off a leaf: the wearer is never Soaked.",
+    "stats": {
+      "resist": {
+        "water": 15
+      },
+      "immune": [
+        "soaked"
+      ]
+    },
+    "icon": "res://assets/generated/items/item_kelpwoven_coat.png"
+  },
+  {
+    "id": "dunewalker_wraps",
+    "name": "Dunewalker Wraps",
+    "category": "equipment",
+    "slot": "chest",
+    "wielder": "",
+    "rarity": "rare",
+    "price": 80,
+    "description": "Nomad wraps and goggles: sand never reaches the eyes (no Sandblind).",
+    "stats": {
+      "resist": {
+        "earth": 15
+      },
+      "immune": [
+        "sandblind"
+      ]
+    },
+    "icon": "res://assets/generated/items/item_dunewalker_wraps.png"
+  },
+  {
+    "id": "tidecaller_staff",
+    "name": "Tidecaller Staff",
+    "category": "equipment",
+    "slot": "weapon",
+    "wielder": "chiara",
+    "rarity": "rare",
+    "price": 80,
+    "description": "A pearl that holds the cold of the deep sea.",
+    "stats": {
+      "damage": {
+        "frost": 20
+      }
+    },
+    "icon": "res://assets/generated/items/item_tidecaller_staff.png",
+    "specializations": [
+      "frost"
+    ]
+  },
+  {
+    "id": "coralsteel_sabre",
+    "name": "Coralsteel Sabre",
+    "category": "equipment",
+    "slot": "weapon",
+    "wielder": "bianca",
+    "rarity": "uncommon",
+    "price": 80,
+    "description": "Blessed by the tide priests; it shines in the dark of sea caves.",
+    "stats": {
+      "damage": {
+        "holy": 15
+      }
+    },
+    "icon": "res://assets/generated/items/item_coralsteel_sabre.png",
+    "specializations": [
+      "holy"
+    ]
+  },
+  {
+    "id": "iron_sallet",
+    "name": "Iron Sallet",
+    "category": "equipment",
+    "slot": "helmet",
+    "wielder": "",
+    "rarity": "common",
+    "price": 60,
+    "description": "A plain steel helmet with a short visor.",
+    "stats": {
+      "resist": {
+        "physical": 10
+      }
+    },
+    "icon": "res://assets/generated/gear/item_iron_sallet.png"
+  },
+  {
+    "id": "amber_amulet",
+    "name": "Amber Amulet",
+    "category": "equipment",
+    "slot": "amulet",
+    "wielder": "",
+    "rarity": "common",
+    "price": 60,
+    "description": "Warm amber that steadies the heart.",
+    "stats": {
+      "max_hp": 4
+    },
+    "icon": "res://assets/generated/gear/item_amber_amulet.png"
+  },
+  {
+    "id": "leather_bracers",
+    "name": "Leather Bracers",
+    "category": "equipment",
+    "slot": "gauntlets",
+    "wielder": "",
+    "rarity": "common",
+    "price": 60,
+    "description": "Buckled bracers that turn a glancing blow.",
+    "stats": {
+      "resist": {
+        "physical": 10
+      }
+    },
+    "icon": "res://assets/generated/gear/item_leather_bracers.png"
+  },
+  {
+    "id": "sturdy_belt",
+    "name": "Sturdy Belt",
+    "category": "equipment",
+    "slot": "belt",
+    "wielder": "",
+    "rarity": "common",
+    "price": 60,
+    "description": "Thick leather with an iron buckle.",
+    "stats": {
+      "max_hp": 4
+    },
+    "icon": "res://assets/generated/gear/item_sturdy_belt.png"
+  },
+  {
+    "id": "copper_ring",
+    "name": "Copper Ring",
+    "category": "equipment",
+    "slot": "ring",
+    "wielder": "",
+    "rarity": "common",
+    "price": 60,
+    "description": "A simple ring, polished by long wear.",
+    "stats": {
+      "max_hp": 2
+    },
+    "icon": "res://assets/generated/gear/item_copper_ring.png"
+  },
+  {
+    "id": "traveling_boots",
+    "name": "Traveling Boots",
+    "category": "equipment",
+    "slot": "boots",
+    "wielder": "",
+    "rarity": "common",
+    "price": 60,
+    "description": "Sturdy boots for long roads.",
+    "stats": {
+      "resist": {
+        "earth": 15
+      }
+    },
+    "icon": "res://assets/generated/gear/item_traveling_boots.png"
+  },
+  {
+    "id": "hourglass_amulet",
+    "name": "Hourglass Amulet",
+    "category": "equipment",
+    "slot": "amulet",
+    "wielder": "",
+    "rarity": "rare",
+    "price": 140,
+    "description": "Its blue sand runs upward on the third turn.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_hourglass_amulet.png",
+    "effects": [
+      {
+        "text": "Every 3rd turn, gain 1 Energy.",
+        "trigger": {
+          "event": "turn_start",
+          "every": 3
+        },
+        "effect": {
+          "effect": "gain_energy",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "alchemists_bandolier",
+    "name": "Alchemist's Bandolier",
+    "category": "equipment",
+    "slot": "belt",
+    "wielder": "",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "Vials of quickening tonic, ready at the first breath of battle.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_alchemists_bandolier.png",
+    "effects": [
+      {
+        "text": "On the first turn of each battle, gain 1 Energy.",
+        "trigger": {
+          "event": "turn_start",
+          "turn": 1
+        },
+        "effect": {
+          "effect": "gain_energy",
+          "value": 1
+        },
+        "limit_per_turn": 1,
+        "limit_per_combat": 1
+      }
+    ]
+  },
+  {
+    "id": "twinbond_ring",
+    "name": "Twinbond Ring",
+    "category": "equipment",
+    "slot": "ring",
+    "wielder": "",
+    "rarity": "rare",
+    "price": 140,
+    "description": "Two rings forged as one, for two sisters who fight as one.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_twinbond_ring.png",
+    "effects": [
+      {
+        "text": "Once per turn, when a card follows one of the other sister's, draw 1 card.",
+        "trigger": {
+          "event": "card_played",
+          "played_by": "owner",
+          "after_other_owner": true
+        },
+        "effect": {
+          "effect": "draw_cards",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "victors_signet",
+    "name": "Victor's Signet",
+    "category": "equipment",
+    "slot": "ring",
+    "wielder": "",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "A laurel crest that remembers every fallen foe.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_victors_signet.png",
+    "effects": [
+      {
+        "text": "When the wearer fells an enemy, draw 1 card.",
+        "trigger": {
+          "event": "enemy_killed"
+        },
+        "effect": {
+          "effect": "draw_cards",
+          "value": 1
+        },
+        "limit_per_turn": 2
+      }
+    ]
+  },
+  {
+    "id": "spellweaver_gloves",
+    "name": "Spellweaver Gloves",
+    "category": "equipment",
+    "slot": "gauntlets",
+    "wielder": "chiara",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "Silk gloves that keep a spell's rhythm going.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_spellweaver_gloves.png",
+    "effects": [
+      {
+        "text": "The 3rd card the party plays each turn draws 1 card.",
+        "trigger": {
+          "event": "card_played",
+          "cards_played": 3
+        },
+        "effect": {
+          "effect": "draw_cards",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "seers_circlet",
+    "name": "Seer's Circlet",
+    "category": "equipment",
+    "slot": "helmet",
+    "wielder": "chiara",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "A third eye that reads the battle before it begins.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_seers_circlet.png",
+    "specializations": [
+      "arcana"
+    ],
+    "effects": [
+      {
+        "text": "At the start of each battle, draw 2 extra cards (they also make Aether).",
+        "trigger": {
+          "event": "turn_start",
+          "turn": 1
+        },
+        "effect": {
+          "effect": "draw_cards",
+          "value": 2
+        },
+        "limit_per_turn": 1,
+        "limit_per_combat": 1
+      }
+    ]
+  },
+  {
+    "id": "ley_pendant",
+    "name": "Ley Pendant",
+    "category": "equipment",
+    "slot": "amulet",
+    "wielder": "chiara",
+    "rarity": "rare",
+    "price": 140,
+    "description": "A drop of the ley lines, humming with surplus magic.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_ley_pendant.png",
+    "specializations": [
+      "arcana"
+    ],
+    "effects": [
+      {
+        "text": "At the start of each turn, gain 1 Aether.",
+        "trigger": {
+          "event": "turn_start"
+        },
+        "effect": {
+          "effect": "gain_aether",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "arcanist_ring",
+    "name": "Arcanist's Ring",
+    "category": "equipment",
+    "slot": "ring",
+    "wielder": "chiara",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "Its crystal flares every other heartbeat of the fight.",
+    "stats": {
+      "damage": {
+        "arcane": 5
+      }
+    },
+    "icon": "res://assets/generated/gear/item_arcanist_ring.png",
+    "specializations": [
+      "arcana"
+    ],
+    "effects": [
+      {
+        "text": "Every 2nd turn, draw 1 extra card.",
+        "trigger": {
+          "event": "turn_start",
+          "every": 2
+        },
+        "effect": {
+          "effect": "draw_cards",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "ember_crown",
+    "name": "Ember Crown",
+    "category": "equipment",
+    "slot": "helmet",
+    "wielder": "chiara",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "A crown of coals that sets the field alight.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_ember_crown.png",
+    "specializations": [
+      "fire"
+    ],
+    "effects": [
+      {
+        "text": "At the start of each battle, apply 2 Burn to ALL enemies.",
+        "trigger": {
+          "event": "turn_start",
+          "turn": 1
+        },
+        "effect": {
+          "effect": "apply_status_all",
+          "status_id": "burn",
+          "value": 2
+        },
+        "limit_per_turn": 1,
+        "limit_per_combat": 1
+      }
+    ]
+  },
+  {
+    "id": "kindling_sash",
+    "name": "Kindling Sash",
+    "category": "equipment",
+    "slot": "belt",
+    "wielder": "chiara",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "Its embroidered flames never quite go out.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_kindling_sash.png",
+    "specializations": [
+      "fire"
+    ],
+    "effects": [
+      {
+        "text": "Every 3rd turn, apply 3 Burn to ALL enemies.",
+        "trigger": {
+          "event": "turn_start",
+          "every": 3
+        },
+        "effect": {
+          "effect": "apply_status_all",
+          "status_id": "burn",
+          "value": 3
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "cinderheart_ring",
+    "name": "Cinderheart Ring",
+    "category": "equipment",
+    "slot": "ring",
+    "wielder": "chiara",
+    "rarity": "rare",
+    "price": 140,
+    "description": "A living ember set in black iron.",
+    "stats": {
+      "damage": {
+        "fire": 5
+      }
+    },
+    "icon": "res://assets/generated/gear/item_cinderheart_ring.png",
+    "specializations": [
+      "fire"
+    ],
+    "effects": [
+      {
+        "text": "The first time Chiara applies Burn each turn, apply 1 more.",
+        "trigger": {
+          "event": "status_applied",
+          "status_id": "burn",
+          "applied_by": "owner"
+        },
+        "effect": {
+          "effect": "extra_status",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "rimefrost_hood",
+    "name": "Rimefrost Hood",
+    "category": "equipment",
+    "slot": "helmet",
+    "wielder": "chiara",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "Winter breathes out of its folds.",
+    "stats": {
+      "resist": {
+        "frost": 10
+      }
+    },
+    "icon": "res://assets/generated/gear/item_rimefrost_hood.png",
+    "specializations": [
+      "frost"
+    ],
+    "effects": [
+      {
+        "text": "At the start of each battle, apply 2 Chill to ALL enemies.",
+        "trigger": {
+          "event": "turn_start",
+          "turn": 1
+        },
+        "effect": {
+          "effect": "apply_status_all",
+          "status_id": "chill",
+          "value": 2
+        },
+        "limit_per_turn": 1,
+        "limit_per_combat": 1
+      }
+    ]
+  },
+  {
+    "id": "frostbite_band",
+    "name": "Frostbite Band",
+    "category": "equipment",
+    "slot": "ring",
+    "wielder": "chiara",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "Cold enough to numb the fear of a blow.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_frostbite_band.png",
+    "specializations": [
+      "frost"
+    ],
+    "effects": [
+      {
+        "text": "The first time Chiara applies Chill each turn, she gains 3 Block.",
+        "trigger": {
+          "event": "status_applied",
+          "status_id": "chill",
+          "applied_by": "owner"
+        },
+        "effect": {
+          "effect": "bonus_block",
+          "value": 3
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "glacier_greaves",
+    "name": "Glacier Greaves",
+    "category": "equipment",
+    "slot": "boots",
+    "wielder": "chiara",
+    "rarity": "rare",
+    "price": 140,
+    "description": "Each step leaves rime on the ground.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_glacier_greaves.png",
+    "specializations": [
+      "frost"
+    ],
+    "effects": [
+      {
+        "text": "Every 2nd turn, apply 1 Chill to ALL enemies.",
+        "trigger": {
+          "event": "turn_start",
+          "every": 2
+        },
+        "effect": {
+          "effect": "apply_status_all",
+          "status_id": "chill",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "galeplume_helm",
+    "name": "Galeplume Helm",
+    "category": "equipment",
+    "slot": "helmet",
+    "wielder": "chiara",
+    "rarity": "rare",
+    "price": 140,
+    "description": "Its feathers catch every passing breeze.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_galeplume_helm.png",
+    "specializations": [
+      "wind"
+    ],
+    "effects": [
+      {
+        "text": "Every 2nd turn, add 1 Gust to the hand.",
+        "trigger": {
+          "event": "turn_start",
+          "every": 2
+        },
+        "effect": {
+          "effect": "create_card",
+          "card_id": "chiara_wind_gust",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "storm_grips",
+    "name": "Storm Grips",
+    "category": "equipment",
+    "slot": "gauntlets",
+    "wielder": "chiara",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "Whirlwinds curl around the fingers as the tempo rises.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_storm_grips.png",
+    "specializations": [
+      "wind"
+    ],
+    "effects": [
+      {
+        "text": "The 5th card the party plays each turn grants 1 Energy.",
+        "trigger": {
+          "event": "card_played",
+          "cards_played": 5
+        },
+        "effect": {
+          "effect": "gain_energy",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "windstep_boots",
+    "name": "Windstep Boots",
+    "category": "equipment",
+    "slot": "boots",
+    "wielder": "chiara",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "Winged boots that open every fight with a rush of air.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_windstep_boots.png",
+    "specializations": [
+      "wind"
+    ],
+    "effects": [
+      {
+        "text": "At the start of each battle, add 2 Gusts to the hand.",
+        "trigger": {
+          "event": "turn_start",
+          "turn": 1
+        },
+        "effect": {
+          "effect": "create_card",
+          "card_id": "chiara_wind_gust",
+          "value": 2
+        },
+        "limit_per_turn": 1,
+        "limit_per_combat": 1
+      }
+    ]
+  },
+  {
+    "id": "tempest_ring",
+    "name": "Tempest Ring",
+    "category": "equipment",
+    "slot": "ring",
+    "wielder": "chiara",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "A storm cloud trapped in jade.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_tempest_ring.png",
+    "specializations": [
+      "wind"
+    ],
+    "effects": [
+      {
+        "text": "When Chiara fells an enemy, add 2 Gusts to the hand.",
+        "trigger": {
+          "event": "enemy_killed"
+        },
+        "effect": {
+          "effect": "create_card",
+          "card_id": "chiara_wind_gust",
+          "value": 2
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "gale_staff",
+    "name": "Gale Staff",
+    "category": "equipment",
+    "slot": "weapon",
+    "wielder": "chiara",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "Pale wood wrapped in a living breeze.",
+    "stats": {
+      "damage": {
+        "wind": 15
+      }
+    },
+    "icon": "res://assets/generated/gear/item_gale_staff.png",
+    "specializations": [
+      "wind"
+    ]
+  },
+  {
+    "id": "bastion_greathelm",
+    "name": "Bastion Greathelm",
+    "category": "equipment",
+    "slot": "helmet",
+    "wielder": "bianca",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "Behind it, Bianca is a wall.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_bastion_greathelm.png",
+    "specializations": [
+      "tanking"
+    ],
+    "effects": [
+      {
+        "text": "At the start of each battle, Bianca gains 10 Block.",
+        "trigger": {
+          "event": "turn_start",
+          "turn": 1
+        },
+        "effect": {
+          "effect": "bonus_block",
+          "value": 10
+        },
+        "limit_per_turn": 1,
+        "limit_per_combat": 1
+      }
+    ]
+  },
+  {
+    "id": "shieldbearer_gauntlets",
+    "name": "Shieldbearer Gauntlets",
+    "category": "equipment",
+    "slot": "gauntlets",
+    "wielder": "bianca",
+    "rarity": "rare",
+    "price": 140,
+    "description": "Every blow they stop braces them for the next.",
+    "stats": {
+      "resist": {
+        "physical": 5
+      }
+    },
+    "icon": "res://assets/generated/gear/item_shieldbearer_gauntlets.png",
+    "specializations": [
+      "tanking"
+    ],
+    "effects": [
+      {
+        "text": "When Bianca's Block stops a whole attack, she gains 3 Block (twice per turn).",
+        "trigger": {
+          "event": "attack_absorbed",
+          "recipient": "owner"
+        },
+        "effect": {
+          "effect": "bonus_block",
+          "value": 3
+        },
+        "limit_per_turn": 2
+      }
+    ]
+  },
+  {
+    "id": "rampart_sabatons",
+    "name": "Rampart Sabatons",
+    "category": "equipment",
+    "slot": "boots",
+    "wielder": "bianca",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "Planted feet do not yield.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_rampart_sabatons.png",
+    "specializations": [
+      "tanking"
+    ],
+    "effects": [
+      {
+        "text": "At the start of each turn, Bianca gains 3 Block.",
+        "trigger": {
+          "event": "turn_start"
+        },
+        "effect": {
+          "effect": "bonus_block",
+          "value": 3
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "sunlit_reliquary",
+    "name": "Sunlit Reliquary",
+    "category": "equipment",
+    "slot": "amulet",
+    "wielder": "bianca",
+    "rarity": "rare",
+    "price": 140,
+    "description": "A locket of morning light.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_sunlit_reliquary.png",
+    "specializations": [
+      "holy"
+    ],
+    "effects": [
+      {
+        "text": "Bianca's first Attack each turn heals the party 1 HP.",
+        "trigger": {
+          "event": "card_played",
+          "played_by": "owner",
+          "card_type": "attack"
+        },
+        "effect": {
+          "effect": "heal_party",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "pilgrims_girdle",
+    "name": "Pilgrim's Girdle",
+    "category": "equipment",
+    "slot": "belt",
+    "wielder": "bianca",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "A prayer tied at the waist.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_pilgrims_girdle.png",
+    "specializations": [
+      "holy"
+    ],
+    "effects": [
+      {
+        "text": "Every 3rd turn, the party heals 3 HP.",
+        "trigger": {
+          "event": "turn_start",
+          "every": 3
+        },
+        "effect": {
+          "effect": "heal_party",
+          "value": 3
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "dawnwalker_sabatons",
+    "name": "Dawnwalker Sabatons",
+    "category": "equipment",
+    "slot": "boots",
+    "wielder": "bianca",
+    "rarity": "rare",
+    "price": 140,
+    "description": "Each step at dawn gathers a little light.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_dawnwalker_sabatons.png",
+    "specializations": [
+      "holy"
+    ],
+    "effects": [
+      {
+        "text": "Every 2nd turn, gain 1 Aether (Holy's hymns read it).",
+        "trigger": {
+          "event": "turn_start",
+          "every": 2
+        },
+        "effect": {
+          "effect": "gain_aether",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "powder_belt",
+    "name": "Powder Belt",
+    "category": "equipment",
+    "slot": "belt",
+    "wielder": "bianca",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "Oil flasks and fuses for the opening move.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_powder_belt.png",
+    "specializations": [
+      "ashveil"
+    ],
+    "effects": [
+      {
+        "text": "At the start of each battle, apply 2 Oiled to ALL enemies.",
+        "trigger": {
+          "event": "turn_start",
+          "turn": 1
+        },
+        "effect": {
+          "effect": "apply_status_all",
+          "status_id": "oiled",
+          "value": 2
+        },
+        "limit_per_turn": 1,
+        "limit_per_combat": 1
+      }
+    ]
+  },
+  {
+    "id": "cinderfist_gauntlets",
+    "name": "Cinderfist Gauntlets",
+    "category": "equipment",
+    "slot": "gauntlets",
+    "wielder": "bianca",
+    "rarity": "rare",
+    "price": 140,
+    "description": "Soot-black iron that sparks on oil.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_cinderfist_gauntlets.png",
+    "specializations": [
+      "ashveil"
+    ],
+    "effects": [
+      {
+        "text": "The first time Bianca applies Oiled each turn, that enemy takes 4 Fire damage.",
+        "trigger": {
+          "event": "status_applied",
+          "status_id": "oiled",
+          "applied_by": "owner"
+        },
+        "effect": {
+          "effect": "bonus_damage",
+          "value": 4,
+          "element": "fire"
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "smokeveil_hood",
+    "name": "Smokeveil Hood",
+    "category": "equipment",
+    "slot": "helmet",
+    "wielder": "bianca",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "A trailing veil of smoke hides each move.",
+    "stats": {
+      "resist": {
+        "shadow": 10
+      }
+    },
+    "icon": "res://assets/generated/gear/item_smokeveil_hood.png",
+    "specializations": [
+      "ashveil"
+    ],
+    "effects": [
+      {
+        "text": "The 3rd card the party plays each turn gives Bianca 4 Block.",
+        "trigger": {
+          "event": "card_played",
+          "cards_played": 3
+        },
+        "effect": {
+          "effect": "bonus_block",
+          "value": 4
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "plague_mask",
+    "name": "Plague Mask",
+    "category": "equipment",
+    "slot": "helmet",
+    "wielder": "bianca",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "Its beak breathes a green mist.",
+    "stats": {
+      "immune": [
+        "poison"
+      ]
+    },
+    "icon": "res://assets/generated/gear/item_plague_mask.png",
+    "specializations": [
+      "venom"
+    ],
+    "effects": [
+      {
+        "text": "At the start of each battle, apply 3 Poison to ALL enemies.",
+        "trigger": {
+          "event": "turn_start",
+          "turn": 1
+        },
+        "effect": {
+          "effect": "apply_status_all",
+          "status_id": "poison",
+          "value": 3
+        },
+        "limit_per_turn": 1,
+        "limit_per_combat": 1
+      }
+    ]
+  },
+  {
+    "id": "catalyst_locket",
+    "name": "Catalyst Locket",
+    "category": "equipment",
+    "slot": "amulet",
+    "wielder": "bianca",
+    "rarity": "rare",
+    "price": 140,
+    "description": "One drop turns poison into doom.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_catalyst_locket.png",
+    "specializations": [
+      "venom"
+    ],
+    "effects": [
+      {
+        "text": "The first time Bianca applies Poison each turn, apply 2 Blight to that enemy.",
+        "trigger": {
+          "event": "status_applied",
+          "status_id": "poison",
+          "applied_by": "owner"
+        },
+        "effect": {
+          "effect": "status_to_target",
+          "status_id": "blight",
+          "value": 2
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "venomfang_ring",
+    "name": "Venomfang Ring",
+    "category": "equipment",
+    "slot": "ring",
+    "wielder": "bianca",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "When one falls, the venom seeks the rest.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_venomfang_ring.png",
+    "specializations": [
+      "venom"
+    ],
+    "effects": [
+      {
+        "text": "When Bianca fells an enemy (Poison and Blight count), apply 2 Poison to ALL enemies.",
+        "trigger": {
+          "event": "enemy_killed"
+        },
+        "effect": {
+          "effect": "apply_status_all",
+          "status_id": "poison",
+          "value": 2
+        },
+        "limit_per_turn": 2
+      }
+    ]
+  },
+  {
+    "id": "plaguewalker_boots",
+    "name": "Plaguewalker Boots",
+    "category": "equipment",
+    "slot": "boots",
+    "wielder": "bianca",
+    "rarity": "rare",
+    "price": 140,
+    "description": "Toxic mist seeps from every step.",
+    "stats": {},
+    "icon": "res://assets/generated/gear/item_plaguewalker_boots.png",
+    "specializations": [
+      "venom"
+    ],
+    "effects": [
+      {
+        "text": "Every 3rd turn, apply 4 Poison to ALL enemies.",
+        "trigger": {
+          "event": "turn_start",
+          "every": 3
+        },
+        "effect": {
+          "effect": "apply_status_all",
+          "status_id": "poison",
+          "value": 4
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "venom_kris",
+    "name": "Venom Kris",
+    "category": "equipment",
+    "slot": "weapon",
+    "wielder": "bianca",
+    "rarity": "uncommon",
+    "price": 95,
+    "description": "A wavy blade that drinks from a vial of venom.",
+    "stats": {
+      "damage": {
+        "poison": 15
+      }
+    },
+    "icon": "res://assets/generated/gear/item_venom_kris.png",
+    "specializations": [
+      "venom"
+    ]
+  },
+  {
+    "id": "yetifur_mantle",
+    "name": "Yeti-Fur Mantle",
+    "category": "equipment",
+    "slot": "chest",
+    "wielder": "",
+    "rarity": "rare",
+    "price": 90,
+    "description": "Shaggy and warm as a hearth: the wearer is never Frostbitten.",
+    "stats": {
+      "resist": {
+        "frost": 15
+      },
+      "immune": [
+        "frostbitten"
+      ]
+    },
+    "icon": "res://assets/generated/items/item_yetifur_mantle.png"
+  },
+  {
+    "id": "glacier_plate",
+    "name": "Glacier Plate",
+    "category": "equipment",
+    "slot": "chest",
+    "wielder": "",
+    "rarity": "uncommon",
+    "price": 85,
+    "description": "Pale steel forged in meltwater; frost slides off it.",
+    "stats": {
+      "max_hp": 2,
+      "resist": {
+        "frost": 30
+      }
+    },
+    "icon": "res://assets/generated/items/item_glacier_plate.png"
+  }
+]

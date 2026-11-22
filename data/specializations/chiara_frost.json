@@ -1,0 +1,71 @@
+{
+  "id": "frost",
+  "character_id": "chiara",
+  "identity": "Chill, slowing, defensive barriers and control.",
+  "starting_passive": {
+    "id": "frost_passive",
+    "name": "Rime Touch",
+    "description": "The first time Chiara applies Chill each turn, the target gains 1 extra Chill.",
+    "trigger": {
+      "event": "status_applied",
+      "status_id": "chill",
+      "applied_by": "owner"
+    },
+    "limit_per_turn": 1,
+    "effect": {
+      "effect": "extra_status",
+      "value": 1
+    }
+  },
+  "starting_deck_card_ids": [
+    "chiara_frost_bolt",
+    "chiara_frost_bolt",
+    "chiara_frost_bolt",
+    "chiara_frost_bolt",
+    "chiara_frost_ward",
+    "chiara_frost_ward",
+    "chiara_frost_ward",
+    "chiara_frost_touch",
+    "chiara_frost_touch",
+    "chiara_frost_touch"
+  ],
+  "card_pool": [
+    "chiara_frost_spike",
+    "chiara_frost_nova",
+    "chiara_frost_snap",
+    "chiara_frost_shatter",
+    "chiara_frost_blizzard",
+    "chiara_frost_rime",
+    "chiara_frost_brand",
+    "chiara_frost_zero",
+    "chiara_frost_glacier",
+    "chiara_frost_permafrost",
+    "chiara_frost_wintersgrip",
+    "chiara_frost_icebarrier",
+    "chiara_frost_frostbite",
+    "chiara_frost_hailstorm",
+    "chiara_frost_flashfreeze",
+    "chiara_frost_glacialarmor",
+    "chiara_frost_icicles",
+    "chiara_frost_clarity"
+  ],
+  "skill_tree": {
+    "nodes": [],
+    "note": "Add skill nodes as the specialization is implemented."
+  },
+  "status": "playable",
+  "display_name": "Frost",
+  "description": "Chiara freezes the battlefield. Chill makes enemies act later and take more Physical damage, so Bianca's blows land harder; enough Chill freezes a foe solid and it loses its turn.",
+  "epic_pool": [
+    "chiara_frost_epic_avalanche",
+    "chiara_frost_epic_heart"
+  ],
+  "keywords": [
+    "chill"
+  ],
+  "visual": {
+    "accent": "#8fdcff",
+    "icon": "icon_frost"
+  },
+  "damage_element": "frost"
+}

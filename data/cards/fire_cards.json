@@ -1,0 +1,862 @@
+[
+  {
+    "id": "chiara_fire_ember",
+    "name": "Ember Bolt",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "basic",
+    "description": "Deal 6 damage.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 6,
+        "target": "single_enemy"
+      }
+    ],
+    "upgrade": {
+      "name": "Ember Bolt+",
+      "cost": 1,
+      "description": "Deal 9 damage.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 9,
+          "target": "single_enemy"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_fire_ember.png"
+  },
+  {
+    "id": "chiara_fire_cinderward",
+    "name": "Cinder Ward",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "basic",
+    "description": "Gain 5 Block.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 5,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Cinder Ward+",
+      "cost": 1,
+      "description": "Gain 8 Block.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 8,
+          "target": "self"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_fire_cinderward.png"
+  },
+  {
+    "id": "chiara_fire_kindle",
+    "name": "Kindle",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "basic",
+    "description": "Apply 2 Burn.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 2,
+        "target": "single_enemy",
+        "status_id": "burn"
+      }
+    ],
+    "upgrade": {
+      "name": "Kindle+",
+      "cost": 1,
+      "description": "Apply 3 Burn.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 3,
+          "target": "single_enemy",
+          "status_id": "burn"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_fire_kindle.png"
+  },
+  {
+    "id": "chiara_fire_fireball",
+    "name": "Fireball",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 2,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 10 damage.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 10,
+        "target": "single_enemy"
+      }
+    ],
+    "upgrade": {
+      "name": "Fireball+",
+      "cost": 2,
+      "description": "Deal 14 damage.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 14,
+          "target": "single_enemy"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_fire_fireball.png"
+  },
+  {
+    "id": "chiara_fire_immolate",
+    "name": "Immolate",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 3 damage. Apply 2 Burn.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "apply_status",
+        "value": 2,
+        "target": "single_enemy",
+        "status_id": "burn"
+      }
+    ],
+    "upgrade": {
+      "name": "Immolate+",
+      "cost": 1,
+      "description": "Deal 4 damage. Apply 3 Burn.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "apply_status",
+          "value": 3,
+          "target": "single_enemy",
+          "status_id": "burn"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_fire_immolate.png"
+  },
+  {
+    "id": "chiara_fire_fuel",
+    "name": "Fuel the Flames",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "uncommon",
+    "description": "Deal 5 damage. Deal 4 more if the target is Burning.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 5,
+        "target": "single_enemy",
+        "bonus_if_status": {
+          "status_id": "burn",
+          "value": 4
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Fuel the Flames+",
+      "cost": 1,
+      "description": "Deal 7 damage. Deal 6 more if the target is Burning.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 7,
+          "target": "single_enemy",
+          "bonus_if_status": {
+            "status_id": "burn",
+            "value": 6
+          }
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_fire_fuel.png"
+  },
+  {
+    "id": "chiara_fire_wave",
+    "name": "Flame Wave",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "all_enemies",
+    "rarity": "common",
+    "description": "Deal 4 damage to all enemies.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 4,
+        "target": "all_enemies"
+      }
+    ],
+    "upgrade": {
+      "name": "Flame Wave+",
+      "cost": 1,
+      "description": "Deal 6 damage to all enemies.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 6,
+          "target": "all_enemies"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_fire_wave.png"
+  },
+  {
+    "id": "chiara_fire_smokescreen",
+    "name": "Smoke Screen",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "common",
+    "description": "Gain 7 Block. Draw 1 card.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 7,
+        "target": "self"
+      },
+      {
+        "effect": "draw",
+        "value": 1,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Smoke Screen+",
+      "cost": 1,
+      "description": "Gain 10 Block. Draw 1 card.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 10,
+          "target": "self"
+        },
+        {
+          "effect": "draw",
+          "value": 1,
+          "target": "self"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_fire_smokescreen.png"
+  },
+  {
+    "id": "chiara_fire_inferno",
+    "name": "Inferno",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 3,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "rare",
+    "description": "Deal 18 damage. Apply 3 Burn.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 18,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "apply_status",
+        "value": 3,
+        "target": "single_enemy",
+        "status_id": "burn"
+      }
+    ],
+    "upgrade": {
+      "name": "Inferno+",
+      "cost": 3,
+      "description": "Deal 23 damage. Apply 4 Burn.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 23,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "apply_status",
+          "value": 4,
+          "target": "single_enemy",
+          "status_id": "burn"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_fire_inferno.png"
+  },
+  {
+    "id": "chiara_fire_flashpoint",
+    "name": "Flashpoint",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "uncommon",
+    "description": "Deal 4 damage twice.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 4,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "damage",
+        "value": 4,
+        "target": "single_enemy"
+      }
+    ],
+    "upgrade": {
+      "name": "Flashpoint+",
+      "cost": 1,
+      "description": "Deal 6 damage twice.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 6,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "damage",
+          "value": 6,
+          "target": "single_enemy"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_fire_wildfire",
+    "name": "Wildfire",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 2,
+    "card_type": "spell",
+    "target": "all_enemies",
+    "rarity": "uncommon",
+    "description": "Deal 5 damage to ALL enemies. Apply 1 Burn to ALL enemies.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 5,
+        "target": "all_enemies"
+      },
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "all_enemies",
+        "status_id": "burn"
+      }
+    ],
+    "upgrade": {
+      "name": "Wildfire+",
+      "cost": 2,
+      "description": "Deal 7 damage to ALL enemies. Apply 2 Burn to ALL enemies.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 7,
+          "target": "all_enemies"
+        },
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "all_enemies",
+          "status_id": "burn"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_fire_volley",
+    "name": "Ember Volley",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 2 damage 3 times.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 2,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "damage",
+        "value": 2,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "damage",
+        "value": 2,
+        "target": "single_enemy"
+      }
+    ],
+    "upgrade": {
+      "name": "Ember Volley+",
+      "cost": 1,
+      "description": "Deal 3 damage 3 times.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 3,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "damage",
+          "value": 3,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "damage",
+          "value": 3,
+          "target": "single_enemy"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_fire_pyromancy",
+    "name": "Pyromancy",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Power: whenever Chiara applies Burn, that enemy takes 2 damage (3 times a turn).",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 7,
+        "power": {
+          "id": "pyromancy",
+          "name": "Pyromancy",
+          "description": "Whenever Chiara applies Burn, that enemy takes 2 damage (3 times a turn).",
+          "trigger": {
+            "event": "status_applied",
+            "status_id": "burn",
+            "applied_by": "owner"
+          },
+          "effect": {
+            "effect": "bonus_damage",
+            "value": 2
+          },
+          "limit_per_turn": 3
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Pyromancy+",
+      "cost": 1,
+      "description": "Power: whenever Chiara applies Burn, that enemy takes 3 damage (3 times a turn).",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 9,
+          "power": {
+            "id": "pyromancy",
+            "name": "Pyromancy",
+            "description": "Whenever Chiara applies Burn, that enemy takes 3 damage (3 times a turn).",
+            "trigger": {
+              "event": "status_applied",
+              "status_id": "burn",
+              "applied_by": "owner"
+            },
+            "effect": {
+              "effect": "bonus_damage",
+              "value": 3
+            },
+            "limit_per_turn": 3
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_fire_innerblaze",
+    "name": "Inner Blaze",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "rare",
+    "description": "Power: Chiara's cards deal 2 more damage.",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 7,
+        "power": {
+          "id": "innerblaze",
+          "name": "Inner Blaze",
+          "description": "Chiara's cards deal 2 more damage.",
+          "stats": {
+            "damage": 2
+          }
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Inner Blaze+",
+      "cost": 1,
+      "description": "Power: Chiara's cards deal 3 more damage.",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 10,
+          "power": {
+            "id": "innerblaze",
+            "name": "Inner Blaze",
+            "description": "Chiara's cards deal 3 more damage.",
+            "stats": {
+              "damage": 3
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_fire_firestorm",
+    "name": "Firestorm",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 0,
+    "card_type": "spell",
+    "target": "all_enemies",
+    "rarity": "rare",
+    "description": "Deal 5 damage to ALL enemies X times.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 5,
+        "target": "all_enemies",
+        "repeat_x": true
+      }
+    ],
+    "upgrade": {
+      "name": "Firestorm+",
+      "cost": 0,
+      "description": "Deal 7 damage to ALL enemies X times.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 7,
+          "target": "all_enemies",
+          "repeat_x": true
+        }
+      ]
+    },
+    "x_cost": true
+  },
+  {
+    "id": "chiara_fire_banked",
+    "name": "Banked Embers",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Retain. Deal 7 damage. Apply 1 Burn.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 7,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "single_enemy",
+        "status_id": "burn"
+      }
+    ],
+    "upgrade": {
+      "name": "Banked Embers+",
+      "cost": 1,
+      "description": "Retain. Deal 9 damage. Apply 2 Burn.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 9,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "single_enemy",
+          "status_id": "burn"
+        }
+      ]
+    },
+    "retain": true
+  },
+  {
+    "id": "chiara_fire_cauterize",
+    "name": "Cauterize",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Gain 6 Block. Apply 1 Burn.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 6,
+        "target": "self"
+      },
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "single_enemy",
+        "status_id": "burn"
+      }
+    ],
+    "upgrade": {
+      "name": "Cauterize+",
+      "cost": 1,
+      "description": "Gain 8 Block. Apply 2 Burn.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 8,
+          "target": "self"
+        },
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "single_enemy",
+          "status_id": "burn"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_fire_fan",
+    "name": "Fan the Flames",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 0,
+    "card_type": "skill",
+    "target": "all_enemies",
+    "rarity": "uncommon",
+    "description": "Apply 1 Burn to ALL enemies. Draw 1 card.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "all_enemies",
+        "status_id": "burn"
+      },
+      {
+        "effect": "draw",
+        "value": 1,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Fan the Flames+",
+      "cost": 0,
+      "description": "Apply 2 Burn to ALL enemies. Draw 1 card.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "all_enemies",
+          "status_id": "burn"
+        },
+        {
+          "effect": "draw",
+          "value": 1,
+          "target": "self"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_fire_searing",
+    "name": "Searing Lance",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 2,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "uncommon",
+    "description": "Deal 8 damage, +3 per Burn on the target.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 8,
+        "target": "single_enemy",
+        "per_target_status": {
+          "status_id": "burn",
+          "value": 3
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Searing Lance+",
+      "cost": 2,
+      "description": "Deal 10 damage, +4 per Burn on the target.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 10,
+          "target": "single_enemy",
+          "per_target_status": {
+            "status_id": "burn",
+            "value": 4
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_fire_ignition",
+    "name": "Ignition",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "all_enemies",
+    "rarity": "rare",
+    "description": "Gain 2 Energy. Apply 2 Burn to ALL enemies. Exhaust.",
+    "effects": [
+      {
+        "effect": "gain_energy",
+        "value": 2,
+        "target": "self"
+      },
+      {
+        "effect": "apply_status",
+        "value": 2,
+        "target": "all_enemies",
+        "status_id": "burn"
+      }
+    ],
+    "upgrade": {
+      "name": "Ignition+",
+      "cost": 0,
+      "description": "Gain 2 Energy. Apply 2 Burn to ALL enemies. Exhaust.",
+      "effects": [
+        {
+          "effect": "gain_energy",
+          "value": 2,
+          "target": "self"
+        },
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "all_enemies",
+          "status_id": "burn"
+        }
+      ]
+    },
+    "exhaust": true
+  },
+  {
+    "id": "chiara_fire_afterglow",
+    "name": "Afterglow",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 2,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "rare",
+    "description": "Power: at the start of each turn, apply 1 Burn to ALL enemies.",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 8,
+        "power": {
+          "id": "afterglow",
+          "name": "Afterglow",
+          "description": "At the start of each turn, apply 1 Burn to ALL enemies.",
+          "trigger": {
+            "event": "turn_start"
+          },
+          "effect": {
+            "effect": "apply_status_all",
+            "status_id": "burn",
+            "value": 1
+          },
+          "limit_per_turn": 1
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Afterglow+",
+      "cost": 1,
+      "description": "Power: at the start of each turn, apply 1 Burn to ALL enemies.",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 8,
+          "power": {
+            "id": "afterglow",
+            "name": "Afterglow",
+            "description": "At the start of each turn, apply 1 Burn to ALL enemies.",
+            "trigger": {
+              "event": "turn_start"
+            },
+            "effect": {
+              "effect": "apply_status_all",
+              "status_id": "burn",
+              "value": 1
+            },
+            "limit_per_turn": 1
+          }
+        }
+      ]
+    }
+  }
+]

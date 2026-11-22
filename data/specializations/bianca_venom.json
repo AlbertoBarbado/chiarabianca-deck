@@ -1,0 +1,74 @@
+{
+  "id": "venom",
+  "character_id": "bianca",
+  "display_name": "Venom",
+  "identity": "A plague knight: Poison that builds every turn, Catalysts that multiply it, and Blight that marks a foe for death once its HP falls low enough.",
+  "description": "Bianca coats her blade in venom. Poison wears foes down; Blight executes any enemy whose HP drops to its Blight. Chiara's Fire detonates the Poison, her Wind spreads it, her Frost locks it in.",
+  "keywords": [
+    "poison",
+    "blight"
+  ],
+  "starting_passive": {
+    "id": "venom_passive",
+    "name": "Lingering Venom",
+    "description": "The first time each turn Bianca adds Poison to an enemy that is already Poisoned, it gains 2 extra Poison.",
+    "trigger": {
+      "event": "status_applied",
+      "status_id": "poison",
+      "applied_by": "owner",
+      "target_already_had": true
+    },
+    "limit_per_turn": 1,
+    "effect": {
+      "effect": "extra_status",
+      "value": 2
+    }
+  },
+  "starting_deck_card_ids": [
+    "bianca_venom_strike",
+    "bianca_venom_strike",
+    "bianca_venom_strike",
+    "bianca_venom_strike",
+    "bianca_venom_guard",
+    "bianca_venom_guard",
+    "bianca_venom_guard",
+    "bianca_venom_envenom",
+    "bianca_venom_envenom",
+    "bianca_venom_envenom"
+  ],
+  "card_pool": [
+    "bianca_venom_cut",
+    "bianca_venom_cloud",
+    "bianca_venom_corrode",
+    "bianca_venom_septic",
+    "bianca_venom_veil",
+    "bianca_venom_catalyst",
+    "bianca_venom_mark",
+    "bianca_venom_distill",
+    "bianca_venom_reaping",
+    "bianca_venom_bloom",
+    "bianca_venom_virulence",
+    "bianca_venom_censer",
+    "bianca_venom_harvest",
+    "bianca_venom_volley",
+    "bianca_venom_cloak",
+    "bianca_venom_fester",
+    "bianca_venom_rupture",
+    "bianca_venom_contagion",
+    "bianca_venom_wither"
+  ],
+  "epic_pool": [
+    "bianca_venom_epic_pestilence",
+    "bianca_venom_epic_ledger"
+  ],
+  "skill_tree": {
+    "nodes": [],
+    "note": "Add skill nodes as the specialization is implemented."
+  },
+  "status": "playable",
+  "visual": {
+    "accent": "#8fd14f",
+    "icon": "icon_venom"
+  },
+  "damage_element": "poison"
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "fishers_hamlet",
+    "name": "Fishers' Flotilla",
+    "description": "Fishing boats lashed together into a floating village. Nets dry on the masts; the fishers sell what the sea gives and share their hearth.",
+    "services": [
+      "merchant",
+      "rest"
+    ],
+    "shop_id": "beach_fish_market",
+    "heal_percent": 30,
+    "art": "town_fishers_hamlet"
+  },
+  {
+    "id": "tide_camp",
+    "name": "Raft Camp",
+    "description": "A ring of rafts tied to an anchored hulk, with a brazier on deck that never quite goes out.",
+    "services": [
+      "rest"
+    ],
+    "heal_percent": 25,
+    "art": "town_tide_camp"
+  },
+  {
+    "id": "dune_village",
+    "name": "Dune Village",
+    "description": "Sand-walkers trade under striped awnings, their camels resting in the shade.",
+    "services": [
+      "merchant",
+      "rest"
+    ],
+    "shop_id": "beach_dune_bazaar",
+    "heal_percent": 30,
+    "art": "town_dune_village"
+  },
+  {
+    "id": "last_camp",
+    "name": "Last Camp",
+    "description": "The final shelter before the storm. A grim trader sells to those who still dare.",
+    "services": [
+      "merchant"
+    ],
+    "shop_id": "beach_last_merchant",
+    "art": "town_last_camp"
+  }
+]

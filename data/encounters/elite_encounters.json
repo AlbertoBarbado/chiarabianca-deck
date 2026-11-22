@@ -1,0 +1,26 @@
+[
+  {
+    "id": "elite_commander_01",
+    "name": "The Knight Commander",
+    "terrain": "hall",
+    "elite": true,
+    "enemies": [
+      "elite_knight_commander",
+      "hall_guard"
+    ],
+    "gold_reward": 45,
+    "intro": "The Knight Commander blocks the way. Elite enemies hit harder and drop better rewards."
+  },
+  {
+    "id": "elite_vanguard_01",
+    "name": "Vanguard Pair",
+    "terrain": "yard",
+    "elite": true,
+    "enemies": [
+      "elite_vanguard_knight",
+      "elite_vanguard_knight"
+    ],
+    "gold_reward": 50,
+    "intro": "Two vanguard knights guard this passage. Elite enemies hit harder and drop better rewards."
+  }
+]

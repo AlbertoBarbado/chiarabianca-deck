@@ -1,0 +1,38 @@
+[
+  {
+    "id": "castle_training_01",
+    "name": "Training Yard",
+    "terrain": "yard",
+    "enemies": [
+      "practice_automaton"
+    ],
+    "gold_reward": 15
+  },
+  {
+    "id": "castle_training_02",
+    "name": "Guard Practice",
+    "terrain": "yard",
+    "enemies": [
+      "guard_recruit",
+      "guard_recruit"
+    ],
+    "gold_reward": 20
+  },
+  {
+    "id": "castle_final_regular_01",
+    "name": "Throne Hall Guards",
+    "terrain": "hall",
+    "enemies": [
+      "hall_guard",
+      "hall_captain",
+      "hall_guard"
+    ],
+    "gold_reward": 40,
+    "reward": {
+      "pool": "epic",
+      "card_options": 3
+    },
+    "cinematic": "Final Battle",
+    "intro": "The Throne Hall Guards and their captain hold the last door. Beyond it lies the world outside the castle."
+  }
+]

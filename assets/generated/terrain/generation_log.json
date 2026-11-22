@@ -1,0 +1,125 @@
+{
+ "_comment": "Generated locally with ComfyUI. Model: FLUX.1 [schnell] (Apache 2.0, black-forest-labs) GGUF Q3_K_S by city96; text encoders CLIP-L + T5-XXL GGUF; background removal BiRefNet (MIT). 4 steps, euler/simple, CFG 1.",
+ "assets": {
+  "battle_castle_yard": {
+   "file": "res://assets/generated/terrain/battle_castle_yard.png",
+   "prompt": "wide eye-level view of a sunny royal castle training courtyard for a 2D JRPG battle scene, evenly lit, soft daylight, a huge flat open floor of large pale stone flagstones filling the entire lower 60 percent of the image, the floor starts just above the middle of the image and stretches from the left edge to the right edge, tall castle walls with blue banners and towers in the background, wooden practice dummies and weapon racks at the far sides, empty arena, no characters, no people, no text, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 4101,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 75.5,
+   "date": "2026-11-16"
+  },
+  "battle_forest_mountain": {
+   "file": "res://assets/generated/terrain/battle_forest_mountain.png",
+   "prompt": "wide eye-level view of a high mountain pass for a 2D JRPG battle scene, evenly lit, cool morning light, a huge flat open floor of packed earth, gravel and flat grey rock filling the entire lower 60 percent of the image, the ground starts just above the middle of the image and stretches from the left edge to the right edge, tall pine trees and rocky cliffs at the far sides, snowy mountain peaks and mist in the background, empty arena, no characters, no creatures, no text, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 4111,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 89.7,
+   "date": "2026-11-16"
+  },
+  "battle_forest_deepwood": {
+   "file": "res://assets/generated/terrain/battle_forest_deepwood.png",
+   "prompt": "wide eye-level view inside a misty ancient forest of colossal trees for a 2D JRPG battle scene, evenly lit, soft green-gold light rays, a huge flat open floor of soft moss and leaf litter filling the entire lower 60 percent of the image, the floor starts just above the middle of the image and stretches from the left edge to the right edge, gigantic gnarled tree trunks and roots with spider webs at the far sides, glowing mushrooms, mist between the trunks in the background, empty arena, no characters, no creatures, no text, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 4121,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 64.7,
+   "date": "2026-11-16"
+  },
+  "battle_crystal_chasm": {
+   "file": "res://assets/generated/terrain/battle_crystal_chasm.png",
+   "prompt": "wide eye-level view of a broad flat stone ledge inside a huge underground cavern for a 2D JRPG battle scene, evenly lit, a huge flat open floor of smooth dark stone filling the entire lower 60 percent of the image, the floor starts just above the middle of the image and stretches from the left edge to the right edge, beyond the ledge a deep chasm with a glowing blue underground lake far below, stalactites and roosting bats on the distant cave ceiling, blue crystals, empty arena, no characters, no creatures, no text, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 4131,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 58.6,
+   "date": "2026-11-16",
+   "note": "Seed 4131 kept; a retry with seed 4132 put the ledge at 68% of the height and was rejected."
+  },
+  "battle_crystal_ruins": {
+   "file": "res://assets/generated/terrain/battle_crystal_ruins.png",
+   "prompt": "wide eye-level view of ancient carved stone temple ruins inside a crystal cave for a 2D JRPG battle scene, evenly lit, a huge flat open floor of worn carved stone tiles filling the entire lower 60 percent of the image, the floor starts just above the middle of the image and stretches from the left edge to the right edge, broken pillars, a stone archway and a tall dark obelisk in the background, purple and violet crystals growing from the walls, empty arena, no characters, no creatures, no text, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 4141,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 82.1,
+   "date": "2026-11-16"
+  },
+  "monster_cliff_harpy": {
+   "file": "res://assets/generated/terrain/monster_cliff_harpy.png",
+   "prompt": "a fierce cliff harpy, a monstrous bird-woman with grey-brown feathered wings spread wide, hawk talons for feet, wild feathered hair, savage face, flying, side view facing left, monster, full body, single creature, whole body visible from head to feet, side view facing right, standing on nothing, isolated on a plain flat light grey background, no ground, no shadow, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 4201,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 40.5,
+   "date": "2026-11-16"
+  },
+  "monster_will_o_wisp": {
+   "file": "res://assets/generated/terrain/monster_will_o_wisp.png",
+   "prompt": "a will-o'-the-wisp forest spirit, a floating ghostly blue-green flame with a faint eerie face, glowing wisps and sparks trailing around it, translucent, monster, full body, single creature, whole body visible from head to feet, side view facing right, standing on nothing, isolated on a plain flat light grey background, no ground, no shadow, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 4211,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 82.3,
+   "date": "2026-11-16"
+  }
+ }
+}

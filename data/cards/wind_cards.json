@@ -1,0 +1,1001 @@
+[
+  {
+    "id": "chiara_wind_gust",
+    "name": "Gust",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 0,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "basic",
+    "description": "Deal 3 damage. Vanishes when played or at the end of the turn.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "single_enemy"
+      }
+    ],
+    "token": true
+  },
+  {
+    "id": "chiara_wind_bolt",
+    "name": "Gale Bolt",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "basic",
+    "description": "Deal 6 damage.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 6,
+        "target": "single_enemy"
+      }
+    ],
+    "upgrade": {
+      "name": "Gale Bolt+",
+      "cost": 1,
+      "description": "Deal 9 damage.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 9,
+          "target": "single_enemy"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_ward",
+    "name": "Zephyr Ward",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "basic",
+    "description": "Gain 5 Block.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 5,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Zephyr Ward+",
+      "cost": 1,
+      "description": "Gain 8 Block.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 8,
+          "target": "self"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_flurry",
+    "name": "Flurry",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "self",
+    "rarity": "basic",
+    "description": "Add 2 Gusts to your hand.",
+    "effects": [
+      {
+        "effect": "create_card",
+        "value": 2,
+        "target": "self",
+        "card_id": "chiara_wind_gust"
+      }
+    ],
+    "upgrade": {
+      "name": "Flurry+",
+      "cost": 1,
+      "description": "Add 3 Gusts to your hand.",
+      "effects": [
+        {
+          "effect": "create_card",
+          "value": 3,
+          "target": "self",
+          "card_id": "chiara_wind_gust"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_razor",
+    "name": "Razor Wind",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 0,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 2 damage. Draw 1 card.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 2,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "draw",
+        "value": 1,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Razor Wind+",
+      "cost": 0,
+      "description": "Deal 4 damage. Draw 1 card.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "draw",
+          "value": 1,
+          "target": "self"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_blades",
+    "name": "Tempest Blades",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 2 damage 3 times.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 2,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "damage",
+        "value": 2,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "damage",
+        "value": 2,
+        "target": "single_enemy"
+      }
+    ],
+    "upgrade": {
+      "name": "Tempest Blades+",
+      "cost": 1,
+      "description": "Deal 3 damage 3 times.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 3,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "damage",
+          "value": 3,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "damage",
+          "value": 3,
+          "target": "single_enemy"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_updraft",
+    "name": "Updraft",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "common",
+    "description": "Gain 5 Block. Add a Gust to your hand.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 5,
+        "target": "self"
+      },
+      {
+        "effect": "create_card",
+        "value": 1,
+        "target": "self",
+        "card_id": "chiara_wind_gust"
+      }
+    ],
+    "upgrade": {
+      "name": "Updraft+",
+      "cost": 1,
+      "description": "Gain 7 Block. Add a Gust to your hand.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 7,
+          "target": "self"
+        },
+        {
+          "effect": "create_card",
+          "value": 1,
+          "target": "self",
+          "card_id": "chiara_wind_gust"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_barrier",
+    "name": "Tailwind Barrier",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "all_allies",
+    "rarity": "common",
+    "description": "Give the party 3 Block, +1 per card already played this turn.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 3,
+        "target": "all_allies",
+        "per_card_played": 1
+      }
+    ],
+    "upgrade": {
+      "name": "Tailwind Barrier+",
+      "cost": 1,
+      "description": "Give the party 4 Block, +2 per card already played this turn.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 4,
+          "target": "all_allies",
+          "per_card_played": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_cyclone",
+    "name": "Cyclone",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "all_enemies",
+    "rarity": "uncommon",
+    "description": "Deal 2 damage to ALL enemies, +1 per card already played this turn.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 2,
+        "target": "all_enemies",
+        "per_card_played": 1
+      }
+    ],
+    "upgrade": {
+      "name": "Cyclone+",
+      "cost": 1,
+      "description": "Deal 3 damage to ALL enemies, +2 per card already played this turn.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 3,
+          "target": "all_enemies",
+          "per_card_played": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_scatter",
+    "name": "Scatter",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "uncommon",
+    "description": "Deal 3 damage. Spread half of the target's debuffs to every other enemy.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "spread_status",
+        "value": 0,
+        "target": "single_enemy",
+        "status_id": "all",
+        "ratio": 0.5
+      }
+    ],
+    "upgrade": {
+      "name": "Scatter+",
+      "cost": 0,
+      "description": "Costs 0. Deal 3 damage. Spread half of the target's debuffs to every other enemy.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 3,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "spread_status",
+          "value": 0,
+          "target": "single_enemy",
+          "status_id": "all",
+          "ratio": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_slipstream",
+    "name": "Slipstream",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 0,
+    "card_type": "skill",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Gain 1 Energy. Add a Gust to your hand. Exhaust.",
+    "effects": [
+      {
+        "effect": "gain_energy",
+        "value": 1,
+        "target": "self"
+      },
+      {
+        "effect": "create_card",
+        "value": 1,
+        "target": "self",
+        "card_id": "chiara_wind_gust"
+      }
+    ],
+    "upgrade": {
+      "name": "Slipstream+",
+      "cost": 0,
+      "description": "Gain 1 Energy. Add 2 Gusts to your hand. Exhaust.",
+      "effects": [
+        {
+          "effect": "gain_energy",
+          "value": 1,
+          "target": "self"
+        },
+        {
+          "effect": "create_card",
+          "value": 2,
+          "target": "self",
+          "card_id": "chiara_wind_gust"
+        }
+      ]
+    },
+    "exhaust": true
+  },
+  {
+    "id": "chiara_wind_whisper",
+    "name": "Whispering Draft",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Draw 2 cards. Add a Gust to your hand.",
+    "effects": [
+      {
+        "effect": "draw",
+        "value": 2,
+        "target": "self"
+      },
+      {
+        "effect": "create_card",
+        "value": 1,
+        "target": "self",
+        "card_id": "chiara_wind_gust"
+      }
+    ],
+    "upgrade": {
+      "name": "Whispering Draft+",
+      "cost": 1,
+      "description": "Draw 3 cards. Add a Gust to your hand.",
+      "effects": [
+        {
+          "effect": "draw",
+          "value": 3,
+          "target": "self"
+        },
+        {
+          "effect": "create_card",
+          "value": 1,
+          "target": "self",
+          "card_id": "chiara_wind_gust"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_galeforce",
+    "name": "Gale Force",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 2,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "rare",
+    "description": "Deal 6 damage, +3 per card already played this turn.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 6,
+        "target": "single_enemy",
+        "per_card_played": 3
+      }
+    ],
+    "upgrade": {
+      "name": "Gale Force+",
+      "cost": 2,
+      "description": "Deal 8 damage, +4 per card already played this turn.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 8,
+          "target": "single_enemy",
+          "per_card_played": 4
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_eye",
+    "name": "Eye of the Storm",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 2,
+    "card_type": "skill",
+    "target": "self",
+    "rarity": "rare",
+    "description": "Add 4 Gusts to your hand.",
+    "effects": [
+      {
+        "effect": "create_card",
+        "value": 4,
+        "target": "self",
+        "card_id": "chiara_wind_gust"
+      }
+    ],
+    "upgrade": {
+      "name": "Eye of the Storm+",
+      "cost": 1,
+      "description": "Costs 1. Add 4 Gusts to your hand.",
+      "effects": [
+        {
+          "effect": "create_card",
+          "value": 4,
+          "target": "self",
+          "card_id": "chiara_wind_gust"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_epic_hurricane",
+    "name": "Hurricane",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 3,
+    "card_type": "spell",
+    "target": "all_enemies",
+    "rarity": "epic",
+    "description": "Deal 3 damage to ALL enemies 4 times.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "all_enemies"
+      },
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "all_enemies"
+      },
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "all_enemies"
+      },
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "all_enemies"
+      }
+    ],
+    "upgrade": {
+      "name": "Hurricane+",
+      "cost": 3,
+      "description": "Deal 4 damage to ALL enemies 4 times.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "all_enemies"
+        },
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "all_enemies"
+        },
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "all_enemies"
+        },
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "all_enemies"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_epic_dancer",
+    "name": "Sky Dancer",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "epic",
+    "description": "Gain 2 Energy. Add 3 Gusts to your hand. Exhaust.",
+    "effects": [
+      {
+        "effect": "gain_energy",
+        "value": 2,
+        "target": "self"
+      },
+      {
+        "effect": "create_card",
+        "value": 3,
+        "target": "self",
+        "card_id": "chiara_wind_gust"
+      }
+    ],
+    "upgrade": {
+      "name": "Sky Dancer+",
+      "cost": 0,
+      "description": "Costs 0. Gain 2 Energy. Add 3 Gusts to your hand. Exhaust.",
+      "effects": [
+        {
+          "effect": "gain_energy",
+          "value": 2,
+          "target": "self"
+        },
+        {
+          "effect": "create_card",
+          "value": 3,
+          "target": "self",
+          "card_id": "chiara_wind_gust"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_zephyr",
+    "name": "Zephyr Stance",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 2,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "rare",
+    "description": "Power: at the start of each turn, add a Gust to your hand.",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 6,
+        "power": {
+          "id": "zephyr",
+          "name": "Zephyr Stance",
+          "description": "At the start of each turn, add a Gust to your hand.",
+          "trigger": {
+            "event": "turn_start"
+          },
+          "effect": {
+            "effect": "create_card",
+            "card_id": "chiara_wind_gust",
+            "value": 1
+          },
+          "limit_per_turn": 1
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Zephyr Stance+",
+      "cost": 2,
+      "description": "Power: at the start of each turn, add 2 Gusts to your hand.",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 9,
+          "power": {
+            "id": "zephyr",
+            "name": "Zephyr Stance",
+            "description": "At the start of each turn, add 2 Gusts to your hand.",
+            "trigger": {
+              "event": "turn_start"
+            },
+            "effect": {
+              "effect": "create_card",
+              "card_id": "chiara_wind_gust",
+              "value": 2
+            },
+            "limit_per_turn": 1
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_rhythm",
+    "name": "Tempest Rhythm",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Power: whenever the party plays its 5th card in a turn, gain 1 Energy.",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 6,
+        "power": {
+          "id": "rhythm",
+          "name": "Tempest Rhythm",
+          "description": "Whenever the party plays its 5th card in a turn, gain 1 Energy.",
+          "trigger": {
+            "event": "card_played",
+            "cards_played": 5
+          },
+          "effect": {
+            "effect": "gain_energy",
+            "value": 1
+          },
+          "limit_per_turn": 1
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Tempest Rhythm+",
+      "cost": 0,
+      "description": "Power: whenever the party plays its 5th card in a turn, gain 1 Energy.",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 6,
+          "power": {
+            "id": "rhythm",
+            "name": "Tempest Rhythm",
+            "description": "Whenever the party plays its 5th card in a turn, gain 1 Energy.",
+            "trigger": {
+              "event": "card_played",
+              "cards_played": 5
+            },
+            "effect": {
+              "effect": "gain_energy",
+              "value": 1
+            },
+            "limit_per_turn": 1
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_sharpened",
+    "name": "Sharpened Winds",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 2,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Power: Chiara's cards deal 1 more damage per hit (Gusts too).",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 6,
+        "power": {
+          "id": "sharpened",
+          "name": "Sharpened Winds",
+          "description": "Chiara's cards deal 1 more damage per hit (Gusts too).",
+          "stats": {
+            "damage": 1
+          }
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Sharpened Winds+",
+      "cost": 1,
+      "description": "Power: Chiara's cards deal 1 more damage per hit (Gusts too).",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 6,
+          "power": {
+            "id": "sharpened",
+            "name": "Sharpened Winds",
+            "description": "Chiara's cards deal 1 more damage per hit (Gusts too).",
+            "stats": {
+              "damage": 1
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_gather",
+    "name": "Gather the Winds",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 0,
+    "card_type": "skill",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Add X+1 Gusts to your hand.",
+    "effects": [
+      {
+        "effect": "create_card",
+        "value": 1,
+        "target": "self",
+        "card_id": "chiara_wind_gust",
+        "per_x": 1
+      }
+    ],
+    "upgrade": {
+      "name": "Gather the Winds+",
+      "cost": 0,
+      "description": "Add X+2 Gusts to your hand.",
+      "effects": [
+        {
+          "effect": "create_card",
+          "value": 2,
+          "target": "self",
+          "card_id": "chiara_wind_gust",
+          "per_x": 1
+        }
+      ]
+    },
+    "x_cost": true
+  },
+  {
+    "id": "chiara_wind_featherstep",
+    "name": "Featherstep",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "common",
+    "description": "Gain 5 Block, +1 per card already played this turn.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 5,
+        "target": "self",
+        "per_card_played": 1
+      }
+    ],
+    "upgrade": {
+      "name": "Featherstep+",
+      "cost": 1,
+      "description": "Gain 7 Block, +1 per card already played this turn.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 7,
+          "target": "self",
+          "per_card_played": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_crosswind",
+    "name": "Crosswind",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 3 damage twice. The second hit gains +2 per card already played this turn.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "single_enemy",
+        "per_card_played": 2
+      }
+    ],
+    "upgrade": {
+      "name": "Crosswind+",
+      "cost": 1,
+      "description": "Deal 4 damage twice. The second hit gains +2 per card already played this turn.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "single_enemy",
+          "per_card_played": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_wind_patience",
+    "name": "Patient Breeze",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "uncommon",
+    "description": "Retain. Deal 6 damage, +2 per card already played this turn.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 6,
+        "target": "single_enemy",
+        "per_card_played": 2
+      }
+    ],
+    "upgrade": {
+      "name": "Patient Breeze+",
+      "cost": 1,
+      "description": "Retain. Deal 8 damage, +3 per card already played this turn.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 8,
+          "target": "single_enemy",
+          "per_card_played": 3
+        }
+      ]
+    },
+    "retain": true
+  },
+  {
+    "id": "chiara_wind_secondwind",
+    "name": "Rallying Breeze",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 1,
+    "card_type": "support",
+    "target": "all_allies",
+    "rarity": "uncommon",
+    "description": "Heal the party 4. Add 2 Gusts to your hand. Exhaust.",
+    "effects": [
+      {
+        "effect": "heal",
+        "value": 4,
+        "target": "all_allies"
+      },
+      {
+        "effect": "create_card",
+        "value": 2,
+        "target": "self",
+        "card_id": "chiara_wind_gust"
+      }
+    ],
+    "upgrade": {
+      "name": "Rallying Breeze+",
+      "cost": 1,
+      "description": "Heal the party 6. Add 2 Gusts to your hand. Exhaust.",
+      "effects": [
+        {
+          "effect": "heal",
+          "value": 6,
+          "target": "all_allies"
+        },
+        {
+          "effect": "create_card",
+          "value": 2,
+          "target": "self",
+          "card_id": "chiara_wind_gust"
+        }
+      ]
+    },
+    "exhaust": true
+  },
+  {
+    "id": "chiara_wind_galeburst",
+    "name": "Gale Burst",
+    "owner_character_id": "chiara",
+    "specialization_id": "wind",
+    "cost": 2,
+    "card_type": "spell",
+    "target": "all_enemies",
+    "rarity": "uncommon",
+    "description": "Deal 3 damage to ALL enemies 3 times.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "all_enemies"
+      },
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "all_enemies"
+      },
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "all_enemies"
+      }
+    ],
+    "upgrade": {
+      "name": "Gale Burst+",
+      "cost": 2,
+      "description": "Deal 4 damage to ALL enemies 3 times.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "all_enemies"
+        },
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "all_enemies"
+        },
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "all_enemies"
+        }
+      ]
+    }
+  }
+]

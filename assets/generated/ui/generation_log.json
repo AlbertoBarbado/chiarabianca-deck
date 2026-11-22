@@ -1,0 +1,141 @@
+{
+ "_comment": "Generated locally with ComfyUI. Model: FLUX.1 [schnell] (Apache 2.0, black-forest-labs) GGUF Q3_K_S by city96; text encoders CLIP-L + T5-XXL GGUF; background removal BiRefNet (MIT). 4 steps, euler/simple, CFG 1.",
+ "assets": {
+  "slot_helmet": {
+   "file": "res://assets/generated/ui/slot_helmet.png",
+   "prompt": "a single knight helmet seen from the front emblem, simple elegant silhouette icon, solid flat white shape with fine engraved line details, centered, on a pure black background, no text, no border, no frame, no shading, symmetrical, game UI glyph",
+   "width": 512,
+   "height": 512,
+   "seed": 6301,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 135.1,
+   "date": "2026-11-18"
+  },
+  "slot_amulet": {
+   "file": "res://assets/generated/ui/slot_amulet.png",
+   "prompt": "a single pendant amulet on a chain emblem, simple elegant silhouette icon, solid flat white shape with fine engraved line details, centered, on a pure black background, no text, no border, no frame, no shading, symmetrical, game UI glyph",
+   "width": 512,
+   "height": 512,
+   "seed": 6302,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 140.3,
+   "date": "2026-11-18"
+  },
+  "slot_chest": {
+   "file": "res://assets/generated/ui/slot_chest.png",
+   "prompt": "a single breastplate armour emblem, simple elegant silhouette icon, solid flat white shape with fine engraved line details, centered, on a pure black background, no text, no border, no frame, no shading, symmetrical, game UI glyph",
+   "width": 512,
+   "height": 512,
+   "seed": 6303,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 44.3,
+   "date": "2026-11-18"
+  },
+  "slot_gauntlets": {
+   "file": "res://assets/generated/ui/slot_gauntlets.png",
+   "prompt": "a single armoured gauntlet glove emblem, simple elegant silhouette icon, solid flat white shape with fine engraved line details, centered, on a pure black background, no text, no border, no frame, no shading, symmetrical, game UI glyph",
+   "width": 512,
+   "height": 512,
+   "seed": 6304,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 40.2,
+   "date": "2026-11-18"
+  },
+  "slot_weapon": {
+   "file": "res://assets/generated/ui/slot_weapon.png",
+   "prompt": "a single sword pointing up emblem, simple elegant silhouette icon, solid flat white shape with fine engraved line details, centered, on a pure black background, no text, no border, no frame, no shading, symmetrical, game UI glyph",
+   "width": 512,
+   "height": 512,
+   "seed": 6305,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 85.5,
+   "date": "2026-11-18"
+  },
+  "slot_ring": {
+   "file": "res://assets/generated/ui/slot_ring.png",
+   "prompt": "a single ring with a gem emblem, simple elegant silhouette icon, solid flat white shape with fine engraved line details, centered, on a pure black background, no text, no border, no frame, no shading, symmetrical, game UI glyph",
+   "width": 512,
+   "height": 512,
+   "seed": 6306,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 44.2,
+   "date": "2026-11-18"
+  },
+  "slot_belt": {
+   "file": "res://assets/generated/ui/slot_belt.png",
+   "prompt": "a single leather belt with a buckle emblem, simple elegant silhouette icon, solid flat white shape with fine engraved line details, centered, on a pure black background, no text, no border, no frame, no shading, symmetrical, game UI glyph",
+   "width": 512,
+   "height": 512,
+   "seed": 6307,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 40.2,
+   "date": "2026-11-18"
+  },
+  "slot_boots": {
+   "file": "res://assets/generated/ui/slot_boots.png",
+   "prompt": "a single pair of boots emblem, simple elegant silhouette icon, solid flat white shape with fine engraved line details, centered, on a pure black background, no text, no border, no frame, no shading, symmetrical, game UI glyph",
+   "width": 512,
+   "height": 512,
+   "seed": 6308,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 38.2,
+   "date": "2026-11-18"
+  }
+ }
+}

@@ -1,0 +1,171 @@
+VOIDFARER CHRONICLES - ROADMAP TO "SLAY THE SPIRE 2" QUALITY
+================================================================
+Audit date: 2026-11-15. Written after Milestone 8 (Enchanted Forest, 47-room scrolling map).
+How to read it: every line starts with [ ] (to do) or [x] (done). A CHECKPOINT closes each block:
+the game is not "there" until every checkpoint is true and verified with a player, not only by tests.
+Estimates assume one developer with AI help; they are rough.
+
+
+WHERE WE ARE (honest summary)
+-----------------------------
+[x] Core loop works: map -> rooms -> combat -> rewards -> next act; two acts (Castle, Forest).
+[x] Shared party deck with card ownership, 2 heroes, 4 playable specializations of 12 designed.
+[x] Energy, Block, Burn, Poison, Taunt, 4 passives, 3 relics, potions, elites, 1 boss, towns,
+    events, treasure, rest (heal / upgrade / remove), merchants, saves with checkpoints.
+[x] Automated tests: ~1,300 checks across 14 suites.
+[ ] Content volume is roughly 5-10% of a Slay the Spire act structure (StS2 ships 4 characters,
+    ~75 cards each, ~180 relics, ~50 potions, 4 acts, dozens of events, ~70 monster types).
+[ ] All art is unverified generated art: NOTHING can ship commercially yet.
+[ ] No audio at all. No real animation rigs. No meta-progression. Not tested on any phone.
+
+
+PHASE A - FOUNDATIONS THAT BLOCK EVERYTHING ELSE           (est. 3-5 weeks)
+--------------------------------------------------------------------------
+Legal / assets
+[ ] Decide the art pipeline: commission artists or a generator whose licence clearly allows
+    commercial use; record terms per file in docs/ASSET_LICENSES.md.
+[ ] Re-source or re-license every generated asset (menus, castle, forest, characters, enemies,
+    cards, effects). Remove anything that cannot be cleared.
+[ ] Make the release gate (tests/art/check_release_art.gd) read assets/combat_manifest.json and
+    assets/forest_manifest.json and fail on any uncleared file.
+[ ] Request transparent PNG sprite sheets (no baked checkerboard) from artists, so the extraction
+    scripts and their remaining specks disappear.
+Engine robustness
+[ ] Full mid-combat save (piles, hand, statuses, intents, RNG seed, turn) instead of the checkpoint.
+[ ] Seeded runs: one seed drives map, rewards, events and combat; show and allow entering it.
+[ ] Run history file (seed, heroes, floor reached, cause of death, deck) for balancing and players.
+[ ] Settings: master/music/SFX volume, text speed, fast mode, screen shake toggle, colour-blind
+    palette for status chips, UI scale.
+[ ] Localisation framework (all player text in translation tables; currently hard-coded English).
+CHECKPOINT A: a run can be saved at ANY moment and restored exactly; every shipped file is
+legally cleared; settings and localisation tables exist.
+
+
+PHASE B - COMBAT DEPTH (the heart of StS)                  (est. 8-12 weeks)
+--------------------------------------------------------------------------
+Mechanics still missing
+[ ] Statuses: Weak, Vulnerable, Frail, Strength, Dexterity, Regen, Thorns, Artifact, Intangible,
+    Stun, Ritual-style scaling, Metallicize/Plated armour. Each with an icon chip + counter.
+[ ] Card keywords: Exhaust (as a keyword, not only Powers), Ethereal, Retain, Innate, Unplayable,
+    X-cost cards, cards that create cards, cards that scale during combat.
+[ ] Powers that stay in play (persistent per-combat effects with triggers), shown in a row.
+[ ] Curses and status cards added to the deck by enemies (Wound, Burn-card, Dazed, Slimed).
+[ ] Cross-character combo cards and "when the other hero plays a card" triggers (the unique
+    selling point of the party deck - currently only Arcane Flow touches it).
+[ ] Card targeting rules: random enemy, all allies, lowest HP, the other hero.
+[ ] Enemy behaviour beyond fixed patterns: weighted random moves, "never the same move 3 times",
+    buffs on allies, summons, splitting, enemy Strength scaling, multi-hit attacks (7x3).
+[ ] Intent icons per kind (attack, multi-attack, buff, debuff, defend, unknown, sleeping, escape).
+[ ] Damage preview on intents that includes Weak/Vulnerable/Block (as StS shows real numbers).
+Characters and content
+[ ] Finish the remaining 8 specializations (Frost, Earth, Wind, Lightning; Retribution, Vanguard,
+    Duelist, Commander): each needs ~25-30 cards, a passive and a cut-in tier map.
+[ ] Grow each playable specialization to ~25 reward cards (commons/uncommons/rares) - today 6.
+[ ] Skill trees (designed in the data, empty today).
+[ ] Card upgrades for every card, with upgrade previews everywhere.
+[ ] Relics: target 80-120 with rarities (common, uncommon, rare, boss, shop, event) and a relic bar.
+[ ] Potions: target 25-35 with targeting, potion slots, discard, and drop rates.
+CHECKPOINT B: at least 3 decks per hero that feel different, 100+ cards, 80+ relics, 25+ potions;
+a balance simulation per act shows no dominant card (>2x the value of its peers).
+
+
+PHASE C - ACTS, MAPS, ENCOUNTERS                            (est. 8-12 weeks)
+--------------------------------------------------------------------------
+[x] Act I (Castle tutorial, short), Act II (Enchanted Forest, 47 rooms, scrolling).
+[ ] Procedural map generation per act (StS-style: 7 columns, 15 floors, path constraints,
+    guaranteed rest before the boss, treasure in the middle) with hand-tuned rules in data;
+    keep the handcrafted Forest as a "story mode" or seed.
+[ ] Act III and Act IV (or a final act) with new biomes, 15-20 monsters each, 3 elites, 3 bosses
+    per act (StS picks one of three bosses per act).
+[ ] Boss variety: multi-phase bosses, boss relic choice after each boss (key StS decision point).
+[ ] Encounter pools per act tier (easy pool for floors 1-3, hard pool later) instead of fixed rooms.
+[ ] 40+ events total with art per event, some with multi-step choices and hero-specific options.
+[ ] Shop: card removal service, card shop with prices by rarity, relic and potion stock, sales.
+[ ] Map icons for "unknown" rooms (? that can become fight, shop, treasure or event).
+[ ] Burning elites / "emerald key" style optional challenges.
+CHECKPOINT C: a full run lasts 45-75 minutes over 3+ acts, with every act randomised from data
+and at least 3 different bosses per act.
+
+
+PHASE D - PRESENTATION: ART, ANIMATION, VFX, AUDIO          (est. 10-16 weeks)
+--------------------------------------------------------------------------
+Art
+[ ] Final character sprites with clean alpha for every pose (idle, attack, cast, block, hit,
+    down, victory) for both heroes and every specialization outfit.
+[ ] Final enemy art for every monster with clean alpha (current forest sheets keep specks;
+    block poses unusable because of the baked checkerboard).
+[ ] One battle background per act zone (3-5 per act), plus boss arenas.
+[ ] Card art for every card (today many cards share placeholder art by type).
+[ ] Relic, potion and status icon set in one consistent style.
+[ ] Map art: per-act illustrated map with path decorations; node medallions finalised by an artist.
+Animation
+[ ] Skeletal animation (Spine or Godot Skeleton2D) for heroes and enemies: breathing, attacks,
+    hit reactions, death; StS2 uses fully animated characters - our pose-swapping is a stopgap.
+[ ] Card animations: draw from pile, fly to target, discard sweep, exhaust burn-away, shuffle.
+[ ] Enemy death animations and loot burst; boss intro cinematic.
+[ ] Hit-stop (a few frames of freeze) and camera punch on heavy hits.
+VFX
+[ ] One effect per card and per enemy move (today many share a generic slash).
+[ ] Projectile poison / venom spit, AoE breath, quake, buff auras; particles (GPUParticles2D).
+[ ] Status application and tick effects for every status (today Burn and Poison only).
+Audio (completely missing)
+[ ] Music: menu, map per act, combat per act, elite, boss, victory, defeat (licensed).
+[ ] SFX: every card type, hits, blocks, statuses, UI clicks, map travel, gold, potions.
+[ ] Voice barks or grunts for heroes (optional).
+CHECKPOINT D: a non-developer watching 5 minutes of play says it looks and sounds like a finished
+commercial game; no placeholder art is visible anywhere.
+
+
+PHASE E - UI / UX POLISH                                    (est. 4-6 weeks)
+--------------------------------------------------------------------------
+[x] Ornate frames on menus, top bar, choice cards, tooltips, map name plates.
+[x] Status counters over units; turn banners; screen shake; floating numbers.
+[ ] Deck viewer from the map (all cards, by owner, upgrades) - today only during combat piles.
+[ ] Keyword tooltips on cards (hover "Burn" in a description shows its rule).
+[ ] Card reward screen with rarity glow, "skip" with a confirmation, and singing bowl-style option.
+[ ] Damage numbers with crits/colours per type; block break effect; HP bar damage trail.
+[ ] Drag-to-play cards (mouse) and tap-to-play (touch), with a targeting arrow like StS.
+[ ] Map: legend tooltips, path preview on hover, auto-scroll after each room, minimap.
+[ ] Controller / keyboard-only navigation for every screen.
+[ ] Accessibility: font size option, high-contrast mode, reduced motion (effects Off exists).
+[ ] Compendium (seen cards, relics, monsters) and statistics screen.
+CHECKPOINT E: a first-time player can finish Act I without reading any external help, on mouse,
+touch and controller.
+
+
+PHASE F - META-PROGRESSION AND REPLAYABILITY                (est. 4-6 weeks)
+--------------------------------------------------------------------------
+[ ] Unlocks: new cards, relics and specializations unlocked by playing (StS unlock bars).
+[ ] Ascension-style difficulty levels (20 levels of stacking modifiers).
+[ ] Daily seeded challenge with modifiers and a leaderboard (optional online).
+[ ] Achievements (Steam / platform).
+[ ] Third and fourth party members (architecture supports it; content does not exist).
+CHECKPOINT F: players have a reason to start run #50.
+
+
+PHASE G - QUALITY ASSURANCE AND RELEASE                     (est. 6-10 weeks)
+--------------------------------------------------------------------------
+[ ] Play-test program: at least 20 external players, recorded sessions, run-history analysis.
+[ ] Balance passes per act with real data (win rate by floor, pick rate per card, relic impact).
+[ ] Performance: 60 fps on a mid-range Android phone and on integrated laptop GPUs; the VFX
+    gallery test fails today when frames take ~220 ms - investigate rendering cost.
+[ ] Physical device testing: Android, iOS, Steam Deck, Windows, macOS, Linux.
+[ ] Crash reporting and an in-game bug-report button.
+[ ] Store pages, trailer, capsule art, age ratings, privacy policy, EULA.
+[ ] Final licence audit (Phase A rules) and attribution screen in the credits.
+CHECKPOINT G (RELEASE): no known crash, 60 fps on target devices, every asset cleared, a full
+run is fun for external testers, and a 3-act run with 4+ specializations per hero is available.
+
+
+KNOWN BUGS AND DEBTS (from the audit, fix when touching the area)
+------------------------------------------------------------------
+[ ] Forest sprites: small checker remnants in swipe arcs; spider/drake "Blocking" poses unusable.
+[ ] Chiara's dark leggings still lose a few pixels in the attack/hit poses.
+[ ] Start node shows two portraits that are slightly large for small medallions.
+[ ] vfx_gallery_test is timing-sensitive on slow machines.
+[ ] Event outcomes that start a card reward cannot be skipped back to the event (by design now).
+[ ] Relics have no on-map display; potions in combat show only an icon and count.
+[ ] The castle map does not scroll (it fits) - the scroll code is generic but only the forest uses it.
+[ ] Enemy art has no death animation; defeated enemies only fade.
+[ ] The "Demo: Elite Route" button on the main menu is a developer tool - hide it in release.
+[ ] Tutorial text is minimal; there is no first-run tutorial overlay.

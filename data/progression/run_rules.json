@@ -1,0 +1,111 @@
+{
+  "id": "run_rules",
+  "card_removal": {
+    "enabled": true,
+    "uses_per_rest": 1,
+    "gold_cost": 0,
+    "min_cards_per_character": 6,
+    "note": "Rest-site card removal. A rest node may override this block with its own \"card_removal\" entry."
+  },
+  "elite_defaults": {
+    "card_options": 4,
+    "rarity_weights": {
+      "basic": 0.5,
+      "common": 4.0,
+      "uncommon": 5.0,
+      "rare": 3.0
+    },
+    "guaranteed_min_rarity": "uncommon"
+  },
+  "acts": {
+    "order": [
+      "royal_castle_tutorial",
+      "enchanted_forest",
+      "sunlit_coast"
+    ],
+    "note": "Maps of a normal run in order. Reaching the exit of one map leads to the next; the exit of the last map completes the run. heal_between_acts: share of max HP every party member recovers on reaching the next act (fallen members rise with it).",
+    "heal_between_acts": 0.35
+  },
+  "loot": {
+    "note": "Equipment drops after a won fight: chance of one item, rarity weights. Only items somebody in the party can use as she is (princess and specialization) drop. shop: gear offers each merchant adds per visit.",
+    "combat": {
+      "chance": 0.15,
+      "rarity_weights": {
+        "common": 6,
+        "uncommon": 3,
+        "rare": 0.5
+      }
+    },
+    "elite": {
+      "chance": 0.75,
+      "rarity_weights": {
+        "common": 1,
+        "uncommon": 5,
+        "rare": 2
+      }
+    },
+    "boss": {
+      "chance": 1.0,
+      "rarity_weights": {
+        "uncommon": 2,
+        "rare": 5
+      }
+    },
+    "shop": {
+      "offers": 1,
+      "rarity_weights": {
+        "common": 3,
+        "uncommon": 4,
+        "rare": 1.5
+      }
+    }
+  },
+  "shop_services": {
+    "note": "Gold services of every merchant besides its item stock. A shop may override any part with its own shop_services entry. Removal and upgrade prices rise by price_step for every use in the run.",
+    "cards": {
+      "enabled": true,
+      "count": 4,
+      "prices": {
+        "common": 45,
+        "uncommon": 75,
+        "rare": 120
+      },
+      "price_jitter": 0.1,
+      "rarity_weights": {
+        "common": 5.0,
+        "uncommon": 4.0,
+        "rare": 1.5
+      }
+    },
+    "removal": {
+      "enabled": true,
+      "price": 60,
+      "price_step": 25,
+      "per_visit": 1
+    },
+    "upgrade": {
+      "enabled": true,
+      "price": 55,
+      "price_step": 15,
+      "per_visit": 2
+    }
+  },
+  "difficulty": {
+    "note": "Enemy HP and attack damage multipliers (1.0 = the enemy data). elite_* and boss_* multiply on top for those fights. Tuned with tests/combat/run_simulation.gd (BALANCE.md).",
+    "enemy_hp": 1.0,
+    "enemy_damage": 1.0,
+    "elite_hp": 1.1,
+    "elite_damage": 1.15,
+    "boss_hp": 1.1,
+    "boss_damage": 1.2
+  },
+  "relics": {
+    "note": "Relic rewards: every won elite fight leaves one relic (elite_weights by rarity); a boss offers boss_choices boss relics to choose from. Chests roll their own (data/treasure).",
+    "elite_weights": {
+      "common": 5,
+      "uncommon": 3,
+      "rare": 1.5
+    },
+    "boss_choices": 3
+  }
+}

@@ -1,0 +1,39 @@
+{
+ "_comment": "Generated locally with ComfyUI. Model: FLUX.1 [schnell] (Apache 2.0, black-forest-labs) GGUF Q3_K_S by city96; text encoders CLIP-L + T5-XXL GGUF; background removal BiRefNet (MIT). 4 steps, euler/simple, CFG 1.",
+ "assets": {
+  "bianca_ashveil": {
+   "file": "res://assets/generated/figures/bianca_ashveil.png",
+   "prompt": "anime rogue knight princess with long black hair, dark hood with red trim, charcoal cloak, leather straps and a travel backpack, a short sword, full body, crisp clean line art, sharp details, isolated on a plain flat light grey background, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed [img2img upscale of res://assets/characters/bianca/ashveil/idle.png to 1280 px tall, denoise 0.25]",
+   "width": 1024,
+   "height": 1472,
+   "seed": 9301,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 334.8,
+   "date": "2026-11-22"
+  },
+  "bianca_paladin": {
+   "file": "res://assets/generated/figures/bianca_paladin.png",
+   "prompt": "anime knight princess with long black hair and brown eyes, silver plate armour with gold trim and a red cape, full body, crisp clean line art, sharp details, isolated on a plain flat light grey background, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed [img2img upscale of res://assets/ui/processed/bianca_cutout.png to 1216 px tall, denoise 0.25]",
+   "width": 1024,
+   "height": 1408,
+   "seed": 9301,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 93.5,
+   "date": "2026-11-22"
+  }
+ }
+}

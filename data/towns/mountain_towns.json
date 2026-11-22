@@ -1,0 +1,46 @@
+[
+  {
+    "id": "pinefall_village",
+    "name": "Pinefall Village",
+    "description": "Steep snowy roofs under tall pines at the foot of Frostpeak. The furrier sells warm gear; the inn keeps a fire for climbers.",
+    "services": [
+      "merchant",
+      "rest"
+    ],
+    "shop_id": "mountain_pinefall_furrier",
+    "heal_percent": 30,
+    "art": "town_pinefall_village"
+  },
+  {
+    "id": "ropebridge_outpost",
+    "name": "Ropebridge Outpost",
+    "description": "A watchtower and a brazier beside the long rope bridge over the glacier. The guards share their fire with anyone who climbs this far.",
+    "services": [
+      "rest"
+    ],
+    "heal_percent": 35,
+    "art": "town_ropebridge_outpost"
+  },
+  {
+    "id": "cloud_monastery",
+    "name": "Cloud Monastery",
+    "description": "Curved roofs on a crag above the sea of clouds. The monks brew tonics against the cold and sell talismans to the brave.",
+    "services": [
+      "merchant",
+      "rest"
+    ],
+    "shop_id": "mountain_monastery",
+    "heal_percent": 30,
+    "art": "town_cloud_monastery"
+  },
+  {
+    "id": "last_cairn",
+    "name": "The Last Cairn",
+    "description": "A stone cairn and a torn tent below the dragon's peak. Climbers leave a stone here before the last ascent.",
+    "services": [
+      "rest"
+    ],
+    "heal_percent": 40,
+    "art": "town_last_cairn"
+  }
+]

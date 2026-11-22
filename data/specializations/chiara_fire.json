@@ -1,0 +1,71 @@
+{
+  "id": "fire",
+  "character_id": "chiara",
+  "identity": "Damage over time, burst damage and aggressive spells.",
+  "starting_passive": {
+    "id": "fire_passive",
+    "name": "Kindled Spark",
+    "description": "The first time Chiara applies Burn each turn, the Burning target takes 2 extra damage. Once per turn; the bonus never triggers itself or anything else.",
+    "trigger": {
+      "event": "status_applied",
+      "status_id": "burn",
+      "applied_by": "owner"
+    },
+    "limit_per_turn": 1,
+    "effect": {
+      "effect": "bonus_damage",
+      "value": 2
+    }
+  },
+  "starting_deck_card_ids": [
+    "chiara_fire_ember",
+    "chiara_fire_ember",
+    "chiara_fire_ember",
+    "chiara_fire_ember",
+    "chiara_fire_cinderward",
+    "chiara_fire_cinderward",
+    "chiara_fire_cinderward",
+    "chiara_fire_kindle",
+    "chiara_fire_kindle",
+    "chiara_fire_kindle"
+  ],
+  "card_pool": [
+    "chiara_fire_fireball",
+    "chiara_fire_immolate",
+    "chiara_fire_fuel",
+    "chiara_fire_wave",
+    "chiara_fire_smokescreen",
+    "chiara_fire_inferno",
+    "chiara_fire_flashpoint",
+    "chiara_fire_wildfire",
+    "chiara_fire_volley",
+    "chiara_fire_pyromancy",
+    "chiara_fire_innerblaze",
+    "chiara_fire_firestorm",
+    "chiara_fire_banked",
+    "chiara_fire_cauterize",
+    "chiara_fire_fan",
+    "chiara_fire_searing",
+    "chiara_fire_ignition",
+    "chiara_fire_afterglow"
+  ],
+  "skill_tree": {
+    "nodes": [],
+    "note": "Add skill nodes as the specialization is implemented."
+  },
+  "status": "playable",
+  "display_name": "Fire",
+  "description": "Chiara sets her foes ablaze. Burn wears enemies down over several turns while direct spells finish them; the more Burn you spread, the stronger your payoffs become.",
+  "keywords": [
+    "burn"
+  ],
+  "visual": {
+    "accent": "#ee7a3c",
+    "icon": "icon_fire"
+  },
+  "epic_pool": [
+    "chiara_fire_epic_phoenix",
+    "chiara_fire_epic_heart"
+  ],
+  "damage_element": "fire"
+}

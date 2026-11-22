@@ -1,0 +1,22 @@
+[
+  {
+    "id": "minor_health_potion",
+    "name": "Minor Health Potion",
+    "category": "potion",
+    "description": "Restore 15 HP to the most wounded party member. Usable in combat.",
+    "effect": {
+      "type": "heal",
+      "value": 15
+    }
+  },
+  {
+    "id": "health_potion",
+    "name": "Health Potion",
+    "category": "potion",
+    "description": "Restore 35 HP to the most wounded party member. Usable in combat.",
+    "effect": {
+      "type": "heal",
+      "value": 35
+    }
+  }
+]

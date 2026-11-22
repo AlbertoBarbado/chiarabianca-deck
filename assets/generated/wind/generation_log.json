@@ -1,0 +1,311 @@
+{
+ "_comment": "Generated locally with ComfyUI. Model: FLUX.1 [schnell] (Apache 2.0, black-forest-labs) GGUF Q3_K_S by city96; text encoders CLIP-L + T5-XXL GGUF; background removal BiRefNet (MIT). 4 steps, euler/simple, CFG 1.",
+ "assets": {
+  "card_wind_bolt": {
+   "file": "res://assets/generated/wind/card_wind_bolt.png",
+   "prompt": "a sharp crescent blade of compressed wind shooting forward through a mountain sky, swirling jade green and silver wind currents, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6501,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 164.2,
+   "date": "2026-11-19"
+  },
+  "card_wind_ward": {
+   "file": "res://assets/generated/wind/card_wind_ward.png",
+   "prompt": "a spinning shield of wind and drifting leaves forming a protective dome, swirling jade green and silver wind currents, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6502,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 57.0,
+   "date": "2026-11-19"
+  },
+  "card_wind_flurry": {
+   "file": "res://assets/generated/wind/card_wind_flurry.png",
+   "prompt": "two small glowing whirlwinds spinning out of an open palm, leaves caught in them, swirling jade green and silver wind currents, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6503,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 60.6,
+   "date": "2026-11-19"
+  },
+  "card_wind_gust": {
+   "file": "res://assets/generated/wind/card_wind_gust.png",
+   "prompt": "a single small sharp gust of wind slicing the air, motion streaks, swirling jade green and silver wind currents, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6504,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.2,
+   "date": "2026-11-19"
+  },
+  "card_wind_razor": {
+   "file": "res://assets/generated/wind/card_wind_razor.png",
+   "prompt": "thin razor-like slivers of wind cutting falling leaves in half, swirling jade green and silver wind currents, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6505,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.2,
+   "date": "2026-11-19"
+  },
+  "card_wind_blades": {
+   "file": "res://assets/generated/wind/card_wind_blades.png",
+   "prompt": "three curved crescent-shaped blades made of wind spinning in a ring, like scythe-shaped gusts, no crosses, no swords, swirling jade green and silver wind currents, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6526,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 26.1,
+   "date": "2026-11-19"
+  },
+  "card_wind_updraft": {
+   "file": "res://assets/generated/wind/card_wind_updraft.png",
+   "prompt": "a powerful updraft lifting leaves and a fluttering cloak toward the clouds, swirling jade green and silver wind currents, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6507,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.3,
+   "date": "2026-11-19"
+  },
+  "card_wind_cyclone": {
+   "file": "res://assets/generated/wind/card_wind_cyclone.png",
+   "prompt": "a towering cyclone tearing across a grassy plain, debris spinning, swirling jade green and silver wind currents, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6508,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.3,
+   "date": "2026-11-19"
+  },
+  "card_wind_scatter": {
+   "file": "res://assets/generated/wind/card_wind_scatter.png",
+   "prompt": "a gust of wind scattering a cloud of glowing motes outward in every direction, swirling jade green and silver wind currents, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6509,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.2,
+   "date": "2026-11-19"
+  },
+  "card_wind_slipstream": {
+   "file": "res://assets/generated/wind/card_wind_slipstream.png",
+   "prompt": "a sleek ribbon of wind streaming past at great speed, trailing light, swirling jade green and silver wind currents, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6510,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.1,
+   "date": "2026-11-19"
+  },
+  "card_wind_barrier": {
+   "file": "res://assets/generated/wind/card_wind_barrier.png",
+   "prompt": "a wall of curving wind currents deflecting arrows in mid-air, swirling jade green and silver wind currents, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6511,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.2,
+   "date": "2026-11-19"
+  },
+  "card_wind_galeforce": {
+   "file": "res://assets/generated/wind/card_wind_galeforce.png",
+   "prompt": "a colossal gale blasting across a cliffside, trees bending, epic scale, swirling jade green and silver wind currents, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6512,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.1,
+   "date": "2026-11-19"
+  },
+  "card_wind_eye": {
+   "file": "res://assets/generated/wind/card_wind_eye.png",
+   "prompt": "the calm glowing eye of a vast storm seen from above, spiral clouds, swirling jade green and silver wind currents, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6513,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.2,
+   "date": "2026-11-19"
+  },
+  "card_wind_whisper": {
+   "file": "res://assets/generated/wind/card_wind_whisper.png",
+   "prompt": "soft whispering wind carrying glowing pages and feathers through the air, swirling jade green and silver wind currents, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6514,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 26.4,
+   "date": "2026-11-19"
+  },
+  "card_wind_hurricane": {
+   "file": "res://assets/generated/wind/card_wind_hurricane.png",
+   "prompt": "a monstrous hurricane of jade wind and lightning swallowing the horizon, epic, swirling jade green and silver wind currents, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6515,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 26.2,
+   "date": "2026-11-19"
+  },
+  "card_wind_dancer": {
+   "file": "res://assets/generated/wind/card_wind_dancer.png",
+   "prompt": "a graceful silhouette of a mage dancing on the wind high above the clouds, ribbons of air, swirling jade green and silver wind currents, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6516,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.2,
+   "date": "2026-11-19"
+  },
+  "icon_wind": {
+   "file": "res://assets/generated/wind/icon_wind.png",
+   "prompt": "a single game emblem icon of a jade green swirling gust of wind with a silver feather, ornate silver rim, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 6801,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.5,
+   "date": "2026-11-19"
+  },
+  "icon_momentum": {
+   "file": "res://assets/generated/wind/icon_momentum.png",
+   "prompt": "a single game icon of three curved jade wind arrows spinning in a circle, ornate silver rim, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 6804,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 34.3,
+   "date": "2026-11-19"
+  }
+ }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "earth",
+  "character_id": "chiara",
+  "identity": "Armor, roots, sturdy constructs and gradual damage.",
+  "starting_passive": {
+    "id": "earth_passive",
+    "name": "TODO: define passive",
+    "description": "Placeholder; design and balance before implementation."
+  },
+  "starting_deck_card_ids": [],
+  "card_pool": [],
+  "skill_tree": {
+    "nodes": [],
+    "note": "Add skill nodes as the specialization is implemented."
+  },
+  "status": "design_template"
+}

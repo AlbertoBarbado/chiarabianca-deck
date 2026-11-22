@@ -1,0 +1,668 @@
+{
+ "_comment": "Generated locally with ComfyUI. Model: FLUX.1 [schnell] (Apache 2.0, black-forest-labs) GGUF Q3_K_S by city96; text encoders CLIP-L + T5-XXL GGUF; background removal BiRefNet (MIT). 4 steps, euler/simple, CFG 1.",
+ "assets": {
+  "item_iron_sallet": {
+   "file": "res://assets/generated/gear/item_iron_sallet.png",
+   "prompt": "a plain steel sallet helmet with a short visor, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7001,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 254.3,
+   "date": "2026-11-21"
+  },
+  "item_seers_circlet": {
+   "file": "res://assets/generated/gear/item_seers_circlet.png",
+   "prompt": "a thin silver circlet headband, a delicate round diadem ring for the forehead with one glowing violet gem at the front, seen from the front at a slight angle, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7202,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 64.4,
+   "date": "2026-11-21"
+  },
+  "item_ember_crown": {
+   "file": "res://assets/generated/gear/item_ember_crown.png",
+   "prompt": "a dark iron crown with glowing red ember crystals and small flickering flames on its points, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7003,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 154.6,
+   "date": "2026-11-21"
+  },
+  "item_rimefrost_hood": {
+   "file": "res://assets/generated/gear/item_rimefrost_hood.png",
+   "prompt": "a pale blue fur-lined mage hood frosted with ice crystals, laid flat, empty, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7004,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 154.4,
+   "date": "2026-11-21"
+  },
+  "item_galeplume_helm": {
+   "file": "res://assets/generated/gear/item_galeplume_helm.png",
+   "prompt": "a light silver open-faced helmet with two jade feather wings on its sides, a full helmet shape, swirling air around it, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7205,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 60.4,
+   "date": "2026-11-21"
+  },
+  "item_bastion_greathelm": {
+   "file": "res://assets/generated/gear/item_bastion_greathelm.png",
+   "prompt": "a massive steel great helm with a reinforced visor and a tall crest, heavy plate, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7006,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 156.4,
+   "date": "2026-11-21"
+  },
+  "item_plague_mask": {
+   "file": "res://assets/generated/gear/item_plague_mask.png",
+   "prompt": "a dark leather plague doctor beak mask with green glass eyepieces, wisps of sickly green mist, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7007,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 152.9,
+   "date": "2026-11-21"
+  },
+  "item_smokeveil_hood": {
+   "file": "res://assets/generated/gear/item_smokeveil_hood.png",
+   "prompt": "a charcoal grey hooded cowl with a smoky veil drifting from it, laid flat, empty, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7008,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 154.4,
+   "date": "2026-11-21"
+  },
+  "item_amber_amulet": {
+   "file": "res://assets/generated/gear/item_amber_amulet.png",
+   "prompt": "a warm amber gemstone amulet on a bronze chain, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7009,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 152.7,
+   "date": "2026-11-21"
+  },
+  "item_hourglass_amulet": {
+   "file": "res://assets/generated/gear/item_hourglass_amulet.png",
+   "prompt": "a golden hourglass pendant with glowing blue sand, on a fine chain, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7010,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 158.3,
+   "date": "2026-11-21"
+  },
+  "item_ley_pendant": {
+   "file": "res://assets/generated/gear/item_ley_pendant.png",
+   "prompt": "a silver pendant holding a swirling violet aether orb, faint arcane runes orbiting it, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7011,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 150.4,
+   "date": "2026-11-21"
+  },
+  "item_sunlit_reliquary": {
+   "file": "res://assets/generated/gear/item_sunlit_reliquary.png",
+   "prompt": "a small golden reliquary locket radiating warm sunlight, a sun emblem engraved on it, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7012,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 150.4,
+   "date": "2026-11-21"
+  },
+  "item_catalyst_locket": {
+   "file": "res://assets/generated/gear/item_catalyst_locket.png",
+   "prompt": "a dark iron locket with a cracked glass vial of glowing green and violet liquid inside, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7013,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 150.3,
+   "date": "2026-11-21"
+  },
+  "item_leather_bracers": {
+   "file": "res://assets/generated/gear/item_leather_bracers.png",
+   "prompt": "a pair of brown leather bracers with buckles, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7014,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 150.4,
+   "date": "2026-11-21"
+  },
+  "item_spellweaver_gloves": {
+   "file": "res://assets/generated/gear/item_spellweaver_gloves.png",
+   "prompt": "a pair of elegant blue silk mage gloves embroidered with glowing silver runes, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7015,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 150.3,
+   "date": "2026-11-21"
+  },
+  "item_storm_grips": {
+   "file": "res://assets/generated/gear/item_storm_grips.png",
+   "prompt": "a pair of light jade leather gloves with small whirlwinds curling around the fingers, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7016,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 150.4,
+   "date": "2026-11-21"
+  },
+  "item_shieldbearer_gauntlets": {
+   "file": "res://assets/generated/gear/item_shieldbearer_gauntlets.png",
+   "prompt": "a pair of heavy steel plate gauntlets with small round shield plates on the backs, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7017,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 156.4,
+   "date": "2026-11-21"
+  },
+  "item_cinderfist_gauntlets": {
+   "file": "res://assets/generated/gear/item_cinderfist_gauntlets.png",
+   "prompt": "a pair of soot-blackened iron gauntlets with glowing orange cracks and drips of burning oil, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7018,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 121.1,
+   "date": "2026-11-21"
+  },
+  "item_sturdy_belt": {
+   "file": "res://assets/generated/gear/item_sturdy_belt.png",
+   "prompt": "a thick brown leather belt with an iron buckle, coiled, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7019,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 74.6,
+   "date": "2026-11-21"
+  },
+  "item_alchemists_bandolier": {
+   "file": "res://assets/generated/gear/item_alchemists_bandolier.png",
+   "prompt": "a leather bandolier holding small colourful potion vials, coiled, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7020,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 92.4,
+   "date": "2026-11-21"
+  },
+  "item_kindling_sash": {
+   "file": "res://assets/generated/gear/item_kindling_sash.png",
+   "prompt": "a crimson silk sash with golden flame embroidery, the ends smouldering with tiny embers, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7021,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 70.5,
+   "date": "2026-11-21"
+  },
+  "item_powder_belt": {
+   "file": "res://assets/generated/gear/item_powder_belt.png",
+   "prompt": "a black leather belt with powder horns, oil flasks and small fuse pouches, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7022,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 72.4,
+   "date": "2026-11-21"
+  },
+  "item_pilgrims_girdle": {
+   "file": "res://assets/generated/gear/item_pilgrims_girdle.png",
+   "prompt": "a coiled white braided rope belt with a plain round golden sun-disc buckle and golden tassels at the ends, simple and clean, nothing hanging from the buckle, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7341,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 62.4,
+   "date": "2026-11-21"
+  },
+  "item_copper_ring": {
+   "file": "res://assets/generated/gear/item_copper_ring.png",
+   "prompt": "a simple polished copper ring, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7024,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 70.3,
+   "date": "2026-11-21"
+  },
+  "item_twinbond_ring": {
+   "file": "res://assets/generated/gear/item_twinbond_ring.png",
+   "prompt": "two intertwined rings, one silver with a blue gem and one gold with a red gem, joined together, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7025,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 70.4,
+   "date": "2026-11-21"
+  },
+  "item_victors_signet": {
+   "file": "res://assets/generated/gear/item_victors_signet.png",
+   "prompt": "a heavy gold signet ring with a laurel wreath crest, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7026,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 71.0,
+   "date": "2026-11-21"
+  },
+  "item_arcanist_ring": {
+   "file": "res://assets/generated/gear/item_arcanist_ring.png",
+   "prompt": "a silver ring set with a violet crystal that glows with arcane light, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7027,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 72.3,
+   "date": "2026-11-21"
+  },
+  "item_cinderheart_ring": {
+   "file": "res://assets/generated/gear/item_cinderheart_ring.png",
+   "prompt": "a black iron ring set with a glowing ember-red gemstone, heat shimmer around it, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7028,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 66.3,
+   "date": "2026-11-21"
+  },
+  "item_frostbite_band": {
+   "file": "res://assets/generated/gear/item_frostbite_band.png",
+   "prompt": "a single finger ring with a band of pale blue ice crystal and a small frozen gem, frost on the band, seen at an angle so the ring hole is visible, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7219,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 62.3,
+   "date": "2026-11-21"
+  },
+  "item_tempest_ring": {
+   "file": "res://assets/generated/gear/item_tempest_ring.png",
+   "prompt": "a single jade finger ring with a round gem in which a tiny storm cloud swirls, seen at an angle so the ring band and hole are visible, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7230,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 62.4,
+   "date": "2026-11-21"
+  },
+  "item_venomfang_ring": {
+   "file": "res://assets/generated/gear/item_venomfang_ring.png",
+   "prompt": "a dark silver ring shaped like a snake with green venom-dripping fangs, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7031,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 62.4,
+   "date": "2026-11-21"
+  },
+  "item_traveling_boots": {
+   "file": "res://assets/generated/gear/item_traveling_boots.png",
+   "prompt": "a pair of sturdy brown leather travel boots, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7032,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 62.4,
+   "date": "2026-11-21"
+  },
+  "item_glacier_greaves": {
+   "file": "res://assets/generated/gear/item_glacier_greaves.png",
+   "prompt": "a pair of pale blue armoured boots of ice crystal, frost mist at their soles, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7033,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 64.5,
+   "date": "2026-11-21"
+  },
+  "item_windstep_boots": {
+   "file": "res://assets/generated/gear/item_windstep_boots.png",
+   "prompt": "a pair of light green boots with small feathered wings at the ankles and swirling air, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7034,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 64.5,
+   "date": "2026-11-21"
+  },
+  "item_rampart_sabatons": {
+   "file": "res://assets/generated/gear/item_rampart_sabatons.png",
+   "prompt": "a pair of heavy steel plate armoured boots (sabatons) standing side by side, thick riveted plates over the feet and shins, knight footwear, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7235,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 144.9,
+   "date": "2026-11-21"
+  },
+  "item_dawnwalker_sabatons": {
+   "file": "res://assets/generated/gear/item_dawnwalker_sabatons.png",
+   "prompt": "a pair of white and gold armoured boots glowing with soft holy light, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7036,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 64.4,
+   "date": "2026-11-21"
+  },
+  "item_plaguewalker_boots": {
+   "file": "res://assets/generated/gear/item_plaguewalker_boots.png",
+   "prompt": "a pair of dark leather boots with green toxic mist seeping from them, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7037,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 113.4,
+   "date": "2026-11-21"
+  },
+  "item_gale_staff": {
+   "file": "res://assets/generated/gear/item_gale_staff.png",
+   "prompt": "a slender pale wood mage staff topped with a jade crystal wrapped in swirling wind, vertical, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7038,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 235.5,
+   "date": "2026-11-21"
+  },
+  "item_venom_kris": {
+   "file": "res://assets/generated/gear/item_venom_kris.png",
+   "prompt": "a wavy-bladed kris dagger dripping glowing green venom, vertical, point up, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 7039,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 102.3,
+   "date": "2026-11-21"
+  }
+ }
+}

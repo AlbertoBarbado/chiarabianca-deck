@@ -1,0 +1,17 @@
+{
+  "id": "holy",
+  "character_id": "bianca",
+  "identity": "Healing, cleansing, blessings and protective light.",
+  "starting_passive": {
+    "id": "holy_passive",
+    "name": "TODO: define passive",
+    "description": "Placeholder; design and balance before implementation."
+  },
+  "starting_deck_card_ids": [],
+  "card_pool": [],
+  "skill_tree": {
+    "nodes": [],
+    "note": "Add skill nodes as the specialization is implemented."
+  },
+  "status": "design_template"
+}

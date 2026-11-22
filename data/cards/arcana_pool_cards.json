@@ -1,0 +1,723 @@
+[
+  {
+    "id": "chiara_arcana_lance",
+    "name": "Arcane Lance",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 2,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 12 damage.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 12,
+        "target": "single_enemy"
+      }
+    ],
+    "upgrade": {
+      "name": "Arcane Lance+",
+      "cost": 2,
+      "description": "Deal 17 damage.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 17,
+          "target": "single_enemy"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_arcana_lance.png"
+  },
+  {
+    "id": "chiara_arcana_starfall",
+    "name": "Starfall",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 2,
+    "card_type": "spell",
+    "target": "all_enemies",
+    "rarity": "uncommon",
+    "description": "Deal 6 damage to all enemies.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 6,
+        "target": "all_enemies"
+      }
+    ],
+    "upgrade": {
+      "name": "Starfall+",
+      "cost": 2,
+      "description": "Deal 9 damage to all enemies.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 9,
+          "target": "all_enemies"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_arcana_starfall.png"
+  },
+  {
+    "id": "chiara_arcana_barrier",
+    "name": "Mystic Barrier",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 2,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "common",
+    "description": "Gain 11 Block.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 11,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Mystic Barrier+",
+      "cost": 2,
+      "description": "Gain 15 Block.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 15,
+          "target": "self"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_arcana_barrier.png"
+  },
+  {
+    "id": "chiara_arcana_insight",
+    "name": "Insight",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Draw 2 cards.",
+    "effects": [
+      {
+        "effect": "draw",
+        "value": 2,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Insight+",
+      "cost": 0,
+      "description": "Draw 2 cards.",
+      "effects": [
+        {
+          "effect": "draw",
+          "value": 2,
+          "target": "self"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_arcana_insight.png"
+  },
+  {
+    "id": "chiara_arcana_twinbolt",
+    "name": "Twin Bolt",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 4 damage twice.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 4,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "damage",
+        "value": 4,
+        "target": "single_enemy"
+      }
+    ],
+    "upgrade": {
+      "name": "Twin Bolt+",
+      "cost": 1,
+      "description": "Deal 6 damage twice.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 6,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "damage",
+          "value": 6,
+          "target": "single_enemy"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_arcana_twinbolt.png"
+  },
+  {
+    "id": "chiara_arcana_pulse",
+    "name": "Restorative Pulse",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 1,
+    "card_type": "support",
+    "target": "single_ally",
+    "rarity": "common",
+    "description": "Heal an ally for 6.",
+    "effects": [
+      {
+        "effect": "heal",
+        "value": 6,
+        "target": "single_ally"
+      }
+    ],
+    "upgrade": {
+      "name": "Restorative Pulse+",
+      "cost": 1,
+      "description": "Heal an ally for 9.",
+      "effects": [
+        {
+          "effect": "heal",
+          "value": 9,
+          "target": "single_ally"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_arcana_pulse.png"
+  },
+  {
+    "id": "chiara_arcana_siphon",
+    "name": "Ley Siphon",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 5 damage. Draw 1 card.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 5,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "draw",
+        "value": 1,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Ley Siphon+",
+      "cost": 1,
+      "description": "Deal 8 damage. Draw 1 card.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 8,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "draw",
+          "value": 1,
+          "target": "self"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_arcana_echo",
+    "name": "Arcane Echo",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Gain 1 Energy. Draw 2 cards. Exhaust.",
+    "effects": [
+      {
+        "effect": "gain_energy",
+        "value": 1,
+        "target": "self"
+      },
+      {
+        "effect": "draw",
+        "value": 2,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Arcane Echo+",
+      "cost": 0,
+      "description": "Costs 0. Gain 1 Energy. Draw 2 cards. Exhaust.",
+      "effects": [
+        {
+          "effect": "gain_energy",
+          "value": 1,
+          "target": "self"
+        },
+        {
+          "effect": "draw",
+          "value": 2,
+          "target": "self"
+        }
+      ]
+    },
+    "exhaust": true
+  },
+  {
+    "id": "chiara_arcana_weave",
+    "name": "Leyline Weave",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 2,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "rare",
+    "description": "Gain 2 Energy. Draw 2 cards.",
+    "effects": [
+      {
+        "effect": "gain_energy",
+        "value": 2,
+        "target": "self"
+      },
+      {
+        "effect": "draw",
+        "value": 2,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Leyline Weave+",
+      "cost": 2,
+      "description": "Gain 2 Energy. Draw 3 cards.",
+      "effects": [
+        {
+          "effect": "gain_energy",
+          "value": 2,
+          "target": "self"
+        },
+        {
+          "effect": "draw",
+          "value": 3,
+          "target": "self"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_arcana_aetherlance",
+    "name": "Aether Lance",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "uncommon",
+    "description": "Deal 6 damage, +2 per Aether.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 6,
+        "target": "single_enemy",
+        "per_aether": 2
+      }
+    ],
+    "upgrade": {
+      "name": "Aether Lance+",
+      "cost": 1,
+      "description": "Deal 9 damage, +3 per Aether.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 9,
+          "target": "single_enemy",
+          "per_aether": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_arcana_leyattune",
+    "name": "Ley Attunement",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Power: at the start of each turn, gain 2 Aether.",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 6,
+        "power": {
+          "id": "leyattune",
+          "name": "Ley Attunement",
+          "description": "At the start of each turn, gain 2 Aether.",
+          "trigger": {
+            "event": "turn_start"
+          },
+          "effect": {
+            "effect": "gain_aether",
+            "value": 2
+          },
+          "limit_per_turn": 1
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Ley Attunement+",
+      "cost": 1,
+      "description": "Power: at the start of each turn, gain 3 Aether.",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 8,
+          "power": {
+            "id": "leyattune",
+            "name": "Ley Attunement",
+            "description": "At the start of each turn, gain 3 Aether.",
+            "trigger": {
+              "event": "turn_start"
+            },
+            "effect": {
+              "effect": "gain_aether",
+              "value": 3
+            },
+            "limit_per_turn": 1
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_arcana_mastery",
+    "name": "Arcane Mastery",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "rare",
+    "description": "Power: Chiara's cards deal 3 more damage.",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 9,
+        "power": {
+          "id": "mastery",
+          "name": "Arcane Mastery",
+          "description": "Chiara's cards deal 3 more damage.",
+          "stats": {
+            "damage": 3
+          }
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Arcane Mastery+",
+      "cost": 1,
+      "description": "Power: Chiara's cards deal 4 more damage.",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 11,
+          "power": {
+            "id": "mastery",
+            "name": "Arcane Mastery",
+            "description": "Chiara's cards deal 4 more damage.",
+            "stats": {
+              "damage": 4
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_arcana_manaburst",
+    "name": "Mana Burst",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 0,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "rare",
+    "description": "Deal 8 damage X times.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 8,
+        "target": "single_enemy",
+        "repeat_x": true
+      }
+    ],
+    "upgrade": {
+      "name": "Mana Burst+",
+      "cost": 0,
+      "description": "Deal 10 damage X times.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 10,
+          "target": "single_enemy",
+          "repeat_x": true
+        }
+      ]
+    },
+    "x_cost": true
+  },
+  {
+    "id": "chiara_arcana_prepared",
+    "name": "Prepared Spell",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Retain. Deal 9 damage.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 9,
+        "target": "single_enemy"
+      }
+    ],
+    "upgrade": {
+      "name": "Prepared Spell+",
+      "cost": 1,
+      "description": "Retain. Deal 12 damage.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 12,
+          "target": "single_enemy"
+        }
+      ]
+    },
+    "retain": true
+  },
+  {
+    "id": "chiara_arcana_shield",
+    "name": "Arcane Shield",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "common",
+    "description": "Gain 5 Block, +1 per Aether.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 5,
+        "target": "self",
+        "per_aether": 1
+      }
+    ],
+    "upgrade": {
+      "name": "Arcane Shield+",
+      "cost": 1,
+      "description": "Gain 7 Block, +2 per Aether.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 7,
+          "target": "self",
+          "per_aether": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_arcana_overcharge",
+    "name": "Overcharge",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 0,
+    "card_type": "skill",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Gain 2 Energy. Exhaust.",
+    "effects": [
+      {
+        "effect": "gain_energy",
+        "value": 2,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Overcharge+",
+      "cost": 0,
+      "description": "Gain 2 Energy. Draw 1 card. Exhaust.",
+      "effects": [
+        {
+          "effect": "gain_energy",
+          "value": 2,
+          "target": "self"
+        },
+        {
+          "effect": "draw",
+          "value": 1,
+          "target": "self"
+        }
+      ]
+    },
+    "exhaust": true
+  },
+  {
+    "id": "chiara_arcana_sigil",
+    "name": "Twin Sigil",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "all_allies",
+    "rarity": "common",
+    "description": "Draw 2 cards. Give the party 3 Block.",
+    "effects": [
+      {
+        "effect": "draw",
+        "value": 2,
+        "target": "self"
+      },
+      {
+        "effect": "block",
+        "value": 3,
+        "target": "all_allies"
+      }
+    ],
+    "upgrade": {
+      "name": "Twin Sigil+",
+      "cost": 1,
+      "description": "Draw 2 cards. Give the party 5 Block.",
+      "effects": [
+        {
+          "effect": "draw",
+          "value": 2,
+          "target": "self"
+        },
+        {
+          "effect": "block",
+          "value": 5,
+          "target": "all_allies"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_arcana_cascade",
+    "name": "Arcane Cascade",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "rare",
+    "description": "Power: whenever the party plays its 4th card in a turn, draw 2 cards.",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 7,
+        "power": {
+          "id": "cascade",
+          "name": "Arcane Cascade",
+          "description": "Whenever the party plays its 4th card in a turn, draw 2 cards.",
+          "trigger": {
+            "event": "card_played",
+            "cards_played": 4
+          },
+          "effect": {
+            "effect": "draw_cards",
+            "value": 2
+          },
+          "limit_per_turn": 1
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Arcane Cascade+",
+      "cost": 0,
+      "description": "Power: whenever the party plays its 4th card in a turn, draw 2 cards.",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 7,
+          "power": {
+            "id": "cascade",
+            "name": "Arcane Cascade",
+            "description": "Whenever the party plays its 4th card in a turn, draw 2 cards.",
+            "trigger": {
+              "event": "card_played",
+              "cards_played": 4
+            },
+            "effect": {
+              "effect": "draw_cards",
+              "value": 2
+            },
+            "limit_per_turn": 1
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_arcana_nova",
+    "name": "Aether Nova",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 2,
+    "card_type": "spell",
+    "target": "all_enemies",
+    "rarity": "uncommon",
+    "description": "Deal 5 damage to ALL enemies, +2 per Aether. Release all Aether.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 5,
+        "target": "all_enemies",
+        "per_aether": 2
+      },
+      {
+        "effect": "spend_aether",
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Aether Nova+",
+      "cost": 2,
+      "description": "Deal 7 damage to ALL enemies, +2 per Aether. Release all Aether.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 7,
+          "target": "all_enemies",
+          "per_aether": 2
+        },
+        {
+          "effect": "spend_aether",
+          "target": "self"
+        }
+      ]
+    }
+  }
+]

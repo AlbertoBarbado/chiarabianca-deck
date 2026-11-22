@@ -1,0 +1,186 @@
+[
+  {
+    "id": "beach_crabs",
+    "name": "Crab Shallows",
+    "terrain": "shore",
+    "enemies": [
+      "beach_giant_crab",
+      "beach_giant_crab"
+    ],
+    "gold_reward": 24
+  },
+  {
+    "id": "beach_shore_pair",
+    "name": "Barnacle Rocks",
+    "terrain": "shore",
+    "enemies": [
+      "beach_giant_crab",
+      "beach_rock_spider"
+    ],
+    "gold_reward": 24
+  },
+  {
+    "id": "beach_spiders_2",
+    "name": "Spider Sands",
+    "terrain": "shore",
+    "enemies": [
+      "beach_rock_spider",
+      "beach_rock_spider"
+    ],
+    "gold_reward": 24
+  },
+  {
+    "id": "beach_spiders",
+    "name": "Rocky Path",
+    "terrain": "shore",
+    "enemies": [
+      "beach_rock_spider",
+      "beach_rock_spider",
+      "beach_rock_spider"
+    ],
+    "gold_reward": 28
+  },
+  {
+    "id": "beach_crab_spider",
+    "name": "Burrowed Ambush",
+    "terrain": "shore",
+    "enemies": [
+      "beach_giant_crab",
+      "beach_rock_spider",
+      "beach_rock_spider"
+    ],
+    "gold_reward": 32
+  },
+  {
+    "id": "beach_crab_colony",
+    "name": "Crab Colony",
+    "terrain": "shore",
+    "enemies": [
+      "beach_giant_crab",
+      "beach_rock_spider",
+      "beach_giant_crab"
+    ],
+    "gold_reward": 34
+  },
+  {
+    "id": "beach_dune_patrol",
+    "name": "Windswept Dunes",
+    "terrain": "shore",
+    "enemies": [
+      "beach_rock_spider",
+      "beach_sand_scorpion",
+      "beach_giant_crab"
+    ],
+    "gold_reward": 36
+  },
+  {
+    "id": "beach_scorpion_crab",
+    "name": "Shell Beach",
+    "terrain": "shore",
+    "enemies": [
+      "beach_giant_crab",
+      "beach_sand_scorpion"
+    ],
+    "gold_reward": 26
+  },
+  {
+    "id": "beach_salt_flats",
+    "name": "Salt Flats",
+    "terrain": "shore",
+    "enemies": [
+      "beach_sand_scorpion",
+      "beach_rock_spider",
+      "beach_sand_scorpion"
+    ],
+    "gold_reward": 34
+  },
+  {
+    "id": "beach_sea_raiders",
+    "name": "Boarding Party",
+    "terrain": "sea",
+    "enemies": [
+      "beach_triton_soldier",
+      "beach_dire_albatross"
+    ],
+    "gold_reward": 28
+  },
+  {
+    "id": "beach_albatross_flock",
+    "name": "Albatross Squall",
+    "terrain": "sea",
+    "enemies": [
+      "beach_dire_albatross",
+      "beach_dire_albatross"
+    ],
+    "gold_reward": 28
+  },
+  {
+    "id": "beach_shark_patrol",
+    "name": "Shark Waters",
+    "terrain": "sea",
+    "enemies": [
+      "beach_triton_soldier",
+      "beach_shark_knight"
+    ],
+    "gold_reward": 34
+  },
+  {
+    "id": "beach_storm_vanguard",
+    "name": "Storm Front",
+    "terrain": "sea",
+    "enemies": [
+      "beach_triton_soldier",
+      "beach_shark_knight",
+      "beach_dire_albatross"
+    ],
+    "gold_reward": 40
+  },
+  {
+    "id": "elite_sea_snake",
+    "name": "The Sea Snake",
+    "elite": true,
+    "enemies": [
+      "elite_sea_snake"
+    ],
+    "gold_reward": 60,
+    "intro": "The sea boils beside the hull. A sea snake as long as the ship rises over the railing, spitting brine that leaves you Soaked: easy prey for frost and lightning.",
+    "terrain": "sea"
+  },
+  {
+    "id": "elite_rock_giant",
+    "name": "The Rock Giant",
+    "elite": true,
+    "enemies": [
+      "elite_rock_giant"
+    ],
+    "gold_reward": 62,
+    "intro": "A cliff stands up. The Rock Giant shrugs off blades and fire alike; only arcane force and biting cold crack its stone.",
+    "terrain": "shore"
+  },
+  {
+    "id": "elite_sand_giant",
+    "name": "The Sand Giant",
+    "elite": true,
+    "enemies": [
+      "elite_sand_giant",
+      "beach_rock_spider"
+    ],
+    "gold_reward": 64,
+    "intro": "A dune rises into a giant. Its gusts throw sand in your eyes: Sandblind attacks lose a quarter of their strength.",
+    "terrain": "shore"
+  },
+  {
+    "id": "boss_sandstorm_elemental",
+    "name": "The Sandstorm Elemental",
+    "boss": true,
+    "enemies": [
+      "boss_sandstorm_elemental"
+    ],
+    "gold_reward": 130,
+    "intro": "The sky turns gold. At the heart of the storm a giant of wind and sand opens its burning eyes. Its storm blinds, its sands swallow your hand, and blades barely scratch it.",
+    "reward": {
+      "pool": "epic",
+      "card_options": 3
+    }
+  }
+]

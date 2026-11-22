@@ -1,0 +1,83 @@
+[
+  {
+    "id": "beach_fish_market",
+    "name": "Fish Market",
+    "greeting": "Salted fish, sea-salt tonics and armour scraped off a reef.",
+    "stock": [
+      {
+        "item_id": "minor_health_potion",
+        "price": 18,
+        "quantity": 3
+      },
+      {
+        "item_id": "health_potion",
+        "price": 36,
+        "quantity": 2
+      },
+      {
+        "item_id": "coral_mail",
+        "price": 95,
+        "quantity": 1
+      }
+    ],
+    "art": "merchant_beach_fish_market",
+    "art_focus": [
+      0.62,
+      0.45
+    ]
+  },
+  {
+    "id": "beach_dune_bazaar",
+    "name": "Dune Bazaar",
+    "greeting": "Everything a traveller needs to survive the sands, and a few things they don't.",
+    "stock": [
+      {
+        "item_id": "minor_health_potion",
+        "price": 18,
+        "quantity": 3
+      },
+      {
+        "item_id": "health_potion",
+        "price": 36,
+        "quantity": 2
+      },
+      {
+        "item_id": "sandstone_cuirass",
+        "price": 95,
+        "quantity": 1
+      },
+      {
+        "item_id": "coralsteel_sabre",
+        "price": 110,
+        "quantity": 1
+      }
+    ],
+    "art": "merchant_beach_dune_bazaar",
+    "art_focus": [
+      0.86,
+      0.45
+    ]
+  },
+  {
+    "id": "beach_last_merchant",
+    "name": "Last Merchant",
+    "greeting": "Pay well. Where you are going, gold will not help you.",
+    "stock": [
+      {
+        "item_id": "health_potion",
+        "price": 40,
+        "quantity": 3
+      },
+      {
+        "item_id": "dunewalker_wraps",
+        "price": 160,
+        "quantity": 1
+      }
+    ],
+    "art": "merchant_beach_last_merchant",
+    "art_focus": [
+      0.24,
+      0.45
+    ]
+  }
+]

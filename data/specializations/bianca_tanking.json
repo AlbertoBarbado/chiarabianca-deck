@@ -1,0 +1,65 @@
+{
+  "id": "tanking",
+  "character_id": "bianca",
+  "identity": "Block, taunts, damage redirection and protection.",
+  "starting_passive": {
+    "id": "tanking_passive",
+    "name": "Bulwark Stance",
+    "description": "The first time each round an enemy attack on Bianca is fully absorbed by her Block, that enemy is Taunted and must attack Bianca on its next action. Attacks that deal any damage, or that hit Chiara, do not trigger it.",
+    "trigger": {
+      "event": "attack_absorbed",
+      "recipient": "owner"
+    },
+    "limit_per_turn": 1,
+    "effect": {
+      "effect": "taunt_attacker",
+      "value": 2
+    }
+  },
+  "starting_deck_card_ids": [
+    "bianca_tanking_strike",
+    "bianca_tanking_strike",
+    "bianca_tanking_strike",
+    "bianca_tanking_strike",
+    "bianca_tanking_rally",
+    "bianca_tanking_rally",
+    "bianca_tanking_rally",
+    "bianca_tanking_wind",
+    "bianca_tanking_guard",
+    "bianca_tanking_challenge"
+  ],
+  "card_pool": [
+    "bianca_tanking_slam",
+    "bianca_tanking_wall",
+    "bianca_tanking_provoke",
+    "bianca_tanking_oath",
+    "bianca_tanking_sweep",
+    "bianca_tanking_wind",
+    "bianca_tanking_runic",
+    "bianca_tanking_momentum",
+    "bianca_tanking_brand",
+    "bianca_tanking_ironskin",
+    "bianca_tanking_spikes",
+    "bianca_tanking_entrench",
+    "bianca_tanking_phalanx",
+    "bianca_tanking_brace",
+    "bianca_tanking_roar",
+    "bianca_tanking_bash",
+    "bianca_tanking_unbreakable",
+    "bianca_tanking_warcry"
+  ],
+  "skill_tree": {
+    "nodes": [],
+    "note": "Add skill nodes as the specialization is implemented."
+  },
+  "status": "playable",
+  "visual": {
+    "accent": "#a9bdd3",
+    "icon": "icon_block"
+  },
+  "epic_pool": [
+    "bianca_tanking_epic_fortress",
+    "bianca_tanking_epic_shieldstorm"
+  ],
+  "damage_element": "physical"
+}

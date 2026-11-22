@@ -1,0 +1,122 @@
+[
+  {
+    "id": "mountain_frozen_cache",
+    "name": "Frozen Cache",
+    "description": "A climbers' cache frozen into the snow under a pine. Chip one thing free before your fingers go numb.",
+    "choices": [
+      {
+        "type": "gold",
+        "amount": 55,
+        "text": "A purse of 55 gold"
+      },
+      {
+        "type": "potion",
+        "item_id": "health_potion",
+        "count": 1,
+        "text": "A Health Potion"
+      },
+      {
+        "type": "relic",
+        "text": "A relic",
+        "rarity_weights": {
+          "common": 5,
+          "uncommon": 3,
+          "rare": 1
+        }
+      },
+      {
+        "type": "card",
+        "rarity": "uncommon",
+        "text": "A climber's notebook (uncommon card)"
+      },
+      {
+        "type": "equipment",
+        "rarity_weights": {
+          "common": 2,
+          "uncommon": 3
+        },
+        "text": "A piece of equipment"
+      }
+    ]
+  },
+  {
+    "id": "mountain_glacier_vault",
+    "name": "Glacier Vault",
+    "description": "Something gleams inside the blue ice: an old explorer's chest, sealed by the glacier for a century. Take one thing.",
+    "choices": [
+      {
+        "type": "gold",
+        "amount": 70,
+        "text": "A purse of 70 gold"
+      },
+      {
+        "type": "potion",
+        "item_id": "health_potion",
+        "count": 1,
+        "text": "A Health Potion"
+      },
+      {
+        "type": "relic",
+        "text": "A relic",
+        "rarity_weights": {
+          "common": 5,
+          "uncommon": 3,
+          "rare": 1
+        }
+      },
+      {
+        "type": "card",
+        "rarity": "uncommon",
+        "text": "A frozen scroll (uncommon card)"
+      },
+      {
+        "type": "equipment",
+        "rarity_weights": {
+          "common": 2,
+          "uncommon": 3
+        },
+        "text": "A piece of equipment"
+      }
+    ]
+  },
+  {
+    "id": "mountain_shed_scales",
+    "name": "Shed Scales",
+    "description": "A ledge littered with shed pearl-white scales and the dragon's forgotten trinkets. Take one before she notices.",
+    "choices": [
+      {
+        "type": "gold",
+        "amount": 85,
+        "text": "A purse of 85 gold"
+      },
+      {
+        "type": "potion",
+        "item_id": "health_potion",
+        "count": 1,
+        "text": "A Health Potion"
+      },
+      {
+        "type": "relic",
+        "text": "A relic",
+        "rarity_weights": {
+          "common": 5,
+          "uncommon": 3,
+          "rare": 1
+        }
+      },
+      {
+        "type": "card",
+        "rarity": "uncommon",
+        "text": "A dragon-scale technique (uncommon card)"
+      },
+      {
+        "type": "equipment",
+        "rarity_weights": {
+          "common": 2,
+          "uncommon": 3
+        },
+        "text": "A piece of equipment"
+      }
+    ]
+  }
+]

@@ -1,0 +1,530 @@
+[
+  {
+    "id": "button_ornate",
+    "group": "buttons",
+    "path": "res://assets/ui/buttons/button_ornate.png",
+    "source": "Menu _buttons.jpg",
+    "box": [
+      55,
+      50,
+      670,
+      245
+    ],
+    "size": [
+      576,
+      186
+    ]
+  },
+  {
+    "id": "button_small_square",
+    "group": "buttons",
+    "path": "res://assets/ui/buttons/button_small_square.png",
+    "source": "Menu _buttons.jpg",
+    "box": [
+      935,
+      65,
+      1105,
+      235
+    ],
+    "size": [
+      159,
+      155
+    ]
+  },
+  {
+    "id": "button_plain",
+    "group": "buttons",
+    "path": "res://assets/ui/buttons/button_plain.png",
+    "source": "Menu _buttons.jpg",
+    "box": [
+      55,
+      285,
+      670,
+      475
+    ],
+    "size": [
+      571,
+      160
+    ]
+  },
+  {
+    "id": "panel_rect_ornate",
+    "group": "panels",
+    "path": "res://assets/ui/panels/panel_rect_ornate.png",
+    "source": "Decorative _panels_and _frames.jpg",
+    "box": [
+      825,
+      65,
+      1310,
+      260
+    ],
+    "size": [
+      480,
+      187
+    ]
+  },
+  {
+    "id": "panel_banner",
+    "group": "panels",
+    "path": "res://assets/ui/panels/panel_banner.png",
+    "source": "Decorative _panels_and _frames.jpg",
+    "box": [
+      75,
+      505,
+      670,
+      645
+    ],
+    "size": [
+      588,
+      135
+    ]
+  },
+  {
+    "id": "frame_circle",
+    "group": "panels",
+    "path": "res://assets/ui/panels/frame_circle.png",
+    "source": "Decorative _panels_and _frames.jpg",
+    "box": [
+      730,
+      295,
+      1065,
+      630
+    ],
+    "size": [
+      326,
+      330
+    ]
+  },
+  {
+    "id": "frame_portrait",
+    "group": "panels",
+    "path": "res://assets/ui/panels/frame_portrait.png",
+    "source": "Decorative _panels_and _frames.jpg",
+    "box": [
+      1095,
+      350,
+      1315,
+      615
+    ],
+    "size": [
+      215,
+      262
+    ]
+  },
+  {
+    "id": "divider",
+    "group": "panels",
+    "path": "res://assets/ui/panels/divider.png",
+    "source": "Decorative _panels_and _frames.jpg",
+    "box": [
+      545,
+      650,
+      1315,
+      720
+    ],
+    "size": [
+      760,
+      65
+    ]
+  },
+  {
+    "id": "logo",
+    "group": "processed",
+    "path": "res://assets/ui/processed/logo.png",
+    "source": "Game_logo.jpg",
+    "box": [
+      80,
+      140,
+      1335,
+      700
+    ],
+    "size": [
+      1230,
+      549
+    ]
+  },
+  {
+    "id": "icon_heart",
+    "group": "icons",
+    "path": "res://assets/ui/icons/icon_heart.png",
+    "source": "UI_icons.jpg",
+    "box": [
+      0,
+      0,
+      256,
+      256
+    ],
+    "size": [
+      214,
+      213
+    ]
+  },
+  {
+    "id": "icon_shield",
+    "group": "icons",
+    "path": "res://assets/ui/icons/icon_shield.png",
+    "source": "UI_icons.jpg",
+    "box": [
+      256,
+      0,
+      512,
+      256
+    ],
+    "size": [
+      202,
+      232
+    ]
+  },
+  {
+    "id": "icon_combat",
+    "group": "icons",
+    "path": "res://assets/ui/icons/icon_combat.png",
+    "source": "UI_icons.jpg",
+    "box": [
+      512,
+      0,
+      768,
+      256
+    ],
+    "size": [
+      237,
+      226
+    ]
+  },
+  {
+    "id": "icon_gold",
+    "group": "icons",
+    "path": "res://assets/ui/icons/icon_gold.png",
+    "source": "UI_icons.jpg",
+    "box": [
+      768,
+      0,
+      1024,
+      256
+    ],
+    "size": [
+      215,
+      219
+    ]
+  },
+  {
+    "id": "icon_potion",
+    "group": "icons",
+    "path": "res://assets/ui/icons/icon_potion.png",
+    "source": "UI_icons.jpg",
+    "box": [
+      0,
+      256,
+      256,
+      512
+    ],
+    "size": [
+      212,
+      229
+    ]
+  },
+  {
+    "id": "icon_flame",
+    "group": "icons",
+    "path": "res://assets/ui/icons/icon_flame.png",
+    "source": "UI_icons.jpg",
+    "box": [
+      256,
+      256,
+      512,
+      512
+    ],
+    "size": [
+      210,
+      236
+    ]
+  },
+  {
+    "id": "icon_star",
+    "group": "icons",
+    "path": "res://assets/ui/icons/icon_star.png",
+    "source": "UI_icons.jpg",
+    "box": [
+      512,
+      256,
+      768,
+      512
+    ],
+    "size": [
+      226,
+      243
+    ]
+  },
+  {
+    "id": "icon_rune",
+    "group": "icons",
+    "path": "res://assets/ui/icons/icon_rune.png",
+    "source": "UI_icons.jpg",
+    "box": [
+      768,
+      256,
+      1024,
+      512
+    ],
+    "size": [
+      229,
+      234
+    ]
+  },
+  {
+    "id": "icon_silhouette",
+    "group": "icons",
+    "path": "res://assets/ui/icons/icon_silhouette.png",
+    "source": "UI_icons.jpg",
+    "box": [
+      0,
+      512,
+      256,
+      768
+    ],
+    "size": [
+      237,
+      241
+    ]
+  },
+  {
+    "id": "icon_chest",
+    "group": "icons",
+    "path": "res://assets/ui/icons/icon_chest.png",
+    "source": "UI_icons.jpg",
+    "box": [
+      256,
+      512,
+      512,
+      768
+    ],
+    "size": [
+      212,
+      213
+    ]
+  },
+  {
+    "id": "icon_settings",
+    "group": "icons",
+    "path": "res://assets/ui/icons/icon_settings.png",
+    "source": "UI_icons.jpg",
+    "box": [
+      512,
+      512,
+      768,
+      768
+    ],
+    "size": [
+      239,
+      229
+    ]
+  },
+  {
+    "id": "icon_sound",
+    "group": "icons",
+    "path": "res://assets/ui/icons/icon_sound.png",
+    "source": "UI_icons.jpg",
+    "box": [
+      768,
+      512,
+      1024,
+      768
+    ],
+    "size": [
+      227,
+      208
+    ]
+  },
+  {
+    "id": "icon_music",
+    "group": "icons",
+    "path": "res://assets/ui/icons/icon_music.png",
+    "source": "UI_icons.jpg",
+    "box": [
+      0,
+      768,
+      256,
+      1024
+    ],
+    "size": [
+      210,
+      212
+    ]
+  },
+  {
+    "id": "icon_back",
+    "group": "icons",
+    "path": "res://assets/ui/icons/icon_back.png",
+    "source": "UI_icons.jpg",
+    "box": [
+      256,
+      768,
+      512,
+      1024
+    ],
+    "size": [
+      213,
+      190
+    ]
+  },
+  {
+    "id": "icon_check",
+    "group": "icons",
+    "path": "res://assets/ui/icons/icon_check.png",
+    "source": "UI_icons.jpg",
+    "box": [
+      512,
+      768,
+      768,
+      1024
+    ],
+    "size": [
+      224,
+      201
+    ]
+  },
+  {
+    "id": "icon_close",
+    "group": "icons",
+    "path": "res://assets/ui/icons/icon_close.png",
+    "source": "UI_icons.jpg",
+    "box": [
+      768,
+      768,
+      1024,
+      1024
+    ],
+    "size": [
+      210,
+      210
+    ]
+  },
+  {
+    "id": "fx_gold_dust",
+    "group": "effects",
+    "path": "res://assets/ui/effects/fx_gold_dust.png",
+    "source": "main_menu_atmospheric_effects.jpg",
+    "box": [
+      38,
+      20,
+      70,
+      120
+    ],
+    "size": [
+      11,
+      41
+    ]
+  },
+  {
+    "id": "fx_sparkle",
+    "group": "effects",
+    "path": "res://assets/ui/effects/fx_sparkle.png",
+    "source": "main_menu_atmospheric_effects.jpg",
+    "box": [
+      36,
+      150,
+      130,
+      245
+    ],
+    "size": [
+      75,
+      75
+    ]
+  },
+  {
+    "id": "fx_blue_orb",
+    "group": "effects",
+    "path": "res://assets/ui/effects/fx_blue_orb.png",
+    "source": "main_menu_atmospheric_effects.jpg",
+    "box": [
+      29,
+      275,
+      132,
+      365
+    ],
+    "size": [
+      89,
+      81
+    ]
+  },
+  {
+    "id": "fx_ember",
+    "group": "effects",
+    "path": "res://assets/ui/effects/fx_ember.png",
+    "source": "main_menu_atmospheric_effects.jpg",
+    "box": [
+      36,
+      400,
+      74,
+      500
+    ],
+    "size": [
+      23,
+      77
+    ]
+  },
+  {
+    "id": "fx_swirl",
+    "group": "effects",
+    "path": "res://assets/ui/effects/fx_swirl.png",
+    "source": "main_menu_atmospheric_effects.jpg",
+    "box": [
+      22,
+      520,
+      134,
+      610
+    ],
+    "size": [
+      101,
+      63
+    ]
+  },
+  {
+    "id": "fx_glitter",
+    "group": "effects",
+    "path": "res://assets/ui/effects/fx_glitter.png",
+    "source": "main_menu_atmospheric_effects.jpg",
+    "box": [
+      27,
+      640,
+      132,
+      745
+    ],
+    "size": [
+      86,
+      80
+    ]
+  },
+  {
+    "id": "chiara_cutout",
+    "group": "processed",
+    "path": "res://assets/ui/processed/chiara_cutout.png",
+    "source": "chiara.jpg",
+    "box": [
+      0,
+      0,
+      1057,
+      992
+    ],
+    "size": [
+      846,
+      975
+    ]
+  },
+  {
+    "id": "bianca_cutout",
+    "group": "processed",
+    "path": "res://assets/ui/processed/bianca_cutout.png",
+    "source": "bianca.jpg",
+    "box": [
+      0,
+      0,
+      960,
+      1093
+    ],
+    "size": [
+      761,
+      1071
+    ]
+  }
+]

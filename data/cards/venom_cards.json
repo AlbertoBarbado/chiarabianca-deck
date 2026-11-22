@@ -1,0 +1,984 @@
+[
+  {
+    "id": "bianca_venom_strike",
+    "name": "Venom Strike",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "basic",
+    "description": "Deal 6 damage. Apply 1 Poison.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 6,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "single_enemy",
+        "status_id": "poison"
+      }
+    ],
+    "upgrade": {
+      "name": "Venom Strike+",
+      "cost": 1,
+      "description": "Deal 8 damage. Apply 2 Poison.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 8,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "single_enemy",
+          "status_id": "poison"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_guard",
+    "name": "Toxic Guard",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "basic",
+    "description": "Gain 6 Block.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 6,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Toxic Guard+",
+      "cost": 1,
+      "description": "Gain 9 Block.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 9,
+          "target": "self"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_envenom",
+    "name": "Envenom",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "single_enemy",
+    "rarity": "basic",
+    "description": "Apply 3 Poison.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 3,
+        "target": "single_enemy",
+        "status_id": "poison"
+      }
+    ],
+    "upgrade": {
+      "name": "Envenom+",
+      "cost": 1,
+      "description": "Apply 5 Poison.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 5,
+          "target": "single_enemy",
+          "status_id": "poison"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_cut",
+    "name": "Noxious Cut",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 0,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 2 damage. Apply 2 Poison.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 2,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "apply_status",
+        "value": 2,
+        "target": "single_enemy",
+        "status_id": "poison"
+      }
+    ],
+    "upgrade": {
+      "name": "Noxious Cut+",
+      "cost": 0,
+      "description": "Deal 3 damage. Apply 3 Poison.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 3,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "apply_status",
+          "value": 3,
+          "target": "single_enemy",
+          "status_id": "poison"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_cloud",
+    "name": "Toxic Cloud",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "all_enemies",
+    "rarity": "common",
+    "description": "Apply 2 Poison to ALL enemies.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 2,
+        "target": "all_enemies",
+        "status_id": "poison"
+      }
+    ],
+    "upgrade": {
+      "name": "Toxic Cloud+",
+      "cost": 1,
+      "description": "Apply 3 Poison to ALL enemies.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 3,
+          "target": "all_enemies",
+          "status_id": "poison"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_corrode",
+    "name": "Corrode",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 5 damage, +1 per Poison on the target.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 5,
+        "target": "single_enemy",
+        "per_target_status": {
+          "status_id": "poison",
+          "value": 1
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Corrode+",
+      "cost": 1,
+      "description": "Deal 7 damage, +2 per Poison on the target.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 7,
+          "target": "single_enemy",
+          "per_target_status": {
+            "status_id": "poison",
+            "value": 2
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_septic",
+    "name": "Septic Strike",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 6 damage. +4 if the target is Poisoned.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 6,
+        "target": "single_enemy",
+        "bonus_if_status": {
+          "status_id": "poison",
+          "value": 4
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Septic Strike+",
+      "cost": 1,
+      "description": "Deal 8 damage. +5 if the target is Poisoned.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 8,
+          "target": "single_enemy",
+          "bonus_if_status": {
+            "status_id": "poison",
+            "value": 5
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_veil",
+    "name": "Miasmic Veil",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "all_enemies",
+    "rarity": "common",
+    "description": "Gain 6 Block. Apply 1 Poison to ALL enemies.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 6,
+        "target": "self"
+      },
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "all_enemies",
+        "status_id": "poison"
+      }
+    ],
+    "upgrade": {
+      "name": "Miasmic Veil+",
+      "cost": 1,
+      "description": "Gain 8 Block. Apply 2 Poison to ALL enemies.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 8,
+          "target": "self"
+        },
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "all_enemies",
+          "status_id": "poison"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_catalyst",
+    "name": "Catalyst",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "single_enemy",
+    "rarity": "uncommon",
+    "description": "Double the target's Poison. Exhaust.",
+    "effects": [
+      {
+        "effect": "multiply_status",
+        "value": 0,
+        "target": "single_enemy",
+        "status_id": "poison",
+        "factor": 2
+      }
+    ],
+    "upgrade": {
+      "name": "Catalyst+",
+      "cost": 0,
+      "description": "Costs 0. Double the target's Poison. Exhaust.",
+      "effects": [
+        {
+          "effect": "multiply_status",
+          "value": 0,
+          "target": "single_enemy",
+          "status_id": "poison",
+          "factor": 2
+        }
+      ]
+    },
+    "exhaust": true
+  },
+  {
+    "id": "bianca_venom_mark",
+    "name": "Mark of Blight",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "single_enemy",
+    "rarity": "uncommon",
+    "description": "Apply 10 Blight.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 10,
+        "target": "single_enemy",
+        "status_id": "blight"
+      }
+    ],
+    "upgrade": {
+      "name": "Mark of Blight+",
+      "cost": 1,
+      "description": "Apply 15 Blight.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 15,
+          "target": "single_enemy",
+          "status_id": "blight"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_distill",
+    "name": "Distilled Venom",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "single_enemy",
+    "rarity": "uncommon",
+    "description": "Apply 3 Poison, +1 per Aether.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 3,
+        "target": "single_enemy",
+        "status_id": "poison",
+        "per_aether": 1
+      }
+    ],
+    "upgrade": {
+      "name": "Distilled Venom+",
+      "cost": 1,
+      "description": "Apply 4 Poison, +2 per Aether.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 4,
+          "target": "single_enemy",
+          "status_id": "poison",
+          "per_aether": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_reaping",
+    "name": "Plague Reaping",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 2,
+    "card_type": "skill",
+    "target": "single_enemy",
+    "rarity": "rare",
+    "description": "Apply Blight equal to 3 times the target's Poison.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 0,
+        "target": "single_enemy",
+        "status_id": "blight",
+        "from_target_status": {
+          "status_id": "poison",
+          "factor": 3
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Plague Reaping+",
+      "cost": 2,
+      "description": "Apply Blight equal to 4 times the target's Poison.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 0,
+          "target": "single_enemy",
+          "status_id": "blight",
+          "from_target_status": {
+            "status_id": "poison",
+            "factor": 4
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_bloom",
+    "name": "Virulent Bloom",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 2,
+    "card_type": "skill",
+    "target": "all_enemies",
+    "rarity": "rare",
+    "description": "Apply 3 Poison and 6 Blight to ALL enemies.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 3,
+        "target": "all_enemies",
+        "status_id": "poison"
+      },
+      {
+        "effect": "apply_status",
+        "value": 6,
+        "target": "all_enemies",
+        "status_id": "blight"
+      }
+    ],
+    "upgrade": {
+      "name": "Virulent Bloom+",
+      "cost": 2,
+      "description": "Apply 4 Poison and 9 Blight to ALL enemies.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 4,
+          "target": "all_enemies",
+          "status_id": "poison"
+        },
+        {
+          "effect": "apply_status",
+          "value": 9,
+          "target": "all_enemies",
+          "status_id": "blight"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_epic_pestilence",
+    "name": "Pestilence",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 3,
+    "card_type": "skill",
+    "target": "all_enemies",
+    "rarity": "epic",
+    "description": "Apply 6 Poison and 10 Blight to ALL enemies.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 6,
+        "target": "all_enemies",
+        "status_id": "poison"
+      },
+      {
+        "effect": "apply_status",
+        "value": 10,
+        "target": "all_enemies",
+        "status_id": "blight"
+      }
+    ],
+    "upgrade": {
+      "name": "Pestilence+",
+      "cost": 3,
+      "description": "Apply 8 Poison and 14 Blight to ALL enemies.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 8,
+          "target": "all_enemies",
+          "status_id": "poison"
+        },
+        {
+          "effect": "apply_status",
+          "value": 14,
+          "target": "all_enemies",
+          "status_id": "blight"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_epic_ledger",
+    "name": "Death's Ledger",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 2,
+    "card_type": "power",
+    "target": "all_enemies",
+    "rarity": "epic",
+    "description": "Double the Poison of ALL enemies. Exhaust.",
+    "effects": [
+      {
+        "effect": "multiply_status",
+        "value": 0,
+        "target": "all_enemies",
+        "status_id": "poison",
+        "factor": 2
+      }
+    ],
+    "upgrade": {
+      "name": "Death's Ledger+",
+      "cost": 1,
+      "description": "Costs 1. Double the Poison of ALL enemies. Exhaust.",
+      "effects": [
+        {
+          "effect": "multiply_status",
+          "value": 0,
+          "target": "all_enemies",
+          "status_id": "poison",
+          "factor": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_virulence",
+    "name": "Virulence",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Power: whenever Bianca applies Poison, apply 1 more (3 times a turn).",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 6,
+        "power": {
+          "id": "virulence",
+          "name": "Virulence",
+          "description": "Whenever Bianca applies Poison, apply 1 more (3 times a turn).",
+          "trigger": {
+            "event": "status_applied",
+            "status_id": "poison",
+            "applied_by": "owner"
+          },
+          "effect": {
+            "effect": "extra_status",
+            "value": 1
+          },
+          "limit_per_turn": 3
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Virulence+",
+      "cost": 0,
+      "description": "Power: whenever Bianca applies Poison, apply 1 more (3 times a turn).",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 6,
+          "power": {
+            "id": "virulence",
+            "name": "Virulence",
+            "description": "Whenever Bianca applies Poison, apply 1 more (3 times a turn).",
+            "trigger": {
+              "event": "status_applied",
+              "status_id": "poison",
+              "applied_by": "owner"
+            },
+            "effect": {
+              "effect": "extra_status",
+              "value": 1
+            },
+            "limit_per_turn": 3
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_censer",
+    "name": "Plague Censer",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 2,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "rare",
+    "description": "Power: at the start of each turn, apply 2 Poison to ALL enemies.",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 9,
+        "power": {
+          "id": "censer",
+          "name": "Plague Censer",
+          "description": "At the start of each turn, apply 2 Poison to ALL enemies.",
+          "trigger": {
+            "event": "turn_start"
+          },
+          "effect": {
+            "effect": "apply_status_all",
+            "status_id": "poison",
+            "value": 2
+          },
+          "limit_per_turn": 1
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Plague Censer+",
+      "cost": 2,
+      "description": "Power: at the start of each turn, apply 3 Poison to ALL enemies.",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 11,
+          "power": {
+            "id": "censer",
+            "name": "Plague Censer",
+            "description": "At the start of each turn, apply 3 Poison to ALL enemies.",
+            "trigger": {
+              "event": "turn_start"
+            },
+            "effect": {
+              "effect": "apply_status_all",
+              "status_id": "poison",
+              "value": 3
+            },
+            "limit_per_turn": 1
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_harvest",
+    "name": "Toxic Harvest",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "rare",
+    "description": "Power: whenever an enemy dies, apply 3 Poison to ALL enemies.",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 5,
+        "power": {
+          "id": "harvest",
+          "name": "Toxic Harvest",
+          "description": "Whenever an enemy dies, apply 3 Poison to ALL enemies.",
+          "trigger": {
+            "event": "enemy_killed"
+          },
+          "effect": {
+            "effect": "apply_status_all",
+            "status_id": "poison",
+            "value": 3
+          },
+          "limit_per_turn": 99
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Toxic Harvest+",
+      "cost": 1,
+      "description": "Power: whenever an enemy dies, apply 5 Poison to ALL enemies.",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 7,
+          "power": {
+            "id": "harvest",
+            "name": "Toxic Harvest",
+            "description": "Whenever an enemy dies, apply 5 Poison to ALL enemies.",
+            "trigger": {
+              "event": "enemy_killed"
+            },
+            "effect": {
+              "effect": "apply_status_all",
+              "status_id": "poison",
+              "value": 5
+            },
+            "limit_per_turn": 99
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_volley",
+    "name": "Venom Volley",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 0,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "uncommon",
+    "description": "X times: deal 3 damage and apply 2 Poison.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "single_enemy",
+        "repeat_x": true
+      },
+      {
+        "effect": "apply_status",
+        "value": 2,
+        "target": "single_enemy",
+        "status_id": "poison",
+        "repeat_x": true
+      }
+    ],
+    "upgrade": {
+      "name": "Venom Volley+",
+      "cost": 0,
+      "description": "X times: deal 3 damage and apply 3 Poison.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 3,
+          "target": "single_enemy",
+          "repeat_x": true
+        },
+        {
+          "effect": "apply_status",
+          "value": 3,
+          "target": "single_enemy",
+          "status_id": "poison",
+          "repeat_x": true
+        }
+      ]
+    },
+    "x_cost": true
+  },
+  {
+    "id": "bianca_venom_cloak",
+    "name": "Miasma Cloak",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Retain. Gain 7 Block. Apply 2 Poison.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 7,
+        "target": "self"
+      },
+      {
+        "effect": "apply_status",
+        "value": 2,
+        "target": "single_enemy",
+        "status_id": "poison"
+      }
+    ],
+    "upgrade": {
+      "name": "Miasma Cloak+",
+      "cost": 1,
+      "description": "Retain. Gain 9 Block. Apply 3 Poison.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 9,
+          "target": "self"
+        },
+        {
+          "effect": "apply_status",
+          "value": 3,
+          "target": "single_enemy",
+          "status_id": "poison"
+        }
+      ]
+    },
+    "retain": true
+  },
+  {
+    "id": "bianca_venom_fester",
+    "name": "Festering Strike",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 7 damage. Apply 1 Poison.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 7,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "single_enemy",
+        "status_id": "poison"
+      }
+    ],
+    "upgrade": {
+      "name": "Festering Strike+",
+      "cost": 1,
+      "description": "Deal 9 damage. Apply 2 Poison.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 9,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "single_enemy",
+          "status_id": "poison"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_rupture",
+    "name": "Rupture",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "rare",
+    "description": "Deal damage equal to twice the target's Poison. Exhaust.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 0,
+        "target": "single_enemy",
+        "per_target_status": {
+          "status_id": "poison",
+          "value": 2
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Rupture+",
+      "cost": 1,
+      "description": "Deal damage equal to three times the target's Poison. Exhaust.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 0,
+          "target": "single_enemy",
+          "per_target_status": {
+            "status_id": "poison",
+            "value": 3
+          }
+        }
+      ]
+    },
+    "exhaust": true
+  },
+  {
+    "id": "bianca_venom_contagion",
+    "name": "Contagion",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "single_enemy",
+    "rarity": "uncommon",
+    "description": "Every other enemy gains as much Poison as the target has.",
+    "effects": [
+      {
+        "effect": "spread_status",
+        "target": "single_enemy",
+        "status_id": "poison",
+        "ratio": 1.0
+      }
+    ],
+    "upgrade": {
+      "name": "Contagion+",
+      "cost": 0,
+      "description": "Every other enemy gains as much Poison as the target has.",
+      "effects": [
+        {
+          "effect": "spread_status",
+          "target": "single_enemy",
+          "status_id": "poison",
+          "ratio": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_venom_wither",
+    "name": "Withering Touch",
+    "owner_character_id": "bianca",
+    "specialization_id": "venom",
+    "cost": 0,
+    "card_type": "skill",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Apply 4 Blight and 1 Poison.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 4,
+        "target": "single_enemy",
+        "status_id": "blight"
+      },
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "single_enemy",
+        "status_id": "poison"
+      }
+    ],
+    "upgrade": {
+      "name": "Withering Touch+",
+      "cost": 0,
+      "description": "Apply 6 Blight and 2 Poison.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 6,
+          "target": "single_enemy",
+          "status_id": "blight"
+        },
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "single_enemy",
+          "status_id": "poison"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "id": "retribution",
+  "character_id": "bianca",
+  "identity": "Counterattacks, retaliation and punishing enemies that target the party.",
+  "starting_passive": {
+    "id": "retribution_passive",
+    "name": "TODO: define passive",
+    "description": "Placeholder; design and balance before implementation."
+  },
+  "starting_deck_card_ids": [],
+  "card_pool": [],
+  "skill_tree": {
+    "nodes": [],
+    "note": "Add skill nodes as the specialization is implemented."
+  },
+  "status": "design_template"
+}

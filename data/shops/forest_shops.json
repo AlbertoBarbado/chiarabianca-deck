@@ -1,0 +1,68 @@
+[
+  {
+    "id": "forest_peddler",
+    "name": "Peddler's Clearing",
+    "greeting": "A travelling peddler unpacks her wares on a tree stump.",
+    "stock": [
+      {
+        "item_id": "minor_health_potion",
+        "price": 18,
+        "quantity": 3
+      },
+      {
+        "item_id": "health_potion",
+        "price": 38,
+        "quantity": 1
+      }
+    ],
+    "art": "merchant_forest_peddler",
+    "art_focus": [
+      0.47,
+      0.45
+    ]
+  },
+  {
+    "id": "forest_village_market",
+    "name": "Elderwood Market",
+    "greeting": "The villagers trade herbs and tonics under the great tree.",
+    "stock": [
+      {
+        "item_id": "minor_health_potion",
+        "price": 16,
+        "quantity": 3
+      },
+      {
+        "item_id": "health_potion",
+        "price": 34,
+        "quantity": 2
+      }
+    ],
+    "art": "merchant_forest_village_market",
+    "art_focus": [
+      0.14,
+      0.45
+    ]
+  },
+  {
+    "id": "forest_last_trader",
+    "name": "The Last Trader",
+    "greeting": "\"Nobody goes further than this. Buy what you need.\"",
+    "stock": [
+      {
+        "item_id": "health_potion",
+        "price": 40,
+        "quantity": 2
+      },
+      {
+        "item_id": "minor_health_potion",
+        "price": 20,
+        "quantity": 2
+      }
+    ],
+    "art": "merchant_forest_last_trader",
+    "art_focus": [
+      0.3,
+      0.45
+    ]
+  }
+]

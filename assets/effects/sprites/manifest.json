@@ -1,0 +1,1104 @@
+[
+  {
+    "id": "fire_bolt",
+    "folder": "fire",
+    "path": "res://assets/effects/sprites/fire/fire_bolt.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Fire Bolt",
+    "region": [
+      8,
+      56,
+      285,
+      196
+    ],
+    "size": [
+      277,
+      140
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "flame_wave",
+    "folder": "fire",
+    "path": "res://assets/effects/sprites/fire/flame_wave.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Flame Wave",
+    "region": [
+      285,
+      38,
+      559,
+      196
+    ],
+    "size": [
+      274,
+      158
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "inferno",
+    "folder": "fire",
+    "path": "res://assets/effects/sprites/fire/inferno.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Inferno",
+    "region": [
+      559,
+      38,
+      840,
+      196
+    ],
+    "size": [
+      281,
+      158
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "burning_aura",
+    "folder": "fire",
+    "path": "res://assets/effects/sprites/fire/burning_aura.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Burning Aura",
+    "region": [
+      860,
+      38,
+      1121,
+      196
+    ],
+    "size": [
+      261,
+      158
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "ember_blast",
+    "folder": "fire",
+    "path": "res://assets/effects/sprites/fire/ember_blast.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Ember Blast",
+    "region": [
+      1121,
+      38,
+      1413,
+      196
+    ],
+    "size": [
+      292,
+      158
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "fire_shield",
+    "folder": "fire",
+    "path": "res://assets/effects/sprites/fire/fire_shield.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Fire Shield",
+    "region": [
+      1461,
+      38,
+      1656,
+      196
+    ],
+    "size": [
+      195,
+      158
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "meteor",
+    "folder": "fire",
+    "path": "res://assets/effects/sprites/fire/meteor.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Meteor",
+    "region": [
+      1160,
+      795,
+      1383,
+      941
+    ],
+    "size": [
+      223,
+      146
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "meteor_shower",
+    "folder": "fire",
+    "path": "res://assets/effects/sprites/fire/meteor_shower.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Meteor Shower",
+    "region": [
+      1423,
+      795,
+      1657,
+      941
+    ],
+    "size": [
+      234,
+      146
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "fireball",
+    "folder": "fire",
+    "path": "res://assets/effects/sprites/fire/fireball.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Fireball",
+    "region": [
+      39,
+      63,
+      282,
+      185
+    ],
+    "size": [
+      243,
+      122
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "flame_explosion",
+    "folder": "fire",
+    "path": "res://assets/effects/sprites/fire/flame_explosion.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Flame Explosion",
+    "region": [
+      303,
+      47,
+      568,
+      185
+    ],
+    "size": [
+      265,
+      138
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "burn_apply",
+    "folder": "fire",
+    "path": "res://assets/effects/sprites/fire/burn_apply.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Burn Effect",
+    "region": [
+      1100,
+      46,
+      1366,
+      185
+    ],
+    "size": [
+      266,
+      139
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "burn_tick",
+    "folder": "fire",
+    "path": "res://assets/effects/sprites/fire/burn_tick.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Burn Tick",
+    "region": [
+      1437,
+      57,
+      1583,
+      185
+    ],
+    "size": [
+      146,
+      128
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "holy_strike",
+    "folder": "holy",
+    "path": "res://assets/effects/sprites/holy/holy_strike.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Holy Strike",
+    "region": [
+      8,
+      232,
+      279,
+      382
+    ],
+    "size": [
+      271,
+      150
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "divine_light",
+    "folder": "holy",
+    "path": "res://assets/effects/sprites/holy/divine_light.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Divine Light",
+    "region": [
+      314,
+      232,
+      552,
+      392
+    ],
+    "size": [
+      238,
+      160
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "healing_light",
+    "folder": "holy",
+    "path": "res://assets/effects/sprites/holy/healing_light.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Healing Light",
+    "region": [
+      610,
+      232,
+      834,
+      392
+    ],
+    "size": [
+      224,
+      160
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "blessing",
+    "folder": "holy",
+    "path": "res://assets/effects/sprites/holy/blessing.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Blessing",
+    "region": [
+      862,
+      232,
+      1134,
+      392
+    ],
+    "size": [
+      272,
+      160
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "radiant_shield",
+    "folder": "holy",
+    "path": "res://assets/effects/sprites/holy/radiant_shield.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Radiant Shield",
+    "region": [
+      1155,
+      232,
+      1390,
+      392
+    ],
+    "size": [
+      235,
+      160
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "judgment",
+    "folder": "holy",
+    "path": "res://assets/effects/sprites/holy/judgment.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Judgment",
+    "region": [
+      1410,
+      232,
+      1672,
+      392
+    ],
+    "size": [
+      262,
+      160
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "radiant_strike",
+    "folder": "holy",
+    "path": "res://assets/effects/sprites/holy/radiant_strike.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Radiant Strike",
+    "region": [
+      32,
+      206,
+      282,
+      366
+    ],
+    "size": [
+      250,
+      160
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "blessed_shield",
+    "folder": "holy",
+    "path": "res://assets/effects/sprites/holy/blessed_shield.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Blessed Shield",
+    "region": [
+      314,
+      209,
+      554,
+      366
+    ],
+    "size": [
+      240,
+      157
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "healing",
+    "folder": "holy",
+    "path": "res://assets/effects/sprites/holy/healing.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Healing",
+    "region": [
+      589,
+      219,
+      820,
+      366
+    ],
+    "size": [
+      231,
+      147
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "divine_judgment",
+    "folder": "holy",
+    "path": "res://assets/effects/sprites/holy/divine_judgment.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Divine Judgment",
+    "region": [
+      856,
+      206,
+      1087,
+      366
+    ],
+    "size": [
+      231,
+      160
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "sanctified_ward",
+    "folder": "holy",
+    "path": "res://assets/effects/sprites/holy/sanctified_ward.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Sanctified Ward",
+    "region": [
+      1112,
+      217,
+      1371,
+      366
+    ],
+    "size": [
+      259,
+      149
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "party_heal",
+    "folder": "holy",
+    "path": "res://assets/effects/sprites/holy/party_heal.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Party Heal",
+    "region": [
+      1385,
+      215,
+      1653,
+      366
+    ],
+    "size": [
+      268,
+      151
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "arcane_bolt",
+    "folder": "arcane",
+    "path": "res://assets/effects/sprites/arcane/arcane_bolt.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Arcane Bolt",
+    "region": [
+      12,
+      425,
+      268,
+      560
+    ],
+    "size": [
+      256,
+      135
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "arcane_explosion",
+    "folder": "arcane",
+    "path": "res://assets/effects/sprites/arcane/arcane_explosion.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Arcane Explosion",
+    "region": [
+      303,
+      424,
+      564,
+      580
+    ],
+    "size": [
+      261,
+      156
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "mana_surge",
+    "folder": "arcane",
+    "path": "res://assets/effects/sprites/arcane/mana_surge.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Mana Surge",
+    "region": [
+      601,
+      424,
+      836,
+      580
+    ],
+    "size": [
+      235,
+      156
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "magic_barrier",
+    "folder": "arcane",
+    "path": "res://assets/effects/sprites/arcane/magic_barrier.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Magic Barrier",
+    "region": [
+      890,
+      424,
+      1115,
+      580
+    ],
+    "size": [
+      225,
+      156
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "control",
+    "folder": "arcane",
+    "path": "res://assets/effects/sprites/arcane/control.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Control",
+    "region": [
+      1151,
+      424,
+      1386,
+      580
+    ],
+    "size": [
+      235,
+      156
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "time_warp",
+    "folder": "arcane",
+    "path": "res://assets/effects/sprites/arcane/time_warp.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Time Warp",
+    "region": [
+      1421,
+      424,
+      1672,
+      580
+    ],
+    "size": [
+      251,
+      156
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "chain_lightning",
+    "folder": "arcane",
+    "path": "res://assets/effects/sprites/arcane/chain_lightning.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Chain Lightning",
+    "region": [
+      851,
+      795,
+      1133,
+      941
+    ],
+    "size": [
+      282,
+      146
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "arcane_bolt_runic",
+    "folder": "arcane",
+    "path": "res://assets/effects/sprites/arcane/arcane_bolt_runic.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Arcane Bolt",
+    "region": [
+      24,
+      389,
+      297,
+      538
+    ],
+    "size": [
+      273,
+      149
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "mana_surge_pillar",
+    "folder": "arcane",
+    "path": "res://assets/effects/sprites/arcane/mana_surge_pillar.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Mana Surge",
+    "region": [
+      317,
+      387,
+      569,
+      539
+    ],
+    "size": [
+      252,
+      152
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "arcane_blast",
+    "folder": "arcane",
+    "path": "res://assets/effects/sprites/arcane/arcane_blast.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Arcane Blast",
+    "region": [
+      572,
+      386,
+      838,
+      539
+    ],
+    "size": [
+      266,
+      153
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "arcane_nova",
+    "folder": "arcane",
+    "path": "res://assets/effects/sprites/arcane/arcane_nova.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Arcane Nova",
+    "region": [
+      866,
+      388,
+      1077,
+      539
+    ],
+    "size": [
+      211,
+      151
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "arcane_curse",
+    "folder": "arcane",
+    "path": "res://assets/effects/sprites/arcane/arcane_curse.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Arcane Curse",
+    "region": [
+      1113,
+      389,
+      1369,
+      539
+    ],
+    "size": [
+      256,
+      150
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "mana_shield",
+    "folder": "arcane",
+    "path": "res://assets/effects/sprites/arcane/mana_shield.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Mana Shield",
+    "region": [
+      1404,
+      386,
+      1635,
+      539
+    ],
+    "size": [
+      231,
+      153
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "earth_spike",
+    "folder": "earth",
+    "path": "res://assets/effects/sprites/earth/earth_spike.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Earth Spike",
+    "region": [
+      0,
+      610,
+      275,
+      764
+    ],
+    "size": [
+      275,
+      154
+    ],
+    "mode": "solid",
+    "touches_box_edge": false
+  },
+  {
+    "id": "stone_skin",
+    "folder": "earth",
+    "path": "res://assets/effects/sprites/earth/stone_skin.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Stone Skin",
+    "region": [
+      320,
+      610,
+      549,
+      764
+    ],
+    "size": [
+      229,
+      154
+    ],
+    "mode": "solid",
+    "touches_box_edge": false
+  },
+  {
+    "id": "ground_slam",
+    "folder": "earth",
+    "path": "res://assets/effects/sprites/earth/ground_slam.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Ground Slam",
+    "region": [
+      580,
+      610,
+      856,
+      764
+    ],
+    "size": [
+      276,
+      154
+    ],
+    "mode": "solid",
+    "touches_box_edge": false
+  },
+  {
+    "id": "earth_shatter",
+    "folder": "earth",
+    "path": "res://assets/effects/sprites/earth/earth_shatter.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Earth Shatter",
+    "region": [
+      15,
+      566,
+      292,
+      720
+    ],
+    "size": [
+      277,
+      154
+    ],
+    "mode": "solid",
+    "touches_box_edge": false
+  },
+  {
+    "id": "stone_wall",
+    "folder": "earth",
+    "path": "res://assets/effects/sprites/earth/stone_wall.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Stone Wall",
+    "region": [
+      296,
+      566,
+      571,
+      720
+    ],
+    "size": [
+      275,
+      154
+    ],
+    "mode": "solid",
+    "touches_box_edge": false
+  },
+  {
+    "id": "ice_shards",
+    "folder": "ice",
+    "path": "res://assets/effects/sprites/ice/ice_shards.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Ice Shards",
+    "region": [
+      851,
+      568,
+      1079,
+      720
+    ],
+    "size": [
+      228,
+      152
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "wind_slash",
+    "folder": "wind",
+    "path": "res://assets/effects/sprites/wind/wind_slash.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Wind Slash",
+    "region": [
+      1106,
+      574,
+      1378,
+      720
+    ],
+    "size": [
+      272,
+      146
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "wind_gust",
+    "folder": "wind",
+    "path": "res://assets/effects/sprites/wind/wind_gust.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Wind Gust",
+    "region": [
+      1393,
+      566,
+      1646,
+      720
+    ],
+    "size": [
+      253,
+      154
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "natures_embrace",
+    "folder": "nature",
+    "path": "res://assets/effects/sprites/nature/natures_embrace.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Nature's Embrace",
+    "region": [
+      881,
+      617,
+      1122,
+      764
+    ],
+    "size": [
+      241,
+      147
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "regrowth",
+    "folder": "nature",
+    "path": "res://assets/effects/sprites/nature/regrowth.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Regrowth",
+    "region": [
+      1162,
+      612,
+      1394,
+      764
+    ],
+    "size": [
+      232,
+      152
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "fortify",
+    "folder": "nature",
+    "path": "res://assets/effects/sprites/nature/fortify.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Fortify",
+    "region": [
+      1452,
+      610,
+      1650,
+      764
+    ],
+    "size": [
+      198,
+      154
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "poison_cloud",
+    "folder": "nature",
+    "path": "res://assets/effects/sprites/nature/poison_cloud.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Poison Cloud",
+    "region": [
+      594,
+      797,
+      841,
+      941
+    ],
+    "size": [
+      247,
+      144
+    ],
+    "mode": "solid",
+    "touches_box_edge": false
+  },
+  {
+    "id": "entangling_vines",
+    "folder": "nature",
+    "path": "res://assets/effects/sprites/nature/entangling_vines.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Entangling Vines",
+    "region": [
+      590,
+      567,
+      813,
+      720
+    ],
+    "size": [
+      223,
+      153
+    ],
+    "mode": "solid",
+    "touches_box_edge": false
+  },
+  {
+    "id": "poison_skull",
+    "folder": "nature",
+    "path": "res://assets/effects/sprites/nature/poison_skull.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Poison",
+    "region": [
+      595,
+      752,
+      827,
+      897
+    ],
+    "size": [
+      232,
+      145
+    ],
+    "mode": "solid",
+    "touches_box_edge": false
+  },
+  {
+    "id": "taunt",
+    "folder": "utility",
+    "path": "res://assets/effects/sprites/utility/taunt.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Taunt",
+    "region": [
+      13,
+      795,
+      247,
+      941
+    ],
+    "size": [
+      234,
+      146
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "smoke_screen",
+    "folder": "utility",
+    "path": "res://assets/effects/sprites/utility/smoke_screen.png",
+    "source": "combat_effects_atlas_01.png",
+    "atlas_label": "Smoke Screen",
+    "region": [
+      301,
+      795,
+      558,
+      941
+    ],
+    "size": [
+      257,
+      146
+    ],
+    "mode": "solid",
+    "touches_box_edge": true
+  },
+  {
+    "id": "haste",
+    "folder": "utility",
+    "path": "res://assets/effects/sprites/utility/haste.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Haste",
+    "region": [
+      21,
+      752,
+      275,
+      897
+    ],
+    "size": [
+      254,
+      145
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "invisibility",
+    "folder": "utility",
+    "path": "res://assets/effects/sprites/utility/invisibility.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Invisibility",
+    "region": [
+      295,
+      757,
+      544,
+      897
+    ],
+    "size": [
+      249,
+      140
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "shadow_strike",
+    "folder": "utility",
+    "path": "res://assets/effects/sprites/utility/shadow_strike.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Shadow Strike",
+    "region": [
+      868,
+      752,
+      1118,
+      896
+    ],
+    "size": [
+      250,
+      144
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  },
+  {
+    "id": "barrier",
+    "folder": "utility",
+    "path": "res://assets/effects/sprites/utility/barrier.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Barrier",
+    "region": [
+      1156,
+      752,
+      1350,
+      897
+    ],
+    "size": [
+      194,
+      145
+    ],
+    "mode": "glow",
+    "touches_box_edge": true
+  },
+  {
+    "id": "taunt_alert",
+    "folder": "utility",
+    "path": "res://assets/effects/sprites/utility/taunt_alert.png",
+    "source": "combat_effects_atlas_02.png",
+    "atlas_label": "Taunt",
+    "region": [
+      1408,
+      752,
+      1645,
+      897
+    ],
+    "size": [
+      237,
+      145
+    ],
+    "mode": "glow",
+    "touches_box_edge": false
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "id": "mountain_pinefall_furrier",
+    "name": "Pinefall Furrier",
+    "greeting": "Furs, ropes and a hot tonic. The mountain does not forgive the unprepared.",
+    "stock": [
+      {
+        "item_id": "minor_health_potion",
+        "price": 18,
+        "quantity": 3
+      },
+      {
+        "item_id": "health_potion",
+        "price": 36,
+        "quantity": 2
+      },
+      {
+        "item_id": "yetifur_mantle",
+        "price": 90,
+        "quantity": 1
+      }
+    ],
+    "art": "merchant_mountain_furrier",
+    "art_focus": [
+      0.3,
+      0.45
+    ]
+  },
+  {
+    "id": "mountain_trading_post",
+    "name": "Glacier Trading Post",
+    "greeting": "Last trade before the ice. Prices go up with the altitude.",
+    "stock": [
+      {
+        "item_id": "minor_health_potion",
+        "price": 20,
+        "quantity": 2
+      },
+      {
+        "item_id": "health_potion",
+        "price": 38,
+        "quantity": 2
+      },
+      {
+        "item_id": "glacier_plate",
+        "price": 95,
+        "quantity": 1
+      }
+    ],
+    "art": "merchant_mountain_furrier",
+    "art_focus": [
+      0.3,
+      0.45
+    ]
+  },
+  {
+    "id": "mountain_monastery",
+    "name": "Monastery Stores",
+    "greeting": "Tonics of mountain herbs, blessed against the cold.",
+    "stock": [
+      {
+        "item_id": "minor_health_potion",
+        "price": 18,
+        "quantity": 2
+      },
+      {
+        "item_id": "health_potion",
+        "price": 34,
+        "quantity": 3
+      }
+    ],
+    "art": "merchant_mountain_monk",
+    "art_focus": [
+      0.3,
+      0.45
+    ]
+  }
+]

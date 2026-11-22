@@ -1,0 +1,506 @@
+[
+  {
+    "id": "chiara_fire_epic_phoenix",
+    "name": "Phoenix Rebirth",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 2,
+    "card_type": "spell",
+    "target": "all_enemies",
+    "rarity": "epic",
+    "description": "Deal 12 damage and apply 3 Burn to ALL enemies.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 12,
+        "target": "all_enemies"
+      },
+      {
+        "effect": "apply_status",
+        "value": 3,
+        "target": "all_enemies",
+        "status_id": "burn"
+      }
+    ],
+    "upgrade": {
+      "name": "Phoenix Rebirth+",
+      "cost": 2,
+      "description": "Deal 16 damage and apply 4 Burn to ALL enemies.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 16,
+          "target": "all_enemies"
+        },
+        {
+          "effect": "apply_status",
+          "value": 4,
+          "target": "all_enemies",
+          "status_id": "burn"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_fire_inferno.png"
+  },
+  {
+    "id": "chiara_fire_epic_heart",
+    "name": "Heart of Embers",
+    "owner_character_id": "chiara",
+    "specialization_id": "fire",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "epic",
+    "description": "Gain 2 Energy. Draw 2 cards. Exhaust.",
+    "effects": [
+      {
+        "effect": "gain_energy",
+        "value": 2,
+        "target": "self"
+      },
+      {
+        "effect": "draw",
+        "value": 2,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Heart of Embers+",
+      "cost": 0,
+      "description": "Costs 0. Gain 2 Energy. Draw 2 cards. Exhaust.",
+      "effects": [
+        {
+          "effect": "gain_energy",
+          "value": 2,
+          "target": "self"
+        },
+        {
+          "effect": "draw",
+          "value": 2,
+          "target": "self"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_fire_kindle.png"
+  },
+  {
+    "id": "chiara_arcana_epic_starstorm",
+    "name": "Starstorm",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 3,
+    "card_type": "spell",
+    "target": "all_enemies",
+    "rarity": "epic",
+    "description": "Deal 9 damage to ALL enemies twice.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 9,
+        "target": "all_enemies"
+      },
+      {
+        "effect": "damage",
+        "value": 9,
+        "target": "all_enemies"
+      }
+    ],
+    "upgrade": {
+      "name": "Starstorm+",
+      "cost": 3,
+      "description": "Deal 12 damage to ALL enemies twice.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 12,
+          "target": "all_enemies"
+        },
+        {
+          "effect": "damage",
+          "value": 12,
+          "target": "all_enemies"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_arcana_starfall.png"
+  },
+  {
+    "id": "chiara_arcana_epic_timefold",
+    "name": "Time Fold",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 0,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "epic",
+    "description": "Draw 3 cards. Gain 1 Energy. Exhaust.",
+    "effects": [
+      {
+        "effect": "draw",
+        "value": 3,
+        "target": "self"
+      },
+      {
+        "effect": "gain_energy",
+        "value": 1,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Time Fold+",
+      "cost": 0,
+      "description": "Draw 4 cards. Gain 2 Energy. Exhaust.",
+      "effects": [
+        {
+          "effect": "draw",
+          "value": 4,
+          "target": "self"
+        },
+        {
+          "effect": "gain_energy",
+          "value": 2,
+          "target": "self"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/chiara_arcana_insight.png"
+  },
+  {
+    "id": "bianca_holy_epic_dawnbreaker",
+    "name": "Dawnbreaker",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 2,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "epic",
+    "description": "Deal 24 damage. Heal the party for 6.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 24,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "heal",
+        "value": 6,
+        "target": "all_allies"
+      }
+    ],
+    "upgrade": {
+      "name": "Dawnbreaker+",
+      "cost": 2,
+      "description": "Deal 32 damage. Heal the party for 8.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 32,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "heal",
+          "value": 8,
+          "target": "all_allies"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_holy_judgment.png"
+  },
+  {
+    "id": "bianca_holy_epic_sanctuary",
+    "name": "Sanctuary",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 2,
+    "card_type": "support",
+    "target": "all_allies",
+    "rarity": "epic",
+    "description": "Give the party 12 Block and heal it for 8.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 12,
+        "target": "all_allies"
+      },
+      {
+        "effect": "heal",
+        "value": 8,
+        "target": "all_allies"
+      }
+    ],
+    "upgrade": {
+      "name": "Sanctuary+",
+      "cost": 2,
+      "description": "Give the party 16 Block and heal it for 12.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 16,
+          "target": "all_allies"
+        },
+        {
+          "effect": "heal",
+          "value": 12,
+          "target": "all_allies"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_holy_benediction.png"
+  },
+  {
+    "id": "bianca_tanking_epic_fortress",
+    "name": "Living Fortress",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 2,
+    "card_type": "skill",
+    "target": "all_enemies",
+    "rarity": "epic",
+    "description": "Gain 20 Block. Taunt ALL enemies for 1 turn.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 20,
+        "target": "self"
+      },
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "all_enemies",
+        "status_id": "taunt"
+      }
+    ],
+    "upgrade": {
+      "name": "Living Fortress+",
+      "cost": 2,
+      "description": "Gain 26 Block. Taunt ALL enemies for 1 turn.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 26,
+          "target": "self"
+        },
+        {
+          "effect": "apply_status",
+          "value": 1,
+          "target": "all_enemies",
+          "status_id": "taunt"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_tanking_wall.png"
+  },
+  {
+    "id": "bianca_tanking_epic_shieldstorm",
+    "name": "Shield Storm",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 2,
+    "card_type": "attack",
+    "target": "all_enemies",
+    "rarity": "epic",
+    "description": "Deal 6 damage plus your Block to ALL enemies.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 6,
+        "target": "all_enemies",
+        "per_source_block": 1.0
+      }
+    ],
+    "upgrade": {
+      "name": "Shield Storm+",
+      "cost": 2,
+      "description": "Deal 10 damage plus your Block to ALL enemies.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 10,
+          "target": "all_enemies",
+          "per_source_block": 1.0
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_tanking_sweep.png"
+  },
+  {
+    "id": "chiara_frost_epic_avalanche",
+    "name": "Avalanche",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 3,
+    "card_type": "spell",
+    "target": "all_enemies",
+    "rarity": "epic",
+    "description": "Deal 14 damage and 3 Chill to ALL enemies.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 14,
+        "target": "all_enemies"
+      },
+      {
+        "effect": "apply_status",
+        "value": 3,
+        "target": "all_enemies",
+        "status_id": "chill"
+      }
+    ],
+    "upgrade": {
+      "name": "Avalanche+",
+      "cost": 3,
+      "description": "Deal 18 damage and 3 Chill to ALL enemies.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 18,
+          "target": "all_enemies"
+        },
+        {
+          "effect": "apply_status",
+          "value": 3,
+          "target": "all_enemies",
+          "status_id": "chill"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_frost_epic_heart",
+    "name": "Frozen Heart",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 1,
+    "card_type": "power",
+    "target": "all_enemies",
+    "rarity": "epic",
+    "description": "2 Chill to ALL enemies. Gain 2 Energy. Exhaust.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 2,
+        "target": "all_enemies",
+        "status_id": "chill"
+      },
+      {
+        "effect": "gain_energy",
+        "value": 2,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Frozen Heart+",
+      "cost": 0,
+      "description": "Costs 0. 2 Chill to ALL enemies. Gain 2 Energy. Exhaust.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "all_enemies",
+          "status_id": "chill"
+        },
+        {
+          "effect": "gain_energy",
+          "value": 2,
+          "target": "self"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_epic_ashfall",
+    "name": "Ashfall",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 3,
+    "card_type": "attack",
+    "target": "all_enemies",
+    "rarity": "epic",
+    "description": "Apply 3 Oiled to ALL, then deal 10 Fire damage to ALL.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 3,
+        "target": "all_enemies",
+        "status_id": "oiled"
+      },
+      {
+        "effect": "damage",
+        "value": 10,
+        "target": "all_enemies",
+        "element": "fire"
+      }
+    ],
+    "upgrade": {
+      "name": "Ashfall+",
+      "cost": 3,
+      "description": "Apply 3 Oiled to ALL, then deal 14 Fire damage to ALL.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 3,
+          "target": "all_enemies",
+          "status_id": "oiled"
+        },
+        {
+          "effect": "damage",
+          "value": 14,
+          "target": "all_enemies",
+          "element": "fire"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_epic_veil",
+    "name": "Veil of Ash",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 2,
+    "card_type": "skill",
+    "target": "all_allies",
+    "rarity": "epic",
+    "description": "Give the party 8 Block. Apply 2 Oiled to ALL. Draw 2.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 8,
+        "target": "all_allies"
+      },
+      {
+        "effect": "apply_status",
+        "value": 2,
+        "target": "all_enemies",
+        "status_id": "oiled"
+      },
+      {
+        "effect": "draw",
+        "value": 2,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Veil of Ash+",
+      "cost": 2,
+      "description": "Give the party 11 Block. Apply 2 Oiled to ALL. Draw 2.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 11,
+          "target": "all_allies"
+        },
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "all_enemies",
+          "status_id": "oiled"
+        },
+        {
+          "effect": "draw",
+          "value": 2,
+          "target": "self"
+        }
+      ]
+    }
+  }
+]

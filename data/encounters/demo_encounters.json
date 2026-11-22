@@ -1,0 +1,67 @@
+[
+  {
+    "id": "demo_bats",
+    "name": "Bat Roost",
+    "terrain": "chasm",
+    "enemies": [
+      "demo_cave_bat",
+      "demo_cave_bat"
+    ],
+    "gold_reward": 18
+  },
+  {
+    "id": "demo_spores",
+    "name": "Spore Grove",
+    "terrain": "grotto",
+    "enemies": [
+      "demo_fungal_shambler",
+      "demo_cave_bat"
+    ],
+    "gold_reward": 22
+  },
+  {
+    "id": "demo_golem",
+    "name": "Golem Gate",
+    "terrain": "ruins",
+    "enemies": [
+      "demo_crystal_golem"
+    ],
+    "gold_reward": 26
+  },
+  {
+    "id": "demo_mixed",
+    "name": "Glittering Deep",
+    "terrain": "ruins",
+    "enemies": [
+      "demo_shadow_wraith",
+      "demo_crystal_golem"
+    ],
+    "gold_reward": 34
+  },
+  {
+    "id": "demo_wraith",
+    "name": "The Shadow Wraith",
+    "terrain": "grotto",
+    "elite": true,
+    "enemies": [
+      "demo_shadow_wraith",
+      "demo_cave_bat"
+    ],
+    "gold_reward": 55,
+    "intro": "A wraith drifts out of the dark between the crystals. Its claws open wounds that bleed with every blow."
+  },
+  {
+    "id": "demo_boss_wyrm",
+    "name": "The Crystal Wyrm",
+    "boss": true,
+    "enemies": [
+      "demo_crystal_wyrm"
+    ],
+    "gold_reward": 110,
+    "intro": "The cavern hums as the Crystal Wyrm uncoils. Its fangs make you bleed, its breath burns, and its venom lingers.",
+    "reward": {
+      "pool": "epic",
+      "card_options": 3
+    }
+  }
+]

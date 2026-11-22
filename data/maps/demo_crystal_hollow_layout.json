@@ -1,0 +1,75 @@
+{
+  "id": "crystal_hollow_layout",
+  "layout_for": "crystal_hollow_demo",
+  "_comment": "Presentation only: positions on the ComfyUI-generated map picture (assets/generated/demo/map_crystal_hollow.png).",
+  "background_asset": "map_crystal_hollow",
+  "node_size": [
+    74,
+    74
+  ],
+  "default_bend": 0.05,
+  "nodes": {
+    "demo_cave_mouth": [
+      0.5,
+      0.86
+    ],
+    "bat_roost": [
+      0.33,
+      0.74
+    ],
+    "echo_pool": [
+      0.67,
+      0.74
+    ],
+    "spore_grove": [
+      0.2,
+      0.6
+    ],
+    "glow_cache": [
+      0.46,
+      0.6
+    ],
+    "miners_camp": [
+      0.76,
+      0.6
+    ],
+    "golem_gate": [
+      0.5,
+      0.46
+    ],
+    "wraith_hall": [
+      0.22,
+      0.44
+    ],
+    "crystal_spring": [
+      0.76,
+      0.44
+    ],
+    "glittering_deep": [
+      0.4,
+      0.31
+    ],
+    "wyrm_lair": [
+      0.6,
+      0.19
+    ],
+    "hollow_exit": [
+      0.82,
+      0.13
+    ]
+  },
+  "label_sides": {
+    "demo_cave_mouth": "right",
+    "bat_roost": "below",
+    "echo_pool": "below",
+    "spore_grove": "below",
+    "glow_cache": "below",
+    "miners_camp": "below",
+    "golem_gate": "below",
+    "wraith_hall": "below",
+    "crystal_spring": "below",
+    "glittering_deep": "below",
+    "wyrm_lair": "left",
+    "hollow_exit": "right"
+  }
+}

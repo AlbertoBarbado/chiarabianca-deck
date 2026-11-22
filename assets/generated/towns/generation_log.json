@@ -1,0 +1,379 @@
+{
+ "_comment": "Generated locally with ComfyUI. Model: FLUX.1 [schnell] (Apache 2.0, black-forest-labs) GGUF Q3_K_S by city96; text encoders CLIP-L + T5-XXL GGUF; background removal BiRefNet (MIT). 4 steps, euler/simple, CFG 1.",
+ "assets": {
+  "town_brookside_camp": {
+   "file": "res://assets/generated/towns/town_brookside_camp.png",
+   "prompt": "a small woodcutters' camp beside a clear forest brook, a campfire, log benches, stacked firewood, canvas tents and a woodpile, tall sunlit trees, early evening, wide establishing shot, fantasy settlement scene, no text, no letters, no signs with writing, background art for a JRPG, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 6101,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 179.0,
+   "date": "2026-11-18"
+  },
+  "town_elderwood_village": {
+   "file": "res://assets/generated/towns/town_elderwood_village.png",
+   "prompt": "a hidden fantasy village built among the enormous roots of a giant ancient tree, wooden houses with round doors and glowing lantern windows, rope bridges, market stalls with herbs below, warm golden light, wide establishing shot, fantasy settlement scene, no text, no letters, no signs with writing, background art for a JRPG, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 6102,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 100.7,
+   "date": "2026-11-18"
+  },
+  "town_last_trader_outpost": {
+   "file": "res://assets/generated/towns/town_last_trader_outpost.png",
+   "prompt": "a lonely fortified wooden trading post at the edge of a dark misty forest, palisade wall, crates and barrels, a single lantern, ominous serpent-shaped mountains in the distance, dusk, wide establishing shot, fantasy settlement scene, no text, no letters, no signature, no watermark, blank wooden signs, background art for a JRPG, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 6113,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 146.5,
+   "date": "2026-11-18"
+  },
+  "town_lantern_post": {
+   "file": "res://assets/generated/towns/town_lantern_post.png",
+   "prompt": "a forest crossroads with a tall wooden lantern post and a rangers' shelter, a signpost, a small campfire, supply crates, blue twilight with fireflies, wide establishing shot, fantasy settlement scene, no text, no letters, no signs with writing, background art for a JRPG, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 6104,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 103.6,
+   "date": "2026-11-18"
+  },
+  "town_charcoal_camp": {
+   "file": "res://assets/generated/towns/town_charcoal_camp.png",
+   "prompt": "a charcoal burners' camp in a forest clearing, earthen kilns smoking, piles of logs, embers glowing orange, smoke curling between dark pine trees, wide establishing shot, fantasy settlement scene, no text, no letters, no signs with writing, background art for a JRPG, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 6105,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 92.9,
+   "date": "2026-11-18"
+  },
+  "town_fishers_hamlet": {
+   "file": "res://assets/generated/towns/town_fishers_hamlet.png",
+   "prompt": "a floating village of fishing boats lashed together on a calm turquoise sea, fishing nets drying on the masts, plank walkways between the boats, lanterns, a sunny coast in the distance, wide establishing shot, fantasy settlement scene, no text, no letters, no signs with writing, background art for a JRPG, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 6106,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 94.3,
+   "date": "2026-11-18"
+  },
+  "town_tide_camp": {
+   "file": "res://assets/generated/towns/town_tide_camp.png",
+   "prompt": "a ring of wooden rafts tied around an old anchored shipwreck hulk on the sea, a glowing brazier on the deck, ropes and barrels, sunset over the waves, wide establishing shot, fantasy settlement scene, no text, no letters, no signs with writing, background art for a JRPG, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 6107,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 95.5,
+   "date": "2026-11-18"
+  },
+  "town_dune_village": {
+   "file": "res://assets/generated/towns/town_dune_village.png",
+   "prompt": "a desert village among golden sand dunes beside the sea, striped cloth awnings over market stalls, adobe houses, camels resting in the shade, palm trees, bright sun, wide establishing shot, fantasy settlement scene, no text, no letters, no signature, no watermark, blank wooden signs, background art for a JRPG, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 6118,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 103.0,
+   "date": "2026-11-18"
+  },
+  "town_last_camp": {
+   "file": "res://assets/generated/towns/town_last_camp.png",
+   "prompt": "a last shelter camp on a windswept rocky shore, a tattered tent and a lone trader's cart, a dark storm with lightning gathering over the sea, dramatic clouds, wide establishing shot, fantasy settlement scene, no text, no letters, no signs with writing, background art for a JRPG, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 6109,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 113.4,
+   "date": "2026-11-18"
+  },
+  "merchant_castle_potions": {
+   "file": "res://assets/generated/towns/merchant_castle_potions.png",
+   "prompt": "a kindly elderly royal quartermaster in a blue and gold livery behind a polished counter of potion bottles in a castle storeroom, shelves of jars, stone walls, plain blue banners without symbols, no signature, no watermark, blank signs, medium shot, the merchant at the left third of the image looking at the viewer with a welcoming gesture, their shop around them, no text, no letters, JRPG shop scene, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 6211,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 178.8,
+   "date": "2026-11-18"
+  },
+  "merchant_forest_peddler": {
+   "file": "res://assets/generated/towns/merchant_forest_peddler.png",
+   "prompt": "a cheerful travelling peddler woman with a wide hat unpacking colourful wares on a big tree stump in a sunny forest clearing, a heavy backpack, hanging pots and charms, medium shot, the merchant at the left third of the image looking at the viewer with a welcoming gesture, their shop around them, no text, no letters, JRPG shop scene, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 6202,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 94.8,
+   "date": "2026-11-18"
+  },
+  "merchant_forest_village_market": {
+   "file": "res://assets/generated/towns/merchant_forest_village_market.png",
+   "prompt": "a friendly elf herbalist at a wooden market stall under the roots of a giant tree, bundles of dried herbs, glowing tonic bottles, baskets, warm lantern light, medium shot, the merchant at the left third of the image looking at the viewer with a welcoming gesture, their shop around them, no text, no letters, JRPG shop scene, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 6203,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 92.8,
+   "date": "2026-11-18"
+  },
+  "merchant_forest_last_trader": {
+   "file": "res://assets/generated/towns/merchant_forest_last_trader.png",
+   "prompt": "a grizzled one-eyed trader in a fur cloak behind a crude plank counter inside a dim fortified outpost, weapons and potions on the wall, a single lantern, medium shot, the merchant at the left third of the image looking at the viewer with a welcoming gesture, their shop around them, no text, no letters, JRPG shop scene, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 6204,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 94.8,
+   "date": "2026-11-18"
+  },
+  "merchant_beach_fish_market": {
+   "file": "res://assets/generated/towns/merchant_beach_fish_market.png",
+   "prompt": "a jolly bearded fisherman merchant at a stall on a boat deck, baskets of fish, sea-salt tonic bottles without labels, coral armour pieces hanging, nets and seagulls, sunny sea, no signature, no watermark, blank signs, medium shot, the merchant at the left third of the image looking at the viewer with a welcoming gesture, their shop around them, no text, no letters, JRPG shop scene, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 6215,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 142.8,
+   "date": "2026-11-18"
+  },
+  "merchant_beach_dune_bazaar": {
+   "file": "res://assets/generated/towns/merchant_beach_dune_bazaar.png",
+   "prompt": "a desert bazaar merchant woman in flowing robes and a veil under a striped awning, rugs, brass lamps, potions and travel gear, sand dunes behind, bright sun, no signature, no watermark, blank signs, medium shot, the merchant at the left third of the image looking at the viewer with a welcoming gesture, their shop around them, no text, no letters, JRPG shop scene, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 6216,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 96.6,
+   "date": "2026-11-18"
+  },
+  "merchant_beach_last_merchant": {
+   "file": "res://assets/generated/towns/merchant_beach_last_merchant.png",
+   "prompt": "a grim hooded trader beside a cart under a tattered tent on a stormy shore, a lantern, potions and old weapons, dark storm clouds and lightning over the sea, medium shot, the merchant at the left third of the image looking at the viewer with a welcoming gesture, their shop around them, no text, no letters, JRPG shop scene, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 6207,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 93.3,
+   "date": "2026-11-18"
+  },
+  "town_pinefall_village": {
+   "file": "res://assets/generated/towns/town_pinefall_village.png",
+   "prompt": "a cosy mountain village of wooden houses with steep snowy roofs among tall pines at the foot of a great mountain, smoke from chimneys, warm lantern light, a small shrine gate, fantasy settlement scene, no text, no letters, no signature, no watermark, blank wooden signs, background art for a JRPG, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 9451,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 54.2,
+   "date": "2026-11-22"
+  },
+  "town_ropebridge_outpost": {
+   "file": "res://assets/generated/towns/town_ropebridge_outpost.png",
+   "prompt": "a small fortified wooden outpost on a cliff ledge beside a long rope bridge over a misty chasm, snow, a watchtower, a brazier, glaciers behind, fantasy settlement scene, no text, no letters, no signature, no watermark, blank wooden signs, background art for a JRPG, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 9452,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 94.5,
+   "date": "2026-11-22"
+  },
+  "town_cloud_monastery": {
+   "file": "res://assets/generated/towns/town_cloud_monastery.png",
+   "prompt": "a serene mountain monastery with curved tiled roofs perched on a high crag above a sea of clouds, prayer flags, stone steps, snow, golden sunset, fantasy settlement scene, no text, no letters, no signature, no watermark, blank wooden signs, background art for a JRPG, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 9453,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 56.2,
+   "date": "2026-11-22"
+  },
+  "town_last_cairn": {
+   "file": "res://assets/generated/towns/town_last_cairn.png",
+   "prompt": "a lonely last camp below the summit, a stone cairn, a tattered tent and a lantern in the snow, a storm gathering around the jagged white peak above, dusk, fantasy settlement scene, no text, no letters, no signature, no watermark, blank wooden signs, background art for a JRPG, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 9454,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 100.4,
+   "date": "2026-11-22"
+  },
+  "merchant_mountain_furrier": {
+   "file": "res://assets/generated/towns/merchant_mountain_furrier.png",
+   "prompt": "a burly bearded mountain furrier in a thick fur coat behind a wooden counter with furs, warm cloaks, ropes, climbing picks and potions, snowy window, no signature, no watermark, blank signs, medium shot, the merchant at the left third of the image looking at the viewer with a welcoming gesture, their shop around them, no text, no letters, JRPG shop scene, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 9461,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 255.7,
+   "date": "2026-11-22"
+  },
+  "merchant_mountain_monk": {
+   "file": "res://assets/generated/towns/merchant_mountain_monk.png",
+   "prompt": "a calm elderly mountain monk merchant in orange and grey robes beside shelves of herbal tonics and talismans in a stone monastery hall, incense, cold light, no signature, no watermark, blank signs, medium shot, the merchant at the left third of the image looking at the viewer with a welcoming gesture, their shop around them, no text, no letters, JRPG shop scene, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 9462,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 324.6,
+   "date": "2026-11-22"
+  }
+ }
+}

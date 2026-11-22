@@ -1,0 +1,241 @@
+[
+  {
+    "id": "beach_shipwreck",
+    "pools": [
+      "beach",
+      "beach_sea"
+    ],
+    "title": "The Wreck of the Gilded Gull",
+    "paragraphs": [
+      "A merchant ship lies broken on the rocks, its hold half flooded. Something glints below the dark water."
+    ],
+    "choices": [
+      {
+        "text": "Search the deck",
+        "result": "Gain 40 gold.",
+        "effects": [
+          {
+            "type": "gain_gold",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "text": "Dive into the flooded hold (lose 8 HP each)",
+        "result": "Each party member loses 8 HP. You find a Kelpwoven Coat.",
+        "effects": [
+          {
+            "type": "damage_party",
+            "value": 8
+          },
+          {
+            "type": "gain_equipment",
+            "item_id": "kelpwoven_coat"
+          }
+        ]
+      },
+      {
+        "text": "Leave the wreck",
+        "result": "You move on.",
+        "effects": []
+      }
+    ]
+  },
+  {
+    "id": "beach_tidepool",
+    "pools": [
+      "beach",
+      "beach_shore"
+    ],
+    "title": "Glittering Tide Pool",
+    "paragraphs": [
+      "Warm water, bright anemones and a pearl the size of a thumb sit in a still tide pool."
+    ],
+    "choices": [
+      {
+        "text": "Rest your feet in the water",
+        "result": "Each party member heals 12 HP.",
+        "effects": [
+          {
+            "type": "heal_party",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "text": "Reach for the pearl",
+        "result": "An anemone stings: each party member loses 5 HP. Gain 55 gold.",
+        "effects": [
+          {
+            "type": "damage_party",
+            "value": 5
+          },
+          {
+            "type": "gain_gold",
+            "value": 55
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "beach_fisherman",
+    "pools": [
+      "beach",
+      "beach_sea"
+    ],
+    "title": "The Stranded Fisherman",
+    "paragraphs": [
+      "An old fisherman clings to the mast of his sinking boat as your ship passes. \"Help me, princesses, and I'll teach you what the sea taught me.\""
+    ],
+    "choices": [
+      {
+        "text": "Give him a Health Potion",
+        "result": "He shares an old sea technique.",
+        "requires": {
+          "item": "health_potion"
+        },
+        "effects": [
+          {
+            "type": "lose_item",
+            "item_id": "health_potion",
+            "count": 1
+          },
+          {
+            "type": "card_reward"
+          }
+        ]
+      },
+      {
+        "text": "Pull his boat ashore (lose 6 HP each)",
+        "result": "Each party member loses 6 HP. He pays you 35 gold.",
+        "effects": [
+          {
+            "type": "damage_party",
+            "value": 6
+          },
+          {
+            "type": "gain_gold",
+            "value": 35
+          }
+        ]
+      },
+      {
+        "text": "Wish him luck",
+        "result": "You move on.",
+        "effects": []
+      }
+    ]
+  },
+  {
+    "id": "beach_bottle",
+    "pools": [
+      "beach",
+      "beach_sea",
+      "beach_shore"
+    ],
+    "title": "Message in a Bottle",
+    "paragraphs": [
+      "A green bottle bobs in on the waves. Inside, a sketch of a fighting stance and a few words in a dead sailor's hand."
+    ],
+    "choices": [
+      {
+        "text": "Study the sketch",
+        "result": "Choose a new card.",
+        "effects": [
+          {
+            "type": "card_reward"
+          }
+        ]
+      },
+      {
+        "text": "Sell the bottle at the next port",
+        "result": "Gain 25 gold.",
+        "effects": [
+          {
+            "type": "gain_gold",
+            "value": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "beach_sun_shrine",
+    "pools": [
+      "beach",
+      "beach_shore"
+    ],
+    "title": "Half-buried Sun Shrine",
+    "paragraphs": [
+      "A sandstone shrine to the sun pokes out of a dune. Its offering bowl is still full; something moves in the sand around it."
+    ],
+    "choices": [
+      {
+        "text": "Pray at the shrine",
+        "result": "Each party member recovers 30% of their HP.",
+        "effects": [
+          {
+            "type": "heal_party_fraction",
+            "fraction": 0.3
+          }
+        ]
+      },
+      {
+        "text": "Take the offerings",
+        "result": "Rock spiders burst from the sand! You keep a pair of Dunewalker Wraps.",
+        "effects": [
+          {
+            "type": "gain_equipment",
+            "item_id": "dunewalker_wraps"
+          },
+          {
+            "type": "start_combat",
+            "encounter_id": "beach_spiders_2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "beach_smugglers",
+    "pools": [
+      "beach",
+      "beach_shore"
+    ],
+    "title": "Smugglers' Fire",
+    "paragraphs": [
+      "Smugglers warm themselves at a cave fire. They eye your purse, then your swords, and decide to trade instead."
+    ],
+    "choices": [
+      {
+        "text": "Buy a crate of tonics (30 gold)",
+        "result": "Lose 30 gold. Gain 2 Health Potions.",
+        "requires": {
+          "gold": 30
+        },
+        "effects": [
+          {
+            "type": "lose_gold",
+            "value": 30
+          },
+          {
+            "type": "gain_item",
+            "item_id": "health_potion",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "text": "Share their fire",
+        "result": "Each party member heals 10 HP.",
+        "effects": [
+          {
+            "type": "heal_party",
+            "value": 10
+          }
+        ]
+      }
+    ]
+  }
+]

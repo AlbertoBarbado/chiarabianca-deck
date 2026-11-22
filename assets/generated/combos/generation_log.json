@@ -1,0 +1,209 @@
+{
+ "_comment": "Generated locally with ComfyUI. Model: FLUX.1 [schnell] (Apache 2.0, black-forest-labs) GGUF Q3_K_S by city96; text encoders CLIP-L + T5-XXL GGUF; background removal BiRefNet (MIT). 4 steps, euler/simple, CFG 1.",
+ "assets": {
+  "card_tanking_runic": {
+   "file": "res://assets/generated/combos/card_tanking_runic.png",
+   "prompt": "a heavy knight's tower shield engraved with glowing violet runes, arcane light, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6701,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 26.2,
+   "date": "2026-11-19"
+  },
+  "card_tanking_momentum": {
+   "file": "res://assets/generated/combos/card_tanking_momentum.png",
+   "prompt": "an armoured knight charging forward behind a plain round steel shield with no emblem, wind streaks and dust trailing, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6712,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.2,
+   "date": "2026-11-19"
+  },
+  "card_tanking_brand": {
+   "file": "res://assets/generated/combos/card_tanking_brand.png",
+   "prompt": "a shield bash slamming into a burning foe, embers bursting, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6703,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.1,
+   "date": "2026-11-19"
+  },
+  "card_holy_sunfire": {
+   "file": "res://assets/generated/combos/card_holy_sunfire.png",
+   "prompt": "a golden holy sword wreathed in sacred flame striking down, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6704,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.1,
+   "date": "2026-11-19"
+  },
+  "card_holy_psalm": {
+   "file": "res://assets/generated/combos/card_holy_psalm.png",
+   "prompt": "golden feathers and wind swirling around a praying knight, holy light, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6705,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.1,
+   "date": "2026-11-19"
+  },
+  "card_ash_hexpowder": {
+   "file": "res://assets/generated/combos/card_ash_hexpowder.png",
+   "prompt": "black powder bursting into violet arcane flames, sparks and smoke, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6706,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.1,
+   "date": "2026-11-19"
+  },
+  "card_fire_flashpoint": {
+   "file": "res://assets/generated/combos/card_fire_flashpoint.png",
+   "prompt": "two quick bursts of fire flashing from a mage's fingertips, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6707,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.2,
+   "date": "2026-11-19"
+  },
+  "card_fire_wildfire": {
+   "file": "res://assets/generated/combos/card_fire_wildfire.png",
+   "prompt": "a wildfire racing across dry grassland at dusk, sweeping flames, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6708,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.1,
+   "date": "2026-11-19"
+  },
+  "card_fire_volley": {
+   "file": "res://assets/generated/combos/card_fire_volley.png",
+   "prompt": "a volley of three small fiery embers shooting through the night air, glowing trails, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6709,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.1,
+   "date": "2026-11-19"
+  },
+  "vfx_combustion": {
+   "file": "res://assets/generated/combos/vfx_combustion.png",
+   "prompt": "a violent explosion of green poison gas igniting into orange fire, toxic fireball, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 6901,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 26.2,
+   "date": "2026-11-19"
+  },
+  "vfx_miasma": {
+   "file": "res://assets/generated/combos/vfx_miasma.png",
+   "prompt": "a wide ring of glowing green poison mist blown outward by wind, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 6902,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 24.3,
+   "date": "2026-11-19"
+  },
+  "vfx_blight": {
+   "file": "res://assets/generated/combos/vfx_blight.png",
+   "prompt": "a ghostly violet skull of mist rising and dissolving, deathly glow, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 6903,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 26.1,
+   "date": "2026-11-19"
+  }
+ }
+}

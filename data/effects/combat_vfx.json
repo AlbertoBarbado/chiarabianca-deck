@@ -1,0 +1,1486 @@
+{
+  "_comment": "Combat VFX mapping. 'effects' describe how a sprite is animated; 'rules' map gameplay events to an effect (first matching rule wins). Event keys: kind (damage|heal|block|apply_status|status_tick|draw|gain_energy), card_id, specialization_id, status_id, target_group (card target: self|single_enemy|single_ally|all_enemies|all_allies). Presentation only: nothing here changes gameplay. Optional effect keys: opacity (peak alpha), group_fit (draw one sprite over a multi-target group, as a share of the group width), group_max (design-px cap for that sprite), anchor (center|ground), impact (effect spawned when a projectile lands). kinds enemy_attack / enemy_defend are announced when an enemy intent resolves (target = the party member hit / the enemy itself).",
+  "quality": {
+    "full": {
+      "enabled": true,
+      "duration_scale": 1.0,
+      "max_active": 24,
+      "impacts": true,
+      "stagger": 0.14
+    },
+    "reduced": {
+      "enabled": true,
+      "duration_scale": 0.6,
+      "max_active": 8,
+      "impacts": false,
+      "stagger": 0.08
+    },
+    "off": {
+      "enabled": false,
+      "duration_scale": 0.0,
+      "max_active": 0,
+      "impacts": false,
+      "stagger": 0.0
+    }
+  },
+  "reference_target_width": 210,
+  "effects": {
+    "fire_bolt": {
+      "sprite": "fire/fire_bolt",
+      "blend": "add",
+      "motion": "projectile",
+      "duration": 0.62,
+      "travel": 0.36,
+      "width": 150,
+      "impact": "ember_impact",
+      "color": "#ff8a3c"
+    },
+    "fireball": {
+      "sprite": "fire/fireball",
+      "blend": "add",
+      "motion": "projectile",
+      "duration": 0.7,
+      "travel": 0.42,
+      "width": 170,
+      "impact": "flame_burst",
+      "color": "#ff6a2a"
+    },
+    "ember_impact": {
+      "sprite": "fire/ember_blast",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.42,
+      "width": 120,
+      "color": "#ff8a3c"
+    },
+    "flame_burst": {
+      "sprite": "fire/flame_explosion",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.55,
+      "width": 180,
+      "color": "#ff7a30"
+    },
+    "flame_wave": {
+      "sprite": "fire/flame_wave",
+      "blend": "add",
+      "motion": "sweep",
+      "duration": 0.75,
+      "width": 220,
+      "group_fit": 1.0,
+      "color": "#ff9a40",
+      "group_max": 520,
+      "opacity": 0.9
+    },
+    "inferno": {
+      "sprite": "fire/inferno",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.9,
+      "width": 250,
+      "anchor": "ground",
+      "color": "#ff6a20"
+    },
+    "burn_apply": {
+      "sprite": "fire/burn_apply",
+      "blend": "add",
+      "motion": "rise",
+      "duration": 0.7,
+      "width": 150,
+      "anchor": "ground",
+      "color": "#ff7a30"
+    },
+    "burn_tick": {
+      "sprite": "fire/burn_tick",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.45,
+      "width": 90,
+      "anchor": "ground",
+      "color": "#ff7a30"
+    },
+    "fire_shield": {
+      "sprite": "fire/fire_shield",
+      "blend": "add",
+      "motion": "pulse",
+      "duration": 0.7,
+      "width": 120,
+      "color": "#ff5a3a"
+    },
+    "smoke_screen": {
+      "sprite": "utility/smoke_screen",
+      "blend": "mix",
+      "motion": "pulse",
+      "duration": 0.8,
+      "width": 160,
+      "color": "#a070d0"
+    },
+    "radiant_strike": {
+      "sprite": "holy/radiant_strike",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.5,
+      "width": 160,
+      "color": "#ffe08a"
+    },
+    "holy_strike": {
+      "sprite": "holy/holy_strike",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.55,
+      "width": 190,
+      "color": "#ffe08a"
+    },
+    "divine_judgment": {
+      "sprite": "holy/divine_judgment",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.95,
+      "width": 230,
+      "anchor": "ground",
+      "color": "#ffd860",
+      "opacity": 0.9
+    },
+    "healing": {
+      "sprite": "holy/healing",
+      "blend": "add",
+      "motion": "rise",
+      "duration": 0.85,
+      "width": 140,
+      "anchor": "ground",
+      "color": "#9be07a",
+      "opacity": 0.9
+    },
+    "party_heal": {
+      "sprite": "holy/party_heal",
+      "blend": "add",
+      "motion": "rise",
+      "duration": 0.95,
+      "width": 200,
+      "anchor": "ground",
+      "color": "#ffe08a",
+      "opacity": 0.8
+    },
+    "blessed_shield": {
+      "sprite": "holy/blessed_shield",
+      "blend": "add",
+      "motion": "pulse",
+      "duration": 0.75,
+      "width": 130,
+      "color": "#ffd860"
+    },
+    "sanctified_ward": {
+      "sprite": "holy/sanctified_ward",
+      "blend": "add",
+      "motion": "pulse",
+      "duration": 0.85,
+      "width": 200,
+      "color": "#ffe9a8",
+      "opacity": 0.85
+    },
+    "arcane_bolt": {
+      "sprite": "arcane/arcane_bolt",
+      "blend": "add",
+      "motion": "projectile",
+      "duration": 0.6,
+      "travel": 0.34,
+      "width": 160,
+      "impact": "arcane_impact",
+      "color": "#8a6aff"
+    },
+    "arcane_impact": {
+      "sprite": "arcane/arcane_explosion",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.4,
+      "width": 120,
+      "color": "#9a7aff"
+    },
+    "arcane_explosion": {
+      "sprite": "arcane/arcane_explosion",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.7,
+      "width": 200,
+      "group_fit": 0.9,
+      "color": "#9a7aff",
+      "group_max": 480,
+      "opacity": 0.95
+    },
+    "magic_barrier": {
+      "sprite": "arcane/magic_barrier",
+      "blend": "add",
+      "motion": "pulse",
+      "duration": 0.75,
+      "width": 130,
+      "color": "#7a8aff"
+    },
+    "mana_surge": {
+      "sprite": "arcane/mana_surge",
+      "blend": "add",
+      "motion": "rise",
+      "duration": 0.7,
+      "width": 150,
+      "anchor": "ground",
+      "color": "#6a8aff"
+    },
+    "mana_surge_pillar": {
+      "sprite": "arcane/mana_surge_pillar",
+      "blend": "add",
+      "motion": "rise",
+      "duration": 0.8,
+      "width": 150,
+      "anchor": "ground",
+      "color": "#6a8aff"
+    },
+    "chain_lightning": {
+      "sprite": "arcane/chain_lightning",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.5,
+      "width": 200,
+      "group_fit": 1.0,
+      "color": "#6aa0ff",
+      "group_max": 520
+    },
+    "earth_spike": {
+      "sprite": "earth/earth_spike",
+      "blend": "mix",
+      "motion": "burst",
+      "duration": 0.6,
+      "width": 170,
+      "anchor": "ground",
+      "color": "#c8a070"
+    },
+    "earth_shatter": {
+      "sprite": "earth/earth_shatter",
+      "blend": "mix",
+      "motion": "burst",
+      "duration": 0.7,
+      "width": 200,
+      "group_fit": 0.9,
+      "anchor": "ground",
+      "color": "#c8a070",
+      "group_max": 520,
+      "opacity": 0.9
+    },
+    "stone_skin": {
+      "sprite": "earth/stone_skin",
+      "blend": "mix",
+      "motion": "pulse",
+      "duration": 0.75,
+      "width": 130,
+      "color": "#c8a070"
+    },
+    "stone_wall": {
+      "sprite": "earth/stone_wall",
+      "blend": "mix",
+      "motion": "pulse",
+      "duration": 0.85,
+      "width": 150,
+      "anchor": "ground",
+      "color": "#c8a070",
+      "opacity": 0.85
+    },
+    "ice_shards": {
+      "sprite": "ice/ice_shards",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.6,
+      "width": 170,
+      "anchor": "ground",
+      "color": "#9ad0ff"
+    },
+    "wind_slash": {
+      "sprite": "wind/wind_slash",
+      "blend": "add",
+      "motion": "sweep",
+      "duration": 0.55,
+      "width": 190,
+      "color": "#cfe8ff"
+    },
+    "poison_cloud": {
+      "sprite": "nature/poison_cloud",
+      "blend": "mix",
+      "motion": "pulse",
+      "duration": 0.9,
+      "width": 150,
+      "anchor": "ground",
+      "color": "#7ad040"
+    },
+    "taunt": {
+      "sprite": "utility/taunt",
+      "blend": "add",
+      "motion": "pulse",
+      "duration": 0.8,
+      "width": 140,
+      "color": "#ff5a3a"
+    },
+    "barrier": {
+      "sprite": "utility/barrier",
+      "blend": "add",
+      "motion": "pulse",
+      "duration": 0.7,
+      "width": 120,
+      "color": "#4aa0ff"
+    },
+    "enemy_slash": {
+      "sprite": "wind/wind_slash",
+      "blend": "add",
+      "motion": "sweep",
+      "duration": 0.45,
+      "width": 170,
+      "opacity": 0.85,
+      "color": "#cfe8ff"
+    },
+    "enemy_guard": {
+      "sprite": "utility/barrier",
+      "blend": "add",
+      "motion": "pulse",
+      "duration": 0.6,
+      "width": 110,
+      "opacity": 0.85,
+      "color": "#4aa0ff"
+    },
+    "poison_burst": {
+      "sprite": "poison/poison_burst",
+      "blend": "mix",
+      "motion": "burst",
+      "duration": 0.6,
+      "width": 190,
+      "color": "#7be04a"
+    },
+    "poison_tick": {
+      "sprite": "poison/poison_burst",
+      "blend": "mix",
+      "motion": "burst",
+      "duration": 0.45,
+      "width": 120,
+      "opacity": 0.85,
+      "color": "#7be04a"
+    },
+    "bleed_tick": {
+      "sprite": "wind/wind_slash",
+      "blend": "mix",
+      "motion": "burst",
+      "duration": 0.4,
+      "width": 140,
+      "opacity": 0.95,
+      "color": "#d0283c",
+      "tint": "#e0283c"
+    },
+    "ice_spear": {
+      "sprite": "res://assets/generated/frost/vfx_ice_spear",
+      "blend": "add",
+      "motion": "projectile",
+      "duration": 0.6,
+      "travel": 0.4,
+      "width": 190,
+      "impact": "ice_shards",
+      "color": "#9ad8ff"
+    },
+    "frost_nova": {
+      "sprite": "res://assets/generated/frost/vfx_frost_nova",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.65,
+      "width": 210,
+      "group_fit": 0.9,
+      "group_max": 480,
+      "color": "#9ad8ff"
+    },
+    "chill_apply": {
+      "sprite": "res://assets/generated/frost/vfx_frost_nova",
+      "blend": "add",
+      "motion": "rise",
+      "duration": 0.6,
+      "width": 140,
+      "anchor": "ground",
+      "color": "#bfe8ff",
+      "opacity": 0.85
+    },
+    "ice_prison": {
+      "sprite": "res://assets/generated/frost/vfx_ice_prison",
+      "blend": "add",
+      "motion": "pulse",
+      "duration": 0.9,
+      "width": 200,
+      "color": "#bfe8ff"
+    },
+    "frost_ward": {
+      "sprite": "res://assets/generated/frost/vfx_ice_prison",
+      "blend": "add",
+      "motion": "pulse",
+      "duration": 0.6,
+      "width": 130,
+      "color": "#9ad8ff",
+      "opacity": 0.8
+    },
+    "water_splash": {
+      "sprite": "res://assets/generated/beach/vfx_water_splash",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.6,
+      "width": 190,
+      "color": "#7fd0ff"
+    },
+    "sand_blast": {
+      "sprite": "res://assets/generated/beach/vfx_sand_blast",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.65,
+      "width": 200,
+      "color": "#ffd890"
+    },
+    "rock_hurl": {
+      "sprite": "res://assets/generated/beach/vfx_rock_hurl",
+      "blend": "add",
+      "motion": "projectile",
+      "duration": 0.6,
+      "travel": 0.4,
+      "width": 120,
+      "impact": "sand_blast",
+      "color": "#d8b880"
+    },
+    "tidal_wave": {
+      "sprite": "res://assets/generated/beach/vfx_tidal_wave",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.75,
+      "width": 260,
+      "group_fit": 0.95,
+      "group_max": 520,
+      "color": "#8fdcff"
+    },
+    "soaked_apply": {
+      "sprite": "res://assets/generated/beach/vfx_water_splash",
+      "blend": "add",
+      "motion": "rise",
+      "duration": 0.6,
+      "width": 130,
+      "anchor": "ground",
+      "color": "#7fd0ff",
+      "opacity": 0.8
+    },
+    "sand_apply": {
+      "sprite": "res://assets/generated/beach/vfx_sand_blast",
+      "blend": "add",
+      "motion": "rise",
+      "duration": 0.6,
+      "width": 130,
+      "anchor": "ground",
+      "color": "#ffd890",
+      "opacity": 0.8
+    },
+    "oil_splash": {
+      "sprite": "res://assets/generated/vfx/vfx_oil_splash_cut",
+      "blend": "mix",
+      "motion": "burst",
+      "duration": 0.7,
+      "width": 205,
+      "color": "#ffffff"
+    },
+    "smoke_burst": {
+      "sprite": "res://assets/generated/vfx/vfx_smoke_cloud_cut",
+      "blend": "mix",
+      "motion": "burst",
+      "duration": 0.9,
+      "width": 250,
+      "anchor": "ground",
+      "group_fit": 0.95,
+      "group_max": 520,
+      "color": "#ffffff",
+      "opacity": 0.92
+    },
+    "powder_blast": {
+      "sprite": "res://assets/generated/ashveil/vfx_powder_blast",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.7,
+      "width": 230,
+      "group_fit": 0.95,
+      "group_max": 520,
+      "color": "#ff9a40"
+    },
+    "oil_ignite": {
+      "sprite": "res://assets/generated/ashveil/vfx_oil_ignite",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.7,
+      "width": 200,
+      "anchor": "ground",
+      "color": "#ff7a2a"
+    },
+    "ash_slash": {
+      "sprite": "res://assets/generated/vfx/vfx_ash_slash",
+      "blend": "add",
+      "motion": "sweep",
+      "duration": 0.45,
+      "width": 270,
+      "color": "#ffd9b0"
+    },
+    "shadow_thrust": {
+      "sprite": "res://assets/generated/vfx/vfx_shadow_stab",
+      "blend": "add",
+      "motion": "sweep",
+      "duration": 0.42,
+      "width": 250,
+      "color": "#e0c0ff"
+    },
+    "caltrops": {
+      "sprite": "res://assets/generated/vfx/vfx_caltrops_cut",
+      "blend": "mix",
+      "motion": "burst",
+      "duration": 0.85,
+      "width": 270,
+      "anchor": "ground",
+      "color": "#ffffff"
+    },
+    "oil_flask": {
+      "sprite": "res://assets/generated/vfx/vfx_flask_cut",
+      "blend": "mix",
+      "motion": "projectile",
+      "duration": 0.5,
+      "travel": 0.42,
+      "width": 64,
+      "impact": "oil_splash",
+      "color": "#ffffff"
+    },
+    "smoke_veil": {
+      "sprite": "res://assets/generated/vfx/vfx_smoke_veil_cut",
+      "blend": "mix",
+      "motion": "pulse",
+      "duration": 0.95,
+      "width": 280,
+      "color": "#ffffff",
+      "opacity": 0.85
+    },
+    "card_draw_fire": {
+      "sprite": "res://assets/generated/vfx/vfx_card_draw_cut",
+      "blend": "mix",
+      "motion": "rise",
+      "duration": 0.85,
+      "width": 175,
+      "color": "#ffd2a8"
+    },
+    "card_draw_frost": {
+      "sprite": "res://assets/generated/vfx/vfx_card_draw_cut",
+      "blend": "mix",
+      "motion": "rise",
+      "duration": 0.85,
+      "width": 175,
+      "color": "#d8f4ff"
+    },
+    "card_draw_tanking": {
+      "sprite": "res://assets/generated/vfx/vfx_card_draw_cut",
+      "blend": "mix",
+      "motion": "rise",
+      "duration": 0.85,
+      "width": 175,
+      "color": "#eef3fa"
+    },
+    "card_draw_holy": {
+      "sprite": "res://assets/generated/vfx/vfx_card_draw_cut",
+      "blend": "mix",
+      "motion": "rise",
+      "duration": 0.85,
+      "width": 175,
+      "color": "#fff0c0"
+    },
+    "card_draw_ashveil": {
+      "sprite": "res://assets/generated/vfx/vfx_card_draw_cut",
+      "blend": "mix",
+      "motion": "rise",
+      "duration": 0.85,
+      "width": 175,
+      "color": "#ffd6bc"
+    },
+    "energy_arcana": {
+      "sprite": "res://assets/generated/vfx/vfx_energy_burst_cut",
+      "blend": "mix",
+      "motion": "rise",
+      "duration": 0.9,
+      "width": 150,
+      "anchor": "ground",
+      "color": "#d0d6ff"
+    },
+    "energy_fire": {
+      "sprite": "res://assets/generated/vfx/vfx_energy_burst_cut",
+      "blend": "mix",
+      "motion": "rise",
+      "duration": 0.9,
+      "width": 150,
+      "anchor": "ground",
+      "color": "#ffd2a8"
+    },
+    "energy_frost": {
+      "sprite": "res://assets/generated/vfx/vfx_energy_burst_cut",
+      "blend": "mix",
+      "motion": "rise",
+      "duration": 0.9,
+      "width": 150,
+      "anchor": "ground",
+      "color": "#d8f4ff"
+    },
+    "holy_heal": {
+      "sprite": "holy/healing",
+      "blend": "add",
+      "motion": "rise",
+      "duration": 0.85,
+      "width": 140,
+      "anchor": "ground",
+      "color": "#ffe590",
+      "opacity": 0.95
+    },
+    "arcane_heal": {
+      "sprite": "holy/healing",
+      "blend": "add",
+      "motion": "rise",
+      "duration": 0.85,
+      "width": 140,
+      "anchor": "ground",
+      "color": "#b8a4ff",
+      "opacity": 0.95
+    },
+    "aether_release": {
+      "sprite": "res://assets/generated/aether/vfx_aether_release",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.8,
+      "width": 220,
+      "color": "#f2dcff"
+    },
+    "lightfall": {
+      "sprite": "res://assets/generated/aether/vfx_aether_release",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.75,
+      "width": 260,
+      "anchor": "ground",
+      "color": "#fff0b8"
+    },
+    "second_wind": {
+      "sprite": "holy/healing",
+      "blend": "add",
+      "motion": "rise",
+      "duration": 0.8,
+      "width": 140,
+      "anchor": "ground",
+      "color": "#9cf0c8",
+      "opacity": 0.95
+    },
+    "combustion": {
+      "sprite": "res://assets/generated/combos/vfx_combustion",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.8,
+      "width": 240,
+      "group_fit": 0.95,
+      "group_max": 520,
+      "color": "#ffb060"
+    },
+    "miasma": {
+      "sprite": "res://assets/generated/combos/vfx_miasma",
+      "blend": "add",
+      "motion": "pulse",
+      "duration": 0.9,
+      "width": 230,
+      "anchor": "ground",
+      "color": "#a8f070"
+    },
+    "blight_execute": {
+      "sprite": "res://assets/generated/combos/vfx_blight",
+      "blend": "add",
+      "motion": "rise",
+      "duration": 1.0,
+      "width": 200,
+      "color": "#d0a0ff"
+    },
+    "blight_apply": {
+      "sprite": "res://assets/generated/combos/vfx_blight",
+      "blend": "add",
+      "motion": "pulse",
+      "duration": 0.7,
+      "width": 150,
+      "color": "#b88cff",
+      "opacity": 0.85
+    },
+    "fanned_oil": {
+      "sprite": "res://assets/generated/vfx/vfx_oil_splash_cut",
+      "blend": "mix",
+      "motion": "burst",
+      "duration": 0.6,
+      "width": 170,
+      "color": "#ffffff"
+    },
+    "black_ice": {
+      "sprite": "res://assets/generated/frost/vfx_frost_nova",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.6,
+      "width": 170,
+      "color": "#7fb8ff"
+    },
+    "frostbite": {
+      "sprite": "poison/poison_burst",
+      "blend": "mix",
+      "motion": "burst",
+      "duration": 0.6,
+      "width": 170,
+      "color": "#b8ffe0"
+    },
+    "shatterlight": {
+      "sprite": "res://assets/generated/aether/vfx_aether_release",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.7,
+      "width": 200,
+      "color": "#e8f6ff"
+    },
+    "purifying_flame": {
+      "sprite": "holy/healing",
+      "blend": "add",
+      "motion": "rise",
+      "duration": 0.8,
+      "width": 150,
+      "anchor": "ground",
+      "color": "#ffd070"
+    },
+    "searing_bash": {
+      "sprite": "fire/burn_apply",
+      "blend": "add",
+      "motion": "rise",
+      "duration": 0.6,
+      "width": 140,
+      "anchor": "ground",
+      "color": "#ff8a50"
+    },
+    "gust_summon": {
+      "sprite": "wind/wind_gust",
+      "blend": "add",
+      "motion": "rise",
+      "duration": 0.7,
+      "width": 150,
+      "anchor": "ground",
+      "color": "#9ff0d0"
+    },
+    "wind_ward": {
+      "sprite": "wind/wind_gust",
+      "blend": "add",
+      "motion": "pulse",
+      "duration": 0.75,
+      "width": 190,
+      "anchor": "ground",
+      "color": "#c8fff0"
+    },
+    "wind_barrier": {
+      "sprite": "wind/wind_gust",
+      "blend": "add",
+      "motion": "pulse",
+      "duration": 0.75,
+      "width": 200,
+      "group_fit": 0.95,
+      "group_max": 420,
+      "anchor": "ground",
+      "color": "#c8fff0"
+    },
+    "wind_scatter": {
+      "sprite": "res://assets/generated/combos/vfx_miasma",
+      "blend": "add",
+      "motion": "burst",
+      "duration": 0.7,
+      "width": 210,
+      "color": "#d8ffe8"
+    },
+    "card_draw_wind": {
+      "sprite": "res://assets/generated/vfx/vfx_card_draw_cut",
+      "blend": "mix",
+      "motion": "rise",
+      "duration": 0.9,
+      "width": 175,
+      "anchor": "ground",
+      "color": "#d6fff0"
+    },
+    "energy_wind": {
+      "sprite": "res://assets/generated/vfx/vfx_energy_burst_cut",
+      "blend": "mix",
+      "motion": "rise",
+      "duration": 0.9,
+      "width": 150,
+      "anchor": "ground",
+      "color": "#d6fff0"
+    },
+    "venom_slash": {
+      "sprite": "poison/poison_burst",
+      "blend": "mix",
+      "motion": "burst",
+      "duration": 0.55,
+      "width": 180,
+      "color": "#9be05a"
+    },
+    "venom_guard": {
+      "sprite": "nature/poison_cloud",
+      "blend": "mix",
+      "motion": "pulse",
+      "duration": 0.8,
+      "width": 180,
+      "anchor": "ground",
+      "color": "#b8f088"
+    },
+    "card_draw_venom": {
+      "sprite": "res://assets/generated/vfx/vfx_card_draw_cut",
+      "blend": "mix",
+      "motion": "rise",
+      "duration": 0.9,
+      "width": 175,
+      "anchor": "ground",
+      "color": "#d8ffc0"
+    }
+  },
+  "rules": [
+    {
+      "kind": "power",
+      "specialization_id": "fire",
+      "vfx": "flame_burst"
+    },
+    {
+      "kind": "power",
+      "specialization_id": "frost",
+      "vfx": "frost_nova"
+    },
+    {
+      "kind": "power",
+      "specialization_id": "arcana",
+      "vfx": "mana_surge_pillar"
+    },
+    {
+      "kind": "power",
+      "specialization_id": "wind",
+      "vfx": "energy_wind"
+    },
+    {
+      "kind": "power",
+      "specialization_id": "holy",
+      "vfx": "lightfall"
+    },
+    {
+      "kind": "power",
+      "specialization_id": "tanking",
+      "vfx": "stone_skin"
+    },
+    {
+      "kind": "power",
+      "specialization_id": "venom",
+      "vfx": "miasma"
+    },
+    {
+      "kind": "power",
+      "specialization_id": "ashveil",
+      "vfx": "smoke_burst"
+    },
+    {
+      "kind": "aether_spent",
+      "specialization_id": "arcana",
+      "vfx": "aether_release"
+    },
+    {
+      "card_id": "bianca_venom_contagion",
+      "kind": "spread_status",
+      "vfx": "poison_cloud"
+    },
+    {
+      "card_id": "bianca_ash_beartrap",
+      "kind": "apply_status",
+      "status_id": "bleed",
+      "vfx": "caltrops"
+    },
+    {
+      "kind": "heal",
+      "specialization_id": "wind",
+      "vfx": "second_wind"
+    },
+    {
+      "kind": "damage",
+      "specialization_id": "wind",
+      "vfx": "wind_slash"
+    },
+    {
+      "kind": "reaction",
+      "reaction_id": "combustion",
+      "vfx": "combustion"
+    },
+    {
+      "kind": "reaction",
+      "reaction_id": "miasma",
+      "vfx": "miasma"
+    },
+    {
+      "kind": "reaction",
+      "reaction_id": "fanned_oil",
+      "vfx": "fanned_oil"
+    },
+    {
+      "kind": "reaction",
+      "reaction_id": "black_ice",
+      "vfx": "black_ice"
+    },
+    {
+      "kind": "reaction",
+      "reaction_id": "frostbite",
+      "vfx": "frostbite"
+    },
+    {
+      "kind": "reaction",
+      "reaction_id": "shatterlight",
+      "vfx": "shatterlight"
+    },
+    {
+      "kind": "reaction",
+      "reaction_id": "purifying_flame",
+      "vfx": "purifying_flame"
+    },
+    {
+      "kind": "reaction",
+      "reaction_id": "searing_bash",
+      "vfx": "searing_bash"
+    },
+    {
+      "kind": "execute",
+      "status_id": "blight",
+      "vfx": "blight_execute"
+    },
+    {
+      "kind": "apply_status",
+      "status_id": "blight",
+      "vfx": "blight_apply"
+    },
+    {
+      "card_id": "chiara_wind_scatter",
+      "kind": "spread_status",
+      "vfx": "wind_scatter"
+    },
+    {
+      "kind": "create_card",
+      "specialization_id": "wind",
+      "vfx": "gust_summon"
+    },
+    {
+      "kind": "create_card",
+      "vfx": "gust_summon"
+    },
+    {
+      "kind": "block",
+      "specialization_id": "wind",
+      "target_group": "all_allies",
+      "vfx": "wind_barrier"
+    },
+    {
+      "kind": "block",
+      "specialization_id": "wind",
+      "vfx": "wind_ward"
+    },
+    {
+      "kind": "draw",
+      "specialization_id": "wind",
+      "vfx": "card_draw_wind"
+    },
+    {
+      "kind": "gain_energy",
+      "specialization_id": "wind",
+      "vfx": "energy_wind"
+    },
+    {
+      "kind": "damage",
+      "specialization_id": "venom",
+      "vfx": "venom_slash"
+    },
+    {
+      "kind": "block",
+      "specialization_id": "venom",
+      "vfx": "venom_guard"
+    },
+    {
+      "kind": "draw",
+      "specialization_id": "venom",
+      "vfx": "card_draw_venom"
+    },
+    {
+      "card_id": "bianca_holy_lightfall",
+      "kind": "damage",
+      "vfx": "lightfall"
+    },
+    {
+      "kind": "aether_spent",
+      "specialization_id": "holy",
+      "vfx": "aether_release"
+    },
+    {
+      "card_id": "bianca_ash_flask",
+      "kind": "damage",
+      "vfx": "oil_flask"
+    },
+    {
+      "card_id": "bianca_ash_powder",
+      "kind": "damage",
+      "vfx": "powder_blast"
+    },
+    {
+      "card_id": "bianca_ash_epic_ashfall",
+      "kind": "damage",
+      "vfx": "powder_blast"
+    },
+    {
+      "card_id": "bianca_ash_ignite",
+      "kind": "damage",
+      "vfx": "oil_ignite"
+    },
+    {
+      "card_id": "bianca_ash_caltrops",
+      "kind": "apply_status",
+      "vfx": "caltrops"
+    },
+    {
+      "card_id": "bianca_ash_shadow",
+      "kind": "damage",
+      "vfx": "shadow_thrust"
+    },
+    {
+      "card_id": "bianca_ash_dagger",
+      "kind": "damage",
+      "vfx": "shadow_thrust"
+    },
+    {
+      "card_id": "chiara_frost_bolt",
+      "kind": "damage",
+      "vfx": "ice_spear"
+    },
+    {
+      "card_id": "chiara_frost_spike",
+      "kind": "damage",
+      "vfx": "ice_spear"
+    },
+    {
+      "card_id": "chiara_frost_zero",
+      "kind": "damage",
+      "vfx": "ice_spear"
+    },
+    {
+      "card_id": "chiara_frost_nova",
+      "kind": "damage",
+      "vfx": "frost_nova"
+    },
+    {
+      "card_id": "chiara_frost_blizzard",
+      "kind": "damage",
+      "vfx": "frost_nova"
+    },
+    {
+      "card_id": "chiara_frost_glacier",
+      "kind": "damage",
+      "vfx": "frost_nova"
+    },
+    {
+      "card_id": "chiara_frost_epic_avalanche",
+      "kind": "damage",
+      "vfx": "frost_nova"
+    },
+    {
+      "card_id": "chiara_fire_ember",
+      "kind": "damage",
+      "vfx": "fire_bolt"
+    },
+    {
+      "card_id": "chiara_fire_fireball",
+      "kind": "damage",
+      "vfx": "fireball"
+    },
+    {
+      "card_id": "chiara_fire_immolate",
+      "kind": "damage",
+      "vfx": "flame_burst"
+    },
+    {
+      "card_id": "chiara_fire_fuel",
+      "kind": "damage",
+      "vfx": "flame_burst"
+    },
+    {
+      "card_id": "chiara_fire_wave",
+      "kind": "damage",
+      "vfx": "flame_wave"
+    },
+    {
+      "card_id": "chiara_fire_inferno",
+      "kind": "damage",
+      "vfx": "inferno"
+    },
+    {
+      "card_id": "chiara_fire_cinderward",
+      "kind": "block",
+      "vfx": "fire_shield"
+    },
+    {
+      "card_id": "chiara_fire_smokescreen",
+      "kind": "block",
+      "vfx": "smoke_screen"
+    },
+    {
+      "card_id": "bianca_holy_strike",
+      "kind": "damage",
+      "vfx": "radiant_strike"
+    },
+    {
+      "card_id": "bianca_holy_smite",
+      "kind": "damage",
+      "vfx": "holy_strike"
+    },
+    {
+      "card_id": "bianca_holy_bulwark",
+      "kind": "damage",
+      "vfx": "radiant_strike"
+    },
+    {
+      "card_id": "bianca_holy_judgment",
+      "kind": "damage",
+      "vfx": "divine_judgment"
+    },
+    {
+      "card_id": "bianca_holy_judgment",
+      "kind": "heal",
+      "vfx": "party_heal"
+    },
+    {
+      "card_id": "bianca_holy_benediction",
+      "kind": "block",
+      "vfx": "sanctified_ward"
+    },
+    {
+      "card_id": "bianca_holy_benediction",
+      "kind": "heal",
+      "vfx": "party_heal"
+    },
+    {
+      "card_id": "bianca_holy_shield",
+      "kind": "block",
+      "vfx": "blessed_shield"
+    },
+    {
+      "card_id": "bianca_holy_ward",
+      "kind": "block",
+      "vfx": "blessed_shield"
+    },
+    {
+      "card_id": "chiara_arcana_starfall",
+      "kind": "damage",
+      "vfx": "arcane_explosion"
+    },
+    {
+      "card_id": "chiara_arcana_insight",
+      "kind": "draw",
+      "vfx": "mana_surge"
+    },
+    {
+      "card_id": "chiara_arcana_focus",
+      "kind": "draw",
+      "vfx": "mana_surge"
+    },
+    {
+      "card_id": "chiara_arcana_surge",
+      "kind": "gain_energy",
+      "vfx": "mana_surge_pillar"
+    },
+    {
+      "card_id": "bianca_tanking_sweep",
+      "kind": "damage",
+      "vfx": "earth_shatter"
+    },
+    {
+      "kind": "block",
+      "specialization_id": "ashveil",
+      "target_group": "all_allies",
+      "vfx": "smoke_burst"
+    },
+    {
+      "kind": "block",
+      "specialization_id": "ashveil",
+      "vfx": "smoke_veil"
+    },
+    {
+      "kind": "heal",
+      "specialization_id": "holy",
+      "target_group": "all_allies",
+      "vfx": "party_heal"
+    },
+    {
+      "kind": "heal",
+      "specialization_id": "holy",
+      "vfx": "holy_heal"
+    },
+    {
+      "kind": "heal",
+      "specialization_id": "arcana",
+      "vfx": "arcane_heal"
+    },
+    {
+      "kind": "heal",
+      "specialization_id": "tanking",
+      "vfx": "second_wind"
+    },
+    {
+      "kind": "draw",
+      "specialization_id": "arcana",
+      "vfx": "mana_surge"
+    },
+    {
+      "kind": "draw",
+      "specialization_id": "fire",
+      "vfx": "card_draw_fire"
+    },
+    {
+      "kind": "draw",
+      "specialization_id": "frost",
+      "vfx": "card_draw_frost"
+    },
+    {
+      "kind": "draw",
+      "specialization_id": "tanking",
+      "vfx": "card_draw_tanking"
+    },
+    {
+      "kind": "draw",
+      "specialization_id": "holy",
+      "vfx": "card_draw_holy"
+    },
+    {
+      "kind": "draw",
+      "specialization_id": "ashveil",
+      "vfx": "card_draw_ashveil"
+    },
+    {
+      "kind": "gain_energy",
+      "specialization_id": "arcana",
+      "vfx": "energy_arcana"
+    },
+    {
+      "kind": "gain_energy",
+      "specialization_id": "fire",
+      "vfx": "energy_fire"
+    },
+    {
+      "kind": "gain_energy",
+      "specialization_id": "frost",
+      "vfx": "energy_frost"
+    },
+    {
+      "kind": "status_exploit",
+      "status_id": "oiled",
+      "vfx": "oil_ignite"
+    },
+    {
+      "kind": "apply_status",
+      "status_id": "oiled",
+      "vfx": "oil_splash"
+    },
+    {
+      "kind": "damage",
+      "specialization_id": "ashveil",
+      "vfx": "ash_slash"
+    },
+    {
+      "kind": "frozen",
+      "vfx": "ice_prison"
+    },
+    {
+      "kind": "apply_status",
+      "status_id": "chill",
+      "vfx": "chill_apply"
+    },
+    {
+      "kind": "damage",
+      "specialization_id": "frost",
+      "vfx": "ice_shards"
+    },
+    {
+      "kind": "block",
+      "specialization_id": "frost",
+      "vfx": "frost_ward"
+    },
+    {
+      "kind": "status_tick",
+      "status_id": "bleed",
+      "vfx": "bleed_tick"
+    },
+    {
+      "kind": "enemy_attack",
+      "action_id": "boulder_hurl",
+      "vfx": "rock_hurl"
+    },
+    {
+      "kind": "enemy_attack",
+      "action_id": "brine_spray",
+      "vfx": "tidal_wave"
+    },
+    {
+      "kind": "enemy_attack",
+      "action_id": "tide_surge",
+      "vfx": "tidal_wave"
+    },
+    {
+      "kind": "enemy_attack",
+      "action_id": "desert_maelstrom",
+      "vfx": "sand_blast"
+    },
+    {
+      "kind": "enemy_attack",
+      "element": "water",
+      "vfx": "water_splash"
+    },
+    {
+      "kind": "enemy_attack",
+      "element": "earth",
+      "vfx": "sand_blast"
+    },
+    {
+      "kind": "enemy_attack",
+      "element": "wind",
+      "vfx": "wind_slash"
+    },
+    {
+      "kind": "enemy_attack",
+      "element": "lightning",
+      "vfx": "chain_lightning"
+    },
+    {
+      "kind": "apply_status",
+      "status_id": "soaked",
+      "vfx": "soaked_apply"
+    },
+    {
+      "kind": "apply_status",
+      "status_id": "sandblind",
+      "vfx": "sand_apply"
+    },
+    {
+      "kind": "apply_status",
+      "status_id": "quicksand",
+      "vfx": "sand_apply"
+    },
+    {
+      "kind": "enemy_attack",
+      "status_id": "poison",
+      "vfx": "poison_burst"
+    },
+    {
+      "kind": "apply_status",
+      "status_id": "poison",
+      "vfx": "poison_burst"
+    },
+    {
+      "kind": "status_tick",
+      "status_id": "poison",
+      "vfx": "poison_tick"
+    },
+    {
+      "kind": "enemy_attack",
+      "vfx": "enemy_slash"
+    },
+    {
+      "kind": "enemy_defend",
+      "vfx": "enemy_guard"
+    },
+    {
+      "kind": "status_tick",
+      "status_id": "burn",
+      "vfx": "burn_tick"
+    },
+    {
+      "kind": "apply_status",
+      "status_id": "burn",
+      "vfx": "burn_apply"
+    },
+    {
+      "kind": "apply_status",
+      "status_id": "taunt",
+      "vfx": "taunt"
+    },
+    {
+      "kind": "apply_status",
+      "status_id": "poison",
+      "vfx": "poison_cloud"
+    },
+    {
+      "kind": "damage",
+      "specialization_id": "arcana",
+      "vfx": "arcane_bolt"
+    },
+    {
+      "kind": "damage",
+      "specialization_id": "fire",
+      "vfx": "fire_bolt"
+    },
+    {
+      "kind": "damage",
+      "specialization_id": "holy",
+      "vfx": "radiant_strike"
+    },
+    {
+      "kind": "damage",
+      "specialization_id": "tanking",
+      "vfx": "earth_spike"
+    },
+    {
+      "kind": "damage",
+      "specialization_id": "earth",
+      "vfx": "earth_spike"
+    },
+    {
+      "kind": "damage",
+      "specialization_id": "wind",
+      "vfx": "wind_slash"
+    },
+    {
+      "kind": "damage",
+      "specialization_id": "lightning",
+      "vfx": "chain_lightning"
+    },
+    {
+      "kind": "block",
+      "specialization_id": "arcana",
+      "vfx": "magic_barrier"
+    },
+    {
+      "kind": "block",
+      "specialization_id": "tanking",
+      "target_group": "all_allies",
+      "vfx": "stone_wall"
+    },
+    {
+      "kind": "block",
+      "specialization_id": "tanking",
+      "vfx": "stone_skin"
+    },
+    {
+      "kind": "block",
+      "specialization_id": "holy",
+      "vfx": "blessed_shield"
+    },
+    {
+      "kind": "block",
+      "specialization_id": "fire",
+      "vfx": "fire_shield"
+    },
+    {
+      "kind": "block",
+      "vfx": "barrier"
+    },
+    {
+      "kind": "heal",
+      "target_group": "all_allies",
+      "vfx": "party_heal"
+    },
+    {
+      "kind": "heal",
+      "vfx": "healing"
+    }
+  ]
+}

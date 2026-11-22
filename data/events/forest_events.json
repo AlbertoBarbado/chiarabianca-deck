@@ -1,0 +1,419 @@
+[
+  {
+    "id": "forest_herbalist",
+    "pools": [
+      "forest"
+    ],
+    "title": "The Wandering Herbalist",
+    "paragraphs": [
+      "An old woman sorts roots and leaves on a flat stone. \"The forest takes, the forest gives,\" she says, and offers her remedies."
+    ],
+    "choices": [
+      {
+        "text": "Accept a simple poultice",
+        "result": "Each party member heals 10 HP.",
+        "effects": [
+          {
+            "type": "heal_party",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "text": "Buy her strongest tonic (20 gold)",
+        "result": "Lose 20 gold. Each party member heals 24 HP.",
+        "effects": [
+          {
+            "type": "lose_gold",
+            "value": 20
+          },
+          {
+            "type": "heal_party",
+            "value": 24
+          }
+        ],
+        "requires": {
+          "gold": 20
+        }
+      }
+    ]
+  },
+  {
+    "id": "forest_supply_cache",
+    "pools": [
+      "forest"
+    ],
+    "title": "A Hidden Supply Cache",
+    "paragraphs": [
+      "Half buried under moss you find a soldier's cache. A thin wire runs across the lid."
+    ],
+    "choices": [
+      {
+        "text": "Take the coins on top carefully",
+        "result": "Gain 30 gold.",
+        "effects": [
+          {
+            "type": "gain_gold",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "text": "Empty the whole cache",
+        "result": "Gain 65 gold, but the trap fires: each party member takes 7 damage.",
+        "effects": [
+          {
+            "type": "gain_gold",
+            "value": 65
+          },
+          {
+            "type": "damage_party",
+            "value": 7
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "forest_adventurers_pack",
+    "pools": [
+      "forest"
+    ],
+    "title": "An Abandoned Pack",
+    "paragraphs": [
+      "A torn travelling pack hangs from a branch. Whoever owned it left in a hurry."
+    ],
+    "choices": [
+      {
+        "text": "Take the potion inside",
+        "result": "Gain 1 Health Potion.",
+        "effects": [
+          {
+            "type": "gain_item",
+            "item_id": "health_potion",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "text": "Take the purse instead",
+        "result": "Gain 40 gold.",
+        "effects": [
+          {
+            "type": "gain_gold",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "forest_shrine",
+    "pools": [
+      "forest"
+    ],
+    "title": "The Forest Shrine",
+    "paragraphs": [
+      "A weathered shrine stands in a ring of white flowers. The air hums softly as you step closer."
+    ],
+    "choices": [
+      {
+        "text": "Pray for knowledge",
+        "result": "Choose a card reward.",
+        "effects": [
+          {
+            "type": "card_reward"
+          }
+        ]
+      },
+      {
+        "text": "Pray for health",
+        "result": "Each party member heals 16 HP.",
+        "effects": [
+          {
+            "type": "heal_party",
+            "value": 16
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "forest_spirit",
+    "pools": [
+      "forest"
+    ],
+    "title": "A Mysterious Spirit",
+    "paragraphs": [
+      "A pale light drifts between the trunks and takes the shape of a stag. It lowers its head, waiting for an offering."
+    ],
+    "choices": [
+      {
+        "text": "Offer your blood",
+        "result": "Each party member loses 8 HP. Gain a relic.",
+        "effects": [
+          {
+            "type": "damage_party",
+            "value": 8
+          },
+          {
+            "type": "gain_relic",
+            "pool": [
+              "guardian_locket",
+              "scholars_satchel",
+              "healers_pendant"
+            ],
+            "fallback_gold": 50
+          }
+        ]
+      },
+      {
+        "text": "Bow and walk on",
+        "result": "Nothing happens.",
+        "effects": []
+      }
+    ]
+  },
+  {
+    "id": "forest_wounded_traveller",
+    "pools": [
+      "forest"
+    ],
+    "title": "The Wounded Traveller",
+    "paragraphs": [
+      "A merchant lies against a tree, his leg bound with a dirty cloth. His cart of supplies stands unguarded nearby."
+    ],
+    "choices": [
+      {
+        "text": "Give him a Health Potion",
+        "result": "Lose 1 Health Potion. He rewards you with 75 gold.",
+        "effects": [
+          {
+            "type": "lose_item",
+            "item_id": "health_potion",
+            "count": 1
+          },
+          {
+            "type": "gain_gold",
+            "value": 75
+          }
+        ],
+        "requires": {
+          "item": "health_potion"
+        }
+      },
+      {
+        "text": "Bind his wound and share your food",
+        "result": "Each party member loses 4 HP. Gain 30 gold.",
+        "effects": [
+          {
+            "type": "damage_party",
+            "value": 4
+          },
+          {
+            "type": "gain_gold",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "text": "Take a potion from his cart and leave",
+        "result": "Gain 1 Minor Health Potion.",
+        "effects": [
+          {
+            "type": "gain_item",
+            "item_id": "minor_health_potion",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "forest_risky_shortcut",
+    "pools": [
+      "forest"
+    ],
+    "title": "The Thorn Tunnel",
+    "paragraphs": [
+      "A tunnel of thorns cuts straight through the undergrowth. Something glints at the far end. The safe path winds around."
+    ],
+    "choices": [
+      {
+        "text": "Push through the thorns",
+        "result": "Each party member takes 9 damage. Choose a card reward.",
+        "effects": [
+          {
+            "type": "damage_party",
+            "value": 9
+          },
+          {
+            "type": "card_reward"
+          }
+        ]
+      },
+      {
+        "text": "Take the safe path",
+        "result": "Nothing happens.",
+        "effects": []
+      }
+    ]
+  },
+  {
+    "id": "forest_poison_plants",
+    "pools": [
+      "forest",
+      "forest_danger"
+    ],
+    "title": "Poisonous Blooms",
+    "paragraphs": [
+      "Bright purple flowers cover the path, heavy with glittering pollen. Among them grows a rare healing herb."
+    ],
+    "choices": [
+      {
+        "text": "Pick the herb through the pollen",
+        "result": "Each party member takes 6 damage. Gain 1 Health Potion.",
+        "effects": [
+          {
+            "type": "damage_party",
+            "value": 6
+          },
+          {
+            "type": "gain_item",
+            "item_id": "health_potion",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "text": "Burn a way through (15 gold of lamp oil)",
+        "result": "Lose 15 gold. Nothing else happens.",
+        "effects": [
+          {
+            "type": "lose_gold",
+            "value": 15
+          }
+        ],
+        "requires": {
+          "gold": 15
+        }
+      },
+      {
+        "text": "Hold your breath and run",
+        "result": "Each party member takes 3 damage.",
+        "effects": [
+          {
+            "type": "damage_party",
+            "value": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "forest_concealed_trap",
+    "pools": [
+      "forest_danger"
+    ],
+    "title": "The Hunter's Pit",
+    "paragraphs": [
+      "The ground gives way under Bianca's boot. A spiked pit, covered with branches, and a locked strongbox at the bottom."
+    ],
+    "choices": [
+      {
+        "text": "Climb down for the strongbox",
+        "result": "Each party member takes 8 damage. Gain 70 gold.",
+        "effects": [
+          {
+            "type": "damage_party",
+            "value": 8
+          },
+          {
+            "type": "gain_gold",
+            "value": 70
+          }
+        ]
+      },
+      {
+        "text": "Pull back and go around",
+        "result": "Each party member takes 3 damage.",
+        "effects": [
+          {
+            "type": "damage_party",
+            "value": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "forest_cursed_shrine",
+    "pools": [
+      "forest_danger"
+    ],
+    "title": "The Cursed Shrine",
+    "paragraphs": [
+      "Black roots strangle a shrine of bone. A voice whispers of power, for a price paid in life."
+    ],
+    "choices": [
+      {
+        "text": "Pay the price",
+        "result": "Each party member loses 12 HP. Gain 60 gold and choose a card reward.",
+        "effects": [
+          {
+            "type": "damage_party",
+            "value": 12
+          },
+          {
+            "type": "gain_gold",
+            "value": 60
+          },
+          {
+            "type": "card_reward"
+          }
+        ]
+      },
+      {
+        "text": "Refuse and leave",
+        "result": "Nothing happens.",
+        "effects": []
+      }
+    ]
+  },
+  {
+    "id": "forest_ambush",
+    "pools": [
+      "forest_danger"
+    ],
+    "title": "Eyes in the Dark",
+    "paragraphs": [
+      "Silk threads brush your faces. Too late you notice the shapes moving above: spiders, lowering themselves from the canopy."
+    ],
+    "choices": [
+      {
+        "text": "Stand and fight",
+        "result": "Fight a Spider Ambush (normal combat rewards).",
+        "effects": [
+          {
+            "type": "start_combat",
+            "encounter_id": "forest_spider_ambush"
+          }
+        ]
+      },
+      {
+        "text": "Drop your purse and run",
+        "result": "Lose up to 25 gold. Each party member takes 4 damage.",
+        "effects": [
+          {
+            "type": "lose_gold",
+            "value": 25
+          },
+          {
+            "type": "damage_party",
+            "value": 4
+          }
+        ]
+      }
+    ]
+  }
+]

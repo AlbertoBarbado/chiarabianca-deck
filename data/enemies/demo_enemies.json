@@ -1,0 +1,244 @@
+[
+  {
+    "id": "demo_cave_bat",
+    "name": "Cave Bat",
+    "max_hp": 18,
+    "color": "#9a6ad0",
+    "actions": {
+      "rend": {
+        "name": "Rending Fangs",
+        "type": "attack",
+        "value": 5,
+        "status": {
+          "id": "bleed",
+          "value": 2
+        }
+      },
+      "dive": {
+        "name": "Dive",
+        "type": "attack",
+        "value": 8,
+        "element": "wind"
+      },
+      "flutter": {
+        "name": "Flutter",
+        "type": "defend",
+        "value": 5
+      }
+    },
+    "pattern": [
+      "rend",
+      "dive",
+      "flutter"
+    ],
+    "initiative": 6,
+    "weaknesses": {
+      "fire": 25,
+      "holy": 25
+    },
+    "resistances": {
+      "wind": 50
+    },
+    "element": "physical"
+  },
+  {
+    "id": "demo_fungal_shambler",
+    "name": "Fungal Shambler",
+    "max_hp": 28,
+    "color": "#7ac05a",
+    "actions": {
+      "spores": {
+        "name": "Spore Burst",
+        "type": "attack",
+        "value": 4,
+        "status": {
+          "id": "poison",
+          "value": 3
+        },
+        "element": "poison"
+      },
+      "slam": {
+        "name": "Root Slam",
+        "type": "attack",
+        "value": 9
+      },
+      "cap": {
+        "name": "Harden Cap",
+        "type": "defend",
+        "value": 7
+      }
+    },
+    "pattern": [
+      "spores",
+      "slam",
+      "cap"
+    ],
+    "initiative": 2,
+    "weaknesses": {
+      "fire": 50
+    },
+    "resistances": {
+      "poison": 75
+    },
+    "element": "physical"
+  },
+  {
+    "id": "demo_crystal_golem",
+    "name": "Crystal Golem",
+    "max_hp": 46,
+    "color": "#6aa8e0",
+    "actions": {
+      "smash": {
+        "name": "Quartz Smash",
+        "type": "attack",
+        "value": 12
+      },
+      "shell": {
+        "name": "Crystal Shell",
+        "type": "defend",
+        "value": 12
+      },
+      "shards": {
+        "name": "Shard Spray",
+        "type": "attack",
+        "value": 6,
+        "target": "all",
+        "element": "lightning"
+      }
+    },
+    "pattern": [
+      "shell",
+      "smash",
+      "shards"
+    ],
+    "initiative": 1,
+    "weaknesses": {
+      "physical": 25
+    },
+    "resistances": {
+      "fire": 25,
+      "frost": 50
+    },
+    "element": "physical"
+  },
+  {
+    "id": "demo_shadow_wraith",
+    "name": "Shadow Wraith",
+    "max_hp": 34,
+    "color": "#8a6ac8",
+    "elite": true,
+    "actions": {
+      "wail": {
+        "name": "Dread Wail",
+        "type": "attack",
+        "value": 7,
+        "target": "all"
+      },
+      "claw": {
+        "name": "Spectral Claw",
+        "type": "attack",
+        "value": 11,
+        "status": {
+          "id": "bleed",
+          "value": 3
+        }
+      },
+      "fade": {
+        "name": "Fade",
+        "type": "defend",
+        "value": 10
+      }
+    },
+    "pattern": [
+      "claw",
+      "wail",
+      "fade"
+    ],
+    "initiative": 5,
+    "weaknesses": {
+      "holy": 50,
+      "fire": 25
+    },
+    "resistances": {
+      "physical": 50,
+      "shadow": 75
+    },
+    "element": "shadow"
+  },
+  {
+    "id": "demo_crystal_wyrm",
+    "name": "Crystal Wyrm",
+    "max_hp": 130,
+    "color": "#c07af0",
+    "boss": true,
+    "actions": {
+      "fang": {
+        "name": "Amethyst Fang",
+        "type": "attack",
+        "value": 10,
+        "status": {
+          "id": "bleed",
+          "value": 3
+        }
+      },
+      "breath": {
+        "name": "Prism Breath",
+        "type": "attack",
+        "value": 6,
+        "status": {
+          "id": "burn",
+          "value": 2
+        },
+        "target": "all",
+        "element": "fire"
+      },
+      "coil": {
+        "name": "Crystal Coil",
+        "type": "defend",
+        "value": 14
+      },
+      "venom": {
+        "name": "Geode Venom",
+        "type": "attack",
+        "value": 7,
+        "status": {
+          "id": "poison",
+          "value": 4
+        },
+        "element": "poison"
+      },
+      "storm": {
+        "name": "Shard Storm",
+        "type": "attack",
+        "value": 9,
+        "status": {
+          "id": "bleed",
+          "value": 2
+        },
+        "target": "all",
+        "element": "lightning"
+      }
+    },
+    "pattern": [
+      "fang",
+      "coil",
+      "breath",
+      "venom"
+    ],
+    "enrage_below": 0.5,
+    "enraged_pattern": [
+      "storm",
+      "fang",
+      "coil",
+      "breath"
+    ],
+    "initiative": 6,
+    "weaknesses": {
+      "physical": 15
+    },
+    "resistances": {
+      "arcane": 50
+    },
+    "element": "physical"
+  }
+]

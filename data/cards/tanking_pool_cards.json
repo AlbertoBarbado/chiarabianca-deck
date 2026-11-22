@@ -1,0 +1,673 @@
+[
+  {
+    "id": "bianca_tanking_slam",
+    "name": "Bulwark Slam",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 2,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 10 damage plus half your Block.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 10,
+        "target": "single_enemy",
+        "per_source_block": 0.5
+      }
+    ],
+    "upgrade": {
+      "name": "Bulwark Slam+",
+      "cost": 2,
+      "description": "Deal 14 damage plus 75% of your Block.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 14,
+          "target": "single_enemy",
+          "per_source_block": 0.75
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_tanking_slam.png"
+  },
+  {
+    "id": "bianca_tanking_wall",
+    "name": "Aegis Wall",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 2,
+    "card_type": "defense",
+    "target": "all_allies",
+    "rarity": "uncommon",
+    "description": "Give the party 8 Block.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 8,
+        "target": "all_allies"
+      }
+    ],
+    "upgrade": {
+      "name": "Aegis Wall+",
+      "cost": 2,
+      "description": "Give the party 11 Block.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 11,
+          "target": "all_allies"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_tanking_wall.png"
+  },
+  {
+    "id": "bianca_tanking_provoke",
+    "name": "Mighty Provoke",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 0,
+    "card_type": "skill",
+    "target": "single_enemy",
+    "rarity": "uncommon",
+    "description": "Apply 1 Taunt.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "single_enemy",
+        "status_id": "taunt"
+      }
+    ],
+    "upgrade": {
+      "name": "Mighty Provoke+",
+      "cost": 0,
+      "description": "Apply 2 Taunt.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "single_enemy",
+          "status_id": "taunt"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_tanking_provoke.png"
+  },
+  {
+    "id": "bianca_tanking_oath",
+    "name": "Guardian's Oath",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 1,
+    "card_type": "support",
+    "target": "single_ally",
+    "rarity": "common",
+    "description": "Give an ally 8 Block.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 8,
+        "target": "single_ally"
+      }
+    ],
+    "upgrade": {
+      "name": "Guardian's Oath+",
+      "cost": 1,
+      "description": "Give an ally 12 Block.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 12,
+          "target": "single_ally"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_tanking_oath.png"
+  },
+  {
+    "id": "bianca_tanking_sweep",
+    "name": "Sweeping Shield",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "all_enemies",
+    "rarity": "common",
+    "description": "Deal 5 damage to all enemies.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 5,
+        "target": "all_enemies"
+      }
+    ],
+    "upgrade": {
+      "name": "Sweeping Shield+",
+      "cost": 1,
+      "description": "Deal 7 damage to all enemies.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 7,
+          "target": "all_enemies"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_tanking_sweep.png"
+  },
+  {
+    "id": "bianca_tanking_wind",
+    "name": "Second Wind",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "self",
+    "rarity": "common",
+    "description": "Heal 6 and draw 1 card.",
+    "effects": [
+      {
+        "effect": "heal",
+        "value": 6,
+        "target": "self"
+      },
+      {
+        "effect": "draw",
+        "value": 1,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Second Wind+",
+      "cost": 1,
+      "description": "Heal 10 and draw 1 card.",
+      "effects": [
+        {
+          "effect": "heal",
+          "value": 10,
+          "target": "self"
+        },
+        {
+          "effect": "draw",
+          "value": 1,
+          "target": "self"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_tanking_wind.png"
+  },
+  {
+    "id": "bianca_tanking_runic",
+    "name": "Runic Bastion",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Gain 4 Block, +2 per Aether.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 4,
+        "target": "self",
+        "per_aether": 2
+      }
+    ],
+    "upgrade": {
+      "name": "Runic Bastion+",
+      "cost": 1,
+      "description": "Gain 6 Block, +3 per Aether.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 6,
+          "target": "self",
+          "per_aether": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_tanking_momentum",
+    "name": "Momentum Bash",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 5 damage, +3 per card already played this turn.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 5,
+        "target": "single_enemy",
+        "per_card_played": 3
+      }
+    ],
+    "upgrade": {
+      "name": "Momentum Bash+",
+      "cost": 1,
+      "description": "Deal 6 damage, +4 per card already played this turn.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 6,
+          "target": "single_enemy",
+          "per_card_played": 4
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_tanking_brand",
+    "name": "Branding Bash",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 7 damage. +4 if the target is Burning.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 7,
+        "target": "single_enemy",
+        "bonus_if_status": {
+          "status_id": "burn",
+          "value": 4
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Branding Bash+",
+      "cost": 1,
+      "description": "Deal 9 damage. +6 if the target is Burning.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 9,
+          "target": "single_enemy",
+          "bonus_if_status": {
+            "status_id": "burn",
+            "value": 6
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_tanking_ironskin",
+    "name": "Iron Skin",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Power: at the end of each turn, Bianca gains 3 Block.",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 6,
+        "power": {
+          "id": "ironskin",
+          "name": "Iron Skin",
+          "description": "At the end of each turn, Bianca gains 3 Block.",
+          "trigger": {
+            "event": "turn_end"
+          },
+          "effect": {
+            "effect": "bonus_block",
+            "value": 3
+          },
+          "limit_per_turn": 1
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Iron Skin+",
+      "cost": 1,
+      "description": "Power: at the end of each turn, Bianca gains 5 Block.",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 8,
+          "power": {
+            "id": "ironskin",
+            "name": "Iron Skin",
+            "description": "At the end of each turn, Bianca gains 5 Block.",
+            "trigger": {
+              "event": "turn_end"
+            },
+            "effect": {
+              "effect": "bonus_block",
+              "value": 5
+            },
+            "limit_per_turn": 1
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_tanking_spikes",
+    "name": "Spiked Bulwark",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Power: whenever an enemy attacks Bianca, it takes 2 damage.",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 6,
+        "power": {
+          "id": "spikes",
+          "name": "Spiked Bulwark",
+          "description": "Whenever an enemy attacks Bianca, it takes 2 damage.",
+          "trigger": {
+            "event": "attacked",
+            "recipient": "owner"
+          },
+          "effect": {
+            "effect": "damage_source",
+            "value": 2
+          },
+          "limit_per_turn": 99
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Spiked Bulwark+",
+      "cost": 1,
+      "description": "Power: whenever an enemy attacks Bianca, it takes 3 damage.",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 8,
+          "power": {
+            "id": "spikes",
+            "name": "Spiked Bulwark",
+            "description": "Whenever an enemy attacks Bianca, it takes 3 damage.",
+            "trigger": {
+              "event": "attacked",
+              "recipient": "owner"
+            },
+            "effect": {
+              "effect": "damage_source",
+              "value": 3
+            },
+            "limit_per_turn": 99
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_tanking_entrench",
+    "name": "Entrench",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 2,
+    "card_type": "skill",
+    "target": "self",
+    "rarity": "rare",
+    "description": "Double Bianca's Block.",
+    "effects": [
+      {
+        "effect": "multiply_block",
+        "target": "self",
+        "factor": 2
+      }
+    ],
+    "upgrade": {
+      "name": "Entrench+",
+      "cost": 1,
+      "description": "Double Bianca's Block.",
+      "effects": [
+        {
+          "effect": "multiply_block",
+          "target": "self",
+          "factor": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_tanking_phalanx",
+    "name": "Phalanx",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 0,
+    "card_type": "defense",
+    "target": "all_allies",
+    "rarity": "uncommon",
+    "description": "Give the party 4 Block X times.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 4,
+        "target": "all_allies",
+        "repeat_x": true
+      }
+    ],
+    "upgrade": {
+      "name": "Phalanx+",
+      "cost": 0,
+      "description": "Give the party 5 Block X times.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 5,
+          "target": "all_allies",
+          "repeat_x": true
+        }
+      ]
+    },
+    "x_cost": true
+  },
+  {
+    "id": "bianca_tanking_brace",
+    "name": "Bracing Stance",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "common",
+    "description": "Retain. Gain 9 Block.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 9,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Bracing Stance+",
+      "cost": 1,
+      "description": "Retain. Gain 12 Block.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 12,
+          "target": "self"
+        }
+      ]
+    },
+    "retain": true
+  },
+  {
+    "id": "bianca_tanking_roar",
+    "name": "Taunting Roar",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "all_enemies",
+    "rarity": "uncommon",
+    "description": "Gain 6 Block. Taunt ALL enemies for 1 turn.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 6,
+        "target": "self"
+      },
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "all_enemies",
+        "status_id": "taunt"
+      }
+    ],
+    "upgrade": {
+      "name": "Taunting Roar+",
+      "cost": 1,
+      "description": "Gain 9 Block. Taunt ALL enemies for 1 turn.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 9,
+          "target": "self"
+        },
+        {
+          "effect": "apply_status",
+          "value": 1,
+          "target": "all_enemies",
+          "status_id": "taunt"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_tanking_bash",
+    "name": "Shield Bash",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 0,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 3 damage plus half your Block.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "single_enemy",
+        "per_source_block": 0.5
+      }
+    ],
+    "upgrade": {
+      "name": "Shield Bash+",
+      "cost": 0,
+      "description": "Deal 5 damage plus half your Block.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 5,
+          "target": "single_enemy",
+          "per_source_block": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_tanking_unbreakable",
+    "name": "Unbreakable",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 2,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "rare",
+    "description": "Power: Bianca's cards give 3 more Block.",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 8,
+        "power": {
+          "id": "unbreakable",
+          "name": "Unbreakable",
+          "description": "Bianca's cards give 3 more Block.",
+          "stats": {
+            "block": 3
+          }
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Unbreakable+",
+      "cost": 1,
+      "description": "Power: Bianca's cards give 3 more Block.",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 8,
+          "power": {
+            "id": "unbreakable",
+            "name": "Unbreakable",
+            "description": "Bianca's cards give 3 more Block.",
+            "stats": {
+              "block": 3
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_tanking_warcry",
+    "name": "War Cry",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 1,
+    "card_type": "support",
+    "target": "all_allies",
+    "rarity": "uncommon",
+    "description": "Give the party 6 Block. Draw 2 cards. Exhaust.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 6,
+        "target": "all_allies"
+      },
+      {
+        "effect": "draw",
+        "value": 2,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "War Cry+",
+      "cost": 1,
+      "description": "Give the party 8 Block. Draw 2 cards. Exhaust.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 8,
+          "target": "all_allies"
+        },
+        {
+          "effect": "draw",
+          "value": 2,
+          "target": "self"
+        }
+      ]
+    },
+    "exhaust": true
+  }
+]

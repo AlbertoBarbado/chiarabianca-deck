@@ -1,0 +1,70 @@
+{
+  "id": "wind",
+  "character_id": "chiara",
+  "display_name": "Wind",
+  "identity": "Speed and flow: many cheap cards, Gusts conjured into the hand, spells that grow with every card played this turn, and winds that carry Bianca's poisons and oils to every foe.",
+  "description": "Chiara becomes the storm. She fills the hand with Gusts, chains cheap cards for Momentum and spreads Bianca's Poison and Oil across the whole enemy line.",
+  "keywords": [],
+  "starting_passive": {
+    "id": "wind_passive",
+    "name": "Tailwind",
+    "description": "The third card the party plays each turn (either princess's) adds a Gust to the hand. Once per turn. A Gust is a 0-cost card that deals 3 Wind damage and vanishes when played or at the end of the turn.",
+    "trigger": {
+      "event": "card_played",
+      "cards_played": 3
+    },
+    "limit_per_turn": 1,
+    "effect": {
+      "effect": "create_card",
+      "card_id": "chiara_wind_gust",
+      "value": 1
+    }
+  },
+  "starting_deck_card_ids": [
+    "chiara_wind_bolt",
+    "chiara_wind_bolt",
+    "chiara_wind_bolt",
+    "chiara_wind_bolt",
+    "chiara_wind_ward",
+    "chiara_wind_ward",
+    "chiara_wind_ward",
+    "chiara_wind_flurry",
+    "chiara_wind_flurry",
+    "chiara_wind_flurry"
+  ],
+  "card_pool": [
+    "chiara_wind_razor",
+    "chiara_wind_blades",
+    "chiara_wind_updraft",
+    "chiara_wind_barrier",
+    "chiara_wind_cyclone",
+    "chiara_wind_scatter",
+    "chiara_wind_slipstream",
+    "chiara_wind_whisper",
+    "chiara_wind_galeforce",
+    "chiara_wind_eye",
+    "chiara_wind_zephyr",
+    "chiara_wind_rhythm",
+    "chiara_wind_sharpened",
+    "chiara_wind_gather",
+    "chiara_wind_featherstep",
+    "chiara_wind_crosswind",
+    "chiara_wind_patience",
+    "chiara_wind_secondwind",
+    "chiara_wind_galeburst"
+  ],
+  "epic_pool": [
+    "chiara_wind_epic_hurricane",
+    "chiara_wind_epic_dancer"
+  ],
+  "skill_tree": {
+    "nodes": [],
+    "note": "Add skill nodes as the specialization is implemented."
+  },
+  "status": "playable",
+  "visual": {
+    "accent": "#7fe0c0",
+    "icon": "icon_wind"
+  },
+  "damage_element": "wind"
+}

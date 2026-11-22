@@ -1,0 +1,36 @@
+{
+  "id": "chiara",
+  "display_name": "Chiara",
+  "title": "The Mage Princess",
+  "role": "mage",
+  "story": "One of the twin princesses of the royal house.",
+  "appearance": {
+    "hair": "auburn-blonde",
+    "eyes": "light grey",
+    "silhouette": "elegant mage robes with royal detailing",
+    "palette": [
+      "deep blue",
+      "ivory",
+      "gold"
+    ]
+  },
+  "base_stats": {
+    "max_hp": 60,
+    "starting_hp": 60
+  },
+  "specializations": [
+    "arcana",
+    "fire",
+    "frost",
+    "earth",
+    "wind",
+    "lightning"
+  ],
+  "selected_specialization": null,
+  "personal_deck": [],
+  "asset_paths": {
+    "portrait": "res://assets/characters/chiara/portrait.png",
+    "full_body": "res://assets/characters/chiara/full_body.png",
+    "combat": "res://assets/characters/chiara/combat.png"
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "id": "frostpeak_layout",
+  "layout_for": "frostpeak",
+  "_comment": "Presentation only. The route chart is 3.8 pictures tall; it scrolls over the fixed misty frame (map_frostpeak) together with the tall painting of the mountain (climb_asset), so the party climbs it. altitude: metres shown on the gauge from the start room (base) to the boss room (summit).",
+  "background_asset": "map_frostpeak",
+  "climb_asset": "map_frostpeak_climb",
+  "canvas_height": 3.8,
+  "altitude": {
+    "base": 1400,
+    "summit": 6100,
+    "unit": "m"
+  },
+  "node_size": [
+    72,
+    72
+  ],
+  "default_bend": 0.04,
+  "nodes": {
+    "frostpeak_foothills": [
+      0.5,
+      0.975
+    ],
+    "pine_trailhead": [
+      0.21,
+      0.935
+    ],
+    "snowed_shrine": [
+      0.5,
+      0.935
+    ],
+    "bear_hollow": [
+      0.79,
+      0.935
+    ],
+    "frozen_cache": [
+      0.2549,
+      0.881
+    ],
+    "wolf_ridge": [
+      0.5376,
+      0.881
+    ],
+    "woodcutters_path": [
+      0.8202,
+      0.881
+    ],
+    "fallen_pines": [
+      0.2742,
+      0.827
+    ],
+    "snowfield": [
+      0.5496,
+      0.827
+    ],
+    "icy_brook": [
+      0.8249,
+      0.827
+    ],
+    "hunters_lodge": [
+      0.2599,
+      0.773
+    ],
+    "pinefall_village": [
+      0.5279,
+      0.773
+    ],
+    "mammoth_pass": [
+      0.7959,
+      0.773
+    ],
+    "avalanche_chute": [
+      0.2266,
+      0.719
+    ],
+    "frozen_mill": [
+      0.4872,
+      0.719
+    ],
+    "cliff_shrine": [
+      0.7479,
+      0.719
+    ],
+    "trading_post": [
+      0.2019,
+      0.665
+    ],
+    "hot_springs": [
+      0.4553,
+      0.665
+    ],
+    "crevasse_field": [
+      0.7086,
+      0.665
+    ],
+    "ice_cave_mouth": [
+      0.2077,
+      0.611
+    ],
+    "frozen_climber": [
+      0.4537,
+      0.611
+    ],
+    "rime_hollow": [
+      0.6997,
+      0.611
+    ],
+    "crystal_nest": [
+      0.245,
+      0.557
+    ],
+    "frozen_falls": [
+      0.4836,
+      0.557
+    ],
+    "ropebridge_outpost": [
+      0.7223,
+      0.557
+    ],
+    "echoing_chasm": [
+      0.2934,
+      0.503
+    ],
+    "glacier_vault": [
+      0.5247,
+      0.503
+    ],
+    "rope_bridge": [
+      0.756,
+      0.503
+    ],
+    "blue_labyrinth": [
+      0.325,
+      0.449
+    ],
+    "icefall": [
+      0.549,
+      0.449
+    ],
+    "hermits_cave": [
+      0.773,
+      0.449
+    ],
+    "frozen_lake": [
+      0.3233,
+      0.395
+    ],
+    "singing_ice": [
+      0.5399,
+      0.395
+    ],
+    "crystal_bridge": [
+      0.7566,
+      0.395
+    ],
+    "prayer_flags": [
+      0.2944,
+      0.341
+    ],
+    "thunder_cliffs": [
+      0.5037,
+      0.341
+    ],
+    "giants_stair": [
+      0.7131,
+      0.341
+    ],
+    "cloud_monastery": [
+      0.263,
+      0.287
+    ],
+    "eagle_crag": [
+      0.465,
+      0.287
+    ],
+    "wind_temple": [
+      0.667,
+      0.287
+    ],
+    "whiteout": [
+      0.2554,
+      0.233
+    ],
+    "dragon_hoard": [
+      0.4501,
+      0.233
+    ],
+    "knife_ridge": [
+      0.6447,
+      0.233
+    ],
+    "frost_gate": [
+      0.2818,
+      0.179
+    ],
+    "last_ascent": [
+      0.4691,
+      0.179
+    ],
+    "windbreak_hollow": [
+      0.6564,
+      0.179
+    ],
+    "storm_ledge": [
+      0.3291,
+      0.125
+    ],
+    "last_cairn": [
+      0.5091,
+      0.125
+    ],
+    "dragons_shadow": [
+      0.6891,
+      0.125
+    ],
+    "dragons_aerie": [
+      0.5,
+      0.068
+    ],
+    "frostpeak_summit": [
+      0.5,
+      0.022
+    ]
+  }
+}

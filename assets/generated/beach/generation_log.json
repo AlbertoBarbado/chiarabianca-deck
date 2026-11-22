@@ -1,0 +1,345 @@
+{
+ "_comment": "Generated locally with ComfyUI. Model: FLUX.1 [schnell] (Apache 2.0, black-forest-labs) GGUF Q3_K_S by city96; text encoders CLIP-L + T5-XXL GGUF; background removal BiRefNet (MIT). 4 steps, euler/simple, CFG 1.",
+ "assets": {
+  "map_sunlit_coast": {
+   "file": "res://assets/generated/beach/map_sunlit_coast.png",
+   "prompt": "wide landscape top-down illustrated fantasy adventure map of a sunny coastal land, a thin strip of turquoise sea only along the left edge, the rest is land: golden beaches, rocky coves, tide pools, palm groves, a small fishing village with piers, a broken shipwreck on the shore, sandstone ruins, rolling dunes, and a dark swirling sandstorm at the top, painted on aged parchment, ornate border, absolutely no text, no writing, no labels, no letters, no title, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 3111,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 120.6,
+   "date": "2026-11-16"
+  },
+  "battle_beach": {
+   "file": "res://assets/generated/beach/battle_beach.png",
+   "prompt": "wide eye-level view of a sunny fantasy beach for a 2D JRPG battle scene, evenly lit, soft daylight, no shadows on the sand, a huge flat open floor of smooth golden sand filling the entire lower half of the image, the sand starts at the middle of the image and stretches from the left edge to the right edge, turquoise sea and gentle waves on the horizon, sea cliffs and palm trees at the far sides, empty arena, no characters, no creatures, no text, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 3112,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 68.6,
+   "date": "2026-11-16"
+  },
+  "monster_giant_crab": {
+   "file": "res://assets/generated/beach/monster_giant_crab.png",
+   "prompt": "a giant armoured red and orange crab with huge serrated pincers raised, barnacles on its shell, full body, single creature, whole body visible from head to feet, side view facing right, standing on nothing, isolated on a plain flat light grey background, no ground, no shadow, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 3201,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 37.4,
+   "date": "2026-11-16"
+  },
+  "monster_dire_albatross": {
+   "file": "res://assets/generated/beach/monster_dire_albatross.png",
+   "prompt": "a huge menacing dire albatross seabird with enormous wings spread wide, hooked beak, storm-grey feathers, flying, full body, single creature, whole body visible from head to feet, side view facing right, standing on nothing, isolated on a plain flat light grey background, no ground, no shadow, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 3202,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 79.0,
+   "date": "2026-11-16"
+  },
+  "monster_triton_soldier": {
+   "file": "res://assets/generated/beach/monster_triton_soldier.png",
+   "prompt": "a triton soldier, a fish-man warrior with blue-green scales, fins, shell and coral armour, holding a trident, standing, full body, single creature, whole body visible from head to feet, side view facing right, standing on nothing, isolated on a plain flat light grey background, no ground, no shadow, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 3203,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 54.4,
+   "date": "2026-11-16"
+  },
+  "monster_rock_spider": {
+   "file": "res://assets/generated/beach/monster_rock_spider.png",
+   "prompt": "a giant spider made of grey and brown rock and stone plates, glowing amber eyes, eight stone legs, full body, single creature, whole body visible from head to feet, side view facing right, standing on nothing, isolated on a plain flat light grey background, no ground, no shadow, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 3204,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 83.2,
+   "date": "2026-11-16"
+  },
+  "monster_sand_giant": {
+   "file": "res://assets/generated/beach/monster_sand_giant.png",
+   "prompt": "a hulking giant golem made entirely of rough grainy golden desert sand, cracked crumbling sand texture, sand streaming and pouring from its shoulders and fists, glowing amber eyes, rocks embedded in its body, standing, monster, full body, single creature, whole body visible from head to feet, side view facing right, standing on nothing, isolated on a plain flat light grey background, no ground, no shadow, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 3215,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 72.2,
+   "date": "2026-11-16"
+  },
+  "monster_rock_giant": {
+   "file": "res://assets/generated/beach/monster_rock_giant.png",
+   "prompt": "a colossal giant made of craggy dark boulders and stone, moss and cracks, glowing orange core, massive arms, standing, full body, single creature, whole body visible from head to feet, side view facing right, standing on nothing, isolated on a plain flat light grey background, no ground, no shadow, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 3206,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 65.5,
+   "date": "2026-11-16"
+  },
+  "monster_sea_snake": {
+   "file": "res://assets/generated/beach/monster_sea_snake.png",
+   "prompt": "a huge teal and blue sea serpent with fins and spines, coiled body rising up, open fanged jaws, wet glistening scales, full body, single creature, whole body visible from head to feet, side view facing right, standing on nothing, isolated on a plain flat light grey background, no ground, no shadow, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 3207,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 68.8,
+   "date": "2026-11-16"
+  },
+  "boss_sandstorm_elemental": {
+   "file": "res://assets/generated/beach/boss_sandstorm_elemental.png",
+   "prompt": "a colossal living sandstorm monster, a towering whirling tornado of golden sand and dust with a monstrous face, two glowing orange eyes and a gaping mouth, huge arms made of swirling sand with claws, rocks orbiting it, terrifying elemental final boss, no people, no humans, no figures, full body, single creature, whole body visible from head to feet, side view facing right, standing on nothing, isolated on a plain flat light grey background, no ground, no shadow, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 896,
+   "height": 640,
+   "seed": 3311,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 34.4,
+   "date": "2026-11-16"
+  },
+  "vfx_water_splash": {
+   "file": "res://assets/generated/beach/vfx_water_splash.png",
+   "prompt": "a big explosive splash of sea water with droplets and foam, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 3401,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 123.8,
+   "date": "2026-11-16"
+  },
+  "vfx_sand_blast": {
+   "file": "res://assets/generated/beach/vfx_sand_blast.png",
+   "prompt": "a violent blast of swirling sand and dust, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 3402,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 139.2,
+   "date": "2026-11-16"
+  },
+  "vfx_rock_hurl": {
+   "file": "res://assets/generated/beach/vfx_rock_hurl.png",
+   "prompt": "a single large boulder rock flying with dust trail, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 3403,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 32.8,
+   "date": "2026-11-16"
+  },
+  "vfx_tidal_wave": {
+   "file": "res://assets/generated/beach/vfx_tidal_wave.png",
+   "prompt": "a curling ocean wave crashing, foam and spray, side view, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 512,
+   "seed": 3404,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 26.4,
+   "date": "2026-11-16"
+  },
+  "icon_soaked": {
+   "file": "res://assets/generated/beach/icon_soaked.png",
+   "prompt": "a single game icon of three blue water droplets, glossy, ornate silver rim, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 3501,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 26.2,
+   "date": "2026-11-16"
+  },
+  "icon_sandblind": {
+   "file": "res://assets/generated/beach/icon_sandblind.png",
+   "prompt": "a single game icon of a closed eye covered by swirling golden sand, ornate bronze rim, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 3502,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 30.3,
+   "date": "2026-11-16"
+  },
+  "icon_quicksand": {
+   "file": "res://assets/generated/beach/icon_quicksand.png",
+   "prompt": "a single game icon of a sinking sand whirlpool vortex, golden brown, ornate bronze rim, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 3503,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.2,
+   "date": "2026-11-16"
+  },
+  "battle_ship_deck": {
+   "file": "res://assets/generated/beach/battle_ship_deck.png",
+   "prompt": "wide eye-level view across the deck of a large wooden fantasy sailing ship on the open sea for a 2D JRPG battle scene, evenly lit, bright sunny daylight, a huge flat open floor of wooden deck planks filling the entire lower half of the image, the planks start at the middle of the image and stretch from the left edge to the right edge, wooden railings, a mast with furled sails and ropes at the far sides, turquoise open sea and blue sky on the horizon behind the railing, empty deck, no characters, no creatures, no text, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 3121,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 121.6,
+   "date": "2026-11-16"
+  },
+  "monster_shark_knight": {
+   "file": "res://assets/generated/beach/monster_shark_knight.png",
+   "prompt": "a fearsome shark knight, a muscular shark-headed humanoid warrior with grey-blue shark skin, gaping jaws full of jagged teeth, a dorsal fin on its back, wearing barnacle-crusted steel and coral plate armour, holding a large serrated sword and a round shell shield, standing, monster, full body, single creature, whole body visible from head to feet, side view facing right, standing on nothing, isolated on a plain flat light grey background, no ground, no shadow, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 3221,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 125.3,
+   "date": "2026-11-16"
+  },
+  "monster_sand_scorpion": {
+   "file": "res://assets/generated/beach/monster_sand_scorpion.png",
+   "prompt": "a giant desert sand scorpion with a sandy gold and rust-orange segmented carapace, two huge pincers raised, a tall curled tail with a glowing green venom stinger, side view facing left, monster, full body, single creature, whole body visible from head to feet, side view facing right, standing on nothing, isolated on a plain flat light grey background, no ground, no shadow, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 3232,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 107.0,
+   "date": "2026-11-16"
+  }
+ }
+}

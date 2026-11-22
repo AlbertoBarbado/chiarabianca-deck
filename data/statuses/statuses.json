@@ -1,0 +1,117 @@
+[
+  {
+    "id": "taunt",
+    "name": "Taunt",
+    "kind": "debuff",
+    "description": "Must attack the one who taunted it. {stacks} turn(s) left."
+  },
+  {
+    "id": "burn",
+    "name": "Burn",
+    "kind": "debuff",
+    "description": "Searing: takes {damage} damage at the start of the enemy phase, ignoring Block. Short but hot: {stacks} turn(s) left, never more than 4. New Burn adds turns.",
+    "tick": {
+      "timing": "enemy_phase_start",
+      "damage": 3,
+      "ignores_block": true,
+      "element": "fire"
+    },
+    "max_stacks": 4
+  },
+  {
+    "id": "poison",
+    "name": "Poison",
+    "kind": "debuff",
+    "description": "Toxic and slow: takes {damage} damage at the start of the enemy phase (one per stack), ignoring Block, then loses 1 stack. Stacks without limit.",
+    "tick": {
+      "timing": "enemy_phase_start",
+      "per_stack": true,
+      "ignores_block": true,
+      "element": "poison"
+    }
+  },
+  {
+    "id": "bleed",
+    "name": "Bleed",
+    "kind": "debuff",
+    "description": "Open wound: every attack that deals HP damage makes it lose {stacks} more HP, ignoring Block, then Bleed drops by 1. It never fades on its own.",
+    "decay": "on_trigger",
+    "on_hit": "stacks"
+  },
+  {
+    "id": "chill",
+    "name": "Chill",
+    "kind": "debuff",
+    "description": "Frozen to the bone: -{initiative} initiative (acts later) and takes +{vulnerable}% Physical damage. At 0 initiative an enemy is Frozen and loses its next turn (the Chill shatters). {stacks} stack(s), max 5, -1 per round.",
+    "max_stacks": 5,
+    "initiative_per_stack": -1,
+    "vulnerable": {
+      "element": "physical",
+      "per_stack": 10
+    }
+  },
+  {
+    "id": "soaked",
+    "name": "Soaked",
+    "kind": "debuff",
+    "description": "Drenched in sea water: takes +{vulnerable}% Lightning and Frost damage. {stacks} stack(s), max 3, -1 per round.",
+    "max_stacks": 3,
+    "vulnerable": {
+      "elements": [
+        "lightning",
+        "frost"
+      ],
+      "per_stack": 15
+    }
+  },
+  {
+    "id": "sandblind",
+    "name": "Sandblind",
+    "kind": "debuff",
+    "description": "Sand in the eyes: deals 25% less attack damage. {stacks} turn(s) left, max 3.",
+    "max_stacks": 3,
+    "damage_dealt_pct": -25
+  },
+  {
+    "id": "quicksand",
+    "name": "Quicksand",
+    "kind": "debuff",
+    "description": "Sinking sand: the party draws 1 fewer card at the start of its next {stacks} turn(s) (never more than 1 fewer, however many sink).",
+    "max_stacks": 3,
+    "decay": "on_trigger",
+    "draw_penalty": 1
+  },
+  {
+    "id": "oiled",
+    "name": "Oiled",
+    "kind": "debuff",
+    "description": "Slick with oil: deals 15% less attack damage and takes +{vulnerable}% Fire damage. {stacks} stack(s), max 3, -1 per round.",
+    "max_stacks": 3,
+    "damage_dealt_pct": -15,
+    "vulnerable": {
+      "element": "fire",
+      "per_stack": 15
+    }
+  },
+  {
+    "id": "blight",
+    "name": "Blight",
+    "kind": "debuff",
+    "decay": "on_trigger",
+    "execute": true,
+    "description": "Marked for death: at the start of the enemy phase, after Poison and Burn, it perishes if its HP is {stacks} or less. Blight never fades."
+  },
+  {
+    "id": "frostbitten",
+    "name": "Frostbitten",
+    "kind": "debuff",
+    "description": "Numb with cold: takes +{vulnerable}% Frost damage. {stacks} stack(s), max 3, -1 per round.",
+    "max_stacks": 3,
+    "vulnerable": {
+      "elements": [
+        "frost"
+      ],
+      "per_stack": 15
+    }
+  }
+]

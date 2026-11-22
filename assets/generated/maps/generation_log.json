@@ -1,0 +1,39 @@
+{
+ "_comment": "Generated locally with ComfyUI. Model: FLUX.1 [schnell] (Apache 2.0, black-forest-labs) GGUF Q3_K_S by city96; text encoders CLIP-L + T5-XXL GGUF; background removal BiRefNet (MIT). 4 steps, euler/simple, CFG 1.",
+ "assets": {
+  "map_royal_castle": {
+   "file": "res://assets/generated/maps/map_royal_castle.png",
+   "prompt": "wide landscape top-down illustrated fantasy adventure map of a royal castle and its grounds seen from above, a royal keep and bedchambers at the bottom centre, guest houses and a guard barracks on the left, a sandy training yard with practice dummies on the right, a large courtyard with a round fountain in the middle, market stalls and an armory on the far right, a library tower left of centre, a grand throne hall at the top centre, the main castle gate with a drawbridge and moat at the top, stone walls and towers around, gardens and blue roofs, painted on aged parchment, ornate border, absolutely no text, no labels, no letters, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 6101,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 98.3,
+   "date": "2026-11-16"
+  },
+  "map_enchanted_forest": {
+   "file": "res://assets/generated/maps/map_enchanted_forest.png",
+   "prompt": "wide landscape top-down illustrated fantasy adventure map of an enchanted forest, the left third is rocky grey mountains with snow and pine trees and winding mountain paths, the middle third is a dense misty forest of colossal ancient trees with glowing mushrooms, the right third is a river with waterfalls, cliffs and green meadows, a dark serpent lair at the top centre, painted on aged parchment, ornate border, absolutely no text, no labels, no letters, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 6111,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 54.6,
+   "date": "2026-11-16"
+  }
+ }
+}

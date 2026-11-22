@@ -1,0 +1,22 @@
+{
+  "id": "castle_potions_01",
+  "name": "Royal Provisioner",
+  "greeting": "Provisions for the princesses, Your Highnesses. Fresh from the royal stores.",
+  "stock": [
+    {
+      "item_id": "minor_health_potion",
+      "price": 15,
+      "quantity": 3
+    },
+    {
+      "item_id": "health_potion",
+      "price": 30,
+      "quantity": 2
+    }
+  ],
+  "art": "merchant_castle_potions",
+  "art_focus": [
+    0.22,
+    0.45
+  ]
+}

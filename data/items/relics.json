@@ -1,0 +1,490 @@
+[
+  {
+    "id": "guardian_locket",
+    "name": "Guardian's Locket",
+    "category": "relic",
+    "rarity": "common",
+    "description": "Every party member starts each battle with 4 Block.",
+    "flavor": "Two halves of one locket, one for each sister.",
+    "icon": "res://assets/generated/relics/relic_guardian_locket.png",
+    "effect": {
+      "type": "combat_start_block",
+      "value": 4
+    }
+  },
+  {
+    "id": "scholars_satchel",
+    "name": "Scholar's Satchel",
+    "category": "relic",
+    "rarity": "common",
+    "description": "Draw 1 extra card on the first turn of each battle.",
+    "flavor": "Still smells of the castle library.",
+    "icon": "res://assets/generated/relics/relic_scholars_satchel.png",
+    "effect": {
+      "type": "first_turn_draw",
+      "value": 1
+    }
+  },
+  {
+    "id": "healers_pendant",
+    "name": "Healer's Pendant",
+    "category": "relic",
+    "rarity": "common",
+    "description": "After each won battle, every living party member heals 5 HP.",
+    "flavor": "A gift from the palace infirmary.",
+    "icon": "res://assets/generated/relics/relic_healers_pendant.png",
+    "effect": {
+      "type": "heal_after_victory",
+      "value": 5
+    }
+  },
+  {
+    "id": "sundial_shard",
+    "name": "Sundial Shard",
+    "category": "relic",
+    "rarity": "common",
+    "description": "Every 3rd turn, gain 1 Energy.",
+    "flavor": "Its shadow points at the third hour, always.",
+    "icon": "res://assets/generated/relics/relic_sundial_shard.png",
+    "effects": [
+      {
+        "text": "Every 3rd turn, gain 1 Energy.",
+        "trigger": {
+          "event": "turn_start",
+          "every": 3
+        },
+        "effect": {
+          "effect": "gain_energy",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "thorn_pouch",
+    "name": "Thorn Pouch",
+    "category": "relic",
+    "rarity": "common",
+    "description": "At the start of each battle, apply 2 Bleed to ALL enemies.",
+    "flavor": "Caltrops of black thorn, scattered before the first blow.",
+    "icon": "res://assets/generated/relics/relic_thorn_pouch.png",
+    "effects": [
+      {
+        "text": "At the start of each battle, apply 2 Bleed to ALL enemies.",
+        "trigger": {
+          "event": "turn_start",
+          "turn": 1
+        },
+        "effect": {
+          "effect": "apply_status_all",
+          "status_id": "bleed",
+          "value": 2
+        },
+        "limit_per_turn": 1,
+        "limit_per_combat": 1
+      }
+    ]
+  },
+  {
+    "id": "royal_pear",
+    "name": "Royal Pear",
+    "category": "relic",
+    "rarity": "common",
+    "description": "Both sisters gain 6 Max HP.",
+    "flavor": "From the queen's own orchard.",
+    "icon": "res://assets/generated/relics/relic_royal_pear.png",
+    "stats": {
+      "max_hp": 6
+    }
+  },
+  {
+    "id": "whispering_bell",
+    "name": "Whispering Bell",
+    "category": "relic",
+    "rarity": "common",
+    "description": "The 3rd card the party plays each turn gives both sisters 3 Block.",
+    "flavor": "It rings only when the rhythm is right.",
+    "icon": "res://assets/generated/relics/relic_whispering_bell.png",
+    "effects": [
+      {
+        "text": "The 3rd card the party plays each turn gives both sisters 3 Block.",
+        "trigger": {
+          "event": "card_played",
+          "cards_played": 3
+        },
+        "effect": {
+          "effect": "party_block",
+          "value": 3
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "raven_horn",
+    "name": "Raven Horn",
+    "category": "relic",
+    "rarity": "common",
+    "description": "When an enemy falls, gain 1 Energy (twice per turn).",
+    "flavor": "Ravens gather where a foe falls.",
+    "icon": "res://assets/generated/relics/relic_raven_horn.png",
+    "effects": [
+      {
+        "text": "When an enemy falls, gain 1 Energy (twice per turn).",
+        "trigger": {
+          "event": "enemy_killed"
+        },
+        "effect": {
+          "effect": "gain_energy",
+          "value": 1
+        },
+        "limit_per_turn": 2
+      }
+    ]
+  },
+  {
+    "id": "sisters_locket",
+    "name": "Sisters' Locket",
+    "category": "relic",
+    "rarity": "uncommon",
+    "description": "When a card follows one of the other sister's, both sisters gain 2 Block (3 times per turn).",
+    "flavor": "Twin portraits that turn to face each other.",
+    "icon": "res://assets/generated/relics/relic_sisters_locket.png",
+    "effects": [
+      {
+        "text": "When a card follows one of the other sister's, both sisters gain 2 Block (3 times per turn).",
+        "trigger": {
+          "event": "card_played",
+          "after_other_owner": true
+        },
+        "effect": {
+          "effect": "party_block",
+          "value": 2
+        },
+        "limit_per_turn": 3
+      }
+    ]
+  },
+  {
+    "id": "chime_of_echoes",
+    "name": "Chime of Echoes",
+    "category": "relic",
+    "rarity": "uncommon",
+    "description": "The 4th card the party plays each turn deals 4 damage to ALL enemies.",
+    "flavor": "Every fourth note shatters something.",
+    "icon": "res://assets/generated/relics/relic_chime_of_echoes.png",
+    "effects": [
+      {
+        "text": "The 4th card the party plays each turn deals 4 damage to ALL enemies.",
+        "trigger": {
+          "event": "card_played",
+          "cards_played": 4
+        },
+        "effect": {
+          "effect": "damage_all",
+          "value": 4,
+          "element": "arcane"
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "ley_crystal",
+    "name": "Ley Crystal",
+    "category": "relic",
+    "rarity": "uncommon",
+    "description": "At the start of each turn, gain 1 Aether.",
+    "flavor": "A splinter of the ley lines under the castle.",
+    "icon": "res://assets/generated/relics/relic_ley_crystal.png",
+    "effects": [
+      {
+        "text": "At the start of each turn, gain 1 Aether.",
+        "trigger": {
+          "event": "turn_start"
+        },
+        "effect": {
+          "effect": "gain_aether",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "mercury_bell",
+    "name": "Mercury Bell",
+    "category": "relic",
+    "rarity": "uncommon",
+    "description": "At the start of each turn, deal 2 damage to ALL enemies.",
+    "flavor": "Its toll stings the ears of the wicked.",
+    "icon": "res://assets/generated/relics/relic_mercury_bell.png",
+    "effects": [
+      {
+        "text": "At the start of each turn, deal 2 damage to ALL enemies.",
+        "trigger": {
+          "event": "turn_start"
+        },
+        "effect": {
+          "effect": "damage_all",
+          "value": 2,
+          "element": "holy"
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "war_drum",
+    "name": "War Drum",
+    "category": "relic",
+    "rarity": "uncommon",
+    "description": "The first Attack the party plays each turn draws 1 card.",
+    "flavor": "Boom, and the next blow is already coming.",
+    "icon": "res://assets/generated/relics/relic_war_drum.png",
+    "effects": [
+      {
+        "text": "The first Attack the party plays each turn draws 1 card.",
+        "trigger": {
+          "event": "card_played",
+          "card_type": "attack"
+        },
+        "effect": {
+          "effect": "draw_cards",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "tidal_mirror",
+    "name": "Tidal Mirror",
+    "category": "relic",
+    "rarity": "uncommon",
+    "description": "When Block stops a whole enemy attack, draw 1 card (twice per turn).",
+    "flavor": "It shows the blow before it lands.",
+    "icon": "res://assets/generated/relics/relic_tidal_mirror.png",
+    "effects": [
+      {
+        "text": "When Block stops a whole enemy attack, draw 1 card (twice per turn).",
+        "trigger": {
+          "event": "attack_absorbed"
+        },
+        "effect": {
+          "effect": "draw_cards",
+          "value": 1
+        },
+        "limit_per_turn": 2
+      }
+    ]
+  },
+  {
+    "id": "alchemists_stone",
+    "name": "Alchemist's Stone",
+    "category": "relic",
+    "rarity": "rare",
+    "description": "The first time a sister applies a debuff each turn, it gets 1 extra stack.",
+    "flavor": "Whatever touches it grows a little worse.",
+    "icon": "res://assets/generated/relics/relic_alchemists_stone.png",
+    "effects": [
+      {
+        "text": "The first time a sister applies a debuff each turn, it gets 1 extra stack.",
+        "trigger": {
+          "event": "status_applied",
+          "debuff_only": true
+        },
+        "effect": {
+          "effect": "extra_status",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "twin_comet",
+    "name": "Twin Comet",
+    "category": "relic",
+    "rarity": "rare",
+    "description": "Every 2nd turn, draw 2 extra cards.",
+    "flavor": "Seen once every hundred years, on the night the twins were born.",
+    "icon": "res://assets/generated/relics/relic_twin_comet.png",
+    "effects": [
+      {
+        "text": "Every 2nd turn, draw 2 extra cards.",
+        "trigger": {
+          "event": "turn_start",
+          "every": 2
+        },
+        "effect": {
+          "effect": "draw_cards",
+          "value": 2
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "phoenix_feather",
+    "name": "Phoenix Feather",
+    "category": "relic",
+    "rarity": "rare",
+    "description": "When an enemy falls, both sisters heal 3 HP.",
+    "flavor": "Warm to the touch, even in winter.",
+    "icon": "res://assets/generated/relics/relic_phoenix_feather.png",
+    "effects": [
+      {
+        "text": "When an enemy falls, both sisters heal 3 HP.",
+        "trigger": {
+          "event": "enemy_killed"
+        },
+        "effect": {
+          "effect": "heal_party",
+          "value": 3
+        },
+        "limit_per_turn": 3
+      }
+    ]
+  },
+  {
+    "id": "storm_crown",
+    "name": "Storm Crown",
+    "category": "relic",
+    "rarity": "rare",
+    "description": "The 6th card the party plays each turn grants 1 Energy and draws 1 card.",
+    "flavor": "Lightning loves a long chain.",
+    "icon": "res://assets/generated/relics/relic_storm_crown.png",
+    "effects": [
+      {
+        "text": "The 6th card the party plays each turn grants 1 Energy.",
+        "trigger": {
+          "event": "card_played",
+          "cards_played": 6
+        },
+        "effect": {
+          "effect": "gain_energy",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      },
+      {
+        "text": "The 6th card the party plays each turn draws 1 card.",
+        "trigger": {
+          "event": "card_played",
+          "cards_played": 6
+        },
+        "effect": {
+          "effect": "draw_cards",
+          "value": 1
+        },
+        "limit_per_turn": 1
+      }
+    ]
+  },
+  {
+    "id": "dragon_heart",
+    "name": "Dragon Heart",
+    "category": "relic",
+    "rarity": "rare",
+    "description": "At the start of each battle, both sisters gain 8 Block and every enemy takes 6 damage.",
+    "flavor": "Still beating, still burning.",
+    "icon": "res://assets/generated/relics/relic_dragon_heart.png",
+    "effects": [
+      {
+        "text": "At the start of each battle, both sisters gain 8 Block.",
+        "trigger": {
+          "event": "turn_start",
+          "turn": 1
+        },
+        "effect": {
+          "effect": "party_block",
+          "value": 8
+        },
+        "limit_per_turn": 1,
+        "limit_per_combat": 1
+      },
+      {
+        "text": "At the start of each battle, every enemy takes 6 damage.",
+        "trigger": {
+          "event": "turn_start",
+          "turn": 1
+        },
+        "effect": {
+          "effect": "damage_all",
+          "value": 6,
+          "element": "fire"
+        },
+        "limit_per_turn": 1,
+        "limit_per_combat": 1
+      }
+    ]
+  },
+  {
+    "id": "runic_crown",
+    "name": "Runic Crown",
+    "category": "relic",
+    "rarity": "boss",
+    "description": "+1 Energy every turn. Draw 1 fewer card each turn.",
+    "flavor": "Heavy is the head.",
+    "icon": "res://assets/generated/relics/relic_runic_crown.png",
+    "stats": {
+      "energy": 1,
+      "hand_size": -1
+    }
+  },
+  {
+    "id": "eclipse_orb",
+    "name": "Eclipse Orb",
+    "category": "relic",
+    "rarity": "boss",
+    "description": "+1 Energy every turn. Enemies deal 10% more damage.",
+    "flavor": "Darkness answers to whoever holds it, and so do the monsters.",
+    "icon": "res://assets/generated/relics/relic_eclipse_orb.png",
+    "stats": {
+      "energy": 1,
+      "enemy_damage_pct": 10
+    }
+  },
+  {
+    "id": "crimson_chalice",
+    "name": "Crimson Chalice",
+    "category": "relic",
+    "rarity": "boss",
+    "description": "+1 Energy every turn. Both sisters lose 8 Max HP.",
+    "flavor": "It fills itself with what you can spare.",
+    "icon": "res://assets/generated/relics/relic_crimson_chalice.png",
+    "stats": {
+      "energy": 1,
+      "max_hp": -8
+    }
+  },
+  {
+    "id": "twin_halo",
+    "name": "Twin Halo",
+    "category": "relic",
+    "rarity": "boss",
+    "description": "Draw 1 extra card every turn. At the start of each battle, both sisters gain 6 Block.",
+    "flavor": "Two rings of light, one above each sister.",
+    "icon": "res://assets/generated/relics/relic_twin_halo.png",
+    "effects": [
+      {
+        "text": "At the start of each battle, both sisters gain 6 Block.",
+        "trigger": {
+          "event": "turn_start",
+          "turn": 1
+        },
+        "effect": {
+          "effect": "party_block",
+          "value": 6
+        },
+        "limit_per_turn": 1,
+        "limit_per_combat": 1
+      }
+    ],
+    "stats": {
+      "hand_size": 1
+    }
+  }
+]

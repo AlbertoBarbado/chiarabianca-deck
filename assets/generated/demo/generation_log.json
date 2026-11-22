@@ -1,0 +1,141 @@
+{
+ "_comment": "Generated locally with ComfyUI. Model: FLUX.1 [schnell] (Apache 2.0, black-forest-labs) GGUF Q3_K_S by city96; text encoders CLIP-L + T5-XXL GGUF; background removal BiRefNet (MIT). 4 steps, euler/simple, CFG 1.",
+ "assets": {
+  "monster_cave_bat": {
+   "file": "res://assets/generated/demo/monster_cave_bat.png",
+   "prompt": "a giant fanged cave bat with leathery violet wings spread wide, sharp claws, red eyes, full body, single creature, whole body visible from head to feet, side view facing right, standing on nothing, isolated on a plain flat light grey background, no ground, no shadow, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 1202,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 117.5,
+   "date": "2026-11-15"
+  },
+  "map_crystal_hollow": {
+   "file": "res://assets/generated/demo/map_crystal_hollow.png",
+   "prompt": "wide landscape top-down illustrated fantasy adventure map of a vast underground crystal cavern, winding cave tunnels and chambers, glowing blue and violet crystal clusters, an underground lake, a mushroom grove, ancient ruins, lava fissure at the top, painted on aged parchment, ornate border, no text, no labels, no letters, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 1101,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 123.5,
+   "date": "2026-11-16"
+  },
+  "battle_crystal_hollow": {
+   "file": "res://assets/generated/demo/battle_crystal_hollow.png",
+   "prompt": "wide eye-level view of a vast underground crystal cavern for a 2D JRPG battle scene, a huge flat open floor of cracked stone tiles filling the entire lower half of the image, the floor starts at the middle of the image and stretches from the left edge to the right edge, empty arena, glowing blue and violet crystal formations on the far walls, soft mist, distant glowing waterfall, no characters, no creatures, no text, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 1112,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 159.9,
+   "date": "2026-11-16"
+  },
+  "monster_crystal_golem": {
+   "file": "res://assets/generated/demo/monster_crystal_golem.png",
+   "prompt": "a hulking crystal golem made of blue quartz and dark stone, glowing core in its chest, full body, single creature, whole body visible from head to feet, side view facing right, standing on nothing, isolated on a plain flat light grey background, no ground, no shadow, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 1201,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 159.7,
+   "date": "2026-11-16"
+  },
+  "monster_fungal_shambler": {
+   "file": "res://assets/generated/demo/monster_fungal_shambler.png",
+   "prompt": "a shambling mushroom creature with a big spotted purple cap, glowing green spores, root legs, full body, single creature, whole body visible from head to feet, side view facing right, standing on nothing, isolated on a plain flat light grey background, no ground, no shadow, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 1203,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 42.2,
+   "date": "2026-11-16"
+  },
+  "monster_shadow_wraith": {
+   "file": "res://assets/generated/demo/monster_shadow_wraith.png",
+   "prompt": "a floating hooded shadow wraith with tattered black robes and glowing violet eyes, spectral claws, full body, single creature, whole body visible from head to feet, side view facing right, standing on nothing, isolated on a plain flat light grey background, no ground, no shadow, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 1204,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 68.8,
+   "date": "2026-11-16"
+  },
+  "boss_crystal_wyrm": {
+   "file": "res://assets/generated/demo/boss_crystal_wyrm.png",
+   "prompt": "a colossal terrifying dragon wyrm, dark obsidian black scales, huge jagged glowing violet crystal spikes erupting along its spine and horns, rearing up ready to strike, enormous gaping fanged maw with rows of sharp crystal teeth, glowing furious magenta eyes, clawed forelegs, thick armoured serpent body, dark fantasy final boss monster, menacing and intimidating, dramatic rim light, full body, single creature, whole body visible from head to feet, side view facing right, standing on nothing, isolated on a plain flat light grey background, no ground, no shadow, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 896,
+   "height": 640,
+   "seed": 1311,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 99.9,
+   "date": "2026-11-16"
+  },
+  "icon_bleed": {
+   "file": "res://assets/generated/demo/icon_bleed.png",
+   "prompt": "a single game icon of a bright red blood drop with a small slash wound, ornate gold rim, centered, isolated on a plain flat light grey background, no text, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 1401,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 67.6,
+   "date": "2026-11-16"
+  }
+ }
+}

@@ -1,0 +1,557 @@
+{
+  "card_fire_pyromancy": {
+    "prompt": "a mage's open hands cradling a swirling vortex of living flame, sparks spiralling upward",
+    "seed": 9101,
+    "specialization": "fire"
+  },
+  "card_fire_innerblaze": {
+    "prompt": "a glowing core of white-hot fire burning inside a crystal heart, radiant flames",
+    "seed": 9102,
+    "specialization": "fire"
+  },
+  "card_fire_firestorm": {
+    "prompt": "a raging firestorm of swirling flame tornadoes over a scorched battlefield, epic",
+    "seed": 9103,
+    "specialization": "fire"
+  },
+  "card_fire_banked": {
+    "prompt": "glowing embers kept alive in a small iron brazier, waiting, warm orange glow in the dark",
+    "seed": 9104,
+    "specialization": "fire"
+  },
+  "card_fire_cauterize": {
+    "prompt": "a shield of searing orange flame flaring outward, heat haze",
+    "seed": 9105,
+    "specialization": "fire"
+  },
+  "card_fire_fan": {
+    "prompt": "a gust of wind fanning a line of small fires into tall roaring flames",
+    "seed": 9206,
+    "specialization": "fire"
+  },
+  "card_fire_searing": {
+    "prompt": "a long lance of concentrated white and orange fire piercing through the air",
+    "seed": 9107,
+    "specialization": "fire"
+  },
+  "card_fire_ignition": {
+    "prompt": "a burst of ignition, a single spark exploding into a ring of fire",
+    "seed": 9108,
+    "specialization": "fire"
+  },
+  "card_fire_afterglow": {
+    "prompt": "a crimson sunset sky glowing like embers over a burning horizon, smouldering clouds",
+    "seed": 9109,
+    "specialization": "fire"
+  },
+  "card_frost_permafrost": {
+    "prompt": "frozen tundra ground covered in thick ancient ice, a frost aura rising like armour",
+    "seed": 9110,
+    "specialization": "frost"
+  },
+  "card_frost_wintersgrip": {
+    "prompt": "a giant hand of ice and frost closing around a dark battlefield, snowstorm",
+    "seed": 9111,
+    "specialization": "frost"
+  },
+  "card_frost_icebarrier": {
+    "prompt": "a thick curved wall of clear blue ice standing guard, frost crystals",
+    "seed": 9112,
+    "specialization": "frost"
+  },
+  "card_frost_frostbite": {
+    "prompt": "biting frost creeping over a dark armoured gauntlet, ice crystals spreading",
+    "seed": 9113,
+    "specialization": "frost"
+  },
+  "card_frost_hailstorm": {
+    "prompt": "a violent hailstorm of glowing ice stones pounding a battlefield, storm clouds",
+    "seed": 9114,
+    "specialization": "frost"
+  },
+  "card_frost_flashfreeze": {
+    "prompt": "a blinding flash of frost freezing a wave of water solid mid-crash",
+    "seed": 9115,
+    "specialization": "frost"
+  },
+  "card_frost_glacialarmor": {
+    "prompt": "ornate armour plates made of blue glacier ice floating around two silhouettes",
+    "seed": 9116,
+    "specialization": "frost"
+  },
+  "card_frost_icicles": {
+    "prompt": "a barrage of sharp icicles flying through the air in a fan, frost trails",
+    "seed": 9117,
+    "specialization": "frost"
+  },
+  "card_frost_clarity": {
+    "prompt": "a perfect floating ice crystal refracting cold light into rainbow beams",
+    "seed": 9118,
+    "specialization": "frost"
+  },
+  "card_arcana_leyattune": {
+    "prompt": "glowing violet ley lines converging on a mage standing in a stone circle at night",
+    "seed": 9119,
+    "specialization": "arcana"
+  },
+  "card_arcana_mastery": {
+    "prompt": "an ancient floating spellbook surrounded by orbiting violet runes of power",
+    "seed": 9120,
+    "specialization": "arcana"
+  },
+  "card_arcana_manaburst": {
+    "prompt": "a violent burst of raw violet mana exploding outward from an orb, shockwave",
+    "seed": 9121,
+    "specialization": "arcana"
+  },
+  "card_arcana_prepared": {
+    "prompt": "a glowing violet spell sigil held ready between two fingers, contained energy",
+    "seed": 9122,
+    "specialization": "arcana"
+  },
+  "card_arcana_shield": {
+    "prompt": "a hexagonal shield of translucent violet arcane energy, geometric patterns",
+    "seed": 9123,
+    "specialization": "arcana"
+  },
+  "card_arcana_overcharge": {
+    "prompt": "a crystal orb overloaded with crackling violet energy, cracks of light",
+    "seed": 9124,
+    "specialization": "arcana"
+  },
+  "card_arcana_sigil": {
+    "prompt": "two interlocking glowing magic circles, one violet and one gold, floating in the air",
+    "seed": 9125,
+    "specialization": "arcana"
+  },
+  "card_arcana_cascade": {
+    "prompt": "a waterfall of glowing violet spell cards cascading through the air",
+    "seed": 9126,
+    "specialization": "arcana"
+  },
+  "card_arcana_nova": {
+    "prompt": "a nova of violet aether light expanding in a ring from a mage, stars",
+    "seed": 9127,
+    "specialization": "arcana"
+  },
+  "card_wind_zephyr": {
+    "prompt": "a mage in a poised stance on a cliff edge, soft zephyr winds circling her, cape flowing",
+    "seed": 9128,
+    "specialization": "wind"
+  },
+  "card_wind_rhythm": {
+    "prompt": "rhythmic rings of wind pulsing outward like drum beats across a stormy sky",
+    "seed": 9129,
+    "specialization": "wind"
+  },
+  "card_wind_sharpened": {
+    "prompt": "razor sharp crescents of wind slicing through falling leaves",
+    "seed": 9130,
+    "specialization": "wind"
+  },
+  "card_wind_gather": {
+    "prompt": "a mage gathering swirling ribbons of wind into her raised hands",
+    "seed": 9131,
+    "specialization": "wind"
+  },
+  "card_wind_featherstep": {
+    "prompt": "a light foot stepping on a drifting feather in mid air, swirling breeze",
+    "seed": 9132,
+    "specialization": "wind"
+  },
+  "card_wind_crosswind": {
+    "prompt": "two crossing blades of wind forming an X in the air over a grassy field",
+    "seed": 9133,
+    "specialization": "wind"
+  },
+  "card_wind_patience": {
+    "prompt": "a gentle breeze building slowly over a calm lake into a gathering storm",
+    "seed": 9134,
+    "specialization": "wind"
+  },
+  "card_wind_secondwind": {
+    "prompt": "a refreshing wind carrying glowing green leaves and healing light",
+    "seed": 9135,
+    "specialization": "wind"
+  },
+  "card_wind_galeburst": {
+    "prompt": "three bursts of violent wind exploding outward in sequence, dust clouds",
+    "seed": 9236,
+    "specialization": "wind"
+  },
+  "card_holy_devotion": {
+    "prompt": "a golden aura of holy light surrounding a kneeling knight, rays from above",
+    "seed": 9137,
+    "specialization": "holy"
+  },
+  "card_holy_consecration": {
+    "prompt": "consecrated ground glowing with golden holy runes in a circle, light pillars rising",
+    "seed": 9138,
+    "specialization": "holy"
+  },
+  "card_holy_blessedarms": {
+    "prompt": "a sword and shield glowing with golden blessing light on a stone altar",
+    "seed": 9139,
+    "specialization": "holy"
+  },
+  "card_holy_favor": {
+    "prompt": "golden divine light pouring down from parted clouds onto two figures",
+    "seed": 9140,
+    "specialization": "holy"
+  },
+  "card_holy_patience": {
+    "prompt": "clasped gauntleted hands in prayer surrounded by soft golden light, candles",
+    "seed": 9141,
+    "specialization": "holy"
+  },
+  "card_holy_radiant": {
+    "prompt": "a radiant golden sword strike leaving an arc of holy light",
+    "seed": 9142,
+    "specialization": "holy"
+  },
+  "card_holy_purify": {
+    "prompt": "a wave of purifying white-gold light sweeping across a dark battlefield",
+    "seed": 9143,
+    "specialization": "holy"
+  },
+  "card_holy_hallowed": {
+    "prompt": "a knight planting a shield into glowing hallowed ground, golden cracks of light spreading",
+    "seed": 9144,
+    "specialization": "holy"
+  },
+  "card_holy_chorus": {
+    "prompt": "golden songbirds singing at dawn above a castle chapel, warm sunrise",
+    "seed": 9145,
+    "specialization": "holy"
+  },
+  "card_tanking_ironskin": {
+    "prompt": "a knight's forearm covered in overlapping iron scale plates, metallic sheen",
+    "seed": 9146,
+    "specialization": "tanking"
+  },
+  "card_tanking_spikes": {
+    "prompt": "a heavy tower shield covered in sharp steel spikes, sparks as a claw strikes it",
+    "seed": 9147,
+    "specialization": "tanking"
+  },
+  "card_tanking_entrench": {
+    "prompt": "a knight dug in behind a stone barricade and a planted shield, unmovable",
+    "seed": 9148,
+    "specialization": "tanking"
+  },
+  "card_tanking_phalanx": {
+    "prompt": "a wall of overlapping steel shields locked together in formation",
+    "seed": 9149,
+    "specialization": "tanking"
+  },
+  "card_tanking_brace": {
+    "prompt": "a knight bracing behind her shield in a low stance, dust kicking up",
+    "seed": 9150,
+    "specialization": "tanking"
+  },
+  "card_tanking_roar": {
+    "prompt": "a knight raising her sword and shouting a challenge, shockwave of courage",
+    "seed": 9151,
+    "specialization": "tanking"
+  },
+  "card_tanking_bash": {
+    "prompt": "a round steel shield slamming forward into a foe, impact burst",
+    "seed": 9152,
+    "specialization": "tanking"
+  },
+  "card_tanking_unbreakable": {
+    "prompt": "a battered but unbroken shield standing upright in the rubble of a battle",
+    "seed": 9153,
+    "specialization": "tanking"
+  },
+  "card_tanking_warcry": {
+    "prompt": "a war banner raised high on a hill, knights rallying behind it",
+    "seed": 9154,
+    "specialization": "tanking"
+  },
+  "card_venom_virulence": {
+    "prompt": "a writhing green virus-like plague bloom spreading tendrils across dark stone",
+    "seed": 9155,
+    "specialization": "venom"
+  },
+  "card_venom_censer": {
+    "prompt": "a swinging iron censer on a chain trailing thick green poisonous smoke",
+    "seed": 9156,
+    "specialization": "venom"
+  },
+  "card_venom_harvest": {
+    "prompt": "withered toxic plants sprouting glowing green spores from a fallen beast's bones",
+    "seed": 9157,
+    "specialization": "venom"
+  },
+  "card_venom_volley": {
+    "prompt": "a flurry of thrown poisoned darts trailing green mist through the air",
+    "seed": 9158,
+    "specialization": "venom"
+  },
+  "card_venom_cloak": {
+    "prompt": "a dark hooded cloak billowing with a shroud of green miasma",
+    "seed": 9159,
+    "specialization": "venom"
+  },
+  "card_venom_fester": {
+    "prompt": "a corroded black blade striking, festering green rot spreading from the wound",
+    "seed": 9160,
+    "specialization": "venom"
+  },
+  "card_venom_rupture": {
+    "prompt": "a bloated green toxic pustule bursting in a violent splash of glowing venom",
+    "seed": 9161,
+    "specialization": "venom"
+  },
+  "card_venom_contagion": {
+    "prompt": "green poison spreading like a web between several dark silhouettes",
+    "seed": 9162,
+    "specialization": "venom"
+  },
+  "card_venom_wither": {
+    "prompt": "a gauntleted hand touching a flower that withers into black ash and violet mist",
+    "seed": 9163,
+    "specialization": "venom"
+  },
+  "card_ash_trapmaster": {
+    "prompt": "a workbench covered in hidden traps, tripwires, oil flasks and powder kegs, lantern light",
+    "seed": 9164,
+    "specialization": "ashveil"
+  },
+  "card_ash_slickground": {
+    "prompt": "black glossy oil spreading across a cobblestone floor reflecting torchlight",
+    "seed": 9165,
+    "specialization": "ashveil"
+  },
+  "card_ash_powderkeg": {
+    "prompt": "a wooden powder keg exploding in a huge fiery blast, debris flying",
+    "seed": 9166,
+    "specialization": "ashveil"
+  },
+  "card_ash_hiddenblade": {
+    "prompt": "a slim blade sliding out from a hidden sleeve sheath, glint of steel in shadow",
+    "seed": 9167,
+    "specialization": "ashveil"
+  },
+  "card_ash_flashpowder": {
+    "prompt": "a blinding flash of white powder exploding in a dark alley, smoke",
+    "seed": 9168,
+    "specialization": "ashveil"
+  },
+  "card_ash_beartrap": {
+    "prompt": "a rusty iron bear trap snapping shut among dead leaves",
+    "seed": 9169,
+    "specialization": "ashveil"
+  },
+  "card_ash_vanish": {
+    "prompt": "two cloaked figures vanishing into a thick cloud of grey smoke",
+    "seed": 9170,
+    "specialization": "ashveil"
+  },
+  "card_ash_fanknives": {
+    "prompt": "a fan of throwing knives spinning outward in a circle, motion blur",
+    "seed": 9171,
+    "specialization": "ashveil"
+  },
+  "card_ash_shadowarts": {
+    "prompt": "a shadowy rogue knight mid-spin with two daggers, smoke trailing",
+    "seed": 9172,
+    "specialization": "ashveil"
+  },
+  "card_fire_ember": {
+    "prompt": "a small bolt of ember fire streaking across a smoky night battlefield like a comet, glowing trail, full-bleed scene",
+    "seed": 9273,
+    "specialization": "fire"
+  },
+  "card_fire_cinderward": {
+    "prompt": "a swirling ring of glowing cinders and ash forming a protective dome, orange sparks",
+    "seed": 9174,
+    "specialization": "fire"
+  },
+  "card_fire_kindle": {
+    "prompt": "a tiny flame being kindled on dry twigs, first curls of smoke and sparks, close-up",
+    "seed": 9175,
+    "specialization": "fire"
+  },
+  "card_fire_fireball": {
+    "prompt": "a huge roaring fireball hurtling forward, molten core, fiery trail",
+    "seed": 9176,
+    "specialization": "fire"
+  },
+  "card_fire_immolate": {
+    "prompt": "a pillar of fire engulfing a dark armoured silhouette from below",
+    "seed": 9177,
+    "specialization": "fire"
+  },
+  "card_fire_fuel": {
+    "prompt": "a mage pouring glowing liquid fire from her palm onto blazing flames, flare-up",
+    "seed": 9178,
+    "specialization": "fire"
+  },
+  "card_fire_wave": {
+    "prompt": "a wide wave of fire rolling across the ground like a tide",
+    "seed": 9179,
+    "specialization": "fire"
+  },
+  "card_fire_smokescreen": {
+    "prompt": "thick billowing grey smoke with glowing embers hiding a figure",
+    "seed": 9180,
+    "specialization": "fire"
+  },
+  "card_fire_inferno": {
+    "prompt": "a towering inferno of flame consuming the sky, apocalyptic red light, epic",
+    "seed": 9181,
+    "specialization": "fire"
+  },
+  "card_fire_epic_phoenix": {
+    "prompt": "a majestic phoenix of living fire rising from flames, wings spread, epic",
+    "seed": 9182,
+    "specialization": "fire"
+  },
+  "card_fire_epic_heart": {
+    "prompt": "a glowing heart of molten embers floating above a ring of fire, epic",
+    "seed": 9183,
+    "specialization": "fire"
+  },
+  "card_arcana_bolt": {
+    "prompt": "a small bolt of violet arcane energy flying from a fingertip",
+    "seed": 9184,
+    "specialization": "arcana"
+  },
+  "card_arcana_ward": {
+    "prompt": "a circular violet rune ward glowing in the air like a shield",
+    "seed": 9185,
+    "specialization": "arcana"
+  },
+  "card_arcana_focus": {
+    "prompt": "a mage with closed eyes gathering small orbs of violet light, calm focus",
+    "seed": 9186,
+    "specialization": "arcana"
+  },
+  "card_arcana_surge": {
+    "prompt": "a surge of violet mana erupting upward from a crystal",
+    "seed": 9187,
+    "specialization": "arcana"
+  },
+  "card_arcana_lance": {
+    "prompt": "a long lance of violet arcane light piercing the dark",
+    "seed": 9188,
+    "specialization": "arcana"
+  },
+  "card_arcana_barrier": {
+    "prompt": "a large dome barrier of violet hexagonal energy, sparkling",
+    "seed": 9189,
+    "specialization": "arcana"
+  },
+  "card_arcana_twinbolt": {
+    "prompt": "two parallel violet arcane bolts flying side by side",
+    "seed": 9190,
+    "specialization": "arcana"
+  },
+  "card_arcana_epic_starstorm": {
+    "prompt": "a storm of falling violet stars raining from a cosmic sky, epic",
+    "seed": 9191,
+    "specialization": "arcana"
+  },
+  "card_arcana_epic_timefold": {
+    "prompt": "a glowing clock face folding in on itself in violet light, time magic, absolutely no numbers or letters",
+    "seed": 9192,
+    "specialization": "arcana"
+  },
+  "card_holy_strike": {
+    "prompt": "a golden sword strike with a bright radiant flash",
+    "seed": 9193,
+    "specialization": "holy"
+  },
+  "card_holy_shield": {
+    "prompt": "a white and gold shield blessed with soft holy light",
+    "seed": 9194,
+    "specialization": "holy"
+  },
+  "card_holy_ward": {
+    "prompt": "a sanctified ward of golden light shaped like a shield over a chapel floor",
+    "seed": 9195,
+    "specialization": "holy"
+  },
+  "card_holy_smite": {
+    "prompt": "a beam of holy light smiting down from the heavens onto a dark creature",
+    "seed": 9196,
+    "specialization": "holy"
+  },
+  "card_holy_bulwark": {
+    "prompt": "a golden shield radiating holy light outward as a weapon",
+    "seed": 9197,
+    "specialization": "holy"
+  },
+  "card_holy_epic_dawnbreaker": {
+    "prompt": "a knight raising a sword as the dawn breaks behind her, blinding golden sunrise, epic",
+    "seed": 9198,
+    "specialization": "holy"
+  },
+  "card_holy_epic_sanctuary": {
+    "prompt": "a glowing sanctuary of golden light, a protective cathedral of light, epic",
+    "seed": 9199,
+    "specialization": "holy"
+  },
+  "card_tanking_strike": {
+    "prompt": "a steel shield edge striking a foe, sparks flying",
+    "seed": 9200,
+    "specialization": "tanking"
+  },
+  "card_tanking_guard": {
+    "prompt": "a knight holding the line with a shield in front of a companion",
+    "seed": 9201,
+    "specialization": "tanking"
+  },
+  "card_tanking_challenge": {
+    "prompt": "a knight pointing her sword at a monster in challenge, defiant",
+    "seed": 9202,
+    "specialization": "tanking"
+  },
+  "card_tanking_rally": {
+    "prompt": "a knight standing firm in the rain with her shield, steadfast",
+    "seed": 9203,
+    "specialization": "tanking"
+  },
+  "card_tanking_slam": {
+    "prompt": "a heavy shield slamming the ground creating a shockwave of dust",
+    "seed": 9204,
+    "specialization": "tanking"
+  },
+  "card_tanking_wall": {
+    "prompt": "a huge glowing wall of interlocked shields",
+    "seed": 9205,
+    "specialization": "tanking"
+  },
+  "card_tanking_provoke": {
+    "prompt": "a knight banging her sword on her shield to provoke a large beast",
+    "seed": 9206,
+    "specialization": "tanking"
+  },
+  "card_tanking_oath": {
+    "prompt": "a knight kneeling with her shield, swearing an oath to protect",
+    "seed": 9207,
+    "specialization": "tanking"
+  },
+  "card_tanking_sweep": {
+    "prompt": "a shield swept in a wide arc knocking back several shadows",
+    "seed": 9208,
+    "specialization": "tanking"
+  },
+  "card_tanking_wind": {
+    "prompt": "a knight catching her breath, soft wind and light around her",
+    "seed": 9209,
+    "specialization": "tanking"
+  },
+  "card_tanking_epic_fortress": {
+    "prompt": "a knight transformed into a living fortress of stone and steel, epic",
+    "seed": 9210,
+    "specialization": "tanking"
+  },
+  "card_tanking_epic_shieldstorm": {
+    "prompt": "a storm of spinning shields flying outward in every direction, epic",
+    "seed": 9211,
+    "specialization": "tanking"
+  }
+}

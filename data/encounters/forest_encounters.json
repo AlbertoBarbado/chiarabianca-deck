@@ -1,0 +1,232 @@
+[
+  {
+    "id": "forest_wolves_01",
+    "name": "Hunting Wolves",
+    "terrain": "mountain",
+    "enemies": [
+      "forest_wolf",
+      "forest_wolf"
+    ],
+    "gold_reward": 18
+  },
+  {
+    "id": "forest_boar_01",
+    "name": "Boar Thicket",
+    "terrain": "falls",
+    "enemies": [
+      "forest_boar"
+    ],
+    "gold_reward": 16
+  },
+  {
+    "id": "forest_spider_ambush",
+    "name": "Spider Ambush",
+    "terrain": "deepwood",
+    "enemies": [
+      "forest_spider",
+      "forest_wisp",
+      "forest_spider"
+    ],
+    "gold_reward": 30
+  },
+  {
+    "id": "forest_bear_01",
+    "name": "The Bear's Den",
+    "terrain": "mountain",
+    "enemies": [
+      "forest_bear",
+      "forest_wolf"
+    ],
+    "gold_reward": 36
+  },
+  {
+    "id": "forest_troll_01",
+    "name": "Troll of the Grove",
+    "terrain": "falls",
+    "enemies": [
+      "forest_troll",
+      "forest_boar"
+    ],
+    "gold_reward": 40
+  },
+  {
+    "id": "elite_alpha_pack",
+    "name": "The Alpha's Pack",
+    "terrain": "mountain",
+    "elite": true,
+    "enemies": [
+      "forest_wolf",
+      "elite_alpha_wolf",
+      "forest_wolf"
+    ],
+    "gold_reward": 60,
+    "intro": "The Alpha Wolf leads its pack out of the mist. Elite enemies hit harder and drop better rewards."
+  },
+  {
+    "id": "elite_grove_warden",
+    "name": "The Grove Warden",
+    "terrain": "falls",
+    "elite": true,
+    "enemies": [
+      "elite_grove_warden"
+    ],
+    "gold_reward": 65,
+    "intro": "An ancient troll guards the grove. Its Root Quake strikes the whole party."
+  },
+  {
+    "id": "elite_broodmother",
+    "name": "The Broodmother",
+    "terrain": "deepwood",
+    "elite": true,
+    "enemies": [
+      "forest_spider",
+      "elite_broodmother",
+      "forest_spider"
+    ],
+    "gold_reward": 62,
+    "intro": "The Broodmother's venom stacks quickly. Poison ignores Block."
+  },
+  {
+    "id": "boss_forest_serpent",
+    "name": "The Forest Serpent",
+    "boss": true,
+    "enemies": [
+      "forest_serpent"
+    ],
+    "gold_reward": 120,
+    "intro": "The Forest Serpent rises from the roots. Its venom ignores Block, and below half health it turns to its Ancient Venom.",
+    "reward": {
+      "pool": "epic",
+      "card_options": 3
+    }
+  },
+  {
+    "id": "forest_wolf_pack",
+    "name": "The Wolf Pack",
+    "terrain": "mountain",
+    "enemies": [
+      "forest_wolf",
+      "forest_wolf",
+      "forest_wolf"
+    ],
+    "gold_reward": 28
+  },
+  {
+    "id": "forest_drake_nest",
+    "name": "Drake Nest",
+    "terrain": "falls",
+    "enemies": [
+      "forest_drake",
+      "forest_drake"
+    ],
+    "gold_reward": 36
+  },
+  {
+    "id": "forest_bramble_pass",
+    "name": "Bramble Pass",
+    "terrain": "mountain",
+    "enemies": [
+      "forest_bear",
+      "forest_cliff_harpy"
+    ],
+    "gold_reward": 36
+  },
+  {
+    "id": "forest_bone_clearing",
+    "name": "Bone Clearing",
+    "terrain": "falls",
+    "enemies": [
+      "forest_drake",
+      "forest_boar"
+    ],
+    "gold_reward": 40
+  },
+  {
+    "id": "forest_last_hunt",
+    "name": "The Last Hunt",
+    "terrain": "deepwood",
+    "enemies": [
+      "forest_wisp",
+      "forest_spider",
+      "forest_wisp",
+      "forest_spider"
+    ],
+    "gold_reward": 48
+  },
+  {
+    "id": "elite_elder_drake",
+    "name": "The Elder Drake",
+    "terrain": "falls",
+    "elite": true,
+    "enemies": [
+      "elite_elder_drake",
+      "forest_drake"
+    ],
+    "gold_reward": 68,
+    "intro": "An Elder Drake and its mate guard the marsh. Their spit poisons through any Block."
+  },
+  {
+    "id": "forest_harpies_01",
+    "name": "Harpy Roost",
+    "terrain": "mountain",
+    "enemies": [
+      "forest_cliff_harpy",
+      "forest_cliff_harpy"
+    ],
+    "gold_reward": 20
+  },
+  {
+    "id": "forest_wolf_harpy",
+    "name": "Pine Gully",
+    "terrain": "mountain",
+    "enemies": [
+      "forest_wolf",
+      "forest_cliff_harpy",
+      "forest_wolf"
+    ],
+    "gold_reward": 28
+  },
+  {
+    "id": "forest_harpy_gorge",
+    "name": "Windy Gorge",
+    "terrain": "mountain",
+    "enemies": [
+      "forest_cliff_harpy",
+      "forest_wolf",
+      "forest_cliff_harpy"
+    ],
+    "gold_reward": 38
+  },
+  {
+    "id": "forest_mountain_bridge",
+    "name": "Stone Bridge",
+    "terrain": "mountain",
+    "enemies": [
+      "forest_wolf",
+      "forest_bear",
+      "forest_wolf"
+    ],
+    "gold_reward": 42
+  },
+  {
+    "id": "forest_eagle_crag",
+    "name": "Eagle Crag",
+    "terrain": "mountain",
+    "enemies": [
+      "forest_cliff_harpy",
+      "forest_bear",
+      "forest_cliff_harpy"
+    ],
+    "gold_reward": 46
+  },
+  {
+    "id": "forest_wisp_spiders",
+    "name": "The Old Bridge",
+    "terrain": "deepwood",
+    "enemies": [
+      "forest_spider",
+      "forest_wisp"
+    ],
+    "gold_reward": 30
+  }
+]

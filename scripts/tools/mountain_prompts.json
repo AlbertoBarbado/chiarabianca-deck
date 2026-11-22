@@ -1,0 +1,240 @@
+{
+ "map_frostpeak_climb": {
+  "prompt": "tall vertical illustrated fantasy adventure map of one colossal snowy mountain seen from the front, climbing from misty snowy pine forests and a small wooden village at the very bottom, up through blue glaciers, ice caves, frozen waterfalls and rope bridges in the middle, to jagged white peaks wrapped in clouds and a dragon lair on the very top, winding narrow trails zigzagging up the slopes, small pagoda outposts on ledges, in the style of a traditional East Asian ink wash landscape painting with soft watercolour, misty blue-grey, teal and white palette, absolutely no text, no writing, no labels, no letters",
+  "width": 640,
+  "height": 1280,
+  "seed": 9401,
+  "cutout": false,
+  "folder": "mountain",
+  "kind": "map"
+ },
+ "map_frostpeak": {
+  "prompt": "wide panorama of a misty range of snowy mountain peaks above a sea of clouds, pale dawn sky, ornate silver and blue painted border, in the style of a traditional East Asian ink wash landscape painting with soft watercolour, misty blue-grey, teal and white palette, absolutely no text, no writing, no labels, no letters",
+  "width": 1152,
+  "height": 648,
+  "seed": 9402,
+  "cutout": false,
+  "folder": "mountain",
+  "kind": "map"
+ },
+ "battle_mountain_slopes": {
+  "prompt": "wide eye-level view of a snowy mountain pine forest slope for a 2D JRPG battle scene, evenly lit, a huge flat open floor of packed snow and flat grey rock filling the entire lower 60 percent of the image, the floor starts just above the middle of the image and stretches from the left edge to the right edge, tall snow-laden pine trees and boulders at the far sides, misty snowy mountain peaks in the background, empty arena, no characters, no creatures, no text",
+  "width": 1152,
+  "height": 648,
+  "seed": 9411,
+  "cutout": false,
+  "folder": "mountain",
+  "kind": "backdrop"
+ },
+ "battle_mountain_glacier": {
+  "prompt": "wide eye-level view of a vast blue glacier ice cave for a 2D JRPG battle scene, evenly lit, a huge flat open floor of smooth flat blue ice and frost filling the entire lower 65 percent of the image, the floor starts just above the middle of the image and stretches from the left edge to the right edge, huge translucent blue ice pillars and icicles at the far sides, a frozen waterfall and glowing pale blue crystals in the background, empty arena, no characters, no creatures, no text",
+  "width": 1152,
+  "height": 648,
+  "seed": 9512,
+  "cutout": false,
+  "folder": "mountain",
+  "kind": "backdrop"
+ },
+ "battle_mountain_summit": {
+  "prompt": "wide eye-level view of a windswept snowy mountain summit ridge high above the clouds for a 2D JRPG battle scene, evenly lit, a huge flat open floor of wind-packed snow and flat dark stone filling the entire lower 60 percent of the image, the floor starts just above the middle of the image and stretches from the left edge to the right edge, jagged icy rocks and tattered prayer flags on poles at the far sides, a sea of clouds far below and distant white peaks under a cold bright sky in the background, empty arena, no characters, no creatures, no text",
+  "width": 1152,
+  "height": 648,
+  "seed": 9413,
+  "cutout": false,
+  "folder": "mountain",
+  "kind": "backdrop"
+ },
+ "battle_dragon_aerie": {
+  "prompt": "wide eye-level view of a dragon aerie on the highest frozen peak for a 2D JRPG battle scene, evenly lit, a huge flat open floor of flat ancient carved white stone and snow filling the entire lower 60 percent of the image, the floor starts just above the middle of the image and stretches from the left edge to the right edge, broken white marble pillars crusted with ice and huge dragon bones at the far sides, swirling snowstorm clouds, a pale aurora and a cold full moon in the background, empty arena, no characters, no creatures, no text",
+  "width": 1152,
+  "height": 648,
+  "seed": 9414,
+  "cutout": false,
+  "folder": "mountain",
+  "kind": "backdrop"
+ },
+ "monster_frost_wolf": {
+  "prompt": "a lean snow-white frost wolf with pale blue eyes, icy breath, frost crystals in its thick fur, snarling, prowling, full body, side view facing right, monster",
+  "width": 768,
+  "height": 768,
+  "seed": 9421,
+  "cutout": true,
+  "folder": "mountain",
+  "kind": "sprite"
+ },
+ "monster_polar_bear": {
+  "prompt": "a huge powerful polar bear with thick cream-white fur and black claws, roaring, standing on all fours, full body, side view facing right, monster",
+  "width": 768,
+  "height": 768,
+  "seed": 9422,
+  "cutout": true,
+  "folder": "mountain",
+  "kind": "sprite"
+ },
+ "monster_yeti": {
+  "prompt": "a hulking yeti, a shaggy white-furred ape-like mountain beast with blue-grey skin on its face and hands, long arms, icy horns, roaring, full body, side view facing right, monster",
+  "width": 768,
+  "height": 768,
+  "seed": 9423,
+  "cutout": true,
+  "folder": "mountain",
+  "kind": "sprite"
+ },
+ "monster_crystal_spider": {
+  "prompt": "a giant spider made of translucent glowing pale blue and violet crystal shards, faceted legs, glowing eyes, full body, side view facing right, monster",
+  "width": 768,
+  "height": 768,
+  "seed": 9424,
+  "cutout": true,
+  "folder": "mountain",
+  "kind": "sprite"
+ },
+ "monster_rime_wraith": {
+  "prompt": "a rime wraith, a floating ghostly spirit made of frost mist and tattered pale blue rags, icy claws, hollow glowing eyes, translucent, full body, side view facing right, monster",
+  "width": 768,
+  "height": 768,
+  "seed": 9425,
+  "cutout": true,
+  "folder": "mountain",
+  "kind": "sprite"
+ },
+ "monster_ice_drake": {
+  "prompt": "a young ice drake, a sleek wingless dragon with pale blue and silver scales, frost spines along its back, icy breath, full body, side view facing right, monster",
+  "width": 768,
+  "height": 768,
+  "seed": 9426,
+  "cutout": true,
+  "folder": "mountain",
+  "kind": "sprite"
+ },
+ "monster_storm_roc": {
+  "prompt": "a giant storm roc, a huge eagle with dark slate grey feathers crackling with blue lightning, wings spread, flying, full body, side view facing right, monster",
+  "width": 768,
+  "height": 768,
+  "seed": 9427,
+  "cutout": true,
+  "folder": "mountain",
+  "kind": "sprite"
+ },
+ "monster_woolly_mammoth": {
+  "prompt": "a colossal woolly mammoth with long shaggy brown fur, huge curved tusks capped with ice, frost on its fur, standing, full body, side view facing right, monster",
+  "width": 768,
+  "height": 768,
+  "seed": 9431,
+  "cutout": true,
+  "folder": "mountain",
+  "kind": "sprite"
+ },
+ "monster_crystal_matriarch": {
+  "prompt": "a colossal queen spider made of glowing violet and blue crystal, a crown of crystal spikes on its back, many faceted legs, menacing, full body, side view facing right, monster",
+  "width": 768,
+  "height": 768,
+  "seed": 9432,
+  "cutout": true,
+  "folder": "mountain",
+  "kind": "sprite"
+ },
+ "monster_ice_giant": {
+  "prompt": "a towering ice giant, a huge humanoid made of blue glacial ice with a frost beard and a massive ice club, cracked glowing core, standing, full body, side view facing right, monster",
+  "width": 768,
+  "height": 768,
+  "seed": 9433,
+  "cutout": true,
+  "folder": "mountain",
+  "kind": "sprite"
+ },
+ "boss_white_dragon": {
+  "prompt": "a single colossal menacing white dragon with one head, one long powerful neck, jaws open showing sharp icy fangs, pearl-white scales edged in pale blue and silver, two huge crystalline wings raised high, crown of jagged crystal horns, cold glowing ice-blue eyes, four clawed legs, a long tail, frost mist swirling around her, majestic, beautiful and terrifying final boss, full body, side view, head on the right facing right, no people, no humans",
+  "width": 1024,
+  "height": 704,
+  "seed": 9543,
+  "cutout": true,
+  "folder": "mountain",
+  "kind": "sprite"
+ },
+ "town_pinefall_village": {
+  "prompt": "a cosy mountain village of wooden houses with steep snowy roofs among tall pines at the foot of a great mountain, smoke from chimneys, warm lantern light, a small shrine gate, fantasy settlement scene, no text, no letters, no signature, no watermark, blank wooden signs, background art for a JRPG",
+  "width": 1152,
+  "height": 648,
+  "seed": 9451,
+  "cutout": false,
+  "folder": "towns",
+  "kind": "town"
+ },
+ "town_ropebridge_outpost": {
+  "prompt": "a small fortified wooden outpost on a cliff ledge beside a long rope bridge over a misty chasm, snow, a watchtower, a brazier, glaciers behind, fantasy settlement scene, no text, no letters, no signature, no watermark, blank wooden signs, background art for a JRPG",
+  "width": 1152,
+  "height": 648,
+  "seed": 9452,
+  "cutout": false,
+  "folder": "towns",
+  "kind": "town"
+ },
+ "town_cloud_monastery": {
+  "prompt": "a serene mountain monastery with curved tiled roofs perched on a high crag above a sea of clouds, prayer flags, stone steps, snow, golden sunset, fantasy settlement scene, no text, no letters, no signature, no watermark, blank wooden signs, background art for a JRPG",
+  "width": 1152,
+  "height": 648,
+  "seed": 9453,
+  "cutout": false,
+  "folder": "towns",
+  "kind": "town"
+ },
+ "town_last_cairn": {
+  "prompt": "a lonely last camp below the summit, a stone cairn, a tattered tent and a lantern in the snow, a storm gathering around the jagged white peak above, dusk, fantasy settlement scene, no text, no letters, no signature, no watermark, blank wooden signs, background art for a JRPG",
+  "width": 1152,
+  "height": 648,
+  "seed": 9454,
+  "cutout": false,
+  "folder": "towns",
+  "kind": "town"
+ },
+ "merchant_mountain_furrier": {
+  "prompt": "a burly bearded mountain furrier in a thick fur coat behind a wooden counter with furs, warm cloaks, ropes, climbing picks and potions, snowy window, no signature, no watermark, blank signs, medium shot, the merchant at the left third of the image looking at the viewer with a welcoming gesture, their shop around them, no text, no letters, JRPG shop scene",
+  "width": 1152,
+  "height": 648,
+  "seed": 9461,
+  "cutout": false,
+  "folder": "towns",
+  "kind": "merchant"
+ },
+ "merchant_mountain_monk": {
+  "prompt": "a calm elderly mountain monk merchant in orange and grey robes beside shelves of herbal tonics and talismans in a stone monastery hall, incense, cold light, no signature, no watermark, blank signs, medium shot, the merchant at the left third of the image looking at the viewer with a welcoming gesture, their shop around them, no text, no letters, JRPG shop scene",
+  "width": 1152,
+  "height": 648,
+  "seed": 9462,
+  "cutout": false,
+  "folder": "towns",
+  "kind": "merchant"
+ },
+ "icon_frostbitten": {
+  "prompt": "a single game icon of a pale blue hand covered in frost and ice crystals, ornate silver rim, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design",
+  "width": 512,
+  "height": 512,
+  "seed": 9471,
+  "cutout": true,
+  "folder": "mountain",
+  "kind": "icon"
+ },
+ "item_yetifur_mantle": {
+  "prompt": "a thick white yeti fur mantle cloak with a silver clasp, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design",
+  "width": 512,
+  "height": 512,
+  "seed": 9472,
+  "cutout": true,
+  "folder": "items",
+  "kind": "icon"
+ },
+ "item_glacier_plate": {
+  "prompt": "a pale blue steel breastplate armour engraved with snowflake patterns and frost, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design",
+  "width": 512,
+  "height": 512,
+  "seed": 9473,
+  "cutout": true,
+  "folder": "items",
+  "kind": "icon"
+ },
+ "_note": {
+  "mirrored": "monster_frost_wolf, monster_rime_wraith and monster_ice_giant were mirrored after generation (enemies face right); regenerating them needs the same mirror.",
+  "rerolled": "battle_mountain_glacier (seed 9412: floor started too low) and boss_white_dragon (seed 9441: not menacing enough; 9542: two heads) were rerolled."
+ }
+}

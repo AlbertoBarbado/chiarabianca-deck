@@ -1,0 +1,818 @@
+{
+  "_comment": "Combat presentation data (art only; no gameplay). Paths are relative to res://assets/ and end in .png. A missing entry falls back to the idle pose, then to a token. Tier numbers are presentation tiers chosen per card here; they are not card rarity, level or damage.",
+  "characters": {
+    "chiara": {
+      "idle": "characters/chiara/recut/idle",
+      "attack": "characters/chiara/recut/attack",
+      "cast": "characters/chiara/recut/cast",
+      "block": "characters/chiara/recut/block",
+      "hit": "characters/chiara/recut/hit",
+      "charge": "characters/chiara/recut/charge",
+      "down": "characters/chiara/recut/hit"
+    },
+    "bianca": {
+      "idle": "characters/bianca/recut/idle",
+      "attack": "characters/bianca/recut/attack",
+      "cast": "characters/bianca/recut/strike",
+      "block": "characters/bianca/recut/block",
+      "hit": "characters/bianca/recut/guard",
+      "down": "characters/bianca/recut/down"
+    }
+  },
+  "enemies": {
+    "default_set": "knight_generic",
+    "assign": {
+      "hall_captain": "knight_captain",
+      "elite_knight_commander": "knight_captain",
+      "elite_vanguard_knight": "knight_generic",
+      "forest_wolf": "wolf",
+      "elite_alpha_wolf": "wolf",
+      "forest_boar": "boar",
+      "forest_spider": "spider",
+      "elite_broodmother": "spider",
+      "forest_bear": "bear",
+      "forest_drake": "drake",
+      "forest_troll": "troll",
+      "elite_grove_warden": "troll",
+      "forest_serpent": "boss_serpent",
+      "elite_elder_drake": "drake",
+      "demo_cave_bat": "cave_bat",
+      "demo_fungal_shambler": "fungal_shambler",
+      "demo_crystal_golem": "crystal_golem",
+      "demo_shadow_wraith": "shadow_wraith",
+      "demo_crystal_wyrm": "crystal_wyrm",
+      "beach_giant_crab": "giant_crab",
+      "beach_dire_albatross": "dire_albatross",
+      "beach_triton_soldier": "triton_soldier",
+      "beach_rock_spider": "rock_spider",
+      "elite_sand_giant": "sand_giant",
+      "elite_rock_giant": "rock_giant",
+      "elite_sea_snake": "sea_snake",
+      "boss_sandstorm_elemental": "sandstorm_elemental",
+      "beach_shark_knight": "shark_knight",
+      "beach_sand_scorpion": "sand_scorpion",
+      "forest_cliff_harpy": "cliff_harpy",
+      "forest_wisp": "will_o_wisp",
+      "mountain_frost_wolf": "frost_wolf",
+      "mountain_polar_bear": "polar_bear",
+      "mountain_yeti": "yeti",
+      "mountain_crystal_spider": "crystal_spider",
+      "mountain_rime_wraith": "rime_wraith",
+      "mountain_ice_drake": "ice_drake",
+      "mountain_storm_roc": "storm_roc",
+      "elite_woolly_mammoth": "woolly_mammoth",
+      "elite_crystal_matriarch": "crystal_matriarch",
+      "elite_ice_giant": "ice_giant",
+      "boss_white_dragon": "white_dragon"
+    },
+    "sets": {
+      "knight_generic": {
+        "idle": "enemies/tutorial/recut/knight_generic_idle",
+        "prep": "enemies/tutorial/recut/knight_generic_prep",
+        "attack": "enemies/tutorial/recut/knight_generic_prep",
+        "hit": "enemies/tutorial/recut/knight_generic_hit",
+        "block": "enemies/tutorial/recut/knight_generic_block"
+      },
+      "knight_captain": {
+        "idle": "enemies/tutorial/recut/knight_captain_idle_sword",
+        "prep": "enemies/tutorial/recut/knight_captain_prep",
+        "attack": "enemies/tutorial/recut/knight_captain_swing",
+        "hit": "enemies/tutorial/recut/knight_captain_hit",
+        "block": "enemies/tutorial/recut/knight_captain_block"
+      },
+      "wolf": {
+        "idle": "enemies/1_forest/recut/wolf_idle",
+        "prep": "enemies/1_forest/recut/wolf_prep",
+        "attack": "enemies/1_forest/recut/wolf_swing",
+        "hit": "enemies/1_forest/recut/wolf_stagger",
+        "block": "enemies/1_forest/recut/wolf_idle",
+        "hurt": "enemies/1_forest/recut/wolf_stagger"
+      },
+      "boar": {
+        "idle": "enemies/1_forest/recut/boar_idle",
+        "prep": "enemies/1_forest/recut/boar_prep",
+        "attack": "enemies/1_forest/recut/boar_swing",
+        "hit": "enemies/1_forest/recut/boar_stagger",
+        "block": "enemies/1_forest/recut/boar_idle",
+        "hurt": "enemies/1_forest/recut/boar_stagger"
+      },
+      "bear": {
+        "idle": "enemies/1_forest/recut/bear_idle",
+        "prep": "enemies/1_forest/recut/bear_prep",
+        "attack": "enemies/1_forest/recut/bear_swing",
+        "hit": "enemies/1_forest/recut/bear_stagger",
+        "block": "enemies/1_forest/recut/bear_idle",
+        "hurt": "enemies/1_forest/recut/bear_stagger"
+      },
+      "spider": {
+        "idle": "enemies/1_forest/recut/spider_idle",
+        "prep": "enemies/1_forest/recut/spider_prep",
+        "attack": "enemies/1_forest/recut/spider_swing",
+        "hit": "enemies/1_forest/recut/spider_stagger",
+        "block": "enemies/1_forest/recut/spider_idle",
+        "hurt": "enemies/1_forest/recut/spider_stagger"
+      },
+      "drake": {
+        "idle": "enemies/1_forest/recut/drake_idle",
+        "prep": "enemies/1_forest/recut/drake_prep",
+        "attack": "enemies/1_forest/recut/drake_swing",
+        "hit": "enemies/1_forest/recut/drake_stagger",
+        "block": "enemies/1_forest/recut/drake_idle",
+        "hurt": "enemies/1_forest/recut/drake_stagger"
+      },
+      "troll": {
+        "idle": "enemies/1_forest/recut/troll_idle",
+        "prep": "enemies/1_forest/recut/troll_prep",
+        "attack": "enemies/1_forest/recut/troll_swing",
+        "hit": "enemies/1_forest/recut/troll_stagger",
+        "block": "enemies/1_forest/recut/troll_idle",
+        "hurt": "enemies/1_forest/recut/troll_stagger"
+      },
+      "boss_serpent": {
+        "idle": "enemies/1_forest/recut/boss_serpent_idle",
+        "prep": "enemies/1_forest/recut/boss_serpent_prep",
+        "attack": "enemies/1_forest/recut/boss_serpent_prep",
+        "hit": "enemies/1_forest/recut/boss_serpent_stagger",
+        "block": "enemies/1_forest/recut/boss_serpent_idle",
+        "hurt": "enemies/1_forest/recut/boss_serpent_stagger"
+      },
+      "crystal_golem": {
+        "idle": "generated/demo/monster_crystal_golem",
+        "attack": "generated/demo/monster_crystal_golem",
+        "prep": "generated/demo/monster_crystal_golem",
+        "hit": "generated/demo/monster_crystal_golem",
+        "block": "generated/demo/monster_crystal_golem"
+      },
+      "cave_bat": {
+        "idle": "generated/demo/monster_cave_bat",
+        "attack": "generated/demo/monster_cave_bat",
+        "prep": "generated/demo/monster_cave_bat",
+        "hit": "generated/demo/monster_cave_bat",
+        "block": "generated/demo/monster_cave_bat"
+      },
+      "fungal_shambler": {
+        "idle": "generated/demo/monster_fungal_shambler",
+        "attack": "generated/demo/monster_fungal_shambler",
+        "prep": "generated/demo/monster_fungal_shambler",
+        "hit": "generated/demo/monster_fungal_shambler",
+        "block": "generated/demo/monster_fungal_shambler"
+      },
+      "shadow_wraith": {
+        "idle": "generated/demo/monster_shadow_wraith",
+        "attack": "generated/demo/monster_shadow_wraith",
+        "prep": "generated/demo/monster_shadow_wraith",
+        "hit": "generated/demo/monster_shadow_wraith",
+        "block": "generated/demo/monster_shadow_wraith"
+      },
+      "crystal_wyrm": {
+        "idle": "generated/demo/boss_crystal_wyrm",
+        "attack": "generated/demo/boss_crystal_wyrm",
+        "prep": "generated/demo/boss_crystal_wyrm",
+        "hit": "generated/demo/boss_crystal_wyrm",
+        "block": "generated/demo/boss_crystal_wyrm"
+      },
+      "giant_crab": {
+        "idle": "generated/beach/monster_giant_crab",
+        "attack": "generated/beach/monster_giant_crab",
+        "prep": "generated/beach/monster_giant_crab",
+        "hit": "generated/beach/monster_giant_crab",
+        "block": "generated/beach/monster_giant_crab"
+      },
+      "dire_albatross": {
+        "idle": "generated/beach/monster_dire_albatross",
+        "attack": "generated/beach/monster_dire_albatross",
+        "prep": "generated/beach/monster_dire_albatross",
+        "hit": "generated/beach/monster_dire_albatross",
+        "block": "generated/beach/monster_dire_albatross"
+      },
+      "triton_soldier": {
+        "idle": "generated/beach/monster_triton_soldier",
+        "attack": "generated/beach/monster_triton_soldier",
+        "prep": "generated/beach/monster_triton_soldier",
+        "hit": "generated/beach/monster_triton_soldier",
+        "block": "generated/beach/monster_triton_soldier"
+      },
+      "rock_spider": {
+        "idle": "generated/beach/monster_rock_spider",
+        "attack": "generated/beach/monster_rock_spider",
+        "prep": "generated/beach/monster_rock_spider",
+        "hit": "generated/beach/monster_rock_spider",
+        "block": "generated/beach/monster_rock_spider"
+      },
+      "sand_giant": {
+        "idle": "generated/beach/monster_sand_giant",
+        "attack": "generated/beach/monster_sand_giant",
+        "prep": "generated/beach/monster_sand_giant",
+        "hit": "generated/beach/monster_sand_giant",
+        "block": "generated/beach/monster_sand_giant"
+      },
+      "rock_giant": {
+        "idle": "generated/beach/monster_rock_giant",
+        "attack": "generated/beach/monster_rock_giant",
+        "prep": "generated/beach/monster_rock_giant",
+        "hit": "generated/beach/monster_rock_giant",
+        "block": "generated/beach/monster_rock_giant"
+      },
+      "sea_snake": {
+        "idle": "generated/beach/monster_sea_snake",
+        "attack": "generated/beach/monster_sea_snake",
+        "prep": "generated/beach/monster_sea_snake",
+        "hit": "generated/beach/monster_sea_snake",
+        "block": "generated/beach/monster_sea_snake"
+      },
+      "sandstorm_elemental": {
+        "idle": "generated/beach/boss_sandstorm_elemental",
+        "attack": "generated/beach/boss_sandstorm_elemental",
+        "prep": "generated/beach/boss_sandstorm_elemental",
+        "hit": "generated/beach/boss_sandstorm_elemental",
+        "block": "generated/beach/boss_sandstorm_elemental"
+      },
+      "shark_knight": {
+        "idle": "generated/beach/monster_shark_knight",
+        "attack": "generated/beach/monster_shark_knight",
+        "prep": "generated/beach/monster_shark_knight",
+        "hit": "generated/beach/monster_shark_knight",
+        "block": "generated/beach/monster_shark_knight"
+      },
+      "sand_scorpion": {
+        "idle": "generated/beach/monster_sand_scorpion",
+        "attack": "generated/beach/monster_sand_scorpion",
+        "prep": "generated/beach/monster_sand_scorpion",
+        "hit": "generated/beach/monster_sand_scorpion",
+        "block": "generated/beach/monster_sand_scorpion"
+      },
+      "cliff_harpy": {
+        "idle": "generated/terrain/monster_cliff_harpy",
+        "attack": "generated/terrain/monster_cliff_harpy",
+        "prep": "generated/terrain/monster_cliff_harpy",
+        "hit": "generated/terrain/monster_cliff_harpy",
+        "block": "generated/terrain/monster_cliff_harpy"
+      },
+      "will_o_wisp": {
+        "idle": "generated/terrain/monster_will_o_wisp",
+        "attack": "generated/terrain/monster_will_o_wisp",
+        "prep": "generated/terrain/monster_will_o_wisp",
+        "hit": "generated/terrain/monster_will_o_wisp",
+        "block": "generated/terrain/monster_will_o_wisp"
+      },
+      "frost_wolf": {
+        "idle": "generated/mountain/monster_frost_wolf",
+        "attack": "generated/mountain/monster_frost_wolf",
+        "prep": "generated/mountain/monster_frost_wolf",
+        "hit": "generated/mountain/monster_frost_wolf",
+        "block": "generated/mountain/monster_frost_wolf"
+      },
+      "polar_bear": {
+        "idle": "generated/mountain/monster_polar_bear",
+        "attack": "generated/mountain/monster_polar_bear",
+        "prep": "generated/mountain/monster_polar_bear",
+        "hit": "generated/mountain/monster_polar_bear",
+        "block": "generated/mountain/monster_polar_bear"
+      },
+      "yeti": {
+        "idle": "generated/mountain/monster_yeti",
+        "attack": "generated/mountain/monster_yeti",
+        "prep": "generated/mountain/monster_yeti",
+        "hit": "generated/mountain/monster_yeti",
+        "block": "generated/mountain/monster_yeti"
+      },
+      "crystal_spider": {
+        "idle": "generated/mountain/monster_crystal_spider",
+        "attack": "generated/mountain/monster_crystal_spider",
+        "prep": "generated/mountain/monster_crystal_spider",
+        "hit": "generated/mountain/monster_crystal_spider",
+        "block": "generated/mountain/monster_crystal_spider"
+      },
+      "rime_wraith": {
+        "idle": "generated/mountain/monster_rime_wraith",
+        "attack": "generated/mountain/monster_rime_wraith",
+        "prep": "generated/mountain/monster_rime_wraith",
+        "hit": "generated/mountain/monster_rime_wraith",
+        "block": "generated/mountain/monster_rime_wraith"
+      },
+      "ice_drake": {
+        "idle": "generated/mountain/monster_ice_drake",
+        "attack": "generated/mountain/monster_ice_drake",
+        "prep": "generated/mountain/monster_ice_drake",
+        "hit": "generated/mountain/monster_ice_drake",
+        "block": "generated/mountain/monster_ice_drake"
+      },
+      "storm_roc": {
+        "idle": "generated/mountain/monster_storm_roc",
+        "attack": "generated/mountain/monster_storm_roc",
+        "prep": "generated/mountain/monster_storm_roc",
+        "hit": "generated/mountain/monster_storm_roc",
+        "block": "generated/mountain/monster_storm_roc"
+      },
+      "woolly_mammoth": {
+        "idle": "generated/mountain/monster_woolly_mammoth",
+        "attack": "generated/mountain/monster_woolly_mammoth",
+        "prep": "generated/mountain/monster_woolly_mammoth",
+        "hit": "generated/mountain/monster_woolly_mammoth",
+        "block": "generated/mountain/monster_woolly_mammoth"
+      },
+      "crystal_matriarch": {
+        "idle": "generated/mountain/monster_crystal_matriarch",
+        "attack": "generated/mountain/monster_crystal_matriarch",
+        "prep": "generated/mountain/monster_crystal_matriarch",
+        "hit": "generated/mountain/monster_crystal_matriarch",
+        "block": "generated/mountain/monster_crystal_matriarch"
+      },
+      "ice_giant": {
+        "idle": "generated/mountain/monster_ice_giant",
+        "attack": "generated/mountain/monster_ice_giant",
+        "prep": "generated/mountain/monster_ice_giant",
+        "hit": "generated/mountain/monster_ice_giant",
+        "block": "generated/mountain/monster_ice_giant"
+      },
+      "white_dragon": {
+        "idle": "generated/mountain/boss_white_dragon",
+        "attack": "generated/mountain/boss_white_dragon",
+        "prep": "generated/mountain/boss_white_dragon",
+        "hit": "generated/mountain/boss_white_dragon",
+        "block": "generated/mountain/boss_white_dragon"
+      }
+    },
+    "scale": {
+      "forest_wolf": 0.6,
+      "forest_boar": 0.66,
+      "forest_spider": 0.58,
+      "forest_bear": 0.95,
+      "forest_drake": 0.85,
+      "forest_troll": 1.12,
+      "elite_alpha_wolf": 0.8,
+      "elite_broodmother": 0.85,
+      "elite_grove_warden": 1.3,
+      "forest_serpent": 1.55,
+      "elite_elder_drake": 1.15,
+      "demo_cave_bat": 0.62,
+      "demo_fungal_shambler": 0.8,
+      "demo_crystal_golem": 1.12,
+      "demo_shadow_wraith": 1.05,
+      "demo_crystal_wyrm": 1.5,
+      "beach_giant_crab": 0.72,
+      "beach_dire_albatross": 0.78,
+      "beach_triton_soldier": 1.0,
+      "beach_rock_spider": 0.6,
+      "elite_sand_giant": 1.38,
+      "elite_rock_giant": 1.42,
+      "elite_sea_snake": 1.25,
+      "boss_sandstorm_elemental": 1.6,
+      "beach_shark_knight": 1.08,
+      "beach_sand_scorpion": 0.72,
+      "forest_cliff_harpy": 0.95,
+      "forest_wisp": 0.72,
+      "mountain_frost_wolf": 0.62,
+      "mountain_polar_bear": 0.9,
+      "mountain_yeti": 1.25,
+      "mountain_crystal_spider": 0.6,
+      "mountain_rime_wraith": 1.05,
+      "mountain_ice_drake": 0.85,
+      "mountain_storm_roc": 0.95,
+      "elite_woolly_mammoth": 1.5,
+      "elite_crystal_matriarch": 1.0,
+      "elite_ice_giant": 1.6,
+      "boss_white_dragon": 2.15
+    },
+    "_scale_comment": "Sprite HEIGHT factor per enemy definition relative to a standing human (1 = knight / princess height). Low animals are below 1; elites and the boss are larger.",
+    "_poses_comment": "Poses are re-cut with BiRefNet (scripts/tools/recut_sprites_birefnet.py). prep = wind-up shown before the attack pose swaps in at the lunge; hurt = idle pose below 30% HP. Forest beasts use their clean stagger pose for hits and idle for blocks: their sheet hit/block cells have dust and shield effects painted over a checkerboard, and the game draws those effects itself.",
+    "sink": {
+      "crystal_wyrm": 0.035,
+      "boss_serpent": 0.02,
+      "spider": 0.03,
+      "drake": 0.02,
+      "rock_spider": 0.03,
+      "giant_crab": 0.02,
+      "sand_scorpion": 0.03,
+      "frost_wolf": 0.02,
+      "polar_bear": 0.02,
+      "crystal_spider": 0.03,
+      "ice_drake": 0.02,
+      "woolly_mammoth": 0.02,
+      "crystal_matriarch": 0.03
+    },
+    "_sink_comment": "Share of the sprite height pushed into the floor, by pose set: for art whose lowest pixels are thin claws, legs or a tail tip, so the body does not seem to hover."
+  },
+  "cutins": {
+    "fire": {
+      "2": "characters/chiara/processed/fire_t2",
+      "3": "characters/chiara/processed/fire_t3",
+      "4": "characters/chiara/processed/fire_t4"
+    },
+    "arcana": {
+      "2": "characters/chiara/processed/arcane_t2",
+      "3": "characters/chiara/processed/arcane_t3",
+      "4": "characters/chiara/processed/arcane_t4"
+    },
+    "holy": {
+      "2": "characters/bianca/processed/holy_t2",
+      "3": "characters/bianca/processed/holy_t3_release",
+      "4": "characters/bianca/processed/holy_t4"
+    },
+    "tanking": {
+      "2": "characters/bianca/processed/tanking_t2",
+      "3": "characters/bianca/processed/tanking_t3_release",
+      "4": "characters/bianca/processed/tanking_t4"
+    },
+    "frost": {
+      "2": "generated/frost/cutin_frost_t2",
+      "3": "generated/frost/cutin_frost_t3",
+      "4": "generated/frost/cutin_frost_t4"
+    },
+    "ashveil": {
+      "2": "generated/ashveil/cutin_ash_t2",
+      "3": "generated/ashveil/cutin_ash_t3",
+      "4": "generated/ashveil/cutin_ash_t4"
+    }
+  },
+  "tier_style": {
+    "2": {
+      "seconds": 0.7,
+      "width": 300
+    },
+    "3": {
+      "seconds": 0.95,
+      "width": 380
+    },
+    "4": {
+      "seconds": 1.25,
+      "width": 520
+    }
+  },
+  "card_tiers": {
+    "chiara_fire_ember": 1,
+    "chiara_fire_immolate": 2,
+    "chiara_fire_fuel": 2,
+    "chiara_fire_fireball": 2,
+    "chiara_fire_wave": 3,
+    "chiara_fire_inferno": 4,
+    "bianca_holy_strike": 1,
+    "bianca_holy_smite": 2,
+    "bianca_holy_bulwark": 2,
+    "bianca_holy_judgment": 4,
+    "chiara_arcana_bolt": 1,
+    "chiara_arcana_lance": 2,
+    "chiara_arcana_twinbolt": 2,
+    "chiara_arcana_starfall": 3,
+    "bianca_tanking_strike": 1,
+    "bianca_tanking_slam": 2,
+    "bianca_tanking_sweep": 3,
+    "chiara_frost_bolt": 1,
+    "chiara_frost_spike": 2,
+    "chiara_frost_shatter": 2,
+    "chiara_frost_zero": 3,
+    "chiara_frost_blizzard": 3,
+    "chiara_frost_glacier": 3,
+    "chiara_frost_epic_avalanche": 4,
+    "chiara_frost_epic_heart": 3,
+    "bianca_ash_slash": 1,
+    "bianca_ash_shadow": 2,
+    "bianca_ash_powder": 2,
+    "bianca_ash_ignite": 3,
+    "bianca_ash_greasefire": 3,
+    "bianca_ash_epic_ashfall": 4,
+    "bianca_ash_epic_veil": 3
+  },
+  "motion_profiles": {
+    "_comment": "Body motion per creature kind (presentation only). breath = idle stretch (x, y); period = idle cycle seconds; bob = hover height (px); sway = idle rock (radians); lunge = attack reach (share of the slot width); arc = attack jump height (px, negative = dive); windup / strike / recover = attack timing (s); squash = squash-and-stretch amount; knockback = hit recoil (share of the slot width); impact = screen shake when its attack lands (0 = none); afterimages = ghost copies during a lunge.",
+    "stand": {
+      "breath": [
+        0.012,
+        0.022
+      ],
+      "period": 2.8,
+      "bob": 0,
+      "sway": 0,
+      "lunge": 0.24,
+      "arc": 0,
+      "windup": 0.14,
+      "strike": 0.1,
+      "recover": 0.28,
+      "squash": 0.07,
+      "knockback": 0.12,
+      "impact": 0,
+      "afterimages": 2
+    },
+    "caster": {
+      "breath": [
+        0.01,
+        0.02
+      ],
+      "period": 3.2,
+      "bob": 0,
+      "sway": 0.012,
+      "lunge": 0.14,
+      "arc": -4,
+      "windup": 0.16,
+      "strike": 0.12,
+      "recover": 0.3,
+      "squash": 0.06,
+      "knockback": 0.12,
+      "impact": 0,
+      "afterimages": 3
+    },
+    "beast": {
+      "breath": [
+        0.022,
+        0.014
+      ],
+      "period": 1.7,
+      "bob": 0,
+      "sway": 0,
+      "lunge": 0.36,
+      "arc": 18,
+      "windup": 0.18,
+      "strike": 0.11,
+      "recover": 0.3,
+      "squash": 0.12,
+      "knockback": 0.14,
+      "impact": 0,
+      "afterimages": 3
+    },
+    "heavy": {
+      "breath": [
+        0.014,
+        0.02
+      ],
+      "period": 3.6,
+      "bob": 0,
+      "sway": 0,
+      "lunge": 0.18,
+      "arc": 6,
+      "windup": 0.26,
+      "strike": 0.12,
+      "recover": 0.36,
+      "squash": 0.13,
+      "knockback": 0.06,
+      "impact": 7,
+      "afterimages": 1
+    },
+    "hover": {
+      "breath": [
+        0.02,
+        0.01
+      ],
+      "period": 1.9,
+      "bob": 7,
+      "sway": 0.02,
+      "lunge": 0.3,
+      "arc": -10,
+      "windup": 0.14,
+      "strike": 0.1,
+      "recover": 0.3,
+      "squash": 0.08,
+      "knockback": 0.16,
+      "impact": 0,
+      "afterimages": 3
+    },
+    "slither": {
+      "breath": [
+        0.016,
+        0.016
+      ],
+      "period": 2.6,
+      "bob": 0,
+      "sway": 0.035,
+      "lunge": 0.3,
+      "arc": -6,
+      "windup": 0.2,
+      "strike": 0.1,
+      "recover": 0.32,
+      "squash": 0.1,
+      "knockback": 0.1,
+      "impact": 4,
+      "afterimages": 2
+    }
+  },
+  "motion": {
+    "_comment": "Motion profile per character id or enemy pose set (see motion_profiles); missing = stand.",
+    "chiara": "caster",
+    "bianca": "stand",
+    "knight_generic": "stand",
+    "knight_captain": "stand",
+    "wolf": "beast",
+    "boar": "beast",
+    "spider": "beast",
+    "drake": "beast",
+    "bear": "heavy",
+    "troll": "heavy",
+    "boss_serpent": "slither",
+    "crystal_golem": "heavy",
+    "cave_bat": "hover",
+    "fungal_shambler": "slither",
+    "shadow_wraith": "hover",
+    "crystal_wyrm": "heavy",
+    "giant_crab": "beast",
+    "dire_albatross": "hover",
+    "triton_soldier": "stand",
+    "rock_spider": "beast",
+    "sand_giant": "heavy",
+    "rock_giant": "heavy",
+    "sea_snake": "slither",
+    "sandstorm_elemental": "hover",
+    "shark_knight": "stand",
+    "sand_scorpion": "beast",
+    "cliff_harpy": "hover",
+    "will_o_wisp": "hover",
+    "frost_wolf": "beast",
+    "polar_bear": "heavy",
+    "yeti": "heavy",
+    "crystal_spider": "beast",
+    "rime_wraith": "hover",
+    "ice_drake": "beast",
+    "storm_roc": "hover",
+    "woolly_mammoth": "heavy",
+    "crystal_matriarch": "beast",
+    "ice_giant": "heavy",
+    "white_dragon": "hover"
+  },
+  "lighting": {
+    "_comment": "Per battle backdrop: ambient multiplies every sprite, rim lights the edge that faces the light (rim_from 'centre' = toward the middle of the battlefield, 'left' / 'right' / 'top').",
+    "default": {
+      "ambient": "#f6efe4",
+      "rim": "#ffe2b0",
+      "rim_amount": 0.45,
+      "rim_from": "top"
+    },
+    "battle_castle_generic": {
+      "ambient": "#f6ece0",
+      "rim": "#ffcf8a",
+      "rim_amount": 0.55,
+      "rim_from": "top"
+    },
+    "battle_forest": {
+      "ambient": "#f2f4e6",
+      "rim": "#fff0b8",
+      "rim_amount": 0.6,
+      "rim_from": "top"
+    },
+    "battle_crystal_hollow": {
+      "ambient": "#dfe6f6",
+      "rim": "#8fd8ff",
+      "rim_amount": 0.8,
+      "rim_from": "centre"
+    },
+    "battle_beach": {
+      "ambient": "#fff6e6",
+      "rim": "#ffe6a8",
+      "rim_amount": 0.6,
+      "rim_from": "top"
+    },
+    "battle_ship_deck": {
+      "ambient": "#fff8ec",
+      "rim": "#cfeeff",
+      "rim_amount": 0.6,
+      "rim_from": "top"
+    },
+    "battle_castle_yard": {
+      "ambient": "#fff6ea",
+      "rim": "#ffe9b8",
+      "rim_amount": 0.55,
+      "rim_from": "top"
+    },
+    "battle_forest_mountain": {
+      "ambient": "#eef2ff",
+      "rim": "#d8e6ff",
+      "rim_amount": 0.55,
+      "rim_from": "top"
+    },
+    "battle_forest_deepwood": {
+      "ambient": "#dcecd2",
+      "rim": "#d6ffb0",
+      "rim_amount": 0.7,
+      "rim_from": "top"
+    },
+    "battle_crystal_chasm": {
+      "ambient": "#c8d8f2",
+      "rim": "#8fd8ff",
+      "rim_amount": 0.8,
+      "rim_from": "centre"
+    },
+    "battle_crystal_ruins": {
+      "ambient": "#d6cbec",
+      "rim": "#c79bff",
+      "rim_amount": 0.75,
+      "rim_from": "centre"
+    },
+    "battle_mountain_slopes": {
+      "ambient": "#eef4fb",
+      "rim": "#e6f2ff",
+      "rim_amount": 0.55,
+      "rim_from": "top"
+    },
+    "battle_mountain_glacier": {
+      "ambient": "#e2f0ff",
+      "rim": "#bfe6ff",
+      "rim_amount": 0.65,
+      "rim_from": "top"
+    },
+    "battle_mountain_summit": {
+      "ambient": "#f2f6ff",
+      "rim": "#fff6e0",
+      "rim_amount": 0.6,
+      "rim_from": "top"
+    },
+    "battle_dragon_aerie": {
+      "ambient": "#e4eaff",
+      "rim": "#cfe0ff",
+      "rim_amount": 0.7,
+      "rim_from": "top"
+    }
+  },
+  "floors": {
+    "_comment": "top: share of the picture height where the walkable floor begins (measured on each picture). The battlefield's feet line falls at 0.62 of a 16:9 picture and lower on wider screens; tests require top <= 0.585 and check every unit's visible feet against it. anchor_y: share of a wide screen's crop taken from the top (0.8 keeps the floor, drops sky). Battle units must stand at least 7% of the picture height below the floor top (not on its back edge, where they looked like floating against the far wall): pictures whose floor starts lower get a bottom-anchored zoom.",
+    "default": {
+      "top": 0.5,
+      "anchor_y": 0.8
+    },
+    "battle_castle_generic": {
+      "top": 0.5
+    },
+    "battle_castle_yard": {
+      "top": 0.5
+    },
+    "battle_forest": {
+      "top": 0.58,
+      "zoom": 1.13,
+      "anchor_y": 1.0
+    },
+    "battle_forest_mountain": {
+      "top": 0.585,
+      "zoom": 1.14,
+      "anchor_y": 1.0
+    },
+    "battle_forest_deepwood": {
+      "top": 0.58,
+      "zoom": 1.13,
+      "anchor_y": 1.0
+    },
+    "battle_crystal_hollow": {
+      "top": 0.57,
+      "zoom": 1.09,
+      "anchor_y": 1.0
+    },
+    "battle_beach": {
+      "top": 0.55,
+      "zoom": 1.04,
+      "anchor_y": 1.0
+    },
+    "battle_ship_deck": {
+      "top": 0.585,
+      "zoom": 1.14,
+      "anchor_y": 1.0
+    },
+    "battle_crystal_chasm": {
+      "top": 0.62,
+      "zoom": 1.27,
+      "anchor_y": 1.0
+    },
+    "battle_crystal_ruins": {
+      "top": 0.61,
+      "zoom": 1.23,
+      "anchor_y": 1.0
+    },
+    "battle_mountain_slopes": {
+      "top": 0.5,
+      "zoom": 1.0,
+      "anchor_y": 1.0
+    },
+    "battle_mountain_glacier": {
+      "top": 0.57,
+      "zoom": 1.06,
+      "anchor_y": 1.0
+    },
+    "battle_mountain_summit": {
+      "top": 0.55,
+      "zoom": 1.04,
+      "anchor_y": 1.0
+    },
+    "battle_dragon_aerie": {
+      "top": 0.52,
+      "zoom": 1.02,
+      "anchor_y": 1.0
+    }
+  },
+  "character_variants": {
+    "bianca": {
+      "ashveil": {
+        "idle": "characters/bianca/ashveil/idle",
+        "attack": "characters/bianca/ashveil/attack",
+        "cast": "characters/bianca/ashveil/cast",
+        "block": "characters/bianca/ashveil/block",
+        "hit": "characters/bianca/ashveil/hit",
+        "down": "characters/bianca/ashveil/down",
+        "figure": "generated/figures/bianca_ashveil"
+      },
+      "venom": {
+        "idle": "characters/bianca/ashveil/idle",
+        "attack": "characters/bianca/ashveil/attack",
+        "cast": "characters/bianca/ashveil/cast",
+        "block": "characters/bianca/ashveil/block",
+        "hit": "characters/bianca/ashveil/hit",
+        "down": "characters/bianca/ashveil/down",
+        "figure": "generated/figures/bianca_ashveil"
+      }
+    }
+  },
+  "_variants_comment": "character_variants: a specialization's own look (same states as characters). Bianca's Ashveil set is cut from the owner-provided sheet assets/characters/bianca/ashveil_bianca.jpg (scripts/tools/cut_pose_sheet.py, BiRefNet). Venom reuses the Ashveil set. \"figure\": the large picture of the equipment screen (an HD redraw by scripts/tools/comfy_upscale.py); combat poses never use it."
+}

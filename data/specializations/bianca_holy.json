@@ -1,0 +1,74 @@
+{
+  "id": "holy",
+  "character_id": "bianca",
+  "identity": "Healing, cleansing, blessings and protective light.",
+  "starting_passive": {
+    "id": "holy_passive",
+    "name": "Blessed Aegis",
+    "description": "The first time Bianca receives Block from a card each turn (her own or an ally's), she gains 1 extra Block. Once per turn; Block from the passive itself does not count.",
+    "trigger": {
+      "event": "block_gained",
+      "recipient": "owner",
+      "origin": "card"
+    },
+    "limit_per_turn": 1,
+    "effect": {
+      "effect": "bonus_block",
+      "value": 1
+    }
+  },
+  "starting_deck_card_ids": [
+    "bianca_holy_strike",
+    "bianca_holy_strike",
+    "bianca_holy_strike",
+    "bianca_holy_strike",
+    "bianca_holy_shield",
+    "bianca_holy_shield",
+    "bianca_holy_shield",
+    "bianca_holy_hymn",
+    "bianca_holy_touch",
+    "bianca_holy_touch"
+  ],
+  "card_pool": [
+    "bianca_holy_mending",
+    "bianca_holy_ward",
+    "bianca_holy_smite",
+    "bianca_holy_bulwark",
+    "bianca_holy_benediction",
+    "bianca_holy_judgment",
+    "bianca_holy_hymn",
+    "bianca_holy_lightfall",
+    "bianca_holy_cascade",
+    "bianca_holy_wellspring",
+    "bianca_holy_sunfire",
+    "bianca_holy_psalm",
+    "bianca_holy_devotion",
+    "bianca_holy_consecration",
+    "bianca_holy_blessedarms",
+    "bianca_holy_favor",
+    "bianca_holy_patience",
+    "bianca_holy_radiant",
+    "bianca_holy_purify",
+    "bianca_holy_hallowed",
+    "bianca_holy_chorus"
+  ],
+  "skill_tree": {
+    "nodes": [],
+    "note": "Add skill nodes as the specialization is implemented."
+  },
+  "status": "playable",
+  "display_name": "Holy",
+  "description": "Bianca is the party's light. She heals wounds, shields allies and turns the protection she raises into radiant damage. Her hymns grow brighter with Aether, the surplus magic Chiara's Arcana stirs up.",
+  "keywords": [
+    "block"
+  ],
+  "visual": {
+    "accent": "#f4d675",
+    "icon": "icon_holy"
+  },
+  "epic_pool": [
+    "bianca_holy_epic_dawnbreaker",
+    "bianca_holy_epic_sanctuary"
+  ],
+  "damage_element": "holy"
+}

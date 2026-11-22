@@ -1,0 +1,647 @@
+[
+  {
+    "id": "idle",
+    "path": "res://assets/characters/chiara/processed/idle.png",
+    "source": "basic.jpg",
+    "box": [
+      0,
+      0,
+      352,
+      496
+    ],
+    "size": [
+      313,
+      452
+    ]
+  },
+  {
+    "id": "attack",
+    "path": "res://assets/characters/chiara/processed/attack.png",
+    "source": "basic.jpg",
+    "box": [
+      322,
+      30,
+      760,
+      496
+    ],
+    "size": [
+      423,
+      401
+    ]
+  },
+  {
+    "id": "block",
+    "path": "res://assets/characters/chiara/processed/block.png",
+    "source": "basic.jpg",
+    "box": [
+      722,
+      20,
+      1057,
+      496
+    ],
+    "size": [
+      325,
+      399
+    ]
+  },
+  {
+    "id": "hit",
+    "path": "res://assets/characters/chiara/processed/hit.png",
+    "source": "basic.jpg",
+    "box": [
+      0,
+      500,
+      352,
+      992
+    ],
+    "size": [
+      342,
+      407
+    ]
+  },
+  {
+    "id": "cast",
+    "path": "res://assets/characters/chiara/processed/cast.png",
+    "source": "basic.jpg",
+    "box": [
+      340,
+      510,
+      648,
+      992
+    ],
+    "size": [
+      294,
+      416
+    ]
+  },
+  {
+    "id": "charge",
+    "path": "res://assets/characters/chiara/processed/charge.png",
+    "source": "basic.jpg",
+    "box": [
+      680,
+      500,
+      1057,
+      992
+    ],
+    "size": [
+      377,
+      482
+    ]
+  },
+  {
+    "id": "idle",
+    "path": "res://assets/characters/bianca/processed/idle.png",
+    "source": "basic.jpg",
+    "box": [
+      0,
+      0,
+      320,
+      380
+    ],
+    "size": [
+      252,
+      349
+    ]
+  },
+  {
+    "id": "attack",
+    "path": "res://assets/characters/bianca/processed/attack.png",
+    "source": "basic.jpg",
+    "box": [
+      290,
+      20,
+      640,
+      380
+    ],
+    "size": [
+      342,
+      302
+    ]
+  },
+  {
+    "id": "attack2",
+    "path": "res://assets/characters/bianca/processed/attack2.png",
+    "source": "basic.jpg",
+    "box": [
+      630,
+      20,
+      960,
+      380
+    ],
+    "size": [
+      282,
+      299
+    ]
+  },
+  {
+    "id": "guard",
+    "path": "res://assets/characters/bianca/processed/guard.png",
+    "source": "basic.jpg",
+    "box": [
+      0,
+      390,
+      320,
+      745
+    ],
+    "size": [
+      234,
+      280
+    ]
+  },
+  {
+    "id": "strike",
+    "path": "res://assets/characters/bianca/processed/strike.png",
+    "source": "basic.jpg",
+    "box": [
+      630,
+      400,
+      960,
+      745
+    ],
+    "size": [
+      284,
+      316
+    ]
+  },
+  {
+    "id": "idle_side",
+    "path": "res://assets/characters/bianca/processed/idle_side.png",
+    "source": "basic.jpg",
+    "box": [
+      0,
+      750,
+      320,
+      1093
+    ],
+    "size": [
+      171,
+      328
+    ]
+  },
+  {
+    "id": "block",
+    "path": "res://assets/characters/bianca/processed/block.png",
+    "source": "basic.jpg",
+    "box": [
+      300,
+      750,
+      640,
+      1093
+    ],
+    "size": [
+      302,
+      322
+    ]
+  },
+  {
+    "id": "down",
+    "path": "res://assets/characters/bianca/processed/down.png",
+    "source": "basic.jpg",
+    "box": [
+      630,
+      790,
+      960,
+      1093
+    ],
+    "size": [
+      322,
+      226
+    ]
+  },
+  {
+    "id": "knight_generic_idle",
+    "path": "res://assets/enemies/tutorial/processed/knight_generic_idle.png",
+    "source": "knight_generic.jpg",
+    "box": [
+      40,
+      25,
+      250,
+      375
+    ],
+    "size": [
+      180,
+      335
+    ]
+  },
+  {
+    "id": "knight_generic_prep",
+    "path": "res://assets/enemies/tutorial/processed/knight_generic_prep.png",
+    "source": "knight_generic.jpg",
+    "box": [
+      335,
+      25,
+      575,
+      375
+    ],
+    "size": [
+      234,
+      342
+    ]
+  },
+  {
+    "id": "knight_generic_hit",
+    "path": "res://assets/enemies/tutorial/processed/knight_generic_hit.png",
+    "source": "knight_generic.jpg",
+    "box": [
+      50,
+      410,
+      300,
+      750
+    ],
+    "size": [
+      245,
+      326
+    ]
+  },
+  {
+    "id": "knight_generic_block",
+    "path": "res://assets/enemies/tutorial/processed/knight_generic_block.png",
+    "source": "knight_generic.jpg",
+    "box": [
+      355,
+      430,
+      730,
+      750
+    ],
+    "size": [
+      369,
+      309
+    ]
+  },
+  {
+    "id": "knight_generic_crit_block",
+    "path": "res://assets/enemies/tutorial/processed/knight_generic_crit_block.png",
+    "source": "knight_generic.jpg",
+    "box": [
+      370,
+      800,
+      700,
+      1093
+    ],
+    "size": [
+      293,
+      269
+    ]
+  },
+  {
+    "id": "knight_captain_idle",
+    "path": "res://assets/enemies/tutorial/processed/knight_captain_idle.png",
+    "source": "knight_captain.jpg",
+    "box": [
+      50,
+      45,
+      260,
+      380
+    ],
+    "size": [
+      168,
+      324
+    ]
+  },
+  {
+    "id": "knight_captain_prep",
+    "path": "res://assets/enemies/tutorial/processed/knight_captain_prep.png",
+    "source": "knight_captain.jpg",
+    "box": [
+      300,
+      45,
+      575,
+      380
+    ],
+    "size": [
+      267,
+      324
+    ]
+  },
+  {
+    "id": "knight_captain_swing",
+    "path": "res://assets/enemies/tutorial/processed/knight_captain_swing.png",
+    "source": "knight_captain.jpg",
+    "box": [
+      595,
+      45,
+      960,
+      380
+    ],
+    "size": [
+      354,
+      287
+    ]
+  },
+  {
+    "id": "knight_captain_hit",
+    "path": "res://assets/enemies/tutorial/processed/knight_captain_hit.png",
+    "source": "knight_captain.jpg",
+    "box": [
+      50,
+      420,
+      320,
+      750
+    ],
+    "size": [
+      241,
+      325
+    ]
+  },
+  {
+    "id": "knight_captain_block",
+    "path": "res://assets/enemies/tutorial/processed/knight_captain_block.png",
+    "source": "knight_captain.jpg",
+    "box": [
+      355,
+      430,
+      850,
+      750
+    ],
+    "size": [
+      452,
+      310
+    ]
+  },
+  {
+    "id": "knight_captain_crit_block",
+    "path": "res://assets/enemies/tutorial/processed/knight_captain_crit_block.png",
+    "source": "knight_captain.jpg",
+    "box": [
+      370,
+      800,
+      960,
+      1093
+    ],
+    "size": [
+      567,
+      293
+    ]
+  },
+  {
+    "id": "holy_t1",
+    "path": "res://assets/characters/bianca/processed/holy_t1.png",
+    "source": "holy.jpg",
+    "box": [
+      0,
+      0,
+      480,
+      372
+    ],
+    "size": [
+      480,
+      372
+    ]
+  },
+  {
+    "id": "holy_t2",
+    "path": "res://assets/characters/bianca/processed/holy_t2.png",
+    "source": "holy.jpg",
+    "box": [
+      480,
+      0,
+      960,
+      372
+    ],
+    "size": [
+      480,
+      372
+    ]
+  },
+  {
+    "id": "holy_t3_summon",
+    "path": "res://assets/characters/bianca/processed/holy_t3_summon.png",
+    "source": "holy.jpg",
+    "box": [
+      0,
+      372,
+      480,
+      745
+    ],
+    "size": [
+      480,
+      373
+    ]
+  },
+  {
+    "id": "holy_t3_release",
+    "path": "res://assets/characters/bianca/processed/holy_t3_release.png",
+    "source": "holy.jpg",
+    "box": [
+      480,
+      372,
+      960,
+      745
+    ],
+    "size": [
+      480,
+      373
+    ]
+  },
+  {
+    "id": "holy_t4",
+    "path": "res://assets/characters/bianca/processed/holy_t4.png",
+    "source": "holy.jpg",
+    "box": [
+      0,
+      745,
+      960,
+      1093
+    ],
+    "size": [
+      960,
+      348
+    ]
+  },
+  {
+    "id": "tanking_t1",
+    "path": "res://assets/characters/bianca/processed/tanking_t1.png",
+    "source": "tanking.jpg",
+    "box": [
+      0,
+      0,
+      480,
+      372
+    ],
+    "size": [
+      480,
+      372
+    ]
+  },
+  {
+    "id": "tanking_t2",
+    "path": "res://assets/characters/bianca/processed/tanking_t2.png",
+    "source": "tanking.jpg",
+    "box": [
+      480,
+      0,
+      960,
+      372
+    ],
+    "size": [
+      480,
+      372
+    ]
+  },
+  {
+    "id": "tanking_t3_summon",
+    "path": "res://assets/characters/bianca/processed/tanking_t3_summon.png",
+    "source": "tanking.jpg",
+    "box": [
+      0,
+      372,
+      480,
+      745
+    ],
+    "size": [
+      480,
+      373
+    ]
+  },
+  {
+    "id": "tanking_t3_release",
+    "path": "res://assets/characters/bianca/processed/tanking_t3_release.png",
+    "source": "tanking.jpg",
+    "box": [
+      480,
+      372,
+      960,
+      745
+    ],
+    "size": [
+      480,
+      373
+    ]
+  },
+  {
+    "id": "tanking_t4",
+    "path": "res://assets/characters/bianca/processed/tanking_t4.png",
+    "source": "tanking.jpg",
+    "box": [
+      0,
+      745,
+      960,
+      1093
+    ],
+    "size": [
+      960,
+      348
+    ]
+  },
+  {
+    "id": "fire_t1",
+    "path": "res://assets/characters/chiara/processed/fire_t1.png",
+    "source": "fire.jpg",
+    "box": [
+      322,
+      30,
+      760,
+      496
+    ],
+    "size": [
+      438,
+      466
+    ]
+  },
+  {
+    "id": "fire_t2",
+    "path": "res://assets/characters/chiara/processed/fire_t2.png",
+    "source": "fire.jpg",
+    "box": [
+      722,
+      20,
+      1057,
+      496
+    ],
+    "size": [
+      335,
+      476
+    ]
+  },
+  {
+    "id": "fire_t3",
+    "path": "res://assets/characters/chiara/processed/fire_t3.png",
+    "source": "fire.jpg",
+    "box": [
+      0,
+      500,
+      352,
+      992
+    ],
+    "size": [
+      352,
+      492
+    ]
+  },
+  {
+    "id": "fire_t4",
+    "path": "res://assets/characters/chiara/processed/fire_t4.png",
+    "source": "fire.jpg",
+    "box": [
+      340,
+      420,
+      1057,
+      992
+    ],
+    "size": [
+      717,
+      572
+    ]
+  },
+  {
+    "id": "arcane_t1",
+    "path": "res://assets/characters/chiara/processed/arcane_t1.png",
+    "source": "arcane.jpg",
+    "box": [
+      322,
+      30,
+      760,
+      496
+    ],
+    "size": [
+      438,
+      466
+    ]
+  },
+  {
+    "id": "arcane_t2",
+    "path": "res://assets/characters/chiara/processed/arcane_t2.png",
+    "source": "arcane.jpg",
+    "box": [
+      722,
+      20,
+      1057,
+      496
+    ],
+    "size": [
+      335,
+      476
+    ]
+  },
+  {
+    "id": "arcane_t3",
+    "path": "res://assets/characters/chiara/processed/arcane_t3.png",
+    "source": "arcane.jpg",
+    "box": [
+      0,
+      500,
+      352,
+      992
+    ],
+    "size": [
+      352,
+      492
+    ]
+  },
+  {
+    "id": "arcane_t4",
+    "path": "res://assets/characters/chiara/processed/arcane_t4.png",
+    "source": "arcane.jpg",
+    "box": [
+      340,
+      420,
+      1057,
+      992
+    ],
+    "size": [
+      717,
+      572
+    ]
+  }
+]

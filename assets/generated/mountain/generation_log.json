@@ -1,0 +1,311 @@
+{
+ "_comment": "Generated locally with ComfyUI. Model: FLUX.1 [schnell] (Apache 2.0, black-forest-labs) GGUF Q3_K_S by city96; text encoders CLIP-L + T5-XXL GGUF; background removal BiRefNet (MIT). 4 steps, euler/simple, CFG 1.",
+ "assets": {
+  "map_frostpeak_climb": {
+   "file": "res://assets/generated/mountain/map_frostpeak_climb.png",
+   "prompt": "tall vertical illustrated fantasy adventure map of one colossal snowy mountain seen from the front, climbing from misty snowy pine forests and a small wooden village at the very bottom, up through blue glaciers, ice caves, frozen waterfalls and rope bridges in the middle, to jagged white peaks wrapped in clouds and a dragon lair on the very top, winding narrow trails zigzagging up the slopes, small pagoda outposts on ledges, in the style of a traditional East Asian ink wash landscape painting with soft watercolour, misty blue-grey, teal and white palette, absolutely no text, no writing, no labels, no letters, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 1280,
+   "seed": 9401,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 315.4,
+   "date": "2026-11-22"
+  },
+  "map_frostpeak": {
+   "file": "res://assets/generated/mountain/map_frostpeak.png",
+   "prompt": "wide panorama of a misty range of snowy mountain peaks above a sea of clouds, pale dawn sky, ornate silver and blue painted border, in the style of a traditional East Asian ink wash landscape painting with soft watercolour, misty blue-grey, teal and white palette, absolutely no text, no writing, no labels, no letters, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 9402,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 366.4,
+   "date": "2026-11-22"
+  },
+  "battle_mountain_slopes": {
+   "file": "res://assets/generated/mountain/battle_mountain_slopes.png",
+   "prompt": "wide eye-level view of a snowy mountain pine forest slope for a 2D JRPG battle scene, evenly lit, a huge flat open floor of packed snow and flat grey rock filling the entire lower 60 percent of the image, the floor starts just above the middle of the image and stretches from the left edge to the right edge, tall snow-laden pine trees and boulders at the far sides, misty snowy mountain peaks in the background, empty arena, no characters, no creatures, no text, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 9411,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 141.0,
+   "date": "2026-11-22"
+  },
+  "battle_mountain_glacier": {
+   "file": "res://assets/generated/mountain/battle_mountain_glacier.png",
+   "prompt": "wide eye-level view of a vast blue glacier ice cave for a 2D JRPG battle scene, evenly lit, a huge flat open floor of smooth flat blue ice and frost filling the entire lower 65 percent of the image, the floor starts just above the middle of the image and stretches from the left edge to the right edge, huge translucent blue ice pillars and icicles at the far sides, a frozen waterfall and glowing pale blue crystals in the background, empty arena, no characters, no creatures, no text, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 9512,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 96.9,
+   "date": "2026-11-22"
+  },
+  "battle_mountain_summit": {
+   "file": "res://assets/generated/mountain/battle_mountain_summit.png",
+   "prompt": "wide eye-level view of a windswept snowy mountain summit ridge high above the clouds for a 2D JRPG battle scene, evenly lit, a huge flat open floor of wind-packed snow and flat dark stone filling the entire lower 60 percent of the image, the floor starts just above the middle of the image and stretches from the left edge to the right edge, jagged icy rocks and tattered prayer flags on poles at the far sides, a sea of clouds far below and distant white peaks under a cold bright sky in the background, empty arena, no characters, no creatures, no text, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 9413,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 181.3,
+   "date": "2026-11-22"
+  },
+  "battle_dragon_aerie": {
+   "file": "res://assets/generated/mountain/battle_dragon_aerie.png",
+   "prompt": "wide eye-level view of a dragon aerie on the highest frozen peak for a 2D JRPG battle scene, evenly lit, a huge flat open floor of flat ancient carved white stone and snow filling the entire lower 60 percent of the image, the floor starts just above the middle of the image and stretches from the left edge to the right edge, broken white marble pillars crusted with ice and huge dragon bones at the far sides, swirling snowstorm clouds, a pale aurora and a cold full moon in the background, empty arena, no characters, no creatures, no text, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1152,
+   "height": 648,
+   "seed": 9414,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 146.9,
+   "date": "2026-11-22"
+  },
+  "monster_frost_wolf": {
+   "file": "res://assets/generated/mountain/monster_frost_wolf.png",
+   "prompt": "a lean snow-white frost wolf with pale blue eyes, icy breath, frost crystals in its thick fur, snarling, prowling, full body, side view facing right, monster, isolated on a plain flat light grey background, no ground, no shadow, single creature, whole body visible, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 9421,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 304.5,
+   "date": "2026-11-22"
+  },
+  "monster_polar_bear": {
+   "file": "res://assets/generated/mountain/monster_polar_bear.png",
+   "prompt": "a huge powerful polar bear with thick cream-white fur and black claws, roaring, standing on all fours, full body, side view facing right, monster, isolated on a plain flat light grey background, no ground, no shadow, single creature, whole body visible, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 9422,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 228.7,
+   "date": "2026-11-22"
+  },
+  "monster_yeti": {
+   "file": "res://assets/generated/mountain/monster_yeti.png",
+   "prompt": "a hulking yeti, a shaggy white-furred ape-like mountain beast with blue-grey skin on its face and hands, long arms, icy horns, roaring, full body, side view facing right, monster, isolated on a plain flat light grey background, no ground, no shadow, single creature, whole body visible, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 9423,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 235.1,
+   "date": "2026-11-22"
+  },
+  "monster_crystal_spider": {
+   "file": "res://assets/generated/mountain/monster_crystal_spider.png",
+   "prompt": "a giant spider made of translucent glowing pale blue and violet crystal shards, faceted legs, glowing eyes, full body, side view facing right, monster, isolated on a plain flat light grey background, no ground, no shadow, single creature, whole body visible, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 9424,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 150.1,
+   "date": "2026-11-22"
+  },
+  "monster_rime_wraith": {
+   "file": "res://assets/generated/mountain/monster_rime_wraith.png",
+   "prompt": "a rime wraith, a floating ghostly spirit made of frost mist and tattered pale blue rags, icy claws, hollow glowing eyes, translucent, full body, side view facing right, monster, isolated on a plain flat light grey background, no ground, no shadow, single creature, whole body visible, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 9425,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 229.3,
+   "date": "2026-11-22"
+  },
+  "monster_ice_drake": {
+   "file": "res://assets/generated/mountain/monster_ice_drake.png",
+   "prompt": "a young ice drake, a sleek wingless dragon with pale blue and silver scales, frost spines along its back, icy breath, full body, side view facing right, monster, isolated on a plain flat light grey background, no ground, no shadow, single creature, whole body visible, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 9426,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 241.1,
+   "date": "2026-11-22"
+  },
+  "monster_storm_roc": {
+   "file": "res://assets/generated/mountain/monster_storm_roc.png",
+   "prompt": "a giant storm roc, a huge eagle with dark slate grey feathers crackling with blue lightning, wings spread, flying, full body, side view facing right, monster, isolated on a plain flat light grey background, no ground, no shadow, single creature, whole body visible, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 9427,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 468.5,
+   "date": "2026-11-22"
+  },
+  "monster_woolly_mammoth": {
+   "file": "res://assets/generated/mountain/monster_woolly_mammoth.png",
+   "prompt": "a colossal woolly mammoth with long shaggy brown fur, huge curved tusks capped with ice, frost on its fur, standing, full body, side view facing right, monster, isolated on a plain flat light grey background, no ground, no shadow, single creature, whole body visible, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 9431,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 271.7,
+   "date": "2026-11-22"
+  },
+  "monster_crystal_matriarch": {
+   "file": "res://assets/generated/mountain/monster_crystal_matriarch.png",
+   "prompt": "a colossal queen spider made of glowing violet and blue crystal, a crown of crystal spikes on its back, many faceted legs, menacing, full body, side view facing right, monster, isolated on a plain flat light grey background, no ground, no shadow, single creature, whole body visible, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 9432,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 248.8,
+   "date": "2026-11-22"
+  },
+  "monster_ice_giant": {
+   "file": "res://assets/generated/mountain/monster_ice_giant.png",
+   "prompt": "a towering ice giant, a huge humanoid made of blue glacial ice with a frost beard and a massive ice club, cracked glowing core, standing, full body, side view facing right, monster, isolated on a plain flat light grey background, no ground, no shadow, single creature, whole body visible, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 768,
+   "seed": 9433,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 96.4,
+   "date": "2026-11-22"
+  },
+  "boss_white_dragon": {
+   "file": "res://assets/generated/mountain/boss_white_dragon.png",
+   "prompt": "a single colossal menacing white dragon with one head, one long powerful neck, jaws open showing sharp icy fangs, pearl-white scales edged in pale blue and silver, two huge crystalline wings raised high, crown of jagged crystal horns, cold glowing ice-blue eyes, four clawed legs, a long tail, frost mist swirling around her, majestic, beautiful and terrifying final boss, full body, side view, head on the right facing right, no people, no humans, isolated on a plain flat light grey background, no ground, no shadow, single creature, whole body visible, no text, centered, game character sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 1024,
+   "height": 704,
+   "seed": 9543,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 307.3,
+   "date": "2026-11-22"
+  },
+  "icon_frostbitten": {
+   "file": "res://assets/generated/mountain/icon_frostbitten.png",
+   "prompt": "a single game icon of a pale blue hand covered in frost and ice crystals, ornate silver rim, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 9471,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 384.8,
+   "date": "2026-11-22"
+  }
+ }
+}

@@ -1,0 +1,158 @@
+{
+ "_comment": "Generated locally with ComfyUI. Model: FLUX.1 [schnell] (Apache 2.0, black-forest-labs) GGUF Q3_K_S by city96; text encoders CLIP-L + T5-XXL GGUF; background removal BiRefNet (MIT). 4 steps, euler/simple, CFG 1.",
+ "assets": {
+  "vfx_oil_splash_cut": {
+   "file": "res://assets/generated/vfx/vfx_oil_splash_cut.png",
+   "prompt": "a big splash of thick glossy pitch-black oil with flying black droplets and amber highlights, isolated on a plain flat white background, centered, no text, game visual effect sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 5501,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 167.8,
+   "date": "2026-11-17"
+  },
+  "vfx_smoke_cloud_cut": {
+   "file": "res://assets/generated/vfx/vfx_smoke_cloud_cut.png",
+   "prompt": "a dense billowing cloud of dark charcoal grey smoke puffs with a few small orange embers, isolated on a plain flat white background, centered, no text, game visual effect sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 5502,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 75.1,
+   "date": "2026-11-17"
+  },
+  "vfx_smoke_veil_cut": {
+   "file": "res://assets/generated/vfx/vfx_smoke_veil_cut.png",
+   "prompt": "a swirling ring of grey smoke and drifting ash wrapping around an empty space, soft wispy edges, isolated on a plain flat white background, centered, no text, game visual effect sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 5503,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 149.7,
+   "date": "2026-11-17"
+  },
+  "vfx_flask_cut": {
+   "file": "res://assets/generated/vfx/vfx_flask_cut.png",
+   "prompt": "a small round glass flask full of black oil with a cork, spinning in the air, a few oil drops, isolated on a plain flat white background, centered, no text, game visual effect sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 5504,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 63.9,
+   "date": "2026-11-17"
+  },
+  "vfx_ash_slash": {
+   "file": "res://assets/generated/vfx/vfx_ash_slash.png",
+   "prompt": "a wide curved sword slash arc trail made of glowing orange embers and sparks with grey ash flakes, motion streak, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 512,
+   "seed": 5511,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 106.1,
+   "date": "2026-11-17"
+  },
+  "vfx_shadow_stab": {
+   "file": "res://assets/generated/vfx/vfx_shadow_stab.png",
+   "prompt": "a straight horizontal dagger thrust streak of glowing violet shadow energy pointing right with purple sparks, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 384,
+   "seed": 5512,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 32.5,
+   "date": "2026-11-17"
+  },
+  "vfx_card_draw": {
+   "file": "res://assets/generated/vfx/vfx_card_draw.png",
+   "prompt": "three glowing ethereal magic cards fanning out in the air with sparkling light trails, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 5513,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 32.3,
+   "date": "2026-11-17"
+  },
+  "vfx_energy_burst": {
+   "file": "res://assets/generated/vfx/vfx_energy_burst.png",
+   "prompt": "a radiant glowing energy crystal bursting with light rays and sparkles, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 5514,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.4,
+   "date": "2026-11-17"
+  },
+  "vfx_caltrops_cut": {
+   "file": "res://assets/generated/vfx/vfx_caltrops_cut.png",
+   "prompt": "a scattered spray of shiny spiky iron caltrops flying outward with small sparks and oil drops, isolated on a plain flat white background, centered, no text, game visual effect sprite, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 5505,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 48.0,
+   "date": "2026-11-17"
+  }
+ }
+}

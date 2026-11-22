@@ -1,0 +1,203 @@
+[
+  {
+    "id": "chiara_arcana_bolt",
+    "name": "Arcane Bolt",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "basic",
+    "description": "Deal 6 damage.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 6,
+        "target": "single_enemy"
+      }
+    ],
+    "upgrade": {
+      "name": "Arcane Bolt+",
+      "cost": 1,
+      "description": "Placeholder upgrade; tune later.",
+      "effects": []
+    },
+    "art_path": "res://assets/cards/card_art/chiara_arcana_bolt.png"
+  },
+  {
+    "id": "chiara_arcana_ward",
+    "name": "Arcane Ward",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "basic",
+    "description": "Gain 5 Block.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 5,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Arcane Ward+",
+      "cost": 1,
+      "description": "Placeholder upgrade; tune later.",
+      "effects": []
+    },
+    "art_path": "res://assets/cards/card_art/chiara_arcana_ward.png"
+  },
+  {
+    "id": "chiara_arcana_focus",
+    "name": "Gathering Focus",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 0,
+    "card_type": "skill",
+    "target": "self",
+    "rarity": "basic",
+    "description": "Draw 1 card.",
+    "effects": [
+      {
+        "effect": "draw",
+        "value": 1,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Gathering Focus+",
+      "cost": 0,
+      "description": "Placeholder upgrade; tune later.",
+      "effects": []
+    },
+    "art_path": "res://assets/cards/card_art/chiara_arcana_focus.png"
+  },
+  {
+    "id": "chiara_arcana_surge",
+    "name": "Mana Surge",
+    "owner_character_id": "chiara",
+    "specialization_id": "arcana",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "basic",
+    "description": "Gain 1 Energy.",
+    "effects": [
+      {
+        "effect": "gain_energy",
+        "value": 1,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Mana Surge+",
+      "cost": 1,
+      "description": "Placeholder upgrade; tune later.",
+      "effects": []
+    },
+    "art_path": "res://assets/cards/card_art/chiara_arcana_surge.png"
+  },
+  {
+    "id": "bianca_tanking_strike",
+    "name": "Shield Strike",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "basic",
+    "description": "Deal 5 damage.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 5,
+        "target": "single_enemy"
+      }
+    ],
+    "upgrade": {
+      "name": "Shield Strike+",
+      "cost": 1,
+      "description": "Placeholder upgrade; tune later.",
+      "effects": []
+    },
+    "art_path": "res://assets/cards/card_art/bianca_tanking_strike.png"
+  },
+  {
+    "id": "bianca_tanking_guard",
+    "name": "Hold the Line",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "all_allies",
+    "rarity": "basic",
+    "description": "Give the party 4 Block.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 4,
+        "target": "all_allies"
+      }
+    ],
+    "upgrade": {
+      "name": "Hold the Line+",
+      "cost": 1,
+      "description": "Placeholder upgrade; tune later.",
+      "effects": []
+    },
+    "art_path": "res://assets/cards/card_art/bianca_tanking_guard.png"
+  },
+  {
+    "id": "bianca_tanking_challenge",
+    "name": "Challenge",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "single_enemy",
+    "rarity": "basic",
+    "description": "Apply 1 Taunt.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "status_id": "taunt",
+        "value": 1,
+        "target": "single_enemy"
+      }
+    ],
+    "upgrade": {
+      "name": "Challenge+",
+      "cost": 1,
+      "description": "Placeholder upgrade; tune later.",
+      "effects": []
+    },
+    "art_path": "res://assets/cards/card_art/bianca_tanking_challenge.png"
+  },
+  {
+    "id": "bianca_tanking_rally",
+    "name": "Steadfast Resolve",
+    "owner_character_id": "bianca",
+    "specialization_id": "tanking",
+    "cost": 1,
+    "card_type": "support",
+    "target": "self",
+    "rarity": "basic",
+    "description": "Gain 3 Block.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 3,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Steadfast Resolve+",
+      "cost": 1,
+      "description": "Placeholder upgrade; tune later.",
+      "effects": []
+    },
+    "art_path": "res://assets/cards/card_art/bianca_tanking_rally.png"
+  }
+]

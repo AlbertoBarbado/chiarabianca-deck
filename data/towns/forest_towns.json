@@ -1,0 +1,60 @@
+[
+  {
+    "id": "brookside_camp",
+    "name": "Brookside Camp",
+    "description": "A small woodcutters' camp beside a clear brook. There is a fire and a dry place to sleep.",
+    "services": [
+      "rest"
+    ],
+    "heal_percent": 25,
+    "art": "town_brookside_camp"
+  },
+  {
+    "id": "elderwood_village",
+    "name": "Elderwood Village",
+    "description": "A hidden settlement in the roots of a giant tree. The villagers offer a market and warm beds.",
+    "services": [
+      "merchant",
+      "rest"
+    ],
+    "shop_id": "forest_village_market",
+    "heal_percent": 30,
+    "art": "town_elderwood_village"
+  },
+  {
+    "id": "last_trader_outpost",
+    "name": "Trader's Outpost",
+    "description": "A lonely trading post at the edge of the Serpent's Domain. No beds, only wares.",
+    "services": [
+      "merchant"
+    ],
+    "shop_id": "forest_last_trader",
+    "art": "town_last_trader_outpost",
+    "art_focus": [
+      0.25,
+      0.5
+    ]
+  },
+  {
+    "id": "lantern_post",
+    "name": "Lantern Post",
+    "description": "Rangers keep a lantern burning at this crossroads. They sell supplies and share their fire.",
+    "services": [
+      "merchant",
+      "rest"
+    ],
+    "shop_id": "forest_peddler",
+    "heal_percent": 25,
+    "art": "town_lantern_post"
+  },
+  {
+    "id": "charcoal_camp",
+    "name": "Charcoal Burners' Camp",
+    "description": "Smoke curls from the kilns. The burners offer a place by the embers, nothing more.",
+    "services": [
+      "rest"
+    ],
+    "heal_percent": 28,
+    "art": "town_charcoal_camp"
+  }
+]

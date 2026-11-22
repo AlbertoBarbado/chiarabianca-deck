@@ -1,0 +1,792 @@
+{
+  "id": "frostpeak",
+  "name": "Frostpeak",
+  "subtitle": "The Ascent",
+  "map_type": "handcrafted_node_graph",
+  "act": 3,
+  "battle_backdrop": "battle_dragon_aerie",
+  "terrains": {
+    "slopes": {
+      "name": "Pine slopes",
+      "hint": "Pine slopes: snowy woods of wolves, bears and yetis.",
+      "backdrop": "battle_mountain_slopes",
+      "foes": [
+        "mountain_frost_wolf",
+        "mountain_polar_bear",
+        "mountain_yeti",
+        "elite_woolly_mammoth"
+      ]
+    },
+    "glacier": {
+      "name": "Glacier",
+      "hint": "The glacier: ice caves of crystal spiders, wraiths and drakes.",
+      "backdrop": "battle_mountain_glacier",
+      "foes": [
+        "mountain_crystal_spider",
+        "mountain_rime_wraith",
+        "mountain_ice_drake",
+        "elite_crystal_matriarch"
+      ]
+    },
+    "summit": {
+      "name": "Summit",
+      "hint": "The summit: wind, lightning and the dragon's brood.",
+      "backdrop": "battle_mountain_summit",
+      "foes": [
+        "mountain_storm_roc",
+        "mountain_ice_drake",
+        "mountain_yeti",
+        "mountain_rime_wraith",
+        "elite_ice_giant"
+      ]
+    }
+  },
+  "completion": {
+    "title": "Frostpeak Conquered",
+    "text": "Vaelith folds her pearl wings and the storm on the peak falls quiet. From the summit of Frostpeak the sisters see the whole kingdom, small and bright below the clouds.",
+    "badge": "Frostpeak summit"
+  },
+  "start_node_id": "frostpeak_foothills",
+  "exit_node_id": "frostpeak_summit",
+  "nodes": [
+    {
+      "id": "frostpeak_foothills",
+      "type": "start",
+      "name": "Frostpeak Foothills",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "pine_trailhead",
+        "snowed_shrine",
+        "bear_hollow"
+      ]
+    },
+    {
+      "id": "pine_trailhead",
+      "type": "combat",
+      "name": "Pine Trailhead",
+      "terrain": "slopes",
+      "position": [
+        0,
+        1
+      ],
+      "next": [
+        "frozen_cache"
+      ],
+      "encounter_id": "mountain_pine_trailhead"
+    },
+    {
+      "id": "snowed_shrine",
+      "type": "event",
+      "name": "Snowed-in Shrine",
+      "terrain": "slopes",
+      "position": [
+        1,
+        1
+      ],
+      "next": [
+        "wolf_ridge",
+        "frozen_cache"
+      ],
+      "event_pool": "mountain_slopes"
+    },
+    {
+      "id": "bear_hollow",
+      "type": "combat",
+      "name": "Bear Hollow",
+      "terrain": "slopes",
+      "position": [
+        2,
+        1
+      ],
+      "next": [
+        "woodcutters_path",
+        "wolf_ridge"
+      ],
+      "encounter_id": "mountain_bear_hollow"
+    },
+    {
+      "id": "frozen_cache",
+      "type": "treasure",
+      "name": "Frozen Cache",
+      "terrain": "slopes",
+      "position": [
+        0,
+        2
+      ],
+      "next": [
+        "fallen_pines",
+        "snowfield"
+      ],
+      "treasure_id": "mountain_frozen_cache"
+    },
+    {
+      "id": "wolf_ridge",
+      "type": "combat",
+      "name": "Wolf Ridge",
+      "terrain": "slopes",
+      "position": [
+        1,
+        2
+      ],
+      "next": [
+        "snowfield",
+        "icy_brook"
+      ],
+      "encounter_id": "mountain_wolf_ridge"
+    },
+    {
+      "id": "woodcutters_path",
+      "type": "event",
+      "name": "Woodcutters' Path",
+      "terrain": "slopes",
+      "position": [
+        2,
+        2
+      ],
+      "next": [
+        "icy_brook"
+      ],
+      "event_pool": "mountain_slopes"
+    },
+    {
+      "id": "fallen_pines",
+      "type": "combat",
+      "name": "Fallen Pines",
+      "terrain": "slopes",
+      "position": [
+        0,
+        3
+      ],
+      "next": [
+        "hunters_lodge"
+      ],
+      "encounter_id": "mountain_fallen_pines"
+    },
+    {
+      "id": "snowfield",
+      "type": "combat",
+      "name": "Open Snowfield",
+      "terrain": "slopes",
+      "position": [
+        1,
+        3
+      ],
+      "next": [
+        "pinefall_village",
+        "hunters_lodge"
+      ],
+      "encounter_id": "mountain_snowfield"
+    },
+    {
+      "id": "icy_brook",
+      "type": "combat",
+      "name": "Icy Brook",
+      "terrain": "slopes",
+      "position": [
+        2,
+        3
+      ],
+      "next": [
+        "mammoth_pass",
+        "pinefall_village"
+      ],
+      "encounter_id": "mountain_icy_brook"
+    },
+    {
+      "id": "hunters_lodge",
+      "type": "event",
+      "name": "Hunters' Lodge",
+      "terrain": "slopes",
+      "position": [
+        0,
+        4
+      ],
+      "next": [
+        "avalanche_chute",
+        "frozen_mill"
+      ],
+      "event_pool": "mountain_slopes"
+    },
+    {
+      "id": "pinefall_village",
+      "type": "town",
+      "name": "Pinefall Village",
+      "terrain": "slopes",
+      "position": [
+        1,
+        4
+      ],
+      "next": [
+        "frozen_mill",
+        "cliff_shrine"
+      ],
+      "town_id": "pinefall_village"
+    },
+    {
+      "id": "mammoth_pass",
+      "type": "elite",
+      "name": "Mammoth Pass",
+      "terrain": "slopes",
+      "position": [
+        2,
+        4
+      ],
+      "next": [
+        "cliff_shrine"
+      ],
+      "encounter_id": "elite_woolly_mammoth"
+    },
+    {
+      "id": "avalanche_chute",
+      "type": "combat",
+      "name": "Avalanche Chute",
+      "terrain": "slopes",
+      "position": [
+        0,
+        5
+      ],
+      "next": [
+        "trading_post"
+      ],
+      "encounter_id": "mountain_avalanche_chute"
+    },
+    {
+      "id": "frozen_mill",
+      "type": "combat",
+      "name": "Frozen Mill",
+      "terrain": "slopes",
+      "position": [
+        1,
+        5
+      ],
+      "next": [
+        "hot_springs",
+        "trading_post"
+      ],
+      "encounter_id": "mountain_frozen_mill"
+    },
+    {
+      "id": "cliff_shrine",
+      "type": "event",
+      "name": "Cliffside Altar",
+      "terrain": "slopes",
+      "position": [
+        2,
+        5
+      ],
+      "next": [
+        "crevasse_field",
+        "hot_springs"
+      ],
+      "event_pool": "mountain_slopes"
+    },
+    {
+      "id": "trading_post",
+      "type": "merchant",
+      "name": "Glacier Trading Post",
+      "terrain": "glacier",
+      "position": [
+        0,
+        6
+      ],
+      "next": [
+        "ice_cave_mouth",
+        "frozen_climber"
+      ],
+      "shop_id": "mountain_trading_post"
+    },
+    {
+      "id": "hot_springs",
+      "type": "rest",
+      "name": "Hot Springs",
+      "terrain": "glacier",
+      "position": [
+        1,
+        6
+      ],
+      "next": [
+        "frozen_climber",
+        "rime_hollow"
+      ],
+      "heal_percent": 30
+    },
+    {
+      "id": "crevasse_field",
+      "type": "combat",
+      "name": "Crevasse Field",
+      "terrain": "glacier",
+      "position": [
+        2,
+        6
+      ],
+      "next": [
+        "rime_hollow"
+      ],
+      "encounter_id": "mountain_crevasse_field"
+    },
+    {
+      "id": "ice_cave_mouth",
+      "type": "combat",
+      "name": "Ice Cave Mouth",
+      "terrain": "glacier",
+      "position": [
+        0,
+        7
+      ],
+      "next": [
+        "crystal_nest"
+      ],
+      "encounter_id": "mountain_ice_cave_mouth"
+    },
+    {
+      "id": "frozen_climber",
+      "type": "event",
+      "name": "The Frozen Climber",
+      "terrain": "glacier",
+      "position": [
+        1,
+        7
+      ],
+      "next": [
+        "frozen_falls",
+        "crystal_nest"
+      ],
+      "event_pool": "mountain_glacier"
+    },
+    {
+      "id": "rime_hollow",
+      "type": "combat",
+      "name": "Rime Hollow",
+      "terrain": "glacier",
+      "position": [
+        2,
+        7
+      ],
+      "next": [
+        "ropebridge_outpost",
+        "frozen_falls"
+      ],
+      "encounter_id": "mountain_rime_hollow"
+    },
+    {
+      "id": "crystal_nest",
+      "type": "elite",
+      "name": "Crystal Nest",
+      "terrain": "glacier",
+      "position": [
+        0,
+        8
+      ],
+      "next": [
+        "echoing_chasm",
+        "glacier_vault"
+      ],
+      "encounter_id": "elite_crystal_matriarch"
+    },
+    {
+      "id": "frozen_falls",
+      "type": "combat",
+      "name": "Frozen Falls",
+      "terrain": "glacier",
+      "position": [
+        1,
+        8
+      ],
+      "next": [
+        "glacier_vault",
+        "rope_bridge"
+      ],
+      "encounter_id": "mountain_frozen_falls"
+    },
+    {
+      "id": "ropebridge_outpost",
+      "type": "town",
+      "name": "Ropebridge Outpost",
+      "terrain": "glacier",
+      "position": [
+        2,
+        8
+      ],
+      "next": [
+        "rope_bridge"
+      ],
+      "town_id": "ropebridge_outpost"
+    },
+    {
+      "id": "echoing_chasm",
+      "type": "event",
+      "name": "Echoing Chasm",
+      "terrain": "glacier",
+      "position": [
+        0,
+        9
+      ],
+      "next": [
+        "blue_labyrinth"
+      ],
+      "event_pool": "mountain_glacier"
+    },
+    {
+      "id": "glacier_vault",
+      "type": "treasure",
+      "name": "Glacier Vault",
+      "terrain": "glacier",
+      "position": [
+        1,
+        9
+      ],
+      "next": [
+        "icefall",
+        "blue_labyrinth"
+      ],
+      "treasure_id": "mountain_glacier_vault"
+    },
+    {
+      "id": "rope_bridge",
+      "type": "combat",
+      "name": "Swaying Rope Bridge",
+      "terrain": "glacier",
+      "position": [
+        2,
+        9
+      ],
+      "next": [
+        "hermits_cave",
+        "icefall"
+      ],
+      "encounter_id": "mountain_rope_bridge"
+    },
+    {
+      "id": "blue_labyrinth",
+      "type": "combat",
+      "name": "Blue Labyrinth",
+      "terrain": "glacier",
+      "position": [
+        0,
+        10
+      ],
+      "next": [
+        "frozen_lake",
+        "singing_ice"
+      ],
+      "encounter_id": "mountain_blue_labyrinth"
+    },
+    {
+      "id": "icefall",
+      "type": "combat",
+      "name": "The Icefall",
+      "terrain": "glacier",
+      "position": [
+        1,
+        10
+      ],
+      "next": [
+        "singing_ice",
+        "crystal_bridge"
+      ],
+      "encounter_id": "mountain_icefall"
+    },
+    {
+      "id": "hermits_cave",
+      "type": "rest",
+      "name": "Hermit's Cave",
+      "terrain": "glacier",
+      "position": [
+        2,
+        10
+      ],
+      "next": [
+        "crystal_bridge"
+      ],
+      "heal_percent": 30
+    },
+    {
+      "id": "frozen_lake",
+      "type": "combat",
+      "name": "Frozen Lake",
+      "terrain": "glacier",
+      "position": [
+        0,
+        11
+      ],
+      "next": [
+        "prayer_flags"
+      ],
+      "encounter_id": "mountain_frozen_lake"
+    },
+    {
+      "id": "singing_ice",
+      "type": "event",
+      "name": "Singing Ice",
+      "terrain": "glacier",
+      "position": [
+        1,
+        11
+      ],
+      "next": [
+        "thunder_cliffs",
+        "prayer_flags"
+      ],
+      "event_pool": "mountain_glacier"
+    },
+    {
+      "id": "crystal_bridge",
+      "type": "combat",
+      "name": "Crystal Bridge",
+      "terrain": "glacier",
+      "position": [
+        2,
+        11
+      ],
+      "next": [
+        "giants_stair",
+        "thunder_cliffs"
+      ],
+      "encounter_id": "mountain_crystal_bridge"
+    },
+    {
+      "id": "prayer_flags",
+      "type": "event",
+      "name": "Prayer Flags",
+      "terrain": "summit",
+      "position": [
+        0,
+        12
+      ],
+      "next": [
+        "cloud_monastery",
+        "eagle_crag"
+      ],
+      "event_pool": "mountain_summit"
+    },
+    {
+      "id": "thunder_cliffs",
+      "type": "combat",
+      "name": "Thunder Cliffs",
+      "terrain": "summit",
+      "position": [
+        1,
+        12
+      ],
+      "next": [
+        "eagle_crag",
+        "wind_temple"
+      ],
+      "encounter_id": "mountain_thunder_cliffs"
+    },
+    {
+      "id": "giants_stair",
+      "type": "elite",
+      "name": "Giant's Stair",
+      "terrain": "summit",
+      "position": [
+        2,
+        12
+      ],
+      "next": [
+        "wind_temple"
+      ],
+      "encounter_id": "elite_ice_giant"
+    },
+    {
+      "id": "cloud_monastery",
+      "type": "town",
+      "name": "Cloud Monastery",
+      "terrain": "summit",
+      "position": [
+        0,
+        13
+      ],
+      "next": [
+        "whiteout"
+      ],
+      "town_id": "cloud_monastery"
+    },
+    {
+      "id": "eagle_crag",
+      "type": "combat",
+      "name": "Eagle Crag",
+      "terrain": "summit",
+      "position": [
+        1,
+        13
+      ],
+      "next": [
+        "dragon_hoard",
+        "whiteout"
+      ],
+      "encounter_id": "mountain_eagle_crag"
+    },
+    {
+      "id": "wind_temple",
+      "type": "event",
+      "name": "Wind-Worn Temple",
+      "terrain": "summit",
+      "position": [
+        2,
+        13
+      ],
+      "next": [
+        "knife_ridge",
+        "dragon_hoard"
+      ],
+      "event_pool": "mountain_summit"
+    },
+    {
+      "id": "whiteout",
+      "type": "combat",
+      "name": "Whiteout",
+      "terrain": "summit",
+      "position": [
+        0,
+        14
+      ],
+      "next": [
+        "frost_gate",
+        "last_ascent"
+      ],
+      "encounter_id": "mountain_whiteout"
+    },
+    {
+      "id": "dragon_hoard",
+      "type": "treasure",
+      "name": "Shed Scales",
+      "terrain": "summit",
+      "position": [
+        1,
+        14
+      ],
+      "next": [
+        "last_ascent",
+        "windbreak_hollow"
+      ],
+      "treasure_id": "mountain_shed_scales"
+    },
+    {
+      "id": "knife_ridge",
+      "type": "combat",
+      "name": "Knife Ridge",
+      "terrain": "summit",
+      "position": [
+        2,
+        14
+      ],
+      "next": [
+        "windbreak_hollow"
+      ],
+      "encounter_id": "mountain_knife_ridge"
+    },
+    {
+      "id": "frost_gate",
+      "type": "elite",
+      "name": "Frost Gate",
+      "terrain": "summit",
+      "position": [
+        0,
+        15
+      ],
+      "next": [
+        "storm_ledge"
+      ],
+      "encounter_id": "elite_ice_giant"
+    },
+    {
+      "id": "last_ascent",
+      "type": "event",
+      "name": "The Last Ascent",
+      "terrain": "summit",
+      "position": [
+        1,
+        15
+      ],
+      "next": [
+        "last_cairn",
+        "storm_ledge"
+      ],
+      "event_pool": "mountain_summit"
+    },
+    {
+      "id": "windbreak_hollow",
+      "type": "rest",
+      "name": "Windbreak Hollow",
+      "terrain": "summit",
+      "position": [
+        2,
+        15
+      ],
+      "next": [
+        "dragons_shadow",
+        "last_cairn"
+      ],
+      "heal_percent": 30
+    },
+    {
+      "id": "storm_ledge",
+      "type": "combat",
+      "name": "Storm Ledge",
+      "terrain": "summit",
+      "position": [
+        0,
+        16
+      ],
+      "next": [
+        "dragons_aerie"
+      ],
+      "encounter_id": "mountain_storm_ledge"
+    },
+    {
+      "id": "last_cairn",
+      "type": "town",
+      "name": "The Last Cairn",
+      "terrain": "summit",
+      "position": [
+        1,
+        16
+      ],
+      "next": [
+        "dragons_aerie"
+      ],
+      "town_id": "last_cairn"
+    },
+    {
+      "id": "dragons_shadow",
+      "type": "combat",
+      "name": "Dragon's Shadow",
+      "terrain": "summit",
+      "position": [
+        2,
+        16
+      ],
+      "next": [
+        "dragons_aerie"
+      ],
+      "encounter_id": "mountain_dragons_shadow"
+    },
+    {
+      "id": "dragons_aerie",
+      "type": "boss",
+      "name": "Dragon's Aerie",
+      "position": [
+        1,
+        17
+      ],
+      "next": [
+        "frostpeak_summit"
+      ],
+      "encounter_id": "boss_white_dragon"
+    },
+    {
+      "id": "frostpeak_summit",
+      "type": "exit",
+      "name": "Frostpeak Summit",
+      "position": [
+        1,
+        18
+      ],
+      "next": []
+    }
+  ]
+}

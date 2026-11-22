@@ -1,0 +1,951 @@
+[
+  {
+    "id": "bianca_holy_strike",
+    "name": "Radiant Strike",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "basic",
+    "description": "Deal 5 damage.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 5,
+        "target": "single_enemy"
+      }
+    ],
+    "upgrade": {
+      "name": "Radiant Strike+",
+      "cost": 1,
+      "description": "Deal 8 damage.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 8,
+          "target": "single_enemy"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_holy_strike.png"
+  },
+  {
+    "id": "bianca_holy_shield",
+    "name": "Blessed Shield",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "basic",
+    "description": "Gain 4 Block.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 4,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Blessed Shield+",
+      "cost": 1,
+      "description": "Gain 6 Block.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 6,
+          "target": "self"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_holy_shield.png"
+  },
+  {
+    "id": "bianca_holy_touch",
+    "name": "Soothing Touch",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "support",
+    "target": "single_ally",
+    "rarity": "basic",
+    "description": "Heal an ally for 3 and give them 2 Block.",
+    "effects": [
+      {
+        "effect": "heal",
+        "value": 3,
+        "target": "single_ally"
+      },
+      {
+        "effect": "block",
+        "value": 2,
+        "target": "single_ally"
+      }
+    ],
+    "upgrade": {
+      "name": "Soothing Touch+",
+      "cost": 1,
+      "description": "Heal an ally for 5 and give them 3 Block.",
+      "effects": [
+        {
+          "effect": "heal",
+          "value": 5,
+          "target": "single_ally"
+        },
+        {
+          "effect": "block",
+          "value": 3,
+          "target": "single_ally"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_holy_touch.png"
+  },
+  {
+    "id": "bianca_holy_mending",
+    "name": "Mending Light",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "support",
+    "target": "single_ally",
+    "rarity": "common",
+    "description": "Heal an ally for 10. Exhaust.",
+    "effects": [
+      {
+        "effect": "heal",
+        "value": 10,
+        "target": "single_ally"
+      }
+    ],
+    "upgrade": {
+      "name": "Mending Light+",
+      "cost": 1,
+      "description": "Heal an ally for 13. Exhaust.",
+      "effects": [
+        {
+          "effect": "heal",
+          "value": 13,
+          "target": "single_ally"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_holy_mending.png",
+    "exhaust": true
+  },
+  {
+    "id": "bianca_holy_ward",
+    "name": "Sanctified Ward",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "common",
+    "description": "Gain 7 Block.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 7,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Sanctified Ward+",
+      "cost": 1,
+      "description": "Gain 10 Block.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 10,
+          "target": "self"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_holy_ward.png"
+  },
+  {
+    "id": "bianca_holy_smite",
+    "name": "Smite",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 7 damage.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 7,
+        "target": "single_enemy"
+      }
+    ],
+    "upgrade": {
+      "name": "Smite+",
+      "cost": 1,
+      "description": "Deal 10 damage.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 10,
+          "target": "single_enemy"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_holy_smite.png"
+  },
+  {
+    "id": "bianca_holy_bulwark",
+    "name": "Radiant Bulwark",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "uncommon",
+    "description": "Deal 3 damage plus 75% of your Block.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "single_enemy",
+        "per_source_block": 0.75
+      }
+    ],
+    "upgrade": {
+      "name": "Radiant Bulwark+",
+      "cost": 1,
+      "description": "Deal 5 damage plus damage equal to your Block.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 5,
+          "target": "single_enemy",
+          "per_source_block": 1.0
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_holy_bulwark.png"
+  },
+  {
+    "id": "bianca_holy_benediction",
+    "name": "Benediction",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "support",
+    "target": "all_allies",
+    "rarity": "uncommon",
+    "description": "Give the party 4 Block and heal 2.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 4,
+        "target": "all_allies"
+      },
+      {
+        "effect": "heal",
+        "value": 2,
+        "target": "all_allies"
+      }
+    ],
+    "upgrade": {
+      "name": "Benediction+",
+      "cost": 1,
+      "description": "Give the party 7 Block and heal 5.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 7,
+          "target": "all_allies"
+        },
+        {
+          "effect": "heal",
+          "value": 5,
+          "target": "all_allies"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_holy_benediction.png"
+  },
+  {
+    "id": "bianca_holy_judgment",
+    "name": "Divine Judgment",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 3,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "rare",
+    "description": "Deal 16 damage. Heal the party for 3.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 16,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "heal",
+        "value": 3,
+        "target": "all_allies"
+      }
+    ],
+    "upgrade": {
+      "name": "Divine Judgment+",
+      "cost": 3,
+      "description": "Deal 24 damage. Heal the party for 8.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 24,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "heal",
+          "value": 8,
+          "target": "all_allies"
+        }
+      ]
+    },
+    "art_path": "res://assets/cards/card_art/bianca_holy_judgment.png"
+  },
+  {
+    "id": "bianca_holy_hymn",
+    "name": "Hymn of Dawn",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 4 damage, +1 per Aether.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 4,
+        "target": "single_enemy",
+        "per_aether": 1
+      }
+    ],
+    "upgrade": {
+      "name": "Hymn of Dawn+",
+      "cost": 1,
+      "description": "Deal 5 damage, +2 per Aether.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 5,
+          "target": "single_enemy",
+          "per_aether": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_holy_lightfall",
+    "name": "Lightfall",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 2,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "uncommon",
+    "description": "Deal 6 damage, +3 per Aether. Release all Aether.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 6,
+        "target": "single_enemy",
+        "per_aether": 3
+      },
+      {
+        "effect": "spend_aether",
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Lightfall+",
+      "cost": 2,
+      "description": "Deal 9 damage, +4 per Aether. Release all Aether.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 9,
+          "target": "single_enemy",
+          "per_aether": 4
+        },
+        {
+          "effect": "spend_aether",
+          "target": "self"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_holy_cascade",
+    "name": "Radiant Cascade",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "all_enemies",
+    "rarity": "uncommon",
+    "description": "Deal 2 damage to ALL enemies, +1 per Aether.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 2,
+        "target": "all_enemies",
+        "per_aether": 1
+      }
+    ],
+    "upgrade": {
+      "name": "Radiant Cascade+",
+      "cost": 1,
+      "description": "Deal 3 damage to ALL enemies, +2 per Aether.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 3,
+          "target": "all_enemies",
+          "per_aether": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_holy_wellspring",
+    "name": "Wellspring Prayer",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "support",
+    "target": "all_allies",
+    "rarity": "rare",
+    "description": "Give the party 3 Block, +2 per Aether. Release all Aether.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 3,
+        "target": "all_allies",
+        "per_aether": 2
+      },
+      {
+        "effect": "spend_aether",
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Wellspring Prayer+",
+      "cost": 1,
+      "description": "Give the party 5 Block, +3 per Aether. Release all Aether.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 5,
+          "target": "all_allies",
+          "per_aether": 3
+        },
+        {
+          "effect": "spend_aether",
+          "target": "self"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_holy_sunfire",
+    "name": "Sunfire Smite",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 6 damage. +3 if the target is Burning or Chilled.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 6,
+        "target": "single_enemy",
+        "bonus_if_any_status": {
+          "status_ids": [
+            "burn",
+            "chill"
+          ],
+          "value": 3
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Sunfire Smite+",
+      "cost": 1,
+      "description": "Deal 8 damage. +5 if the target is Burning or Chilled.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 8,
+          "target": "single_enemy",
+          "bonus_if_any_status": {
+            "status_ids": [
+              "burn",
+              "chill"
+            ],
+            "value": 5
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_holy_psalm",
+    "name": "Psalm of Wings",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "support",
+    "target": "all_allies",
+    "rarity": "uncommon",
+    "description": "Give the party 2 Block, +1 per card already played this turn.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 2,
+        "target": "all_allies",
+        "per_card_played": 1
+      }
+    ],
+    "upgrade": {
+      "name": "Psalm of Wings+",
+      "cost": 1,
+      "description": "Give the party 3 Block, +2 per card already played this turn.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 3,
+          "target": "all_allies",
+          "per_card_played": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_holy_devotion",
+    "name": "Aura of Devotion",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Power: at the end of each turn, the party gains 3 Block.",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 6,
+        "power": {
+          "id": "devotion",
+          "name": "Aura of Devotion",
+          "description": "At the end of each turn, the party gains 3 Block.",
+          "trigger": {
+            "event": "turn_end"
+          },
+          "effect": {
+            "effect": "party_block",
+            "value": 3
+          },
+          "limit_per_turn": 1
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Aura of Devotion+",
+      "cost": 1,
+      "description": "Power: at the end of each turn, the party gains 5 Block.",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 8,
+          "power": {
+            "id": "devotion",
+            "name": "Aura of Devotion",
+            "description": "At the end of each turn, the party gains 5 Block.",
+            "trigger": {
+              "event": "turn_end"
+            },
+            "effect": {
+              "effect": "party_block",
+              "value": 5
+            },
+            "limit_per_turn": 1
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_holy_consecration",
+    "name": "Consecration",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 2,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "rare",
+    "description": "Power: at the start of each turn, deal 3 damage to ALL enemies.",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 8,
+        "power": {
+          "id": "consecration",
+          "name": "Consecration",
+          "description": "At the start of each turn, deal 3 damage to ALL enemies.",
+          "trigger": {
+            "event": "turn_start"
+          },
+          "effect": {
+            "effect": "damage_all",
+            "value": 3
+          },
+          "limit_per_turn": 1
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Consecration+",
+      "cost": 2,
+      "description": "Power: at the start of each turn, deal 4 damage to ALL enemies.",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 10,
+          "power": {
+            "id": "consecration",
+            "name": "Consecration",
+            "description": "At the start of each turn, deal 4 damage to ALL enemies.",
+            "trigger": {
+              "event": "turn_start"
+            },
+            "effect": {
+              "effect": "damage_all",
+              "value": 4
+            },
+            "limit_per_turn": 1
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_holy_blessedarms",
+    "name": "Blessed Arms",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Power: Bianca's cards deal 2 more damage and give 2 more Block.",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 8,
+        "power": {
+          "id": "blessedarms",
+          "name": "Blessed Arms",
+          "description": "Bianca's cards deal 2 more damage and give 2 more Block.",
+          "stats": {
+            "damage": 2,
+            "block": 2
+          }
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Blessed Arms+",
+      "cost": 0,
+      "description": "Power: Bianca's cards deal 2 more damage and give 2 more Block.",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 8,
+          "power": {
+            "id": "blessedarms",
+            "name": "Blessed Arms",
+            "description": "Bianca's cards deal 2 more damage and give 2 more Block.",
+            "stats": {
+              "damage": 2,
+              "block": 2
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_holy_favor",
+    "name": "Divine Favor",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 0,
+    "card_type": "support",
+    "target": "all_allies",
+    "rarity": "rare",
+    "description": "X times: give the party 4 Block and heal it 1. Exhaust.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 4,
+        "target": "all_allies",
+        "repeat_x": true
+      },
+      {
+        "effect": "heal",
+        "value": 1,
+        "target": "all_allies",
+        "repeat_x": true
+      }
+    ],
+    "upgrade": {
+      "name": "Divine Favor+",
+      "cost": 0,
+      "description": "X times: give the party 5 Block and heal it 2. Exhaust.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 5,
+          "target": "all_allies",
+          "repeat_x": true
+        },
+        {
+          "effect": "heal",
+          "value": 2,
+          "target": "all_allies",
+          "repeat_x": true
+        }
+      ]
+    },
+    "exhaust": true,
+    "x_cost": true
+  },
+  {
+    "id": "bianca_holy_patience",
+    "name": "Prayer of Patience",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "all_allies",
+    "rarity": "common",
+    "description": "Retain. Give the party 5 Block.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 5,
+        "target": "all_allies"
+      }
+    ],
+    "upgrade": {
+      "name": "Prayer of Patience+",
+      "cost": 1,
+      "description": "Retain. Give the party 7 Block.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 7,
+          "target": "all_allies"
+        }
+      ]
+    },
+    "retain": true
+  },
+  {
+    "id": "bianca_holy_radiant",
+    "name": "Sunlit Strike",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 8 damage. Bianca heals 2.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 8,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "heal",
+        "value": 2,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Sunlit Strike+",
+      "cost": 1,
+      "description": "Deal 10 damage. Bianca heals 3.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 10,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "heal",
+          "value": 3,
+          "target": "self"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_holy_purify",
+    "name": "Purifying Light",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 2,
+    "card_type": "attack",
+    "target": "all_enemies",
+    "rarity": "uncommon",
+    "description": "Deal 6 damage to ALL enemies. Heal the party 1.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 6,
+        "target": "all_enemies"
+      },
+      {
+        "effect": "heal",
+        "value": 1,
+        "target": "all_allies"
+      }
+    ],
+    "upgrade": {
+      "name": "Purifying Light+",
+      "cost": 2,
+      "description": "Deal 8 damage to ALL enemies. Heal the party 2.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 8,
+          "target": "all_enemies"
+        },
+        {
+          "effect": "heal",
+          "value": 2,
+          "target": "all_allies"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_holy_hallowed",
+    "name": "Hallowed Ground",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "rare",
+    "description": "Power: whenever Bianca gains Block from a card, deal 2 damage to ALL enemies (3 times a turn).",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 8,
+        "power": {
+          "id": "hallowed",
+          "name": "Hallowed Ground",
+          "description": "Whenever Bianca gains Block from a card, deal 2 damage to ALL enemies (3 times a turn).",
+          "trigger": {
+            "event": "block_gained",
+            "recipient": "owner",
+            "origin": "card"
+          },
+          "effect": {
+            "effect": "damage_all",
+            "value": 2
+          },
+          "limit_per_turn": 3
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Hallowed Ground+",
+      "cost": 1,
+      "description": "Power: whenever Bianca gains Block from a card, deal 3 damage to ALL enemies (3 times a turn).",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 10,
+          "power": {
+            "id": "hallowed",
+            "name": "Hallowed Ground",
+            "description": "Whenever Bianca gains Block from a card, deal 3 damage to ALL enemies (3 times a turn).",
+            "trigger": {
+              "event": "block_gained",
+              "recipient": "owner",
+              "origin": "card"
+            },
+            "effect": {
+              "effect": "damage_all",
+              "value": 3
+            },
+            "limit_per_turn": 3
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_holy_chorus",
+    "name": "Dawn Chorus",
+    "owner_character_id": "bianca",
+    "specialization_id": "holy",
+    "cost": 1,
+    "card_type": "support",
+    "target": "all_allies",
+    "rarity": "common",
+    "description": "Give the party 3 Block. Draw 1 card.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 3,
+        "target": "all_allies"
+      },
+      {
+        "effect": "draw",
+        "value": 1,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Dawn Chorus+",
+      "cost": 1,
+      "description": "Give the party 5 Block. Draw 1 card.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 5,
+          "target": "all_allies"
+        },
+        {
+          "effect": "draw",
+          "value": 1,
+          "target": "self"
+        }
+      ]
+    }
+  }
+]

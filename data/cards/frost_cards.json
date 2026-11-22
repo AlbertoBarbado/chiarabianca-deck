@@ -1,0 +1,904 @@
+[
+  {
+    "id": "chiara_frost_bolt",
+    "name": "Frost Bolt",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "basic",
+    "description": "Deal 5 damage. Apply 1 Chill.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 5,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "single_enemy",
+        "status_id": "chill"
+      }
+    ],
+    "upgrade": {
+      "name": "Frost Bolt+",
+      "cost": 1,
+      "description": "Deal 7 damage. Apply 1 Chill.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 7,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "apply_status",
+          "value": 1,
+          "target": "single_enemy",
+          "status_id": "chill"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_frost_ward",
+    "name": "Ice Ward",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "basic",
+    "description": "Gain 5 Block.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 5,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Ice Ward+",
+      "cost": 1,
+      "description": "Gain 8 Block.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 8,
+          "target": "self"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_frost_touch",
+    "name": "Chilling Touch",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "basic",
+    "description": "Apply 2 Chill.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 2,
+        "target": "single_enemy",
+        "status_id": "chill"
+      }
+    ],
+    "upgrade": {
+      "name": "Chilling Touch+",
+      "cost": 1,
+      "description": "Apply 3 Chill.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 3,
+          "target": "single_enemy",
+          "status_id": "chill"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_frost_spike",
+    "name": "Glacial Spike",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 2,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 11 damage. +6 if Chilled.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 11,
+        "target": "single_enemy",
+        "bonus_if_status": {
+          "status_id": "chill",
+          "value": 6
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Glacial Spike+",
+      "cost": 2,
+      "description": "Deal 14 damage. +8 if Chilled.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 14,
+          "target": "single_enemy",
+          "bonus_if_status": {
+            "status_id": "chill",
+            "value": 8
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_frost_nova",
+    "name": "Frost Nova",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "all_enemies",
+    "rarity": "common",
+    "description": "Deal 3 damage and 1 Chill to ALL enemies.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "all_enemies"
+      },
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "all_enemies",
+        "status_id": "chill"
+      }
+    ],
+    "upgrade": {
+      "name": "Frost Nova+",
+      "cost": 1,
+      "description": "Deal 4 damage and 2 Chill to ALL enemies.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "all_enemies"
+        },
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "all_enemies",
+          "status_id": "chill"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_frost_snap",
+    "name": "Cold Snap",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 0,
+    "card_type": "skill",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Apply 1 Chill. Draw 1 card.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "single_enemy",
+        "status_id": "chill"
+      },
+      {
+        "effect": "draw",
+        "value": 1,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Cold Snap+",
+      "cost": 0,
+      "description": "Apply 2 Chill. Draw 1 card.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "single_enemy",
+          "status_id": "chill"
+        },
+        {
+          "effect": "draw",
+          "value": 1,
+          "target": "self"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_frost_shatter",
+    "name": "Shatter",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "uncommon",
+    "description": "Deal 4, +4 per Chill. Removes the Chill.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 4,
+        "target": "single_enemy",
+        "per_target_status": {
+          "status_id": "chill",
+          "value": 4
+        },
+        "consume_status": "chill"
+      }
+    ],
+    "upgrade": {
+      "name": "Shatter+",
+      "cost": 1,
+      "description": "Deal 5, +5 per Chill. Removes the Chill.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 5,
+          "target": "single_enemy",
+          "per_target_status": {
+            "status_id": "chill",
+            "value": 5
+          },
+          "consume_status": "chill"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_frost_blizzard",
+    "name": "Blizzard",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 2,
+    "card_type": "spell",
+    "target": "all_enemies",
+    "rarity": "uncommon",
+    "description": "Deal 6 damage and 2 Chill to ALL enemies.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 6,
+        "target": "all_enemies"
+      },
+      {
+        "effect": "apply_status",
+        "value": 2,
+        "target": "all_enemies",
+        "status_id": "chill"
+      }
+    ],
+    "upgrade": {
+      "name": "Blizzard+",
+      "cost": 2,
+      "description": "Deal 8 damage and 2 Chill to ALL enemies.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 8,
+          "target": "all_enemies"
+        },
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "all_enemies",
+          "status_id": "chill"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_frost_rime",
+    "name": "Rime Shell",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Gain 7 Block. 1 Chill to ALL enemies.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 7,
+        "target": "self"
+      },
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "all_enemies",
+        "status_id": "chill"
+      }
+    ],
+    "upgrade": {
+      "name": "Rime Shell+",
+      "cost": 1,
+      "description": "Gain 10 Block. 1 Chill to ALL enemies.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 10,
+          "target": "self"
+        },
+        {
+          "effect": "apply_status",
+          "value": 1,
+          "target": "all_enemies",
+          "status_id": "chill"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_frost_brand",
+    "name": "Frostbrand",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 1,
+    "card_type": "support",
+    "target": "single_enemy",
+    "rarity": "uncommon",
+    "description": "Apply 2 Chill. The party gains 3 Block.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 2,
+        "target": "single_enemy",
+        "status_id": "chill"
+      },
+      {
+        "effect": "block",
+        "value": 3,
+        "target": "all_allies"
+      }
+    ],
+    "upgrade": {
+      "name": "Frostbrand+",
+      "cost": 1,
+      "description": "Apply 3 Chill. The party gains 4 Block.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 3,
+          "target": "single_enemy",
+          "status_id": "chill"
+        },
+        {
+          "effect": "block",
+          "value": 4,
+          "target": "all_allies"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_frost_zero",
+    "name": "Absolute Zero",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 2,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "rare",
+    "description": "Apply 4 Chill. Deal 8 Frost damage.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 4,
+        "target": "single_enemy",
+        "status_id": "chill"
+      },
+      {
+        "effect": "damage",
+        "value": 8,
+        "target": "single_enemy"
+      }
+    ],
+    "upgrade": {
+      "name": "Absolute Zero+",
+      "cost": 2,
+      "description": "Apply 5 Chill. Deal 10 Frost damage.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 5,
+          "target": "single_enemy",
+          "status_id": "chill"
+        },
+        {
+          "effect": "damage",
+          "value": 10,
+          "target": "single_enemy"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_frost_glacier",
+    "name": "Glacier",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 3,
+    "card_type": "spell",
+    "target": "all_enemies",
+    "rarity": "rare",
+    "description": "Deal 12 to ALL enemies, +6 if Chilled.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 12,
+        "target": "all_enemies",
+        "bonus_if_status": {
+          "status_id": "chill",
+          "value": 6
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Glacier+",
+      "cost": 3,
+      "description": "Deal 15 to ALL enemies, +8 if Chilled.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 15,
+          "target": "all_enemies",
+          "bonus_if_status": {
+            "status_id": "chill",
+            "value": 8
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_frost_permafrost",
+    "name": "Permafrost",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Power: whenever Chiara applies Chill, she gains 2 Block (3 times a turn).",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 6,
+        "power": {
+          "id": "permafrost",
+          "name": "Permafrost",
+          "description": "Whenever Chiara applies Chill, she gains 2 Block (3 times a turn).",
+          "trigger": {
+            "event": "status_applied",
+            "status_id": "chill",
+            "applied_by": "owner"
+          },
+          "effect": {
+            "effect": "bonus_block",
+            "value": 2
+          },
+          "limit_per_turn": 3
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Permafrost+",
+      "cost": 1,
+      "description": "Power: whenever Chiara applies Chill, she gains 3 Block (3 times a turn).",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 8,
+          "power": {
+            "id": "permafrost",
+            "name": "Permafrost",
+            "description": "Whenever Chiara applies Chill, she gains 3 Block (3 times a turn).",
+            "trigger": {
+              "event": "status_applied",
+              "status_id": "chill",
+              "applied_by": "owner"
+            },
+            "effect": {
+              "effect": "bonus_block",
+              "value": 3
+            },
+            "limit_per_turn": 3
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_frost_wintersgrip",
+    "name": "Winter's Grip",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 2,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "rare",
+    "description": "Power: at the start of each turn, apply 2 Chill to ALL enemies.",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 8,
+        "power": {
+          "id": "wintersgrip",
+          "name": "Winter's Grip",
+          "description": "At the start of each turn, apply 2 Chill to ALL enemies.",
+          "trigger": {
+            "event": "turn_start"
+          },
+          "effect": {
+            "effect": "apply_status_all",
+            "status_id": "chill",
+            "value": 2
+          },
+          "limit_per_turn": 1
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Winter's Grip+",
+      "cost": 1,
+      "description": "Power: at the start of each turn, apply 2 Chill to ALL enemies.",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 8,
+          "power": {
+            "id": "wintersgrip",
+            "name": "Winter's Grip",
+            "description": "At the start of each turn, apply 2 Chill to ALL enemies.",
+            "trigger": {
+              "event": "turn_start"
+            },
+            "effect": {
+              "effect": "apply_status_all",
+              "status_id": "chill",
+              "value": 2
+            },
+            "limit_per_turn": 1
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_frost_icebarrier",
+    "name": "Ice Barrier",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "common",
+    "description": "Retain. Gain 8 Block.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 8,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Ice Barrier+",
+      "cost": 1,
+      "description": "Retain. Gain 11 Block.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 11,
+          "target": "self"
+        }
+      ]
+    },
+    "retain": true
+  },
+  {
+    "id": "chiara_frost_frostbite",
+    "name": "Frostbite",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 6 damage. Apply 1 Chill.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 6,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "single_enemy",
+        "status_id": "chill"
+      }
+    ],
+    "upgrade": {
+      "name": "Frostbite+",
+      "cost": 1,
+      "description": "Deal 8 damage. Apply 2 Chill.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 8,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "single_enemy",
+          "status_id": "chill"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_frost_hailstorm",
+    "name": "Hailstorm",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 0,
+    "card_type": "spell",
+    "target": "all_enemies",
+    "rarity": "rare",
+    "description": "X times: deal 4 damage and apply 1 Chill to ALL enemies.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 4,
+        "target": "all_enemies",
+        "repeat_x": true
+      },
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "all_enemies",
+        "status_id": "chill",
+        "repeat_x": true
+      }
+    ],
+    "upgrade": {
+      "name": "Hailstorm+",
+      "cost": 0,
+      "description": "X times: deal 5 damage and apply 1 Chill to ALL enemies.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 5,
+          "target": "all_enemies",
+          "repeat_x": true
+        },
+        {
+          "effect": "apply_status",
+          "value": 1,
+          "target": "all_enemies",
+          "status_id": "chill",
+          "repeat_x": true
+        }
+      ]
+    },
+    "x_cost": true
+  },
+  {
+    "id": "chiara_frost_flashfreeze",
+    "name": "Flash Freeze",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "all_enemies",
+    "rarity": "rare",
+    "description": "Apply 3 Chill to ALL enemies. Exhaust.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 3,
+        "target": "all_enemies",
+        "status_id": "chill"
+      }
+    ],
+    "upgrade": {
+      "name": "Flash Freeze+",
+      "cost": 1,
+      "description": "Apply 4 Chill to ALL enemies. Exhaust.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 4,
+          "target": "all_enemies",
+          "status_id": "chill"
+        }
+      ]
+    },
+    "exhaust": true
+  },
+  {
+    "id": "chiara_frost_glacialarmor",
+    "name": "Glacial Armor",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 2,
+    "card_type": "defense",
+    "target": "all_allies",
+    "rarity": "uncommon",
+    "description": "Give the party 6 Block. Apply 1 Chill to ALL enemies.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 6,
+        "target": "all_allies"
+      },
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "all_enemies",
+        "status_id": "chill"
+      }
+    ],
+    "upgrade": {
+      "name": "Glacial Armor+",
+      "cost": 2,
+      "description": "Give the party 8 Block. Apply 2 Chill to ALL enemies.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 8,
+          "target": "all_allies"
+        },
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "all_enemies",
+          "status_id": "chill"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_frost_icicles",
+    "name": "Icicle Barrage",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 1,
+    "card_type": "spell",
+    "target": "single_enemy",
+    "rarity": "uncommon",
+    "description": "Deal 3 damage 3 times, +2 each if Chilled.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "single_enemy",
+        "bonus_if_status": {
+          "status_id": "chill",
+          "value": 2
+        }
+      },
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "single_enemy",
+        "bonus_if_status": {
+          "status_id": "chill",
+          "value": 2
+        }
+      },
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "single_enemy",
+        "bonus_if_status": {
+          "status_id": "chill",
+          "value": 2
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Icicle Barrage+",
+      "cost": 1,
+      "description": "Deal 4 damage 3 times, +2 each if Chilled.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "single_enemy",
+          "bonus_if_status": {
+            "status_id": "chill",
+            "value": 2
+          }
+        },
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "single_enemy",
+          "bonus_if_status": {
+            "status_id": "chill",
+            "value": 2
+          }
+        },
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "single_enemy",
+          "bonus_if_status": {
+            "status_id": "chill",
+            "value": 2
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "chiara_frost_clarity",
+    "name": "Crystal Clarity",
+    "owner_character_id": "chiara",
+    "specialization_id": "frost",
+    "cost": 0,
+    "card_type": "skill",
+    "target": "all_enemies",
+    "rarity": "uncommon",
+    "description": "Draw 2 cards. Apply 1 Chill to ALL enemies. Exhaust.",
+    "effects": [
+      {
+        "effect": "draw",
+        "value": 2,
+        "target": "self"
+      },
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "all_enemies",
+        "status_id": "chill"
+      }
+    ],
+    "upgrade": {
+      "name": "Crystal Clarity+",
+      "cost": 0,
+      "description": "Draw 3 cards. Apply 1 Chill to ALL enemies. Exhaust.",
+      "effects": [
+        {
+          "effect": "draw",
+          "value": 3,
+          "target": "self"
+        },
+        {
+          "effect": "apply_status",
+          "value": 1,
+          "target": "all_enemies",
+          "status_id": "chill"
+        }
+      ]
+    },
+    "exhaust": true
+  }
+]

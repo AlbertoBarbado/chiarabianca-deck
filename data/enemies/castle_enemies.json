@@ -1,0 +1,127 @@
+[
+  {
+    "id": "practice_automaton",
+    "name": "Practice Automaton",
+    "max_hp": 26,
+    "color": "#7aa0c4",
+    "actions": {
+      "strike": {
+        "name": "Clockwork Strike",
+        "type": "attack",
+        "value": 6
+      },
+      "guard": {
+        "name": "Brace",
+        "type": "defend",
+        "value": 5
+      }
+    },
+    "pattern": [
+      "strike",
+      "strike",
+      "guard"
+    ],
+    "initiative": 2,
+    "weaknesses": {
+      "lightning": 50
+    },
+    "resistances": {
+      "poison": 50
+    },
+    "element": "physical"
+  },
+  {
+    "id": "guard_recruit",
+    "name": "Guard Recruit",
+    "max_hp": 16,
+    "color": "#8d9db0",
+    "actions": {
+      "strike": {
+        "name": "Training Blade",
+        "type": "attack",
+        "value": 5
+      },
+      "brace": {
+        "name": "Brace",
+        "type": "defend",
+        "value": 4
+      }
+    },
+    "pattern": [
+      "strike",
+      "brace",
+      "strike"
+    ],
+    "initiative": 3,
+    "weaknesses": {},
+    "resistances": {},
+    "element": "physical"
+  },
+  {
+    "id": "hall_guard",
+    "name": "Hall Guard",
+    "max_hp": 20,
+    "color": "#b9a46a",
+    "actions": {
+      "strike": {
+        "name": "Halberd Thrust",
+        "type": "attack",
+        "value": 7
+      },
+      "shield": {
+        "name": "Shield Up",
+        "type": "defend",
+        "value": 6
+      }
+    },
+    "pattern": [
+      "strike",
+      "strike",
+      "shield"
+    ],
+    "initiative": 3,
+    "weaknesses": {
+      "lightning": 25
+    },
+    "resistances": {
+      "physical": 15
+    },
+    "element": "physical"
+  },
+  {
+    "id": "hall_captain",
+    "name": "Hall Captain",
+    "max_hp": 32,
+    "color": "#c0576a",
+    "actions": {
+      "strike": {
+        "name": "Command Strike",
+        "type": "attack",
+        "value": 9
+      },
+      "guard": {
+        "name": "Rally Guard",
+        "type": "defend",
+        "value": 7
+      },
+      "heavy": {
+        "name": "Heavy Blow",
+        "type": "attack",
+        "value": 12
+      }
+    },
+    "pattern": [
+      "strike",
+      "guard",
+      "heavy"
+    ],
+    "initiative": 4,
+    "weaknesses": {
+      "arcane": 25
+    },
+    "resistances": {
+      "physical": 15
+    },
+    "element": "physical"
+  }
+]

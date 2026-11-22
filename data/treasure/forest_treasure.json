@@ -1,0 +1,162 @@
+[
+  {
+    "id": "forest_cache_01",
+    "name": "Hidden Cache",
+    "description": "Under a fallen trunk lies a sealed chest. Take one thing; the rest crumbles with age.",
+    "choices": [
+      {
+        "type": "gold",
+        "amount": 70,
+        "text": "A pouch of 70 gold"
+      },
+      {
+        "type": "potion",
+        "item_id": "health_potion",
+        "count": 2,
+        "text": "Two Health Potions"
+      },
+      {
+        "type": "relic",
+        "text": "A relic",
+        "rarity_weights": {
+          "common": 5,
+          "uncommon": 3,
+          "rare": 1
+        }
+      },
+      {
+        "type": "card",
+        "rarity": "uncommon",
+        "text": "A forgotten technique (uncommon card)"
+      },
+      {
+        "type": "equipment",
+        "rarity_weights": {
+          "common": 2,
+          "uncommon": 3
+        },
+        "text": "A piece of equipment"
+      }
+    ]
+  },
+  {
+    "id": "forest_shrine_hoard",
+    "name": "Sunken Shrine",
+    "description": "Offerings glitter in the water of a sunken shrine. The spirits allow you one.",
+    "choices": [
+      {
+        "type": "gold",
+        "amount": 95,
+        "text": "The offering bowl: 95 gold"
+      },
+      {
+        "type": "relic",
+        "text": "A blessed relic",
+        "rarity_weights": {
+          "common": 5,
+          "uncommon": 3,
+          "rare": 1
+        }
+      },
+      {
+        "type": "card",
+        "rarity": "rare",
+        "text": "A legendary technique (rare card)"
+      },
+      {
+        "type": "potion",
+        "item_id": "health_potion",
+        "count": 2,
+        "text": "Two Health Potions"
+      },
+      {
+        "type": "equipment",
+        "rarity_weights": {
+          "uncommon": 3,
+          "rare": 2
+        },
+        "text": "A piece of equipment"
+      }
+    ]
+  },
+  {
+    "id": "forest_giant_hoard",
+    "name": "The Fallen Giant",
+    "description": "Inside the ribcage of a long-dead giant something still shines. You can carry only one thing out.",
+    "choices": [
+      {
+        "type": "gold",
+        "amount": 85,
+        "text": "A giant's coin: 85 gold"
+      },
+      {
+        "type": "card",
+        "rarity": "rare",
+        "text": "A legendary technique (rare card)"
+      },
+      {
+        "type": "relic",
+        "text": "A relic",
+        "rarity_weights": {
+          "common": 5,
+          "uncommon": 3,
+          "rare": 1
+        }
+      },
+      {
+        "type": "potion",
+        "item_id": "health_potion",
+        "count": 2,
+        "text": "Two Health Potions"
+      },
+      {
+        "type": "equipment",
+        "rarity_weights": {
+          "uncommon": 3,
+          "rare": 2
+        },
+        "text": "A piece of equipment"
+      }
+    ]
+  },
+  {
+    "id": "forest_deep_cache",
+    "name": "The Deep Cache",
+    "description": "A smuggler's stash, sealed in wax and hidden in a hollow root.",
+    "choices": [
+      {
+        "type": "gold",
+        "amount": 90,
+        "text": "A sealed purse: 90 gold"
+      },
+      {
+        "type": "card",
+        "rarity": "uncommon",
+        "text": "A forgotten technique (uncommon card)"
+      },
+      {
+        "type": "potion",
+        "item_id": "health_potion",
+        "count": 2,
+        "text": "Two Health Potions"
+      },
+      {
+        "type": "relic",
+        "text": "A relic",
+        "rarity_weights": {
+          "common": 5,
+          "uncommon": 3,
+          "rare": 1
+        }
+      },
+      {
+        "type": "equipment",
+        "rarity_weights": {
+          "common": 2,
+          "uncommon": 3
+        },
+        "text": "A piece of equipment"
+      }
+    ]
+  }
+]

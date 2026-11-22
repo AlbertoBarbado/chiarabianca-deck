@@ -1,0 +1,26 @@
+{
+  "$schema_note": "Card definition template. Each combat deck entry should instantiate a runtime card instance from this definition.",
+  "id": "unique_card_id",
+  "name": "Card Name",
+  "owner_character_id": "chiara_or_bianca",
+  "specialization_id": "specialization_id",
+  "cost": 1,
+  "card_type": "attack|skill|spell|defense|support|power",
+  "target": "single_enemy|all_enemies|self|single_ally|all_allies|none",
+  "rarity": "basic|common|uncommon|rare",
+  "description": "Player-facing rules text.",
+  "effects": [
+    {
+      "effect": "damage|block|heal|apply_status|draw|gain_energy",
+      "value": 0,
+      "target": "target"
+    }
+  ],
+  "upgrade": {
+    "name": "Card Name+",
+    "cost": 1,
+    "description": "Upgraded rules text.",
+    "effects": []
+  },
+  "art_path": "res://assets/cards/card_art/unique_card_id.png"
+}

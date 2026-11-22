@@ -1,0 +1,213 @@
+{
+  "id": "crystal_hollow_demo",
+  "name": "Crystal Hollow (demo)",
+  "subtitle": "Generated with ComfyUI",
+  "map_type": "handcrafted_node_graph",
+  "act": 2,
+  "battle_backdrop": "battle_crystal_hollow",
+  "terrains": {
+    "chasm": {
+      "name": "Chasm ledge",
+      "hint": "Chasm ledge: cave bats roost above the lake.",
+      "backdrop": "battle_crystal_chasm",
+      "foes": [
+        "demo_cave_bat"
+      ]
+    },
+    "grotto": {
+      "name": "Crystal grotto",
+      "hint": "Crystal grotto: shamblers, bats and lurking wraiths.",
+      "backdrop": "battle_crystal_hollow",
+      "foes": [
+        "demo_fungal_shambler",
+        "demo_cave_bat",
+        "demo_shadow_wraith"
+      ]
+    },
+    "ruins": {
+      "name": "Ancient ruins",
+      "hint": "Ancient ruins: crystal golems and the wraiths that haunt them.",
+      "backdrop": "battle_crystal_ruins",
+      "foes": [
+        "demo_crystal_golem",
+        "demo_shadow_wraith"
+      ]
+    }
+  },
+  "completion": {
+    "title": "Crystal Hollow Cleared",
+    "text": "The Crystal Wyrm shatters into glittering dust. Daylight pours into the cavern: the demo area is complete."
+  },
+  "start_node_id": "demo_cave_mouth",
+  "exit_node_id": "hollow_exit",
+  "nodes": [
+    {
+      "id": "demo_cave_mouth",
+      "type": "start",
+      "name": "Cave Mouth",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "bat_roost",
+        "echo_pool"
+      ]
+    },
+    {
+      "id": "bat_roost",
+      "type": "combat",
+      "name": "Bat Roost",
+      "terrain": "chasm",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "spore_grove",
+        "glow_cache"
+      ],
+      "encounter_id": "demo_bats"
+    },
+    {
+      "id": "echo_pool",
+      "type": "event",
+      "name": "Echo Pool",
+      "terrain": "grotto",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "glow_cache",
+        "miners_camp"
+      ],
+      "event_pool": "forest"
+    },
+    {
+      "id": "spore_grove",
+      "type": "combat",
+      "name": "Spore Grove",
+      "terrain": "grotto",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "golem_gate",
+        "wraith_hall"
+      ],
+      "encounter_id": "demo_spores"
+    },
+    {
+      "id": "glow_cache",
+      "type": "treasure",
+      "name": "Glowing Cache",
+      "terrain": "grotto",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "golem_gate"
+      ],
+      "treasure_id": "forest_cache_01"
+    },
+    {
+      "id": "miners_camp",
+      "type": "town",
+      "name": "Miners' Camp",
+      "terrain": "grotto",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "golem_gate",
+        "crystal_spring"
+      ],
+      "town_id": "elderwood_village"
+    },
+    {
+      "id": "golem_gate",
+      "type": "combat",
+      "name": "Golem Gate",
+      "terrain": "ruins",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "glittering_deep",
+        "crystal_spring"
+      ],
+      "encounter_id": "demo_golem"
+    },
+    {
+      "id": "wraith_hall",
+      "type": "elite",
+      "name": "Wraith Hall",
+      "terrain": "grotto",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "glittering_deep"
+      ],
+      "encounter_id": "demo_wraith"
+    },
+    {
+      "id": "crystal_spring",
+      "type": "rest",
+      "name": "Crystal Spring",
+      "terrain": "grotto",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "glittering_deep",
+        "wyrm_lair"
+      ],
+      "heal_percent": 30
+    },
+    {
+      "id": "glittering_deep",
+      "type": "combat",
+      "name": "Glittering Deep",
+      "terrain": "ruins",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "wyrm_lair"
+      ],
+      "encounter_id": "demo_mixed"
+    },
+    {
+      "id": "wyrm_lair",
+      "type": "boss",
+      "name": "Wyrm's Lair",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "hollow_exit"
+      ],
+      "encounter_id": "demo_boss_wyrm"
+    },
+    {
+      "id": "hollow_exit",
+      "type": "exit",
+      "name": "Daylight",
+      "position": [
+        0,
+        0
+      ],
+      "next": []
+    }
+  ]
+}

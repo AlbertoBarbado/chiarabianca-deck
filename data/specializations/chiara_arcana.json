@@ -1,0 +1,67 @@
+{
+  "id": "arcana",
+  "character_id": "chiara",
+  "identity": "Balanced magic, card manipulation and flexible elemental effects. Every extra card and Energy she conjures becomes Aether that Holy light can feed on.",
+  "starting_passive": {
+    "id": "arcana_passive",
+    "name": "Arcane Flow",
+    "description": "When Chiara plays a card right after a card owned by Bianca, the party draws 1 extra card. Once per turn; only Bianca's card directly before Chiara's counts, and the extra draw does not count as a card played.",
+    "trigger": {
+      "event": "card_played",
+      "played_by": "owner",
+      "after_other_owner": true
+    },
+    "limit_per_turn": 1,
+    "effect": {
+      "effect": "draw_cards",
+      "value": 1
+    }
+  },
+  "starting_deck_card_ids": [
+    "chiara_arcana_bolt",
+    "chiara_arcana_bolt",
+    "chiara_arcana_bolt",
+    "chiara_arcana_siphon",
+    "chiara_arcana_ward",
+    "chiara_arcana_ward",
+    "chiara_arcana_ward",
+    "chiara_arcana_focus",
+    "chiara_arcana_focus",
+    "chiara_arcana_surge"
+  ],
+  "card_pool": [
+    "chiara_arcana_lance",
+    "chiara_arcana_starfall",
+    "chiara_arcana_barrier",
+    "chiara_arcana_insight",
+    "chiara_arcana_twinbolt",
+    "chiara_arcana_pulse",
+    "chiara_arcana_siphon",
+    "chiara_arcana_echo",
+    "chiara_arcana_weave",
+    "chiara_arcana_aetherlance",
+    "chiara_arcana_leyattune",
+    "chiara_arcana_mastery",
+    "chiara_arcana_manaburst",
+    "chiara_arcana_prepared",
+    "chiara_arcana_shield",
+    "chiara_arcana_overcharge",
+    "chiara_arcana_sigil",
+    "chiara_arcana_cascade",
+    "chiara_arcana_nova"
+  ],
+  "skill_tree": {
+    "nodes": [],
+    "note": "Add skill nodes as the specialization is implemented."
+  },
+  "status": "playable",
+  "visual": {
+    "accent": "#7f9bff",
+    "icon": "icon_arcane"
+  },
+  "epic_pool": [
+    "chiara_arcana_epic_starstorm",
+    "chiara_arcana_epic_timefold"
+  ],
+  "damage_element": "arcane"
+}

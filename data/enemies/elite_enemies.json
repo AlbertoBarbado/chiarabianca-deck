@@ -1,0 +1,78 @@
+[
+  {
+    "id": "elite_knight_commander",
+    "name": "Knight Commander",
+    "max_hp": 76,
+    "color": "#d4a24a",
+    "elite": true,
+    "actions": {
+      "strike": {
+        "name": "Commander's Verdict",
+        "type": "attack",
+        "value": 13
+      },
+      "guard": {
+        "name": "Iron Formation",
+        "type": "defend",
+        "value": 12
+      },
+      "heavy": {
+        "name": "Crushing Blow",
+        "type": "attack",
+        "value": 19
+      }
+    },
+    "pattern": [
+      "strike",
+      "guard",
+      "heavy"
+    ],
+    "initiative": 5,
+    "weaknesses": {
+      "arcane": 25,
+      "frost": 25
+    },
+    "resistances": {
+      "physical": 25,
+      "holy": 25
+    },
+    "element": "physical"
+  },
+  {
+    "id": "elite_vanguard_knight",
+    "name": "Vanguard Knight",
+    "max_hp": 50,
+    "color": "#d4a24a",
+    "elite": true,
+    "actions": {
+      "strike": {
+        "name": "Vanguard Thrust",
+        "type": "attack",
+        "value": 10
+      },
+      "shield": {
+        "name": "Tower Guard",
+        "type": "defend",
+        "value": 10
+      },
+      "charge": {
+        "name": "Charge",
+        "type": "attack",
+        "value": 14
+      }
+    },
+    "pattern": [
+      "strike",
+      "shield",
+      "charge"
+    ],
+    "initiative": 4,
+    "weaknesses": {
+      "frost": 25
+    },
+    "resistances": {
+      "physical": 20
+    },
+    "element": "physical"
+  }
+]

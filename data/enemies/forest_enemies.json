@@ -1,0 +1,571 @@
+[
+  {
+    "id": "forest_wolf",
+    "name": "Forest Wolf",
+    "max_hp": 22,
+    "color": "#8d8a7a",
+    "actions": {
+      "bite": {
+        "name": "Bite",
+        "type": "attack",
+        "value": 7
+      },
+      "lunge": {
+        "name": "Rending Bite",
+        "type": "attack",
+        "value": 10,
+        "status": {
+          "id": "bleed",
+          "value": 2
+        }
+      },
+      "circle": {
+        "name": "Circle",
+        "type": "defend",
+        "value": 4
+      }
+    },
+    "pattern": [
+      "bite",
+      "circle",
+      "lunge"
+    ],
+    "initiative": 5,
+    "weaknesses": {
+      "fire": 25
+    },
+    "resistances": {
+      "frost": 25
+    },
+    "element": "physical"
+  },
+  {
+    "id": "forest_boar",
+    "name": "Wild Boar",
+    "max_hp": 30,
+    "color": "#9a6a4a",
+    "actions": {
+      "gore": {
+        "name": "Gore",
+        "type": "attack",
+        "value": 9
+      },
+      "brace": {
+        "name": "Brace",
+        "type": "defend",
+        "value": 6
+      },
+      "charge": {
+        "name": "Charge",
+        "type": "attack",
+        "value": 13,
+        "status": {
+          "id": "bleed",
+          "value": 1
+        }
+      }
+    },
+    "pattern": [
+      "gore",
+      "brace",
+      "charge"
+    ],
+    "initiative": 3,
+    "weaknesses": {
+      "frost": 25
+    },
+    "resistances": {
+      "physical": 10
+    },
+    "element": "physical"
+  },
+  {
+    "id": "forest_spider",
+    "name": "Venom Spider",
+    "max_hp": 18,
+    "color": "#7a5fa8",
+    "actions": {
+      "venom": {
+        "name": "Venom Bite",
+        "type": "attack",
+        "value": 4,
+        "status": {
+          "id": "poison",
+          "value": 2
+        },
+        "element": "poison"
+      },
+      "web": {
+        "name": "Web Guard",
+        "type": "defend",
+        "value": 5
+      },
+      "bite": {
+        "name": "Bite",
+        "type": "attack",
+        "value": 6
+      }
+    },
+    "pattern": [
+      "venom",
+      "bite",
+      "web"
+    ],
+    "initiative": 4,
+    "weaknesses": {
+      "fire": 50
+    },
+    "resistances": {
+      "poison": 75
+    },
+    "element": "physical"
+  },
+  {
+    "id": "forest_bear",
+    "name": "Forest Bear",
+    "max_hp": 48,
+    "color": "#a0683c",
+    "actions": {
+      "swipe": {
+        "name": "Swipe",
+        "type": "attack",
+        "value": 8
+      },
+      "maul": {
+        "name": "Maul",
+        "type": "attack",
+        "value": 13,
+        "status": {
+          "id": "bleed",
+          "value": 2
+        }
+      },
+      "roar": {
+        "name": "Roar",
+        "type": "defend",
+        "value": 8
+      }
+    },
+    "pattern": [
+      "swipe",
+      "maul",
+      "roar"
+    ],
+    "initiative": 2,
+    "weaknesses": {
+      "fire": 25
+    },
+    "resistances": {
+      "frost": 25
+    },
+    "element": "physical"
+  },
+  {
+    "id": "forest_drake",
+    "name": "Forest Drake",
+    "max_hp": 40,
+    "color": "#6fae5a",
+    "actions": {
+      "claw": {
+        "name": "Claw",
+        "type": "attack",
+        "value": 9
+      },
+      "spit": {
+        "name": "Toxic Spit",
+        "type": "attack",
+        "value": 5,
+        "status": {
+          "id": "poison",
+          "value": 3
+        },
+        "element": "poison"
+      },
+      "scales": {
+        "name": "Harden Scales",
+        "type": "defend",
+        "value": 8
+      }
+    },
+    "pattern": [
+      "claw",
+      "spit",
+      "scales"
+    ],
+    "initiative": 3,
+    "weaknesses": {
+      "frost": 50
+    },
+    "resistances": {
+      "fire": 50
+    },
+    "element": "physical"
+  },
+  {
+    "id": "forest_troll",
+    "name": "Moss Troll",
+    "max_hp": 64,
+    "color": "#8aa35a",
+    "actions": {
+      "club": {
+        "name": "Club Smash",
+        "type": "attack",
+        "value": 14
+      },
+      "hide": {
+        "name": "Thick Hide",
+        "type": "defend",
+        "value": 10
+      },
+      "sweep": {
+        "name": "Sweeping Blow",
+        "type": "attack",
+        "value": 8,
+        "target": "all"
+      }
+    },
+    "pattern": [
+      "club",
+      "hide",
+      "sweep"
+    ],
+    "initiative": 1,
+    "weaknesses": {
+      "fire": 50
+    },
+    "resistances": {
+      "physical": 25
+    },
+    "element": "physical"
+  },
+  {
+    "id": "elite_alpha_wolf",
+    "name": "Alpha Wolf",
+    "max_hp": 58,
+    "color": "#d4a24a",
+    "elite": true,
+    "actions": {
+      "bite": {
+        "name": "Savage Bite",
+        "type": "attack",
+        "value": 11,
+        "status": {
+          "id": "bleed",
+          "value": 2
+        }
+      },
+      "howl": {
+        "name": "Pack Howl",
+        "type": "defend",
+        "value": 10
+      },
+      "pounce": {
+        "name": "Pounce",
+        "type": "attack",
+        "value": 15,
+        "status": {
+          "id": "bleed",
+          "value": 3
+        }
+      }
+    },
+    "pattern": [
+      "bite",
+      "howl",
+      "pounce"
+    ],
+    "initiative": 6,
+    "weaknesses": {
+      "fire": 25
+    },
+    "resistances": {
+      "frost": 25
+    },
+    "element": "physical"
+  },
+  {
+    "id": "elite_grove_warden",
+    "name": "Grove Warden",
+    "max_hp": 105,
+    "color": "#d4a24a",
+    "elite": true,
+    "actions": {
+      "club": {
+        "name": "Ancient Club",
+        "type": "attack",
+        "value": 17
+      },
+      "bark": {
+        "name": "Bark Skin",
+        "type": "defend",
+        "value": 14
+      },
+      "quake": {
+        "name": "Root Quake",
+        "type": "attack",
+        "value": 10,
+        "target": "all"
+      }
+    },
+    "pattern": [
+      "club",
+      "quake",
+      "bark"
+    ],
+    "initiative": 5,
+    "weaknesses": {
+      "fire": 50
+    },
+    "resistances": {
+      "physical": 25,
+      "poison": 50
+    },
+    "element": "physical"
+  },
+  {
+    "id": "elite_broodmother",
+    "name": "Broodmother",
+    "max_hp": 66,
+    "color": "#d4a24a",
+    "elite": true,
+    "actions": {
+      "venom": {
+        "name": "Deep Venom",
+        "type": "attack",
+        "value": 7,
+        "status": {
+          "id": "poison",
+          "value": 4
+        },
+        "element": "poison"
+      },
+      "web": {
+        "name": "Cocoon",
+        "type": "defend",
+        "value": 12
+      },
+      "fangs": {
+        "name": "Crushing Fangs",
+        "type": "attack",
+        "value": 13
+      }
+    },
+    "pattern": [
+      "venom",
+      "fangs",
+      "web"
+    ],
+    "initiative": 5,
+    "weaknesses": {
+      "fire": 50
+    },
+    "resistances": {
+      "poison": 75
+    },
+    "element": "physical"
+  },
+  {
+    "id": "forest_serpent",
+    "name": "Forest Serpent",
+    "max_hp": 150,
+    "color": "#58c070",
+    "boss": true,
+    "actions": {
+      "venom_strike": {
+        "name": "Venom Strike",
+        "type": "attack",
+        "value": 11,
+        "status": {
+          "id": "poison",
+          "value": 3
+        },
+        "element": "poison"
+      },
+      "toxic_breath": {
+        "name": "Toxic Breath",
+        "type": "attack",
+        "value": 5,
+        "status": {
+          "id": "poison",
+          "value": 2
+        },
+        "target": "all",
+        "element": "poison"
+      },
+      "forest_quake": {
+        "name": "Forest Quake",
+        "type": "attack",
+        "value": 15
+      },
+      "coil": {
+        "name": "Serpent Coil",
+        "type": "defend",
+        "value": 12
+      },
+      "ancient_venom": {
+        "name": "Ancient Venom",
+        "type": "attack",
+        "value": 6,
+        "status": {
+          "id": "poison",
+          "value": 3
+        },
+        "target": "all",
+        "element": "poison"
+      }
+    },
+    "pattern": [
+      "venom_strike",
+      "coil",
+      "toxic_breath",
+      "forest_quake"
+    ],
+    "enrage_below": 0.5,
+    "enraged_pattern": [
+      "ancient_venom",
+      "forest_quake",
+      "venom_strike",
+      "coil"
+    ],
+    "initiative": 7,
+    "weaknesses": {
+      "frost": 25,
+      "fire": 25
+    },
+    "resistances": {
+      "poison": 75
+    },
+    "element": "physical"
+  },
+  {
+    "id": "elite_elder_drake",
+    "name": "Elder Drake",
+    "max_hp": 92,
+    "color": "#d4a24a",
+    "elite": true,
+    "actions": {
+      "claw": {
+        "name": "Rending Claw",
+        "type": "attack",
+        "value": 13
+      },
+      "spit": {
+        "name": "Corrosive Spit",
+        "type": "attack",
+        "value": 7,
+        "status": {
+          "id": "poison",
+          "value": 4
+        },
+        "element": "poison"
+      },
+      "scales": {
+        "name": "Elder Scales",
+        "type": "defend",
+        "value": 12
+      }
+    },
+    "pattern": [
+      "claw",
+      "spit",
+      "scales"
+    ],
+    "initiative": 5,
+    "weaknesses": {
+      "frost": 50
+    },
+    "resistances": {
+      "fire": 75
+    },
+    "element": "physical"
+  },
+  {
+    "id": "forest_cliff_harpy",
+    "name": "Cliff Harpy",
+    "max_hp": 24,
+    "color": "#9a7b5a",
+    "initiative": 6,
+    "element": "wind",
+    "weaknesses": {
+      "lightning": 50,
+      "arcane": 25
+    },
+    "resistances": {
+      "wind": 50
+    },
+    "actions": {
+      "talon_rake": {
+        "name": "Talon Rake",
+        "type": "attack",
+        "value": 7,
+        "element": "physical",
+        "status": {
+          "id": "bleed",
+          "value": 2
+        }
+      },
+      "shrieking_gale": {
+        "name": "Shrieking Gale",
+        "type": "attack",
+        "value": 4,
+        "element": "wind",
+        "target": "all"
+      },
+      "take_wing": {
+        "name": "Take Wing",
+        "type": "defend",
+        "value": 6
+      }
+    },
+    "pattern": [
+      "talon_rake",
+      "shrieking_gale",
+      "take_wing"
+    ]
+  },
+  {
+    "id": "forest_wisp",
+    "name": "Will-o'-Wisp",
+    "max_hp": 20,
+    "color": "#7fe0c8",
+    "initiative": 5,
+    "element": "fire",
+    "weaknesses": {
+      "holy": 50,
+      "frost": 25
+    },
+    "resistances": {
+      "physical": 25,
+      "fire": 75
+    },
+    "actions": {
+      "ghostfire": {
+        "name": "Ghostfire",
+        "type": "attack",
+        "value": 5,
+        "element": "fire",
+        "status": {
+          "id": "burn",
+          "value": 2
+        }
+      },
+      "drain_light": {
+        "name": "Drain Light",
+        "type": "attack",
+        "value": 3,
+        "element": "shadow",
+        "target": "all"
+      },
+      "flicker": {
+        "name": "Flicker",
+        "type": "defend",
+        "value": 6
+      }
+    },
+    "pattern": [
+      "ghostfire",
+      "flicker",
+      "drain_light"
+    ]
+  }
+]

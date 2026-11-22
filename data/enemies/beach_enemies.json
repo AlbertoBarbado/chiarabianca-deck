@@ -1,0 +1,501 @@
+[
+  {
+    "id": "beach_giant_crab",
+    "name": "Giant Crab",
+    "max_hp": 40,
+    "color": "#e0603a",
+    "initiative": 2,
+    "element": "physical",
+    "weaknesses": {
+      "lightning": 50,
+      "frost": 25
+    },
+    "resistances": {
+      "physical": 25,
+      "fire": 25,
+      "water": 50
+    },
+    "actions": {
+      "crushing_pinch": {
+        "name": "Crushing Pinch",
+        "type": "attack",
+        "value": 9
+      },
+      "shell_up": {
+        "name": "Shell Up",
+        "type": "defend",
+        "value": 9
+      },
+      "double_clamp": {
+        "name": "Double Clamp",
+        "type": "attack",
+        "value": 6,
+        "status": {
+          "id": "bleed",
+          "value": 2
+        }
+      }
+    },
+    "pattern": [
+      "crushing_pinch",
+      "shell_up",
+      "double_clamp"
+    ]
+  },
+  {
+    "id": "beach_dire_albatross",
+    "name": "Dire Albatross",
+    "max_hp": 26,
+    "color": "#a9b8c8",
+    "initiative": 6,
+    "element": "wind",
+    "weaknesses": {
+      "physical": 25,
+      "arcane": 25
+    },
+    "resistances": {
+      "wind": 50
+    },
+    "actions": {
+      "storm_dive": {
+        "name": "Storm Dive",
+        "type": "attack",
+        "value": 8,
+        "element": "lightning"
+      },
+      "gale_wings": {
+        "name": "Gale Wings",
+        "type": "attack",
+        "value": 4,
+        "element": "wind",
+        "target": "all"
+      },
+      "soar": {
+        "name": "Soar",
+        "type": "defend",
+        "value": 6
+      }
+    },
+    "pattern": [
+      "storm_dive",
+      "gale_wings",
+      "soar"
+    ]
+  },
+  {
+    "id": "beach_triton_soldier",
+    "name": "Triton Soldier",
+    "max_hp": 34,
+    "color": "#3fa8a0",
+    "initiative": 4,
+    "element": "water",
+    "weaknesses": {
+      "lightning": 50,
+      "frost": 25
+    },
+    "resistances": {
+      "fire": 50,
+      "water": 50
+    },
+    "actions": {
+      "tide_surge": {
+        "name": "Tide Surge",
+        "type": "attack",
+        "value": 6,
+        "element": "water",
+        "status": {
+          "id": "soaked",
+          "value": 2
+        }
+      },
+      "trident_thrust": {
+        "name": "Trident Thrust",
+        "type": "attack",
+        "value": 9,
+        "element": "physical"
+      },
+      "shell_shield": {
+        "name": "Shell Shield",
+        "type": "defend",
+        "value": 8
+      }
+    },
+    "pattern": [
+      "tide_surge",
+      "trident_thrust",
+      "shell_shield"
+    ]
+  },
+  {
+    "id": "beach_rock_spider",
+    "name": "Rock Spider",
+    "max_hp": 24,
+    "color": "#9a8a72",
+    "initiative": 4,
+    "element": "earth",
+    "weaknesses": {
+      "frost": 25,
+      "holy": 25
+    },
+    "resistances": {
+      "physical": 25,
+      "poison": 75,
+      "earth": 50
+    },
+    "actions": {
+      "sand_web": {
+        "name": "Sand Web",
+        "type": "attack",
+        "value": 4,
+        "element": "earth",
+        "status": {
+          "id": "quicksand",
+          "value": 1
+        }
+      },
+      "stone_fang": {
+        "name": "Stone Fang",
+        "type": "attack",
+        "value": 6,
+        "element": "physical",
+        "status": {
+          "id": "poison",
+          "value": 2
+        }
+      },
+      "carapace": {
+        "name": "Stone Carapace",
+        "type": "defend",
+        "value": 6
+      }
+    },
+    "pattern": [
+      "sand_web",
+      "stone_fang",
+      "carapace"
+    ]
+  },
+  {
+    "id": "beach_sand_scorpion",
+    "name": "Sand Scorpion",
+    "max_hp": 30,
+    "color": "#d39a3c",
+    "initiative": 5,
+    "element": "earth",
+    "weaknesses": {
+      "arcane": 50,
+      "frost": 25
+    },
+    "resistances": {
+      "earth": 50,
+      "fire": 25,
+      "poison": 50
+    },
+    "actions": {
+      "sand_spray": {
+        "name": "Sand Spray",
+        "type": "attack",
+        "value": 5,
+        "element": "earth",
+        "status": {
+          "id": "sandblind",
+          "value": 2
+        }
+      },
+      "venom_sting": {
+        "name": "Venom Sting",
+        "type": "attack",
+        "value": 7,
+        "element": "physical",
+        "status": {
+          "id": "poison",
+          "value": 3
+        }
+      },
+      "burrow": {
+        "name": "Burrow",
+        "type": "defend",
+        "value": 8
+      }
+    },
+    "pattern": [
+      "sand_spray",
+      "venom_sting",
+      "burrow"
+    ]
+  },
+  {
+    "id": "beach_shark_knight",
+    "name": "Shark Knight",
+    "max_hp": 46,
+    "color": "#5f7f96",
+    "initiative": 5,
+    "element": "water",
+    "weaknesses": {
+      "lightning": 50,
+      "holy": 25
+    },
+    "resistances": {
+      "water": 50,
+      "frost": 25,
+      "physical": 15
+    },
+    "actions": {
+      "riptide_cleave": {
+        "name": "Riptide Cleave",
+        "type": "attack",
+        "value": 5,
+        "element": "water",
+        "status": {
+          "id": "soaked",
+          "value": 2
+        },
+        "target": "all"
+      },
+      "frenzied_bite": {
+        "name": "Frenzied Bite",
+        "type": "attack",
+        "value": 10,
+        "element": "physical",
+        "status": {
+          "id": "bleed",
+          "value": 2
+        }
+      },
+      "shell_guard": {
+        "name": "Shell Guard",
+        "type": "defend",
+        "value": 10
+      }
+    },
+    "pattern": [
+      "riptide_cleave",
+      "frenzied_bite",
+      "shell_guard"
+    ]
+  },
+  {
+    "id": "elite_sand_giant",
+    "name": "Sand Giant",
+    "max_hp": 100,
+    "color": "#e0b860",
+    "elite": true,
+    "initiative": 5,
+    "element": "earth",
+    "weaknesses": {
+      "frost": 50
+    },
+    "resistances": {
+      "physical": 15,
+      "fire": 25,
+      "earth": 75
+    },
+    "actions": {
+      "blinding_gust": {
+        "name": "Blinding Gust",
+        "type": "attack",
+        "value": 8,
+        "element": "earth",
+        "status": {
+          "id": "sandblind",
+          "value": 2
+        },
+        "target": "all"
+      },
+      "sand_slam": {
+        "name": "Sand Slam",
+        "type": "attack",
+        "value": 12,
+        "element": "earth"
+      },
+      "compacted_sand": {
+        "name": "Compacted Sand",
+        "type": "defend",
+        "value": 14
+      }
+    },
+    "pattern": [
+      "blinding_gust",
+      "sand_slam",
+      "compacted_sand"
+    ]
+  },
+  {
+    "id": "elite_rock_giant",
+    "name": "Rock Giant",
+    "max_hp": 120,
+    "color": "#7a7068",
+    "elite": true,
+    "initiative": 4,
+    "element": "earth",
+    "weaknesses": {
+      "arcane": 50,
+      "frost": 25
+    },
+    "resistances": {
+      "physical": 40,
+      "fire": 25,
+      "lightning": 50,
+      "earth": 75
+    },
+    "actions": {
+      "stone_skin": {
+        "name": "Stone Skin",
+        "type": "defend",
+        "value": 18
+      },
+      "boulder_hurl": {
+        "name": "Boulder Hurl",
+        "type": "attack",
+        "value": 18,
+        "element": "earth"
+      },
+      "quake": {
+        "name": "Quake",
+        "type": "attack",
+        "value": 9,
+        "element": "earth",
+        "target": "all"
+      }
+    },
+    "pattern": [
+      "stone_skin",
+      "boulder_hurl",
+      "quake"
+    ]
+  },
+  {
+    "id": "elite_sea_snake",
+    "name": "Sea Snake",
+    "max_hp": 95,
+    "color": "#2fa6b8",
+    "elite": true,
+    "initiative": 6,
+    "element": "water",
+    "weaknesses": {
+      "lightning": 50,
+      "holy": 25,
+      "physical": 15
+    },
+    "resistances": {
+      "frost": 50,
+      "fire": 25,
+      "water": 75
+    },
+    "actions": {
+      "brine_spray": {
+        "name": "Brine Spray",
+        "type": "attack",
+        "value": 7,
+        "element": "water",
+        "status": {
+          "id": "soaked",
+          "value": 2
+        },
+        "target": "all"
+      },
+      "venom_fangs": {
+        "name": "Venom Fangs",
+        "type": "attack",
+        "value": 10,
+        "element": "physical",
+        "status": {
+          "id": "poison",
+          "value": 3
+        }
+      },
+      "crushing_coils": {
+        "name": "Crushing Coils",
+        "type": "attack",
+        "value": 14,
+        "element": "physical",
+        "status": {
+          "id": "bleed",
+          "value": 2
+        }
+      }
+    },
+    "pattern": [
+      "brine_spray",
+      "venom_fangs",
+      "crushing_coils"
+    ]
+  },
+  {
+    "id": "boss_sandstorm_elemental",
+    "name": "Sandstorm Elemental",
+    "max_hp": 180,
+    "color": "#d9a24a",
+    "boss": true,
+    "initiative": 8,
+    "element": "earth",
+    "weaknesses": {
+      "frost": 50,
+      "arcane": 25
+    },
+    "resistances": {
+      "physical": 25,
+      "holy": 25,
+      "wind": 40,
+      "earth": 75
+    },
+    "actions": {
+      "sandstorm": {
+        "name": "Sandstorm",
+        "type": "attack",
+        "value": 7,
+        "element": "earth",
+        "status": {
+          "id": "sandblind",
+          "value": 2
+        },
+        "target": "all"
+      },
+      "scouring_lash": {
+        "name": "Scouring Lash",
+        "type": "attack",
+        "value": 13,
+        "element": "wind"
+      },
+      "sinking_sands": {
+        "name": "Sinking Sands",
+        "type": "attack",
+        "value": 8,
+        "element": "earth",
+        "status": {
+          "id": "quicksand",
+          "value": 1
+        }
+      },
+      "dust_veil": {
+        "name": "Dust Veil",
+        "type": "defend",
+        "value": 16
+      },
+      "desert_maelstrom": {
+        "name": "Desert Maelstrom",
+        "type": "attack",
+        "value": 9,
+        "element": "earth",
+        "status": {
+          "id": "quicksand",
+          "value": 1
+        },
+        "target": "all"
+      }
+    },
+    "pattern": [
+      "sandstorm",
+      "scouring_lash",
+      "sinking_sands",
+      "dust_veil"
+    ],
+    "enrage_below": 0.5,
+    "enraged_pattern": [
+      "desert_maelstrom",
+      "scouring_lash",
+      "sandstorm",
+      "scouring_lash"
+    ]
+  }
+]

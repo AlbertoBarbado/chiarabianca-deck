@@ -1,0 +1,737 @@
+{
+  "id": "enchanted_forest",
+  "name": "The Enchanted Forest",
+  "subtitle": "Act II",
+  "map_type": "handcrafted_node_graph",
+  "act": 2,
+  "battle_backdrop": "battle_forest",
+  "terrains": {
+    "mountain": {
+      "name": "Mountain pass",
+      "hint": "Mountain pass: wolves, bears and cliff harpies.",
+      "backdrop": "battle_forest_mountain",
+      "foes": [
+        "forest_wolf",
+        "forest_bear",
+        "forest_cliff_harpy",
+        "elite_alpha_wolf"
+      ]
+    },
+    "deepwood": {
+      "name": "Deep wood",
+      "hint": "Deep wood: spiders and will-o'-wisps among the giant trees.",
+      "backdrop": "battle_forest_deepwood",
+      "foes": [
+        "forest_spider",
+        "forest_wisp",
+        "elite_broodmother"
+      ]
+    },
+    "falls": {
+      "name": "Waterfalls",
+      "hint": "Waterfalls: boars, trolls and drakes by the river.",
+      "backdrop": "battle_forest",
+      "foes": [
+        "forest_boar",
+        "forest_troll",
+        "forest_drake",
+        "elite_grove_warden",
+        "elite_elder_drake"
+      ]
+    }
+  },
+  "completion": {
+    "title": "Forest Act Complete",
+    "text": "The Forest Serpent is slain. Beyond the last trees the road runs down to the sea: the Sunlit Coast awaits.",
+    "badge": "Act II complete"
+  },
+  "start_node_id": "forest_entrance",
+  "exit_node_id": "forest_exit",
+  "nodes": [
+    {
+      "id": "forest_entrance",
+      "type": "start",
+      "name": "Forest Entrance",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "wolf_trail",
+        "mossy_crossing",
+        "boar_thicket"
+      ]
+    },
+    {
+      "id": "wolf_trail",
+      "type": "combat",
+      "name": "Wolf Trail",
+      "terrain": "mountain",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "webbed_hollow",
+        "hidden_cache"
+      ],
+      "encounter_id": "forest_wolves_01"
+    },
+    {
+      "id": "mossy_crossing",
+      "type": "event",
+      "name": "Mossy Crossing",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "hidden_cache",
+        "whispering_glade"
+      ],
+      "event_pool": "forest"
+    },
+    {
+      "id": "boar_thicket",
+      "type": "combat",
+      "name": "Boar Thicket",
+      "terrain": "falls",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "brookside_camp"
+      ],
+      "encounter_id": "forest_boar_01"
+    },
+    {
+      "id": "webbed_hollow",
+      "type": "combat",
+      "name": "Harpy Roost",
+      "terrain": "mountain",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "fern_gully"
+      ],
+      "encounter_id": "forest_harpies_01"
+    },
+    {
+      "id": "hidden_cache",
+      "type": "treasure",
+      "name": "Hidden Cache",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "old_bridge",
+        "wayfarers_rest"
+      ],
+      "treasure_id": "forest_cache_01"
+    },
+    {
+      "id": "whispering_glade",
+      "type": "event",
+      "name": "Whispering Glade",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "old_bridge",
+        "wayfarers_rest"
+      ],
+      "event_pool": "forest"
+    },
+    {
+      "id": "brookside_camp",
+      "type": "town",
+      "name": "Brookside Camp",
+      "terrain": "falls",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "peddlers_clearing",
+        "wayfarers_rest"
+      ],
+      "town_id": "brookside_camp"
+    },
+    {
+      "id": "fern_gully",
+      "type": "combat",
+      "name": "Pine Gully",
+      "terrain": "mountain",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "bears_den",
+        "hollow_oak"
+      ],
+      "encounter_id": "forest_wolf_harpy"
+    },
+    {
+      "id": "old_bridge",
+      "type": "combat",
+      "name": "The Old Bridge",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "bears_den",
+        "hollow_oak"
+      ],
+      "encounter_id": "forest_wisp_spiders"
+    },
+    {
+      "id": "wayfarers_rest",
+      "type": "rest",
+      "name": "Wayfarer's Rest",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "elderwood_village",
+        "thorn_maze",
+        "misty_ford"
+      ],
+      "heal_percent": 30
+    },
+    {
+      "id": "peddlers_clearing",
+      "type": "merchant",
+      "name": "Peddler's Clearing",
+      "terrain": "falls",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "thorn_maze",
+        "misty_ford"
+      ],
+      "shop_id": "forest_peddler"
+    },
+    {
+      "id": "bears_den",
+      "type": "combat",
+      "name": "The Bear's Den",
+      "terrain": "mountain",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "alphas_ground"
+      ],
+      "encounter_id": "forest_bear_01"
+    },
+    {
+      "id": "hollow_oak",
+      "type": "event",
+      "name": "The Hollow Oak",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "sunken_shrine",
+        "stag_meadow"
+      ],
+      "event_pool": "forest"
+    },
+    {
+      "id": "elderwood_village",
+      "type": "town",
+      "name": "Elderwood Village",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "sunken_shrine",
+        "stag_meadow"
+      ],
+      "town_id": "elderwood_village"
+    },
+    {
+      "id": "thorn_maze",
+      "type": "combat",
+      "name": "Thorn Maze",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "stag_meadow",
+        "trolls_crossing"
+      ],
+      "encounter_id": "forest_spider_ambush"
+    },
+    {
+      "id": "misty_ford",
+      "type": "event",
+      "name": "Misty Ford",
+      "terrain": "falls",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "stag_meadow",
+        "trolls_crossing"
+      ],
+      "event_pool": "forest"
+    },
+    {
+      "id": "alphas_ground",
+      "type": "elite",
+      "name": "Alpha's Hunting Ground",
+      "terrain": "mountain",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "ridge_path",
+        "cursed_hollow"
+      ],
+      "encounter_id": "elite_alpha_pack"
+    },
+    {
+      "id": "sunken_shrine",
+      "type": "treasure",
+      "name": "Sunken Shrine",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "ridge_path",
+        "cursed_hollow"
+      ],
+      "treasure_id": "forest_shrine_hoard"
+    },
+    {
+      "id": "stag_meadow",
+      "type": "rest",
+      "name": "Stag Meadow",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "lantern_post",
+        "drake_nest"
+      ],
+      "heal_percent": 30
+    },
+    {
+      "id": "trolls_crossing",
+      "type": "combat",
+      "name": "Troll's Crossing",
+      "terrain": "falls",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "lantern_post",
+        "drake_nest"
+      ],
+      "encounter_id": "forest_troll_01"
+    },
+    {
+      "id": "ridge_path",
+      "type": "combat",
+      "name": "Ridge Path",
+      "terrain": "mountain",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "spider_gorge"
+      ],
+      "encounter_id": "forest_wolf_pack"
+    },
+    {
+      "id": "cursed_hollow",
+      "type": "event",
+      "name": "Cursed Hollow",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "moonwell",
+        "broodmothers_lair"
+      ],
+      "event_pool": "forest_danger"
+    },
+    {
+      "id": "lantern_post",
+      "type": "town",
+      "name": "Lantern Post",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "broodmothers_lair",
+        "hunters_hut"
+      ],
+      "town_id": "lantern_post"
+    },
+    {
+      "id": "drake_nest",
+      "type": "combat",
+      "name": "Drake Nest",
+      "terrain": "falls",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "fallen_giant"
+      ],
+      "encounter_id": "forest_drake_nest"
+    },
+    {
+      "id": "spider_gorge",
+      "type": "combat",
+      "name": "Windy Gorge",
+      "terrain": "mountain",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "bramble_pass",
+        "spirit_grove"
+      ],
+      "encounter_id": "forest_harpy_gorge"
+    },
+    {
+      "id": "moonwell",
+      "type": "event",
+      "name": "The Moonwell",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "bramble_pass",
+        "spirit_grove"
+      ],
+      "event_pool": "forest"
+    },
+    {
+      "id": "broodmothers_lair",
+      "type": "elite",
+      "name": "Broodmother's Lair",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "charcoal_camp",
+        "ancient_grove"
+      ],
+      "encounter_id": "elite_broodmother"
+    },
+    {
+      "id": "hunters_hut",
+      "type": "rest",
+      "name": "Old Hunter's Hut",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "spirit_grove",
+        "charcoal_camp"
+      ],
+      "heal_percent": 30
+    },
+    {
+      "id": "fallen_giant",
+      "type": "treasure",
+      "name": "The Fallen Giant",
+      "terrain": "falls",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "ancient_grove"
+      ],
+      "treasure_id": "forest_giant_hoard"
+    },
+    {
+      "id": "bramble_pass",
+      "type": "combat",
+      "name": "Bramble Pass",
+      "terrain": "mountain",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "troll_bridge"
+      ],
+      "encounter_id": "forest_bramble_pass"
+    },
+    {
+      "id": "spirit_grove",
+      "type": "event",
+      "name": "Spirit Grove",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "silent_pool",
+        "rootway_market"
+      ],
+      "event_pool": "forest"
+    },
+    {
+      "id": "charcoal_camp",
+      "type": "town",
+      "name": "Charcoal Camp",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "silent_pool",
+        "rootway_market"
+      ],
+      "town_id": "charcoal_camp"
+    },
+    {
+      "id": "ancient_grove",
+      "type": "elite",
+      "name": "The Ancient Grove",
+      "terrain": "falls",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "bone_clearing"
+      ],
+      "encounter_id": "elite_grove_warden"
+    },
+    {
+      "id": "troll_bridge",
+      "type": "combat",
+      "name": "Stone Bridge",
+      "terrain": "mountain",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "venom_marsh",
+        "whisper_stones"
+      ],
+      "encounter_id": "forest_mountain_bridge"
+    },
+    {
+      "id": "silent_pool",
+      "type": "event",
+      "name": "The Silent Pool",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "venom_marsh",
+        "whisper_stones"
+      ],
+      "event_pool": "forest_danger"
+    },
+    {
+      "id": "rootway_market",
+      "type": "merchant",
+      "name": "Rootway Market",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "deep_cache",
+        "drake_marsh"
+      ],
+      "shop_id": "forest_village_market"
+    },
+    {
+      "id": "bone_clearing",
+      "type": "combat",
+      "name": "Bone Clearing",
+      "terrain": "falls",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "deep_cache",
+        "drake_marsh"
+      ],
+      "encounter_id": "forest_bone_clearing"
+    },
+    {
+      "id": "venom_marsh",
+      "type": "combat",
+      "name": "Eagle Crag",
+      "terrain": "mountain",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "serpents_threshold"
+      ],
+      "encounter_id": "forest_eagle_crag"
+    },
+    {
+      "id": "whisper_stones",
+      "type": "event",
+      "name": "Whisper Stones",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "last_hunt",
+        "traders_outpost"
+      ],
+      "event_pool": "forest_danger"
+    },
+    {
+      "id": "deep_cache",
+      "type": "treasure",
+      "name": "The Deep Cache",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "serpents_threshold",
+        "last_hunt"
+      ],
+      "treasure_id": "forest_deep_cache"
+    },
+    {
+      "id": "drake_marsh",
+      "type": "elite",
+      "name": "Elder Drake's Marsh",
+      "terrain": "falls",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "traders_outpost"
+      ],
+      "encounter_id": "elite_elder_drake"
+    },
+    {
+      "id": "serpents_threshold",
+      "type": "rest",
+      "name": "Serpent's Threshold",
+      "terrain": "mountain",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "serpents_domain"
+      ],
+      "heal_percent": 35
+    },
+    {
+      "id": "last_hunt",
+      "type": "combat",
+      "name": "The Last Hunt",
+      "terrain": "deepwood",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "serpents_domain"
+      ],
+      "encounter_id": "forest_last_hunt"
+    },
+    {
+      "id": "traders_outpost",
+      "type": "town",
+      "name": "Trader's Outpost",
+      "terrain": "falls",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "serpents_domain"
+      ],
+      "town_id": "last_trader_outpost"
+    },
+    {
+      "id": "serpents_domain",
+      "type": "boss",
+      "name": "Serpent's Domain",
+      "position": [
+        0,
+        0
+      ],
+      "next": [
+        "forest_exit"
+      ],
+      "encounter_id": "boss_forest_serpent"
+    },
+    {
+      "id": "forest_exit",
+      "type": "exit",
+      "name": "Beyond the Forest",
+      "position": [
+        0,
+        0
+      ],
+      "next": []
+    }
+  ]
+}

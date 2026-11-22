@@ -1,0 +1,73 @@
+{
+  "_comment": "Damage types (elements). Every hit has one; enemies list weaknesses / resistances in percent, armour adds resistance, weapons add damage. color and icon are presentation only (icon: res:// path or UI icon id).",
+  "default": "physical",
+  "max_resistance": 75,
+  "types": [
+    {
+      "id": "physical",
+      "name": "Physical",
+      "color": "#d8d2c4",
+      "icon": "res://assets/effects/sprites/wind/wind_slash.png"
+    },
+    {
+      "id": "fire",
+      "name": "Fire",
+      "color": "#ff8a3c",
+      "icon": "res://assets/effects/sprites/fire/burn_apply.png"
+    },
+    {
+      "id": "frost",
+      "name": "Frost",
+      "color": "#8fdcff",
+      "icon": "res://assets/generated/frost/icon_chill.png"
+    },
+    {
+      "id": "arcane",
+      "name": "Arcane",
+      "color": "#b48cff",
+      "icon": "res://assets/effects/sprites/arcane/arcane_bolt.png"
+    },
+    {
+      "id": "holy",
+      "name": "Holy",
+      "color": "#ffe08a",
+      "icon": "res://assets/effects/sprites/holy/holy_strike.png"
+    },
+    {
+      "id": "shadow",
+      "name": "Shadow",
+      "color": "#9a7ac8",
+      "icon": "res://assets/effects/sprites/arcane/arcane_curse.png"
+    },
+    {
+      "id": "lightning",
+      "name": "Lightning",
+      "color": "#ffe35a",
+      "icon": "res://assets/effects/sprites/arcane/chain_lightning.png"
+    },
+    {
+      "id": "wind",
+      "name": "Wind",
+      "color": "#9ee6c2",
+      "icon": "res://assets/effects/sprites/wind/wind_slash.png"
+    },
+    {
+      "id": "poison",
+      "name": "Poison",
+      "color": "#8ee05a",
+      "icon": "res://assets/effects/sprites/nature/poison_skull.png"
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "color": "#4fb4ff",
+      "icon": "res://assets/generated/beach/icon_soaked.png"
+    },
+    {
+      "id": "earth",
+      "name": "Earth",
+      "color": "#c9a46a",
+      "icon": "res://assets/effects/sprites/earth/earth_spike.png"
+    }
+  ]
+}

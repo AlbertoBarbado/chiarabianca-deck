@@ -1,0 +1,402 @@
+[
+  {
+    "id": "mountain_snowed_shrine",
+    "pools": [
+      "mountain",
+      "mountain_slopes"
+    ],
+    "title": "The Snowed-in Shrine",
+    "paragraphs": [
+      "A small red shrine gate stands half buried in snow. Offerings of rice and coins lie frozen on the altar."
+    ],
+    "choices": [
+      {
+        "text": "Clear the snow and pray",
+        "result": "The quiet steadies you. Each party member recovers 10 HP.",
+        "effects": [
+          {
+            "type": "heal_party",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "text": "Take the frozen coins",
+        "result": "Gain 35 gold. The wind howls a little louder.",
+        "effects": [
+          {
+            "type": "gain_gold",
+            "value": 35
+          }
+        ]
+      },
+      {
+        "text": "Move on",
+        "result": "You keep climbing.",
+        "effects": []
+      }
+    ]
+  },
+  {
+    "id": "mountain_woodcutters",
+    "pools": [
+      "mountain",
+      "mountain_slopes"
+    ],
+    "title": "Woodcutters' Path",
+    "paragraphs": [
+      "Two woodcutters are trapped under a fallen pine, wolves circling closer."
+    ],
+    "choices": [
+      {
+        "text": "Fight the wolves off",
+        "result": "The woodcutters escape and press their savings into your hands.",
+        "effects": [
+          {
+            "type": "start_combat",
+            "encounter_id": "mountain_wolf_ridge"
+          },
+          {
+            "type": "gain_gold",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "text": "Lift the pine together (lose 6 HP each)",
+        "result": "Each party member loses 6 HP. The woodcutters give you a Health Potion.",
+        "effects": [
+          {
+            "type": "damage_party",
+            "value": 6
+          },
+          {
+            "type": "gain_item",
+            "item_id": "health_potion",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "text": "Move on",
+        "result": "You keep climbing.",
+        "effects": []
+      }
+    ]
+  },
+  {
+    "id": "mountain_hunters_lodge",
+    "pools": [
+      "mountain",
+      "mountain_slopes"
+    ],
+    "title": "Hunters' Lodge",
+    "paragraphs": [
+      "A lodge of yeti hunters. Their chief offers a trophy, a warm meal or a lesson, but not all three."
+    ],
+    "choices": [
+      {
+        "text": "Share their meal",
+        "result": "Each party member recovers 30% of her max HP.",
+        "effects": [
+          {
+            "type": "heal_party_fraction",
+            "fraction": 0.3
+          }
+        ]
+      },
+      {
+        "text": "Learn their tricks",
+        "result": "Choose a card.",
+        "effects": [
+          {
+            "type": "card_reward"
+          }
+        ]
+      },
+      {
+        "text": "Buy the yeti-fur mantle (60 gold)",
+        "result": "You pay 60 gold for a Yeti-Fur Mantle.",
+        "effects": [
+          {
+            "type": "lose_gold",
+            "value": 60
+          },
+          {
+            "type": "gain_equipment",
+            "item_id": "yetifur_mantle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mountain_frozen_climber",
+    "pools": [
+      "mountain",
+      "mountain_glacier"
+    ],
+    "title": "The Frozen Climber",
+    "paragraphs": [
+      "A climber sits frozen against the ice wall, still clutching her pack. Her face is calm, as if she only stopped to rest."
+    ],
+    "choices": [
+      {
+        "text": "Search the pack",
+        "result": "Gain 45 gold and a Minor Health Potion.",
+        "effects": [
+          {
+            "type": "gain_gold",
+            "value": 45
+          },
+          {
+            "type": "gain_item",
+            "item_id": "minor_health_potion",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "text": "Build her a cairn",
+        "result": "A moment of respect. Choose a card.",
+        "effects": [
+          {
+            "type": "card_reward"
+          }
+        ]
+      },
+      {
+        "text": "Move on",
+        "result": "You keep climbing.",
+        "effects": []
+      }
+    ]
+  },
+  {
+    "id": "mountain_echoing_chasm",
+    "pools": [
+      "mountain",
+      "mountain_glacier"
+    ],
+    "title": "Echoing Chasm",
+    "paragraphs": [
+      "The chasm repeats every word back, twisted. Far below, something answers in a voice like cracking ice."
+    ],
+    "choices": [
+      {
+        "text": "Shout a challenge",
+        "result": "The ice answers with claws: drakes climb out of the chasm.",
+        "effects": [
+          {
+            "type": "start_combat",
+            "encounter_id": "mountain_frozen_falls"
+          },
+          {
+            "type": "gain_gold",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "text": "Cross in silence (lose 5 HP each)",
+        "result": "The cold bites as you creep along the ledge. Each party member loses 5 HP. You find a Health Potion on the far side.",
+        "effects": [
+          {
+            "type": "damage_party",
+            "value": 5
+          },
+          {
+            "type": "gain_item",
+            "item_id": "health_potion",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "text": "Move on",
+        "result": "You keep climbing.",
+        "effects": []
+      }
+    ]
+  },
+  {
+    "id": "mountain_singing_ice",
+    "pools": [
+      "mountain",
+      "mountain_glacier",
+      "mountain_summit"
+    ],
+    "title": "Singing Ice",
+    "paragraphs": [
+      "Wind sings through a forest of icicles. The notes form a melody Chiara almost remembers."
+    ],
+    "choices": [
+      {
+        "text": "Listen until the end",
+        "result": "The melody lifts your spirits. Each party member recovers 12 HP.",
+        "effects": [
+          {
+            "type": "heal_party",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "text": "Break the loudest icicle",
+        "result": "Inside is a frozen gem. Gain 50 gold. Each party member loses 4 HP to the falling ice.",
+        "effects": [
+          {
+            "type": "gain_gold",
+            "value": 50
+          },
+          {
+            "type": "damage_party",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "text": "Move on",
+        "result": "You keep climbing.",
+        "effects": []
+      }
+    ]
+  },
+  {
+    "id": "mountain_prayer_flags",
+    "pools": [
+      "mountain",
+      "mountain_summit"
+    ],
+    "title": "Prayer Flags",
+    "paragraphs": [
+      "Hundreds of faded flags snap in the wind between two peaks. Climbers tie a wish to them before the summit."
+    ],
+    "choices": [
+      {
+        "text": "Tie a wish (20 gold)",
+        "result": "You pay 20 gold. Choose a card.",
+        "effects": [
+          {
+            "type": "lose_gold",
+            "value": 20
+          },
+          {
+            "type": "card_reward"
+          }
+        ]
+      },
+      {
+        "text": "Rest in their shelter",
+        "result": "Each party member recovers 25% of her max HP.",
+        "effects": [
+          {
+            "type": "heal_party_fraction",
+            "fraction": 0.25
+          }
+        ]
+      },
+      {
+        "text": "Move on",
+        "result": "You keep climbing.",
+        "effects": []
+      }
+    ]
+  },
+  {
+    "id": "mountain_wind_temple",
+    "pools": [
+      "mountain",
+      "mountain_summit"
+    ],
+    "title": "The Wind-Worn Temple",
+    "paragraphs": [
+      "An old temple, its doors torn off by the wind. A relic glints on the altar, guarded by nothing but the cold."
+    ],
+    "choices": [
+      {
+        "text": "Take the relic (lose 10 HP each)",
+        "result": "The cold burns as you reach in. Each party member loses 10 HP. You take the relic.",
+        "effects": [
+          {
+            "type": "damage_party",
+            "value": 10
+          },
+          {
+            "type": "gain_relic"
+          }
+        ]
+      },
+      {
+        "text": "Leave an offering (30 gold)",
+        "result": "You leave 30 gold. Each party member recovers 15 HP.",
+        "effects": [
+          {
+            "type": "lose_gold",
+            "value": 30
+          },
+          {
+            "type": "heal_party",
+            "value": 15
+          }
+        ]
+      },
+      {
+        "text": "Move on",
+        "result": "You keep climbing.",
+        "effects": []
+      }
+    ]
+  },
+  {
+    "id": "mountain_last_ascent",
+    "pools": [
+      "mountain",
+      "mountain_summit"
+    ],
+    "title": "The Last Ascent",
+    "paragraphs": [
+      "The trail ends at a sheer wall of ice. Somewhere above, wings beat slowly in the storm."
+    ],
+    "choices": [
+      {
+        "text": "Climb straight up (lose 8 HP each)",
+        "result": "Each party member loses 8 HP. On a ledge you find a Health Potion and 40 gold.",
+        "effects": [
+          {
+            "type": "damage_party",
+            "value": 8
+          },
+          {
+            "type": "gain_item",
+            "item_id": "health_potion",
+            "count": 1
+          },
+          {
+            "type": "gain_gold",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "text": "Take the drakes' path",
+        "result": "Two young drakes guard the path.",
+        "effects": [
+          {
+            "type": "start_combat",
+            "encounter_id": "mountain_brood_ambush"
+          },
+          {
+            "type": "gain_gold",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "text": "Move on",
+        "result": "You keep climbing.",
+        "effects": []
+      }
+    ]
+  }
+]

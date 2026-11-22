@@ -1,0 +1,19 @@
+{
+  "id": "castle_fountain_intro",
+  "title": "The Fountain Courtyard",
+  "paragraphs": [
+    "Morning light spills across the courtyard fountain. Chiara notices glinting coins at the bottom of the basin; Bianca keeps watch at the archway.",
+    "Tutorial: Chiara and Bianca each own their own cards, but in battle the whole party draws from ONE shared deck. Every card shows who owns it, and a card can only be played while its owner is standing."
+  ],
+  "choices": [
+    {
+      "text": "Collect the coins and move on",
+      "effects": [
+        {
+          "type": "gain_gold",
+          "value": 25
+        }
+      ]
+    }
+  ]
+}

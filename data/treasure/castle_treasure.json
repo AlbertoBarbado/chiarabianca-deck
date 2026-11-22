@@ -1,0 +1,42 @@
+[
+  {
+    "id": "castle_treasure_01",
+    "name": "Forgotten Coffer",
+    "description": "A dusty coffer sits behind the tapestry. Its contents are yours to choose, but you may only take one.",
+    "choices": [
+      {
+        "type": "gold",
+        "amount": 60,
+        "text": "A purse of 60 gold"
+      },
+      {
+        "type": "potion",
+        "item_id": "health_potion",
+        "count": 1,
+        "text": "A Health Potion"
+      },
+      {
+        "type": "relic",
+        "text": "A relic",
+        "rarity_weights": {
+          "common": 5,
+          "uncommon": 3,
+          "rare": 1
+        }
+      },
+      {
+        "type": "card",
+        "rarity": "uncommon",
+        "text": "A rare technique (uncommon card)"
+      },
+      {
+        "type": "equipment",
+        "rarity_weights": {
+          "common": 2,
+          "uncommon": 3
+        },
+        "text": "A piece of equipment"
+      }
+    ]
+  }
+]

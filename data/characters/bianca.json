@@ -1,0 +1,40 @@
+{
+  "id": "bianca",
+  "display_name": "Bianca",
+  "title": "The Paladin Princess",
+  "role": "paladin",
+  "story": "One of the twin princesses of the royal house.",
+  "appearance": {
+    "hair": "black",
+    "eyes": "brown",
+    "silhouette": "white, silver and gold paladin armor",
+    "palette": [
+      "ivory",
+      "silver",
+      "gold",
+      "crimson"
+    ]
+  },
+  "base_stats": {
+    "max_hp": 80,
+    "starting_hp": 80
+  },
+  "specializations": [
+    "retribution",
+    "tanking",
+    "holy",
+    "venom",
+    "ashveil",
+    "commander"
+  ],
+  "selected_specialization": null,
+  "personal_deck": [],
+  "asset_paths": {
+    "portrait": "res://assets/characters/bianca/portrait.png",
+    "full_body": "res://assets/characters/bianca/full_body.png",
+    "combat": "res://assets/characters/bianca/combat.png"
+  },
+  "ui": {
+    "accent_color": "#d4a64a"
+  }
+}

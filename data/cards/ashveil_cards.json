@@ -1,0 +1,932 @@
+[
+  {
+    "id": "bianca_ash_slash",
+    "name": "Ashen Slash",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "basic",
+    "description": "Deal 6 damage.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 6,
+        "target": "single_enemy"
+      }
+    ],
+    "upgrade": {
+      "name": "Ashen Slash+",
+      "cost": 1,
+      "description": "Deal 9 damage.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 9,
+          "target": "single_enemy"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_veil",
+    "name": "Smoke Veil",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "self",
+    "rarity": "basic",
+    "description": "Gain 5 Block.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 5,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Smoke Veil+",
+      "cost": 1,
+      "description": "Gain 8 Block.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 8,
+          "target": "self"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_flask",
+    "name": "Oil Flask",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "single_enemy",
+    "rarity": "basic",
+    "description": "Deal 3 damage. Apply 2 Oiled.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "apply_status",
+        "value": 2,
+        "target": "single_enemy",
+        "status_id": "oiled"
+      }
+    ],
+    "upgrade": {
+      "name": "Oil Flask+",
+      "cost": 1,
+      "description": "Deal 4 damage. Apply 3 Oiled.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "apply_status",
+          "value": 3,
+          "target": "single_enemy",
+          "status_id": "oiled"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_dagger",
+    "name": "Pitch Dagger",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 0,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 3 damage. Apply 1 Oiled.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "single_enemy"
+      },
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "single_enemy",
+        "status_id": "oiled"
+      }
+    ],
+    "upgrade": {
+      "name": "Pitch Dagger+",
+      "cost": 0,
+      "description": "Deal 5 damage. Apply 1 Oiled.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 5,
+          "target": "single_enemy"
+        },
+        {
+          "effect": "apply_status",
+          "value": 1,
+          "target": "single_enemy",
+          "status_id": "oiled"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_caltrops",
+    "name": "Caltrops",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "all_enemies",
+    "rarity": "common",
+    "description": "Apply 1 Oiled and 1 Bleed to ALL enemies.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "all_enemies",
+        "status_id": "oiled"
+      },
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "all_enemies",
+        "status_id": "bleed"
+      }
+    ],
+    "upgrade": {
+      "name": "Caltrops+",
+      "cost": 1,
+      "description": "Apply 1 Oiled and 2 Bleed to ALL enemies.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 1,
+          "target": "all_enemies",
+          "status_id": "oiled"
+        },
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "all_enemies",
+          "status_id": "bleed"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_shadow",
+    "name": "Shadow Thrust",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Deal 6 Shadow damage. +5 if Oiled.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 6,
+        "target": "single_enemy",
+        "bonus_if_status": {
+          "status_id": "oiled",
+          "value": 5
+        },
+        "element": "shadow"
+      }
+    ],
+    "upgrade": {
+      "name": "Shadow Thrust+",
+      "cost": 1,
+      "description": "Deal 8 Shadow damage. +6 if Oiled.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 8,
+          "target": "single_enemy",
+          "bonus_if_status": {
+            "status_id": "oiled",
+            "value": 6
+          },
+          "element": "shadow"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_smokebomb",
+    "name": "Smoke Bomb",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 1,
+    "card_type": "defense",
+    "target": "all_allies",
+    "rarity": "uncommon",
+    "description": "Give the party 4 Block. Draw 1.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 4,
+        "target": "all_allies"
+      },
+      {
+        "effect": "draw",
+        "value": 1,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Smoke Bomb+",
+      "cost": 1,
+      "description": "Give the party 6 Block. Draw 1.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 6,
+          "target": "all_allies"
+        },
+        {
+          "effect": "draw",
+          "value": 1,
+          "target": "self"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_snare",
+    "name": "Tar Snare",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "single_enemy",
+    "rarity": "uncommon",
+    "description": "Apply 2 Oiled. Gain 6 Block.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 2,
+        "target": "single_enemy",
+        "status_id": "oiled"
+      },
+      {
+        "effect": "block",
+        "value": 6,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Tar Snare+",
+      "cost": 1,
+      "description": "Apply 3 Oiled. Gain 7 Block.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 3,
+          "target": "single_enemy",
+          "status_id": "oiled"
+        },
+        {
+          "effect": "block",
+          "value": 7,
+          "target": "self"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_powder",
+    "name": "Blasting Powder",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 2,
+    "card_type": "attack",
+    "target": "all_enemies",
+    "rarity": "uncommon",
+    "description": "Deal 7 Fire damage to ALL. +4 to Oiled.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 7,
+        "target": "all_enemies",
+        "bonus_if_status": {
+          "status_id": "oiled",
+          "value": 4
+        },
+        "element": "fire"
+      }
+    ],
+    "upgrade": {
+      "name": "Blasting Powder+",
+      "cost": 2,
+      "description": "Deal 9 Fire damage to ALL. +5 to Oiled.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 9,
+          "target": "all_enemies",
+          "bonus_if_status": {
+            "status_id": "oiled",
+            "value": 5
+          },
+          "element": "fire"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_shadowstep",
+    "name": "Shadowstep",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 0,
+    "card_type": "skill",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Gain 4 Block. Draw 1.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 4,
+        "target": "self"
+      },
+      {
+        "effect": "draw",
+        "value": 1,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Shadowstep+",
+      "cost": 0,
+      "description": "Gain 6 Block. Draw 1.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 6,
+          "target": "self"
+        },
+        {
+          "effect": "draw",
+          "value": 1,
+          "target": "self"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_ignite",
+    "name": "Ignition Strike",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 2,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "rare",
+    "description": "Deal 9 Fire damage, +4 per Oiled. Burns the oil away.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 9,
+        "target": "single_enemy",
+        "per_target_status": {
+          "status_id": "oiled",
+          "value": 4
+        },
+        "consume_status": "oiled",
+        "element": "fire"
+      }
+    ],
+    "upgrade": {
+      "name": "Ignition Strike+",
+      "cost": 2,
+      "description": "Deal 12 Fire damage, +5 per Oiled. Burns the oil away.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 12,
+          "target": "single_enemy",
+          "per_target_status": {
+            "status_id": "oiled",
+            "value": 5
+          },
+          "consume_status": "oiled",
+          "element": "fire"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_greasefire",
+    "name": "Greasefire Trap",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 2,
+    "card_type": "skill",
+    "target": "all_enemies",
+    "rarity": "rare",
+    "description": "Apply 2 Oiled and 2 Burn to ALL enemies.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 2,
+        "target": "all_enemies",
+        "status_id": "oiled"
+      },
+      {
+        "effect": "apply_status",
+        "value": 2,
+        "target": "all_enemies",
+        "status_id": "burn"
+      }
+    ],
+    "upgrade": {
+      "name": "Greasefire Trap+",
+      "cost": 2,
+      "description": "Apply 3 Oiled and 2 Burn to ALL enemies.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 3,
+          "target": "all_enemies",
+          "status_id": "oiled"
+        },
+        {
+          "effect": "apply_status",
+          "value": 2,
+          "target": "all_enemies",
+          "status_id": "burn"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_hexpowder",
+    "name": "Hexed Powder",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "all_enemies",
+    "rarity": "uncommon",
+    "description": "Deal 3 Fire damage to ALL enemies, +1 per Aether.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "all_enemies",
+        "element": "fire",
+        "per_aether": 1
+      }
+    ],
+    "upgrade": {
+      "name": "Hexed Powder+",
+      "cost": 1,
+      "description": "Deal 4 Fire damage to ALL enemies, +2 per Aether.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "all_enemies",
+          "element": "fire",
+          "per_aether": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_trapmaster",
+    "name": "Trapmaster",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "uncommon",
+    "description": "Power: whenever Bianca applies Oiled, that enemy takes 3 Fire damage (3 times a turn).",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 7,
+        "power": {
+          "id": "trapmaster",
+          "name": "Trapmaster",
+          "description": "Whenever Bianca applies Oiled, that enemy takes 3 Fire damage (3 times a turn).",
+          "trigger": {
+            "event": "status_applied",
+            "status_id": "oiled",
+            "applied_by": "owner"
+          },
+          "effect": {
+            "effect": "bonus_damage",
+            "value": 3,
+            "element": "fire"
+          },
+          "limit_per_turn": 3
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Trapmaster+",
+      "cost": 1,
+      "description": "Power: whenever Bianca applies Oiled, that enemy takes 4 Fire damage (3 times a turn).",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 9,
+          "power": {
+            "id": "trapmaster",
+            "name": "Trapmaster",
+            "description": "Whenever Bianca applies Oiled, that enemy takes 4 Fire damage (3 times a turn).",
+            "trigger": {
+              "event": "status_applied",
+              "status_id": "oiled",
+              "applied_by": "owner"
+            },
+            "effect": {
+              "effect": "bonus_damage",
+              "value": 4,
+              "element": "fire"
+            },
+            "limit_per_turn": 3
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_slickground",
+    "name": "Slick Ground",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 2,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "rare",
+    "description": "Power: at the start of each turn, apply 1 Oiled to ALL enemies.",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 8,
+        "power": {
+          "id": "slickground",
+          "name": "Slick Ground",
+          "description": "At the start of each turn, apply 1 Oiled to ALL enemies.",
+          "trigger": {
+            "event": "turn_start"
+          },
+          "effect": {
+            "effect": "apply_status_all",
+            "status_id": "oiled",
+            "value": 1
+          },
+          "limit_per_turn": 1
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Slick Ground+",
+      "cost": 1,
+      "description": "Power: at the start of each turn, apply 1 Oiled to ALL enemies.",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 8,
+          "power": {
+            "id": "slickground",
+            "name": "Slick Ground",
+            "description": "At the start of each turn, apply 1 Oiled to ALL enemies.",
+            "trigger": {
+              "event": "turn_start"
+            },
+            "effect": {
+              "effect": "apply_status_all",
+              "status_id": "oiled",
+              "value": 1
+            },
+            "limit_per_turn": 1
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_powderkeg",
+    "name": "Powder Keg",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 0,
+    "card_type": "attack",
+    "target": "all_enemies",
+    "rarity": "rare",
+    "description": "Deal 8 Fire damage to ALL enemies X times. Exhaust.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 8,
+        "target": "all_enemies",
+        "repeat_x": true,
+        "element": "fire"
+      }
+    ],
+    "upgrade": {
+      "name": "Powder Keg+",
+      "cost": 0,
+      "description": "Deal 10 Fire damage to ALL enemies X times. Exhaust.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 10,
+          "target": "all_enemies",
+          "repeat_x": true,
+          "element": "fire"
+        }
+      ]
+    },
+    "exhaust": true,
+    "x_cost": true
+  },
+  {
+    "id": "bianca_ash_hiddenblade",
+    "name": "Hidden Blade",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Retain. Deal 7 damage. +4 if Oiled.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 7,
+        "target": "single_enemy",
+        "bonus_if_status": {
+          "status_id": "oiled",
+          "value": 4
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Hidden Blade+",
+      "cost": 1,
+      "description": "Retain. Deal 9 damage. +5 if Oiled.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 9,
+          "target": "single_enemy",
+          "bonus_if_status": {
+            "status_id": "oiled",
+            "value": 5
+          }
+        }
+      ]
+    },
+    "retain": true
+  },
+  {
+    "id": "bianca_ash_flashpowder",
+    "name": "Flash Powder",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 0,
+    "card_type": "skill",
+    "target": "all_enemies",
+    "rarity": "uncommon",
+    "description": "Apply 1 Oiled to ALL enemies. Draw 2 cards. Exhaust.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 1,
+        "target": "all_enemies",
+        "status_id": "oiled"
+      },
+      {
+        "effect": "draw",
+        "value": 2,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Flash Powder+",
+      "cost": 0,
+      "description": "Apply 1 Oiled to ALL enemies. Draw 3 cards. Exhaust.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 1,
+          "target": "all_enemies",
+          "status_id": "oiled"
+        },
+        {
+          "effect": "draw",
+          "value": 3,
+          "target": "self"
+        }
+      ]
+    },
+    "exhaust": true
+  },
+  {
+    "id": "bianca_ash_beartrap",
+    "name": "Bear Trap",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 1,
+    "card_type": "skill",
+    "target": "single_enemy",
+    "rarity": "common",
+    "description": "Apply 2 Bleed. Gain 5 Block.",
+    "effects": [
+      {
+        "effect": "apply_status",
+        "value": 2,
+        "target": "single_enemy",
+        "status_id": "bleed"
+      },
+      {
+        "effect": "block",
+        "value": 5,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Bear Trap+",
+      "cost": 1,
+      "description": "Apply 3 Bleed. Gain 7 Block.",
+      "effects": [
+        {
+          "effect": "apply_status",
+          "value": 3,
+          "target": "single_enemy",
+          "status_id": "bleed"
+        },
+        {
+          "effect": "block",
+          "value": 7,
+          "target": "self"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_vanish",
+    "name": "Vanish",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 2,
+    "card_type": "defense",
+    "target": "all_allies",
+    "rarity": "uncommon",
+    "description": "Give the party 7 Block. Draw 1 card.",
+    "effects": [
+      {
+        "effect": "block",
+        "value": 7,
+        "target": "all_allies"
+      },
+      {
+        "effect": "draw",
+        "value": 1,
+        "target": "self"
+      }
+    ],
+    "upgrade": {
+      "name": "Vanish+",
+      "cost": 2,
+      "description": "Give the party 10 Block. Draw 1 card.",
+      "effects": [
+        {
+          "effect": "block",
+          "value": 10,
+          "target": "all_allies"
+        },
+        {
+          "effect": "draw",
+          "value": 1,
+          "target": "self"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_fanknives",
+    "name": "Fan of Knives",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 1,
+    "card_type": "attack",
+    "target": "all_enemies",
+    "rarity": "uncommon",
+    "description": "Deal 3 damage to ALL enemies twice.",
+    "effects": [
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "all_enemies"
+      },
+      {
+        "effect": "damage",
+        "value": 3,
+        "target": "all_enemies"
+      }
+    ],
+    "upgrade": {
+      "name": "Fan of Knives+",
+      "cost": 1,
+      "description": "Deal 4 damage to ALL enemies twice.",
+      "effects": [
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "all_enemies"
+        },
+        {
+          "effect": "damage",
+          "value": 4,
+          "target": "all_enemies"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bianca_ash_shadowarts",
+    "name": "Shadow Arts",
+    "owner_character_id": "bianca",
+    "specialization_id": "ashveil",
+    "cost": 1,
+    "card_type": "power",
+    "target": "self",
+    "rarity": "rare",
+    "description": "Power: whenever Bianca plays an Attack, she gains 2 Block.",
+    "effects": [
+      {
+        "effect": "power",
+        "target": "self",
+        "sim_value": 6,
+        "power": {
+          "id": "shadowarts",
+          "name": "Shadow Arts",
+          "description": "Whenever Bianca plays an Attack, she gains 2 Block.",
+          "trigger": {
+            "event": "card_played",
+            "played_by": "owner",
+            "card_type": "attack"
+          },
+          "effect": {
+            "effect": "bonus_block",
+            "value": 2
+          },
+          "limit_per_turn": 99
+        }
+      }
+    ],
+    "upgrade": {
+      "name": "Shadow Arts+",
+      "cost": 1,
+      "description": "Power: whenever Bianca plays an Attack, she gains 3 Block.",
+      "effects": [
+        {
+          "effect": "power",
+          "target": "self",
+          "sim_value": 8,
+          "power": {
+            "id": "shadowarts",
+            "name": "Shadow Arts",
+            "description": "Whenever Bianca plays an Attack, she gains 3 Block.",
+            "trigger": {
+              "event": "card_played",
+              "played_by": "owner",
+              "card_type": "attack"
+            },
+            "effect": {
+              "effect": "bonus_block",
+              "value": 3
+            },
+            "limit_per_turn": 99
+          }
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,277 @@
+{
+ "_comment": "Generated locally with ComfyUI. Model: FLUX.1 [schnell] (Apache 2.0, black-forest-labs) GGUF Q3_K_S by city96; text encoders CLIP-L + T5-XXL GGUF; background removal BiRefNet (MIT). 4 steps, euler/simple, CFG 1.",
+ "assets": {
+  "card_frost_bolt": {
+   "file": "res://assets/generated/frost/card_frost_bolt.png",
+   "prompt": "a jagged spear of glowing blue ice flying through the air leaving frost mist, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 2101,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 100.3,
+   "date": "2026-11-16"
+  },
+  "card_frost_ward": {
+   "file": "res://assets/generated/frost/card_frost_ward.png",
+   "prompt": "a shimmering wall of translucent blue ice crystals forming a protective barrier, snowflakes, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 2102,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 48.6,
+   "date": "2026-11-16"
+  },
+  "card_frost_chill": {
+   "file": "res://assets/generated/frost/card_frost_chill.png",
+   "prompt": "swirling freezing wind full of snowflakes and frost runes wrapping around a target, blue glow, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 2103,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 58.9,
+   "date": "2026-11-16"
+  },
+  "card_frost_blizzard": {
+   "file": "res://assets/generated/frost/card_frost_blizzard.png",
+   "prompt": "a violent magical blizzard with ice shards raining down on a dark battlefield, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 2104,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.1,
+   "date": "2026-11-16"
+  },
+  "card_frost_nova": {
+   "file": "res://assets/generated/frost/card_frost_nova.png",
+   "prompt": "an expanding ring explosion of ice and frost shards from the ground, bright cyan light, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 2105,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.2,
+   "date": "2026-11-16"
+  },
+  "card_frost_shatter": {
+   "file": "res://assets/generated/frost/card_frost_shatter.png",
+   "prompt": "a frozen ice statue shattering into hundreds of glittering crystal fragments, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 2106,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.1,
+   "date": "2026-11-16"
+  },
+  "card_frost_glacier": {
+   "file": "res://assets/generated/frost/card_frost_glacier.png",
+   "prompt": "a colossal glacier spike erupting from the ground, towering ice, cold blue light, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 2107,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 26.2,
+   "date": "2026-11-16"
+  },
+  "card_frost_heart": {
+   "file": "res://assets/generated/frost/card_frost_heart.png",
+   "prompt": "a glowing crystalline heart made of ice floating in the air above a frozen altar, snowflakes, cold blue light, epic, absolutely no letters or symbols, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 2118,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 26.2,
+   "date": "2026-11-16"
+  },
+  "card_frost_avalanche": {
+   "file": "res://assets/generated/frost/card_frost_avalanche.png",
+   "prompt": "a magical avalanche of ice and snow crashing down a mountain, epic scale, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 2109,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.5,
+   "date": "2026-11-16"
+  },
+  "cutin_frost_t2": {
+   "file": "res://assets/generated/frost/cutin_frost_t2.png",
+   "prompt": "anime mage princess with long wavy light copper-blonde hair (not red), pale grey eyes, deep blue and ivory royal mage robes with gold trim, casting a spear of ice from her hand, frost particles, dynamic pose, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 576,
+   "seed": 2211,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 32.2,
+   "date": "2026-11-16"
+  },
+  "cutin_frost_t3": {
+   "file": "res://assets/generated/frost/cutin_frost_t3.png",
+   "prompt": "anime mage princess with long wavy light copper-blonde hair (not red), pale grey eyes, deep blue and ivory royal mage robes with gold trim, summoning a swirling blizzard, glowing blue magic circle, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 576,
+   "seed": 2212,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.6,
+   "date": "2026-11-16"
+  },
+  "cutin_frost_t4": {
+   "file": "res://assets/generated/frost/cutin_frost_t4.png",
+   "prompt": "anime mage princess with long wavy light copper-blonde hair (not red), pale grey eyes, deep blue and ivory royal mage robes with gold trim, raising both arms as a giant glacier erupts behind her, epic ice magic, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 896,
+   "height": 512,
+   "seed": 2213,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.3,
+   "date": "2026-11-16"
+  },
+  "vfx_ice_spear": {
+   "file": "res://assets/generated/frost/vfx_ice_spear.png",
+   "prompt": "a long horizontal spear of glowing blue ice pointing right with a frost trail, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 768,
+   "height": 384,
+   "seed": 2301,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 81.3,
+   "date": "2026-11-16"
+  },
+  "vfx_frost_nova": {
+   "file": "res://assets/generated/frost/vfx_frost_nova.png",
+   "prompt": "a circular burst explosion of ice shards and frost, top-down ring, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 2302,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 49.1,
+   "date": "2026-11-16"
+  },
+  "vfx_ice_prison": {
+   "file": "res://assets/generated/frost/vfx_ice_prison.png",
+   "prompt": "a block of ice crystal encasing nothing, frozen crystal shell with sharp spikes, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 2303,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 28.3,
+   "date": "2026-11-16"
+  },
+  "icon_chill": {
+   "file": "res://assets/generated/frost/icon_chill.png",
+   "prompt": "a single snowflake game icon, glowing pale blue ice crystal, ornate silver rim, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 2401,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 58.2,
+   "date": "2026-11-16"
+  }
+ }
+}

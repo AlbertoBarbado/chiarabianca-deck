@@ -1,0 +1,122 @@
+[
+  {
+    "id": "beach_sunken_chest",
+    "name": "Sunken Chest",
+    "description": "A barnacled chest lies half buried at the waterline. Take one thing before the tide returns.",
+    "choices": [
+      {
+        "type": "gold",
+        "amount": 70,
+        "text": "A purse of 70 gold"
+      },
+      {
+        "type": "potion",
+        "item_id": "health_potion",
+        "count": 1,
+        "text": "A Health Potion"
+      },
+      {
+        "type": "relic",
+        "text": "A relic",
+        "rarity_weights": {
+          "common": 5,
+          "uncommon": 3,
+          "rare": 1
+        }
+      },
+      {
+        "type": "card",
+        "rarity": "uncommon",
+        "text": "A sea-worn technique (uncommon card)"
+      },
+      {
+        "type": "equipment",
+        "rarity_weights": {
+          "common": 2,
+          "uncommon": 3
+        },
+        "text": "A piece of equipment"
+      }
+    ]
+  },
+  {
+    "id": "beach_kelp_cache",
+    "name": "Kelp Forest Cache",
+    "description": "Among swaying kelp, a diver's satchel is caught on a rock.",
+    "choices": [
+      {
+        "type": "gold",
+        "amount": 80,
+        "text": "A purse of 80 gold"
+      },
+      {
+        "type": "potion",
+        "item_id": "health_potion",
+        "count": 2,
+        "text": "Health Potions"
+      },
+      {
+        "type": "relic",
+        "text": "A relic",
+        "rarity_weights": {
+          "common": 5,
+          "uncommon": 3,
+          "rare": 1
+        }
+      },
+      {
+        "type": "card",
+        "rarity": "rare",
+        "text": "A sea-worn technique (rare card)"
+      },
+      {
+        "type": "equipment",
+        "rarity_weights": {
+          "uncommon": 3,
+          "rare": 2
+        },
+        "text": "A piece of equipment"
+      }
+    ]
+  },
+  {
+    "id": "beach_tide_shrine",
+    "name": "Tide Shrine",
+    "description": "Offerings left to the sea gods glitter on an old altar. The sea lets you take one.",
+    "choices": [
+      {
+        "type": "gold",
+        "amount": 90,
+        "text": "A purse of 90 gold"
+      },
+      {
+        "type": "potion",
+        "item_id": "health_potion",
+        "count": 2,
+        "text": "Health Potions"
+      },
+      {
+        "type": "relic",
+        "text": "A relic",
+        "rarity_weights": {
+          "common": 5,
+          "uncommon": 3,
+          "rare": 1
+        }
+      },
+      {
+        "type": "card",
+        "rarity": "rare",
+        "text": "A sea-worn technique (rare card)"
+      },
+      {
+        "type": "equipment",
+        "rarity_weights": {
+          "uncommon": 3,
+          "rare": 2
+        },
+        "text": "A piece of equipment"
+      }
+    ]
+  }
+]

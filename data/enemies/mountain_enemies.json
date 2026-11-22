@@ -1,0 +1,551 @@
+[
+  {
+    "id": "mountain_frost_wolf",
+    "name": "Frost Wolf",
+    "max_hp": 22,
+    "color": "#cfe6f2",
+    "initiative": 6,
+    "element": "frost",
+    "weaknesses": {
+      "fire": 25,
+      "holy": 25
+    },
+    "resistances": {
+      "frost": 50
+    },
+    "actions": {
+      "frost_fang": {
+        "name": "Frost Fang",
+        "type": "attack",
+        "value": 7,
+        "element": "frost"
+      },
+      "rending_bite": {
+        "name": "Rending Bite",
+        "type": "attack",
+        "value": 9,
+        "element": "physical",
+        "status": {
+          "id": "bleed",
+          "value": 2
+        }
+      },
+      "pack_circle": {
+        "name": "Pack Circle",
+        "type": "defend",
+        "value": 5
+      }
+    },
+    "pattern": [
+      "frost_fang",
+      "pack_circle",
+      "rending_bite"
+    ]
+  },
+  {
+    "id": "mountain_polar_bear",
+    "name": "Polar Bear",
+    "max_hp": 46,
+    "color": "#efe9dc",
+    "initiative": 2,
+    "element": "physical",
+    "weaknesses": {
+      "lightning": 25,
+      "poison": 25,
+      "arcane": 25
+    },
+    "resistances": {
+      "frost": 50,
+      "physical": 15
+    },
+    "actions": {
+      "maul": {
+        "name": "Maul",
+        "type": "attack",
+        "value": 9,
+        "element": "physical"
+      },
+      "crushing_hug": {
+        "name": "Crushing Hug",
+        "type": "attack",
+        "value": 13,
+        "element": "physical",
+        "status": {
+          "id": "bleed",
+          "value": 1
+        }
+      },
+      "thick_hide": {
+        "name": "Thick Hide",
+        "type": "defend",
+        "value": 9
+      }
+    },
+    "pattern": [
+      "maul",
+      "thick_hide",
+      "crushing_hug"
+    ]
+  },
+  {
+    "id": "mountain_yeti",
+    "name": "Yeti",
+    "max_hp": 50,
+    "color": "#dfe8f0",
+    "initiative": 3,
+    "element": "frost",
+    "weaknesses": {
+      "fire": 25,
+      "lightning": 25
+    },
+    "resistances": {
+      "frost": 75,
+      "physical": 20
+    },
+    "actions": {
+      "snowball_barrage": {
+        "name": "Snowball Barrage",
+        "type": "attack",
+        "value": 5,
+        "element": "frost",
+        "status": {
+          "id": "frostbitten",
+          "value": 2
+        },
+        "target": "all"
+      },
+      "pummel": {
+        "name": "Pummel",
+        "type": "attack",
+        "value": 12,
+        "element": "physical"
+      },
+      "ice_roar": {
+        "name": "Ice Roar",
+        "type": "defend",
+        "value": 8
+      }
+    },
+    "pattern": [
+      "snowball_barrage",
+      "pummel",
+      "ice_roar"
+    ]
+  },
+  {
+    "id": "mountain_crystal_spider",
+    "name": "Crystal Spider",
+    "max_hp": 26,
+    "color": "#b9c8ff",
+    "initiative": 5,
+    "element": "arcane",
+    "weaknesses": {
+      "physical": 50,
+      "earth": 25
+    },
+    "resistances": {
+      "arcane": 50,
+      "poison": 75,
+      "frost": 25
+    },
+    "actions": {
+      "shard_bite": {
+        "name": "Shard Bite",
+        "type": "attack",
+        "value": 6,
+        "element": "physical",
+        "status": {
+          "id": "bleed",
+          "value": 2
+        }
+      },
+      "prism_web": {
+        "name": "Prism Web",
+        "type": "attack",
+        "value": 5,
+        "element": "arcane",
+        "status": {
+          "id": "frostbitten",
+          "value": 2
+        }
+      },
+      "facet_shell": {
+        "name": "Facet Shell",
+        "type": "defend",
+        "value": 7
+      }
+    },
+    "pattern": [
+      "shard_bite",
+      "prism_web",
+      "facet_shell"
+    ]
+  },
+  {
+    "id": "mountain_rime_wraith",
+    "name": "Rime Wraith",
+    "max_hp": 30,
+    "color": "#9fc6e0",
+    "initiative": 6,
+    "element": "shadow",
+    "weaknesses": {
+      "holy": 50,
+      "fire": 25
+    },
+    "resistances": {
+      "physical": 40,
+      "frost": 50,
+      "poison": 75,
+      "shadow": 50
+    },
+    "actions": {
+      "chilling_touch": {
+        "name": "Chilling Touch",
+        "type": "attack",
+        "value": 6,
+        "element": "frost",
+        "status": {
+          "id": "frostbitten",
+          "value": 2
+        }
+      },
+      "soul_frost": {
+        "name": "Soul Frost",
+        "type": "attack",
+        "value": 4,
+        "element": "shadow",
+        "target": "all"
+      },
+      "fade": {
+        "name": "Fade into Mist",
+        "type": "defend",
+        "value": 8
+      }
+    },
+    "pattern": [
+      "chilling_touch",
+      "soul_frost",
+      "fade"
+    ]
+  },
+  {
+    "id": "mountain_ice_drake",
+    "name": "Ice Drake",
+    "max_hp": 44,
+    "color": "#8fd0f0",
+    "initiative": 4,
+    "element": "frost",
+    "weaknesses": {
+      "lightning": 50,
+      "earth": 25,
+      "poison": 25
+    },
+    "resistances": {
+      "frost": 75,
+      "fire": 25
+    },
+    "actions": {
+      "frost_breath": {
+        "name": "Frost Breath",
+        "type": "attack",
+        "value": 5,
+        "element": "frost",
+        "status": {
+          "id": "frostbitten",
+          "value": 2
+        },
+        "target": "all"
+      },
+      "drake_claw": {
+        "name": "Drake Claw",
+        "type": "attack",
+        "value": 10,
+        "element": "physical"
+      },
+      "ice_scales": {
+        "name": "Ice Scales",
+        "type": "defend",
+        "value": 9
+      }
+    },
+    "pattern": [
+      "frost_breath",
+      "drake_claw",
+      "ice_scales"
+    ]
+  },
+  {
+    "id": "mountain_storm_roc",
+    "name": "Storm Roc",
+    "max_hp": 32,
+    "color": "#7f8fa8",
+    "initiative": 7,
+    "element": "lightning",
+    "weaknesses": {
+      "arcane": 25,
+      "frost": 25,
+      "physical": 25
+    },
+    "resistances": {
+      "lightning": 75,
+      "wind": 50
+    },
+    "actions": {
+      "thunder_dive": {
+        "name": "Thunder Dive",
+        "type": "attack",
+        "value": 10,
+        "element": "lightning"
+      },
+      "gale_wings": {
+        "name": "Gale Wings",
+        "type": "attack",
+        "value": 5,
+        "element": "wind",
+        "target": "all"
+      },
+      "soar": {
+        "name": "Soar",
+        "type": "defend",
+        "value": 7
+      }
+    },
+    "pattern": [
+      "thunder_dive",
+      "gale_wings",
+      "soar"
+    ]
+  },
+  {
+    "id": "elite_woolly_mammoth",
+    "name": "Woolly Mammoth",
+    "max_hp": 112,
+    "color": "#8a6a4a",
+    "initiative": 2,
+    "element": "physical",
+    "elite": true,
+    "weaknesses": {
+      "poison": 25,
+      "arcane": 25
+    },
+    "resistances": {
+      "frost": 50,
+      "physical": 25
+    },
+    "actions": {
+      "trample": {
+        "name": "Trample",
+        "type": "attack",
+        "value": 8,
+        "element": "physical",
+        "target": "all"
+      },
+      "tusk_gore": {
+        "name": "Tusk Gore",
+        "type": "attack",
+        "value": 16,
+        "element": "physical",
+        "status": {
+          "id": "bleed",
+          "value": 2
+        }
+      },
+      "woolly_hide": {
+        "name": "Woolly Hide",
+        "type": "defend",
+        "value": 14
+      }
+    },
+    "pattern": [
+      "trample",
+      "tusk_gore",
+      "woolly_hide"
+    ]
+  },
+  {
+    "id": "elite_crystal_matriarch",
+    "name": "Crystal Matriarch",
+    "max_hp": 98,
+    "color": "#a690ff",
+    "initiative": 5,
+    "element": "arcane",
+    "elite": true,
+    "weaknesses": {
+      "physical": 50,
+      "holy": 25
+    },
+    "resistances": {
+      "arcane": 75,
+      "poison": 75,
+      "frost": 25
+    },
+    "actions": {
+      "crystal_storm": {
+        "name": "Crystal Storm",
+        "type": "attack",
+        "value": 6,
+        "element": "arcane",
+        "status": {
+          "id": "bleed",
+          "value": 1
+        },
+        "target": "all"
+      },
+      "impale": {
+        "name": "Impale",
+        "type": "attack",
+        "value": 14,
+        "element": "physical",
+        "status": {
+          "id": "bleed",
+          "value": 3
+        }
+      },
+      "brood_shell": {
+        "name": "Brood Shell",
+        "type": "defend",
+        "value": 14
+      },
+      "prism_ray": {
+        "name": "Prism Ray",
+        "type": "attack",
+        "value": 9,
+        "element": "arcane",
+        "status": {
+          "id": "frostbitten",
+          "value": 2
+        }
+      }
+    },
+    "pattern": [
+      "crystal_storm",
+      "impale",
+      "brood_shell",
+      "prism_ray"
+    ]
+  },
+  {
+    "id": "elite_ice_giant",
+    "name": "Ice Giant",
+    "max_hp": 126,
+    "color": "#9ed8ff",
+    "initiative": 3,
+    "element": "frost",
+    "elite": true,
+    "weaknesses": {
+      "arcane": 50,
+      "lightning": 25
+    },
+    "resistances": {
+      "frost": 75,
+      "physical": 25
+    },
+    "actions": {
+      "glacier_club": {
+        "name": "Glacier Club",
+        "type": "attack",
+        "value": 19,
+        "element": "physical"
+      },
+      "avalanche": {
+        "name": "Avalanche",
+        "type": "attack",
+        "value": 10,
+        "element": "frost",
+        "status": {
+          "id": "frostbitten",
+          "value": 2
+        },
+        "target": "all"
+      },
+      "ice_armour": {
+        "name": "Ice Armour",
+        "type": "defend",
+        "value": 18
+      }
+    },
+    "pattern": [
+      "avalanche",
+      "glacier_club",
+      "ice_armour"
+    ]
+  },
+  {
+    "id": "boss_white_dragon",
+    "name": "Vaelith, the White Dragon",
+    "max_hp": 195,
+    "color": "#eaf6ff",
+    "boss": true,
+    "initiative": 9,
+    "element": "frost",
+    "weaknesses": {
+      "arcane": 25,
+      "poison": 25
+    },
+    "resistances": {
+      "frost": 50,
+      "wind": 25,
+      "physical": 15,
+      "fire": 15
+    },
+    "actions": {
+      "frost_breath": {
+        "name": "Frost Breath",
+        "type": "attack",
+        "value": 7,
+        "element": "frost",
+        "status": {
+          "id": "frostbitten",
+          "value": 2
+        },
+        "target": "all"
+      },
+      "crystal_talons": {
+        "name": "Crystal Talons",
+        "type": "attack",
+        "value": 13,
+        "element": "physical",
+        "status": {
+          "id": "bleed",
+          "value": 2
+        }
+      },
+      "wing_gale": {
+        "name": "Wing Gale",
+        "type": "attack",
+        "value": 6,
+        "element": "wind",
+        "target": "all"
+      },
+      "pearl_scales": {
+        "name": "Pearl Scales",
+        "type": "defend",
+        "value": 18
+      },
+      "absolute_zero": {
+        "name": "Absolute Zero",
+        "type": "attack",
+        "value": 10,
+        "element": "frost",
+        "status": {
+          "id": "frostbitten",
+          "value": 2
+        },
+        "target": "all"
+      }
+    },
+    "pattern": [
+      "frost_breath",
+      "crystal_talons",
+      "wing_gale",
+      "pearl_scales"
+    ],
+    "enrage_below": 0.5,
+    "enraged_pattern": [
+      "absolute_zero",
+      "crystal_talons",
+      "frost_breath",
+      "crystal_talons"
+    ]
+  }
+]

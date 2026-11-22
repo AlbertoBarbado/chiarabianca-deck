@@ -1,0 +1,21 @@
+{
+  "_comment": "Twin reactions: a hit of one sister's element on an enemy carrying the other sister's status sets off an extra effect. Checked after the hit, only for hits by party members (cards and passives, never status ticks or other reactions). Effect types: detonate (remove the status, deal stacks x per_stack damage of `element` to the target or ALL enemies), spread (give every other living enemy ceil(stacks x ratio), at least 1, of the status), add_status (add `value` stacks of `status_id` to the target), shatter (remove the status, deal stacks x per_stack damage of `element` to the target), block_source (the attacker gains stacks x per_stack Block). `pair` names the Chiara and Bianca specializations the reaction is designed for (shown in the combo guide).",
+  "reactions": [
+    {"id": "combustion", "name": "Combustion", "element": "fire", "status_id": "poison", "effect": "detonate", "per_stack": 3, "scope": "all_enemies", "damage_element": "fire", "pair": ["fire", "venom"], "color": "#ffa040",
+     "description": "Fire ignites Poison: each stack explodes for 3 Fire damage on EVERY enemy, then the Poison is gone."},
+    {"id": "miasma", "name": "Miasma", "element": "wind", "status_id": "poison", "effect": "spread", "ratio": 0.5, "pair": ["wind", "venom"], "color": "#9be05a",
+     "description": "Wind blows Poison on: every other enemy gains half its Poison (at least 1)."},
+    {"id": "fanned_oil", "name": "Fanned Oil", "element": "wind", "status_id": "oiled", "effect": "spread", "ratio": 0.5, "pair": ["wind", "ashveil"], "color": "#c8b070",
+     "description": "Wind sprays the oil: every other enemy gains half its Oiled (at least 1)."},
+    {"id": "black_ice", "name": "Black Ice", "element": "frost", "status_id": "oiled", "effect": "add_status", "add_status_id": "chill", "value": 1, "pair": ["frost", "ashveil"], "color": "#9fd8ff",
+     "description": "Frost freezes the oil: the target gains 1 extra Chill."},
+    {"id": "frostbite", "name": "Frostbite", "element": "frost", "status_id": "poison", "effect": "add_status", "add_status_id": "poison", "value": 2, "pair": ["frost", "venom"], "color": "#b8f0d0",
+     "description": "Frost locks the venom in: the target gains 2 Poison."},
+    {"id": "shatterlight", "name": "Shatterlight", "element": "holy", "status_id": "chill", "effect": "shatter", "per_stack": 2, "damage_element": "holy", "pair": ["frost", "holy"], "color": "#fff2b0",
+     "description": "Holy light shatters the ice: the Chill is removed and the target takes 2 Holy damage per stack."},
+    {"id": "purifying_flame", "name": "Purifying Flame", "element": "holy", "status_id": "burn", "effect": "block_source", "per_stack": 1, "pair": ["fire", "holy"], "color": "#ffd070",
+     "description": "Holy light feeds on the flames: Bianca gains 1 Block per Burn stack on the target."},
+    {"id": "searing_bash", "name": "Searing Bash", "element": "physical", "status_id": "burn", "effect": "add_status", "add_status_id": "burn", "value": 1, "pair": ["fire", "tanking"], "color": "#ff8a50",
+     "description": "A heavy blow fans the fire: the Burning target gains 1 Burn."}
+  ]
+}

@@ -1,0 +1,2438 @@
+{
+  "_comment": "Central art catalog. Every entry is a region of a concept board and is a PROVISIONAL placeholder; see docs/ASSET_LICENSES.md. Replace by pointing an entry at a production file (use 'path' instead of 'source'+'region').",
+  "sources": {
+    "initial": "res://assets/concept/voidfarer_initial_concept_board.png",
+    "detailed": "res://assets/concept/voidfarer_detailed_asset_board.png",
+    "chiara_cutout": "res://assets/ui/processed/chiara_cutout.png",
+    "bianca_cutout": "res://assets/ui/processed/bianca_cutout.png"
+  },
+  "assets": {
+    "portrait_chiara": {
+      "source": "initial",
+      "region": [
+        312,
+        128,
+        178,
+        352
+      ],
+      "category": "portrait",
+      "note": "Bust from concept board (separate panel).",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "portrait_bianca": {
+      "source": "initial",
+      "region": [
+        808,
+        128,
+        106,
+        190
+      ],
+      "category": "portrait",
+      "note": "Bust from concept board, re-cropped so the face is centred.",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "figure_chiara": {
+      "source": "initial",
+      "region": [
+        0,
+        20,
+        320,
+        435
+      ],
+      "category": "figure",
+      "note": "Full figure from concept board; name plate cropped out.",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "figure_bianca": {
+      "source": "initial",
+      "region": [
+        497,
+        20,
+        278,
+        460
+      ],
+      "category": "figure",
+      "note": "Full figure, centred on the body (hair to shield); a partial class emblem remains top-right.",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "bg_royal_chambers": {
+      "source": "detailed",
+      "region": [
+        818,
+        594,
+        224,
+        151
+      ],
+      "category": "background",
+      "note": "Royal Chambers thumbnail (about 224x151, upscaled; low resolution).",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "bg_resting_room": {
+      "source": "detailed",
+      "region": [
+        1054,
+        594,
+        224,
+        151
+      ],
+      "category": "background",
+      "note": "Resting Room thumbnail (about 224x151, upscaled; low resolution).",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "bg_merchant": {
+      "source": "detailed",
+      "region": [
+        1290,
+        594,
+        224,
+        151
+      ],
+      "category": "background",
+      "note": "Merchant thumbnail (about 224x151, upscaled; low resolution).",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "bg_training": {
+      "source": "detailed",
+      "region": [
+        818,
+        788,
+        224,
+        151
+      ],
+      "category": "background",
+      "note": "Training Room thumbnail (about 224x151, upscaled; low resolution).",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "bg_throne": {
+      "source": "detailed",
+      "region": [
+        1054,
+        788,
+        224,
+        151
+      ],
+      "category": "background",
+      "note": "Throne Room thumbnail (about 224x151, upscaled; low resolution).",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "bg_exit": {
+      "source": "detailed",
+      "region": [
+        1290,
+        788,
+        224,
+        151
+      ],
+      "category": "background",
+      "note": "Castle Exit thumbnail (about 224x151, upscaled; low resolution).",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "icon_energy": {
+      "source": "initial",
+      "region": [
+        1459,
+        20,
+        52,
+        60
+      ],
+      "category": "icon",
+      "note": "",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "icon_heal": {
+      "source": "initial",
+      "region": [
+        1459,
+        136,
+        52,
+        52
+      ],
+      "category": "icon",
+      "note": "Green cross; used for potions/healing.",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "icon_holy": {
+      "source": "initial",
+      "region": [
+        1459,
+        187,
+        52,
+        52
+      ],
+      "category": "icon",
+      "note": "",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "icon_arcane": {
+      "source": "initial",
+      "region": [
+        1459,
+        242,
+        52,
+        52
+      ],
+      "category": "icon",
+      "note": "",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "icon_frost": {
+      "source": "initial",
+      "region": [
+        1459,
+        287,
+        52,
+        52
+      ],
+      "category": "icon",
+      "note": "",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "icon_fire": {
+      "source": "initial",
+      "region": [
+        1459,
+        332,
+        52,
+        52
+      ],
+      "category": "icon",
+      "note": "",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "icon_lightning": {
+      "source": "initial",
+      "region": [
+        1459,
+        376,
+        52,
+        46
+      ],
+      "category": "icon",
+      "note": "",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "icon_health": {
+      "source": "detailed",
+      "region": [
+        804,
+        488,
+        44,
+        44
+      ],
+      "category": "icon",
+      "note": "",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "icon_block": {
+      "source": "detailed",
+      "region": [
+        856,
+        488,
+        44,
+        44
+      ],
+      "category": "icon",
+      "note": "",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "icon_burn": {
+      "source": "detailed",
+      "region": [
+        906,
+        488,
+        44,
+        44
+      ],
+      "category": "icon",
+      "note": "",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "icon_chilled": {
+      "source": "detailed",
+      "region": [
+        958,
+        488,
+        44,
+        44
+      ],
+      "category": "icon",
+      "note": "",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "icon_combat": {
+      "source": "initial",
+      "region": [
+        1058,
+        648,
+        60,
+        60
+      ],
+      "category": "icon",
+      "note": "Map/room-type icon (gold = merchant).",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "icon_rest": {
+      "source": "initial",
+      "region": [
+        1157,
+        648,
+        60,
+        60
+      ],
+      "category": "icon",
+      "note": "Map/room-type icon (gold = merchant).",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "icon_gold": {
+      "source": "initial",
+      "region": [
+        1253,
+        648,
+        60,
+        60
+      ],
+      "category": "icon",
+      "note": "Map/room-type icon (gold = merchant).",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "icon_event": {
+      "source": "initial",
+      "region": [
+        1352,
+        648,
+        60,
+        60
+      ],
+      "category": "icon",
+      "note": "Map/room-type icon (gold = merchant).",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "icon_exit": {
+      "source": "initial",
+      "region": [
+        1442,
+        648,
+        60,
+        60
+      ],
+      "category": "icon",
+      "note": "Map/room-type icon (gold = merchant).",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "art_arcane_orb": {
+      "source": "detailed",
+      "region": [
+        864,
+        56,
+        122,
+        70
+      ],
+      "category": "card_art",
+      "note": "Illustration cropped from a sample card on the concept board; reused thematically, not unique per card.",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "art_fireball": {
+      "source": "detailed",
+      "region": [
+        1032,
+        56,
+        122,
+        70
+      ],
+      "category": "card_art",
+      "note": "Illustration cropped from a sample card on the concept board; reused thematically, not unique per card.",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "art_shield": {
+      "source": "detailed",
+      "region": [
+        1200,
+        56,
+        122,
+        70
+      ],
+      "category": "card_art",
+      "note": "Illustration cropped from a sample card on the concept board; reused thematically, not unique per card.",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "art_holy_blade": {
+      "source": "detailed",
+      "region": [
+        1368,
+        56,
+        122,
+        70
+      ],
+      "category": "card_art",
+      "note": "Illustration cropped from a sample card on the concept board; reused thematically, not unique per card.",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "art_mana_silhouette": {
+      "source": "detailed",
+      "region": [
+        864,
+        290,
+        122,
+        70
+      ],
+      "category": "card_art",
+      "note": "Illustration cropped from a sample card on the concept board; reused thematically, not unique per card.",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "art_healing_hands": {
+      "source": "detailed",
+      "region": [
+        1032,
+        290,
+        122,
+        70
+      ],
+      "category": "card_art",
+      "note": "Illustration cropped from a sample card on the concept board; reused thematically, not unique per card.",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "art_aura_silhouette": {
+      "source": "detailed",
+      "region": [
+        1200,
+        290,
+        122,
+        70
+      ],
+      "category": "card_art",
+      "note": "Illustration cropped from a sample card on the concept board; reused thematically, not unique per card.",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "art_frost": {
+      "source": "detailed",
+      "region": [
+        1368,
+        290,
+        122,
+        70
+      ],
+      "category": "card_art",
+      "note": "Illustration cropped from a sample card on the concept board; reused thematically, not unique per card.",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "face_bianca": {
+      "source": "initial",
+      "region": [
+        776,
+        170,
+        136,
+        136
+      ],
+      "category": "portrait",
+      "note": "Square face crop (hair line to chin) from the Bianca bust panel, centred on her face.",
+      "status": "concept_crop",
+      "release_cleared": false
+    },
+    "map_royal_castle_background": {
+      "path": "res://assets/environments/maps/royal_castle_background.png",
+      "category": "map",
+      "note": "Generic parchment map background with a painted castle and gold-blue frame (1672x941), provided by the project owner as generated art. Contains no nodes, paths or text.",
+      "status": "provisional_generated",
+      "release_cleared": false
+    },
+    "figure_chiara_cutout": {
+      "path": "res://assets/ui/processed/chiara_cutout.png",
+      "category": "figure",
+      "note": "Full-body Chiara, checkerboard removed from chiara.jpg (original kept in assets/ui/general).",
+      "status": "provisional_generated",
+      "release_cleared": false
+    },
+    "figure_bianca_paladin_hd": {
+      "path": "res://assets/generated/figures/bianca_paladin.png",
+      "category": "figure",
+      "note": "Bianca's paladin figure redrawn at about twice the size of bianca_cutout.png (FLUX img2img, scripts/tools/comfy_upscale.py).",
+      "status": "provisional_generated",
+      "release_cleared": false
+    },
+    "figure_bianca_cutout": {
+      "path": "res://assets/ui/processed/bianca_cutout.png",
+      "category": "figure",
+      "note": "Bianca figure plus bust, checkerboard removed from bianca.jpg.",
+      "status": "provisional_generated",
+      "release_cleared": false
+    },
+    "face_chiara_cutout": {
+      "source": "chiara_cutout",
+      "region": [
+        346,
+        44,
+        176,
+        176
+      ],
+      "category": "portrait",
+      "note": "Square face crop of the Chiara cutout.",
+      "status": "provisional_generated",
+      "release_cleared": false
+    },
+    "face_bianca_cutout": {
+      "source": "bianca_cutout",
+      "region": [
+        290,
+        15,
+        200,
+        200
+      ],
+      "category": "portrait",
+      "note": "Square face crop of the Bianca cutout.",
+      "status": "provisional_generated",
+      "release_cleared": false
+    },
+    "battle_castle_generic": {
+      "path": "res://assets/environments/0_castle/castle_generic.jpg",
+      "category": "background",
+      "note": "Generic castle battle backdrop (opaque JPG, cover-fitted).",
+      "status": "provisional_generated",
+      "release_cleared": false
+    },
+    "menu_background": {
+      "path": "res://assets/ui/general/main_menu_background.jpg",
+      "category": "background",
+      "note": "Main menu castle illustration (opaque JPG, used as is).",
+      "status": "provisional_generated",
+      "release_cleared": false
+    },
+    "icon_chest": {
+      "path": "res://assets/ui/icons/icon_chest.png",
+      "category": "icon",
+      "note": "Milestone 5 generated icon (not release-cleared).",
+      "status": "provisional_generated",
+      "release_cleared": false
+    },
+    "icon_star": {
+      "path": "res://assets/ui/icons/icon_star.png",
+      "category": "icon",
+      "note": "Milestone 5 generated icon (not release-cleared).",
+      "status": "provisional_generated",
+      "release_cleared": false
+    },
+    "map_forest_background": {
+      "path": "res://assets/environments/maps/1_forest.jpg",
+      "category": "background",
+      "note": "Enchanted Forest map background (opaque JPG, shown whole).",
+      "status": "provisional_generated",
+      "release_cleared": false
+    },
+    "battle_forest": {
+      "path": "res://assets/environments/1_forest/forest_battle_background.png",
+      "category": "background",
+      "note": "Forest clearing battle backdrop (1672x941, owner-supplied generated art).",
+      "status": "provisional_generated",
+      "release_cleared": false
+    },
+    "map_crystal_hollow": {
+      "path": "res://assets/generated/demo/map_crystal_hollow.png",
+      "category": "map",
+      "note": "Demo map generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/demo/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "battle_crystal_hollow": {
+      "path": "res://assets/generated/demo/battle_crystal_hollow.png",
+      "category": "background",
+      "note": "Demo battle background generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "art_frost_bolt": {
+      "path": "res://assets/generated/frost/card_frost_bolt.png",
+      "note": "Frost card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/frost/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_frost_ward": {
+      "path": "res://assets/generated/frost/card_frost_ward.png",
+      "note": "Frost card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/frost/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_frost_chill": {
+      "path": "res://assets/generated/frost/card_frost_chill.png",
+      "note": "Frost card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/frost/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_frost_blizzard": {
+      "path": "res://assets/generated/frost/card_frost_blizzard.png",
+      "note": "Frost card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/frost/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_frost_nova": {
+      "path": "res://assets/generated/frost/card_frost_nova.png",
+      "note": "Frost card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/frost/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_frost_shatter": {
+      "path": "res://assets/generated/frost/card_frost_shatter.png",
+      "note": "Frost card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/frost/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_frost_glacier": {
+      "path": "res://assets/generated/frost/card_frost_glacier.png",
+      "note": "Frost card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/frost/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_frost_heart": {
+      "path": "res://assets/generated/frost/card_frost_heart.png",
+      "note": "Frost card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/frost/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_frost_avalanche": {
+      "path": "res://assets/generated/frost/card_frost_avalanche.png",
+      "note": "Frost card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/frost/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "map_sunlit_coast": {
+      "path": "res://assets/generated/beach/map_sunlit_coast.png",
+      "category": "map",
+      "note": "Sunlit Coast map generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "battle_beach": {
+      "path": "res://assets/generated/beach/battle_beach.png",
+      "category": "background",
+      "note": "Beach battle backdrop generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "battle_ship_deck": {
+      "path": "res://assets/generated/beach/battle_ship_deck.png",
+      "category": "background",
+      "note": "Ship deck battle backdrop for the coast's sea rooms, generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "battle_castle_yard": {
+      "path": "res://assets/generated/terrain/battle_castle_yard.png",
+      "category": "background",
+      "note": "Castle training courtyard battle backdrop, generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "battle_forest_mountain": {
+      "path": "res://assets/generated/terrain/battle_forest_mountain.png",
+      "category": "background",
+      "note": "Forest mountain pass battle backdrop, generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "battle_forest_deepwood": {
+      "path": "res://assets/generated/terrain/battle_forest_deepwood.png",
+      "category": "background",
+      "note": "Forest deep wood battle backdrop, generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "battle_crystal_chasm": {
+      "path": "res://assets/generated/terrain/battle_crystal_chasm.png",
+      "category": "background",
+      "note": "Crystal Hollow chasm ledge battle backdrop, generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "battle_crystal_ruins": {
+      "path": "res://assets/generated/terrain/battle_crystal_ruins.png",
+      "category": "background",
+      "note": "Crystal Hollow ancient ruins battle backdrop, generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "art_ash_slash": {
+      "path": "res://assets/generated/ashveil/card_ash_slash.png",
+      "note": "Ashveil art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/ashveil/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_ash_smoke": {
+      "path": "res://assets/generated/ashveil/card_ash_smoke.png",
+      "note": "Ashveil art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/ashveil/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_ash_flask": {
+      "path": "res://assets/generated/ashveil/card_ash_flask.png",
+      "note": "Ashveil art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/ashveil/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_ash_caltrops": {
+      "path": "res://assets/generated/ashveil/card_ash_caltrops.png",
+      "note": "Ashveil art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/ashveil/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_ash_powder": {
+      "path": "res://assets/generated/ashveil/card_ash_powder.png",
+      "note": "Ashveil art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/ashveil/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_ash_ignite": {
+      "path": "res://assets/generated/ashveil/card_ash_ignite.png",
+      "note": "Ashveil art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/ashveil/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_ash_shadow": {
+      "path": "res://assets/generated/ashveil/card_ash_shadow.png",
+      "note": "Ashveil art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/ashveil/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_ash_inferno": {
+      "path": "res://assets/generated/ashveil/card_ash_inferno.png",
+      "note": "Ashveil art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/ashveil/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_ash_veil": {
+      "path": "res://assets/generated/ashveil/card_ash_veil.png",
+      "note": "Ashveil art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/ashveil/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "icon_ashveil": {
+      "path": "res://assets/generated/ashveil/icon_ashveil.png",
+      "note": "Ashveil art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/ashveil/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "icon"
+    },
+    "icon_oiled": {
+      "path": "res://assets/generated/ashveil/icon_oiled.png",
+      "note": "Ashveil art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/ashveil/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "icon"
+    },
+    "art_arcana_siphon": {
+      "path": "res://assets/generated/aether/card_arcana_siphon.png",
+      "note": "Aether combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/aether/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_echo": {
+      "path": "res://assets/generated/aether/card_arcana_echo.png",
+      "note": "Aether combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/aether/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_weave": {
+      "path": "res://assets/generated/aether/card_arcana_weave.png",
+      "note": "Aether combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/aether/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_aetherlance": {
+      "path": "res://assets/generated/aether/card_arcana_aetherlance.png",
+      "note": "Aether combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/aether/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_hymn": {
+      "path": "res://assets/generated/aether/card_holy_hymn.png",
+      "note": "Aether combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/aether/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_lightfall": {
+      "path": "res://assets/generated/aether/card_holy_lightfall.png",
+      "note": "Aether combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/aether/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_cascade": {
+      "path": "res://assets/generated/aether/card_holy_cascade.png",
+      "note": "Aether combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/aether/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_wellspring": {
+      "path": "res://assets/generated/aether/card_holy_wellspring.png",
+      "note": "Aether combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/aether/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "icon_aether": {
+      "path": "res://assets/generated/aether/icon_aether.png",
+      "note": "Aether combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/aether/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "icon"
+    },
+    "map_royal_castle": {
+      "path": "res://assets/generated/maps/map_royal_castle.png",
+      "category": "map",
+      "note": "Royal Castle map: top-down illustrated castle grounds, generated locally with ComfyUI (FLUX.1 schnell). Replaces the older parchment picture, which is kept.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "map_enchanted_forest": {
+      "path": "res://assets/generated/maps/map_enchanted_forest.png",
+      "category": "map",
+      "note": "Enchanted Forest map: mountains (left), forest (middle), river and waterfalls (right), generated locally with ComfyUI (FLUX.1 schnell). Replaces the older parchment picture, which is kept.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "town_brookside_camp": {
+      "path": "res://assets/generated/towns/town_brookside_camp.png",
+      "category": "town",
+      "note": "Town scene (ComfyUI, FLUX.1 schnell).",
+      "status": "generated",
+      "release_cleared": false
+    },
+    "town_elderwood_village": {
+      "path": "res://assets/generated/towns/town_elderwood_village.png",
+      "category": "town",
+      "note": "Town scene (ComfyUI, FLUX.1 schnell).",
+      "status": "generated",
+      "release_cleared": false
+    },
+    "town_last_trader_outpost": {
+      "path": "res://assets/generated/towns/town_last_trader_outpost.png",
+      "category": "town",
+      "note": "Town scene (ComfyUI, FLUX.1 schnell).",
+      "status": "generated",
+      "release_cleared": false
+    },
+    "town_lantern_post": {
+      "path": "res://assets/generated/towns/town_lantern_post.png",
+      "category": "town",
+      "note": "Town scene (ComfyUI, FLUX.1 schnell).",
+      "status": "generated",
+      "release_cleared": false
+    },
+    "town_charcoal_camp": {
+      "path": "res://assets/generated/towns/town_charcoal_camp.png",
+      "category": "town",
+      "note": "Town scene (ComfyUI, FLUX.1 schnell).",
+      "status": "generated",
+      "release_cleared": false
+    },
+    "town_fishers_hamlet": {
+      "path": "res://assets/generated/towns/town_fishers_hamlet.png",
+      "category": "town",
+      "note": "Town scene (ComfyUI, FLUX.1 schnell).",
+      "status": "generated",
+      "release_cleared": false
+    },
+    "town_tide_camp": {
+      "path": "res://assets/generated/towns/town_tide_camp.png",
+      "category": "town",
+      "note": "Town scene (ComfyUI, FLUX.1 schnell).",
+      "status": "generated",
+      "release_cleared": false
+    },
+    "town_dune_village": {
+      "path": "res://assets/generated/towns/town_dune_village.png",
+      "category": "town",
+      "note": "Town scene (ComfyUI, FLUX.1 schnell).",
+      "status": "generated",
+      "release_cleared": false
+    },
+    "town_last_camp": {
+      "path": "res://assets/generated/towns/town_last_camp.png",
+      "category": "town",
+      "note": "Town scene (ComfyUI, FLUX.1 schnell).",
+      "status": "generated",
+      "release_cleared": false
+    },
+    "merchant_castle_potions": {
+      "path": "res://assets/generated/towns/merchant_castle_potions.png",
+      "category": "merchant",
+      "note": "Merchant at their shop (ComfyUI, FLUX.1 schnell).",
+      "status": "generated",
+      "release_cleared": false
+    },
+    "merchant_forest_peddler": {
+      "path": "res://assets/generated/towns/merchant_forest_peddler.png",
+      "category": "merchant",
+      "note": "Merchant at their shop (ComfyUI, FLUX.1 schnell).",
+      "status": "generated",
+      "release_cleared": false
+    },
+    "merchant_forest_village_market": {
+      "path": "res://assets/generated/towns/merchant_forest_village_market.png",
+      "category": "merchant",
+      "note": "Merchant at their shop (ComfyUI, FLUX.1 schnell).",
+      "status": "generated",
+      "release_cleared": false
+    },
+    "merchant_forest_last_trader": {
+      "path": "res://assets/generated/towns/merchant_forest_last_trader.png",
+      "category": "merchant",
+      "note": "Merchant at their shop (ComfyUI, FLUX.1 schnell).",
+      "status": "generated",
+      "release_cleared": false
+    },
+    "merchant_beach_fish_market": {
+      "path": "res://assets/generated/towns/merchant_beach_fish_market.png",
+      "category": "merchant",
+      "note": "Merchant at their shop (ComfyUI, FLUX.1 schnell).",
+      "status": "generated",
+      "release_cleared": false
+    },
+    "merchant_beach_dune_bazaar": {
+      "path": "res://assets/generated/towns/merchant_beach_dune_bazaar.png",
+      "category": "merchant",
+      "note": "Merchant at their shop (ComfyUI, FLUX.1 schnell).",
+      "status": "generated",
+      "release_cleared": false
+    },
+    "merchant_beach_last_merchant": {
+      "path": "res://assets/generated/towns/merchant_beach_last_merchant.png",
+      "category": "merchant",
+      "note": "Merchant at their shop (ComfyUI, FLUX.1 schnell).",
+      "status": "generated",
+      "release_cleared": false
+    },
+    "art_wind_bolt": {
+      "path": "res://assets/generated/wind/card_wind_bolt.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/wind/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_ward": {
+      "path": "res://assets/generated/wind/card_wind_ward.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/wind/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_flurry": {
+      "path": "res://assets/generated/wind/card_wind_flurry.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/wind/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_gust": {
+      "path": "res://assets/generated/wind/card_wind_gust.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/wind/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_razor": {
+      "path": "res://assets/generated/wind/card_wind_razor.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/wind/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_blades": {
+      "path": "res://assets/generated/wind/card_wind_blades.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/wind/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_updraft": {
+      "path": "res://assets/generated/wind/card_wind_updraft.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/wind/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_cyclone": {
+      "path": "res://assets/generated/wind/card_wind_cyclone.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/wind/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_scatter": {
+      "path": "res://assets/generated/wind/card_wind_scatter.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/wind/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_slipstream": {
+      "path": "res://assets/generated/wind/card_wind_slipstream.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/wind/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_barrier": {
+      "path": "res://assets/generated/wind/card_wind_barrier.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/wind/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_galeforce": {
+      "path": "res://assets/generated/wind/card_wind_galeforce.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/wind/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_eye": {
+      "path": "res://assets/generated/wind/card_wind_eye.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/wind/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_whisper": {
+      "path": "res://assets/generated/wind/card_wind_whisper.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/wind/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_hurricane": {
+      "path": "res://assets/generated/wind/card_wind_hurricane.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/wind/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_dancer": {
+      "path": "res://assets/generated/wind/card_wind_dancer.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/wind/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_strike": {
+      "path": "res://assets/generated/venom/card_venom_strike.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/venom/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_guard": {
+      "path": "res://assets/generated/venom/card_venom_guard.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/venom/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_envenom": {
+      "path": "res://assets/generated/venom/card_venom_envenom.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/venom/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_cut": {
+      "path": "res://assets/generated/venom/card_venom_cut.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/venom/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_cloud": {
+      "path": "res://assets/generated/venom/card_venom_cloud.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/venom/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_corrode": {
+      "path": "res://assets/generated/venom/card_venom_corrode.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/venom/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_veil": {
+      "path": "res://assets/generated/venom/card_venom_veil.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/venom/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_catalyst": {
+      "path": "res://assets/generated/venom/card_venom_catalyst.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/venom/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_mark": {
+      "path": "res://assets/generated/venom/card_venom_mark.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/venom/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_distill": {
+      "path": "res://assets/generated/venom/card_venom_distill.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/venom/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_reaping": {
+      "path": "res://assets/generated/venom/card_venom_reaping.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/venom/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_bloom": {
+      "path": "res://assets/generated/venom/card_venom_bloom.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/venom/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_septic": {
+      "path": "res://assets/generated/venom/card_venom_septic.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/venom/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_pestilence": {
+      "path": "res://assets/generated/venom/card_venom_pestilence.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/venom/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_ledger": {
+      "path": "res://assets/generated/venom/card_venom_ledger.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/venom/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_runic": {
+      "path": "res://assets/generated/combos/card_tanking_runic.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/combos/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_momentum": {
+      "path": "res://assets/generated/combos/card_tanking_momentum.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/combos/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_brand": {
+      "path": "res://assets/generated/combos/card_tanking_brand.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/combos/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_sunfire": {
+      "path": "res://assets/generated/combos/card_holy_sunfire.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/combos/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_psalm": {
+      "path": "res://assets/generated/combos/card_holy_psalm.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/combos/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_ash_hexpowder": {
+      "path": "res://assets/generated/combos/card_ash_hexpowder.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/combos/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_flashpoint": {
+      "path": "res://assets/generated/combos/card_fire_flashpoint.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/combos/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_wildfire": {
+      "path": "res://assets/generated/combos/card_fire_wildfire.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/combos/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "icon_wind": {
+      "path": "res://assets/generated/wind/icon_wind.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/wind/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "icon"
+    },
+    "icon_venom": {
+      "path": "res://assets/generated/venom/icon_venom.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/venom/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "icon"
+    },
+    "icon_blight": {
+      "path": "res://assets/generated/venom/icon_blight.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/venom/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "icon"
+    },
+    "icon_momentum": {
+      "path": "res://assets/generated/wind/icon_momentum.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/wind/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "icon"
+    },
+    "art_fire_volley": {
+      "path": "res://assets/generated/combos/card_fire_volley.png",
+      "note": "Twin combo art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/combos/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "figure_chiara_showcase": {
+      "source": "chiara_cutout",
+      "region": [
+        76,
+        0,
+        694,
+        975
+      ],
+      "category": "figure",
+      "note": "Chiara's full figure with the outer cape tips trimmed to Bianca's proportions (figure_chiara_cutout is the whole picture).",
+      "status": "provisional_generated",
+      "release_cleared": false
+    },
+    "art_fire_pyromancy": {
+      "path": "res://assets/generated/cards/card_fire_pyromancy.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_innerblaze": {
+      "path": "res://assets/generated/cards/card_fire_innerblaze.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_firestorm": {
+      "path": "res://assets/generated/cards/card_fire_firestorm.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_banked": {
+      "path": "res://assets/generated/cards/card_fire_banked.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_cauterize": {
+      "path": "res://assets/generated/cards/card_fire_cauterize.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_fan": {
+      "path": "res://assets/generated/cards/card_fire_fan.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_searing": {
+      "path": "res://assets/generated/cards/card_fire_searing.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_ignition": {
+      "path": "res://assets/generated/cards/card_fire_ignition.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_afterglow": {
+      "path": "res://assets/generated/cards/card_fire_afterglow.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_frost_permafrost": {
+      "path": "res://assets/generated/cards/card_frost_permafrost.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_frost_wintersgrip": {
+      "path": "res://assets/generated/cards/card_frost_wintersgrip.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_frost_icebarrier": {
+      "path": "res://assets/generated/cards/card_frost_icebarrier.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_frost_frostbite": {
+      "path": "res://assets/generated/cards/card_frost_frostbite.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_frost_hailstorm": {
+      "path": "res://assets/generated/cards/card_frost_hailstorm.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_frost_flashfreeze": {
+      "path": "res://assets/generated/cards/card_frost_flashfreeze.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_frost_glacialarmor": {
+      "path": "res://assets/generated/cards/card_frost_glacialarmor.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_frost_icicles": {
+      "path": "res://assets/generated/cards/card_frost_icicles.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_frost_clarity": {
+      "path": "res://assets/generated/cards/card_frost_clarity.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_leyattune": {
+      "path": "res://assets/generated/cards/card_arcana_leyattune.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_mastery": {
+      "path": "res://assets/generated/cards/card_arcana_mastery.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_manaburst": {
+      "path": "res://assets/generated/cards/card_arcana_manaburst.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_prepared": {
+      "path": "res://assets/generated/cards/card_arcana_prepared.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_shield": {
+      "path": "res://assets/generated/cards/card_arcana_shield.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_overcharge": {
+      "path": "res://assets/generated/cards/card_arcana_overcharge.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_sigil": {
+      "path": "res://assets/generated/cards/card_arcana_sigil.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_cascade": {
+      "path": "res://assets/generated/cards/card_arcana_cascade.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_nova": {
+      "path": "res://assets/generated/cards/card_arcana_nova.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_zephyr": {
+      "path": "res://assets/generated/cards/card_wind_zephyr.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_rhythm": {
+      "path": "res://assets/generated/cards/card_wind_rhythm.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_sharpened": {
+      "path": "res://assets/generated/cards/card_wind_sharpened.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_gather": {
+      "path": "res://assets/generated/cards/card_wind_gather.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_featherstep": {
+      "path": "res://assets/generated/cards/card_wind_featherstep.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_crosswind": {
+      "path": "res://assets/generated/cards/card_wind_crosswind.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_patience": {
+      "path": "res://assets/generated/cards/card_wind_patience.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_secondwind": {
+      "path": "res://assets/generated/cards/card_wind_secondwind.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_wind_galeburst": {
+      "path": "res://assets/generated/cards/card_wind_galeburst.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_devotion": {
+      "path": "res://assets/generated/cards/card_holy_devotion.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_consecration": {
+      "path": "res://assets/generated/cards/card_holy_consecration.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_blessedarms": {
+      "path": "res://assets/generated/cards/card_holy_blessedarms.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_favor": {
+      "path": "res://assets/generated/cards/card_holy_favor.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_patience": {
+      "path": "res://assets/generated/cards/card_holy_patience.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_radiant": {
+      "path": "res://assets/generated/cards/card_holy_radiant.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_purify": {
+      "path": "res://assets/generated/cards/card_holy_purify.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_hallowed": {
+      "path": "res://assets/generated/cards/card_holy_hallowed.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_chorus": {
+      "path": "res://assets/generated/cards/card_holy_chorus.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_ironskin": {
+      "path": "res://assets/generated/cards/card_tanking_ironskin.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_spikes": {
+      "path": "res://assets/generated/cards/card_tanking_spikes.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_entrench": {
+      "path": "res://assets/generated/cards/card_tanking_entrench.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_phalanx": {
+      "path": "res://assets/generated/cards/card_tanking_phalanx.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_brace": {
+      "path": "res://assets/generated/cards/card_tanking_brace.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_roar": {
+      "path": "res://assets/generated/cards/card_tanking_roar.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_bash": {
+      "path": "res://assets/generated/cards/card_tanking_bash.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_unbreakable": {
+      "path": "res://assets/generated/cards/card_tanking_unbreakable.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_warcry": {
+      "path": "res://assets/generated/cards/card_tanking_warcry.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_virulence": {
+      "path": "res://assets/generated/cards/card_venom_virulence.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_censer": {
+      "path": "res://assets/generated/cards/card_venom_censer.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_harvest": {
+      "path": "res://assets/generated/cards/card_venom_harvest.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_volley": {
+      "path": "res://assets/generated/cards/card_venom_volley.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_cloak": {
+      "path": "res://assets/generated/cards/card_venom_cloak.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_fester": {
+      "path": "res://assets/generated/cards/card_venom_fester.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_rupture": {
+      "path": "res://assets/generated/cards/card_venom_rupture.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_contagion": {
+      "path": "res://assets/generated/cards/card_venom_contagion.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_venom_wither": {
+      "path": "res://assets/generated/cards/card_venom_wither.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_ash_trapmaster": {
+      "path": "res://assets/generated/cards/card_ash_trapmaster.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_ash_slickground": {
+      "path": "res://assets/generated/cards/card_ash_slickground.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_ash_powderkeg": {
+      "path": "res://assets/generated/cards/card_ash_powderkeg.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_ash_hiddenblade": {
+      "path": "res://assets/generated/cards/card_ash_hiddenblade.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_ash_flashpowder": {
+      "path": "res://assets/generated/cards/card_ash_flashpowder.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_ash_beartrap": {
+      "path": "res://assets/generated/cards/card_ash_beartrap.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_ash_vanish": {
+      "path": "res://assets/generated/cards/card_ash_vanish.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_ash_fanknives": {
+      "path": "res://assets/generated/cards/card_ash_fanknives.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_ash_shadowarts": {
+      "path": "res://assets/generated/cards/card_ash_shadowarts.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_ember": {
+      "path": "res://assets/generated/cards/card_fire_ember.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_cinderward": {
+      "path": "res://assets/generated/cards/card_fire_cinderward.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_kindle": {
+      "path": "res://assets/generated/cards/card_fire_kindle.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_fireball": {
+      "path": "res://assets/generated/cards/card_fire_fireball.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_immolate": {
+      "path": "res://assets/generated/cards/card_fire_immolate.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_fuel": {
+      "path": "res://assets/generated/cards/card_fire_fuel.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_wave": {
+      "path": "res://assets/generated/cards/card_fire_wave.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_smokescreen": {
+      "path": "res://assets/generated/cards/card_fire_smokescreen.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_inferno": {
+      "path": "res://assets/generated/cards/card_fire_inferno.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_epic_phoenix": {
+      "path": "res://assets/generated/cards/card_fire_epic_phoenix.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_fire_epic_heart": {
+      "path": "res://assets/generated/cards/card_fire_epic_heart.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_bolt": {
+      "path": "res://assets/generated/cards/card_arcana_bolt.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_ward": {
+      "path": "res://assets/generated/cards/card_arcana_ward.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_focus": {
+      "path": "res://assets/generated/cards/card_arcana_focus.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_surge": {
+      "path": "res://assets/generated/cards/card_arcana_surge.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_lance": {
+      "path": "res://assets/generated/cards/card_arcana_lance.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_barrier": {
+      "path": "res://assets/generated/cards/card_arcana_barrier.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_twinbolt": {
+      "path": "res://assets/generated/cards/card_arcana_twinbolt.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_epic_starstorm": {
+      "path": "res://assets/generated/cards/card_arcana_epic_starstorm.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_arcana_epic_timefold": {
+      "path": "res://assets/generated/cards/card_arcana_epic_timefold.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_strike": {
+      "path": "res://assets/generated/cards/card_holy_strike.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_shield": {
+      "path": "res://assets/generated/cards/card_holy_shield.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_ward": {
+      "path": "res://assets/generated/cards/card_holy_ward.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_smite": {
+      "path": "res://assets/generated/cards/card_holy_smite.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_bulwark": {
+      "path": "res://assets/generated/cards/card_holy_bulwark.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_epic_dawnbreaker": {
+      "path": "res://assets/generated/cards/card_holy_epic_dawnbreaker.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_holy_epic_sanctuary": {
+      "path": "res://assets/generated/cards/card_holy_epic_sanctuary.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_strike": {
+      "path": "res://assets/generated/cards/card_tanking_strike.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_guard": {
+      "path": "res://assets/generated/cards/card_tanking_guard.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_challenge": {
+      "path": "res://assets/generated/cards/card_tanking_challenge.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_rally": {
+      "path": "res://assets/generated/cards/card_tanking_rally.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_slam": {
+      "path": "res://assets/generated/cards/card_tanking_slam.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_wall": {
+      "path": "res://assets/generated/cards/card_tanking_wall.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_provoke": {
+      "path": "res://assets/generated/cards/card_tanking_provoke.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_oath": {
+      "path": "res://assets/generated/cards/card_tanking_oath.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_sweep": {
+      "path": "res://assets/generated/cards/card_tanking_sweep.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_wind": {
+      "path": "res://assets/generated/cards/card_tanking_wind.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_epic_fortress": {
+      "path": "res://assets/generated/cards/card_tanking_epic_fortress.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "art_tanking_epic_shieldstorm": {
+      "path": "res://assets/generated/cards/card_tanking_epic_shieldstorm.png",
+      "note": "Card art generated locally with ComfyUI (FLUX.1 schnell). See assets/generated/cards/generation_log.json.",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false,
+      "category": "card_art"
+    },
+    "map_frostpeak": {
+      "path": "res://assets/generated/mountain/map_frostpeak.png",
+      "category": "map",
+      "note": "Frostpeak map frame generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "map_frostpeak_climb": {
+      "path": "res://assets/generated/mountain/map_frostpeak_climb.png",
+      "category": "map",
+      "note": "Tall painting of Frostpeak that scrolls with the route chart generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "battle_mountain_slopes": {
+      "path": "res://assets/generated/mountain/battle_mountain_slopes.png",
+      "category": "background",
+      "note": "Snowy pine slope battle backdrop generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "battle_mountain_glacier": {
+      "path": "res://assets/generated/mountain/battle_mountain_glacier.png",
+      "category": "background",
+      "note": "Glacier ice cave battle backdrop generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "battle_mountain_summit": {
+      "path": "res://assets/generated/mountain/battle_mountain_summit.png",
+      "category": "background",
+      "note": "Summit ridge battle backdrop generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "battle_dragon_aerie": {
+      "path": "res://assets/generated/mountain/battle_dragon_aerie.png",
+      "category": "background",
+      "note": "White Dragon's aerie battle backdrop generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "town_pinefall_village": {
+      "path": "res://assets/generated/towns/town_pinefall_village.png",
+      "category": "town",
+      "note": "Town scene generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "town_ropebridge_outpost": {
+      "path": "res://assets/generated/towns/town_ropebridge_outpost.png",
+      "category": "town",
+      "note": "Town scene generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "town_cloud_monastery": {
+      "path": "res://assets/generated/towns/town_cloud_monastery.png",
+      "category": "town",
+      "note": "Town scene generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "town_last_cairn": {
+      "path": "res://assets/generated/towns/town_last_cairn.png",
+      "category": "town",
+      "note": "Town scene generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "merchant_mountain_furrier": {
+      "path": "res://assets/generated/towns/merchant_mountain_furrier.png",
+      "category": "merchant",
+      "note": "Merchant at their shop generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "merchant_mountain_monk": {
+      "path": "res://assets/generated/towns/merchant_mountain_monk.png",
+      "category": "merchant",
+      "note": "Merchant at their shop generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    }
+  },
+  "characters": {
+    "chiara": {
+      "portrait": "face_chiara_cutout",
+      "figure": "figure_chiara_showcase",
+      "face": "face_chiara_cutout"
+    },
+    "bianca": {
+      "portrait": "face_bianca_cutout",
+      "figure": "figure_bianca_paladin_hd",
+      "face": "face_bianca_cutout"
+    }
+  },
+  "icons": {
+    "energy": "icon_energy",
+    "health": "icon_health",
+    "block": "icon_block",
+    "burn": "icon_burn",
+    "gold": "icon_gold",
+    "potion": "icon_heal",
+    "heal": "icon_heal",
+    "rest": "icon_rest",
+    "merchant": "icon_gold",
+    "event": "icon_event",
+    "combat": "icon_combat",
+    "exit": "icon_exit",
+    "chilled": "icon_chilled",
+    "passive": "icon_holy",
+    "elite": "icon_star",
+    "treasure": "icon_chest",
+    "town": "icon_block",
+    "boss": "icon_star",
+    "oiled": "icon_oiled",
+    "aether": "icon_aether",
+    "blight": "icon_blight",
+    "momentum": "icon_momentum"
+  },
+  "rooms": {
+    "by_node": {
+      "royal_chambers": "bg_royal_chambers",
+      "training_yard": "bg_training",
+      "west_gallery": "bg_resting_room",
+      "west_training": "bg_training",
+      "central_courtyard": "bg_exit",
+      "east_armory": "bg_merchant",
+      "royal_library": "bg_resting_room",
+      "throne_approach": "bg_throne",
+      "castle_exit": "bg_exit"
+    },
+    "by_type": {
+      "start": "bg_royal_chambers",
+      "combat": "bg_training",
+      "rest": "bg_resting_room",
+      "merchant": "bg_merchant",
+      "event": "bg_exit",
+      "exit": "bg_exit",
+      "elite": "bg_throne",
+      "treasure": "bg_merchant",
+      "town": "bg_resting_room",
+      "boss": "bg_throne"
+    },
+    "tints": {
+      "start": "#3a6fd8",
+      "combat": "#b23a48",
+      "rest": "#4f9d6a",
+      "merchant": "#d4a64a",
+      "event": "#8a5fc8",
+      "exit": "#9fc4ff",
+      "elite": "#d4a24a",
+      "treasure": "#e0b84a",
+      "town": "#5fb0c8",
+      "boss": "#d81f3a"
+    },
+    "tint_by_node": {
+      "royal_library": "#4a6fd8",
+      "central_courtyard": "#8a5fc8"
+    },
+    "by_map": {
+      "enchanted_forest": "battle_forest",
+      "sunlit_coast": "battle_beach",
+      "crystal_hollow_demo": "battle_crystal_hollow",
+      "frostpeak": "battle_mountain_slopes"
+    }
+  },
+  "card_art": {
+    "by_card": {
+      "chiara_arcana_starfall": "art_arcane_orb",
+      "chiara_arcana_insight": "art_mana_silhouette",
+      "chiara_arcana_pulse": "art_mana_silhouette",
+      "bianca_holy_touch": "art_healing_hands",
+      "bianca_holy_mending": "art_healing_hands",
+      "bianca_holy_benediction": "art_healing_hands",
+      "bianca_holy_judgment": "art_holy_blade",
+      "chiara_frost_bolt": "art_frost_bolt",
+      "chiara_frost_ward": "art_frost_ward",
+      "chiara_frost_touch": "art_frost_chill",
+      "chiara_frost_spike": "art_frost_glacier",
+      "chiara_frost_nova": "art_frost_nova",
+      "chiara_frost_snap": "art_frost_chill",
+      "chiara_frost_shatter": "art_frost_shatter",
+      "chiara_frost_blizzard": "art_frost_blizzard",
+      "chiara_frost_rime": "art_frost_ward",
+      "chiara_frost_brand": "art_frost_chill",
+      "chiara_frost_zero": "art_frost_shatter",
+      "chiara_frost_glacier": "art_frost_glacier",
+      "chiara_frost_epic_avalanche": "art_frost_avalanche",
+      "chiara_frost_epic_heart": "art_frost_heart",
+      "bianca_ash_slash": "art_ash_slash",
+      "bianca_ash_veil": "art_ash_smoke",
+      "bianca_ash_flask": "art_ash_flask",
+      "bianca_ash_dagger": "art_ash_shadow",
+      "bianca_ash_caltrops": "art_ash_caltrops",
+      "bianca_ash_shadow": "art_ash_shadow",
+      "bianca_ash_smokebomb": "art_ash_smoke",
+      "bianca_ash_snare": "art_ash_flask",
+      "bianca_ash_powder": "art_ash_powder",
+      "bianca_ash_shadowstep": "art_ash_smoke",
+      "bianca_ash_ignite": "art_ash_ignite",
+      "bianca_ash_greasefire": "art_ash_ignite",
+      "bianca_ash_epic_ashfall": "art_ash_inferno",
+      "bianca_ash_epic_veil": "art_ash_veil",
+      "chiara_arcana_siphon": "art_arcana_siphon",
+      "chiara_arcana_echo": "art_arcana_echo",
+      "chiara_arcana_weave": "art_arcana_weave",
+      "chiara_arcana_aetherlance": "art_arcana_aetherlance",
+      "bianca_holy_hymn": "art_holy_hymn",
+      "bianca_holy_lightfall": "art_holy_lightfall",
+      "bianca_holy_cascade": "art_holy_cascade",
+      "bianca_holy_wellspring": "art_holy_wellspring",
+      "chiara_wind_bolt": "art_wind_bolt",
+      "chiara_wind_ward": "art_wind_ward",
+      "chiara_wind_flurry": "art_wind_flurry",
+      "chiara_wind_gust": "art_wind_gust",
+      "chiara_wind_razor": "art_wind_razor",
+      "chiara_wind_blades": "art_wind_blades",
+      "chiara_wind_updraft": "art_wind_updraft",
+      "chiara_wind_cyclone": "art_wind_cyclone",
+      "chiara_wind_scatter": "art_wind_scatter",
+      "chiara_wind_slipstream": "art_wind_slipstream",
+      "chiara_wind_barrier": "art_wind_barrier",
+      "chiara_wind_galeforce": "art_wind_galeforce",
+      "chiara_wind_eye": "art_wind_eye",
+      "chiara_wind_whisper": "art_wind_whisper",
+      "chiara_wind_epic_hurricane": "art_wind_hurricane",
+      "chiara_wind_epic_dancer": "art_wind_dancer",
+      "bianca_venom_strike": "art_venom_strike",
+      "bianca_venom_guard": "art_venom_guard",
+      "bianca_venom_envenom": "art_venom_envenom",
+      "bianca_venom_cut": "art_venom_cut",
+      "bianca_venom_cloud": "art_venom_cloud",
+      "bianca_venom_corrode": "art_venom_corrode",
+      "bianca_venom_veil": "art_venom_veil",
+      "bianca_venom_catalyst": "art_venom_catalyst",
+      "bianca_venom_mark": "art_venom_mark",
+      "bianca_venom_distill": "art_venom_distill",
+      "bianca_venom_reaping": "art_venom_reaping",
+      "bianca_venom_bloom": "art_venom_bloom",
+      "bianca_venom_septic": "art_venom_septic",
+      "bianca_venom_epic_pestilence": "art_venom_pestilence",
+      "bianca_venom_epic_ledger": "art_venom_ledger",
+      "bianca_tanking_runic": "art_tanking_runic",
+      "bianca_tanking_momentum": "art_tanking_momentum",
+      "bianca_tanking_brand": "art_tanking_brand",
+      "bianca_holy_sunfire": "art_holy_sunfire",
+      "bianca_holy_psalm": "art_holy_psalm",
+      "bianca_ash_hexpowder": "art_ash_hexpowder",
+      "chiara_fire_flashpoint": "art_fire_flashpoint",
+      "chiara_fire_wildfire": "art_fire_wildfire",
+      "chiara_fire_volley": "art_fire_volley",
+      "chiara_fire_pyromancy": "art_fire_pyromancy",
+      "chiara_fire_innerblaze": "art_fire_innerblaze",
+      "chiara_fire_firestorm": "art_fire_firestorm",
+      "chiara_fire_banked": "art_fire_banked",
+      "chiara_fire_cauterize": "art_fire_cauterize",
+      "chiara_fire_fan": "art_fire_fan",
+      "chiara_fire_searing": "art_fire_searing",
+      "chiara_fire_ignition": "art_fire_ignition",
+      "chiara_fire_afterglow": "art_fire_afterglow",
+      "chiara_frost_permafrost": "art_frost_permafrost",
+      "chiara_frost_wintersgrip": "art_frost_wintersgrip",
+      "chiara_frost_icebarrier": "art_frost_icebarrier",
+      "chiara_frost_frostbite": "art_frost_frostbite",
+      "chiara_frost_hailstorm": "art_frost_hailstorm",
+      "chiara_frost_flashfreeze": "art_frost_flashfreeze",
+      "chiara_frost_glacialarmor": "art_frost_glacialarmor",
+      "chiara_frost_icicles": "art_frost_icicles",
+      "chiara_frost_clarity": "art_frost_clarity",
+      "chiara_arcana_leyattune": "art_arcana_leyattune",
+      "chiara_arcana_mastery": "art_arcana_mastery",
+      "chiara_arcana_manaburst": "art_arcana_manaburst",
+      "chiara_arcana_prepared": "art_arcana_prepared",
+      "chiara_arcana_shield": "art_arcana_shield",
+      "chiara_arcana_overcharge": "art_arcana_overcharge",
+      "chiara_arcana_sigil": "art_arcana_sigil",
+      "chiara_arcana_cascade": "art_arcana_cascade",
+      "chiara_arcana_nova": "art_arcana_nova",
+      "chiara_wind_zephyr": "art_wind_zephyr",
+      "chiara_wind_rhythm": "art_wind_rhythm",
+      "chiara_wind_sharpened": "art_wind_sharpened",
+      "chiara_wind_gather": "art_wind_gather",
+      "chiara_wind_featherstep": "art_wind_featherstep",
+      "chiara_wind_crosswind": "art_wind_crosswind",
+      "chiara_wind_patience": "art_wind_patience",
+      "chiara_wind_secondwind": "art_wind_secondwind",
+      "chiara_wind_galeburst": "art_wind_galeburst",
+      "bianca_holy_devotion": "art_holy_devotion",
+      "bianca_holy_consecration": "art_holy_consecration",
+      "bianca_holy_blessedarms": "art_holy_blessedarms",
+      "bianca_holy_favor": "art_holy_favor",
+      "bianca_holy_patience": "art_holy_patience",
+      "bianca_holy_radiant": "art_holy_radiant",
+      "bianca_holy_purify": "art_holy_purify",
+      "bianca_holy_hallowed": "art_holy_hallowed",
+      "bianca_holy_chorus": "art_holy_chorus",
+      "bianca_tanking_ironskin": "art_tanking_ironskin",
+      "bianca_tanking_spikes": "art_tanking_spikes",
+      "bianca_tanking_entrench": "art_tanking_entrench",
+      "bianca_tanking_phalanx": "art_tanking_phalanx",
+      "bianca_tanking_brace": "art_tanking_brace",
+      "bianca_tanking_roar": "art_tanking_roar",
+      "bianca_tanking_bash": "art_tanking_bash",
+      "bianca_tanking_unbreakable": "art_tanking_unbreakable",
+      "bianca_tanking_warcry": "art_tanking_warcry",
+      "bianca_venom_virulence": "art_venom_virulence",
+      "bianca_venom_censer": "art_venom_censer",
+      "bianca_venom_harvest": "art_venom_harvest",
+      "bianca_venom_volley": "art_venom_volley",
+      "bianca_venom_cloak": "art_venom_cloak",
+      "bianca_venom_fester": "art_venom_fester",
+      "bianca_venom_rupture": "art_venom_rupture",
+      "bianca_venom_contagion": "art_venom_contagion",
+      "bianca_venom_wither": "art_venom_wither",
+      "bianca_ash_trapmaster": "art_ash_trapmaster",
+      "bianca_ash_slickground": "art_ash_slickground",
+      "bianca_ash_powderkeg": "art_ash_powderkeg",
+      "bianca_ash_hiddenblade": "art_ash_hiddenblade",
+      "bianca_ash_flashpowder": "art_ash_flashpowder",
+      "bianca_ash_beartrap": "art_ash_beartrap",
+      "bianca_ash_vanish": "art_ash_vanish",
+      "bianca_ash_fanknives": "art_ash_fanknives",
+      "bianca_ash_shadowarts": "art_ash_shadowarts",
+      "chiara_fire_ember": "art_fire_ember",
+      "chiara_fire_cinderward": "art_fire_cinderward",
+      "chiara_fire_kindle": "art_fire_kindle",
+      "chiara_fire_fireball": "art_fire_fireball",
+      "chiara_fire_immolate": "art_fire_immolate",
+      "chiara_fire_fuel": "art_fire_fuel",
+      "chiara_fire_wave": "art_fire_wave",
+      "chiara_fire_smokescreen": "art_fire_smokescreen",
+      "chiara_fire_inferno": "art_fire_inferno",
+      "chiara_fire_epic_phoenix": "art_fire_epic_phoenix",
+      "chiara_fire_epic_heart": "art_fire_epic_heart",
+      "chiara_arcana_bolt": "art_arcana_bolt",
+      "chiara_arcana_ward": "art_arcana_ward",
+      "chiara_arcana_focus": "art_arcana_focus",
+      "chiara_arcana_surge": "art_arcana_surge",
+      "chiara_arcana_lance": "art_arcana_lance",
+      "chiara_arcana_barrier": "art_arcana_barrier",
+      "chiara_arcana_twinbolt": "art_arcana_twinbolt",
+      "chiara_arcana_epic_starstorm": "art_arcana_epic_starstorm",
+      "chiara_arcana_epic_timefold": "art_arcana_epic_timefold",
+      "bianca_holy_strike": "art_holy_strike",
+      "bianca_holy_shield": "art_holy_shield",
+      "bianca_holy_ward": "art_holy_ward",
+      "bianca_holy_smite": "art_holy_smite",
+      "bianca_holy_bulwark": "art_holy_bulwark",
+      "bianca_holy_epic_dawnbreaker": "art_holy_epic_dawnbreaker",
+      "bianca_holy_epic_sanctuary": "art_holy_epic_sanctuary",
+      "bianca_tanking_strike": "art_tanking_strike",
+      "bianca_tanking_guard": "art_tanking_guard",
+      "bianca_tanking_challenge": "art_tanking_challenge",
+      "bianca_tanking_rally": "art_tanking_rally",
+      "bianca_tanking_slam": "art_tanking_slam",
+      "bianca_tanking_wall": "art_tanking_wall",
+      "bianca_tanking_provoke": "art_tanking_provoke",
+      "bianca_tanking_oath": "art_tanking_oath",
+      "bianca_tanking_sweep": "art_tanking_sweep",
+      "bianca_tanking_wind": "art_tanking_wind",
+      "bianca_tanking_epic_fortress": "art_tanking_epic_fortress",
+      "bianca_tanking_epic_shieldstorm": "art_tanking_epic_shieldstorm"
+    },
+    "by_specialization": {
+      "arcana": "art_arcane_orb",
+      "fire": "art_fireball",
+      "holy": "art_holy_blade",
+      "tanking": "art_shield",
+      "frost": "art_frost_bolt",
+      "ashveil": "art_ash_slash",
+      "wind": "art_wind_bolt",
+      "venom": "art_venom_strike"
+    },
+    "by_type": {
+      "defense": "art_shield",
+      "support": "art_aura_silhouette"
+    }
+  }
+}

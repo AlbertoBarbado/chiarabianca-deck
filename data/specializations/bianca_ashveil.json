@@ -1,0 +1,72 @@
+{
+  "id": "ashveil",
+  "character_id": "bianca",
+  "identity": "A knight who fights like a rogue: oil, black powder, smoke and traps.",
+  "starting_passive": {
+    "id": "ashveil_passive",
+    "name": "Slick Tricks",
+    "description": "The first time Bianca applies Oiled each turn, she slips into the smoke and gains 3 Block.",
+    "trigger": {
+      "event": "status_applied",
+      "status_id": "oiled",
+      "applied_by": "owner"
+    },
+    "limit_per_turn": 1,
+    "effect": {
+      "effect": "bonus_block",
+      "value": 3
+    }
+  },
+  "starting_deck_card_ids": [
+    "bianca_ash_slash",
+    "bianca_ash_slash",
+    "bianca_ash_slash",
+    "bianca_ash_slash",
+    "bianca_ash_veil",
+    "bianca_ash_veil",
+    "bianca_ash_veil",
+    "bianca_ash_flask",
+    "bianca_ash_flask",
+    "bianca_ash_flask"
+  ],
+  "card_pool": [
+    "bianca_ash_dagger",
+    "bianca_ash_caltrops",
+    "bianca_ash_shadow",
+    "bianca_ash_smokebomb",
+    "bianca_ash_snare",
+    "bianca_ash_powder",
+    "bianca_ash_shadowstep",
+    "bianca_ash_ignite",
+    "bianca_ash_greasefire",
+    "bianca_ash_hexpowder",
+    "bianca_ash_trapmaster",
+    "bianca_ash_slickground",
+    "bianca_ash_powderkeg",
+    "bianca_ash_hiddenblade",
+    "bianca_ash_flashpowder",
+    "bianca_ash_beartrap",
+    "bianca_ash_vanish",
+    "bianca_ash_fanknives",
+    "bianca_ash_shadowarts"
+  ],
+  "skill_tree": {
+    "nodes": [],
+    "note": "Add skill nodes as the specialization is implemented."
+  },
+  "status": "playable",
+  "display_name": "Ashveil",
+  "description": "Bianca trades the paladin's light for oil, powder and smoke. Oiled foes hit softer and burn hotter: every stack makes Fire hurt them more, so Chiara's flames finish what Bianca's traps begin.",
+  "epic_pool": [
+    "bianca_ash_epic_ashfall",
+    "bianca_ash_epic_veil"
+  ],
+  "keywords": [
+    "oiled"
+  ],
+  "visual": {
+    "accent": "#e08a3c",
+    "icon": "icon_ashveil"
+  },
+  "damage_element": "physical"
+}

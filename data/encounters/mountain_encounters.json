@@ -1,0 +1,283 @@
+[
+  {
+    "id": "mountain_pine_trailhead",
+    "name": "Pine Trailhead",
+    "terrain": "slopes",
+    "enemies": [
+      "mountain_frost_wolf",
+      "mountain_frost_wolf"
+    ],
+    "gold_reward": 16
+  },
+  {
+    "id": "mountain_bear_hollow",
+    "name": "Bear Hollow",
+    "terrain": "slopes",
+    "enemies": [
+      "mountain_polar_bear"
+    ],
+    "gold_reward": 16
+  },
+  {
+    "id": "mountain_wolf_ridge",
+    "name": "Wolf Ridge",
+    "terrain": "slopes",
+    "enemies": [
+      "mountain_frost_wolf",
+      "mountain_frost_wolf",
+      "mountain_frost_wolf"
+    ],
+    "gold_reward": 18
+  },
+  {
+    "id": "mountain_fallen_pines",
+    "name": "Fallen Pines",
+    "terrain": "slopes",
+    "enemies": [
+      "mountain_yeti"
+    ],
+    "gold_reward": 18
+  },
+  {
+    "id": "mountain_snowfield",
+    "name": "Open Snowfield",
+    "terrain": "slopes",
+    "enemies": [
+      "mountain_frost_wolf",
+      "mountain_polar_bear"
+    ],
+    "gold_reward": 20
+  },
+  {
+    "id": "mountain_icy_brook",
+    "name": "Icy Brook",
+    "terrain": "slopes",
+    "enemies": [
+      "mountain_frost_wolf",
+      "mountain_yeti"
+    ],
+    "gold_reward": 20
+  },
+  {
+    "id": "mountain_avalanche_chute",
+    "name": "Avalanche Chute",
+    "terrain": "slopes",
+    "enemies": [
+      "mountain_polar_bear",
+      "mountain_frost_wolf"
+    ],
+    "gold_reward": 20
+  },
+  {
+    "id": "mountain_frozen_mill",
+    "name": "Frozen Mill",
+    "terrain": "slopes",
+    "enemies": [
+      "mountain_yeti",
+      "mountain_frost_wolf"
+    ],
+    "gold_reward": 22
+  },
+  {
+    "id": "mountain_crevasse_field",
+    "name": "Crevasse Field",
+    "terrain": "glacier",
+    "enemies": [
+      "mountain_crystal_spider",
+      "mountain_crystal_spider"
+    ],
+    "gold_reward": 22
+  },
+  {
+    "id": "mountain_ice_cave_mouth",
+    "name": "Ice Cave Mouth",
+    "terrain": "glacier",
+    "enemies": [
+      "mountain_crystal_spider",
+      "mountain_rime_wraith"
+    ],
+    "gold_reward": 22
+  },
+  {
+    "id": "mountain_rime_hollow",
+    "name": "Rime Hollow",
+    "terrain": "glacier",
+    "enemies": [
+      "mountain_rime_wraith",
+      "mountain_rime_wraith"
+    ],
+    "gold_reward": 22
+  },
+  {
+    "id": "mountain_frozen_falls",
+    "name": "Frozen Falls",
+    "terrain": "glacier",
+    "enemies": [
+      "mountain_ice_drake"
+    ],
+    "gold_reward": 22
+  },
+  {
+    "id": "mountain_rope_bridge",
+    "name": "Swaying Rope Bridge",
+    "terrain": "glacier",
+    "enemies": [
+      "mountain_ice_drake",
+      "mountain_crystal_spider"
+    ],
+    "gold_reward": 24
+  },
+  {
+    "id": "mountain_blue_labyrinth",
+    "name": "Blue Labyrinth",
+    "terrain": "glacier",
+    "enemies": [
+      "mountain_rime_wraith",
+      "mountain_crystal_spider",
+      "mountain_crystal_spider"
+    ],
+    "gold_reward": 24
+  },
+  {
+    "id": "mountain_icefall",
+    "name": "The Icefall",
+    "terrain": "glacier",
+    "enemies": [
+      "mountain_ice_drake",
+      "mountain_rime_wraith"
+    ],
+    "gold_reward": 24
+  },
+  {
+    "id": "mountain_frozen_lake",
+    "name": "Frozen Lake",
+    "terrain": "glacier",
+    "enemies": [
+      "mountain_ice_drake",
+      "mountain_crystal_spider"
+    ],
+    "gold_reward": 24
+  },
+  {
+    "id": "mountain_crystal_bridge",
+    "name": "Crystal Bridge",
+    "terrain": "glacier",
+    "enemies": [
+      "mountain_crystal_spider",
+      "mountain_crystal_spider",
+      "mountain_rime_wraith"
+    ],
+    "gold_reward": 24
+  },
+  {
+    "id": "mountain_thunder_cliffs",
+    "name": "Thunder Cliffs",
+    "terrain": "summit",
+    "enemies": [
+      "mountain_storm_roc",
+      "mountain_storm_roc"
+    ],
+    "gold_reward": 26
+  },
+  {
+    "id": "mountain_eagle_crag",
+    "name": "Eagle Crag",
+    "terrain": "summit",
+    "enemies": [
+      "mountain_storm_roc",
+      "mountain_ice_drake"
+    ],
+    "gold_reward": 26
+  },
+  {
+    "id": "mountain_whiteout",
+    "name": "Whiteout",
+    "terrain": "summit",
+    "enemies": [
+      "mountain_yeti",
+      "mountain_rime_wraith"
+    ],
+    "gold_reward": 28
+  },
+  {
+    "id": "mountain_knife_ridge",
+    "name": "Knife Ridge",
+    "terrain": "summit",
+    "enemies": [
+      "mountain_storm_roc",
+      "mountain_yeti"
+    ],
+    "gold_reward": 28
+  },
+  {
+    "id": "mountain_storm_ledge",
+    "name": "Storm Ledge",
+    "terrain": "summit",
+    "enemies": [
+      "mountain_storm_roc",
+      "mountain_storm_roc",
+      "mountain_ice_drake"
+    ],
+    "gold_reward": 28
+  },
+  {
+    "id": "mountain_dragons_shadow",
+    "name": "Dragon's Shadow",
+    "terrain": "summit",
+    "enemies": [
+      "mountain_ice_drake",
+      "mountain_ice_drake"
+    ],
+    "gold_reward": 30
+  },
+  {
+    "id": "elite_woolly_mammoth",
+    "name": "Mammoth Pass",
+    "terrain": "slopes",
+    "enemies": [
+      "elite_woolly_mammoth"
+    ],
+    "gold_reward": 60
+  },
+  {
+    "id": "elite_crystal_matriarch",
+    "name": "Crystal Nest",
+    "terrain": "glacier",
+    "enemies": [
+      "elite_crystal_matriarch",
+      "mountain_crystal_spider"
+    ],
+    "gold_reward": 66
+  },
+  {
+    "id": "elite_ice_giant",
+    "name": "Giant's Stair",
+    "terrain": "summit",
+    "enemies": [
+      "elite_ice_giant"
+    ],
+    "gold_reward": 70
+  },
+  {
+    "id": "boss_white_dragon",
+    "name": "Dragon's Aerie",
+    "enemies": [
+      "boss_white_dragon"
+    ],
+    "gold_reward": 140,
+    "reward": {
+      "pool": "epic",
+      "card_options": 3
+    }
+  },
+  {
+    "id": "mountain_brood_ambush",
+    "name": "Brood Ambush",
+    "terrain": "summit",
+    "enemies": [
+      "mountain_ice_drake",
+      "mountain_ice_drake"
+    ],
+    "gold_reward": 34
+  }
+]

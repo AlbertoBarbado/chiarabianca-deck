@@ -1,0 +1,175 @@
+{
+ "_comment": "Generated locally with ComfyUI. Model: FLUX.1 [schnell] (Apache 2.0, black-forest-labs) GGUF Q3_K_S by city96; text encoders CLIP-L + T5-XXL GGUF; background removal BiRefNet (MIT). 4 steps, euler/simple, CFG 1.",
+ "assets": {
+  "card_arcana_siphon": {
+   "file": "res://assets/generated/aether/card_arcana_siphon.png",
+   "prompt": "a violet arcane bolt piercing a shadow wraith while ribbons of glowing blue ley energy flow back into a floating crystal orb held in an outstretched hand, blank glowing pages, no writing, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6421,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 60.2,
+   "date": "2026-11-19"
+  },
+  "card_arcana_echo": {
+   "file": "res://assets/generated/aether/card_arcana_echo.png",
+   "prompt": "concentric rings of glowing violet light rippling outward like echoes from a single bright point, floating blank cards of light spiralling upward, starry dark background, no star symbol, no hexagram, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6422,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 124.8,
+   "date": "2026-11-19"
+  },
+  "card_arcana_weave": {
+   "file": "res://assets/generated/aether/card_arcana_weave.png",
+   "prompt": "glowing blue and violet leylines weaving across a night landscape into a radiant knot of arcane energy, threads of light, epic and mystical, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6403,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 113.0,
+   "date": "2026-11-19"
+  },
+  "card_arcana_aetherlance": {
+   "file": "res://assets/generated/aether/card_arcana_aetherlance.png",
+   "prompt": "a long lance of crackling violet and white aether light streaking through the air, shimmering motes trailing behind it, dark sky, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6404,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 133.0,
+   "date": "2026-11-19"
+  },
+  "card_holy_hymn": {
+   "file": "res://assets/generated/aether/card_holy_hymn.png",
+   "prompt": "a single knight's longsword held point up toward a golden sunrise, seen from behind a gauntleted hand, beams of holy light and floating violet motes of magic gathering around the one blade, cathedral silhouette, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6425,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 58.2,
+   "date": "2026-11-19"
+  },
+  "card_holy_lightfall": {
+   "file": "res://assets/generated/aether/card_holy_lightfall.png",
+   "prompt": "a colossal pillar of golden holy light crashing down from the clouds onto a dark monster, violet arcane sparks swirling into the beam, dramatic, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6406,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 58.4,
+   "date": "2026-11-19"
+  },
+  "card_holy_cascade": {
+   "file": "res://assets/generated/aether/card_holy_cascade.png",
+   "prompt": "waves of radiant golden light cascading across a battlefield from a glowing shield, sparkles of violet magic, sweeping motion, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6407,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 66.2,
+   "date": "2026-11-19"
+  },
+  "card_holy_wellspring": {
+   "file": "res://assets/generated/aether/card_holy_wellspring.png",
+   "prompt": "a glowing sacred spring of golden light rising from a marble fountain, violet arcane motes dissolving into warm healing light, serene, fantasy trading card illustration, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed, dramatic composition, no text, no border, no frame",
+   "width": 768,
+   "height": 448,
+   "seed": 6408,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 60.3,
+   "date": "2026-11-19"
+  },
+  "icon_aether": {
+   "file": "res://assets/generated/aether/icon_aether.png",
+   "prompt": "a single game icon of a glowing violet four-pointed star made of arcane light with a small golden halo, ornate silver rim, single game inventory item icon, centered, isolated on a plain flat light grey background, no text, no hands, no character, ornate fantasy design, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 512,
+   "height": 512,
+   "seed": 6411,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 92.5,
+   "date": "2026-11-19"
+  },
+  "vfx_aether_release": {
+   "file": "res://assets/generated/aether/vfx_aether_release.png",
+   "prompt": "a radiant burst of golden holy light with violet arcane motes spiralling into it, starburst rays, single magic spell effect, glowing, isolated on a pure black background, centered, no characters, no text, game visual effect sprite, high contrast, high quality hand-painted fantasy illustration, anime JRPG art style, rich colours, soft cinematic lighting, detailed",
+   "width": 640,
+   "height": 640,
+   "seed": 6412,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 84.4,
+   "date": "2026-11-19"
+  }
+ }
+}

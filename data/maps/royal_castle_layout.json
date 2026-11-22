@@ -1,0 +1,60 @@
+{
+  "id": "royal_castle_layout",
+  "layout_for": "royal_castle_tutorial",
+  "_comment": "Presentation only. Normalised (0..1) positions on the top-down castle picture (assets/generated/maps/map_royal_castle.png): each room sits on its building. The route climbs from the Royal Chambers (lower-left court) past the fountain courtyard to the Castle Gate (gatehouse, top).",
+  "background_asset": "map_royal_castle",
+  "node_size": [
+    82,
+    82
+  ],
+  "default_bend": 0.06,
+  "nodes": {
+    "royal_chambers": [
+      0.3,
+      0.82
+    ],
+    "west_gallery": [
+      0.15,
+      0.6
+    ],
+    "training_yard": [
+      0.42,
+      0.5
+    ],
+    "west_training": [
+      0.2,
+      0.38
+    ],
+    "central_courtyard": [
+      0.53,
+      0.72
+    ],
+    "east_armory": [
+      0.86,
+      0.74
+    ],
+    "royal_library": [
+      0.85,
+      0.46
+    ],
+    "throne_approach": [
+      0.64,
+      0.44
+    ],
+    "castle_exit": [
+      0.51,
+      0.2
+    ]
+  },
+  "label_sides": {
+    "royal_chambers": "below",
+    "west_gallery": "below",
+    "training_yard": "below",
+    "west_training": "below",
+    "central_courtyard": "below",
+    "east_armory": "below",
+    "royal_library": "below",
+    "throne_approach": "below",
+    "castle_exit": "right"
+  }
+}
