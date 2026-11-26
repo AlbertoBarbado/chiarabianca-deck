@@ -70,6 +70,9 @@ static func is_fully_connected(map_def: Dictionary) -> bool:
 
 static func vary_fixed(template: Dictionary, rng: RandomNumberGenerator) -> Dictionary:
 	var map_def: Dictionary = template.duplicate(true)
+	var authored := {}
+	for node: Dictionary in map_def.get("nodes", []):
+		authored[str(node.get("id", ""))] = str(node.get("encounter_id", ""))
 	var depth := depths(map_def)
 	var max_depth := 0
 	for value: Variant in depth.values():
@@ -90,7 +93,23 @@ static func vary_fixed(template: Dictionary, rng: RandomNumberGenerator) -> Dict
 		_shuffle_field(members, "elite", rng)
 		_swap_elites(members, rng)
 	_prune_links(map_def, rng)
+	name_rooms_after_encounters(map_def, authored)
 	return map_def
+
+
+## A room whose encounter changed takes the encounter's own name, so "Wolf Trail" never hides a
+## spider nest. Rooms that kept their authored encounter keep their authored name; objective rooms
+## keep their objective name. `authored` maps node id -> original encounter id ({} = rename all).
+static func name_rooms_after_encounters(map_def: Dictionary, authored: Dictionary = {}) -> void:
+	for node: Dictionary in map_def.get("nodes", []):
+		var encounter_id := str(node.get("encounter_id", ""))
+		if encounter_id == "" or bool(node.get("objective", false)):
+			continue
+		if authored.has(str(node.get("id", ""))) and str(authored[str(node["id"])]) == encounter_id:
+			continue
+		var encounter_name := str(DataRegistry.get_encounter(encounter_id).get("name", ""))
+		if encounter_name != "":
+			node["name"] = encounter_name
 
 
 ## Shuffles the encounters among the nodes of one type in a group.
@@ -206,6 +225,7 @@ static func generate(mission: Dictionary, rng: RandomNumberGenerator) -> Diction
 	var pools := pools_from(template)
 	for attempt in MAX_ATTEMPTS:
 		var map_def := _build(mission, template, pools, rng)
+		name_rooms_after_encounters(map_def)
 		if is_fully_connected(map_def):
 			return {"map_def": map_def, "layout_def": _layout_for(map_def, template, spec)}
 	return {"map_def": {}, "layout_def": {}}
@@ -417,3 +437,173 @@ static func _layout_for(map_def: Dictionary, template: Dictionary, spec: Diction
 			x += (hash(str(node["id"])) % 7 - 3) * 0.012
 		layout["nodes"][node["id"]] = [snappedf(x, 0.001), snappedf(0.95 - share * 0.9, 0.001)]
 	return layout
+
+
+# --- Contract maps: the region's layout, re-rolled encounters ------------------------------------
+
+## Encounter pools for a region's contracts ({map_id, pools: [extra map ids]}):
+## {fights: {terrain | "*": [[band0], [band1], [band2]]}, elites: {terrain | "*": [ids]},
+##  all_elites: [ids], bosses: [ids]}. "*" holds every fight / elite of the maps.
+static func remix_pools(block: Dictionary) -> Dictionary:
+	var pools := {"fights": {"*": [[], [], []]}, "elites": {"*": []}, "all_elites": [], "bosses": []}
+	var map_ids: Array = [str(block.get("map_id", ""))]
+	for extra: Variant in block.get("pools", []):
+		map_ids.append(str(extra))
+	for map_id: Variant in map_ids:
+		var template := DataRegistry.get_map(str(map_id))
+		var depth := depths(template)
+		var max_depth := 0
+		for value: Variant in depth.values():
+			max_depth = maxi(max_depth, int(value))
+		for node: Dictionary in template.get("nodes", []):
+			var encounter_id := str(node.get("encounter_id", ""))
+			if encounter_id == "" or DataRegistry.get_encounter(encounter_id).is_empty():
+				continue
+			var terrain := str(node.get("terrain", ""))
+			match str(node.get("type", "")):
+				"combat":
+					if bool(node.get("final_encounter", false)):
+						continue
+					var band := _band(int(depth.get(str(node["id"]), 0)), max_depth)
+					for key in [terrain, "*"]:
+						if key == "":
+							continue
+						if not (pools["fights"] as Dictionary).has(key):
+							pools["fights"][key] = [[], [], []]
+						_add_unique(pools["fights"][key][band], encounter_id)
+				"elite":
+					for key in [terrain, "*"]:
+						if key == "":
+							continue
+						if not (pools["elites"] as Dictionary).has(key):
+							pools["elites"][key] = []
+						_add_unique(pools["elites"][key], encounter_id)
+					_add_unique(pools["all_elites"], encounter_id)
+				"boss":
+					_add_unique(pools["bosses"], encounter_id)
+	return pools
+
+
+## A contract's map: the template's rooms, links (some side links pruned) and art, with every fight
+## and elite re-rolled from the region's pools, extra elites for higher tiers and the quest's marked
+## rooms (mission "map": {map_id, pools, kind, tier, target}). Returns {} when the template is missing.
+static func remix(mission: Dictionary, rng: RandomNumberGenerator) -> Dictionary:
+	var spec: Dictionary = mission.get("map", {})
+	var template := DataRegistry.get_map(str(spec.get("map_id", "")))
+	if template.is_empty():
+		return {}
+	var map_def: Dictionary = template.duplicate(true)
+	map_def.erase("rules")
+	var pools := remix_pools(spec)
+	var depth := depths(map_def)
+	var max_depth := 0
+	for value: Variant in depth.values():
+		max_depth = maxi(max_depth, int(value))
+	var band_of := func(node: Dictionary) -> int: return _band(int(depth.get(str(node["id"]), 0)), max_depth)
+	var used := {}
+	var fights: Array = []
+	var elites: Array = []
+	for node: Dictionary in map_def.get("nodes", []):
+		match str(node.get("type", "")):
+			"combat":
+				if bool(node.get("final_encounter", false)):
+					continue
+				node["encounter_id"] = _remix_fight(pools, str(node.get("terrain", "")), band_of.call(node), used, rng)
+				fights.append(node)
+			"elite":
+				node["encounter_id"] = _remix_elite(pools, str(node.get("terrain", "")), used, rng)
+				elites.append(node)
+	# Higher tiers (and patrols) turn some later fights into elite packs.
+	var kind := str(spec.get("kind", "patrol"))
+	var tier := int(spec.get("tier", 1))
+	var extra := clampi(int(tier / 2) + (1 if kind == "patrol" else 0), 0, 3)
+	var late: Array = fights.filter(func(n: Dictionary) -> bool: return int(band_of.call(n)) >= 1)
+	_shuffle(late, rng)
+	for node: Dictionary in late.slice(0, extra):
+		if (pools["all_elites"] as Array).is_empty():
+			break
+		node["type"] = "elite"
+		node["encounter_id"] = _remix_elite(pools, str(node.get("terrain", "")), used, rng)
+		fights.erase(node)
+		elites.append(node)
+	match kind:
+		"hunt":
+			_mark_hunt(map_def, fights, elites, str(spec.get("target", "")), band_of)
+		"purge":
+			_mark_purge(fights, band_of, rng)
+		"boss":
+			var target := str(spec.get("target", ""))
+			for node: Dictionary in map_def.get("nodes", []):
+				if str(node.get("type", "")) == "boss" and target != "":
+					node["encounter_id"] = target
+	_prune_links(map_def, rng)
+	name_rooms_after_encounters(map_def, {})
+	return map_def
+
+
+static func _remix_fight(pools: Dictionary, terrain: String, band: int, used: Dictionary, rng: RandomNumberGenerator) -> String:
+	var by_terrain: Dictionary = pools["fights"]
+	var key := terrain if by_terrain.has(terrain) else "*"
+	var bands: Array = by_terrain[key]
+	var options: Array = []
+	for offset in [0, -1, 1, -2, 2]:
+		var b: int = band + offset
+		if b >= 0 and b < bands.size() and not (bands[b] as Array).is_empty():
+			options = bands[b]
+			break
+	if options.is_empty():
+		for b: Variant in by_terrain["*"]:
+			options = options + (b as Array)
+	return _pick_fresh(options, used, rng)
+
+
+static func _remix_elite(pools: Dictionary, terrain: String, used: Dictionary, rng: RandomNumberGenerator) -> String:
+	var by_terrain: Dictionary = pools["elites"]
+	var options: Array = by_terrain.get(terrain, []) if not (by_terrain.get(terrain, []) as Array).is_empty() else pools["all_elites"]
+	return _pick_fresh(options, used, rng)
+
+
+static func _pick_fresh(options: Array, used: Dictionary, rng: RandomNumberGenerator) -> String:
+	if options.is_empty():
+		return ""
+	var fresh: Array = options.filter(func(id: String) -> bool: return not used.has(id))
+	var from: Array = fresh if not fresh.is_empty() else options
+	var pick := str(from[rng.randi_range(0, from.size() - 1)])
+	used[pick] = true
+	return pick
+
+
+## Hunt: the deepest elite room holds the bounty target (a late fight becomes it if there is none).
+static func _mark_hunt(map_def: Dictionary, fights: Array, elites: Array, target: String, band_of: Callable) -> void:
+	var candidates: Array = elites if not elites.is_empty() else fights
+	if candidates.is_empty() or target == "":
+		return
+	var best: Dictionary = candidates[0]
+	for node: Dictionary in candidates:
+		if int(band_of.call(node)) > int(band_of.call(best)):
+			best = node
+	best["type"] = "elite"
+	best["encounter_id"] = target
+	best["objective"] = true
+	best["name"] = str(DataRegistry.get_encounter(target).get("name", "Bounty"))
+
+
+## Purge: three marked fights spread over the early, middle and late parts of the route.
+static func _mark_purge(fights: Array, band_of: Callable, rng: RandomNumberGenerator) -> void:
+	var marked := 0
+	for band in [0, 1, 2]:
+		var options: Array = fights.filter(func(n: Dictionary) -> bool: return int(band_of.call(n)) == band and not bool(n.get("objective", false)))
+		if options.is_empty():
+			continue
+		var node: Dictionary = options[rng.randi_range(0, options.size() - 1)]
+		node["objective"] = true
+		node["name"] = str(DataRegistry.get_encounter(str(node["encounter_id"])).get("name", "Lair"))
+		marked += 1
+	# Small maps: mark more fights until three (or every fight) are marked.
+	for node: Dictionary in fights:
+		if marked >= 3:
+			break
+		if not bool(node.get("objective", false)):
+			node["objective"] = true
+			node["name"] = str(DataRegistry.get_encounter(str(node["encounter_id"])).get("name", "Lair"))
+			marked += 1

@@ -11,6 +11,8 @@ var current_hp: int = 1
 var max_hp: int = 1
 ## Max HP from relics (RelicEffects.apply_stats); derived from the owned relics, never saved.
 var extra_max_hp: int = 0
+## The part of extra_max_hp that comes from the sister's campaign level (saved with the member).
+var level_max_hp: int = 0
 var deck: Array[OwnedCard] = []
 ## Counter used to mint unique owned-card uids (persisted by saves).
 var next_card_serial: int = 1

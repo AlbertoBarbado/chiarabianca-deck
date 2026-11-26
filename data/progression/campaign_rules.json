@@ -24,7 +24,7 @@
     "min_per_sister": 8,
     "max_per_sister": 15,
     "max_copies": {"basic": 4, "common": 3, "uncommon": 2, "rare": 2, "epic": 1, "fusion": 1},
-    "secondary_card_limit": 4,
+    "secondary_card_limit": 6,
     "secondary_reward_weight": 0.5,
     "presets_max": 6,
     "note": "Prepared deck rules per sister. Cards must belong to the sister and to her primary or secondary specialization. Secondary cards are capped and appear in rewards at reduced weight."

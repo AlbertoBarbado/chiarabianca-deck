@@ -18,9 +18,43 @@ static func create(p_relic_id: String, icon_size: int = 40) -> RelicIcon:
 	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	icon.mouse_filter = Control.MOUSE_FILTER_STOP
 	icon.texture = texture_for(p_relic_id)
-	var def := DataRegistry.get_item(p_relic_id)
-	icon.tooltip_text = "%s\n%s" % [def.get("name", p_relic_id), def.get("description", "")]
+	icon.tooltip_text = tooltip_for(p_relic_id)
 	return icon
+
+
+## The one relic hover text used everywhere: name, rarity and what it does.
+static func tooltip_for(p_relic_id: String) -> String:
+	var def := DataRegistry.get_item(p_relic_id)
+	var rarity := str(def.get("rarity", ""))
+	var kind := "Boss relic" if rarity == "boss" else ("Bond relic" if rarity == "bond" else ("%s relic" % rarity.capitalize() if rarity != "" else "Relic"))
+	return "%s  ·  %s\n%s" % [str(def.get("name", p_relic_id)), kind, str(def.get("description", ""))]
+
+
+## Several relics in one hover text (relic buttons and lists).
+static func tooltip_for_all(relic_ids: Array) -> String:
+	var parts: Array[String] = []
+	for relic_id: Variant in relic_ids:
+		parts.append(tooltip_for(str(relic_id)))
+	return "\n\n".join(parts)
+
+
+## A relic as icon + name (+ effect) row with the hover text on the whole row.
+static func row(p_relic_id: String, icon_size: int = 36, with_effect: bool = true) -> HBoxContainer:
+	var box := UIFactory.hbox(8)
+	box.name = "RelicRow_" + p_relic_id
+	box.tooltip_text = tooltip_for(p_relic_id)
+	box.mouse_filter = Control.MOUSE_FILTER_PASS
+	var icon := create(p_relic_id, icon_size)
+	icon.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	box.add_child(icon)
+	var def := DataRegistry.get_item(p_relic_id)
+	var text := UIFactory.label(str(def.get("name", p_relic_id)) + ((": " + str(def.get("description", ""))) if with_effect else ""), &"", true)
+	text.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	text.add_theme_color_override("font_color", rarity_color(str(def.get("rarity", "common"))).lightened(0.2))
+	text.tooltip_text = box.tooltip_text
+	text.mouse_filter = Control.MOUSE_FILTER_PASS
+	box.add_child(text)
+	return box
 
 
 static func texture_for(p_relic_id: String) -> Texture2D:

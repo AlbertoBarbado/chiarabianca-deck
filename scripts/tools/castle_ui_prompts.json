@@ -1,0 +1,395 @@
+{
+ "_note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md). Prompts are complete (no style suffix is added). Generate with: python scripts/tools/comfy_generate.py --group ui. Cut-outs (cutout: true) come out as transparent PNGs via BiRefNet. Textures and ornaments are composed into nine-patch panels and buttons by scripts/tools/compose_ui_kit.py.",
+ "bg_castle_hub": {
+  "prompt": "breathtaking hand-painted anime fantasy environment illustration, a grand white and gold royal castle with many slender spires on a cliff in the middle distance, waterfalls pouring down the cliff, warm golden light in every window, dusk sky with violet and rose clouds and first stars, a faint magical constellation circle glowing in the sky, small floating island with ruins far away, misty blue mountains on the right, foreground of a marble balcony terrace with stone balustrade and pillars, climbing roses and pink flowers at the lower corners, polished marble floor reflecting the sky, layered depth, painterly texture, soft cinematic light, celestial royal fantasy JRPG background art, empty space in the lower half for interface, no people, no characters, no text, no letters, no logo, no user interface",
+  "width": 1536,
+  "height": 864,
+  "seed": 20101,
+  "cutout": false,
+  "folder": "ui"
+ },
+ "tex_parchment": {
+  "prompt": "flat seamless texture of warm ivory parchment vellum paper, very subtle fibres and faint mottled stains, soft even lighting, light cream and pale beige tones, no folds, no text, no letters, no border, no frame, top-down scan, uniform, game UI material texture",
+  "width": 512,
+  "height": 512,
+  "seed": 20201,
+  "cutout": false,
+  "folder": "ui"
+ },
+ "tex_navy_enamel": {
+  "prompt": "flat seamless texture of deep midnight navy blue enamel with very faint swirling starry sparkles and subtle brushed lacquer grain, dark royal blue and indigo tones, soft even lighting, no text, no border, no frame, top-down, uniform, game UI material texture",
+  "width": 512,
+  "height": 512,
+  "seed": 20202,
+  "cutout": false,
+  "folder": "ui"
+ },
+ "tex_violet_enamel": {
+  "prompt": "flat seamless texture of rich deep violet and royal purple enamel with faint glowing magical shimmer and subtle lacquer grain, soft even lighting, no text, no border, no frame, top-down, uniform, game UI material texture",
+  "width": 512,
+  "height": 512,
+  "seed": 20203,
+  "cutout": false,
+  "folder": "ui"
+ },
+ "orn_corner": {
+  "prompt": "a single ornate antique gold baroque corner ornament, elegant filigree scrolls and leaves forming an L shaped frame corner, a small blue sapphire gem at the corner point, polished metal with soft highlights, front view, flat, isolated on a plain flat light grey background, no text, game UI decoration",
+  "width": 512,
+  "height": 512,
+  "seed": 20301,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "orn_divider": {
+  "prompt": "a single long thin horizontal ornate antique gold divider line ornament, delicate filigree flourishes symmetrical on both sides of a small four pointed star in the centre, polished metal, front view, flat, very wide and very thin, isolated on a plain flat light grey background, no text, game UI decoration",
+  "width": 1024,
+  "height": 192,
+  "seed": 20302,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "orn_crest": {
+  "prompt": "a single ornate antique gold royal crown crest ornament with symmetrical filigree wings and a small blue sapphire in the middle, polished metal, front view, flat, wide, isolated on a plain flat light grey background, no text, game UI title decoration",
+  "width": 768,
+  "height": 320,
+  "seed": 20303,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "frame_diamond": {
+  "prompt": "a single empty ornate diamond shaped medallion frame, rhombus standing on one corner, thick antique gold rim with fine engraving and four tiny sapphire studs at the points, the inside is plain dark midnight navy enamel, front view, symmetrical, isolated on a plain flat light grey background, no text, game UI icon frame",
+  "width": 512,
+  "height": 512,
+  "seed": 20304,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_svc_expeditions": {
+  "prompt": "game UI icon, an ornate golden compass rose star with eight points and a glowing blue gem centre, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 512,
+  "height": 512,
+  "seed": 20401,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_svc_library": {
+  "prompt": "game UI icon, three fanned fantasy playing cards with dark blue backs and gold star emblems, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 512,
+  "height": 512,
+  "seed": 20402,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_svc_collection": {
+  "prompt": "game UI icon, an ornate wooden treasure chest with gold trim, lid slightly open with a soft golden glow, painted fantasy JRPG style, soft highlights, three quarter front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 512,
+  "height": 512,
+  "seed": 20403,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_svc_armory": {
+  "prompt": "game UI icon, a royal heater shield of navy blue enamel with a golden fleur de lis and gold rim, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 512,
+  "height": 512,
+  "seed": 20404,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_svc_blacksmith": {
+  "prompt": "game UI icon, a smith hammer and a long steel tong crossed in an X, steel heads and wooden handles, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 512,
+  "height": 512,
+  "seed": 20405,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_svc_enchanter": {
+  "prompt": "game UI icon, two glowing magic crystals, one blue and one rose pink, merging into one radiant violet crystal with swirling sparkles, painted fantasy JRPG style, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 512,
+  "height": 512,
+  "seed": 20406,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_svc_apothecary": {
+  "prompt": "game UI icon, a round glass alchemy flask with glowing amber potion, cork stopper, sprigs of green herbs leaning against it, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 512,
+  "height": 512,
+  "seed": 20407,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_svc_training": {
+  "prompt": "game UI icon, an upright silver longsword with a gold hilt inside a golden laurel wreath, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 512,
+  "height": 512,
+  "seed": 20408,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_svc_sisters": {
+  "prompt": "game UI icon, two crescent moons facing each other forming a heart shape, one silver blue and one rose gold, a small star between them, soft glow, painted fantasy JRPG style, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 512,
+  "height": 512,
+  "seed": 20409,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_res_gold": {
+  "prompt": "game UI icon, a single shiny round gold coin with an embossed crown, slight angle, painted fantasy JRPG style, soft highlights, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 20501,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_res_essence": {
+  "prompt": "game UI icon, a single faceted four pointed star crystal of glowing pale violet and cyan light, starlight essence, painted fantasy JRPG style, soft glow, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 20502,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_res_bond": {
+  "prompt": "game UI icon, a single glossy rose red heart gem with a thin gold rim and a soft inner glow, painted fantasy JRPG style, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 20503,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_ui_home": {
+  "prompt": "game UI icon, a small ivory and gold castle keep with a blue pointed roof, simple silhouette shape, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 20504,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_ui_settings": {
+  "prompt": "game UI icon, an ornate antique gold cogwheel gear with a small blue gem in the centre, front view, painted fantasy JRPG style, soft highlights, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 20505,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_ui_lock": {
+  "prompt": "game UI icon, an old ornate antique gold padlock with engraved filigree, closed, front view, painted fantasy JRPG style, soft highlights, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 20506,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "bg_main_menu": {
+  "prompt": "breathtaking hand-painted anime fantasy environment illustration, a grand white and gold royal castle with slender spires and glowing windows on a cliff in the right half of the image, twilight sky turning from deep violet to rose gold with first stars and a crescent moon, distant floating islands, mountains and a waterfall, foreground of a marble garden terrace with pink roses and lanterns at the lower left, layered depth, painterly texture, soft cinematic light, celestial royal fantasy JRPG background art, calm open sky and soft clouds in the upper left for a title, no people, no characters, no text, no letters, no logo, no user interface",
+  "width": 1536,
+  "height": 864,
+  "seed": 21001,
+  "cutout": false,
+  "folder": "ui"
+ },
+ "bg_world_map": {
+  "prompt": "hand-painted illustrated fantasy atlas map of a kingdom seen from above at a slight angle, painted terrain, a white royal castle with blue roofs and a small town at the bottom centre, a dark glowing crystal cave entrance in a rocky hill exactly in the centre, a dense ancient green forest with rivers covering the left side, a golden sandy coast with turquoise sea and a ship on the right side, a huge snowy mountain peak at the top centre, winding dirt roads connecting them, rivers, small villages, ruins, soft clouds at the edges, warm painterly anime fantasy JRPG world map, vivid but soft colours, no text, no labels, no letters, no legend, no border, no compass text",
+  "width": 1536,
+  "height": 864,
+  "seed": 21002,
+  "cutout": false,
+  "folder": "ui"
+ },
+ "bg_library": {
+  "prompt": "breathtaking hand-painted anime fantasy environment illustration, the interior of a royal castle library at night, tall dark wood bookshelves full of old books, warm candle lamps, a tall arched stained glass window with moonlight, floating glowing magic motes, a reading desk with an open spellbook and scattered cards in the foreground, layered depth, painterly texture, soft cinematic light, celestial royal fantasy JRPG background art, calm dim areas in the centre, no people, no characters, no text, no letters, no logo, no user interface",
+  "width": 1536,
+  "height": 864,
+  "seed": 21003,
+  "cutout": false,
+  "folder": "ui"
+ },
+ "bg_forge": {
+  "prompt": "breathtaking hand-painted anime fantasy environment illustration, a castle blacksmith workshop interior, a glowing forge with warm orange fire, an anvil, hanging tools, weapon racks, stone walls with blue evening light from a window, layered depth, painterly texture, soft cinematic light, celestial royal fantasy JRPG background art, calm dim areas in the centre, no people, no characters, no text, no letters, no logo, no user interface",
+  "width": 1536,
+  "height": 864,
+  "seed": 21004,
+  "cutout": false,
+  "folder": "ui"
+ },
+ "bg_apothecary": {
+  "prompt": "breathtaking hand-painted anime fantasy environment illustration, a cosy castle apothecary interior, wooden shelves of colourful glass potion bottles, drying herbs hanging from the ceiling, a copper alembic bubbling, warm lamplight, layered depth, painterly texture, soft cinematic light, celestial royal fantasy JRPG background art, calm dim areas in the centre, no people, no characters, no text, no letters, no logo, no user interface",
+  "width": 1536,
+  "height": 864,
+  "seed": 21005,
+  "cutout": false,
+  "folder": "ui"
+ },
+ "bg_enchanter": {
+  "prompt": "breathtaking hand-painted anime fantasy environment illustration, a starlit tower observatory interior at night, floating glowing violet and blue crystals, a large brass astrolabe, a magic circle glowing on the floor, arched windows showing the starry sky, layered depth, painterly texture, soft cinematic light, celestial royal fantasy JRPG background art, calm dim areas in the centre, no people, no characters, no text, no letters, no logo, no user interface",
+  "width": 1536,
+  "height": 864,
+  "seed": 21006,
+  "cutout": false,
+  "folder": "ui"
+ },
+ "icon_region_castle": {
+  "prompt": "game UI icon, a small white and gold royal castle with blue pointed roofs and a pennant, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 512,
+  "height": 512,
+  "seed": 21101,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_region_crystal": {
+  "prompt": "game UI icon, a cluster of glowing violet and blue crystals growing from dark rock, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 512,
+  "height": 512,
+  "seed": 21102,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_region_forest": {
+  "prompt": "game UI icon, a single ancient green oak tree with a glowing golden leaf, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 512,
+  "height": 512,
+  "seed": 21103,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_region_coast": {
+  "prompt": "game UI icon, a small sailing ship on a curling turquoise wave, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 512,
+  "height": 512,
+  "seed": 21104,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_region_frostpeak": {
+  "prompt": "game UI icon, a snowy mountain peak with a small white dragon wing silhouette and a snowflake, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 512,
+  "height": 512,
+  "seed": 21105,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_ui_continue": {
+  "prompt": "game UI icon, a glowing golden four pointed star inside a small round gold seal, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 21201,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_ui_new_campaign": {
+  "prompt": "game UI icon, an open leather bound book with a golden quill and a glowing page, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 21202,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_ui_quickplay": {
+  "prompt": "game UI icon, two crossed silver swords with gold hilts, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 21203,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_ui_exit": {
+  "prompt": "game UI icon, an arched wooden castle door with iron bands, slightly open with light behind it, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 21204,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_ui_mission": {
+  "prompt": "game UI icon, a rolled parchment scroll tied with a red ribbon and a gold wax seal, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 21205,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_node_combat": {
+  "prompt": "game UI icon, two crossed steel swords, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 21301,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_node_elite": {
+  "prompt": "game UI icon, a horned demonic skull with glowing red eyes over crossed swords, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 21302,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_node_boss": {
+  "prompt": "game UI icon, a fierce dragon head with a gold crown and glowing eyes, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 21303,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_node_treasure": {
+  "prompt": "game UI icon, a small ornate golden treasure chest overflowing with coins, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 21304,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_node_rest": {
+  "prompt": "game UI icon, a cosy campfire with crossed logs and warm flames, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 21305,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_node_merchant": {
+  "prompt": "game UI icon, a leather coin purse with gold coins and a small scale, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 21306,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_node_event": {
+  "prompt": "game UI icon, a glowing blue question mark rune on a small stone tablet, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 21307,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "icon_node_town": {
+  "prompt": "game UI icon, a small cosy village house with a lit window and a lantern, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+  "width": 384,
+  "height": 384,
+  "seed": 21308,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "orn_endcap": {
+  "prompt": "a single ornate antique gold baroque filigree flourish shaped like a pointed arrowhead end cap, symmetrical top and bottom, elegant scrolls curling outward, a tiny blue sapphire in the middle, polished metal with soft highlights, front view, flat, pointing to the left, isolated on a plain flat light grey background, no text, game UI button decoration",
+  "width": 512,
+  "height": 512,
+  "seed": 22001,
+  "cutout": true,
+  "folder": "ui"
+ },
+ "frame_socket": {
+  "prompt": "a single empty round ornate antique gold ring medallion frame with fine engraved filigree and four tiny sapphire studs, the inside is plain dark midnight navy enamel, front view, symmetrical, isolated on a plain flat light grey background, no text, game UI icon socket",
+  "width": 512,
+  "height": 512,
+  "seed": 22002,
+  "cutout": true,
+  "folder": "ui"
+ }
+}

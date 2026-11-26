@@ -57,7 +57,7 @@ static func apply(effects: Array, party: Party, inventory: Inventory) -> Diction
 					lines.append("Gave away %s." % DataRegistry.get_item(str(effect["item_id"])).get("name", "an item"))
 			"gain_relic":
 				var granted := ""
-				for relic_id: Variant in effect.get("pool", []):
+				for relic_id: Variant in effect.get("pool", []):  # same order as relic_preview()
 					if RelicEffects.gain(str(relic_id), party, inventory):
 						granted = str(relic_id)
 						break
@@ -86,6 +86,18 @@ static func blocked_reason(choice: Dictionary, inventory: Inventory) -> String:
 		return "Needs %d gold." % int(requires["gold"])
 	if requires.has("item") and inventory.count_of(str(requires["item"])) <= 0:
 		return "Needs %s." % DataRegistry.get_item(str(requires["item"])).get("name", "an item")
+	return ""
+
+
+## The relic a choice would give right now ("" if none): the first relic of a gain_relic pool the
+## party does not own yet, the same rule resolve() uses. Lets the event screen show its effect.
+static func relic_preview(choice: Dictionary, inventory: Inventory) -> String:
+	for effect: Dictionary in choice.get("effects", []):
+		if str(effect.get("type", "")) != "gain_relic":
+			continue
+		for relic_id: Variant in effect.get("pool", []):
+			if not DataRegistry.get_item(str(relic_id)).is_empty() and (inventory == null or not inventory.relics.has(str(relic_id))):
+				return str(relic_id)
 	return ""
 
 

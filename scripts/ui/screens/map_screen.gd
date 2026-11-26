@@ -121,20 +121,20 @@ func _make_party_summary() -> Control:
 	row.add_child(gold)
 	var gear := UIFactory.button("Equipment" + (" (%d)" % GameState.inventory.equipment.size() if not GameState.inventory.equipment.is_empty() else ""), false, Vector2(0, 44))
 	gear.name = "EquipmentButton"
-	gear.add_theme_font_size_override("font_size", UITheme.FONT_SIZE_SMALL)
+	CastleUI.chip_style(gear)  # compact enamel: the HUD row stays narrow
 	gear.pressed.connect(func() -> void: SceneRouter.open_equipment(SceneRouter.Screen.MAP))
 	row.add_child(gear)
 	var deck := UIFactory.button("Deck (%d)" % GameState.party.get_total_deck_size(), false, Vector2(0, 44))
 	deck.name = "DeckButton"
 	deck.tooltip_text = "See every card of the party deck."
-	deck.add_theme_font_size_override("font_size", UITheme.FONT_SIZE_SMALL)
+	CastleUI.chip_style(deck)  # compact enamel: the HUD row stays narrow
 	deck.pressed.connect(func() -> void: DeckViewer.open(self, GameState.party))
 	row.add_child(deck)
 	if not GameState.inventory.relics.is_empty():
 		var relics := UIFactory.button("Relics (%d)" % GameState.inventory.relics.size(), false, Vector2(0, 44))
 		relics.name = "RelicButton"
-		relics.tooltip_text = "See the party's relics and what they do."
-		relics.add_theme_font_size_override("font_size", UITheme.FONT_SIZE_SMALL)
+		relics.tooltip_text = RelicIcon.tooltip_for_all(GameState.inventory.relics) + "\n\n(Tap for the full list.)"
+		CastleUI.chip_style(relics)  # compact enamel: the HUD row stays narrow
 		relics.pressed.connect(func() -> void: RelicViewer.open(self, GameState.inventory))
 		row.add_child(relics)
 	return row

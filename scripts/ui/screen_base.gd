@@ -15,7 +15,7 @@ func _ready() -> void:
 	if menu:
 		var menu_background := MenuBackground.new()
 		add_child(menu_background)
-		menu_background.setup(_menu_dim())
+		menu_background.setup(_menu_dim(), _menu_background())
 	else:
 		var backdrop := RoomBackdrop.new()
 		add_child(backdrop)
@@ -50,6 +50,11 @@ func _menu_screen() -> bool:
 
 func _menu_dim() -> float:
 	return 0.3
+
+
+## Catalog id of the menu screen's background picture (docs/ART_DIRECTION.md §7).
+func _menu_background() -> String:
+	return MenuBackground.BACKGROUND_ASSET
 
 
 ## Override to show room art: {texture, tint} (see AssetCatalog.room_backdrop). {} = plain gradient.

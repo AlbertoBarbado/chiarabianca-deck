@@ -29,6 +29,11 @@ func _ready() -> void:
 	_test_save_load()
 	_test_world_state()
 	_test_migration()
+	_test_room_names()
+	_test_levels()
+	_test_dual_specialization()
+	_test_contracts()
+	_test_relic_tooltips()
 	GameState.delete_save()
 	GameState.save_path = GameConfig.SAVE_PATH
 	print("\n%d checks, %d failures" % [_checks, _failures])
@@ -48,6 +53,13 @@ func _new_campaign(chiara := "fire", bianca := "holy") -> CampaignState:
 	GameState.select_specialization("bianca", bianca)
 	GameState.start_campaign()
 	return GameState.campaign
+
+
+## Every sister at the given level (missions and the dual specialization are level-gated).
+func _set_level(campaign: CampaignState, level: int) -> void:
+	for m in campaign.roster.members:
+		campaign.levels[m.id] = Levels.threshold(level)
+	campaign.refresh_roster()
 
 
 ## Plays the current expedition's map to its exit without fighting (rooms are skipped).
@@ -146,13 +158,13 @@ func _test_deck_rules() -> void:
 
 func _test_specialization_mixing() -> void:
 	var campaign := _new_campaign("fire", "tanking")
-	check(CastleWorkshop.set_secondary(campaign, "chiara", "arcana") != "", "no secondary before the Training Hall")
+	check(CastleWorkshop.set_secondary(campaign, "chiara", "arcana") != "", "no secondary before level %d" % Levels.dual_spec_level())
 	campaign.services.append("training_hall")
-	check(CastleWorkshop.set_secondary(campaign, "chiara", "arcana") != "", "a secondary must be learned first")
 	campaign.vault.gold = 1000
 	check(CastleWorkshop.unlock_spec(campaign, "chiara", "arcana") == "" and campaign.unlocked_specializations("chiara").has("arcana"), "the Training Hall teaches Arcana for gold")
 	check(campaign.vault.gold == 1000 - CastleWorkshop.spec_unlock_price() and campaign.count_owned("chiara", "chiara_arcana_bolt") >= 3, "learning costs gold and adds the starting cards to the collection")
 	check(CastleWorkshop.unlock_spec(campaign, "chiara", "earth") != "", "unfinished specializations cannot be learned")
+	_set_level(campaign, Levels.dual_spec_level())
 	check(CastleWorkshop.set_secondary(campaign, "chiara", "fire") != "", "the primary cannot also be the secondary")
 	check(CastleWorkshop.set_secondary(campaign, "chiara", "arcana") == "", "Arcana becomes Chiara's secondary")
 	var chiara := campaign.member("chiara")
@@ -162,8 +174,9 @@ func _test_specialization_mixing() -> void:
 	for card_id in ["chiara_arcana_bolt", "chiara_arcana_bolt", "chiara_arcana_ward", "chiara_arcana_focus"]:
 		hybrid.append(card_id)
 	check(DeckRules.validate(chiara, hybrid).is_empty(), "a hybrid deck within the secondary limit is valid")
-	hybrid.append("chiara_arcana_ward")
-	check(DeckRules.validate(chiara, hybrid).size() > 0, "more than the secondary limit is refused")
+	for card_id in ["chiara_arcana_ward", "chiara_arcana_focus", "chiara_arcana_bolt"]:
+		hybrid.append(card_id)  # 7 secondary cards: one over the limit of 6
+	check(DeckRules.validate(chiara, hybrid).size() > 0, "more than the secondary limit (%d) is refused" % int(DeckRules.rules().get("secondary_card_limit", 6)))
 	# Hybrid deck into combat: the primary passive only, both specializations' cards play.
 	var uids: Array[String] = []
 	var taken := {}
@@ -411,6 +424,7 @@ func _test_expedition_lifecycle() -> void:
 func _test_retreat_and_defeat() -> void:
 	var campaign := _new_campaign()
 	campaign.mark_mission_completed("castle_awakening")
+	_set_level(campaign, 2)
 	var gold := campaign.vault.gold
 	ExpeditionService.start("crystal_hollow", {"minor_health_potion": 1}, 7)
 	GameState.inventory.add_gold(10)  # purse 40
@@ -439,6 +453,8 @@ func _test_retreat_and_defeat() -> void:
 func _test_objective_mission() -> void:
 	var campaign := _new_campaign()
 	campaign.mark_mission_completed("castle_awakening")
+	check(ExpeditionService.start("forest_rescue", {}, 1234) != "", "the rescue mission waits for party level 3")
+	_set_level(campaign, 3)
 	check(ExpeditionService.start("forest_rescue", {}, 1234) == "", "the rescue mission starts on a generated map")
 	var graph := GameState.map_progress.graph
 	check(not graph.custom_def.is_empty() and MapLayout.for_map(graph.id) != null and MapLayout.for_map(graph.id).get_background() != null, "the generated map has a layout on the forest picture")
@@ -465,6 +481,7 @@ func _test_objective_mission() -> void:
 func _test_save_load() -> void:
 	var campaign := _new_campaign()
 	campaign.mark_mission_completed("castle_awakening")
+	_set_level(campaign, 3)
 	ExpeditionService.start("forest_rescue", {"minor_health_potion": 1}, 99)
 	var graph_def := _shape(GameState.map_progress.graph.custom_def)
 	var graph_id := GameState.map_progress.graph.id
@@ -505,6 +522,7 @@ func _test_world_state() -> void:
 	check(Requirements.met(campaign, {"missions": ["castle_awakening"]}) and not Requirements.met(campaign, {"missions": ["forest_serpent"]}), "mission requirements")
 	check(not Requirements.met(campaign, {"bond_level": 2}) and Requirements.missing(campaign, {"bond_level": 2})[0].contains("Bond"), "bond requirements explain themselves")
 	check(not ExpeditionService.region_unlocked(campaign, "frostpeak") and not ExpeditionService.region_unlocked(campaign, "sunlit_coast"), "the coast and Frostpeak wait for the Serpent")
+	_set_level(campaign, 4)
 	ExpeditionService.start("forest_serpent", {}, 5)
 	var threat_before := int(campaign.region_state("enchanted_forest")["threat"])
 	var results := GameState.finish_expedition("completed")
@@ -581,3 +599,183 @@ func _save_and_reload(back_to_castle: bool = true) -> CampaignState:
 	if back_to_castle and GameState.expedition == null:
 		check(GameState.in_castle(), "reloaded at the castle")
 	return GameState.campaign
+
+
+# --- Room names, levels, dual specialization, contracts ---------------------------------------
+
+## A fight room's name is its encounter's name whenever the encounter was changed (or generated).
+func _test_room_names() -> void:
+	var rng := RandomNumberGenerator.new()
+	var mismatches: Array[String] = []
+	for map_id in ["enchanted_forest", "sunlit_coast", "frostpeak", "crystal_hollow_demo", "castle_elite_demo"]:
+		var template := DataRegistry.get_map(map_id)
+		var authored := {}
+		for node: Dictionary in template["nodes"]:
+			authored[str(node["id"])] = str(node.get("encounter_id", ""))
+		for seed in range(1, 21):
+			rng.seed = seed
+			for node: Dictionary in ExpeditionGenerator.vary_fixed(template, rng)["nodes"]:
+				var encounter_id := str(node.get("encounter_id", ""))
+				if encounter_id != "" and encounter_id != str(authored.get(str(node["id"]), "")) and str(node.get("name", "")) != str(DataRegistry.get_encounter(encounter_id).get("name", "")):
+					mismatches.append("%s/%s: %s holds %s" % [map_id, node["id"], node.get("name", ""), encounter_id])
+	for mission_id in ["forest_rescue", "coast_reliquary", "frostpeak_beacons"]:
+		for seed in range(1, 11):
+			rng.seed = seed
+			for node: Dictionary in ExpeditionGenerator.generate(DataRegistry.get_mission(mission_id), rng)["map_def"]["nodes"]:
+				var encounter_id := str(node.get("encounter_id", ""))
+				if encounter_id != "" and not bool(node.get("objective", false)) and str(node.get("name", "")) != str(DataRegistry.get_encounter(encounter_id).get("name", "")):
+					mismatches.append("%s: %s holds %s" % [mission_id, node.get("name", ""), encounter_id])
+	check(mismatches.is_empty(), "rerolled and generated rooms are named after the monsters inside (%s)" % ", ".join(mismatches.slice(0, 3)))
+
+
+func _test_levels() -> void:
+	var campaign := _new_campaign()
+	check(Levels.level_of(campaign, "chiara") == 1 and Levels.party_level(campaign) == 1, "the sisters start at level 1")
+	check(Levels.level_for(Levels.threshold(5)) == 5 and Levels.level_for(Levels.threshold(5) - 1) == 4 and Levels.max_level() == 10, "the level table has 10 levels")
+	var base_hp := campaign.member("chiara").max_hp
+	var gold := campaign.vault.gold
+	var gained := Levels.add_xp(campaign, "chiara", Levels.threshold(3))
+	check(int(gained["from"]) == 1 and int(gained["to"]) == 3 and (gained["lines"] as Array).size() >= 3, "XP raises Chiara to level 3 with level-up lines")
+	check(campaign.vault.gold == gold + 40 and campaign.member("chiara").max_hp == base_hp + 2 * int(Levels.data()["hp_per_level"]), "level rewards: treasury gold and Max HP per level")
+	check(campaign.level_rewards.size() == 1 and (campaign.level_rewards[0]["options"] as Array).size() == 3, "level 3 offers a Mastery card choice of three")
+	var options: Array = campaign.level_rewards[0]["options"]
+	var good_rarity := options.all(func(id: String) -> bool: return Levels.RARITY_ORDER.find(DataRegistry.get_card(id).rarity) >= Levels.RARITY_ORDER.find("uncommon"))
+	var own_pool := options.all(func(id: String) -> bool: return campaign.member("chiara").specialization.card_pool.has(id))
+	check(good_rarity and own_pool, "Mastery options are uncommon or better and from her own specialization")
+	var owned_before := campaign.count_owned("chiara", str(options[0]))
+	check(Levels.claim_choice(campaign, 0, 0) != "" and campaign.count_owned("chiara", str(options[0])) == owned_before + 1 and campaign.level_rewards.is_empty(), "claiming a Mastery card adds it to her collection")
+	Levels.add_xp(campaign, "chiara", 100000)
+	check(Levels.level_of(campaign, "chiara") == 10 and Levels.xp_of(campaign, "chiara") == Levels.threshold(10), "XP stops at the top level")
+	check(Levels.can_dual_spec(campaign, "chiara") and campaign.services.has("training_hall"), "level 10 grants the Dual Specialization and opens the Training Hall")
+	check(Levels.party_level(campaign) == 5, "the party level is the rounded-down average (10 and 1 -> 5)")
+	# Missions are level-gated.
+	var fresh := _new_campaign()
+	fresh.mark_mission_completed("castle_awakening")
+	check(ExpeditionService.mission_lock_reason(fresh, "castle_gauntlet").contains("Party level 2"), "the Castle Depths need party level 2")
+	fresh.missions["completed"] = []
+	# Expedition XP: every won fight pays, completion adds the mission bonus; both sisters gain it.
+	check(ExpeditionService.start("castle_awakening", {}, 3) == "", "the castle mission starts")
+	var level_hp := GameState.party.get_member("chiara").max_hp
+	var fights := 0
+	for node: MapNodeData in GameState.map_progress.graph.nodes.values():
+		if node.type == "combat":
+			ExpeditionService.on_combat_won(node, DataRegistry.get_encounter(node.encounter_id), 0)
+			fights += 1
+	var results := GameState.finish_expedition("completed")
+	var expected := fights * int(Levels.xp_rule("combat")) + int(Levels.xp_rule("mission_per_difficulty"))
+	check(int(results.get("xp", 0)) == expected and Levels.xp_of(fresh, "chiara") == expected and Levels.xp_of(fresh, "bianca") == expected, "the expedition pays %d XP to each sister (%d fights + mission bonus)" % [expected, fights])
+	check(Levels.level_of(fresh, "chiara") == 2 and (results["level_lines"] as Array).size() >= 2, "the tutorial raises both sisters to level 2")
+	check((results["unlocked"] as Array).has("mission:castle_gauntlet"), "reaching level 2 announces the Castle Depths")
+	check(level_hp == fresh.member("chiara").definition.max_hp + int(Equipment.totals(GameState.party.get_member("chiara"))["max_hp"]), "the expedition copy starts with her level-1 Max HP")
+	check(fresh.member("chiara").max_hp == level_hp + int(Levels.data()["hp_per_level"]), "back home, level 2 adds Max HP")
+	ExpeditionService.return_to_castle()
+	# Saves keep levels and pending choices; old saves get an estimate.
+	fresh.level_rewards.append({"character_id": "bianca", "level": 3, "upgraded": false, "options": [str(fresh.member("bianca").specialization.card_pool[0])]})
+	var reloaded := _save_and_reload()
+	check(reloaded != null and Levels.xp_of(reloaded, "chiara") == expected and reloaded.level_rewards.size() == 1, "levels and pending Mastery choices survive a save")
+	check(Levels.estimate_xp(["castle_awakening", "crystal_hollow"]) >= Levels.threshold(2), "older saves start at the level their completed missions earned")
+
+
+func _test_dual_specialization() -> void:
+	var campaign := _new_campaign("fire", "holy")
+	var spec_id := ""
+	for spec in DataRegistry.get_specializations_for("bianca"):
+		if spec.is_playable() and spec.id != "holy" and not campaign.unlocked_specializations("bianca").has(spec.id):
+			spec_id = spec.id
+			break
+	check(spec_id != "", "Bianca has an unlearned playable style (%s)" % spec_id)
+	check(CastleWorkshop.set_secondary(campaign, "bianca", spec_id).contains("level"), "the second specialization waits for level 10")
+	_set_level(campaign, 10)
+	var collection := campaign.member("bianca").deck.size()
+	check(CastleWorkshop.set_secondary(campaign, "bianca", spec_id) == "" and campaign.member("bianca").secondary_specialization.id == spec_id, "at level 10 Bianca takes %s as her second specialization" % spec_id)
+	check(campaign.unlocked_specializations("bianca").has(spec_id) and campaign.member("bianca").deck.size() > collection, "the reward learns the style for free (its starting cards join her collection)")
+	check(campaign.member("bianca").specialization.id == "holy", "her primary (look and passive) stays Holy")
+	var party := Party.new()
+	for m in campaign.roster.members:
+		party.add_member(ExpeditionService.clone_member(m, campaign.prepared_cards(m.id)))
+	var combat := CombatManager.new()
+	combat.setup(party, DataRegistry.get_encounter("castle_training_01"), Inventory.new(), 1)
+	check(combat.get_combatant("bianca").specialization_id == "holy", "in battle she keeps her Holy sprites")
+
+
+func _test_contracts() -> void:
+	var campaign := _new_campaign()
+	check(ExpeditionService.missions_of("royal_castle").size() == 2, "no contract while the castle's own missions are open")
+	campaign.mark_mission_completed("castle_awakening")
+	campaign.mark_mission_completed("castle_gauntlet")
+	campaign.refresh_roster()
+	var missions := ExpeditionService.missions_of("royal_castle")
+	check(missions.size() == 3 and Contracts.is_contract(missions[2]) and str(missions[2]["id"]) == "contract_royal_castle_1", "the castle offers a contract once its missions are done")
+	var contract_id := str(missions[2]["id"])
+	check(ExpeditionService.mission_lock_reason(campaign, contract_id).contains("Party level 2"), "contract rank 1 at the castle needs party level 2")
+	# Every region, kind and many seeds: connected maps on the region's layout, known encounters,
+	# the right marked rooms and room names that match the monsters.
+	var problems: Array[String] = []
+	var rng := RandomNumberGenerator.new()
+	for region: Dictionary in DataRegistry.regions.values():
+		var template := DataRegistry.get_map(str(region["contracts"]["map_id"]))
+		for kind: String in Contracts.kinds_for(region):
+			for seed in range(1, 9):
+				var mission := Contracts.build_mission(region, {"tier": 1 + seed % 4, "kind": kind, "seed": seed})
+				rng.seed = seed
+				var map_def := ExpeditionGenerator.remix(mission, rng)
+				var label := "%s/%s/%d" % [region["id"], kind, seed]
+				if not ExpeditionGenerator.is_fully_connected(map_def) or map_def["nodes"].size() != template["nodes"].size():
+					problems.append(label + " shape")
+				var marked := 0
+				for node: Dictionary in map_def["nodes"]:
+					var encounter_id := str(node.get("encounter_id", ""))
+					if str(node.get("type", "")) in ["combat", "elite", "boss"] and DataRegistry.get_encounter(encounter_id).is_empty():
+						problems.append(label + " encounter " + encounter_id)
+					if encounter_id != "" and str(node.get("name", "")) != str(DataRegistry.get_encounter(encounter_id).get("name", "")) and not bool(node.get("final_encounter", false)):
+						problems.append(label + " name " + str(node.get("name", "")))
+					if bool(node.get("objective", false)):
+						marked += 1
+				if (kind == "hunt" and marked != 1) or (kind == "purge" and (marked < 2 or marked > 3)) or (kind in ["patrol", "boss"] and marked != 0):
+					problems.append(label + " marked %d" % marked)
+				var objective := Objectives.create(mission, map_def)
+				if kind == "hunt" and int(objective.get("targets", 0)) != 1:
+					problems.append(label + " objective")
+	check(problems.is_empty(), "contract maps for every region and quest are valid (%d issues: %s)" % [problems.size(), ", ".join(problems.slice(0, 4))])
+	# Play rank 1: the next contract is harder and needs a higher level.
+	_set_level(campaign, 2)
+	check(ExpeditionService.start(contract_id, {}, 11) == "", "the castle contract starts")
+	var expedition := GameState.expedition
+	check(not expedition.mission_snapshot.is_empty() and GameState.map_progress.graph.id == "royal_castle_tutorial", "the contract keeps the castle layout and travels with the expedition")
+	for node: MapNodeData in GameState.map_progress.graph.nodes.values():
+		if node.type in ["combat", "elite"]:
+			ExpeditionService.on_combat_won(node, DataRegistry.get_encounter(node.encounter_id), 0)
+	var reloaded := _save_and_reload(false)
+	check(reloaded != null and GameState.expedition != null and GameState.expedition.mission_id == contract_id and not GameState.expedition.mission().is_empty(), "a contract expedition survives a reload")
+	var results := GameState.finish_expedition("completed")
+	campaign = GameState.campaign
+	check(str(results.get("outcome", "")) == "completed" and campaign.is_mission_completed(contract_id), "the contract completes")
+	check(int(campaign.contracts["royal_castle"]["tier"]) == 2 and not DataRegistry.get_mission("contract_royal_castle_2").is_empty() and DataRegistry.get_mission(contract_id).is_empty(), "the castle rolls its rank 2 contract")
+	check(not GameState.expedition.mission().is_empty(), "the finished contract is still known on the results screen")
+	var next := DataRegistry.get_mission("contract_royal_castle_2")
+	check(int(next["unlock"]["level"]) == 3 and float(next["enemy_scale"]["hp"]) > 1.0 and int(next["rewards"]["gold"]) > int(missions[2]["rewards"]["gold"]), "rank 2 needs level 3, has tougher foes and pays more")
+	ExpeditionService.return_to_castle()
+	var again := _save_and_reload()
+	check(again != null and int(again.contracts["royal_castle"]["tier"]) == 2 and ExpeditionService.missions_of("royal_castle").size() == 3, "contract ranks survive a save")
+
+
+## Every relic's hover text names it and says what it does; event relic choices preview their relic.
+func _test_relic_tooltips() -> void:
+	var missing: Array[String] = []
+	for item_id: String in DataRegistry.items:
+		var item := DataRegistry.get_item(item_id)
+		if str(item.get("category", "")) != "relic":
+			continue
+		var tip := RelicIcon.tooltip_for(item_id)
+		if not tip.contains(str(item.get("name", "?"))) or str(item.get("description", "")) == "" or not tip.contains(str(item["description"])):
+			missing.append(item_id)
+		var icon := RelicIcon.create(item_id, 32)
+		if icon.tooltip_text != tip:
+			missing.append(item_id + " (icon)")
+		icon.free()
+	check(missing.is_empty(), "every relic icon shows its name and effect on hover (%s)" % ", ".join(missing.slice(0, 4)))
+	var inventory := Inventory.new()
+	var choice := {"effects": [{"type": "gain_relic", "pool": ["ley_crystal", "nonexistent"]}]}
+	check(EventResolver.relic_preview(choice, inventory) == "ley_crystal", "an event relic choice previews its relic")
+	inventory.relics.append("ley_crystal")
+	check(EventResolver.relic_preview(choice, inventory) == "", "an owned relic is not previewed again")

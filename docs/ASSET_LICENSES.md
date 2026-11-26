@@ -189,3 +189,23 @@ Status: the model licences permit commercial use, but generated images still nee
 - **Persistent campaign (2026-11-22):** no new assets. Fusion cards reuse existing card art
   (`chiara_fire_ember`, `bianca_tanking_rally`, `chiara_fire_kindle`, `bianca_holy_shield`), bond relics
   reuse relic icons, castle and world screens reuse the UI kit, map pictures and menu background.
+
+- **Castle Hub art batch 1 / Art Direction milestone (2026-11-22):**
+  - `assets/generated/ui/` — `bg_castle_hub` (castle hub background), `tex_parchment`, `tex_navy_enamel`,
+    `tex_violet_enamel` (material textures), `orn_corner`, `orn_divider`, `orn_crest`, `frame_diamond`
+    (ornaments), `icon_svc_*` (9 service icons), `icon_res_gold/essence/bond`, `icon_ui_home/settings/lock`.
+  - `assets/generated/ui_kit/` — nine-patch panels and buttons composed from the textures and the corner
+    ornament by `scripts/tools/compose_ui_kit.py` (no new external input).
+  - Source: generated on this machine with ComfyUI, FLUX.1 [schnell] GGUF Q3_K_S (Apache 2.0) with CLIP-L /
+    T5-XXL text encoders; cut-outs with BiRefNet (MIT). Prompts and seeds: `scripts/tools/castle_ui_prompts.json`
+    and `assets/generated/ui/generation_log.json`. Acquired 2026-11-22.
+  - The art direction reference (a Royal Castle UI concept image supplied by the project owner) was used
+    only as a written style reference: it was not used as an input image and is not shipped.
+  - Usage restrictions: none known from the model licence; generated output still needs IP review.
+  - **Commercial release status: not cleared** (pending review, like all generated art).
+- **UI art batches 2-3 (2026-11-22/23, same terms as batch 1):** `assets/generated/ui/` backgrounds
+  `bg_main_menu`, `bg_world_map` (cropped to remove a painted pseudo-signature), `bg_library`, `bg_forge`,
+  `bg_apothecary`, `bg_enchanter`; icons `icon_region_*`, `icon_ui_continue/new_campaign/quickplay/exit/mission`,
+  `icon_node_*`; ornaments `orn_endcap`, `frame_socket`. Composed kit pieces `btn_primary*`, `btn_secondary*`,
+  `ribbon_navy`, `ribbon_violet` in `assets/generated/ui_kit/`. ComfyUI, FLUX.1 [schnell] (Apache 2.0) +
+  BiRefNet (MIT); prompts and seeds in `scripts/tools/castle_ui_prompts.json`. **Not release-cleared.**

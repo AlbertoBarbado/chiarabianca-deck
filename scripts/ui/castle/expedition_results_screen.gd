@@ -9,6 +9,7 @@ const TITLES := {"completed": "Mission Complete", "retreated": "Back Home Early"
 var _chosen: Array[int] = []
 var _keep_button: Button
 var _views: Array[CardView] = []
+var _mastery: VBoxContainer
 
 
 func _menu_screen() -> bool:
@@ -16,7 +17,11 @@ func _menu_screen() -> bool:
 
 
 func _menu_dim() -> float:
-	return 0.5
+	return 0.42
+
+
+func _menu_background() -> String:
+	return "bg_castle_hub"
 
 
 func _build() -> void:
@@ -42,8 +47,12 @@ func _build() -> void:
 	story.name = "Story"
 	CastleUI.column_of(story).add_child(UIFactory.label(_story_text(outcome), &"", true))
 	content.add_child(story)
+	content.add_child(_level_panel(results))
+	_mastery = UIFactory.vbox(0)
+	content.add_child(_mastery)
+	_fill_mastery()
 	if expedition.discoveries_allowed > 0 and not expedition.discoveries_claimed:
-		content.add_child(_discovery_panel(expedition))  # the one decision on this screen comes first
+		content.add_child(_discovery_panel(expedition))
 	var parts: BoxContainer = UIFactory.vbox(12) if CastleUI.is_narrow(self) else UIFactory.hbox(12)
 	content.add_child(parts)
 	parts.add_child(_rewards_panel(results))
@@ -55,6 +64,42 @@ func _build() -> void:
 	home.pressed.connect(_on_return)
 	footer.add_child(home)
 	column.add_child(footer)
+
+
+## XP earned, each sister's new level and bar, and what the level-ups brought.
+func _level_panel(results: Dictionary) -> Control:
+	var campaign := GameState.campaign
+	var ups: Dictionary = results.get("level_ups", {})
+	var leveled := ups.values().any(func(u: Dictionary) -> bool: return int(u.get("to", 1)) > int(u.get("from", 1)))
+	var panel := CastleUI.card_panel(6, UITheme.GOLD if leveled else UITheme.GOLD_DARK)
+	panel.name = "LevelUp"
+	var column := CastleUI.column_of(panel)
+	var title := UIFactory.label(("Level Up!  +%d XP" if leveled else "Experience  +%d XP") % int(results.get("xp", 0)), &"HeaderLabel", false)
+	title.add_theme_color_override("font_color", UITheme.GOLD if leveled else Color("f6e7c1"))
+	column.add_child(title)
+	var row: BoxContainer = UIFactory.vbox(8) if CastleUI.is_narrow(self) else UIFactory.hbox(16)
+	for m in campaign.roster.members:
+		var block := UIFactory.vbox(4)
+		block.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		block.add_child(LevelUI.sister_bar(campaign, m))
+		var up: Dictionary = ups.get(m.id, {})
+		var summary := LevelUI.gain_summary(int(up.get("from", 1)), int(up.get("to", 1)))
+		if summary != "":
+			var label := UIFactory.label("★ " + summary, &"", true)
+			label.name = "Gains_" + m.id
+			label.add_theme_color_override("font_color", UITheme.GOLD.lightened(0.2))
+			label.tooltip_text = "
+".join((results.get("level_lines", []) as Array).filter(func(l: Variant) -> bool: return str(l).begins_with(m.definition.display_name)))
+			label.mouse_filter = Control.MOUSE_FILTER_PASS
+			block.add_child(label)
+		row.add_child(block)
+	column.add_child(row)
+	return panel
+
+
+func _fill_mastery() -> void:
+	UIFactory.clear_children(_mastery)
+	_mastery.add_child(LevelUI.mastery_choices(self, _fill_mastery))
 
 
 func _story_text(outcome: String) -> String:
@@ -88,7 +133,8 @@ func _rewards_panel(results: Dictionary) -> Control:
 	if int(results.get("potions_home", 0)) > 0:
 		column.add_child(UIFactory.label("Potions back in the stores: %d" % int(results["potions_home"]), &"", true))
 	for relic_id: Variant in results.get("relics", []):
-		column.add_child(UIFactory.label("New heirloom choice: %s" % str(DataRegistry.get_item(str(relic_id)).get("name", relic_id)), &"", true))
+		column.add_child(UIFactory.label("New heirloom choice:", &"DimLabel", false))
+		column.add_child(RelicIcon.row(str(relic_id), 36))
 	var bond := UIFactory.label("♥ Sister Bond +%d XP" % int(results.get("bond_xp", 0)), &"", true)
 	bond.add_theme_color_override("font_color", Color("ff9fb8"))
 	column.add_child(bond)

@@ -465,6 +465,15 @@ if os.path.exists(_mountain):
             ASSETS[_key] = (_entry["prompt"] + _extra + ", " + STYLE, _entry["width"], _entry["height"], _entry["seed"], _entry["cutout"], _entry["folder"])
 
 
+# Castle Hub UI art (scripts/tools/castle_ui_prompts.json, docs/ART_ASSET_BACKLOG.md): group "ui"; the
+# prompts are complete (the art direction is written into each one), so no style suffix is added.
+_castle_ui = os.path.join(os.path.dirname(os.path.abspath(__file__)), "castle_ui_prompts.json")
+if os.path.exists(_castle_ui):
+    for _key, _entry in json.load(open(_castle_ui, encoding="utf-8")).items():
+        if not _key.startswith("_") and _key not in ASSETS:
+            ASSETS[_key] = (_entry["prompt"], _entry["width"], _entry["height"], _entry["seed"], _entry["cutout"], _entry["folder"])
+
+
 def _workflow(prompt, width, height, seed, cutout, prefix):
     wf = {
         "1": {"class_type": "UnetLoaderGGUF", "inputs": {"unet_name": MODEL["unet"]}},

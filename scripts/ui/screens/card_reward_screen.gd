@@ -210,6 +210,7 @@ func _make_boss_relic_choice(relic_ids: Array, large: bool = false) -> Control:
 		option.set_meta("relic_id", str(relic_id))
 		option.custom_minimum_size = Vector2(250, 0)
 		option.mouse_filter = Control.MOUSE_FILTER_STOP
+		option.tooltip_text = RelicIcon.tooltip_for(str(relic_id))
 		var content := UIFactory.hbox(8)
 		content.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		var icon := RelicIcon.create(str(relic_id), 96 if large else 52)

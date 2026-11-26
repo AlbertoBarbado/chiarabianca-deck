@@ -110,7 +110,7 @@ func _make_tab(member_id: String, text: String, accent: Color) -> Button:
 	var tab := UIFactory.button(text, false, Vector2(0, 44))
 	tab.name = "DeckTab_" + (member_id if member_id != "" else "all")
 	tab.toggle_mode = true
-	tab.add_theme_font_size_override("font_size", UITheme.FONT_SIZE_SMALL)
+	CastleUI.chip_style(tab)
 	tab.add_theme_color_override("font_pressed_color", accent)
 	tab.pressed.connect(_show_filter.bind(member_id))
 	_tabs[member_id] = tab

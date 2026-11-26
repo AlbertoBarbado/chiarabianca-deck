@@ -118,6 +118,12 @@ func _needed_size() -> Vector2:
 	return Vector2(inner.x + PADDING.x * 2.0, maxf(62.0, inner.y + PADDING.y * 2.0))
 
 
+## Replaces the emblem with a specific picture (a relic's own art on a relic choice).
+func set_icon_texture(texture: Texture2D) -> void:
+	if _icon != null and texture != null:
+		_icon.texture = texture
+
+
 func set_texts(title: String, description: String) -> void:
 	_title.text = title
 	_description.text = description

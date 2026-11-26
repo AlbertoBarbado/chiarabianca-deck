@@ -12,36 +12,57 @@ const ESSENCE_COLOR := Color("9fc8ff")
 
 
 ## "Treasury 120  ✦ Essence 2  ♥ Bond 2" for the current campaign.
-static func resources(campaign: CampaignState) -> HBoxContainer:
-	var row := UIFactory.hbox(14)
-	row.name = "Resources"
-	row.alignment = BoxContainer.ALIGNMENT_END
-	var gold := GoldDisplay.new()
-	gold.setup(campaign.vault.gold, 28)
-	gold.name = "Treasury"
-	gold.tooltip_text = "Castle treasury: spent on upgrades, potions, training and fusion."
-	row.add_child(gold)
-	var essence := UIFactory.label("✦ %d" % campaign.essence, &"", false)
-	essence.name = "Essence"
-	essence.add_theme_color_override("font_color", ESSENCE_COLOR)
-	essence.tooltip_text = "Starlight Essence: a rare material from completed missions, used for fusion and rare brews."
-	essence.mouse_filter = Control.MOUSE_FILTER_PASS
-	row.add_child(essence)
-	var bond := UIFactory.label("♥ Bond %d" % campaign.bond_level(), &"", false)
-	bond.name = "BondLevel"
-	bond.add_theme_color_override("font_color", Color("ff9fb8"))
-	bond.tooltip_text = "Sister Bond level."
-	bond.mouse_filter = Control.MOUSE_FILTER_PASS
-	row.add_child(bond)
-	return row
+static func resources(campaign: CampaignState) -> Control:
+	var panel := PanelContainer.new()
+	panel.name = "Resources"
+	panel.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	var style := UIKit.style("panel_navy_small")
+	panel.add_theme_stylebox_override("panel", style if style != null else UITheme.box(Color(UITheme.NAVY_DEEP, 0.85), UITheme.GOLD_DARK, 12, 2, 10))
+	var row := UIFactory.hbox(16)
+	panel.add_child(row)
+	for entry in [["icon_res_gold", "Treasury", str(campaign.vault.gold), "Castle treasury: spent on upgrades, potions, training and fusion.", Color("f3d68a")],
+			["icon_res_essence", "Essence", str(campaign.essence), "Starlight Essence: a rare material from completed missions, used for fusion and rare brews.", Color("bcd6ff")],
+			["icon_res_bond", "BondLevel", "Bond %d" % campaign.bond_level(), "Sister Bond level.", UITheme.BOND_PINK],
+			["", "PartyLevel", "Lv %d" % Levels.party_level(campaign), "Party level (the sisters' average level): missions and contracts open with it.", Color("f6e7c1")]]:
+		var item := UIFactory.hbox(6)
+		item.name = str(entry[1])
+		item.tooltip_text = str(entry[3])
+		item.mouse_filter = Control.MOUSE_FILTER_PASS
+		if str(entry[0]) != "":
+			item.add_child(picture(str(entry[0]), 30.0, "◆"))
+		var label := UIFactory.label(str(entry[2]), &"", false)
+		label.add_theme_font_override("font", UITheme.font(UITheme.WEIGHT_HEADER))
+		label.add_theme_font_size_override("font_size", UITheme.FONT_SIZE_DEFAULT + 2)
+		label.add_theme_color_override("font_color", entry[4])
+		label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		item.add_child(label)
+		row.add_child(item)
+	return panel
 
 
-## Screen header: back button, title (+ subtitle) and the campaign resources on the right.
+## A painted UI picture by catalog id at a square size, or a glyph label when the art is missing.
+static func picture(asset_id: String, side: float, fallback: String = "") -> Control:
+	var texture := UIKit.picture(asset_id) if asset_id != "" else null
+	if texture == null:
+		var glyph := UIFactory.label(fallback, &"", false, HORIZONTAL_ALIGNMENT_CENTER)
+		glyph.custom_minimum_size = Vector2(side, side)
+		glyph.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		return glyph
+	var rect := TextureRect.new()
+	rect.texture = texture
+	rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	rect.custom_minimum_size = Vector2(side, side)
+	rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	return rect
+
+
+## Screen header: back button, title (+ subtitle) on a soft shadow, and the resource ribbon.
 static func header(title: String, subtitle: String, back: Callable, back_label: String = "Castle") -> Control:
 	var bar := UIFactory.hbox(16)
 	bar.name = "Header"
 	if back.is_valid():
-		var back_button := UIFactory.button("‹ " + back_label, false, Vector2(150, 52))
+		var back_button := OrnateButton.create("‹ " + back_label, "icon_ui_home" if back_label == "Castle" else "", false, Vector2(200, 54))
 		back_button.name = "BackButton"
 		back_button.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 		back_button.pressed.connect(back)
@@ -51,10 +72,17 @@ static func header(title: String, subtitle: String, back: Callable, back_label: 
 	var heading := UIFactory.label(title, &"HeaderLabel", false)
 	heading.name = "Title"
 	heading.clip_text = true
+	heading.add_theme_font_size_override("font_size", UITheme.FONT_SIZE_HEADER + 4)
+	heading.add_theme_color_override("font_color", Color("f6e7c1"))
+	heading.add_theme_color_override("font_shadow_color", Color(0.04, 0.02, 0.12, 0.9))
+	heading.add_theme_constant_override("shadow_outline_size", 8)
 	titles.add_child(heading)
 	if subtitle != "":
-		var sub := UIFactory.label(subtitle, &"DimLabel", true)
+		var sub := UIFactory.label(subtitle, &"", true)
 		sub.name = "Subtitle"
+		sub.add_theme_color_override("font_color", Color("e4dcf0"))
+		sub.add_theme_color_override("font_shadow_color", Color(0.04, 0.02, 0.12, 0.85))
+		sub.add_theme_constant_override("shadow_outline_size", 6)
 		titles.add_child(sub)
 	bar.add_child(titles)
 	if GameState.campaign != null:
@@ -63,8 +91,15 @@ static func header(title: String, subtitle: String, back: Callable, back_label: 
 
 
 ## A dark rounded panel with a vertical column inside; returns the panel (column = get_child(0)).
+## With the composed kit the panel is navy enamel with gold corners (the default tint); a custom
+## tint (accents, locked states) keeps the flat style so its colour still reads.
 static func card_panel(separation: int = 10, tint: Color = UITheme.GOLD_DARK) -> PanelContainer:
-	var panel := UIFactory.panel(UITheme.box(Color(UITheme.NAVY_DEEP, 0.88), tint, 14, 2, 16))
+	var kit := UIKit.style("panel_navy")
+	if kit != null and tint != UITheme.GOLD_DARK:
+		# An accent (a sister's colour, a locked grey, success / danger) tints the enamel lightly.
+		kit = kit.duplicate() as StyleBoxTexture
+		kit.modulate_color = Color.WHITE.lerp(Color(tint.r, tint.g, tint.b, 1.0), 0.35)
+	var panel := UIFactory.panel(kit if kit != null else UITheme.box(Color(UITheme.NAVY_DEEP, 0.88), tint, 14, 2, 16))
 	panel.add_child(UIFactory.vbox(separation))
 	return panel
 
@@ -143,14 +178,30 @@ static func chips(options: Array, selected: String, on_pick: Callable, name_pref
 	flow.add_theme_constant_override("h_separation", 6)
 	flow.add_theme_constant_override("v_separation", 6)
 	for option: Array in options:
-		var chip := UIFactory.button(str(option[1]), str(option[0]) == selected, Vector2(0, CHIP_HEIGHT))
+		var chip := UIFactory.button(str(option[1]), false, Vector2(0, CHIP_HEIGHT))
 		chip.name = "%s_%s" % [name_prefix, str(option[0])]
-		chip.add_theme_font_size_override("font_size", UITheme.FONT_SIZE_SMALL)
+		chip_style(chip)
 		chip.toggle_mode = true
 		chip.button_pressed = str(option[0]) == selected
 		chip.pressed.connect(on_pick.bind(str(option[0])))
 		flow.add_child(chip)
 	return flow
+
+
+## Choice chips (tabs, filters, sister pickers): the rectangular navy enamel, lit gold when selected
+## (pressed). The pointed buttons stay for actions; short chip labels never touch an end cap.
+static func chip_style(chip: Button) -> void:
+	for entry in [["normal", Color.WHITE], ["hover", Color(1.3, 1.22, 1.08)], ["pressed", Color(1.65, 1.35, 0.75)], ["hover_pressed", Color(1.8, 1.5, 0.85)], ["disabled", Color(0.6, 0.6, 0.66, 0.7)]]:
+		var box := UITheme.compact_button_style(entry[1])
+		if box is StyleBoxTexture:
+			box = box.duplicate()
+			(box as StyleBoxTexture).content_margin_left = 14
+			(box as StyleBoxTexture).content_margin_right = 14
+		chip.add_theme_stylebox_override(str(entry[0]), box)
+	chip.add_theme_stylebox_override("focus", UITheme.box(Color.TRANSPARENT, Color(UITheme.MAGIC_BLUE, 0.9), 8, 2, 4))
+	chip.add_theme_font_size_override("font_size", UITheme.FONT_SIZE_SMALL)
+	chip.add_theme_color_override("font_pressed_color", Color("fff0c8"))
+	chip.add_theme_color_override("font_hover_pressed_color", Color.WHITE)
 
 
 ## A compact drop-down filter (touch friendly). options: [[id, label], ...]. on_pick(id).
@@ -306,12 +357,39 @@ static func card_tags(def: CardDef) -> Array[String]:
 	return tags
 
 
-## "Learned" style small label pill.
-static func pill(text: String, color: Color) -> PanelContainer:
-	var panel := UIFactory.panel(UITheme.box(Color(color, 0.22), color, 10, 1, 6))
+## A small badge laid over a card (copy count, "not found"): placed at the top-right corner, or
+## centred on the art with `centered`. It never takes clicks, so the card stays tappable.
+static func badge_on(view: Control, text: String, color: Color, centered: bool = false) -> PanelContainer:
+	var badge := UIFactory.panel(UITheme.box(Color(UITheme.NAVY_DEEP, 0.92), color, 10, 2, 6))
+	badge.name = "Badge"
+	badge.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	var label := UIFactory.label(text, &"", false, HORIZONTAL_ALIGNMENT_CENTER)
 	label.add_theme_font_size_override("font_size", UITheme.FONT_SIZE_SMALL)
-	label.add_theme_color_override("font_color", color.lightened(0.35))
+	label.add_theme_color_override("font_color", color.lightened(0.3))
+	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	badge.add_child(label)
+	view.add_child(badge)
+	if centered:
+		badge.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
+		badge.grow_horizontal = Control.GROW_DIRECTION_BOTH
+		badge.grow_vertical = Control.GROW_DIRECTION_BOTH
+	else:
+		# Bottom-right corner, over the frame's foot: never on the card's name or cost.
+		badge.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_RIGHT)
+		badge.grow_horizontal = Control.GROW_DIRECTION_BEGIN
+		badge.grow_vertical = Control.GROW_DIRECTION_BEGIN
+		badge.offset_right = -2
+		badge.offset_bottom = -2
+	return badge
+
+
+## "Learned" style small label pill.
+## `on_light` (parchment cards): a darker ink so the pill reads on ivory.
+static func pill(text: String, color: Color, on_light: bool = false) -> PanelContainer:
+	var panel := UIFactory.panel(UITheme.box(Color(color, 0.16 if on_light else 0.22), color.darkened(0.2) if on_light else color, 10, 1, 6))
+	var label := UIFactory.label(text, &"", false, HORIZONTAL_ALIGNMENT_CENTER)
+	label.add_theme_font_size_override("font_size", UITheme.FONT_SIZE_SMALL)
+	label.add_theme_color_override("font_color", color.darkened(0.45) if on_light else color.lightened(0.35))
 	panel.add_child(label)
 	return panel
 

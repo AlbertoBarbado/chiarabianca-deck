@@ -138,12 +138,13 @@ func _win_combat() -> void:
 func _run() -> void:
 	check(SceneRouter.current_screen_id == SceneRouter.Screen.MAIN_MENU, "boots into main menu")
 	check(_find_button("Continue").disabled, "Continue disabled without save")
-	for label in ["New Campaign", "Classic Run", "Settings", "Exit"]:
+	for label in ["New Campaign", "Quick Play", "Settings", "Exit"]:
 		check(_find_button(label) != null, "menu has %s" % label)
 	await _shot("01_main_menu")
 	await _press("Settings")
 	await _shot("02_settings")
 	await _press("Back")
+	await _press("Quick Play")
 	await _press("Classic Run")  # the classic run is the Quick Play "Classic Run" (was "New Game")
 	await _shot("03_character_selection")
 	check(SceneRouter.current_screen_id == SceneRouter.Screen.CHARACTER_SELECTION, "character selection opened")
@@ -273,6 +274,7 @@ func _run() -> void:
 func _run_fire_holy() -> void:
 	SceneRouter.go(SceneRouter.Screen.MAIN_MENU)
 	await _wait(0.4)
+	await _press("Quick Play")
 	await _press("Classic Run")  # the classic run is the Quick Play "Classic Run" (was "New Game")
 	await _press("Choose Specializations")
 	await _press_exact("Fire")

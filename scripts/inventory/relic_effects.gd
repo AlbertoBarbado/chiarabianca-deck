@@ -61,7 +61,7 @@ static func apply_stats(party: Party, inventory: Inventory) -> void:
 		return
 	var bonus := stat(inventory, "max_hp")
 	for member in party.members:
-		member.extra_max_hp = bonus
+		member.extra_max_hp = bonus + member.level_max_hp
 		Equipment.refresh_stats(member)
 
 

@@ -134,8 +134,10 @@ static func set_primary(campaign: CampaignState, character_id: String, spec_id: 
 	return ""
 
 
-## Sets (or clears with "") the secondary specialization. Needs the Training Hall. Secondary cards
-## that no longer fit are removed from the prepared deck.
+## Sets (or clears with "") the secondary specialization: the Dual Specialization reward of a
+## sister's top level (Levels.dual_spec_level). Any playable specialization of hers qualifies; one not
+## learned yet is learned for free (its starting cards join the collection). Her look and passive
+## stay her primary's. Secondary cards that no longer fit are removed from the prepared deck.
 static func set_secondary(campaign: CampaignState, character_id: String, spec_id: String) -> String:
 	var m := campaign.member(character_id)
 	if m == null:
@@ -143,13 +145,16 @@ static func set_secondary(campaign: CampaignState, character_id: String, spec_id
 	if spec_id == "":
 		m.secondary_specialization = null
 	else:
-		if not campaign.services.has("training_hall"):
-			return "The Training Hall teaches hybrid styles."
-		if not campaign.unlocked_specializations(character_id).has(spec_id):
-			return "Learn that specialization first."
+		if not Levels.can_dual_spec(campaign, character_id):
+			return "Dual Specialization opens at level %d." % Levels.dual_spec_level()
+		var spec := DataRegistry.get_specialization(spec_id)
+		if spec == null or spec.character_id != character_id or not spec.is_playable():
+			return "That style is not available to her."
 		if spec_id == m.specialization.id:
 			return "That is already her primary specialization."
-		m.secondary_specialization = DataRegistry.get_specialization(spec_id)
+		if not campaign.unlocked_specializations(character_id).has(spec_id):
+			campaign.unlock_specialization(character_id, spec_id)
+		m.secondary_specialization = spec
 	var keep: Array[String] = []
 	var ids: Array = []
 	for owned in campaign.prepared_cards(character_id):

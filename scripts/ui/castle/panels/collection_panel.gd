@@ -3,7 +3,7 @@ extends VBoxContainer
 ## how many copies she owns. Cards not found yet are dimmed and say where they come from.
 ## Filters: sister, specialization, owned / missing, type and rarity. Tap a card for details.
 
-const CARD_SCALE := 0.62
+const CARD_SCALE := 0.74
 const SHOW := [["all", "All"], ["owned", "Owned"], ["missing", "Not found"]]
 
 var shell: Node
@@ -119,12 +119,20 @@ func refresh() -> void:
 			if owned.card_id == card_id:
 				best = maxi(best, owned.upgrade_level)
 		var view := CastleUI.card(def, sister, best, CARD_SCALE)
-		if count == 0:
-			view.modulate = Color(0.42, 0.42, 0.5)
 		view.pressed.connect(func(_v: CardView) -> void: _inspect(card_id, count, best))
 		box.add_child(view)
-		var label := UIFactory.label("× %d" % count if count > 0 else "not found", &"DimLabel", false, HORIZONTAL_ALIGNMENT_CENTER)
-		box.add_child(label)
+		if count == 0:
+			# Not found yet: the face is dimmed and a lock badge sits on the art (tap for where it comes from).
+			# A dark veil over the face (CardView manages its own tint) and a small lock on the art.
+			var veil := ColorRect.new()
+			veil.name = "Veil"
+			veil.color = Color(UITheme.NAVY_DEEP, 0.62)
+			veil.mouse_filter = Control.MOUSE_FILTER_IGNORE
+			UIFactory.full_rect(veil)
+			view.add_child(veil)
+			CastleUI.badge_on(view, "🔒", UITheme.IVORY_DIM, true).tooltip_text = "Not found yet"
+		else:
+			CastleUI.badge_on(view, "×%d" % count, UITheme.GOLD)
 		_grid.add_child(box)
 
 

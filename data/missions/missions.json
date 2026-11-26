@@ -55,7 +55,8 @@
     "unlock": {
       "missions": [
         "castle_awakening"
-      ]
+      ],
+      "level": 2
     },
     "rewards": {
       "gold": 40,
@@ -84,7 +85,8 @@
     "unlock": {
       "missions": [
         "castle_awakening"
-      ]
+      ],
+      "level": 2
     },
     "rewards": {
       "gold": 50,
@@ -110,7 +112,9 @@
     },
     "difficulty": 3,
     "repeatable": true,
-    "unlock": {},
+    "unlock": {
+      "level": 4
+    },
     "rewards": {
       "gold": 80,
       "essence": 1,
@@ -174,7 +178,9 @@
     },
     "difficulty": 2,
     "repeatable": true,
-    "unlock": {},
+    "unlock": {
+      "level": 3
+    },
     "rewards": {
       "gold": 50,
       "essence": 1,
@@ -212,7 +218,9 @@
     },
     "difficulty": 4,
     "repeatable": true,
-    "unlock": {},
+    "unlock": {
+      "level": 6
+    },
     "rewards": {
       "gold": 100,
       "essence": 1,
@@ -271,7 +279,9 @@
     },
     "difficulty": 3,
     "repeatable": true,
-    "unlock": {},
+    "unlock": {
+      "level": 5
+    },
     "rewards": {
       "gold": 60,
       "essence": 1,
@@ -296,7 +306,9 @@
     },
     "difficulty": 5,
     "repeatable": true,
-    "unlock": {},
+    "unlock": {
+      "level": 8
+    },
     "rewards": {
       "gold": 120,
       "essence": 2,
@@ -352,7 +364,9 @@
     },
     "difficulty": 4,
     "repeatable": true,
-    "unlock": {},
+    "unlock": {
+      "level": 7
+    },
     "rewards": {
       "gold": 70,
       "essence": 1,

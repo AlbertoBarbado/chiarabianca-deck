@@ -4,6 +4,7 @@ extends RefCounted
 ##   {"missions": [ids]       every mission completed at least once
 ##    "flags": {flag: value}  world flags equal to these values (true / numbers / strings)
 ##    "bond_level": n         Sister Bond at least n
+##    "level": n              party level at least n (Levels.party_level)
 ##    "services": [ids]       castle services open}
 ## An empty requirement is always met.
 
@@ -30,6 +31,8 @@ static func missing(campaign: CampaignState, requirement: Variant) -> Array[Stri
 		if campaign.get_flag(flag) != flags[flag]:
 			result.append(str(req.get("flag_hint", "Something in the world must change first")))
 			break
+	if int(req.get("level", 0)) > Levels.party_level(campaign):
+		result.append("Party level %d" % int(req["level"]))
 	if int(req.get("bond_level", 0)) > campaign.bond_level():
 		result.append("Sister Bond level %d" % int(req["bond_level"]))
 	for service_id: Variant in req.get("services", []):

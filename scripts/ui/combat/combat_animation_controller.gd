@@ -96,7 +96,13 @@ func _maybe_cutin(event: Dictionary) -> void:
 	if quality_name != "full" or _cutin_layer == null:
 		return
 	var card_id := str(event.get("card_id", ""))
-	var cutin := CombatPresentation.cutin_for_card(card_id, str(event.get("specialization_id", "")))
+	# The cut-in shows the sister in her PRIMARY specialization's look: a card from her secondary
+	# (dual specialization) never changes her appearance.
+	var spec_id := str(event.get("specialization_id", ""))
+	var source := _combat.get_combatant(str(event.get("source_id", ""))) if _combat != null else null
+	if source != null and source.side == Combatant.SIDE_PARTY and source.specialization_id != "":
+		spec_id = source.specialization_id
+	var cutin := CombatPresentation.cutin_for_card(card_id, spec_id)
 	if cutin.is_empty():
 		return
 	var now := Time.get_ticks_msec()

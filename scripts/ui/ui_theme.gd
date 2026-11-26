@@ -16,6 +16,15 @@ const SILVER := Color("c9d1dc")
 const CRIMSON := Color("b23a48")
 const GREEN := Color("4f9d6a")
 const MAGIC_BLUE := Color("5aa0ff")
+## Size of the kit's pointed button borders on ordinary buttons (OrnateButton menu buttons use 1.0).
+const KIT_BUTTON_SCALE := 0.78
+## Art direction palette additions (docs/ART_DIRECTION.md §2).
+const VIOLET := Color("3a1f6e")
+const VIOLET_LIGHT := Color("7a4fc4")
+const LAVENDER := Color("b8b0d6")
+const INK := Color("3b2a1a")
+const INK_SOFT := Color("6b5236")
+const BOND_PINK := Color("ff9fb8")
 
 const FONT_SIZE_DEFAULT := 20
 const FONT_SIZE_SMALL := 16
@@ -66,18 +75,49 @@ static func font(weight: int) -> Font:
 
 ## Ornate frame for a large panel (falls back to a flat navy box).
 static func ornate_panel_style(tint: Color = Color.WHITE) -> StyleBox:
+	var kit := _kit_panel("panel_navy", Vector4(36, 34, 36, 34), tint)
+	if kit != null:
+		return kit
 	var style := UIAssets.nine_patch(PANEL_ORNATE, PANEL_SCALE, Vector4(62, 56, 62, 56), Vector4(36, 34, 36, 34), tint)
 	return style if style != null else box(Color(NAVY, 0.92), GOLD_DARK, 12, 2, 14)
 
 
+## The UI kit's navy enamel panel (docs/ART_DIRECTION.md) with the given content margins and tint, or
+## null without the kit. Keeping the old content margins keeps every existing layout unchanged.
+static func _kit_panel(piece: String, content: Vector4, tint: Color) -> StyleBox:
+	var base := UIKit.style(piece)
+	if base == null:
+		return null
+	var style := base.duplicate() as StyleBoxTexture
+	style.content_margin_left = content.x
+	style.content_margin_top = content.y
+	style.content_margin_right = content.z
+	style.content_margin_bottom = content.w
+	style.modulate_color = tint
+	return style
+
+
 ## Slim version of the ornate panel for bars, popups and tooltips (same art, smaller frame).
 static func compact_panel_style(scale: float = 0.3, content: Vector4 = Vector4(16, 10, 16, 10), tint: Color = Color.WHITE) -> StyleBox:
+	var kit := _kit_panel("panel_navy_small", content, tint)
+	if kit != null:
+		return kit
 	var style := UIAssets.nine_patch(PANEL_ORNATE, scale, Vector4(62, 56, 62, 56), content, tint)
 	return style if style != null else box(Color(NAVY, 0.92), GOLD_DARK, 10, 2, 8)
 
 
 ## Slim plain-gold button for small controls (pile buttons).
 static func compact_button_style(tint: Color = Color.WHITE) -> StyleBox:
+	# Small controls (pile and potion buttons, map labels): the kit's navy enamel at a small scale.
+	var kit := UIKit.style("button_navy", 0.55)
+	if kit != null:
+		var small := kit.duplicate() as StyleBoxTexture
+		small.content_margin_left = 10
+		small.content_margin_right = 10
+		small.content_margin_top = 3
+		small.content_margin_bottom = 3
+		small.modulate_color = tint
+		return small
 	var style := UIAssets.nine_patch(BUTTON_PLAIN, 0.2, Vector4(70, 58, 70, 58), Vector4(10, 3, 10, 3), tint)
 	return style if style != null else box(NAVY.lerp(tint, 0.1), GOLD_DARK, 8, 2, 4)
 
@@ -150,15 +190,17 @@ static func _build() -> Theme:
 	# Toggle buttons (specialization choice): the selected (pressed) state glows gold.
 	_style_button(theme, "ToggleButton", false)
 	theme.set_type_variation("ToggleButton", "Button")
-	theme.set_stylebox("pressed", "ToggleButton", button_style(Color(1.5, 1.32, 0.78), false))
-	theme.set_stylebox("hover_pressed", "ToggleButton", button_style(Color(1.62, 1.44, 0.88), false))
+	# Selected toggles turn violet (the primary enamel); without the kit they glow gold.
+	theme.set_stylebox("pressed", "ToggleButton", UIKit.style("btn_primary", KIT_BUTTON_SCALE) if UIKit.has("btn_primary") else button_style(Color(1.5, 1.32, 0.78), false))
+	theme.set_stylebox("hover_pressed", "ToggleButton", UIKit.style("btn_primary_hover", KIT_BUTTON_SCALE) if UIKit.has("btn_primary") else button_style(Color(1.62, 1.44, 0.88), false))
 	theme.set_color("font_pressed_color", "ToggleButton", Color(1, 0.93, 0.7))
 	theme.set_color("font_hover_pressed_color", "ToggleButton", Color.WHITE)
 
 	# Settings controls share the button frame and gold accents.
 	_style_button(theme, "OptionButton", false)
+	_style_dropdown(theme)
 	_style_button(theme, "CheckButton", false)
-	theme.set_stylebox("panel", "PopupMenu", box(Color(NAVY_DEEP, 0.97), GOLD_DARK, 8, 2, 8))
+	theme.set_stylebox("panel", "PopupMenu", _kit_panel("panel_navy_small", Vector4(12, 10, 12, 10), Color.WHITE) if UIKit.has("panel_navy_small") else box(Color(NAVY_DEEP, 0.97), GOLD_DARK, 8, 2, 8))
 	theme.set_stylebox("hover", "PopupMenu", box(Color(NAVY_LIGHT, 0.9), GOLD, 6, 1, 4))
 	theme.set_color("font_color", "PopupMenu", IVORY)
 	theme.set_color("font_hover_color", "PopupMenu", Color.WHITE)
@@ -181,13 +223,40 @@ static func _build() -> Theme:
 
 
 ## Button states: normal / hover (brighter) / pressed (darker) / disabled (dim) / focus (blue glow).
+## With the composed UI kit (UIKit) buttons are navy enamel and the primary button violet enamel,
+## both with gold frames; without it the previous concept-board frames are used.
+## Dropdowns (OptionButton) are fields, not actions: the rectangular navy enamel frame with room for
+## the arrow on the right, so their text never runs into a pointed end cap.
+static func _style_dropdown(theme: Theme) -> void:
+	if not UIKit.has("button_navy"):
+		return
+	for entry in [["normal", Color.WHITE], ["hover", Color(1.3, 1.22, 1.08)], ["pressed", Color(0.72, 0.74, 0.92)], ["hover_pressed", Color(0.8, 0.82, 1.0)], ["focus", Color(1.2, 1.2, 1.4)], ["disabled", Color(0.6, 0.6, 0.66, 0.7)]]:
+		var box := compact_button_style(entry[1]) as StyleBoxTexture
+		box = box.duplicate() as StyleBoxTexture
+		box.content_margin_left = 16
+		box.content_margin_right = 34
+		box.content_margin_top = 6
+		box.content_margin_bottom = 6
+		theme.set_stylebox(str(entry[0]), "OptionButton", box)
+	theme.set_constant("arrow_margin", "OptionButton", 12)
+	theme.set_color("font_focus_color", "OptionButton", Color.WHITE)
+
+
 static func _style_button(theme: Theme, type_name: String, ornate: bool) -> void:
-	theme.set_stylebox("normal", type_name, button_style(Color.WHITE, ornate))
-	theme.set_stylebox("hover", type_name, button_style(Color(1.3, 1.22, 1.08), ornate))
-	theme.set_stylebox("pressed", type_name, button_style(Color(0.72, 0.74, 0.92), ornate))
-	theme.set_stylebox("disabled", type_name, button_style(Color(0.42, 0.42, 0.5, 0.85), ornate))
-	var focus := box(Color.TRANSPARENT, Color(MAGIC_BLUE, 0.9), 14, 2, 14)
-	theme.set_stylebox("focus", type_name, focus)
+	# Every button in the game uses the pointed JRPG shape of the UI kit (docs/ART_DIRECTION.md §13):
+	# violet for primary actions, navy for the rest, drawn a little slimmer than the big OrnateButton
+	# menu buttons. Keyboard focus lights the gold rim (drawn under the text) instead of a box.
+	var piece := "btn_primary" if ornate else "btn_secondary"
+	if UIKit.has(piece):
+		var states := {"normal": "", "hover": "_hover", "pressed": "_pressed", "hover_pressed": "_pressed", "disabled": "_disabled", "focus": "_hover"}
+		for state: String in states:
+			theme.set_stylebox(state, type_name, UIKit.style(piece + str(states[state]), KIT_BUTTON_SCALE))
+	else:
+		theme.set_stylebox("normal", type_name, button_style(Color.WHITE, ornate))
+		theme.set_stylebox("hover", type_name, button_style(Color(1.3, 1.22, 1.08), ornate))
+		theme.set_stylebox("pressed", type_name, button_style(Color(0.72, 0.74, 0.92), ornate))
+		theme.set_stylebox("disabled", type_name, button_style(Color(0.42, 0.42, 0.5, 0.85), ornate))
+		theme.set_stylebox("focus", type_name, box(Color.TRANSPARENT, Color(MAGIC_BLUE, 0.9), 14, 2, 14))
 	theme.set_color("font_color", type_name, IVORY)
 	theme.set_color("font_hover_color", type_name, Color.WHITE)
 	theme.set_color("font_pressed_color", type_name, Color(1, 0.95, 0.8))

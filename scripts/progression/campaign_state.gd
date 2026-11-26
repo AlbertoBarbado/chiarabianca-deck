@@ -42,6 +42,13 @@ var missions: Dictionary = {"completed": [], "attempts": {}}
 var stats: Dictionary = {}
 ## Apothecary belt upgrades already bought (indices into campaign_rules apothecary.capacity_upgrades).
 var capacity_upgrades_bought: int = 0
+## Sister levels: character_id -> XP (Levels derives the level, Max HP bonus and milestones).
+var levels: Dictionary = {}
+## Pending Mastery card choices from level-ups: [{character_id, level, upgraded, options: [card ids]}].
+var level_rewards: Array = []
+## Region contracts (Contracts): region_id -> {tier, kind, seed}. Offered once every authored
+## mission of the region is completed; each completion raises the tier and rolls a new contract.
+var contracts: Dictionary = {}
 
 
 ## A new campaign from the specialization chosen for each sister (her primary specialization).
@@ -228,9 +235,11 @@ func refresh_roster() -> void:
 	Equipment.refinement = refinement
 	Requirements.active_campaign = self
 	for m in roster.members:
-		m.extra_max_hp = 0
+		m.level_max_hp = Levels.hp_bonus(self, m.id)
+		m.extra_max_hp = m.level_max_hp
 		Equipment.refresh_stats(m)
 		m.current_hp = m.max_hp
+	Contracts.sync(self)
 
 
 # --- Saving ---------------------------------------------------------------------------------------
@@ -259,6 +268,9 @@ func to_dict() -> Dictionary:
 		"world": world.duplicate(true),
 		"missions": missions.duplicate(true),
 		"stats": stats.duplicate(true),
+		"levels": levels.duplicate(),
+		"level_rewards": level_rewards.duplicate(true),
+		"contracts": contracts.duplicate(true),
 	}
 
 
@@ -322,8 +334,31 @@ static func from_dict(data: Variant, warnings: Array[String], result: Dictionary
 			for m in campaign.roster.members:
 				preset[m.id] = _strings((raw_presets[preset_name] as Dictionary).get(m.id, [])).filter(func(uid: String) -> bool: return m.find_card(uid) != null)
 			campaign.presets[preset_name] = preset
+	_restore_levels(campaign, raw)
 	campaign.refresh_roster()
 	return campaign
+
+
+## Levels, pending Mastery choices and contracts. A save from before levels existed starts each
+## sister at the XP her completed missions would have earned.
+static func _restore_levels(campaign: CampaignState, raw: Dictionary) -> void:
+	if raw.get("levels", null) is Dictionary:
+		for m in campaign.roster.members:
+			campaign.levels[m.id] = maxi(0, int((raw["levels"] as Dictionary).get(m.id, 0)))
+	else:
+		var estimate := Levels.estimate_xp(campaign.missions.get("completed", []))
+		for m in campaign.roster.members:
+			campaign.levels[m.id] = estimate
+	for choice: Variant in raw.get("level_rewards", []) if raw.get("level_rewards", []) is Array else []:
+		if choice is Dictionary and campaign.member(str((choice as Dictionary).get("character_id", ""))) != null:
+			var options: Array = ((choice as Dictionary).get("options", []) as Array).filter(func(id: Variant) -> bool: return DataRegistry.get_card(str(id)) != null)
+			if not options.is_empty():
+				campaign.level_rewards.append({"character_id": str(choice["character_id"]), "level": int(choice.get("level", 0)), "upgraded": bool(choice.get("upgraded", false)), "options": options})
+	var raw_contracts: Dictionary = raw.get("contracts", {}) if raw.get("contracts", {}) is Dictionary else {}
+	for region_id: String in raw_contracts:
+		if raw_contracts[region_id] is Dictionary and not DataRegistry.get_region(region_id).is_empty():
+			var c: Dictionary = raw_contracts[region_id]
+			campaign.contracts[region_id] = {"tier": maxi(1, int(c.get("tier", 1))), "kind": str(c.get("kind", "")), "seed": int(c.get("seed", 0))}
 
 
 static func _strings(raw: Variant) -> Array[String]:

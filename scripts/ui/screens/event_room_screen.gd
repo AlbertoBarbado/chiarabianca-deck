@@ -46,8 +46,15 @@ func _make_choice(choice: Dictionary, index: int) -> Control:
 	var consequence := str(choice.get("result", ""))
 	if blocked != "":
 		consequence += ("  " if consequence != "" else "") + "(" + blocked + ")"
+	# A relic reward says which relic it is and what it does.
+	var relic_id := EventResolver.relic_preview(choice, GameState.inventory)
+	if relic_id != "":
+		consequence += ("  " if consequence != "" else "") + "Relic: %s — %s" % [str(DataRegistry.get_item(relic_id).get("name", relic_id)), str(DataRegistry.get_item(relic_id).get("description", ""))]
 	var button := ChoiceCard.create(str(choice.get("text", "Continue")), consequence, _choice_icon(choice))
 	button.name = "EventChoice%d" % index
+	if relic_id != "":
+		button.tooltip_text = RelicIcon.tooltip_for(relic_id)
+		button.set_icon_texture(RelicIcon.texture_for(relic_id))
 	button.disabled = blocked != ""
 	button.pressed.connect(_on_choice.bind(choice, index))
 	return button

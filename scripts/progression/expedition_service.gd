@@ -34,6 +34,10 @@ static func missions_of(region_id: String) -> Array[Dictionary]:
 		var mission := DataRegistry.get_mission(str(mission_id))
 		if not mission.is_empty():
 			result.append(mission)
+	# The region's current contract (Contracts.sync registers it once the authored missions are done).
+	for mission: Dictionary in DataRegistry.missions.values():
+		if Contracts.is_contract(mission) and str(mission.get("region_id", "")) == region_id:
+			result.append(mission)
 	return result
 
 
@@ -84,6 +88,9 @@ static func build_map(mission: Dictionary, rng: RandomNumberGenerator) -> Dictio
 	var spec: Dictionary = mission.get("map", {})
 	if str(spec.get("mode", "fixed")) == "generated":
 		return ExpeditionGenerator.generate(mission, rng)
+	if str(spec.get("mode", "")) == "contract":
+		var remixed := ExpeditionGenerator.remix(mission, rng)
+		return {"map_def": remixed, "layout_def": {}}
 	var template := DataRegistry.get_map(str(spec.get("map_id", "")))
 	if template.is_empty():
 		return {"map_def": {}, "layout_def": {}}
@@ -146,6 +153,8 @@ static func start(mission_id: String, loadout: Dictionary, seed: int = 0) -> Str
 	expedition.seed = seed
 	expedition.objective = Objectives.create(mission, map_def)
 	expedition.departure_uids = departure
+	if Contracts.is_contract(mission):
+		expedition.mission_snapshot = mission.duplicate(true)
 	campaign.add_attempt(mission_id)
 	campaign.add_stat("expeditions_started")
 	GameState.party = party
@@ -175,6 +184,8 @@ static func clone_member(source: PartyMember, cards: Array[OwnedCard]) -> PartyM
 		card.upgrade_level = owned.upgrade_level
 		copy.deck.append(card)
 	copy.max_hp = source.definition.max_hp
+	copy.level_max_hp = source.level_max_hp  # the sister's level bonus
+	copy.extra_max_hp = source.level_max_hp
 	Equipment.refresh_stats(copy)
 	copy.current_hp = copy.max_hp
 	return copy
@@ -188,6 +199,7 @@ static func on_combat_won(node: MapNodeData, encounter: Dictionary, reactions: i
 	if expedition == null:
 		return
 	Objectives.on_room_cleared(expedition.objective, node)
+	expedition.fight_xp += Levels.fight_xp(node.type if node != null else "", encounter)
 	if bool(encounter.get("boss", false)):
 		expedition.bosses_defeated += 1
 	if reactions > 0:
@@ -198,6 +210,14 @@ static func on_combat_won(node: MapNodeData, encounter: Dictionary, reactions: i
 static func on_bond_event() -> void:
 	if GameState.expedition != null:
 		GameState.expedition.bond_xp += Bond.note(GameState.expedition.bond_counts, "event")
+
+
+## Enemy multipliers of the current expedition's mission ({} outside expeditions / by default).
+static func enemy_scale() -> Dictionary:
+	if GameState.expedition == null:
+		return {}
+	var scale: Variant = GameState.expedition.mission().get("enemy_scale", {})
+	return scale if scale is Dictionary else {}
 
 
 static func can_return_early() -> bool:
@@ -282,6 +302,20 @@ static func finish(outcome: String) -> Dictionary:
 	var levels := Bond.add_xp(campaign, bond_xp)
 	results["bond_xp"] = bond_xp
 	results["bond_levels"] = levels
+	# Sister levels: every sister on the roster earns the expedition's XP.
+	var xp := Levels.expedition_xp(expedition.fight_xp, outcome, int(mission.get("difficulty", 1)))
+	var level_lines: Array = []
+	var level_ups := {}
+	for m in campaign.roster.members:
+		var gained := Levels.add_xp(campaign, m.id, xp)
+		level_lines.append_array(gained["lines"])
+		level_ups[m.id] = {"from": gained["from"], "to": gained["to"]}
+	results["xp"] = xp
+	results["level_ups"] = level_ups
+	results["level_lines"] = level_lines
+	# A completed contract rolls the region's next, harder contract.
+	if outcome == ExpeditionState.OUTCOME_COMPLETED and Contracts.is_contract(mission):
+		Contracts.advance(campaign, str(mission.get("region_id", "")))
 	campaign.add_stat("expeditions_" + outcome)
 	campaign.refresh_roster()
 	# What opened up.

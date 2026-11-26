@@ -57,6 +57,8 @@ static func serialize_member(member: PartyMember) -> Dictionary:
 		"deck": deck,
 		"equipment": member.equipment.duplicate(),
 	}
+	if member.level_max_hp > 0:
+		entry["level_max_hp"] = member.level_max_hp
 	if member.secondary_specialization != null:
 		entry["secondary_specialization_id"] = member.secondary_specialization.id
 	return entry
@@ -144,7 +146,8 @@ static func restore_party(raw_members: Variant, warnings: Array[String], result:
 		elif str(entry.get("secondary_specialization_id", "")) != "":
 			warnings.append("Dropped an unusable secondary specialization of %s." % char_def.display_name)
 		_restore_equipment(member, entry.get("equipment", {}), warnings)
-		member.extra_max_hp = relic_max_hp
+		member.level_max_hp = maxi(0, int(entry.get("level_max_hp", 0)))
+		member.extra_max_hp = relic_max_hp + member.level_max_hp
 		member.max_hp = maxi(1, char_def.max_hp + int(Equipment.totals(member)["max_hp"]) + member.extra_max_hp)
 		member.current_hp = clampi(int(entry.get("current_hp", member.max_hp)), 0, member.max_hp)
 		_restore_deck(member, entry.get("deck", []), warnings)

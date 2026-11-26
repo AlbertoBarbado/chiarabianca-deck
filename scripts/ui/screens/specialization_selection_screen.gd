@@ -71,6 +71,8 @@ func _build_column(char_def: CharacterDef) -> Control:
 		button.theme_type_variation = &"ToggleButton"
 		button.button_group = group
 		button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		CastleUI.chip_style(button)  # rectangular enamel chips: six names fit in three columns
+		button.add_theme_font_size_override("font_size", UITheme.FONT_SIZE_BUTTON)
 		var spec_icon := AssetCatalog.icon_by_id(spec.icon_id)
 		if spec_icon != null:
 			button.icon = spec_icon

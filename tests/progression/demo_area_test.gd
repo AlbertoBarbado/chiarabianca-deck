@@ -72,6 +72,8 @@ func _run() -> void:
 	SceneRouter.go(SceneRouter.Screen.MAIN_MENU)
 	await _wait(0.5)
 	await _shot("demo_01_main_menu")
+	(_find("QuickPlayButton") as Button).pressed.emit()  # demos live in the Quick Play submenu
+	await _wait(0.3)
 	var button := _find("DemoCrystalButton") as Button
 	check(button != null and button.is_visible_in_tree(), "the main menu offers Demo: Crystal Hollow")
 	button.pressed.emit()

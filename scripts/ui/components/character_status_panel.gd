@@ -8,7 +8,7 @@ extends PanelContainer
 func setup(char_def: CharacterDef, options: Dictionary = {}) -> void:
 	UIFactory.clear_children(self)
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
-	add_theme_stylebox_override("panel", UITheme.box(Color(UITheme.NAVY_DEEP, 0.55), Color(UITheme.GOLD_DARK, 0.55), 10, 1, 8))
+	add_theme_stylebox_override("panel", UITheme.compact_panel_style(0.3, Vector4(14, 8, 14, 8)))  # navy enamel with gold corners
 	var spec: SpecializationDef = options.get("specialization")
 	var accent := spec.get_accent(char_def.accent_color) if spec != null else char_def.accent_color
 	var hp: int = options.get("hp", char_def.starting_hp)

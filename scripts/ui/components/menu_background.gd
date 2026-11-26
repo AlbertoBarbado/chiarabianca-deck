@@ -16,7 +16,8 @@ var _additive: CanvasItemMaterial
 
 
 ## dim: extra darkness over the picture so text on top stays readable (0 = none).
-func setup(dim: float = 0.28) -> void:
+## asset_id: catalog id of the picture (each screen family can have its own background).
+func setup(dim: float = 0.28, asset_id: String = BACKGROUND_ASSET) -> void:
 	UIFactory.clear_children(self)
 	_emitters.clear()
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -25,7 +26,9 @@ func setup(dim: float = 0.28) -> void:
 	var quality := str(SettingsStore.load_values().get("effects_quality", "full"))
 
 	_image = TextureRect.new()
-	_image.texture = AssetCatalog.texture(BACKGROUND_ASSET)
+	_image.texture = AssetCatalog.texture(asset_id)
+	if _image.texture == null and asset_id != BACKGROUND_ASSET:
+		_image.texture = AssetCatalog.texture(BACKGROUND_ASSET)
 	_image.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	_image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
 	_image.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -43,7 +46,9 @@ func setup(dim: float = 0.28) -> void:
 		_add_emitter("effects/fx_sparkle", int(16 * scale_amount), 9.0, Vector2(0.18, 0.32), Color(1, 0.92, 0.7, 0.9))
 		_add_emitter("effects/fx_blue_orb", int(10 * scale_amount), 11.0, Vector2(0.16, 0.3), Color(0.7, 0.85, 1, 0.8))
 		_add_emitter("effects/fx_ember", int(8 * scale_amount), 8.0, Vector2(0.3, 0.5), Color(1, 0.8, 0.5, 0.9))
-	if quality == "full" and is_inside_tree():
+	# The slow side-to-side drift suits the old soft painting only: on an illustrated scene with a
+	# framed foreground (the castle terrace, the atlas) a sliding picture reads as the world wobbling.
+	if quality == "full" and is_inside_tree() and asset_id == BACKGROUND_ASSET:
 		_start_drift()
 	resized.connect(_on_resized)
 	_on_resized()

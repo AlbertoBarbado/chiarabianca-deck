@@ -326,6 +326,7 @@ func _build_filters() -> void:
 		button.toggle_mode = true
 		button.theme_type_variation = &"ToggleButton"
 		button.button_pressed = key == _filter
+		CastleUI.chip_style(button)  # filter chips: compact enamel, lit when selected
 		button.add_theme_font_size_override("font_size", UITheme.FONT_SIZE_SMALL - 1)
 		button.pressed.connect(func() -> void:
 			_filter = key

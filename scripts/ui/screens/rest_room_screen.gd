@@ -66,7 +66,7 @@ func _refresh_members() -> void:
 	for member in GameState.party.members:
 		var panel := CharacterPanel.new()
 		panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		panel.setup(member.definition, {"specialization": member.specialization, "hp": member.current_hp, "max_hp": member.max_hp})
+		panel.setup(member.definition, {"specialization": member.specialization, "hp": member.current_hp, "max_hp": member.max_hp, "figure": true})
 		_members_box.add_child(panel)
 
 

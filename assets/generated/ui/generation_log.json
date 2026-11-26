@@ -136,6 +136,840 @@
    },
    "seconds": 38.2,
    "date": "2026-11-18"
+  },
+  "bg_castle_hub": {
+   "file": "res://assets/generated/ui/bg_castle_hub.png",
+   "prompt": "breathtaking hand-painted anime fantasy environment illustration, a grand white and gold royal castle with many slender spires on a cliff in the middle distance, waterfalls pouring down the cliff, warm golden light in every window, dusk sky with violet and rose clouds and first stars, a faint magical constellation circle glowing in the sky, small floating island with ruins far away, misty blue mountains on the right, foreground of a marble balcony terrace with stone balustrade and pillars, climbing roses and pink flowers at the lower corners, polished marble floor reflecting the sky, layered depth, painterly texture, soft cinematic light, celestial royal fantasy JRPG background art, empty space in the lower half for interface, no people, no characters, no text, no letters, no logo, no user interface",
+   "width": 1536,
+   "height": 864,
+   "seed": 20101,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 111.3,
+   "date": "2026-11-22"
+  },
+  "tex_parchment": {
+   "file": "res://assets/generated/ui/tex_parchment.png",
+   "prompt": "flat seamless texture of warm ivory parchment vellum paper, very subtle fibres and faint mottled stains, soft even lighting, light cream and pale beige tones, no folds, no text, no letters, no border, no frame, top-down scan, uniform, game UI material texture",
+   "width": 512,
+   "height": 512,
+   "seed": 20201,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 91.1,
+   "date": "2026-11-22"
+  },
+  "tex_navy_enamel": {
+   "file": "res://assets/generated/ui/tex_navy_enamel.png",
+   "prompt": "flat seamless texture of deep midnight navy blue enamel with very faint swirling starry sparkles and subtle brushed lacquer grain, dark royal blue and indigo tones, soft even lighting, no text, no border, no frame, top-down, uniform, game UI material texture",
+   "width": 512,
+   "height": 512,
+   "seed": 20202,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 44.2,
+   "date": "2026-11-22"
+  },
+  "tex_violet_enamel": {
+   "file": "res://assets/generated/ui/tex_violet_enamel.png",
+   "prompt": "flat seamless texture of rich deep violet and royal purple enamel with faint glowing magical shimmer and subtle lacquer grain, soft even lighting, no text, no border, no frame, top-down, uniform, game UI material texture",
+   "width": 512,
+   "height": 512,
+   "seed": 20203,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 40.2,
+   "date": "2026-11-22"
+  },
+  "orn_corner": {
+   "file": "res://assets/generated/ui/orn_corner.png",
+   "prompt": "a single ornate antique gold baroque corner ornament, elegant filigree scrolls and leaves forming an L shaped frame corner, a small blue sapphire gem at the corner point, polished metal with soft highlights, front view, flat, isolated on a plain flat light grey background, no text, game UI decoration",
+   "width": 512,
+   "height": 512,
+   "seed": 20301,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 107.0,
+   "date": "2026-11-22"
+  },
+  "orn_divider": {
+   "file": "res://assets/generated/ui/orn_divider.png",
+   "prompt": "a single long thin horizontal ornate antique gold divider line ornament, delicate filigree flourishes symmetrical on both sides of a small four pointed star in the centre, polished metal, front view, flat, very wide and very thin, isolated on a plain flat light grey background, no text, game UI decoration",
+   "width": 1024,
+   "height": 192,
+   "seed": 20302,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 134.8,
+   "date": "2026-11-22"
+  },
+  "orn_crest": {
+   "file": "res://assets/generated/ui/orn_crest.png",
+   "prompt": "a single ornate antique gold royal crown crest ornament with symmetrical filigree wings and a small blue sapphire in the middle, polished metal, front view, flat, wide, isolated on a plain flat light grey background, no text, game UI title decoration",
+   "width": 768,
+   "height": 320,
+   "seed": 20303,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 72.2,
+   "date": "2026-11-22"
+  },
+  "frame_diamond": {
+   "file": "res://assets/generated/ui/frame_diamond.png",
+   "prompt": "a single empty ornate diamond shaped medallion frame, rhombus standing on one corner, thick antique gold rim with fine engraving and four tiny sapphire studs at the points, the inside is plain dark midnight navy enamel, front view, symmetrical, isolated on a plain flat light grey background, no text, game UI icon frame",
+   "width": 512,
+   "height": 512,
+   "seed": 20304,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 108.8,
+   "date": "2026-11-22"
+  },
+  "icon_svc_expeditions": {
+   "file": "res://assets/generated/ui/icon_svc_expeditions.png",
+   "prompt": "game UI icon, an ornate golden compass rose star with eight points and a glowing blue gem centre, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 512,
+   "height": 512,
+   "seed": 20401,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 72.4,
+   "date": "2026-11-22"
+  },
+  "icon_svc_library": {
+   "file": "res://assets/generated/ui/icon_svc_library.png",
+   "prompt": "game UI icon, three fanned fantasy playing cards with dark blue backs and gold star emblems, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 512,
+   "height": 512,
+   "seed": 20402,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 72.5,
+   "date": "2026-11-22"
+  },
+  "icon_svc_collection": {
+   "file": "res://assets/generated/ui/icon_svc_collection.png",
+   "prompt": "game UI icon, an ornate wooden treasure chest with gold trim, lid slightly open with a soft golden glow, painted fantasy JRPG style, soft highlights, three quarter front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 512,
+   "height": 512,
+   "seed": 20403,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 70.3,
+   "date": "2026-11-22"
+  },
+  "icon_svc_armory": {
+   "file": "res://assets/generated/ui/icon_svc_armory.png",
+   "prompt": "game UI icon, a royal heater shield of navy blue enamel with a golden fleur de lis and gold rim, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 512,
+   "height": 512,
+   "seed": 20404,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 70.4,
+   "date": "2026-11-22"
+  },
+  "icon_svc_blacksmith": {
+   "file": "res://assets/generated/ui/icon_svc_blacksmith.png",
+   "prompt": "game UI icon, a smith hammer and a long steel tong crossed in an X, steel heads and wooden handles, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 512,
+   "height": 512,
+   "seed": 20405,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 66.6,
+   "date": "2026-11-22"
+  },
+  "icon_svc_enchanter": {
+   "file": "res://assets/generated/ui/icon_svc_enchanter.png",
+   "prompt": "game UI icon, two glowing magic crystals, one blue and one rose pink, merging into one radiant violet crystal with swirling sparkles, painted fantasy JRPG style, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 512,
+   "height": 512,
+   "seed": 20406,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 68.3,
+   "date": "2026-11-22"
+  },
+  "icon_svc_apothecary": {
+   "file": "res://assets/generated/ui/icon_svc_apothecary.png",
+   "prompt": "game UI icon, a round glass alchemy flask with glowing amber potion, cork stopper, sprigs of green herbs leaning against it, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 512,
+   "height": 512,
+   "seed": 20407,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 68.6,
+   "date": "2026-11-22"
+  },
+  "icon_svc_training": {
+   "file": "res://assets/generated/ui/icon_svc_training.png",
+   "prompt": "game UI icon, an upright silver longsword with a gold hilt inside a golden laurel wreath, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 512,
+   "height": 512,
+   "seed": 20408,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 76.3,
+   "date": "2026-11-22"
+  },
+  "icon_svc_sisters": {
+   "file": "res://assets/generated/ui/icon_svc_sisters.png",
+   "prompt": "game UI icon, two crescent moons facing each other forming a heart shape, one silver blue and one rose gold, a small star between them, soft glow, painted fantasy JRPG style, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 512,
+   "height": 512,
+   "seed": 20409,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 70.3,
+   "date": "2026-11-22"
+  },
+  "icon_res_gold": {
+   "file": "res://assets/generated/ui/icon_res_gold.png",
+   "prompt": "game UI icon, a single shiny round gold coin with an embossed crown, slight angle, painted fantasy JRPG style, soft highlights, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 20501,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 68.3,
+   "date": "2026-11-22"
+  },
+  "icon_res_essence": {
+   "file": "res://assets/generated/ui/icon_res_essence.png",
+   "prompt": "game UI icon, a single faceted four pointed star crystal of glowing pale violet and cyan light, starlight essence, painted fantasy JRPG style, soft glow, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 20502,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 68.3,
+   "date": "2026-11-22"
+  },
+  "icon_res_bond": {
+   "file": "res://assets/generated/ui/icon_res_bond.png",
+   "prompt": "game UI icon, a single glossy rose red heart gem with a thin gold rim and a soft inner glow, painted fantasy JRPG style, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 20503,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 66.3,
+   "date": "2026-11-22"
+  },
+  "icon_ui_home": {
+   "file": "res://assets/generated/ui/icon_ui_home.png",
+   "prompt": "game UI icon, a small ivory and gold castle keep with a blue pointed roof, simple silhouette shape, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 20504,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 66.4,
+   "date": "2026-11-22"
+  },
+  "icon_ui_settings": {
+   "file": "res://assets/generated/ui/icon_ui_settings.png",
+   "prompt": "game UI icon, an ornate antique gold cogwheel gear with a small blue gem in the centre, front view, painted fantasy JRPG style, soft highlights, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 20505,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 66.4,
+   "date": "2026-11-22"
+  },
+  "icon_ui_lock": {
+   "file": "res://assets/generated/ui/icon_ui_lock.png",
+   "prompt": "game UI icon, an old ornate antique gold padlock with engraved filigree, closed, front view, painted fantasy JRPG style, soft highlights, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 20506,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 66.3,
+   "date": "2026-11-22"
+  },
+  "bg_main_menu": {
+   "file": "res://assets/generated/ui/bg_main_menu.png",
+   "prompt": "breathtaking hand-painted anime fantasy environment illustration, a grand white and gold royal castle with slender spires and glowing windows on a cliff in the right half of the image, twilight sky turning from deep violet to rose gold with first stars and a crescent moon, distant floating islands, mountains and a waterfall, foreground of a marble garden terrace with pink roses and lanterns at the lower left, layered depth, painterly texture, soft cinematic light, celestial royal fantasy JRPG background art, calm open sky and soft clouds in the upper left for a title, no people, no characters, no text, no letters, no logo, no user interface",
+   "width": 1536,
+   "height": 864,
+   "seed": 21001,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 259.9,
+   "date": "2026-11-22"
+  },
+  "bg_world_map": {
+   "file": "res://assets/generated/ui/bg_world_map.png",
+   "prompt": "hand-painted illustrated fantasy atlas map of a kingdom seen from above at a slight angle, painted terrain, a white royal castle with blue roofs and a small town at the bottom centre, a dark glowing crystal cave entrance in a rocky hill exactly in the centre, a dense ancient green forest with rivers covering the left side, a golden sandy coast with turquoise sea and a ship on the right side, a huge snowy mountain peak at the top centre, winding dirt roads connecting them, rivers, small villages, ruins, soft clouds at the edges, warm painterly anime fantasy JRPG world map, vivid but soft colours, no text, no labels, no letters, no legend, no border, no compass text",
+   "width": 1536,
+   "height": 864,
+   "seed": 21002,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 223.9,
+   "date": "2026-11-22",
+   "post": "cropped to (0,0,1376,774) and resized to 1536x864 to remove a painted signature in the bottom-right corner"
+  },
+  "bg_library": {
+   "file": "res://assets/generated/ui/bg_library.png",
+   "prompt": "breathtaking hand-painted anime fantasy environment illustration, the interior of a royal castle library at night, tall dark wood bookshelves full of old books, warm candle lamps, a tall arched stained glass window with moonlight, floating glowing magic motes, a reading desk with an open spellbook and scattered cards in the foreground, layered depth, painterly texture, soft cinematic light, celestial royal fantasy JRPG background art, calm dim areas in the centre, no people, no characters, no text, no letters, no logo, no user interface",
+   "width": 1536,
+   "height": 864,
+   "seed": 21003,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 202.9,
+   "date": "2026-11-22"
+  },
+  "bg_forge": {
+   "file": "res://assets/generated/ui/bg_forge.png",
+   "prompt": "breathtaking hand-painted anime fantasy environment illustration, a castle blacksmith workshop interior, a glowing forge with warm orange fire, an anvil, hanging tools, weapon racks, stone walls with blue evening light from a window, layered depth, painterly texture, soft cinematic light, celestial royal fantasy JRPG background art, calm dim areas in the centre, no people, no characters, no text, no letters, no logo, no user interface",
+   "width": 1536,
+   "height": 864,
+   "seed": 21004,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 196.8,
+   "date": "2026-11-22"
+  },
+  "bg_apothecary": {
+   "file": "res://assets/generated/ui/bg_apothecary.png",
+   "prompt": "breathtaking hand-painted anime fantasy environment illustration, a cosy castle apothecary interior, wooden shelves of colourful glass potion bottles, drying herbs hanging from the ceiling, a copper alembic bubbling, warm lamplight, layered depth, painterly texture, soft cinematic light, celestial royal fantasy JRPG background art, calm dim areas in the centre, no people, no characters, no text, no letters, no logo, no user interface",
+   "width": 1536,
+   "height": 864,
+   "seed": 21005,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 102.9,
+   "date": "2026-11-22"
+  },
+  "bg_enchanter": {
+   "file": "res://assets/generated/ui/bg_enchanter.png",
+   "prompt": "breathtaking hand-painted anime fantasy environment illustration, a starlit tower observatory interior at night, floating glowing violet and blue crystals, a large brass astrolabe, a magic circle glowing on the floor, arched windows showing the starry sky, layered depth, painterly texture, soft cinematic light, celestial royal fantasy JRPG background art, calm dim areas in the centre, no people, no characters, no text, no letters, no logo, no user interface",
+   "width": 1536,
+   "height": 864,
+   "seed": 21006,
+   "steps": 4,
+   "cutout": false,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 113.2,
+   "date": "2026-11-22"
+  },
+  "icon_region_castle": {
+   "file": "res://assets/generated/ui/icon_region_castle.png",
+   "prompt": "game UI icon, a small white and gold royal castle with blue pointed roofs and a pennant, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 512,
+   "height": 512,
+   "seed": 21101,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 108.9,
+   "date": "2026-11-22"
+  },
+  "icon_region_crystal": {
+   "file": "res://assets/generated/ui/icon_region_crystal.png",
+   "prompt": "game UI icon, a cluster of glowing violet and blue crystals growing from dark rock, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 512,
+   "height": 512,
+   "seed": 21102,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 64.4,
+   "date": "2026-11-22"
+  },
+  "icon_region_forest": {
+   "file": "res://assets/generated/ui/icon_region_forest.png",
+   "prompt": "game UI icon, a single ancient green oak tree with a glowing golden leaf, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 512,
+   "height": 512,
+   "seed": 21103,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 62.6,
+   "date": "2026-11-22"
+  },
+  "icon_region_coast": {
+   "file": "res://assets/generated/ui/icon_region_coast.png",
+   "prompt": "game UI icon, a small sailing ship on a curling turquoise wave, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 512,
+   "height": 512,
+   "seed": 21104,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 62.4,
+   "date": "2026-11-22"
+  },
+  "icon_region_frostpeak": {
+   "file": "res://assets/generated/ui/icon_region_frostpeak.png",
+   "prompt": "game UI icon, a snowy mountain peak with a small white dragon wing silhouette and a snowflake, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 512,
+   "height": 512,
+   "seed": 21105,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 62.4,
+   "date": "2026-11-22"
+  },
+  "icon_ui_continue": {
+   "file": "res://assets/generated/ui/icon_ui_continue.png",
+   "prompt": "game UI icon, a glowing golden four pointed star inside a small round gold seal, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 21201,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 60.4,
+   "date": "2026-11-22"
+  },
+  "icon_ui_new_campaign": {
+   "file": "res://assets/generated/ui/icon_ui_new_campaign.png",
+   "prompt": "game UI icon, an open leather bound book with a golden quill and a glowing page, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 21202,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 60.5,
+   "date": "2026-11-22"
+  },
+  "icon_ui_quickplay": {
+   "file": "res://assets/generated/ui/icon_ui_quickplay.png",
+   "prompt": "game UI icon, two crossed silver swords with gold hilts, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 21203,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 60.5,
+   "date": "2026-11-22"
+  },
+  "icon_ui_exit": {
+   "file": "res://assets/generated/ui/icon_ui_exit.png",
+   "prompt": "game UI icon, an arched wooden castle door with iron bands, slightly open with light behind it, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 21204,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 60.4,
+   "date": "2026-11-22"
+  },
+  "icon_ui_mission": {
+   "file": "res://assets/generated/ui/icon_ui_mission.png",
+   "prompt": "game UI icon, a rolled parchment scroll tied with a red ribbon and a gold wax seal, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 21205,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 60.6,
+   "date": "2026-11-22"
+  },
+  "icon_node_combat": {
+   "file": "res://assets/generated/ui/icon_node_combat.png",
+   "prompt": "game UI icon, two crossed steel swords, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 21301,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 107.1,
+   "date": "2026-11-22"
+  },
+  "icon_node_elite": {
+   "file": "res://assets/generated/ui/icon_node_elite.png",
+   "prompt": "game UI icon, a horned demonic skull with glowing red eyes over crossed swords, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 21302,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 64.3,
+   "date": "2026-11-22"
+  },
+  "icon_node_boss": {
+   "file": "res://assets/generated/ui/icon_node_boss.png",
+   "prompt": "game UI icon, a fierce dragon head with a gold crown and glowing eyes, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 21303,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 62.5,
+   "date": "2026-11-22"
+  },
+  "icon_node_treasure": {
+   "file": "res://assets/generated/ui/icon_node_treasure.png",
+   "prompt": "game UI icon, a small ornate golden treasure chest overflowing with coins, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 21304,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 60.4,
+   "date": "2026-11-22"
+  },
+  "icon_node_rest": {
+   "file": "res://assets/generated/ui/icon_node_rest.png",
+   "prompt": "game UI icon, a cosy campfire with crossed logs and warm flames, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 21305,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 60.4,
+   "date": "2026-11-22"
+  },
+  "icon_node_merchant": {
+   "file": "res://assets/generated/ui/icon_node_merchant.png",
+   "prompt": "game UI icon, a leather coin purse with gold coins and a small scale, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 21306,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 60.3,
+   "date": "2026-11-22"
+  },
+  "icon_node_event": {
+   "file": "res://assets/generated/ui/icon_node_event.png",
+   "prompt": "game UI icon, a glowing blue question mark rune on a small stone tablet, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 21307,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 62.5,
+   "date": "2026-11-22"
+  },
+  "icon_node_town": {
+   "file": "res://assets/generated/ui/icon_node_town.png",
+   "prompt": "game UI icon, a small cosy village house with a lit window and a lantern, painted fantasy JRPG style, soft highlights, front view, centered, isolated on a plain flat light grey background, no text",
+   "width": 384,
+   "height": 384,
+   "seed": 21308,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 64.4,
+   "date": "2026-11-22"
+  },
+  "orn_endcap": {
+   "file": "res://assets/generated/ui/orn_endcap.png",
+   "prompt": "a single ornate antique gold baroque filigree flourish shaped like a pointed arrowhead end cap, symmetrical top and bottom, elegant scrolls curling outward, a tiny blue sapphire in the middle, polished metal with soft highlights, front view, flat, pointing to the left, isolated on a plain flat light grey background, no text, game UI button decoration",
+   "width": 512,
+   "height": 512,
+   "seed": 22001,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 301.4,
+   "date": "2026-11-22"
+  },
+  "frame_socket": {
+   "file": "res://assets/generated/ui/frame_socket.png",
+   "prompt": "a single empty round ornate antique gold ring medallion frame with fine engraved filigree and four tiny sapphire studs, the inside is plain dark midnight navy enamel, front view, symmetrical, isolated on a plain flat light grey background, no text, game UI icon socket",
+   "width": 512,
+   "height": 512,
+   "seed": 22002,
+   "steps": 4,
+   "cutout": true,
+   "model": {
+    "unet": "flux1-schnell-Q3_K_S.gguf",
+    "clip_l": "clip_l.safetensors",
+    "t5": "t5-v1_1-xxl-encoder-Q3_K_M.gguf",
+    "vae": "ae.safetensors"
+   },
+   "seconds": 168.5,
+   "date": "2026-11-22"
   }
  }
 }

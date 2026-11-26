@@ -53,6 +53,8 @@ var reactions_fired: int = 0
 var _reacting: bool = false
 
 var _rng: RandomNumberGenerator
+## Extra enemy multipliers from the current mission (contract ranks): {hp, damage}. Set before setup.
+var mission_scale: Dictionary = {}
 
 
 ## encounter: a data/encounters definition. seed_value < 0 means random.
@@ -102,8 +104,8 @@ func setup(p_party: Party, encounter: Dictionary, p_inventory: Inventory, seed_v
 ## with extra factors for elite and boss fights. 1.0 everywhere = the numbers in the enemy data.
 ##   {"enemy_hp": 1.0, "enemy_damage": 1.0, "elite_hp": 1.1, "elite_damage": 1.0, "boss_hp": 1.2, "boss_damage": 1.1}
 func _apply_difficulty(rules: Dictionary) -> void:
-	var hp_scale := float(rules.get("enemy_hp", 1.0))
-	var damage := float(rules.get("enemy_damage", 1.0))
+	var hp_scale := float(rules.get("enemy_hp", 1.0)) * float(mission_scale.get("hp", 1.0))
+	var damage := float(rules.get("enemy_damage", 1.0)) * float(mission_scale.get("damage", 1.0))
 	if is_elite:
 		hp_scale *= float(rules.get("elite_hp", 1.0))
 		damage *= float(rules.get("elite_damage", 1.0))

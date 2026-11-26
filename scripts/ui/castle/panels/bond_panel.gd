@@ -1,8 +1,10 @@
 extends VBoxContainer
-## The Sisters: Sister Bond level and progress, what each level unlocks (services, fusion recipes,
-## bond relics), how the bond grows, and the twin combo of their current specializations.
+## The Sisters: each sister's level, XP and next milestone, pending Mastery card choices, then the
+## Sister Bond level and progress, what each bond level unlocks (services, fusion recipes, bond
+## relics), how the bond grows, and the twin combo of their current specializations.
 
 var shell: Node
+var _levels: VBoxContainer
 
 
 func setup(p_shell: Node) -> void:
@@ -14,6 +16,10 @@ func setup(p_shell: Node) -> void:
 	body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	scroll.add_child(body)
 	add_child(scroll)
+	_levels = UIFactory.vbox(10)
+	_levels.name = "SisterLevels"
+	body.add_child(_levels)
+	_fill_levels()
 	var xp := int(campaign.bond.get("xp", 0))
 	var level := campaign.bond_level()
 	var entry := Bond.level_entry(level)
@@ -23,7 +29,7 @@ func setup(p_shell: Node) -> void:
 	var faces := UIFactory.hbox(12)
 	for m in campaign.roster.members:
 		var face := AvatarFrame.new()
-		face.setup(m.id, 84.0, m.definition.accent_color)
+		face.setup(m.id, 116.0, m.definition.accent_color)
 		faces.add_child(face)
 	var texts := UIFactory.vbox(2)
 	texts.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -57,6 +63,39 @@ func setup(p_shell: Node) -> void:
 		body.add_child(panel)
 
 
+## Levels: both sisters' bars side by side, pending Mastery choices, and the milestone ladder.
+func _fill_levels() -> void:
+	UIFactory.clear_children(_levels)
+	var campaign := GameState.campaign
+	var panel := CastleUI.card_panel(8)
+	panel.name = "LevelSummary"
+	var column := CastleUI.column_of(panel)
+	var title := UIFactory.label("Levels · party level %d" % Levels.party_level(campaign), &"HeaderLabel", false)
+	column.add_child(title)
+	var row: BoxContainer = UIFactory.vbox(8) if CastleUI.is_narrow(self) else UIFactory.hbox(16)
+	for m in campaign.roster.members:
+		row.add_child(LevelUI.sister_bar(campaign, m))
+	column.add_child(row)
+	column.add_child(UIFactory.label("XP comes from every fight won (elites and bosses pay more) and from completed missions. Each level adds %d Max HP; missions and contracts open with the party level. At level %d a sister may take a second card specialization." % [int(Levels.data().get("hp_per_level", 0)), Levels.dual_spec_level()], &"DimLabel", true))
+	var ladder := HFlowContainer.new()
+	ladder.name = "Milestones"
+	ladder.add_theme_constant_override("h_separation", 6)
+	ladder.add_theme_constant_override("v_separation", 6)
+	for entry: Dictionary in Levels.table():
+		var text := Levels.reward_text(entry.get("rewards", {}))
+		if text != "":
+			var reached := Levels.party_level(campaign) >= int(entry.get("level", 0))
+			var pill := CastleUI.pill("Lv %d · %s" % [int(entry.get("level", 0)), text], UITheme.GOLD if reached else UITheme.LAVENDER)
+			pill.tooltip_text = "%s — %s" % [Levels.title(int(entry.get("level", 0))), text]
+			pill.mouse_filter = Control.MOUSE_FILTER_PASS
+			ladder.add_child(pill)
+	column.add_child(ladder)
+	_levels.add_child(panel)
+	_levels.add_child(LevelUI.mastery_choices(self, func() -> void:
+		shell.changed()
+		_fill_levels.call_deferred()))
+
+
 func _level_row(entry: Dictionary, current: int) -> Control:
 	var reached := int(entry.get("level", 0)) <= current
 	var panel := CastleUI.card_panel(2, UITheme.GOLD if reached else Color(0.4, 0.4, 0.45))
@@ -71,9 +110,9 @@ func _level_row(entry: Dictionary, current: int) -> Control:
 		parts.append("opens the %s" % str(DataRegistry.get_service(str(service_id)).get("name", service_id)))
 	for recipe_id: Variant in unlocks.get("fusion", []):
 		parts.append("fusion recipe %s" % str(DataRegistry.get_fusion_recipe(str(recipe_id)).get("name", recipe_id)))
-	for relic_id: Variant in unlocks.get("relics", []):
-		var relic := DataRegistry.get_item(str(relic_id))
-		parts.append("%s: %s" % [str(relic.get("name", relic_id)), str(relic.get("description", "")).trim_prefix("Sister Bond %d. " % int(entry.get("level", 0)))])
 	if not parts.is_empty():
 		column.add_child(UIFactory.label("Unlocks: " + "; ".join(parts), &"DimLabel", true))
+	# Bond relics: icon, name and effect, with the shared relic hover text.
+	for relic_id: Variant in unlocks.get("relics", []):
+		column.add_child(RelicIcon.row(str(relic_id), 32))
 	return panel

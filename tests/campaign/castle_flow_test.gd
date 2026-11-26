@@ -99,6 +99,78 @@ func _confirm() -> bool:
 	return true
 
 
+## Levels, Mastery cards, the Dual Specialization and region contracts through the real screens.
+func _levels_and_contracts() -> void:
+	var campaign := GameState.campaign
+	# A finished expedition that levels the sisters up to 5: the results show it and offer Mastery.
+	campaign.level_rewards.clear()
+	for m in campaign.roster.members:
+		campaign.levels[m.id] = Levels.threshold(4) + 5
+	campaign.refresh_roster()
+	check(ExpeditionService.start("castle_awakening", {}, 5) == "", "a castle run starts for the level-up")
+	GameState.expedition.fight_xp = 200
+	GameState.finish_expedition("completed")
+	SceneRouter.go(SceneRouter.Screen.EXPEDITION_RESULTS)
+	await _wait(0.6)
+	check(_find("LevelUp") != null and Levels.level_of(campaign, "chiara") >= 5, "the results announce the level-up")
+	check(_find("MasteryChoices") != null and _find("Mastery_0") != null and _find("MasteryCard_0") != null, "the results offer the Mastery card choice")
+	await _shot("cf_30_level_up")
+	var pending := campaign.level_rewards.size()
+	var card := _find("MasteryCard_0") as CardView
+	card.pressed.emit(card)
+	await _wait(0.3)
+	await _confirm()
+	await _wait(0.3)
+	check(campaign.level_rewards.size() == pending - 1, "tapping a Mastery card and confirming takes it")
+	await _press_node("ReturnHomeButton")
+	await _wait(0.5)
+	if _find("ConfirmDialog") != null:
+		await _confirm()
+	check(GameState.in_castle(), "back at the castle after the level-up")
+	if not campaign.level_rewards.is_empty():
+		check(_find("Service_sisters") != null and _find("Service_sisters").find_child("Notice", true, false) != null, "the Sisters plaque shows the waiting Mastery card")
+	# The Sisters panel: level bars, milestones, the remaining choice.
+	SceneRouter.open_service("sisters")
+	await _wait(0.6)
+	check(_find("LevelSummary") != null and _find("Level_chiara") != null and _find("Milestones") != null, "the Sisters panel shows levels and milestones")
+	await _shot("cf_31_sister_levels")
+	# Level 10: the Training Hall offers the second specialization.
+	for m in campaign.roster.members:
+		campaign.levels[m.id] = Levels.threshold(10)
+	campaign.refresh_roster()
+	SceneRouter.open_service("training_hall")
+	await _wait(0.6)
+	check(_find("DualReady") != null, "the Training Hall announces the Dual Specialization")
+	var row := _find("Training_bianca")
+	var second: Button = null
+	for button: Button in row.find_children("SetSecondary", "Button", true, false):
+		if not button.disabled:
+			second = button
+			break
+	check(second != null, "Bianca has a second-style button")
+	if second != null:
+		second.pressed.emit()
+		await _wait(0.3)
+		await _confirm()
+		await _wait(0.3)
+	check(campaign.member("bianca").secondary_specialization != null and campaign.member("bianca").specialization.id == "holy", "Bianca takes a second style and keeps Holy as her primary")
+	await _shot("cf_32_dual_spec")
+	# Contracts: every castle mission done -> a contract with its rank and level on the war table.
+	campaign.mark_mission_completed("castle_gauntlet")
+	campaign.refresh_roster()
+	SceneRouter.go(SceneRouter.Screen.WORLD_MAP)
+	await _wait(0.8)
+	var contract_card := _find("Mission_contract_royal_castle_1")
+	check(contract_card != null and contract_card.find_child("ContractRank", true, false) != null and contract_card.find_child("LevelReq", true, false) != null, "the war table shows the castle contract with its rank and level")
+	await _shot("cf_33_contract")
+	_fits("world map with a contract")
+	await _press_node("Prepare_contract_royal_castle_1")
+	check(SceneRouter.current_screen_id == SceneRouter.Screen.EXPEDITION_PREP and _find("LevelPill") != null, "a contract can be prepared; the sisters show their level")
+	_fits("contract preparation")
+	SceneRouter.go(SceneRouter.Screen.CASTLE_HUB)
+	await _wait(0.4)
+
+
 ## Nothing on the screen needs more width than the window has, and every button outside a scroll
 ## area is fully on screen.
 func _fits(label: String) -> void:
@@ -114,6 +186,51 @@ func _fits(label: String) -> void:
 	check(min_width <= area.size.x + 1.0 and off.is_empty(), "%s fits %dx%d (min width %d, off screen: %s)" % [label, get_window().size.x, get_window().size.y, int(min_width), ", ".join(off)])
 
 
+func _mouse_button(at: Vector2, down: bool) -> void:
+	var event := InputEventMouseButton.new()
+	event.button_index = MOUSE_BUTTON_LEFT
+	event.pressed = down
+	event.position = at
+	event.global_position = at
+	event.button_mask = MOUSE_BUTTON_MASK_LEFT if down else 0
+	Input.parse_input_event(event)
+
+
+func _motion(at: Vector2, relative: Vector2) -> void:
+	var event := InputEventMouseMotion.new()
+	event.position = at
+	event.global_position = at
+	event.relative = relative
+	event.button_mask = MOUSE_BUTTON_MASK_LEFT
+	Input.parse_input_event(event)
+	Input.warp_mouse(at)
+
+
+func _tap(control: Control) -> void:
+	var at := control.get_global_rect().get_center()
+	_mouse_button(at, true)
+	await get_tree().process_frame
+	_mouse_button(at, false)
+	await _wait(0.35)
+
+
+## Press on `from`, move in small steps to the middle of `to` and release there.
+func _drag(from: Control, to: Control) -> void:
+	var start := from.get_global_rect().get_center()
+	var end := to.get_global_rect().get_center()
+	_mouse_button(start, true)
+	await get_tree().process_frame
+	var previous := start
+	for i in range(1, 13):
+		var point := start.lerp(end, i / 12.0)
+		_motion(point, point - previous)
+		previous = point
+		await get_tree().process_frame
+	await _wait(0.1)
+	_mouse_button(end, false)
+	await _wait(0.4)
+
+
 func _in_scroll(node: Node) -> bool:
 	var parent := node.get_parent()
 	while parent != null:
@@ -127,7 +244,10 @@ func _run() -> void:
 	# --- Main menu and a new campaign -----------------------------------------------------------
 	SceneRouter.go(SceneRouter.Screen.MAIN_MENU)
 	await _wait(0.6)
-	check(_button("New Campaign") != null and _button("Continue").disabled and _button("Classic Run") != null, "the menu offers New Campaign, a disabled Continue and Quick Play")
+	check(_button("New Campaign") != null and _button("Continue").disabled and _button("Quick Play") != null and _button("Classic Run") == null, "the menu offers New Campaign, a disabled Continue and Quick Play (its shortcuts tucked away)")
+	await _press("Quick Play")
+	check(_button("Classic Run") != null and _button("Frostpeak") != null and _button("New Campaign") == null, "Quick Play opens the classic run and the direct starts")
+	await _press("Back")
 	await _shot("cf_01_main_menu")
 	await _press("New Campaign")
 	check(SceneRouter.current_screen_id == SceneRouter.Screen.CHARACTER_SELECTION and GameState.new_game_mode == "campaign", "New Campaign opens the selection in campaign mode")
@@ -153,14 +273,12 @@ func _run() -> void:
 	check(deck_grid.get_child_count() == 10, "Chiara's prepared deck shows 10 cards")
 	await _shot("cf_03_deck_workshop")
 	var first := deck_grid.get_child(0) as CardView
-	first.pressed.emit(first)
-	await _wait(0.3)
+	await _tap(first)  # workshop cards open on release, so a press can start a drag
 	await _press_node("Action_Remove")
 	check(GameState.campaign.prepared_uids("chiara").size() == 9, "a card is removed from the prepared deck")
 	var owned := _find("CollectionGrid").get_child(0)
 	var view := owned.get_child(0) as CardView
-	view.pressed.emit(view)
-	await _wait(0.3)
+	await _tap(view)
 	await _press_node("Action_AddtoDeck")
 	check(GameState.campaign.prepared_uids("chiara").size() == 10, "a collection card is added back")
 	var rarity := _find("RarityFilter") as OptionButton
@@ -168,6 +286,19 @@ func _run() -> void:
 	rarity.item_selected.emit(1)
 	await _wait(0.4)
 	check(_find("CollectionGrid").get_child_count() >= 1, "rarity filter applied")
+	# Drag and drop with real pointer input: deck -> collection removes, collection -> deck adds, a tap inspects.
+	var deck_card := _find("DeckGrid").get_child(0) as CardView
+	var before_drag := GameState.campaign.prepared_uids("chiara").size()
+	await _drag(deck_card, _find("CollectionGrid") as Control)
+	check(GameState.campaign.prepared_uids("chiara").size() == before_drag - 1 and _screen().find_child("CardInspect", true, false) == null, "dragging a deck card onto the collection removes it (no details pop up)")
+	await _shot("cf_03b_after_drag")
+	var stored := _find("CollectionGrid").get_child(0).get_child(0) as CardView
+	await _drag(stored, _find("DeckGrid") as Control)
+	check(GameState.campaign.prepared_uids("chiara").size() == before_drag, "dragging a collection card onto the deck adds it back")
+	await _tap(_find("DeckGrid").get_child(0) as Control)
+	check(_screen().find_child("CardInspect", true, false) != null, "a tap still opens the card details")
+	(_screen().find_child("CardInspect", true, false) as Node).queue_free()
+	await _wait(0.2)
 	await _press_node("SavePresetButton")
 	check(GameState.campaign.presets.size() == 1, "a deck preset is saved")
 	await _press_node("Sister_bianca")
@@ -272,6 +403,9 @@ func _run() -> void:
 	check(GameState.campaign.count_owned("chiara", "chiara_fusion_purifying_flame") == 1 and GameState.campaign.fusions_done.has("purifying_flame"), "the fusion card joins the collection")
 	# --- A generated mission map ------------------------------------------------------------------
 	GameState.campaign.mark_mission_completed("castle_awakening")
+	for m in GameState.campaign.roster.members:
+		GameState.campaign.levels[m.id] = maxi(Levels.xp_of(GameState.campaign, m.id), Levels.threshold(3))
+	GameState.campaign.refresh_roster()
 	SceneRouter.go(SceneRouter.Screen.CASTLE_HUB)
 	await _wait(0.4)
 	check(ExpeditionService.start("forest_rescue", {}, 77) == "", "the rescue mission starts")
@@ -287,6 +421,7 @@ func _run() -> void:
 	await _press("Continue")
 	check(SceneRouter.current_screen_id == SceneRouter.Screen.MAP and GameState.expedition != null and GameState.expedition.mission_id == "forest_rescue", "Continue resumes the expedition")
 	ExpeditionService.return_to_castle()
+	await _levels_and_contracts()
 	# --- Phone size --------------------------------------------------------------------------------
 	get_window().size = Vector2i(844, 390)
 	await _wait(0.4)
@@ -308,6 +443,7 @@ func _run() -> void:
 	# Quick Play never touches the campaign save.
 	SceneRouter.go(SceneRouter.Screen.MAIN_MENU)
 	await _wait(0.5)
+	await _press("Quick Play")
 	await _press("Classic Run")
 	check(GameState.active_slot() == GameState.SLOT_QUICKPLAY and GameState.new_game_mode == "classic", "Classic Run uses the Quick Play slot")
 	GameState.select_specialization("chiara", "fire")
@@ -318,6 +454,8 @@ func _run() -> void:
 	check(GameState.slot_has_save(GameState.SLOT_CAMPAIGN) and GameState.slot_has_save(GameState.SLOT_QUICKPLAY), "the campaign and the Quick Play run are saved apart")
 	SceneRouter.go(SceneRouter.Screen.MAIN_MENU)
 	await _wait(0.5)
+	await _press("Quick Play")
 	check(_button("Resume Quick Play") != null, "the menu offers to resume the Quick Play run")
+	await _press("Back")
 	await _press("Continue")
 	check(GameState.in_castle(), "Continue opens the campaign first")

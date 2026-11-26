@@ -137,7 +137,13 @@ func _test_main_menu() -> void:
 	for button in buttons:
 		texts.append(button.text)
 	texts.erase("Delete Save")  # only present while a save exists
-	check(texts == ["New Campaign", "Continue", "Settings", "Classic Run", "Elite Route", "Crystal Cave", "Start: Forest", "Start: Coast", "Frostpeak", "Exit"], "the menu buttons are real controls in order (campaign, then Quick Play: classic run, demos, direct act starts and Frostpeak)")
+	check(texts == ["New Campaign", "Continue", "Quick Play", "Settings", "Exit"], "the menu buttons are real controls in order of importance (campaign, Quick Play, settings and exit)")
+	(_find_button(menu, "Quick Play")).pressed.emit()
+	var quick_texts: Array[String] = []
+	for button in _buttons(menu):
+		quick_texts.append(button.text)
+	check(quick_texts == ["Classic Run", "Elite Route", "Crystal Cave", "Start: Forest", "Start: Coast", "Frostpeak", "‹ Back"], "Quick Play holds the classic run, the demos, the direct act starts and Frostpeak")
+	(_find_button(menu, "‹ Back")).pressed.emit()
 	check(menu.continue_button.disabled, "Continue is disabled when there is no save")
 	_free_host(host)
 	GameState.save_game()

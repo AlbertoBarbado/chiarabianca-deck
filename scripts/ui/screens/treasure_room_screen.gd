@@ -85,6 +85,9 @@ func _refresh() -> void:
 		var icons := {"gold": "icons/icon_gold", "potion": "icons/icon_potion", "relic": "icons/icon_star", "card": "icons/icon_rune", "equipment": "icons/icon_chest"}
 		var button := ChoiceCard.create(str(choice.get("text", "")), TreasureRoom.describe(choice), str(icons.get(str(choice.get("type", "")), "icons/icon_chest")))
 		button.name = "TreasureChoice%d" % i
+		if str(choice.get("type", "")) == "relic":
+			button.tooltip_text = RelicIcon.tooltip_for(str(choice.get("item_id", "")))
+			button.set_icon_texture(RelicIcon.texture_for(str(choice.get("item_id", ""))))
 		button.disabled = taken >= 0
 		if taken == i:
 			button.set_texts("✔ Taken: " + str(choice.get("text", "")), TreasureRoom.describe(choice))

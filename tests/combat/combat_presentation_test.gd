@@ -495,7 +495,8 @@ func _test_top_bar() -> void:
 	draw_button.pressed.emit()
 	await get_tree().process_frame
 	var viewer: Node = screen.find_child("PileViewer", true, false)
-	check(viewer != null and viewer.find_children("*", "CardView", true, false).size() == combat.deck.draw_pile.size(), "clicking the draw pile lists all its cards")
+	var gallery: Node = viewer.find_child("PileGrid", true, false) if viewer != null else null  # the modal also shows one card enlarged as a preview
+	check(gallery != null and gallery.find_children("*", "CardView", true, false).size() == combat.deck.draw_pile.size(), "clicking the draw pile lists all its cards")
 	(screen.find_child("ClosePile", true, false) as Button).pressed.emit()
 	await get_tree().process_frame
 	check(screen.find_child("PileViewer", true, false) == null, "the viewer closes")

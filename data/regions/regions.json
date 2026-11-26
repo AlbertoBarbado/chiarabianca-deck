@@ -6,8 +6,8 @@
     "description": "Home. The castle halls and the training yards, where the sisters learn to fight side by side.",
     "art": "map_royal_castle",
     "world_position": [
-      0.5,
-      0.84
+      0.27,
+      0.69
     ],
     "threat": 1,
     "mechanics": "Short routes and training fights. The Castle Depths open once the sisters have walked their own halls.",
@@ -15,7 +15,24 @@
       "castle_awakening",
       "castle_gauntlet"
     ],
-    "unlock": {}
+    "unlock": {},
+    "contracts": {
+      "map_id": "royal_castle_tutorial",
+      "pools": [
+        "castle_elite_demo"
+      ],
+      "base_level": 2,
+      "difficulty": 1,
+      "kinds": [
+        "patrol",
+        "hunt"
+      ],
+      "place": "Castle Halls",
+      "gold": 35,
+      "gold_per_tier": 10,
+      "nouns": {},
+      "note": "Contracts (scripts/progression/contracts.gd): offered once every mission above is completed. base_level = party level for rank 1 (+1 per rank, max 10); enemies gain hp_per_tier / damage_per_tier per rank."
+    }
   },
   {
     "id": "crystal_hollow",
@@ -24,8 +41,8 @@
     "description": "Caves beneath the castle cliffs, glittering with living crystal. Crystal beasts gather around the Crystal Wyrm.",
     "art": "map_crystal_hollow",
     "world_position": [
-      0.5,
-      0.5
+      0.556,
+      0.585
     ],
     "threat": 2,
     "mechanics": "A short cave route through the chasm, the grotto and old ruins, with a merchant camp and the Crystal Wyrm at its end.",
@@ -36,6 +53,25 @@
       "missions": [
         "castle_awakening"
       ]
+    },
+    "contracts": {
+      "map_id": "crystal_hollow_demo",
+      "pools": [],
+      "base_level": 3,
+      "difficulty": 2,
+      "kinds": [
+        "hunt",
+        "purge",
+        "patrol",
+        "boss"
+      ],
+      "place": "Crystal Cave",
+      "gold": 45,
+      "gold_per_tier": 12,
+      "nouns": {
+        "purge": "crystal nests"
+      },
+      "note": "Contracts (scripts/progression/contracts.gd): offered once every mission above is completed. base_level = party level for rank 1 (+1 per rank, max 10); enemies gain hp_per_tier / damage_per_tier per rank."
     }
   },
   {
@@ -45,8 +81,8 @@
     "description": "An old forest of mossy giants, river falls and mountain trails, poisoned at its heart by the Forest Serpent.",
     "art": "map_enchanted_forest",
     "world_position": [
-      0.17,
-      0.47
+      0.82,
+      0.66
     ],
     "threat": 3,
     "mechanics": "Three trails: mountain wolves, the deepwood's spiders and beasts, and the river falls. Villages offer rest and trade.",
@@ -58,6 +94,25 @@
       "missions": [
         "castle_awakening"
       ]
+    },
+    "contracts": {
+      "map_id": "enchanted_forest",
+      "pools": [],
+      "base_level": 4,
+      "difficulty": 3,
+      "kinds": [
+        "hunt",
+        "purge",
+        "patrol",
+        "boss"
+      ],
+      "place": "Enchanted Forest",
+      "gold": 60,
+      "gold_per_tier": 14,
+      "nouns": {
+        "purge": "beast dens"
+      },
+      "note": "Contracts (scripts/progression/contracts.gd): offered once every mission above is completed. base_level = party level for rank 1 (+1 per rank, max 10); enemies gain hp_per_tier / damage_per_tier per rank."
     }
   },
   {
@@ -67,7 +122,7 @@
     "description": "Golden dunes, sea caves and a storm that never sleeps. Pirates and sea beasts haunt the shore and the open water.",
     "art": "map_sunlit_coast",
     "world_position": [
-      0.83,
+      0.17,
       0.47
     ],
     "threat": 4,
@@ -80,6 +135,25 @@
       "missions": [
         "forest_serpent"
       ]
+    },
+    "contracts": {
+      "map_id": "sunlit_coast",
+      "pools": [],
+      "base_level": 6,
+      "difficulty": 4,
+      "kinds": [
+        "hunt",
+        "purge",
+        "patrol",
+        "boss"
+      ],
+      "place": "Sunlit Coast",
+      "gold": 75,
+      "gold_per_tier": 16,
+      "nouns": {
+        "purge": "raider camps"
+      },
+      "note": "Contracts (scripts/progression/contracts.gd): offered once every mission above is completed. base_level = party level for rank 1 (+1 per rank, max 10); enemies gain hp_per_tier / damage_per_tier per rank."
     }
   },
   {
@@ -89,8 +163,8 @@
     "description": "A mountain climb through pine slopes, glacier caves and the summit above the clouds, where the White Dragon nests.",
     "art": "map_frostpeak",
     "world_position": [
-      0.5,
-      0.13
+      0.575,
+      0.17
     ],
     "threat": 5,
     "mechanics": "The higher the climb, the colder the foes: Frostbitten makes frost wounds deeper. Only a few foes fear fire.",
@@ -102,6 +176,25 @@
       "missions": [
         "forest_serpent"
       ]
+    },
+    "contracts": {
+      "map_id": "frostpeak",
+      "pools": [],
+      "base_level": 8,
+      "difficulty": 5,
+      "kinds": [
+        "hunt",
+        "purge",
+        "patrol",
+        "boss"
+      ],
+      "place": "Frostpeak Slopes",
+      "gold": 90,
+      "gold_per_tier": 18,
+      "nouns": {
+        "purge": "frozen lairs"
+      },
+      "note": "Contracts (scripts/progression/contracts.gd): offered once every mission above is completed. base_level = party level for rank 1 (+1 per rank, max 10); enemies gain hp_per_tier / damage_per_tier per rank."
     }
   }
 ]

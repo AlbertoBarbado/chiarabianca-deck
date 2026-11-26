@@ -289,3 +289,59 @@ vault. The castle hub, war table and preparation screens fit 1280x720 and 844x39
 - Equipment sell / dismantle, NPC quest givers, personal sister stories.
 - A campaign-aware balance simulation (the bot plays classic runs).
 - Portrait phone layouts (landscape only, as the rest of the game).
+
+## 12. Levels, contracts and the Dual Specialization (2026-11-23)
+
+### 12.1 Sister levels (`scripts/progression/levels.gd`, `data/progression/levels.json`)
+- Each sister has XP (`CampaignState.levels`), levels 1-10 with a title (Novice ... Mythic).
+- XP: every won fight pays (`combat` 4, `elite` 10, `boss` 20); a completed mission adds
+  `difficulty x 8`. Retreats keep the fight XP, defeats half of it. Every sister on the roster earns it
+  (`ExpeditionService.finish`, results `xp`, `level_ups`, `level_lines`).
+- Every level adds 3 Max HP (`PartyMember.level_max_hp`, applied by `refresh_roster`, copied to the
+  expedition party and saved with it). Milestones: treasury gold and Starlight Essence (levels 2, 4,
+  6, 8), a **Mastery card** choice of three uncommon / rare cards of her own specializations (3, 5, 7,
+  9 upgraded), and the **Dual Specialization** at 10 (which also opens the Training Hall).
+- Pending Mastery choices live in `CampaignState.level_rewards`; they are offered on the results
+  screen and in The Sisters, and the hub marks the Sisters plaque until they are taken.
+- The **party level** (rounded-down average) gates missions: `Requirements` key `"level"`. Authored
+  missions: castle 1, Castle Depths 2, Crystal Cave 2, forest rescue 3, Serpent 4, reliquary 5, coast
+  storm 6, beacons 7, White Dragon 8.
+- Saves from before levels start each sister at the XP her completed missions would have earned
+  (`Levels.estimate_xp`).
+
+### 12.2 Dual Specialization
+- From level 10 a sister may take a second card specialization (`CastleWorkshop.set_secondary`): any
+  playable style of hers; one not learned yet is learned for free. Her deck may hold up to 6 of its
+  cards (`campaign_rules.json` `deck.secondary_card_limit`), its cards appear in rewards at half weight.
+- Her look never changes: combat sprites use the primary specialization (`CombatManager` sets
+  `Combatant.specialization_id` from the primary), and card cut-ins use the owner's primary look too
+  (`CombatAnimationController._maybe_cutin`). Only the primary's passive runs.
+
+### 12.3 Region contracts (`scripts/progression/contracts.gd`)
+- Once every authored mission of a region is completed, the region always offers one **contract**
+  (`regions.json` `contracts` block). Completing it rolls the next rank, so a region never runs dry.
+- A contract keeps the region's own map layout and art; `ExpeditionGenerator.remix` re-rolls every
+  fight and elite from the region's encounter pools (by terrain and depth), turns some later fights
+  into elites as the rank rises, and marks the quest's rooms:
+  - `hunt`: one named elite (the bounty, chosen by the contract's seed) is the objective;
+  - `purge`: three marked fights across the route (clear_targets);
+  - `patrol`: reach the exit through an extra elite pack;
+  - `boss`: the region's master again (maps with a boss).
+- Rank N needs party level `base_level + N - 1` (max 10); enemies gain `hp_per_tier` (8%) health and
+  `damage_per_tier` (5%) damage per rank, capped (`Combat mission_scale`); gold and essence rise.
+- Contract missions are mission dictionaries registered in `DataRegistry.missions` by `Contracts.sync`
+  (derived from data + `CampaignState.contracts`, rebuilt on every load). An expedition keeps a copy
+  (`ExpeditionState.mission_snapshot`) so results and reloads still know it after the rank advanced.
+
+### 12.4 Room names
+Rooms whose encounter was rerolled (fixed-map variation, contracts) or generated take the encounter's
+own name (`ExpeditionGenerator.name_rooms_after_encounters`), so a room is always named after the
+monsters inside. Objective rooms keep their objective name.
+
+### 12.5 Tests
+`tests/campaign/campaign_logic_test.tscn`: room names (5 maps x 20 seeds, 3 generated missions),
+levels, Mastery choices, level gates, expedition XP, saves and migration, the Dual Specialization
+(free learning, primary sprites in battle), contracts for every region and quest (connected maps,
+known encounters, marked rooms, names), rank progression and reloads, relic hover texts.
+`tests/campaign/castle_flow_test.tscn`: level-up results with a Mastery pick through the real
+screens, the Sisters levels panel, the Training Hall Dual Specialization, a contract on the war table.

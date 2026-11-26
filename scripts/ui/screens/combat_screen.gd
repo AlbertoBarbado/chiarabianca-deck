@@ -61,6 +61,7 @@ func _build() -> void:
 	var node := GameState.get_current_node()
 	combat = CombatManager.new()
 	_encounter = DataRegistry.get_encounter(GameState.current_encounter_id())
+	combat.mission_scale = ExpeditionService.enemy_scale()
 	combat.setup(GameState.party, _encounter, GameState.inventory)
 	combat.message.connect(_on_message)
 	combat.changed.connect(_refresh)
@@ -359,44 +360,12 @@ func _open_pile(pile: String) -> void:
 	var source: Array[CardInstance] = combat.deck.draw_pile if pile == "draw" else (combat.deck.discard_pile if pile == "discard" else combat.deck.exhaust_pile)
 	var cards: Array[CardInstance] = source.duplicate()
 	cards.sort_custom(func(a: CardInstance, b: CardInstance) -> bool: return a.owner_character_id + a.get_card_name() < b.owner_character_id + b.get_card_name())
-	var dim := ColorRect.new()
-	dim.name = "PileViewer"
-	dim.color = Color(UITheme.NAVY_DEEP, 0.96)
-	# Above everything: unit sprites, status chips and the enemy panels use z_index up to 40, which
-	# drew them over the old viewer. The battle itself is hidden while the pile is open.
+	# The shared pile modal (CardPileModal): above everything (unit sprites, status chips and enemy
+	# panels use z_index up to 40); the battle itself is hidden while the pile is open.
+	var dim := CardPileModal.open(self, "%s Pile" % pile.capitalize(), cards)
 	dim.z_index = PILE_VIEWER_Z
-	UIFactory.full_rect(dim)
-	dim.gui_input.connect(func(event: InputEvent) -> void:
-		if event is InputEventMouseButton and event.pressed:
-			dim.queue_free())
 	dim.tree_exiting.connect(_set_battle_visible.bind(true))
 	_set_battle_visible(false)
-	add_child(dim)
-	var center := CenterContainer.new()
-	center.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	UIFactory.full_rect(center)
-	dim.add_child(center)
-	var panel := UIFactory.panel()
-	panel.custom_minimum_size = Vector2(minf(980.0, size.x - 60.0), minf(560.0, size.y - 60.0))
-	center.add_child(panel)
-	var column := UIFactory.vbox(8)
-	panel.add_child(column)
-	column.add_child(UIFactory.label("%s pile (%d cards)" % [pile.capitalize(), cards.size()], &"HeaderLabel"))
-	var scroll := UIFactory.scroll()
-	column.add_child(scroll)
-	var flow := HFlowContainer.new()
-	flow.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	scroll.add_child(flow)
-	for card in cards:
-		var view := CardView.new()
-		view.show_instance(card)
-		flow.add_child(view)
-	if cards.is_empty():
-		flow.add_child(UIFactory.label("No cards here.", &"DimLabel"))
-	var close := UIFactory.button("Close", true, Vector2(180, 52))
-	close.name = "ClosePile"
-	close.pressed.connect(dim.queue_free)
-	column.add_child(close)
 
 
 func _build_bottom() -> Control:

@@ -25,6 +25,8 @@ static func button(text: String, primary: bool = false, min_size: Vector2 = TOUC
 	var b := UIButton.new()
 	b.text = text
 	b.custom_minimum_size = min_size
+	# Buttons keep their own height in tall rows: the pointed kit frame must never stretch vertically.
+	b.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	if primary:
 		b.theme_type_variation = &"PrimaryButton"
 	return b

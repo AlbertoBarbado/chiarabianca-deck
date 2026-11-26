@@ -87,6 +87,8 @@ func _run() -> void:
 	SceneRouter.go(SceneRouter.Screen.MAIN_MENU)
 	await _wait(0.5)
 	await _shot("beach_00_main_menu")
+	(_find("QuickPlayButton") as Button).pressed.emit()  # the direct starts live in the Quick Play submenu
+	await _wait(0.3)
 	var coast_button := _find("ActCoastButton") as Button
 	check(_find("ActForestButton") != null and coast_button != null and coast_button.is_visible_in_tree(), "the main menu offers Start: Forest and Start: Coast")
 	var lowest := 0.0

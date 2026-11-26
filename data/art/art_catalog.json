@@ -2138,6 +2138,349 @@
       "note": "Merchant at their shop generated locally with ComfyUI (FLUX.1 schnell).",
       "status": "generated_local_flux_schnell",
       "release_cleared": false
+    },
+    "bg_castle_hub": {
+      "path": "res://assets/generated/ui/bg_castle_hub.png",
+      "category": "background",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "tex_parchment": {
+      "path": "res://assets/generated/ui/tex_parchment.png",
+      "category": "ui_texture",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "tex_navy_enamel": {
+      "path": "res://assets/generated/ui/tex_navy_enamel.png",
+      "category": "ui_texture",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "tex_violet_enamel": {
+      "path": "res://assets/generated/ui/tex_violet_enamel.png",
+      "category": "ui_texture",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "orn_corner": {
+      "path": "res://assets/generated/ui/orn_corner.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "orn_divider": {
+      "path": "res://assets/generated/ui/orn_divider.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "orn_crest": {
+      "path": "res://assets/generated/ui/orn_crest.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "frame_diamond": {
+      "path": "res://assets/generated/ui/frame_diamond.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_svc_expeditions": {
+      "path": "res://assets/generated/ui/icon_svc_expeditions.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_svc_library": {
+      "path": "res://assets/generated/ui/icon_svc_library.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_svc_collection": {
+      "path": "res://assets/generated/ui/icon_svc_collection.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_svc_armory": {
+      "path": "res://assets/generated/ui/icon_svc_armory.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_svc_blacksmith": {
+      "path": "res://assets/generated/ui/icon_svc_blacksmith.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_svc_enchanter": {
+      "path": "res://assets/generated/ui/icon_svc_enchanter.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_svc_apothecary": {
+      "path": "res://assets/generated/ui/icon_svc_apothecary.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_svc_training": {
+      "path": "res://assets/generated/ui/icon_svc_training.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_svc_sisters": {
+      "path": "res://assets/generated/ui/icon_svc_sisters.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_res_gold": {
+      "path": "res://assets/generated/ui/icon_res_gold.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_res_essence": {
+      "path": "res://assets/generated/ui/icon_res_essence.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_res_bond": {
+      "path": "res://assets/generated/ui/icon_res_bond.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_ui_home": {
+      "path": "res://assets/generated/ui/icon_ui_home.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_ui_settings": {
+      "path": "res://assets/generated/ui/icon_ui_settings.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_ui_lock": {
+      "path": "res://assets/generated/ui/icon_ui_lock.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "bg_main_menu": {
+      "path": "res://assets/generated/ui/bg_main_menu.png",
+      "category": "background",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "bg_world_map": {
+      "path": "res://assets/generated/ui/bg_world_map.png",
+      "category": "background",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "bg_library": {
+      "path": "res://assets/generated/ui/bg_library.png",
+      "category": "background",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "bg_forge": {
+      "path": "res://assets/generated/ui/bg_forge.png",
+      "category": "background",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "bg_apothecary": {
+      "path": "res://assets/generated/ui/bg_apothecary.png",
+      "category": "background",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "bg_enchanter": {
+      "path": "res://assets/generated/ui/bg_enchanter.png",
+      "category": "background",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_region_castle": {
+      "path": "res://assets/generated/ui/icon_region_castle.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_region_crystal": {
+      "path": "res://assets/generated/ui/icon_region_crystal.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_region_forest": {
+      "path": "res://assets/generated/ui/icon_region_forest.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_region_coast": {
+      "path": "res://assets/generated/ui/icon_region_coast.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_region_frostpeak": {
+      "path": "res://assets/generated/ui/icon_region_frostpeak.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_ui_continue": {
+      "path": "res://assets/generated/ui/icon_ui_continue.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_ui_new_campaign": {
+      "path": "res://assets/generated/ui/icon_ui_new_campaign.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_ui_quickplay": {
+      "path": "res://assets/generated/ui/icon_ui_quickplay.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_ui_exit": {
+      "path": "res://assets/generated/ui/icon_ui_exit.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_ui_mission": {
+      "path": "res://assets/generated/ui/icon_ui_mission.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_node_combat": {
+      "path": "res://assets/generated/ui/icon_node_combat.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_node_elite": {
+      "path": "res://assets/generated/ui/icon_node_elite.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_node_boss": {
+      "path": "res://assets/generated/ui/icon_node_boss.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_node_treasure": {
+      "path": "res://assets/generated/ui/icon_node_treasure.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_node_rest": {
+      "path": "res://assets/generated/ui/icon_node_rest.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_node_merchant": {
+      "path": "res://assets/generated/ui/icon_node_merchant.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_node_event": {
+      "path": "res://assets/generated/ui/icon_node_event.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "icon_node_town": {
+      "path": "res://assets/generated/ui/icon_node_town.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "orn_endcap": {
+      "path": "res://assets/generated/ui/orn_endcap.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
+    },
+    "frame_socket": {
+      "path": "res://assets/generated/ui/frame_socket.png",
+      "category": "ui",
+      "note": "Castle Hub art batch 1 (docs/ART_ASSET_BACKLOG.md) generated locally with ComfyUI (FLUX.1 schnell).",
+      "status": "generated_local_flux_schnell",
+      "release_cleared": false
     }
   },
   "characters": {

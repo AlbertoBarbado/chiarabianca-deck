@@ -24,6 +24,11 @@ var departure_uids: Dictionary = {}
 var bond_counts: Dictionary = {}
 var bond_xp: int = 0
 var bosses_defeated: int = 0
+## Sister XP earned in won fights so far (Levels.fight_xp); paid out by ExpeditionService.finish.
+var fight_xp: int = 0
+## A contract mission is generated, not authored: its dictionary travels with the expedition so the
+## map, results and a reload still know it after the region rolled its next contract.
+var mission_snapshot: Dictionary = {}
 var outcome: String = OUTCOME_NONE
 ## Set once the outcome's rewards were applied to the campaign (never twice, even after a reload).
 var rewards_claimed: bool = false
@@ -41,7 +46,8 @@ func is_finished() -> bool:
 
 
 func mission() -> Dictionary:
-	return DataRegistry.get_mission(mission_id)
+	var known := DataRegistry.get_mission(mission_id)
+	return known if not known.is_empty() else mission_snapshot
 
 
 func to_dict() -> Dictionary:
@@ -49,6 +55,7 @@ func to_dict() -> Dictionary:
 		"mission_id": mission_id, "region_id": region_id, "seed": seed,
 		"objective": objective.duplicate(true), "departure_uids": departure_uids.duplicate(true),
 		"bond_counts": bond_counts.duplicate(), "bond_xp": bond_xp, "bosses_defeated": bosses_defeated,
+		"fight_xp": fight_xp, "mission_snapshot": mission_snapshot.duplicate(true),
 		"outcome": outcome, "rewards_claimed": rewards_claimed, "results": results.duplicate(true),
 		"discoveries": discoveries.duplicate(true), "discoveries_allowed": discoveries_allowed,
 		"discoveries_claimed": discoveries_claimed,
@@ -61,7 +68,8 @@ static func from_dict(data: Variant, warnings: Array[String]) -> ExpeditionState
 		return state
 	var raw: Dictionary = data
 	state.mission_id = str(raw.get("mission_id", ""))
-	if state.mission_id != "" and DataRegistry.get_mission(state.mission_id).is_empty():
+	state.mission_snapshot = raw.get("mission_snapshot", {}) if raw.get("mission_snapshot", {}) is Dictionary else {}
+	if state.mission_id != "" and state.mission().is_empty():
 		warnings.append("Unknown mission '%s'; the expedition continues without its objective." % state.mission_id)
 		state.mission_id = ""
 	state.region_id = str(raw.get("region_id", ""))
@@ -71,6 +79,7 @@ static func from_dict(data: Variant, warnings: Array[String]) -> ExpeditionState
 	state.bond_counts = raw.get("bond_counts", {}) if raw.get("bond_counts", {}) is Dictionary else {}
 	state.bond_xp = maxi(0, int(raw.get("bond_xp", 0)))
 	state.bosses_defeated = maxi(0, int(raw.get("bosses_defeated", 0)))
+	state.fight_xp = maxi(0, int(raw.get("fight_xp", 0)))
 	state.outcome = str(raw.get("outcome", "")) if OUTCOMES.has(str(raw.get("outcome", ""))) else OUTCOME_NONE
 	state.rewards_claimed = bool(raw.get("rewards_claimed", false))
 	state.results = raw.get("results", {}) if raw.get("results", {}) is Dictionary else {}

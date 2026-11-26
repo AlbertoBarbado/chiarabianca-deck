@@ -1,0 +1,27 @@
+{
+  "id": "levels",
+  "_comment": "Sister levels (docs/PERSISTENT_RPG_DESIGN.md §Levels). Each sister earns XP from the fights she wins and from completed missions; missions are gated by the party level (the rounded-down average of the sisters' levels). Every level adds hp_per_level Max HP; milestone levels add the rewards listed. At dual_specialization_level a sister may take a second card specialization (any of hers; it is learned for free). Her look always follows her primary specialization.",
+  "max_level": 10,
+  "hp_per_level": 3,
+  "dual_specialization_level": 10,
+  "xp": {
+    "combat": 4,
+    "elite": 10,
+    "boss": 20,
+    "mission_per_difficulty": 8,
+    "outcome_share": {"completed": 1.0, "retreated": 1.0, "defeated": 0.5},
+    "note": "Fight XP is earned per fight won (elite and boss rooms pay more); the mission bonus (difficulty x mission_per_difficulty) only on completion. Defeat keeps half."
+  },
+  "levels": [
+    {"level": 1, "xp": 0, "title": "Novice"},
+    {"level": 2, "xp": 20, "title": "Adept", "rewards": {"gold": 40}},
+    {"level": 3, "xp": 50, "title": "Seasoned", "rewards": {"card_choice": {"rarity": "uncommon"}}},
+    {"level": 4, "xp": 90, "title": "Veteran", "rewards": {"essence": 1, "gold": 40}},
+    {"level": 5, "xp": 140, "title": "Champion", "rewards": {"card_choice": {"rarity": "rare"}}},
+    {"level": 6, "xp": 200, "title": "Paragon", "rewards": {"essence": 1, "gold": 80}},
+    {"level": 7, "xp": 270, "title": "Hero", "rewards": {"card_choice": {"rarity": "rare"}}},
+    {"level": 8, "xp": 350, "title": "Exemplar", "rewards": {"essence": 2, "gold": 80}},
+    {"level": 9, "xp": 440, "title": "Legend", "rewards": {"card_choice": {"rarity": "rare", "upgraded": true}}},
+    {"level": 10, "xp": 540, "title": "Mythic", "rewards": {"dual_specialization": true, "services": ["training_hall"]}}
+  ]
+}

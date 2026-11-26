@@ -25,7 +25,12 @@ func _menu_screen() -> bool:
 
 
 func _menu_dim() -> float:
-	return 0.6
+	return 0.42
+
+
+## Each service has its own room (data/castle/services.json "background": library, forge, ...).
+func _menu_background() -> String:
+	return str(DataRegistry.get_service(SceneRouter.service_id).get("background", "bg_castle_hub"))
 
 
 func _build() -> void:
@@ -46,7 +51,13 @@ func _build() -> void:
 	panel.name = "Panel"
 	panel.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	_column.add_child(panel)
+	# A soft dark plate between the room painting and the panel: text never sits on bare art.
+	var plate := PanelContainer.new()
+	plate.name = "ContentPlate"
+	plate.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	plate.add_theme_stylebox_override("panel", UITheme.box(Color(UITheme.NAVY_DEEP, 0.62), Color(UITheme.GOLD_DARK, 0.45), 16, 1, 14))
+	plate.add_child(panel)
+	_column.add_child(plate)
 	panel.call("setup", self)
 
 

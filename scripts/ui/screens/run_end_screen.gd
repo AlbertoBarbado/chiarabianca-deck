@@ -49,10 +49,13 @@ func _build() -> void:
 	if won:
 		column.add_child(UIFactory.label(str(completion.get("text", "Chiara and Bianca step through the Castle Gate together. The road beyond awaits...")), &"", true, HORIZONTAL_ALIGNMENT_CENTER))
 		if GameState.inventory != null and not GameState.inventory.relics.is_empty():
-			var names: Array[String] = []
+			var relic_row := HFlowContainer.new()
+			relic_row.name = "RunRelics"
+			relic_row.alignment = FlowContainer.ALIGNMENT_CENTER
+			relic_row.add_theme_constant_override("h_separation", 8)
 			for relic_id in GameState.inventory.relics:
-				names.append(str(DataRegistry.get_item(relic_id).get("name", relic_id)))
-			column.add_child(UIFactory.label("Relics: " + ", ".join(names), &"DimLabel", true, HORIZONTAL_ALIGNMENT_CENTER))
+				relic_row.add_child(RelicIcon.create(relic_id, 40))  # hover: name and effect
+			column.add_child(relic_row)
 		column.add_child(UIFactory.label("Deck: %d cards" % GameState.party.get_total_deck_size(), &"DimLabel", false, HORIZONTAL_ALIGNMENT_CENTER))
 		for member in GameState.party.members:
 			var status := CharacterStatusPanel.new()
